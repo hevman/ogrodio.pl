@@ -6,6 +6,7 @@
 # Artykuly NIE sa dotykane podczas zwyklego deployu.
 # Jawne tryby:
 #   IMPORT_NEW_ARTICLES=1 bash deploy/deploy.sh          - dodaje tylko nowe JSON-y, bez aktualizacji istniejacych
+#   UPDATE_ARTICLE_SLUG=slug bash deploy/deploy.sh       - aktualizuje jeden istniejacy artykul z JSON
 #   REINDEX_ARTICLES=1 bash deploy/deploy.sh             - odswieza tylko indeks Meilisearch z bazy
 #   OVERWRITE_ARTICLES_FROM_JSON=1 bash deploy/deploy.sh - pelny sync JSON -> baza, nadpisuje istniejace tresci
 #   INDEX_PRODUCTS=1 bash deploy/deploy.sh               - odswieza indeks produktow Meilisearch
@@ -66,7 +67,7 @@ $COMPOSE build
 echo "==> Start kontenerow"
 $COMPOSE up -d
 
-if [ "${IMPORT_NEW_ARTICLES:-}" = "1" ] || [ "${REINDEX_ARTICLES:-}" = "1" ] || [ "${OVERWRITE_ARTICLES_FROM_JSON:-}" = "1" ] || [ "${INDEX_PRODUCTS:-}" = "1" ]; then
+if [ "${IMPORT_NEW_ARTICLES:-}" = "1" ] || [ -n "${UPDATE_ARTICLE_SLUG:-}" ] || [ "${REINDEX_ARTICLES:-}" = "1" ] || [ "${OVERWRITE_ARTICLES_FROM_JSON:-}" = "1" ] || [ "${INDEX_PRODUCTS:-}" = "1" ]; then
   echo "==> Czekam na Postgres..."
   sleep 15
 fi
@@ -76,6 +77,11 @@ echo "==> Artykuly: operacje tylko na jawna flage"
 if [ "${IMPORT_NEW_ARTICLES:-}" = "1" ]; then
   echo "==> Import nowych artykulow z JSON (bez aktualizacji istniejacych)"
   docker exec garden-backend node src/scripts/import-articles-simple.js
+fi
+
+if [ -n "${UPDATE_ARTICLE_SLUG:-}" ]; then
+  echo "==> Aktualizacja jednego artykulu z JSON: ${UPDATE_ARTICLE_SLUG}"
+  docker exec -e ARTICLE_SLUG="${UPDATE_ARTICLE_SLUG}" garden-backend node src/scripts/sync-one-article-from-file.js
 fi
 
 if [ "${OVERWRITE_ARTICLES_FROM_JSON:-}" = "1" ]; then
@@ -91,6 +97,7 @@ if [ "${IMPORT_NEW_ARTICLES:-}" = "1" ] || [ "${REINDEX_ARTICLES:-}" = "1" ] || 
 else
   echo "==> Pomijam indeks artykulow (REINDEX_ARTICLES != 1)"
   echo "    Nowe JSON-y bez nadpisywania: IMPORT_NEW_ARTICLES=1 bash deploy/deploy.sh"
+  echo "    Jeden artykul z JSON:         UPDATE_ARTICLE_SLUG=slug bash deploy/deploy.sh"
   echo "    Tylko reindeks:               REINDEX_ARTICLES=1 bash deploy/deploy.sh"
   echo "    Pelny sync z nadpisaniem:     OVERWRITE_ARTICLES_FROM_JSON=1 bash deploy/deploy.sh"
 fi
