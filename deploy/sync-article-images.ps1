@@ -1,4 +1,4 @@
-# Wgranie zdjec artykulow na VPS — tylko WebP, plik po pliku (rsync/scp)
+# Wgranie zdjec artykulow na VPS - tylko WebP, plik po pliku (rsync/scp)
 # Przy kolejnych uruchomieniach rsync wysyla tylko nowe/zmienione pliki.
 # Oryginaly JPG zostaja lokalnie na PC.
 #
@@ -26,10 +26,10 @@ function Find-Rsync {
     $wsl = Get-Command wsl -ErrorAction SilentlyContinue
     if ($wsl) { return @{ Type = "wsl"; Bin = "wsl" } }
 
-    $gitRsync = "${env:ProgramFiles}\Git\usr\bin\rsync.exe"
+    $gitRsync = Join-Path ${env:ProgramFiles} "Git\usr\bin\rsync.exe"
     if (Test-Path $gitRsync) { return @{ Type = "git"; Bin = $gitRsync } }
 
-    $gitRsync32 = "${env:ProgramFiles(x86)}\Git\usr\bin\rsync.exe"
+    $gitRsync32 = Join-Path ${env:ProgramFiles(x86)} "Git\usr\bin\rsync.exe"
     if (Test-Path $gitRsync32) { return @{ Type = "git"; Bin = $gitRsync32 } }
 
     return $null
@@ -41,15 +41,6 @@ function Invoke-RsyncUpload {
         [string]$LocalDir,
         [string]$Remote,
         [string]$RemotePath
-    )
-
-    $args = @(
-        "-avz",
-        "--progress",
-        "--include=*.webp",
-        "--exclude=*",
-        "$($LocalDir -replace '\\', '/')/",
-        "${Remote}:${RemotePath}/"
     )
 
     if ($Rsync.Type -eq "wsl") {
@@ -65,7 +56,16 @@ function Invoke-RsyncUpload {
         )
         & wsl @wslArgs
     } else {
-        & $Rsync.Bin @args
+        $localUnix = ($LocalDir -replace '\\', '/') + "/"
+        $rsyncArgs = @(
+            "-avz",
+            "--progress",
+            "--include=*.webp",
+            "--exclude=*",
+            $localUnix,
+            "${Remote}:${RemotePath}/"
+        )
+        & $Rsync.Bin @rsyncArgs
     }
 
     if ($LASTEXITCODE -ne 0) {
@@ -75,7 +75,6 @@ function Invoke-RsyncUpload {
 
 function Invoke-ScpUpload {
     param(
-        [string]$LocalDir,
         [string]$Remote,
         [string]$RemotePath,
         [System.IO.FileInfo[]]$Files
@@ -129,10 +128,10 @@ if ($rsync) {
     Write-Host ""
     Invoke-RsyncUpload -Rsync $rsync -LocalDir $LocalDir -Remote $RemoteHost -RemotePath $RemoteDir
 } else {
-    Write-Host "Tryb: scp plik po pliku (brak rsync — zainstaluj WSL lub Git for Windows)"
+    Write-Host "Tryb: scp plik po pliku (brak rsync - zainstaluj WSL lub Git for Windows)"
     Write-Host "Podaj haslo SSH raz na poczatku..."
     Write-Host ""
-    Invoke-ScpUpload -LocalDir $LocalDir -Remote $RemoteHost -RemotePath $RemoteDir -Files $files
+    Invoke-ScpUpload -Remote $RemoteHost -RemotePath $RemoteDir -Files $files
 }
 
 Write-Host ""
