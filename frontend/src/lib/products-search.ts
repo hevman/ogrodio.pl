@@ -49,7 +49,7 @@ export async function searchProductsServer(params: ProductSearchParams = {}): Pr
         filter: filters.length ? filters : undefined,
         sort: sortMap[sort] || sortMap.recommended,
       }),
-      cache: "no-store",
+      next: { revalidate: 300 },
     });
 
     if (!response.ok) return [];

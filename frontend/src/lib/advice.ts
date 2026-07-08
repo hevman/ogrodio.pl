@@ -72,7 +72,7 @@ export function getAdviceDiscoverMeta(article: AdviceArticle): AdviceDiscoverMet
 export async function getAdviceArticles(): Promise<AdviceArticle[]> {
   try {
     const res = await fetch(`${backendUrl()}/api/articles`, {
-      cache: "no-store",
+      next: { revalidate: 300 },
     });
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const data = await res.json();
@@ -86,7 +86,7 @@ export async function getAdviceArticles(): Promise<AdviceArticle[]> {
 export async function getAdviceArticle(slug: string): Promise<AdviceArticle | null> {
   try {
     const res = await fetch(`${backendUrl()}/api/articles/${slug}`, {
-      cache: "no-store",
+      next: { revalidate: 300 },
     });
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     return transformArticle(await res.json());
@@ -123,7 +123,7 @@ export async function searchAdviceArticles(
 export async function getAdviceArticlesByTopic(topic: string): Promise<AdviceArticle[]> {
   try {
     const res = await fetch(`${backendUrl()}/api/articles/topic/${encodeURIComponent(topic)}`, {
-      cache: "no-store",
+      next: { revalidate: 300 },
     });
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const data = await res.json();

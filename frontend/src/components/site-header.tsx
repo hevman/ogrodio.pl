@@ -321,7 +321,7 @@ export function SiteHeader({ initialIsShopHost = false }: { initialIsShopHost?: 
                     {department.label}
                   </Link>
                 ))}
-                <a className="rounded-lg px-3 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-50" href="/porady">
+                <a className="rounded-lg px-3 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-50" href={sitePath("/porady")}>
                   {t("header.blogAndAdvice")}
                 </a>
               </nav>
@@ -467,7 +467,7 @@ export function SiteHeader({ initialIsShopHost = false }: { initialIsShopHost?: 
                 {department.label}
               </Link>
             ))}
-            <a className="ml-auto shrink-0 rounded-lg px-3 py-2 text-slate-700 transition hover:bg-white hover:text-emerald-800" href="/porady">
+            <a className="ml-auto shrink-0 rounded-lg px-3 py-2 text-slate-700 transition hover:bg-white hover:text-emerald-800" href={sitePath("/porady")}>
               {t("header.gardenAdvice")}
             </a>
           </div>

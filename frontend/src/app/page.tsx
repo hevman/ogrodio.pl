@@ -18,7 +18,7 @@ import { blogCategories, getArticlePath, site } from "@/lib/site-config";
 import { shopPath } from "@/lib/shop-url";
 
 export const dynamic = "force-dynamic";
-export const revalidate = 60;
+export const revalidate = 300;
 
 export const metadata: Metadata = {
   title: t("home.metaTitle"),

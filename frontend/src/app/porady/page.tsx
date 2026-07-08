@@ -7,7 +7,7 @@ import { getAdviceArticles } from "@/lib/advice";
 import { articleCategories } from "@/lib/site-config";
 
 export const dynamic = "force-dynamic";
-export const revalidate = 0;
+export const revalidate = 300;
 
 export const metadata: Metadata = {
   title: "Porady ogrodnicze — Ogrodio",

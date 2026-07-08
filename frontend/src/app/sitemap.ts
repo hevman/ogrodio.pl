@@ -2,6 +2,9 @@ import type { MetadataRoute } from "next";
 import { getAdviceArticles } from "@/lib/advice";
 import { articleCategories, getArticlePath, site } from "@/lib/site-config";
 
+export const dynamic = "force-dynamic";
+export const revalidate = 300;
+
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const articles = await getAdviceArticles();
   const base = site.publicUrl;

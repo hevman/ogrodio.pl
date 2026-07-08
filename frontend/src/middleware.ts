@@ -12,6 +12,14 @@ const SHOP_ROUTE_PREFIXES = [
   "/status-zamowienia",
 ];
 
+const MAIN_SITE_ROUTE_PREFIXES = [
+  "/porady",
+  "/o-nas",
+  "/kontakt",
+  "/polityka-redakcyjna",
+  "/faq",
+];
+
 function isHost(host: string, subdomain: string) {
   return host === `${subdomain}.ogrodio.localhost` || host === `${subdomain}.ogrodio.pl`;
 }
@@ -29,8 +37,18 @@ function getShopBaseUrl() {
   return (process.env.NEXT_PUBLIC_SHOP_URL || "https://sklep.ogrodio.pl").replace(/\/$/, "");
 }
 
+function getSiteBaseUrl() {
+  return (process.env.NEXT_PUBLIC_SITE_URL || "https://ogrodio.pl").replace(/\/$/, "");
+}
+
 function isShopRoute(pathname: string) {
   return SHOP_ROUTE_PREFIXES.some(
+    (prefix) => pathname === prefix || pathname.startsWith(`${prefix}/`),
+  );
+}
+
+function isMainSiteRoute(pathname: string) {
+  return MAIN_SITE_ROUTE_PREFIXES.some(
     (prefix) => pathname === prefix || pathname.startsWith(`${prefix}/`),
   );
 }
@@ -70,6 +88,10 @@ export function middleware(request: NextRequest) {
     const url = request.nextUrl.clone();
     url.pathname = pathname === "/sklep" ? "/" : pathname.slice("/sklep".length) || "/";
     return NextResponse.redirect(url, 301);
+  }
+
+  if (isShopHost && isMainSiteRoute(pathname)) {
+    return NextResponse.redirect(`${getSiteBaseUrl()}${pathname}${request.nextUrl.search}`, 301);
   }
 
   if (isShopHost && pathname === "/") {
@@ -136,6 +158,12 @@ export const config = {
     "/",
     "/sklep",
     "/sklep/:path*",
+    "/porady",
+    "/porady/:path*",
+    "/o-nas",
+    "/kontakt",
+    "/polityka-redakcyjna",
+    "/faq",
     "/produkt/:path*",
     "/szukaj",
     "/checkout",
