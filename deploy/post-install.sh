@@ -65,6 +65,26 @@ if [ -z "${COMMERCE_POSTGRES_PASSWORD:-}" ]; then
   echo "COMMERCE_POSTGRES_PASSWORD=${COMMERCE_POSTGRES_PASSWORD}" >> .env
   ok "Wygenerowano COMMERCE_POSTGRES_PASSWORD"
 fi
+if [ -z "${VENDURE_SUPERADMIN_USERNAME:-}" ]; then
+  VENDURE_SUPERADMIN_USERNAME="ogrodio-admin"
+  if grep -q '^VENDURE_SUPERADMIN_USERNAME=' .env; then
+    sed -i "s/^VENDURE_SUPERADMIN_USERNAME=.*/VENDURE_SUPERADMIN_USERNAME=${VENDURE_SUPERADMIN_USERNAME}/" .env
+  else
+    echo "VENDURE_SUPERADMIN_USERNAME=${VENDURE_SUPERADMIN_USERNAME}" >> .env
+  fi
+  ok "Ustawiono VENDURE_SUPERADMIN_USERNAME=ogrodio-admin"
+fi
+if [ -z "${VENDURE_SUPERADMIN_PASSWORD:-}" ]; then
+  VENDURE_SUPERADMIN_PASSWORD="$(gen_secret)"
+  if grep -q '^VENDURE_SUPERADMIN_PASSWORD=' .env; then
+    sed -i "s/^VENDURE_SUPERADMIN_PASSWORD=.*/VENDURE_SUPERADMIN_PASSWORD=${VENDURE_SUPERADMIN_PASSWORD}/" .env
+  else
+    echo "VENDURE_SUPERADMIN_PASSWORD=${VENDURE_SUPERADMIN_PASSWORD}" >> .env
+  fi
+  ok "Wygenerowano VENDURE_SUPERADMIN_PASSWORD (zapisane w .env)"
+fi
+
+load_env_file .env
 
 # ─── SSL ────────────────────────────────────────────────────────────────────
 SSL_OK=0
