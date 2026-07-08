@@ -13,10 +13,10 @@ MODE="${1:-}"
 COMPOSE="docker compose -f docker-compose.yml -f docker-compose.prod.yml"
 
 if [ -f .env ]; then
-  set -a
   # shellcheck disable=SC1091
-  source .env
-  set +a
+  source "$(dirname "$0")/lib/load-env.sh"
+  fix_env_file .env
+  load_env_file .env
 fi
 
 export COMPOSE_PROJECT_NAME="${COMPOSE_PROJECT_NAME:-ogrodio}"

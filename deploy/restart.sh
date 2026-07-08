@@ -7,10 +7,10 @@ ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 cd "$ROOT"
 
 if [ -f .env ]; then
-  set -a
   # shellcheck disable=SC1091
-  source .env
-  set +a
+  source "$(dirname "$0")/lib/load-env.sh"
+  fix_env_file .env
+  load_env_file .env
 fi
 
 export COMPOSE_PROJECT_NAME="${COMPOSE_PROJECT_NAME:-ogrodio}"

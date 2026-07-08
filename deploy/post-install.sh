@@ -30,15 +30,10 @@ fi
 # Wygeneruj brakujące sekrety jeśli puste
 gen_secret() { openssl rand -base64 32 | tr -d '/+=' | head -c 43; }
 
-# SMTP_FROM z <> musi być w cudzysłowie — inaczej bash source .env pada
-if grep -q '^SMTP_FROM=Ogrodio <' .env 2>/dev/null; then
-  sed -i 's/^SMTP_FROM=Ogrodio <noreply@ogrodio.pl>$/SMTP_FROM="Ogrodio <noreply@ogrodio.pl>"/' .env
-fi
-
 # shellcheck disable=SC1091
-set -a
-source .env
-set +a
+source "$(dirname "$0")/lib/load-env.sh"
+fix_env_file .env
+load_env_file .env
 
 if [ -z "${GARDEN_JWT_SECRET:-}" ]; then
   GARDEN_JWT_SECRET="$(gen_secret)"

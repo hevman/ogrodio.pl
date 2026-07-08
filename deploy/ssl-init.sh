@@ -13,7 +13,9 @@ if [ ! -f .env ]; then
 fi
 
 # shellcheck disable=SC1091
-source .env
+source "$SCRIPT_DIR/lib/load-env.sh"
+fix_env_file .env
+load_env_file .env
 
 EMAIL="${CERTBOT_EMAIL:-kontakt@ogrodio.pl}"
 DOMAIN="${CERTBOT_DOMAIN:-ogrodio.pl}"

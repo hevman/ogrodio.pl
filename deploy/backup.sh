@@ -13,7 +13,11 @@ DEST="$BACKUP_DIR/$STAMP"
 mkdir -p "$DEST"
 
 # shellcheck disable=SC1091
-[ -f .env ] && source .env
+source "$(dirname "$0")/lib/load-env.sh"
+if [ -f .env ]; then
+  fix_env_file .env
+  load_env_file .env
+fi
 export COMPOSE_PROJECT_NAME="${COMPOSE_PROJECT_NAME:-ogrodio}"
 
 echo "==> Dump PostgreSQL (backend)"
