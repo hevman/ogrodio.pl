@@ -33,6 +33,16 @@ bash deploy/post-install.sh
 
 Szczegóły: [`deploy/QUICKSTART.md`](deploy/QUICKSTART.md) · [`deploy/DEPLOY.md`](deploy/DEPLOY.md) · [`deploy/CLOUDFLARE.md`](deploy/CLOUDFLARE.md)
 
+### Zdjęcia artykułów (~350 MB)
+
+Katalog `frontend/public/images/articles/` jest **poza git** (za duży). Po deployu na VPS skopiuj go z maszyny dev:
+
+```bash
+rsync -avz frontend/public/images/articles/ root@TWOJE_IP:/opt/ogrodio/app/frontend/public/images/articles/
+```
+
+Lub użyj backupu z `deploy/backup.sh` na serwerze dev.
+
 ## Struktura
 
 ```
