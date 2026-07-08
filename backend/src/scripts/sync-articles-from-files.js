@@ -1,17 +1,11 @@
 const fs = require('fs');
 const path = require('path');
-const { Pool } = require('pg');
 const { articleToMeiliDocument } = require('./article-content');
+const { createPool } = require('./pg-config');
 
 const ARTICLES_DIR = path.join(__dirname, '../../content/articles');
 
-const pool = new Pool({
-  host: process.env.DB_HOST || 'garden-backend-postgres',
-  port: parseInt(process.env.DB_PORT || '5432', 10),
-  database: process.env.DB_NAME || 'garden_backend',
-  user: process.env.DB_USER || 'garden',
-  password: process.env.DB_PASSWORD || 'garden',
-});
+const pool = createPool();
 
 const MEILISEARCH_HOST = process.env.MEILISEARCH_HOST || 'http://meilisearch:7700';
 const MEILISEARCH_MASTER_KEY = process.env.MEILISEARCH_MASTER_KEY || '';

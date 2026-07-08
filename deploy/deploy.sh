@@ -66,7 +66,7 @@ echo "==> Sync artykułów do bazy + Meilisearch"
 docker exec garden-backend node src/scripts/sync-articles-from-files.js || true
 
 echo "==> Indeks artykułów Meili"
-docker exec garden-backend node src/scripts/index-articles.js || true
+docker exec garden-backend node src/scripts/index-articles-simple.js || true
 
 echo ""
 echo "Deploy zakończony."
