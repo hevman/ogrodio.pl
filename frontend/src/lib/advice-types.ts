@@ -92,5 +92,6 @@ export type AdviceArticle = {
   tips: string[];
   title: string;
   topic: string;
+  createdAt: string;
   updatedAt: string;
 };

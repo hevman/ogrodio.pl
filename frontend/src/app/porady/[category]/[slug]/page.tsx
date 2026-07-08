@@ -5,7 +5,7 @@ import { notFound, redirect } from "next/navigation";
 import { Camera, CheckCircle2, Clock3, ShieldCheck, UserRound } from "lucide-react";
 import { ArticleGanttChart, ArticleVarietyTable } from "@/components/article-chart";
 import { ArticleParagraph } from "@/components/article-paragraph";
-import { formatArticleDate } from "@/lib/format-date";
+import { formatArticleDateShort } from "@/lib/format-date";
 import { ArticleInternalLinks } from "@/components/article-internal-links";
 import { ArticleRelatedProducts } from "@/components/article-related-products";
 import { Breadcrumb } from "@/components/breadcrumb";
@@ -17,6 +17,7 @@ import { getRelatedSectionTitle, resolveRelatedArticles } from "@/lib/article-li
 import { getAdviceRelatedProducts } from "@/lib/advice-shop";
 import { siteShell } from "@/lib/layout";
 import { site, articleCategories, getArticleCategorySlug } from "@/lib/site-config";
+import { IMAGE_QUALITY_ARTICLE_HERO, IMAGE_QUALITY_ARTICLE_INLINE } from "@/lib/image-quality";
 
 export const dynamic = "force-dynamic";
 export const revalidate = 300;
@@ -35,23 +36,35 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!article) return { title: "Porada" };
   const discoverMeta = getAdviceDiscoverMeta(article);
   const pagePath = `/porady/${category}/${slug}`;
+  const discoverImageUrl = absoluteSiteUrl(discoverMeta.image);
+  const publishedAt = article.createdAt || article.updatedAt;
+  const modifiedAt = article.updatedAt || article.createdAt;
 
   return {
     title: discoverMeta.headline,
     description: discoverMeta.description,
     keywords: article.seo.keywords,
     alternates: { canonical: pagePath },
+    robots: {
+      googleBot: {
+        "max-image-preview": "large",
+        "max-snippet": -1,
+        "max-video-preview": -1,
+      },
+    },
     openGraph: {
       description: discoverMeta.description,
-      images: [{ url: discoverMeta.image, alt: discoverMeta.imageAlt, width: 1200, height: 630 }],
+      images: [{ url: discoverImageUrl, alt: discoverMeta.imageAlt, width: 1200, height: 630 }],
       title: discoverMeta.headline,
       type: "article",
       url: pagePath,
+      publishedTime: publishedAt,
+      modifiedTime: modifiedAt,
     },
     twitter: {
       card: "summary_large_image",
       description: discoverMeta.description,
-      images: [discoverMeta.image],
+      images: [discoverImageUrl],
       title: discoverMeta.headline,
     },
   };
@@ -81,6 +94,12 @@ export default async function AdviceArticlePage({ params }: Props) {
   const pageUrl = `${site.publicUrl}/porady/${category}/${article.slug}`;
 
   const articleBody = buildArticleBodyText(article);
+  const publishedAt = article.createdAt || article.updatedAt;
+  const modifiedAt = article.updatedAt || article.createdAt;
+  const schemaImages = [
+    absoluteSiteUrl(discoverMeta.image),
+    ...(article.inlineImage ? [absoluteSiteUrl(article.inlineImage.src)] : []),
+  ];
 
   const articleJsonLd = {
     "@context": "https://schema.org",
@@ -91,11 +110,11 @@ export default async function AdviceArticlePage({ params }: Props) {
       name: site.authorName,
       url: `${site.publicUrl}/o-nas`,
     },
-    dateModified: article.updatedAt,
-    datePublished: discoverMeta.updatedAt,
+    dateModified: modifiedAt,
+    datePublished: publishedAt,
     description: discoverMeta.description,
     headline: discoverMeta.headline,
-    image: absoluteSiteUrl(discoverMeta.image),
+    image: schemaImages,
     keywords: article.seo.keywords.join(", "),
     mainEntityOfPage: { "@type": "WebPage", "@id": pageUrl },
     publisher: { "@type": "Organization", name: site.name },
@@ -156,7 +175,7 @@ export default async function AdviceArticlePage({ params }: Props) {
           fetchPriority="high"
           fill
           priority
-          quality={68}
+          quality={IMAGE_QUALITY_ARTICLE_HERO}
           sizes="100vw"
           src={article.coverImage}
         />
@@ -189,7 +208,12 @@ export default async function AdviceArticlePage({ params }: Props) {
               <UserRound className="h-4 w-4 text-teal-400" />
               {site.authorName}
             </span>
-            <span>Ostatnia aktualizacja: {formatArticleDate(article.updatedAt)}</span>
+            {publishedAt ? (
+              <span>Data utworzenia: {formatArticleDateShort(publishedAt)}</span>
+            ) : null}
+            {modifiedAt ? (
+              <span>Aktualizacja: {formatArticleDateShort(modifiedAt)}</span>
+            ) : null}
           </div>
         </div>
       </section>
@@ -213,7 +237,7 @@ export default async function AdviceArticlePage({ params }: Props) {
                       alt={article.inlineImage.alt}
                       className="w-full object-cover"
                       height={600}
-                      quality={85}
+                      quality={IMAGE_QUALITY_ARTICLE_INLINE}
                       sizes="(max-width: 768px) 100vw, (max-width: 1280px) min(100vw - 3rem, 900px), 900px"
                       src={article.inlineImage.src}
                       width={1000}

@@ -22,6 +22,7 @@ function transformArticle(article: any): AdviceArticle {
     summary: article.summary,
     readingMinutes: article.readingMinutes ?? article.reading_minutes ?? 5,
     updatedAt: article.updatedAt ?? article.updated_at ?? "",
+    createdAt: article.createdAt ?? article.created_at ?? article.updatedAt ?? article.updated_at ?? "",
     coverImage: article.coverImage ?? article.cover_image ?? "",
     coverAlt: article.coverAlt ?? article.cover_alt ?? "",
     discover: article.discover ?? undefined,
