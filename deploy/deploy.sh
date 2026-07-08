@@ -1,7 +1,13 @@
 #!/usr/bin/env bash
 # Build + start produkcji
-#   bash deploy/deploy.sh           — normalny deploy (HTTPS)
-#   bash deploy/deploy.sh bootstrap — pierwszy deploy (HTTP, przed SSL)
+#   bash deploy/deploy.sh           - normalny deploy (HTTPS)
+#   bash deploy/deploy.sh bootstrap - pierwszy deploy (HTTP, przed SSL)
+#
+# Artykuly NIE sa dotykane podczas zwyklego deployu.
+# Jawne tryby:
+#   IMPORT_NEW_ARTICLES=1 bash deploy/deploy.sh          - dodaje tylko nowe JSON-y, bez aktualizacji istniejacych
+#   REINDEX_ARTICLES=1 bash deploy/deploy.sh             - odswieza tylko indeks Meilisearch z bazy
+#   OVERWRITE_ARTICLES_FROM_JSON=1 bash deploy/deploy.sh - pelny sync JSON -> baza, nadpisuje istniejace tresci
 
 set -euo pipefail
 
@@ -29,22 +35,22 @@ export COMPOSE_PROJECT_NAME="${COMPOSE_PROJECT_NAME:-ogrodio}"
 export NGINX_CONF="${NGINX_CONF:-nginx.prod.conf}"
 
 if ! docker info >/dev/null 2>&1; then
-  echo "Brak dostępu do Docker (permission denied)."
-  echo "Napraw: sudo usermod -aG docker $USER && newgrp docker"
+  echo "Brak dostepu do Docker (permission denied)."
+  echo "Napraw: sudo usermod -aG docker \$USER && newgrp docker"
   echo "Albo:  sudo bash deploy/deploy.sh"
   exit 1
 fi
 
 if [ ! -f .env ]; then
-  echo "Brak .env — cp .env.production.example .env"
+  echo "Brak .env - cp .env.production.example .env"
   exit 1
 fi
 
 if [ "$MODE" = "bootstrap" ] || [ "${NGINX_CONF:-nginx.prod.conf}" = "nginx.prod-bootstrap.conf" ]; then
-  echo "==> Bootstrap: nginx HTTP (bez SSL) — tylko bez Cloudflare / przed Origin Cert"
+  echo "==> Bootstrap: nginx HTTP (bez SSL) - tylko bez Cloudflare / przed Origin Cert"
   NGINX_CONF=nginx.prod-bootstrap.conf $COMPOSE up -d --build
-  echo "Stack działa na porcie 80."
-  echo "Z Cloudflare: wystaw Origin Certificate → deploy/ssl/ → bash deploy/deploy.sh"
+  echo "Stack dziala na porcie 80."
+  echo "Z Cloudflare: wystaw Origin Certificate -> deploy/ssl/ -> bash deploy/deploy.sh"
   exit 0
 fi
 
@@ -53,22 +59,42 @@ if [ "${SKIP_SSL_VERIFY:-}" != "1" ]; then
   bash deploy/verify-ssl.sh
 fi
 
-echo "==> Build obrazów (może zająć 10–20 min na 2 vCPU)"
+echo "==> Build obrazow (moze zajac 10-20 min na 2 vCPU)"
 $COMPOSE build
 
-echo "==> Start kontenerów"
+echo "==> Start kontenerow"
 $COMPOSE up -d
 
-echo "==> Czekam na Postgres..."
-sleep 15
+if [ "${IMPORT_NEW_ARTICLES:-}" = "1" ] || [ "${REINDEX_ARTICLES:-}" = "1" ] || [ "${OVERWRITE_ARTICLES_FROM_JSON:-}" = "1" ]; then
+  echo "==> Czekam na Postgres..."
+  sleep 15
+fi
 
-echo "==> Sync artykułów do bazy + Meilisearch"
-docker exec garden-backend node src/scripts/sync-articles-from-files.js || true
+echo "==> Artykuly: operacje tylko na jawna flage"
 
-echo "==> Indeks artykułów Meili"
-docker exec garden-backend node src/scripts/index-articles-simple.js || true
+if [ "${IMPORT_NEW_ARTICLES:-}" = "1" ]; then
+  echo "==> Import nowych artykulow z JSON (bez aktualizacji istniejacych)"
+  docker exec garden-backend node src/scripts/import-articles-simple.js
+fi
+
+if [ "${OVERWRITE_ARTICLES_FROM_JSON:-}" = "1" ]; then
+  echo "==> UWAGA: pelny sync artykulow z JSON nadpisuje istniejace tresci w bazie"
+  docker exec garden-backend node src/scripts/sync-articles-from-files.js
+else
+  echo "==> Pomijam pelny sync artykulow z JSON (OVERWRITE_ARTICLES_FROM_JSON != 1)"
+fi
+
+if [ "${IMPORT_NEW_ARTICLES:-}" = "1" ] || [ "${REINDEX_ARTICLES:-}" = "1" ] || [ "${OVERWRITE_ARTICLES_FROM_JSON:-}" = "1" ]; then
+  echo "==> Indeks artykulow Meili"
+  docker exec garden-backend node src/scripts/index-articles-simple.js
+else
+  echo "==> Pomijam indeks artykulow (REINDEX_ARTICLES != 1)"
+  echo "    Nowe JSON-y bez nadpisywania: IMPORT_NEW_ARTICLES=1 bash deploy/deploy.sh"
+  echo "    Tylko reindeks:               REINDEX_ARTICLES=1 bash deploy/deploy.sh"
+  echo "    Pelny sync z nadpisaniem:     OVERWRITE_ARTICLES_FROM_JSON=1 bash deploy/deploy.sh"
+fi
 
 echo ""
-echo "Deploy zakończony."
+echo "Deploy zakonczony."
 echo "  Health: curl -s https://ogrodio.pl/health"
 echo "  Logi:   docker compose -f docker-compose.yml -f docker-compose.prod.yml logs -f"
