@@ -92,11 +92,10 @@ bash deploy/verify-ssl.sh
 bash deploy/post-install.sh
 ```
 
-Z Windows (zdjęcia artykułów ~350 MB — poza git):
+Z Windows (tylko WebP, ~52 MB — JPG zostają lokalnie):
 
 ```powershell
-# scp/rsync z maszyny dev — w Termius można SFTP
-scp -r D:\www_work\garden\frontend\public\images\articles root@51.83.162.34:/opt/ogrodio/app/frontend/public/images/articles/
+.\deploy\sync-article-images.ps1
 ```
 
 ---

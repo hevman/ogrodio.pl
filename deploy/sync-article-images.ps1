@@ -1,8 +1,7 @@
-# Wgranie zdjęć artykułów na VPS (katalog poza git, ~350 MB)
-# Uruchom z PowerShell w katalogu repo:
-#   .\deploy\sync-article-images.ps1
+# Wgranie zdjęć artykułów na VPS — tylko WebP (~52 MB)
+# Oryginały JPG zostają lokalnie na PC (poza git).
 #
-# Opcjonalnie:
+#   .\deploy\sync-article-images.ps1
 #   .\deploy\sync-article-images.ps1 -RemoteHost debian@51.83.162.34
 
 param(
@@ -18,11 +17,11 @@ if (-not (Test-Path $LocalDir)) {
     throw "Brak katalogu: $LocalDir"
 }
 
-$files = Get-ChildItem $LocalDir -File
+$files = Get-ChildItem $LocalDir -Filter *.webp -File
 $sizeMB = [math]::Round(($files | Measure-Object Length -Sum).Sum / 1MB, 1)
 
 Write-Host "Lokalnie: $LocalDir"
-Write-Host "Plikow: $($files.Count), rozmiar: ${sizeMB} MB"
+Write-Host "WebP: $($files.Count) plikow, ${sizeMB} MB (JPG pomijane — tylko na PC)"
 Write-Host "Cel: ${RemoteHost}:${RemoteDir}"
 Write-Host ""
 Write-Host "Podaj haslo SSH gdy zostaniesz poproszony..."
@@ -30,16 +29,17 @@ Write-Host ""
 
 ssh $RemoteHost "mkdir -p `"$RemoteDir`""
 
-# Prefer WSL rsync (szybszy, wznawialny); fallback: scp
 $wsl = Get-Command wsl -ErrorAction SilentlyContinue
 if ($wsl) {
     $wslLocal = wsl wslpath -a $LocalDir
-    wsl rsync -avz --progress "$wslLocal/" "${RemoteHost}:${RemoteDir}/"
+    wsl rsync -avz --progress --include='*.webp' --exclude='*' "$wslLocal/" "${RemoteHost}:${RemoteDir}/"
 } else {
-    scp -r "$LocalDir/." "${RemoteHost}:${RemoteDir}/"
+    foreach ($file in $files) {
+        scp $file.FullName "${RemoteHost}:${RemoteDir}/"
+    }
 }
 
 Write-Host ""
 Write-Host "Gotowe."
-Write-Host "Test na VPS lub lokalnie:"
+Write-Host "Test:"
 Write-Host "  curl -sI https://ogrodio.pl/images/articles/wiosenne-prace-ogrod.webp"
