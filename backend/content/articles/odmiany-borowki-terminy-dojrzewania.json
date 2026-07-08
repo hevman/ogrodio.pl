@@ -1,0 +1,536 @@
+{
+  "slug": "odmiany-borowki-terminy-dojrzewania",
+  "title": "Odmiany borówki amerykańskiej — kiedy dojrzewają? Podział na wczesne, średnie i późne",
+  "topic": "Owoce w ogrodzie",
+  "summary": "Właściwy dobór odmian borówki pozwala mieć świeże owoce od końca czerwca aż do września. Poznaj szczegółowy podział odmian na wczesne, średnio-wczesne, średnie i późne — z terminami dojrzewania, opisem smaku i praktycznymi wskazówkami wyboru.",
+  "reading_minutes": 12,
+  "cover_image": "/images/articles/borowka-terminy-dojrzewania-cover.webp",
+  "cover_alt": "Dojrzałe i niedojrzałe owoce borówki amerykańskiej na krzewu — różnica między gotowymi do zbioru a jeszcze zielonymi jagodami",
+  "discover": {
+    "enabled": true,
+    "headline": "Odmiany borówki amerykańskiej: kiedy dojrzewają? Podział na wczesne, średnie i późne",
+    "description": "Właściwy dobór odmian borówki pozwala mieć świeże owoce od końca czerwca aż do września. Poznaj szczegółowy podział odmian na wczesne, średnio-wczesne, średnie i późne — z terminami dojrzewania.",
+    "image": "/images/articles/borowka-terminy-dojrzewania-cover.webp",
+    "imageAlt": "Dojrzałe i niedojrzałe owoce borówki amerykańskiej na krzewu — różnica między gotowymi do zbioru a jeszcze zielonymi.",
+    "angle": "uprawa owoców w ogrodzie",
+    "freshness": "2026-07-04"
+  },
+  "inline_image": {
+    "src": "/images/articles/borowka-dojrzaly-owoc-detail.webp",
+    "alt": "Zbliżenie na dojrzały owoc borówki amerykańskiej — intensywnie niebieski owoc z woskowym nalotem gotowy do zbioru, w tle niedojrzałe jagody"
+  },
+  "ganttChart": {
+    "title": "Kalendarz dojrzewania odmian borówki",
+    "subtitle": "Orientacyjne terminy dla Polski środkowej",
+    "months": [
+      {
+        "label": "Czerwiec",
+        "weeks": 4
+      },
+      {
+        "label": "Lipiec",
+        "weeks": 5
+      },
+      {
+        "label": "Sierpień",
+        "weeks": 4
+      },
+      {
+        "label": "Wrzesień",
+        "weeks": 4
+      }
+    ],
+    "rows": [
+      {
+        "name": "Earliblue",
+        "group": "wczesna",
+        "start": 2,
+        "end": 5
+      },
+      {
+        "name": "Spartan",
+        "group": "wczesna",
+        "start": 3,
+        "end": 6
+      },
+      {
+        "name": "Duke",
+        "group": "wczesna",
+        "start": 3,
+        "end": 7
+      },
+      {
+        "name": "Patriot",
+        "group": "wczesna",
+        "start": 3,
+        "end": 7
+      },
+      {
+        "name": "Bluetta",
+        "group": "wczesna",
+        "start": 2,
+        "end": 6
+      },
+      {
+        "name": "Hardyblue",
+        "group": "wczesna",
+        "start": 3,
+        "end": 7
+      },
+      {
+        "name": "Bluecrop",
+        "group": "średnio-wczesna",
+        "start": 6,
+        "end": 10
+      },
+      {
+        "name": "Bluejay",
+        "group": "średnio-wczesna",
+        "start": 6,
+        "end": 9
+      },
+      {
+        "name": "Nelson",
+        "group": "średnio-wczesna",
+        "start": 7,
+        "end": 10
+      },
+      {
+        "name": "Berkeley",
+        "group": "średnio-wczesna",
+        "start": 7,
+        "end": 11
+      },
+      {
+        "name": "Coville",
+        "group": "średnia",
+        "start": 9,
+        "end": 13
+      },
+      {
+        "name": "Herbert",
+        "group": "średnia",
+        "start": 9,
+        "end": 13
+      },
+      {
+        "name": "Chandler",
+        "group": "średnia",
+        "start": 9,
+        "end": 13
+      },
+      {
+        "name": "Brigitta Blue",
+        "group": "średnia",
+        "start": 10,
+        "end": 14
+      },
+      {
+        "name": "Bonus",
+        "group": "średnia",
+        "start": 9,
+        "end": 13
+      },
+      {
+        "name": "Legacy",
+        "group": "średnia",
+        "start": 9,
+        "end": 13
+      },
+      {
+        "name": "Elliot",
+        "group": "późna",
+        "start": 11,
+        "end": 17
+      },
+      {
+        "name": "Jersey",
+        "group": "późna",
+        "start": 11,
+        "end": 16
+      },
+      {
+        "name": "Darrow",
+        "group": "późna",
+        "start": 12,
+        "end": 16
+      },
+      {
+        "name": "Elizabeth",
+        "group": "późna",
+        "start": 12,
+        "end": 16
+      },
+      {
+        "name": "Lateblue",
+        "group": "późna",
+        "start": 12,
+        "end": 17
+      },
+      {
+        "name": "Rubel",
+        "group": "późna",
+        "start": 11,
+        "end": 16
+      }
+    ]
+  },
+  "varietyTable": {
+    "caption": "Porównanie odmian borówki amerykańskiej",
+    "tableIntro": "Najwcześniej dojrzewają Earliblue i Bluetta — już od 20 czerwca. Standardem jest Bluecrop (lipiec), a sezon zamykają Elliot i Jersey we wrześniu. Łącząc 2–3 odmiany z różnych grup możesz zbierać świeże borówki przez ponad 2 miesiące. Poniżej szczegółowe zestawienie odmian z terminami zbioru, wielkością owoców i plonem.",
+    "rows": [
+      {
+        "name": "Earliblue",
+        "group": "wczesna",
+        "harvest": "20 cze – 10 lip",
+        "fruitSize": "średni",
+        "taste": "słodko-kwaśny",
+        "yield": "3–5 kg",
+        "notes": "bardzo wczesna"
+      },
+      {
+        "name": "Spartan",
+        "group": "wczesna",
+        "harvest": "25 cze – 15 lip",
+        "fruitSize": "duży",
+        "taste": "aromatyczny",
+        "yield": "3–5 kg",
+        "notes": "intensywny aromat"
+      },
+      {
+        "name": "Duke",
+        "group": "wczesna",
+        "harvest": "25 cze – 20 lip",
+        "fruitSize": "duży",
+        "taste": "łagodny, słodki",
+        "yield": "4–6 kg",
+        "notes": "odporny, łatwy w uprawie"
+      },
+      {
+        "name": "Patriot",
+        "group": "wczesna",
+        "harvest": "25 cze – 20 lip",
+        "fruitSize": "duży",
+        "taste": "słodko-kwaśny",
+        "yield": "4–7 kg",
+        "notes": "mrozoodporny do -30°C"
+      },
+      {
+        "name": "Bluetta",
+        "group": "wczesna",
+        "harvest": "20 cze – 5 lip",
+        "fruitSize": "średni",
+        "taste": "kwaśny, wyrazisty",
+        "yield": "3–5 kg",
+        "notes": "jedna z najwcześniejszych"
+      },
+      {
+        "name": "Hardyblue",
+        "group": "wczesna",
+        "harvest": "25 cze – 15 lip",
+        "fruitSize": "średni",
+        "taste": "słodki",
+        "yield": "3–5 kg",
+        "notes": "dobra mrozoodporność"
+      },
+      {
+        "name": "Toro",
+        "group": "średnio-wczesna",
+        "harvest": "10–31 lip",
+        "fruitSize": "b. duży",
+        "taste": "słodki, łagodny",
+        "yield": "5–8 kg",
+        "notes": "bardzo duże owoce"
+      },
+      {
+        "name": "Bluecrop",
+        "group": "średnio-wczesna",
+        "harvest": "10–31 lip",
+        "fruitSize": "duży",
+        "taste": "zrównoważony",
+        "yield": "5–8 kg",
+        "notes": "standard, łatwy w uprawie"
+      },
+      {
+        "name": "Bluejay",
+        "group": "średnio-wczesna",
+        "harvest": "10–25 lip",
+        "fruitSize": "duży",
+        "taste": "dobry",
+        "yield": "4–6 kg",
+        "notes": "wysoki krzew do 2 m"
+      },
+      {
+        "name": "Nelson",
+        "group": "średnio-wczesna",
+        "harvest": "15–31 lip",
+        "fruitSize": "duży",
+        "taste": "bardzo słodki",
+        "yield": "4–6 kg",
+        "notes": "wyróżniający się smak"
+      },
+      {
+        "name": "Berkeley",
+        "group": "średnio-wczesna",
+        "harvest": "15 lip – 5 sie",
+        "fruitSize": "duży",
+        "taste": "łagodny, mało kwaśny",
+        "yield": "4–7 kg",
+        "notes": "dobra dla dzieci"
+      },
+      {
+        "name": "Bluegold",
+        "group": "średnio-wczesna",
+        "harvest": "15 lip – 5 sie",
+        "fruitSize": "średni",
+        "taste": "słodki",
+        "yield": "4–6 kg",
+        "notes": "zwarta, niska do 1,2 m"
+      },
+      {
+        "name": "Bonus",
+        "group": "średnia",
+        "harvest": "1–25 sie",
+        "fruitSize": "b. duży",
+        "taste": "słodki, aromatyczny",
+        "yield": "5–7 kg",
+        "notes": "bardzo duże owoce"
+      },
+      {
+        "name": "Coville",
+        "group": "średnia",
+        "harvest": "1–25 sie",
+        "fruitSize": "b. duży",
+        "taste": "kwaśny → aromatyczny",
+        "yield": "5–7 kg",
+        "notes": "czekaj na pełną dojrzałość"
+      },
+      {
+        "name": "Herbert",
+        "group": "średnia",
+        "harvest": "1–25 sie",
+        "fruitSize": "duży",
+        "taste": "wyjątkowy aromat",
+        "yield": "4–6 kg",
+        "notes": "najwyżej oceniany smak"
+      },
+      {
+        "name": "Legacy",
+        "group": "średnia",
+        "harvest": "1–25 sie",
+        "fruitSize": "duży",
+        "taste": "słodki, aromatyczny",
+        "yield": "4–7 kg",
+        "notes": "dobra na surowo i do mrożenia"
+      },
+      {
+        "name": "Chandler",
+        "group": "średnia",
+        "harvest": "1–25 sie",
+        "fruitSize": "b. duży",
+        "taste": "słodki, łagodny",
+        "yield": "4–6 kg",
+        "notes": "rekordowe owoce do 2,5 cm"
+      },
+      {
+        "name": "Brigitta Blue",
+        "group": "średnia",
+        "harvest": "5–25 sie",
+        "fruitSize": "duży",
+        "taste": "lekko kwaśny",
+        "yield": "5–7 kg",
+        "notes": "dobra trwałość po zbiorze"
+      },
+      {
+        "name": "Elliot",
+        "group": "późna",
+        "harvest": "15 sie – 15 wrz",
+        "fruitSize": "średni",
+        "taste": "kwaśny",
+        "yield": "5–8 kg",
+        "notes": "najpóźniejsza odmiana"
+      },
+      {
+        "name": "Rubel",
+        "group": "późna",
+        "harvest": "10 sie – 5 wrz",
+        "fruitSize": "mały",
+        "taste": "intensywny, kwaśny",
+        "yield": "4–7 kg",
+        "notes": "dzika odmiana, silny aromat"
+      },
+      {
+        "name": "Jersey",
+        "group": "późna",
+        "harvest": "10 sie – 10 wrz",
+        "fruitSize": "średni",
+        "taste": "delikatny",
+        "yield": "5–9 kg",
+        "notes": "bardzo silny krzew"
+      },
+      {
+        "name": "Darrow",
+        "group": "późna",
+        "harvest": "20 sie – 10 wrz",
+        "fruitSize": "duży",
+        "taste": "lekko kwaśny",
+        "yield": "4–7 kg",
+        "notes": "dobra mrozoodporność"
+      },
+      {
+        "name": "Lateblue",
+        "group": "późna",
+        "harvest": "20 sie – 15 wrz",
+        "fruitSize": "średni",
+        "taste": "słodko-kwaśny",
+        "yield": "4–6 kg",
+        "notes": "jedna z najpóźniejszych"
+      },
+      {
+        "name": "Elizabeth",
+        "group": "późna",
+        "harvest": "20 sie – 10 wrz",
+        "fruitSize": "duży",
+        "taste": "bogaty aromat",
+        "yield": "4–6 kg",
+        "notes": "wymaga pH < 5,0"
+      }
+    ]
+  },
+  "sections": [
+    {
+      "heading": "Jak rozpoznać dojrzałą borówkę? Nie tylko kolor",
+      "paragraphs": [
+        "Najczęstszy błąd przy zbiorze borówki to opieranie się wyłącznie na kolorze. Owoce robią się granatowo-niebieskie nawet 5–10 dni przed osiągnięciem pełnej dojrzałości i wtedy są jeszcze kwaśne i cierpkie. Problemy z owocami (marszczenie, mumie) opisujemy w [poradniku o zamieraniu owoców borówki](/porady/choroby-i-szkodniki/zamieranie-owocow-borowki).",
+        "Dojrzała borówka: intensywnie granatowa z woskowym, srebrzystym nalotem (pruina) — to naturalna ochrona owocu, nie wada. Lekko miękka pod delikatnym uciskiem palcem — nie twarda jak kulka. Łatwo odchodzi od szypułki bez ciągnięcia. Słodko-kwaśna w smaku, bez wyraźnej cierpkości.",
+        "Niedojrzała borówka: granatowa ale twarda, bez woskowego nalotu lub z nierównym zabarwieniem (różowawe lub zielone ślady przy szypułce). Kwaśna i cierpka — taka jakość nie poprawi się po zerwaniu. Borówka po zerwaniu nie dojrzewa dalej, dlatego zbiór we właściwym momencie jest kluczowy."
+      ]
+    },
+    {
+      "heading": "Dlaczego warto sadzić kilka odmian o różnych terminach?",
+      "paragraphs": [
+        "Pojedynczy krzew odmiany wczesnej daje owoce przez 3–4 tygodnie. Zestawiając odmiany wczesne, średnie i późne możesz mieć świeże borówki przez 10–12 tygodni — od końca czerwca do września. Gdy krzewy starzeją się i słabiej owocują, pomaga [cięcie odmładzające](/porady/pielegnacja/ciecie-odmładzajace-borowki).",
+        "Różne terminy dojrzewania mają też drugą zaletę: rozkładają nakład pracy. Zamiast jednorazowego, intensywnego zbioru z wielu krzewów w tym samym czasie, zbierasz regularnie przez całe lato. Borówki na krzewach dojrzewają nierównomiernie nawet w obrębie jednej odmiany — co oznacza że i tak musisz wracać kilkukrotnie.",
+        "Ważny aspekt to zapylanie. Borówka jest technicznie samopłodna, ale przy obecności dwóch lub więcej odmian owoce są wyraźnie większe i plony wyższe o 20–40%. Dobierając odmiany o zbliżonych terminach kwitnienia zapewniasz im wzajemne zapylenie — to dodatkowy powód by łączyć różne odmiany."
+      ]
+    },
+    {
+      "heading": "Odmiany wczesne — zbiór od końca czerwca do połowy lipca",
+      "paragraphs": [
+        "Odmiany wczesne dają pierwsze dojrzałe owoce już na przełomie czerwca i lipca w Polsce środkowej i zachodniej, w rejonach cieplejszych nawet od 20 czerwca.",
+        "'Duke' — jedna z najpopularniejszych odmian wczesnych. Duże, jasnoniebieskoniebieskie owoce o łagodnym, słodkim smaku. Krzew silnie rosnący, odporny na choroby. Plon 4–6 kg. Dobra na surowo i do mrożenia.",
+        "'Spartan' — wczesna do średnio-wczesnej. Duże, ciemnoniebieskie owoce o wyraźnym, aromatycznym smaku — jedna z bardziej aromatycznych odmian. Krzew średniej siły, wymaga dobrego stanowiska. Plon 3–5 kg.",
+        "'Earliblue' — nazwa mówi sama za siebie. Bardzo wczesna, owoce średniej wielkości, jasnoniebieskieniebieskie, smak słodko-kwaśny. Krzew wyprostowany, do 1,8 m. Dobra do ogrodu gdzie zależy na jak najwcześniejszym plonie.",
+        "'Patriot' — wczesna, bardzo mrozoodporna (do -30°C), jedna z lepszych odmian dla rejonów z surowymi zimami. Duże owoce, dobry smak, plon 4–7 kg. Toleruje też bardziej gliniaste gleby niż większość odmian."
+      ]
+    },
+    {
+      "heading": "Odmiany średnio-wczesne — zbiór od połowy do końca lipca",
+      "paragraphs": [
+        "To najszersza grupa — zawiera wiele najpopularniejszych odmian uprawianych w Polsce. Dojrzewają gdy skończą się odmiany wczesne, w środku lata.",
+        "'Bluecrop' — przez dziesięciolecia standardowa odmiana w uprawach komercyjnych na całym świecie i nadal bardzo popularna w ogrodach. Duże, jasnoniebieskie owoce, smak zrównoważony słodko-kwaśny. Krzew silny, tolerancyjny, łatwy w uprawie. Plon 5–8 kg. Wadą jest podatność na pękanie owoców przy gwałtownych deszczach po suszy.",
+        "'Bluejay' — średnio-wczesna, duże jasnoniebieskie owoce o świetnym smaku. Krzew bardzo silnie rosnący (do 2 m), wyprostowany. Dobra odporność na choroby. Polecana jako zapylacz dla wielu innych odmian przez obfite kwitnienie.",
+        "'Nelson' — wybijająca się odmiana pod względem smaku. Duże, ciemnoniebieskie owoce, intensywny aromat, bardzo słodkie. Krzew średniowysoki. Plon 4–6 kg. Jedna z lepiej ocenianych odmian pod względem jakości smaku.",
+        "'Berkeley' — duże, jasnoniebieskie owoce, lekko spłaszczone. Smak łagodny, słodki, mało kwaśny — dobra dla dzieci i osób nielubiących kwaskowatości. Krzew bardzo silny, rozłożysty (do 2,5 m szerokości). Plon 4–7 kg."
+      ]
+    },
+    {
+      "heading": "Odmiany średnio-późne — zbiór w sierpniu",
+      "paragraphs": [
+        "Odmiany sierpniowe to dobry wybór jeśli chcesz przedłużyć sezon poza lipiec lub jeśli lipiec jest w Twoim ogrodzie zbyt gorący i suchy dla optymalnego dojrzewania.",
+        "'Coville' — średnio-późna, bardzo duże owoce, ciemnoniebieskie. Smak wyraźnie kwaśny gdy niedojrzałe — trzeba czekać na pełną dojrzałość. Przy pełnej dojrzałości smak doskonały, aromatyczny. Krzew wysoki (do 2 m), silnie rosnący. Plon 5–7 kg.",
+        "'Herbert' — jedna z najwyżej ocenianych odmian pod względem smaku przez degustatorów. Duże, ciemnoniebieskie owoce, wyjątkowy aromat. Krzew silny, wysoki. Wrażliwy na suszę — wymaga regularnego podlewania. Plon 4–6 kg.",
+        "'Brigitta Blue' — australijska odmiana która świetnie radzi sobie w ciepłych, suchych latach. Duże, ciemnoniebieskie owoce, smak lekko kwaśny, bardzo aromatyczny. Dobra trwałość owoców po zbiorze — dłużej świeże niż większość odmian.",
+        "'Chandler' — odmiana o wyjątkowo dużych owocach (do 2,5 cm średnicy — rekordowe w skali borówek). Smak słodki, łagodny. Krzew średniowysoki. Wymaga dobrego stanowiska i regularnego podlewania — przy stresie wodnym owoce pękają."
+      ]
+    },
+    {
+      "heading": "Odmiany późne — zbiór od końca sierpnia do września",
+      "paragraphs": [
+        "Odmiany późne przedłużają sezon borówkowy do jesieni. Szczególnie wartościowe w ogrodach gdzie chce się zbierać owoce do lodówki bez mrożenia jak najdłużej.",
+        "'Elliot' — najpóźniejsza z powszechnie uprawianych odmian. Owoce dojrzewają w Polsce od połowy sierpnia do połowy września. Średnie owoce, jasnoniebieskie, smak wyraźnie kwaśny — lepsza do przetworów niż na surowo. Krzew bardzo silnie rosnący, wysoki. Plon 5–8 kg.",
+        "'Darrow' — późna, duże owoce, ciemnoniebieskie. Smak dobry, lekko kwaśny. Krzew silny, tolerancyjny. Dobra mrozoodporność. Polecana do rejonów wschodnich Polski gdzie lato jest ciepłe a jesień łagodna.",
+        "'Jersey' — stara, sprawdzona odmiana późna (hodowla z 1928 roku). Średnie owoce, jasnoniebieskie, smak delikatny. Krzew bardzo silny (do 2 m), jeden z najsilniej rosnących. Świetna jako tło dla bardziej wymagających odmian. Plon 5–9 kg.",
+        "'Elizabeth' — późna odmiana o wyjątkowym aromacie. Duże, ciemnoniebieskie owoce, smak bogaty i złożony. Jedna z bardziej wrażliwych odmian na niekwaśną glebę — wymaga pH poniżej 5,0."
+      ]
+    },
+    {
+      "heading": "Jak skomponować ogród borówkowy na cały sezon?",
+      "paragraphs": [
+        "Minimalne zestawienie na 10-tygodniowy sezon: 'Duke' lub 'Patriot' (wczesna, czerwiec–lipiec) + 'Bluecrop' lub 'Nelson' (średnio-wczesna, lipiec) + 'Elliot' lub 'Jersey' (późna, sierpień–wrzesień). Trzy krzewy, trzy różne terminy — świeże owoce przez całe lato.",
+        "Przy większej liczbie krzewów warto łączyć odmiany o zbliżonych terminach kwitnienia dla lepszego zapylania. 'Duke' kwitnie wcześnie — dobry zapylacz to 'Earliblue' lub 'Patriot'. 'Bluecrop' kwitnie w środku sezonu — dobry partner to 'Bluejay' lub 'Berkeley'. 'Elliot' kwitnie późno — dobry zapylacz to 'Jersey' lub 'Darrow'.",
+        "Pamiętaj że terminy dojrzewania są orientacyjne i zależą od: regionu Polski (południe i zachód — wcześniej, wschód i północ — później), temperatury lata, stanowiska krzewu (słońce przyspiesza, cień opóźnia) i pogody w danym roku. Chłodne lato może opóźnić dojrzewanie o 2–3 tygodnie."
+      ]
+    },
+    {
+      "heading": "Tabela zbiorcza: terminy dojrzewania w Polsce środkowej",
+      "paragraphs": [
+        "Bardzo wczesne (od ~20 czerwca): Earliblue, Spartan.",
+        "Wczesne (koniec czerwca – połowa lipca): Duke, Patriot, Bluetta.",
+        "Średnio-wczesne (połowa – koniec lipca): Bluecrop, Bluejay, Nelson, Berkeley, Toro.",
+        "Średnio-późne (sierpień): Coville, Herbert, Brigitta Blue, Chandler, Bonus.",
+        "Późne (koniec sierpnia – wrzesień): Elliot, Darrow, Jersey, Elizabeth, Lateblue.",
+        "Uwaga: terminy podane dla Polski środkowej (okolice Warszawy, Łodzi). W Polsce zachodniej (Wielkopolska, Dolny Śląsk) dojrzewanie następuje 1–2 tygodnie wcześniej. W rejonach górskich i wschodnich — 1–3 tygodnie później."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "question": "Jak poznać że borówka jest gotowa do zbioru?",
+      "answer": "Kolor granatowy z woskowym, srebrzystym nalotem + lekka miękkość przy ucisku + łatwe odchodzenie od szypułki + słodko-kwaśny smak bez cierpkości. Sama granatowa barwa nie wystarczy — owoce mogą być granatowe przez 1–2 tygodnie zanim osiągną pełną dojrzałość."
+    },
+    {
+      "question": "Która odmiana borówki jest najlepsza?",
+      "answer": "Zależy od priorytetu. Na smak surowy: Nelson, Herbert, Elizabeth. Na plon: Bluecrop, Jersey, Toro. Na mrozoodporność: Patriot, Duke, Northblue. Na wczesność: Earliblue, Spartan. Na późność: Elliot, Darrow. Dla początkujących: Bluecrop lub Patriot — łatwe w uprawie i odporne."
+    },
+    {
+      "question": "Czy borówka dojrzewa po zerwaniu?",
+      "answer": "Nie. Borówka nie dojrzewa po zerwaniu — zerwana niedojrzała pozostanie kwaśna i cierpka. Dlatego tak ważne jest zbieranie we właściwym momencie i regularne odwiedzanie krzewów co 2–3 dni w szczycie dojrzewania."
+    },
+    {
+      "question": "Ile krzewów borówki potrzeba na rodzinę?",
+      "answer": "Na rodzinę 4-osobową która chce jeść na bieżąco i mrozić na zimę — 4–6 krzewów w 2–3 różnych odmianach o różnych terminach dojrzewania. Jeden dorosły krzew daje 3–6 kg owoców rocznie. Minimum 2 odmiany — dla wzajemnego zapylenia i większych owoców."
+    },
+    {
+      "question": "Kiedy sadzić borówkę żeby mieć owoce jak najszybciej?",
+      "answer": "Sadź wiosną (marzec–kwiecień) lub jesienią (wrzesień–październik). Pierwsze pojedyncze owoce pojawiają się w 2. roku, znaczące plony od 4–5 roku. Nie ma skrótu — borówka potrzebuje czasu na ukorzenienie. Sadzonki 3-letnie dają pierwsze owoce szybciej niż jednoroczne."
+    }
+  ],
+  "tips": [
+    "Sprawdzaj smak, nie tylko kolor — granatowe owoce mogą być kwaśne jeszcze przez tydzień.",
+    "Minimum 2 odmiany w ogrodzie — lepsze zapylenie i owoce wyraźnie większe.",
+    "Łącz wczesne, średnie i późne — świeże borówki przez 10 tygodni zamiast 3.",
+    "Terminy dojrzewania zależą od regionu — na zachodzie Polski wcześniej, na wschodzie później.",
+    "Zbieraj co 2–3 dni w szczycie sezonu — dojrzałe owoce szybko opadają lub gniją."
+  ],
+  "related_services": [
+    "Sadzenie krzewów owocowych",
+    "Pielęgnacja ogrodu owocowego",
+    "Konsultacje ogrodnicze"
+  ],
+  "related_articles": [
+    "borowka-choroby-lisci-diagnoza",
+    "ciemne-koncowki-lisci-borowki",
+    "ciecie-odmładzajace-borowki",
+    "zamieranie-owocow-borowki",
+    "borowka-posadzona-w-tym-roku-plamy-lisci"
+  ],
+  "seo": {
+    "title": "Odmiany borówki — kiedy dojrzewają? Terminy zbioru wczesne i późne",
+    "description": "Kompletny przegląd odmian borówki amerykańskiej z terminami dojrzewania. Podział na wczesne, średnie i późne odmiany. Jak skomponować ogród borówkowy na cały sezon od czerwca do września.",
+    "keywords": [
+      "odmiany borówki kiedy dojrzewają",
+      "borówka amerykańska odmiany terminy",
+      "wczesne odmiany borówki",
+      "późne odmiany borówki",
+      "kiedy zbierać borówkę odmiana",
+      "borówka Bluecrop Duke Elliot",
+      "kalendarz dojrzewania borówki",
+      "borówka sezon zbioru"
+    ]
+  },
+  "status": "published",
+  "published_at": "2026-06-23T00:00:00Z",
+  "created_at": "2026-06-23T00:00:00Z",
+  "updated_at": "2026-06-23T00:00:00Z"
+}

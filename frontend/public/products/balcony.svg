@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-label="Kwiaty balkonowe">
+  <rect width="1200" height="900" fill="#eef4f7"/>
+  <rect x="120" y="540" width="960" height="150" rx="24" fill="#7a5136"/>
+  <rect x="170" y="610" width="860" height="110" rx="18" fill="#a86d42"/>
+  <g stroke="#26724a" stroke-linecap="round" stroke-width="15">
+    <path d="M260 545c-10-130 20-230 90-310"/>
+    <path d="M450 545c25-150-10-255-80-330"/>
+    <path d="M620 545c-5-150 40-260 130-345"/>
+    <path d="M825 545c35-130 10-235-50-315"/>
+  </g>
+  <g>
+    <circle cx="340" cy="245" r="46" fill="#d94b70"/>
+    <circle cx="295" cy="285" r="46" fill="#ef6c8f"/>
+    <circle cx="385" cy="292" r="46" fill="#c73761"/>
+    <circle cx="360" cy="338" r="42" fill="#ef6c8f"/>
+    <circle cx="370" cy="290" r="22" fill="#ffd166"/>
+    <circle cx="720" cy="230" r="50" fill="#8b5cf6"/>
+    <circle cx="670" cy="275" r="48" fill="#a78bfa"/>
+    <circle cx="770" cy="285" r="48" fill="#7c3aed"/>
+    <circle cx="735" cy="335" r="42" fill="#a78bfa"/>
+    <circle cx="735" cy="285" r="22" fill="#facc15"/>
+    <circle cx="775" cy="260" r="42" fill="#ef4444"/>
+    <circle cx="825" cy="300" r="42" fill="#f97316"/>
+    <circle cx="740" cy="330" r="42" fill="#fb7185"/>
+  </g>
+  <rect y="720" width="1200" height="180" fill="#d8ead0"/>
+  <text x="90" y="835" fill="#173f2d" font-family="Arial, sans-serif" font-size="54" font-weight="700">Balkon i taras</text>
+</svg>

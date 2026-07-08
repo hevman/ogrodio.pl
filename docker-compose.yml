@@ -1,0 +1,207 @@
+services:
+  commerce-postgres:
+    image: postgres:16-alpine
+    container_name: garden-commerce-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: vendure
+      POSTGRES_PASSWORD: vendure
+      POSTGRES_DB: vendure
+    volumes:
+      - commerce_postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U vendure -d vendure"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+    networks:
+      - garden_network
+
+  backend-postgres:
+    image: postgres:16-alpine
+    container_name: garden-backend-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: garden
+      POSTGRES_PASSWORD: garden
+      POSTGRES_DB: garden_backend
+    volumes:
+      - backend_postgres_data:/var/lib/postgresql/data
+      - ./docker/postgres-init.sql:/docker-entrypoint-initdb.d/init.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U garden -d garden_backend"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+    networks:
+      - garden_network
+
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: garden-frontend
+    restart: unless-stopped
+    environment:
+      NODE_ENV: production
+      NEXT_PUBLIC_VENDURE_SHOP_API_URL: /shop-api
+      MEILISEARCH_HOST: http://meilisearch:7700
+      MEILISEARCH_MASTER_KEY: ${MEILISEARCH_MASTER_KEY:-garden-meili-local-key}
+      # URL backendu NestJS dostępny z kontenera frontendu
+      BACKEND_URL: http://backend:3000
+    depends_on:
+      - commerce-server
+      - backend
+      - meilisearch
+    networks:
+      - garden_network
+
+  backend:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    container_name: garden-backend
+    restart: unless-stopped
+    environment:
+      NODE_ENV: production
+      PORT: 3000
+      POSTGRES_HOST: backend-postgres
+      POSTGRES_PORT: 5432
+      POSTGRES_DB: garden_backend
+      POSTGRES_USER: garden
+      POSTGRES_PASSWORD: garden
+      JWT_SECRET: ${GARDEN_JWT_SECRET:-garden-dev-secret-change-me}
+      AUTH_COOKIE_DOMAIN: ogrodio.localhost
+      AUTH_COOKIE_SECURE: "false"
+      VENDURE_ADMIN_API_URL: http://commerce-server:3000/admin-api
+      VENDURE_ADMIN_TOKEN: ${VENDURE_ADMIN_TOKEN:-}
+      MEILISEARCH_HOST: http://meilisearch:7700
+      MEILISEARCH_MASTER_KEY: ${MEILISEARCH_MASTER_KEY:-garden-meili-local-key}
+      APP_PUBLIC_URL: ${APP_PUBLIC_URL:-http://app.ogrodio.localhost:8080}
+      DIGEST_CRON_SECRET: ${DIGEST_CRON_SECRET:-garden-digest-local-secret}
+      SMTP_HOST: ${SMTP_HOST:-}
+      SMTP_PORT: ${SMTP_PORT:-587}
+      SMTP_USER: ${SMTP_USER:-}
+      SMTP_PASS: ${SMTP_PASS:-}
+      SMTP_FROM: ${SMTP_FROM:-Ogrodio <noreply@ogrodio.pl>}
+      ARTICLE_MEDIA_DIR: /app/public/images/articles
+    depends_on:
+      backend-postgres:
+        condition: service_healthy
+      meilisearch:
+        condition: service_started
+    volumes:
+      - ./backend/content:/app/content:ro
+      - ./frontend/public/images/articles:/app/public/images/articles
+      - ./data/uploads:/app/uploads
+    networks:
+      - garden_network
+
+  meilisearch:
+    image: getmeili/meilisearch:v1.13
+    container_name: garden-meilisearch
+    restart: unless-stopped
+    environment:
+      MEILI_ENV: development
+      MEILI_MASTER_KEY: ${MEILISEARCH_MASTER_KEY:-garden-meili-local-key}
+      MEILI_NO_ANALYTICS: "true"
+    ports:
+      - "127.0.0.1:7700:7700"
+    volumes:
+      - meilisearch_data:/meili_data
+    networks:
+      - garden_network
+
+  commerce-server:
+    build:
+      context: ./commerce
+      dockerfile: Dockerfile
+    container_name: garden-commerce-server
+    restart: unless-stopped
+    command: ["npm", "run", "start:server"]
+    environment:
+      APP_ENV: dev
+      PORT: 3000
+      DB_HOST: commerce-postgres
+      DB_PORT: 5432
+      DB_NAME: vendure
+      DB_USERNAME: vendure
+      DB_PASSWORD: vendure
+      DB_SYNCHRONIZE: "true"
+      TRUST_PROXY: "true"
+      COOKIE_SECRET: ${VENDURE_COOKIE_SECRET:-garden-local-cookie-secret-change-me}
+      SUPERADMIN_USERNAME: ${VENDURE_SUPERADMIN_USERNAME:-superadmin}
+      SUPERADMIN_PASSWORD: ${VENDURE_SUPERADMIN_PASSWORD:-superadmin}
+      ASSET_URL_PREFIX: http://sklep.ogrodio.localhost/assets/
+    depends_on:
+      commerce-postgres:
+        condition: service_healthy
+    volumes:
+      - commerce_assets:/usr/src/app/static/assets
+    networks:
+      - garden_network
+
+  commerce-worker:
+    build:
+      context: ./commerce
+      dockerfile: Dockerfile
+    container_name: garden-commerce-worker
+    restart: unless-stopped
+    command: ["npm", "run", "start:worker"]
+    environment:
+      APP_ENV: dev
+      PORT: 3000
+      DB_HOST: commerce-postgres
+      DB_PORT: 5432
+      DB_NAME: vendure
+      DB_USERNAME: vendure
+      DB_PASSWORD: vendure
+      DB_SYNCHRONIZE: "false"
+      TRUST_PROXY: "true"
+      COOKIE_SECRET: ${VENDURE_COOKIE_SECRET:-garden-local-cookie-secret-change-me}
+      SUPERADMIN_USERNAME: ${VENDURE_SUPERADMIN_USERNAME:-superadmin}
+      SUPERADMIN_PASSWORD: ${VENDURE_SUPERADMIN_PASSWORD:-superadmin}
+      ASSET_URL_PREFIX: http://sklep.ogrodio.localhost/assets/
+    depends_on:
+      commerce-postgres:
+        condition: service_healthy
+    volumes:
+      - commerce_assets:/usr/src/app/static/assets
+    networks:
+      - garden_network
+
+  nginx:
+    image: nginx:alpine
+    container_name: garden-nginx
+    restart: unless-stopped
+    environment:
+      VIRTUAL_HOST: sklep.ogrodio.localhost,ogrodio.localhost,app.ogrodio.localhost,panel.ogrodio.localhost
+      VIRTUAL_PORT: 80
+    expose:
+      - "80"
+    ports:
+      - "8080:80"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./frontend/public/images/articles:/uploads/articles:ro
+    depends_on:
+      - frontend
+      - commerce-server
+      - backend
+    networks:
+      - garden_network
+      - reverse_proxy_network
+
+volumes:
+  commerce_postgres_data:
+  backend_postgres_data:
+  commerce_assets:
+  meilisearch_data:
+
+networks:
+  garden_network:
+    driver: bridge
+  reverse_proxy_network:
+    external: true
+    name: reverse_proxy_network

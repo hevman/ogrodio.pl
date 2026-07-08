@@ -1,0 +1,68 @@
+# ─── Sekrety i env ───────────────────────────────────────────────────────────
+.env
+.env.local
+.env.*.local
+!.env.example
+!.env.production.example
+commerce/.env
+backend/.env
+frontend/.env
+
+# ─── Dev / jednorazowe skrypty SQL ───────────────────────────────────────────
+update_password.sql
+
+# ─── SSL (Cloudflare Origin — tylko na serwerze) ─────────────────────────────
+deploy/ssl/*.pem
+deploy/ssl/*.key
+deploy/ssl/*.crt
+
+# ─── Node ────────────────────────────────────────────────────────────────────
+node_modules/
+**/node_modules/
+
+# ─── Build / cache ───────────────────────────────────────────────────────────
+.next/
+out/
+dist/
+**/.next/
+**/dist/
+*.tsbuildinfo
+.turbo/
+.cache/
+
+# ─── Vendure / commerce ──────────────────────────────────────────────────────
+commerce/admin-ui/
+commerce/static/assets/
+commerce/static/email/test-emails/
+commerce/.vendure/
+commerce/vendure.sqlite
+commerce/*.sqlite
+
+# ─── Uploady użytkowników (VPS / prod) ───────────────────────────────────────
+data/uploads/*
+!data/uploads/.gitkeep
+data/*.jpg
+data/*.jpeg
+data/*.png
+data/*.webp
+
+# Zdjęcia artykułów (~350 MB — kopiuj z backupu VPS lub uruchom articles:sync-media)
+frontend/public/images/articles/*
+!frontend/public/images/articles/.gitkeep
+
+# ─── Logi i OS ───────────────────────────────────────────────────────────────
+*.log
+npm-debug.log*
+.DS_Store
+Thumbs.db
+
+# ─── IDE (opcjonalnie lokalne) ───────────────────────────────────────────────
+.idea/
+*.swp
+*.swo
+
+# ─── Docker / volumes lokalne ────────────────────────────────────────────────
+docker-compose.override.yml
+
+# ─── Netlify (legacy frontend) ─────────────────────────────────────────────────
+.netlify/

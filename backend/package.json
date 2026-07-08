@@ -1,0 +1,49 @@
+{
+  "name": "garden-shop-backend",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "build": "nest build",
+    "start": "node dist/main.js",
+    "start:dev": "nest start --watch",
+    "import-articles": "node src/scripts/import-articles-simple.js",
+    "sync-articles": "node src/scripts/sync-articles-from-files.js",
+    "index-articles": "node src/scripts/index-articles-simple.js",
+    "generate-article": "ts-node src/scripts/generate-article.ts",
+    "sync-article-media": "node src/scripts/sync-article-media.js",
+    "sync-article-discover": "node src/scripts/sync-article-discover.js",
+    "send-weekly-digest": "ts-node src/scripts/send-weekly-digest.ts"
+  },
+  "dependencies": {
+    "@nestjs/common": "^11.1.6",
+    "@nestjs/core": "^11.1.6",
+    "@nestjs/jwt": "^11.0.1",
+    "@nestjs/passport": "^11.0.5",
+    "@nestjs/platform-express": "^11.1.6",
+    "bcrypt": "^6.0.0",
+    "cookie-parser": "^1.4.7",
+    "nodemailer": "^7.0.13",
+    "passport": "^0.7.0",
+    "passport-jwt": "^4.0.1",
+    "passport-local": "^1.0.0",
+    "pg": "^8.16.3",
+    "reflect-metadata": "^0.2.2",
+    "rxjs": "^7.8.2",
+    "sharp": "^0.35.2"
+  },
+  "devDependencies": {
+    "@nestjs/cli": "^11.0.10",
+    "@types/bcrypt": "^6.0.0",
+    "@types/cookie-parser": "^1.4.9",
+    "@types/express": "^5.0.3",
+    "@types/multer": "^2.1.0",
+    "@types/node": "^22.16.5",
+    "@types/nodemailer": "^6.4.24",
+    "@types/passport-jwt": "^4.0.1",
+    "@types/passport-local": "^1.0.38",
+    "@types/pg": "^8.11.10",
+    "ts-loader": "^9.5.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  }
+}

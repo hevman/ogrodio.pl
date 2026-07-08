@@ -1,0 +1,443 @@
+{
+  "slug": "odmiany-jagody-kamczackiej",
+  "title": "Odmiany jagody kamczackiej — które wybrać? Podział na wczesne i późne z opisem smaku",
+  "topic": "Owoce w ogrodzie",
+  "summary": "Jagoda kamczacka ma dziesiątki odmian o różnych terminach dojrzewania, smaku i plonie. Poznaj szczegółowy podział na odmiany wczesne, średnie i późne — z opisem smaku, wielkości owoców i wskazówkami jak dobrać zapylacze.",
+  "reading_minutes": 12,
+  "cover_image": "/images/articles/jagoda-kamczacka-odmiany-cover.webp",
+  "cover_alt": "Krzew jagody kamczackiej z dojrzałymi owocami — odmiany jagody kamczackiej w ogrodzie przydomowym",
+  "discover": {
+    "enabled": true,
+    "headline": "Odmiany jagody kamczackiej: które wybrać? Podział na wczesne i późne z opisem smaku",
+    "description": "Jagoda kamczacka ma dziesiątki odmian o różnych terminach dojrzewania, smaku i plonie. Poznaj szczegółowy podział na odmiany wczesne, średnie i późne — z opisem smaku, wielkości owoców i wskazówkami.",
+    "image": "/images/articles/jagoda-kamczacka-odmiany-cover.webp",
+    "imageAlt": "Krzew jagody kamczackiej z dojrzałymi owocami — odmiany jagody kamczackiej w ogrodzie przydomowym",
+    "angle": "uprawa owoców w ogrodzie",
+    "freshness": "2026-07-04"
+  },
+  "inline_image": {
+    "src": "/images/articles/jagoda-kamczacka-odmiany-detail.webp",
+    "alt": "Dojrzałe owoce jagody kamczackiej — podłużne ciemnoniebieskie jagody gotowe do zbioru"
+  },
+  "ganttChart": {
+    "title": "Kalendarz dojrzewania odmian jagody kamczackiej",
+    "subtitle": "Orientacyjne terminy dla Polski środkowej — jagoda kamczacka dojrzewa 3–4 tygodnie przed truskawką",
+    "months": [
+      {
+        "label": "Kwiecień",
+        "weeks": 2
+      },
+      {
+        "label": "Maj",
+        "weeks": 4
+      },
+      {
+        "label": "Czerwiec",
+        "weeks": 4
+      },
+      {
+        "label": "Lipiec",
+        "weeks": 2
+      }
+    ],
+    "rows": [
+      {
+        "name": "Wojtek",
+        "group": "wczesna",
+        "start": 3,
+        "end": 6
+      },
+      {
+        "name": "Duet",
+        "group": "wczesna",
+        "start": 3,
+        "end": 6
+      },
+      {
+        "name": "Zojka",
+        "group": "wczesna",
+        "start": 3,
+        "end": 6
+      },
+      {
+        "name": "Aurora",
+        "group": "wczesna",
+        "start": 4,
+        "end": 7
+      },
+      {
+        "name": "Borealis",
+        "group": "wczesna",
+        "start": 4,
+        "end": 7
+      },
+      {
+        "name": "Yezberry Solo",
+        "group": "wczesna",
+        "start": 3,
+        "end": 6
+      },
+      {
+        "name": "Atut",
+        "group": "średnia",
+        "start": 5,
+        "end": 8
+      },
+      {
+        "name": "Czarna Perła",
+        "group": "średnia",
+        "start": 5,
+        "end": 8
+      },
+      {
+        "name": "Honeybee",
+        "group": "średnia",
+        "start": 5,
+        "end": 9
+      },
+      {
+        "name": "Indigo Gem",
+        "group": "średnia",
+        "start": 6,
+        "end": 9
+      },
+      {
+        "name": "Tundra",
+        "group": "średnia",
+        "start": 6,
+        "end": 9
+      },
+      {
+        "name": "Polar Jewel",
+        "group": "średnia",
+        "start": 5,
+        "end": 8
+      },
+      {
+        "name": "Blue Velvet",
+        "group": "średnia",
+        "start": 6,
+        "end": 9
+      },
+      {
+        "name": "Jugana",
+        "group": "późna",
+        "start": 7,
+        "end": 10
+      },
+      {
+        "name": "Zielona",
+        "group": "późna",
+        "start": 7,
+        "end": 10
+      },
+      {
+        "name": "Nimfa",
+        "group": "późna",
+        "start": 8,
+        "end": 11
+      },
+      {
+        "name": "Vostorg",
+        "group": "późna",
+        "start": 7,
+        "end": 11
+      },
+      {
+        "name": "Morena",
+        "group": "późna",
+        "start": 8,
+        "end": 11
+      }
+    ]
+  },
+  "varietyTable": {
+    "caption": "Porównanie odmian jagody kamczackiej",
+    "tableIntro": "Jagoda kamczacka dojrzewa jako pierwsza w ogrodzie — wczesne odmiany (Wojtek, Atut) już w maju, późne (Wojciech, Zojka) w czerwcu. Kluczowe przy wyborze: do zapylania potrzebujesz minimum 2 różne odmiany. Poniżej zestawienie odmian z terminami dojrzewania, smakiem i wymaganiami dotyczącymi zapylenia.",
+    "rows": [
+      {
+        "name": "Wojtek",
+        "group": "wczesna",
+        "harvest": "koniec maja",
+        "fruitSize": "duży (1,5–2 g)",
+        "taste": "słodko-kwaśny",
+        "yield": "2–4 kg",
+        "notes": "dobra na surowo, popularna w PL"
+      },
+      {
+        "name": "Duet",
+        "group": "wczesna",
+        "harvest": "koniec maja",
+        "fruitSize": "średni (1–1,5 g)",
+        "taste": "słodki, łagodny",
+        "yield": "2–3 kg",
+        "notes": "dobry zapylacz dla Wojtka"
+      },
+      {
+        "name": "Zojka",
+        "group": "wczesna",
+        "harvest": "koniec maja",
+        "fruitSize": "duży (1,5–2 g)",
+        "taste": "aromatyczny, słodki",
+        "yield": "2–4 kg",
+        "notes": "polska odmiana, polecana"
+      },
+      {
+        "name": "Aurora",
+        "group": "wczesna",
+        "harvest": "przełom maj/cze",
+        "fruitSize": "b. duży (2–3 g)",
+        "taste": "słodki, mało cierpki",
+        "yield": "3–5 kg",
+        "notes": "kanadyjska seria Berry Blue"
+      },
+      {
+        "name": "Borealis",
+        "group": "wczesna",
+        "harvest": "przełom maj/cze",
+        "fruitSize": "duży (1,5–2,5 g)",
+        "taste": "słodko-kwaśny",
+        "yield": "3–5 kg",
+        "notes": "kanadyjska seria Berry Blue"
+      },
+      {
+        "name": "Yezberry Solo",
+        "group": "wczesna",
+        "harvest": "koniec maja",
+        "fruitSize": "duży (1,5–2,5 g)",
+        "taste": "słodki, wyraźny",
+        "yield": "2–4 kg",
+        "notes": "samopłodna — jedyna bez zapylacza"
+      },
+      {
+        "name": "Atut",
+        "group": "średnia",
+        "harvest": "połowa czerwca",
+        "fruitSize": "średni (1–1,5 g)",
+        "taste": "kwaśny, cierpki",
+        "yield": "2–3 kg",
+        "notes": "lepszy do przetworów"
+      },
+      {
+        "name": "Czarna Perła",
+        "group": "średnia",
+        "harvest": "połowa czerwca",
+        "fruitSize": "duży (1,5–2 g)",
+        "taste": "słodki, aromatyczny",
+        "yield": "2–4 kg",
+        "notes": "polska odmiana"
+      },
+      {
+        "name": "Honeybee",
+        "group": "średnia",
+        "harvest": "połowa czerwca",
+        "fruitSize": "średni (1–1,5 g)",
+        "taste": "słodki",
+        "yield": "2–3 kg",
+        "notes": "dobry zapylacz dla serii UoS"
+      },
+      {
+        "name": "Polar Jewel",
+        "group": "średnia",
+        "harvest": "połowa czerwca",
+        "fruitSize": "b. duży (2–3 g)",
+        "taste": "słodki, bardzo łagodny",
+        "yield": "3–5 kg",
+        "notes": "seria UoS, rekordowe owoce"
+      },
+      {
+        "name": "Blue Velvet",
+        "group": "średnia",
+        "harvest": "koniec czerwca",
+        "fruitSize": "duży (1,5–2,5 g)",
+        "taste": "słodki",
+        "yield": "3–4 kg",
+        "notes": "zwarta, do 1 m — dobra na taras"
+      },
+      {
+        "name": "Indigo Gem",
+        "group": "średnia",
+        "harvest": "koniec czerwca",
+        "fruitSize": "duży (2–2,5 g)",
+        "taste": "słodko-kwaśny, wyraźny",
+        "yield": "3–5 kg",
+        "notes": "seria UoS, bardzo plenna"
+      },
+      {
+        "name": "Tundra",
+        "group": "średnia",
+        "harvest": "koniec czerwca",
+        "fruitSize": "b. duży (2–3 g)",
+        "taste": "słodki, miękki",
+        "yield": "3–5 kg",
+        "notes": "seria UoS, najsłodsza"
+      },
+      {
+        "name": "Jugana",
+        "group": "późna",
+        "harvest": "początek lipca",
+        "fruitSize": "duży (1,5–2 g)",
+        "taste": "słodki z nutą cierpkości",
+        "yield": "2–3 kg",
+        "notes": "rosyjska odmiana"
+      },
+      {
+        "name": "Zielona",
+        "group": "późna",
+        "harvest": "początek lipca",
+        "fruitSize": "duży (1,5–2,5 g)",
+        "taste": "łagodny słodki",
+        "yield": "2–4 kg",
+        "notes": "dobra trwałość po zbiorze"
+      },
+      {
+        "name": "Vostorg",
+        "group": "późna",
+        "harvest": "lipiec",
+        "fruitSize": "średni (1–1,5 g)",
+        "taste": "słodko-kwaśny, wyraźny",
+        "yield": "2–3 kg",
+        "notes": "rosyjska odmiana, odporna"
+      },
+      {
+        "name": "Morena",
+        "group": "późna",
+        "harvest": "połowa lipca",
+        "fruitSize": "duży (1,5–2 g)",
+        "taste": "słodki, łagodny",
+        "yield": "2–4 kg",
+        "notes": "polska hodowla"
+      },
+      {
+        "name": "Nimfa",
+        "group": "późna",
+        "harvest": "połowa lipca",
+        "fruitSize": "b. duży (2–3 g)",
+        "taste": "słodki, bardzo łagodny",
+        "yield": "3–4 kg",
+        "notes": "polska hodowla, b. duże owoce"
+      }
+    ]
+  },
+  "sections": [
+    {
+      "heading": "Dlaczego wybór odmiany jagody kamczackiej jest tak ważny?",
+      "paragraphs": [
+        "Jagoda kamczacka to roślina obcozapylna — bez drugiej odmiany w ogrodzie krzew zakwitnie pięknie, ale nie wyda praktycznie żadnych owoców. Szczegóły doboru par zapylaczy znajdziesz w [poradniku o kwitnieniu i zapylaniu](/porady/owoce-w-ogrodzie/jagoda-kamczacka-kwitnienie-zapylanie). Musisz zadbać nie tylko o termin dojrzewania i smak, ale przede wszystkim o to by odmiany które sadzisz wzajemnie się zapylały.",
+        "Drugi kluczowy aspekt to termin dojrzewania. Jagoda kamczacka jest najwcześniejszym owocem w sezonie — pierwsze odmiany dojrzewają już w połowie maja, czyli 3–4 tygodnie przed truskawką. Podstawy uprawy opisujemy w [poradniku o jagodzie kamczackiej](/porady/owoce-w-ogrodzie/jagoda-kamczacka-uprawa-i-pielegnacja). Przez odpowiedni dobór odmian możesz mieć świeże owoce od połowy maja do połowy lipca.",
+        "Warto też wiedzieć że odmiany jagody kamczackiej bardzo się różnią smakiem — od wyraźnie kwaśnych i cierpkich (dobre do przetworów i soków) przez zrównoważone słodko-kwaśne (wszechstronne) do bardzo słodkich i łagodnych (idealne na surowo dla dzieci). Ten wybór powinien zależeć od tego jak planujesz wykorzystywać owoce."
+      ]
+    },
+    {
+      "heading": "Odmiany polskie — sprawdzone w naszym klimacie",
+      "paragraphs": [
+        "'Wojtek' — najbardziej popularna polska odmiana. Duże owoce (1,5–2 g), słodko-kwaśne, bardzo dobre na surowo. Krzew silnie rosnący, plenny (2–4 kg). Kwitnie w połowie sezonu — dobry zapylacz to 'Duet', 'Zojka' lub 'Atut'.",
+        "'Duet' — polska odmiana specjalnie wyhodowana jako zapylacz dla 'Wojtka'. Owoce mniejsze, smak słodszy i łagodniejszy niż 'Wojtek'. Sam w sobie też plenny — 2–3 kg. Kwitnie w tym samym terminie co 'Wojtek'.",
+        "'Zojka' — polska odmiana o dużych, aromatycznych owocach. Dobra zarówno na surowo jak i do przetworów. Kwitnie wcześnie — dobry zapylacz to 'Wojtek' lub 'Duet'. Plon 2–4 kg.",
+        "'Atut' — odmiana z późniejszym kwitnieniem. Owoce bardziej kwaśne i cierpkie niż 'Wojtek' — lepsze do dżemów, soków i nalewek. Dobry zapylacz dla późniejszych odmian. Plon 2–3 kg.",
+        "'Czarna Perła' — polska odmiana o dużych słodkich owocach i intensywnym aromacie. Jedna z lepiej smakujących polskich odmian. Wymaga dobrego zapylacza kwitnącego w tym samym czasie."
+      ]
+    },
+    {
+      "heading": "Odmiany kanadyjskie serii Berry Blue — duże owoce, mniej cierpkości",
+      "paragraphs": [
+        "Seria Berry Blue pochodzi z Uniwersytetu Saskatchewan w Kanadzie i jest hodowana specjalnie pod kątem dużych, mało cierpkich owoców nadających się na surowo. To jedna z największych zmian jakie zaszły w uprawie jagody kamczackiej w ostatnich 15 latach.",
+        "'Aurora' i 'Borealis' — pierwsze i najpopularniejsze odmiany serii. Bardzo duże owoce (2–3 g), słodkie i łagodne, mało cierpkie. Krzew silnie rosnący. Ważne: odmiany Berry Blue wymagają zapylaczy z tej samej serii (Aurora zapyla Borealis i odwrotnie) lub odmian polskich kwitnących w tym samym czasie.",
+        "'Tundra' i 'Indigo Gem' — nowsze odmiany serii UoS (University of Saskatchewan). Tundra jest uznawana za najsłodszą odmianę jagody kamczackiej dostępną w Polsce. Indigo Gem wyróżnia się plonem — do 5 kg z krzewu. Obie wymagają wzajemnego zapylenia lub zapylacza z serii Berry Blue.",
+        "Uwaga na odmiany kanadyjskie w polskim klimacie: są nieco mniej odporne na choroby niż polskie odmiany i w mokrych sezonach mogą potrzebować profilaktycznych oprysków. Owoce są za to znacznie większe i mniej cierpkie."
+      ]
+    },
+    {
+      "heading": "Odmiany rosyjskie i ukraińskie — odporne i plenne",
+      "paragraphs": [
+        "Odmiany hodowane w Rosji i na Ukrainie mają inny profil niż zachodnie. Są zazwyczaj bardziej odporne na choroby i przymrozki, często mają intensywniejszy smak (bardziej kwaśny i aromatyczny), ale owoce są mniejsze niż kanadyjskie.",
+        "'Jugana' — rosyjska odmiana o dobrych plonach i owocom z nutą cierpkości typową dla dzikich jagód kamczackich. Świetna do nalewek i soków. Dojrzewa późno (lipiec) — dobry zapylacz to inne późne odmiany lub 'Atut'.",
+        "'Nimfa' — polska odmiana o późnym terminie dojrzewania i wyjątkowo dużych owocach jak na polską hodowlę. Smak słodki i łagodny. Dobra trwałość po zbiorze.",
+        "Odmiany rosyjskie dostępne w Polsce jako rozsady lub sadzonki ze szkółek: Lenuita, Morena, Vostorg, Czełabinskaja. Mają zwykle mniejsze owoce niż seria Berry Blue ale są wytrzymalsze i plenne."
+      ]
+    },
+    {
+      "heading": "Zasady doboru zapylaczy — klucz do plonu",
+      "paragraphs": [
+        "Jagoda kamczacka wymaga co najmniej 2 różnych odmian które kwitną w tym samym czasie. Same kwiaty jednej odmiany nie są w stanie się zapylić — pyłek musi pochodzić z innego genotypu. Odległość między krzewami powinna wynosić maksymalnie 3–4 metry.",
+        "Odmiany wczesne zapylają inne wczesne. Odmiany późne zapylają inne późne. Problem pojawia się gdy masz tylko jedną odmianę wczesną i jedną późną — ich kwitnienie się nie pokrywa i zapylenie jest słabe lub żadne.",
+        "Sprawdzone pary zapylaczy: Wojtek + Duet lub Zojka. Aurora + Borealis (obowiązkowo ta sama seria). Tundra + Indigo Gem (seria UoS). Atut + Jugana (późne). Przy 3+ krzewach mieszaj odmiany wczesne i późne — zawsze po min. 2 odmiany z podobnym terminem kwitnienia.",
+        "Dodatkowe zapylenie przez pszczoły i trzmiele jest kluczowe — kwiaty jagody kamczackiej kwitną kiedy owady są jeszcze mało aktywne (kwiecień–maj). Unikaj oprysków insektycydami w czasie kwitnienia i sadź rośliny nektarowe w pobliżu."
+      ]
+    },
+    {
+      "heading": "Jak rozpoznać dojrzałość jagody kamczackiej?",
+      "paragraphs": [
+        "Jagody kamczackiej nie zbiera się po kolorze — robią się granatowoniebieskie na 1–2 tygodnie przed pełną dojrzałością i wtedy są jeszcze bardzo cierpkie. Dojrzała jagoda jest miękka w dotyku, łatwo odchodzi od szypułki i ma wyraźnie słodki (lub słodko-kwaśny w zależności od odmiany) smak.",
+        "Ważna wskazówka: sprawdzaj smak regularnie od momentu gdy owoce staną się granatowe. Różnica między niedojrzałą a dojrzałą jagodą kamczacką jest ogromna — niedojrzała jest wyjątkowo cierpka, dojrzała może być wyjątkowo słodka.",
+        "Dojrzałe owoce szybko opadają — sprawdzaj krzew co 2–3 dni. Można też zebrać owoce przez potrząsanie gałęzią nad rozłożoną płachtą. Świeże jagody kamczackiej wytrzymują w lodówce 3–5 dni, zamrożone zachowują wartości odżywcze przez rok."
+      ]
+    },
+    {
+      "heading": "Dobór odmian na cały sezon: praktyczne zestawienia",
+      "paragraphs": [
+        "Minimalny ogród (2 krzewy): Wojtek + Duet. Oba kwitnące w tym samym czasie, wzajemnie się zapylające, sprawdzone w polskich warunkach. Owoce w końcu maja.",
+        "Rozszerzony ogród (4 krzewy): Wojtek + Zojka (wczesne, zapylają się wzajemnie) + Tundra + Indigo Gem (średnie/późne, serie UoS, wzajemnie się zapylają). Owoce od końca maja do końca czerwca.",
+        "Ogród na cały sezon (6+ krzewów): 2 odmiany wczesne (np. Wojtek + Duet lub Aurora + Borealis) + 2 średnie (Tundra + Indigo Gem lub Czarna Perła + Honeybee) + 2 późne (Nimfa + Jugana). Owoce od połowy maja do połowy lipca — ponad 8 tygodni.",
+        "Ważne: odmiany Berry Blue (Aurora, Borealis) i UoS (Tundra, Indigo Gem) lepiej zapylają się wzajemnie w swoich seriach niż z polskimi odmianami. Mieszanie serii działa ale jest mniej efektywne."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "question": "Czy jagoda kamczacka może rosnąć bez zapylacza?",
+      "answer": "Nie. Jagoda kamczacka jest ściśle obcozapylna — bez drugiej odmiany nie zawiąże owoców. Musisz posadzić minimum 2 różne odmiany o zbliżonym terminie kwitnienia w odległości do 3–4 m od siebie."
+    },
+    {
+      "question": "Która odmiana jagody kamczackiej jest najsłodsza?",
+      "answer": "Spośród dostępnych w Polsce odmian najsłodsze są: Tundra (seria UoS), Aurora i Borealis (seria Berry Blue) oraz Nimfa. Odmiany polskie jak Wojtek są zazwyczaj bardziej słodko-kwaśne. Odmiany do przetworów (bardziej kwaśne): Atut, Jugana."
+    },
+    {
+      "question": "Kiedy dojrzewa jagoda kamczacka?",
+      "answer": "Zależnie od odmiany i regionu: odmiany wczesne (Wojtek, Duet, Aurora) — od połowy do końca maja. Odmiany średnie (Tundra, Indigo Gem, Czarna Perła) — czerwiec. Odmiany późne (Nimfa, Jugana) — lipiec. To 3–4 tygodnie przed truskawką."
+    },
+    {
+      "question": "Czy Aurora i Borealis dobrze rosną w Polsce?",
+      "answer": "Tak, ale mają pewne ograniczenia w porównaniu z polskimi odmianami. Są nieco bardziej podatne na choroby grzybowe w mokrych sezonach. Owoce są za to znacznie większe i mniej cierpkie — bardzo dobre na surowo. W suchych rejonach sprawdzają się świetnie."
+    },
+    {
+      "question": "Jak długo czekać na pierwsze owoce jagody kamczackiej?",
+      "answer": "Pierwsze pojedyncze owoce pojawiają się w 2–3 roku po posadzeniu. Znaczące plony (1–2 kg) od 4–5 roku. Pełne plony od 6–8 roku gdy krzew jest dobrze ukorzeniony. To roślina długowieczna — dojrzały krzew może owocować przez 30–40 lat."
+    }
+  ],
+  "tips": [
+    "Zawsze minimum 2 odmiany kwitnące w tym samym czasie — bez zapylacza zero owoców.",
+    "Sprawdzaj smak od momentu gdy owoce staną się granatowe — niedojrzałe są bardzo cierpkie.",
+    "Odmiany serii Berry Blue i UoS najlepiej zapylają się wzajemnie w swojej serii.",
+    "Sadzenie 3+ odmian zwiększa zapylenie i plon nawet o 40% względem 2 odmian.",
+    "Unikaj oprysków insektycydami w czasie kwitnienia — pszczoły są kluczowe przy chłodnej wiosennej pogodzie."
+  ],
+  "related_services": [
+    "Sadzenie krzewów owocowych",
+    "Pielęgnacja ogrodu owocowego",
+    "Konsultacje ogrodnicze"
+  ],
+  "related_articles": [
+    "jagoda-kamczacka-uprawa-i-pielegnacja",
+    "odmiany-borowki-terminy-dojrzewania",
+    "jak-przygotowac-ogrod-na-wiosne"
+  ],
+  "seo": {
+    "title": "Odmiany jagody kamczackiej — które wybrać? Terminy dojrzewania i zapylacze",
+    "description": "Kompletny przegląd odmian jagody kamczackiej: Wojtek, Aurora, Tundra, Indigo Gem i inne. Podział na wczesne i późne, zasady doboru zapylaczy, kalendarz dojrzewania.",
+    "keywords": [
+      "odmiany jagody kamczackiej",
+      "jagoda kamczacka Wojtek Aurora Tundra",
+      "jagoda kamczacka kiedy dojrzewa odmiana",
+      "jagoda kamczacka zapylacz które odmiany",
+      "najsłodsza odmiana jagody kamczackiej",
+      "jagoda kamczacka Berry Blue UoS odmiany",
+      "jagoda kamczacka kiedy zbierać odmiana",
+      "jagoda kamczacka dobór odmian ogród"
+    ]
+  },
+  "status": "published",
+  "published_at": "2026-06-23T00:00:00Z",
+  "created_at": "2026-06-23T00:00:00Z",
+  "updated_at": "2026-06-23T00:00:00Z"
+}

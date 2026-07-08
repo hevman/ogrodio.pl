@@ -1,0 +1,11 @@
+[Unit]
+Description=Ogrodio — odśwież reguły UFW dla IP Cloudflare
+
+[Service]
+Type=oneshot
+ExecStart=/bin/bash /opt/ogrodio/app/deploy/ufw-cloudflare-only.sh
+StandardOutput=append:/var/log/ogrodio/cf-ufw.log
+StandardError=append:/var/log/ogrodio/cf-ufw.log
+
+[Install]
+WantedBy=multi-user.target

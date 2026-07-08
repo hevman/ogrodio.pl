@@ -1,0 +1,138 @@
+# Produkcja — VPS 2 vCPU / 4 GB RAM
+# Uruchomienie: docker compose -f docker-compose.yml -f docker-compose.prod.yml up -d --build
+#
+# Wymaga pliku .env (skopiuj z .env.production.example).
+
+services:
+  commerce-postgres:
+    environment:
+      POSTGRES_USER: ${COMMERCE_POSTGRES_USER:-vendure}
+      POSTGRES_PASSWORD: ${COMMERCE_POSTGRES_PASSWORD:?Ustaw COMMERCE_POSTGRES_PASSWORD}
+      POSTGRES_DB: ${COMMERCE_POSTGRES_DB:-vendure}
+    command:
+      - postgres
+      - -c
+      - shared_buffers=128MB
+      - -c
+      - max_connections=40
+      - -c
+      - effective_cache_size=256MB
+    deploy:
+      resources:
+        limits:
+          memory: 384M
+
+  backend-postgres:
+    environment:
+      POSTGRES_USER: ${BACKEND_POSTGRES_USER:-garden}
+      POSTGRES_PASSWORD: ${BACKEND_POSTGRES_PASSWORD:?Ustaw BACKEND_POSTGRES_PASSWORD}
+      POSTGRES_DB: ${BACKEND_POSTGRES_DB:-garden_backend}
+    command:
+      - postgres
+      - -c
+      - shared_buffers=128MB
+      - -c
+      - max_connections=40
+      - -c
+      - effective_cache_size=256MB
+    deploy:
+      resources:
+        limits:
+          memory: 384M
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+      args:
+        NEXT_PUBLIC_SITE_URL: ${NEXT_PUBLIC_SITE_URL:-https://ogrodio.pl}
+        NEXT_PUBLIC_SHOP_URL: ${NEXT_PUBLIC_SHOP_URL:-https://sklep.ogrodio.pl}
+        NEXT_PUBLIC_APP_URL: ${NEXT_PUBLIC_APP_URL:-https://app.ogrodio.pl}
+        NEXT_PUBLIC_PANEL_URL: ${NEXT_PUBLIC_PANEL_URL:-https://panel.ogrodio.pl}
+    deploy:
+      resources:
+        limits:
+          memory: 512M
+
+  backend:
+    environment:
+      POSTGRES_USER: ${BACKEND_POSTGRES_USER:-garden}
+      POSTGRES_PASSWORD: ${BACKEND_POSTGRES_PASSWORD:?Ustaw BACKEND_POSTGRES_PASSWORD}
+      JWT_SECRET: ${GARDEN_JWT_SECRET:?Ustaw GARDEN_JWT_SECRET}
+      AUTH_COOKIE_DOMAIN: ${AUTH_COOKIE_DOMAIN:-.ogrodio.pl}
+      AUTH_COOKIE_SECURE: "true"
+      APP_PUBLIC_URL: ${APP_PUBLIC_URL:-https://app.ogrodio.pl}
+      DIGEST_CRON_SECRET: ${DIGEST_CRON_SECRET:?Ustaw DIGEST_CRON_SECRET}
+      SMTP_HOST: ${SMTP_HOST:-}
+      SMTP_PORT: ${SMTP_PORT:-587}
+      SMTP_USER: ${SMTP_USER:-}
+      SMTP_PASS: ${SMTP_PASS:-}
+      SMTP_FROM: ${SMTP_FROM:-Ogrodio <noreply@ogrodio.pl>}
+      SMTP_SECURE: ${SMTP_SECURE:-true}
+    deploy:
+      resources:
+        limits:
+          memory: 384M
+
+  meilisearch:
+    environment:
+      MEILI_ENV: production
+      MEILI_MAX_INDEXING_MEMORY: 256Mb
+    ports: []
+    deploy:
+      resources:
+        limits:
+          memory: 512M
+
+  commerce-server:
+    environment:
+      APP_ENV: production
+      DB_USERNAME: ${COMMERCE_POSTGRES_USER:-vendure}
+      DB_PASSWORD: ${COMMERCE_POSTGRES_PASSWORD:?Ustaw COMMERCE_POSTGRES_PASSWORD}
+      DB_SYNCHRONIZE: ${DB_SYNCHRONIZE:-true}
+      COOKIE_SECRET: ${VENDURE_COOKIE_SECRET:?Ustaw VENDURE_COOKIE_SECRET}
+      SUPERADMIN_USERNAME: ${VENDURE_SUPERADMIN_USERNAME:?Ustaw VENDURE_SUPERADMIN_USERNAME}
+      SUPERADMIN_PASSWORD: ${VENDURE_SUPERADMIN_PASSWORD:?Ustaw VENDURE_SUPERADMIN_PASSWORD}
+      ASSET_URL_PREFIX: ${ASSET_URL_PREFIX:-https://sklep.ogrodio.pl/assets/}
+      SHOP_URL: ${NEXT_PUBLIC_SHOP_URL:-https://sklep.ogrodio.pl}
+    deploy:
+      resources:
+        limits:
+          memory: 768M
+
+  commerce-worker:
+    environment:
+      APP_ENV: production
+      DB_USERNAME: ${COMMERCE_POSTGRES_USER:-vendure}
+      DB_PASSWORD: ${COMMERCE_POSTGRES_PASSWORD:?Ustaw COMMERCE_POSTGRES_PASSWORD}
+      DB_SYNCHRONIZE: "false"
+      COOKIE_SECRET: ${VENDURE_COOKIE_SECRET:?Ustaw VENDURE_COOKIE_SECRET}
+      SUPERADMIN_USERNAME: ${VENDURE_SUPERADMIN_USERNAME:?Ustaw VENDURE_SUPERADMIN_USERNAME}
+      SUPERADMIN_PASSWORD: ${VENDURE_SUPERADMIN_PASSWORD:?Ustaw VENDURE_SUPERADMIN_PASSWORD}
+      ASSET_URL_PREFIX: ${ASSET_URL_PREFIX:-https://sklep.ogrodio.pl/assets/}
+    deploy:
+      resources:
+        limits:
+          memory: 256M
+
+  nginx:
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx/${NGINX_CONF:-nginx.prod.conf}:/etc/nginx/nginx.conf:ro
+      - ./nginx/includes:/etc/nginx/includes:ro
+      - ./deploy/ssl:/etc/nginx/ssl:ro
+      - ./frontend/public/images/articles:/uploads/articles:ro
+    networks:
+      - garden_network
+    deploy:
+      resources:
+        limits:
+          memory: 64M
+
+# Nadpisuje external network z docker-compose.yml (dev) — prod nie wymaga nginx-proxy
+networks:
+  reverse_proxy_network:
+    external: false
+    driver: bridge

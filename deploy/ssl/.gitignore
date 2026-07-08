@@ -1,0 +1,5 @@
+# Certyfikaty SSL — NIE commituj kluczy prywatnych do git
+
+*
+!.gitignore
+!README.md

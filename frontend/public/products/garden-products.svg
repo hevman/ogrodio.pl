@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-label="Produkty ogrodnicze">
+  <rect width="1200" height="900" fill="#e9f3e4"/>
+  <path d="M0 720c180-90 330-120 520-80 220 45 390 35 680-75v335H0z" fill="#7dbf72"/>
+  <path d="M0 790c210-70 405-88 600-50 210 42 390 20 600-72v232H0z" fill="#4f9b5f"/>
+  <rect x="165" y="405" width="230" height="260" rx="24" fill="#be7c48"/>
+  <rect x="485" y="360" width="230" height="305" rx="24" fill="#d3995e"/>
+  <rect x="805" y="430" width="230" height="235" rx="24" fill="#a6643f"/>
+  <g fill="#2d8b57">
+    <ellipse cx="280" cy="330" rx="120" ry="52"/>
+    <ellipse cx="600" cy="285" rx="135" ry="58"/>
+    <ellipse cx="920" cy="360" rx="118" ry="50"/>
+  </g>
+  <text x="90" y="835" fill="#ffffff" font-family="Arial, sans-serif" font-size="54" font-weight="700">Produkty Garden</text>
+</svg>

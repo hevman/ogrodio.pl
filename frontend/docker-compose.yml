@@ -1,0 +1,18 @@
+services:
+  garden:
+    build:
+      context: .
+    container_name: garden-localhost
+    restart: unless-stopped
+    expose:
+      - "3000"
+    environment:
+      VIRTUAL_HOST: ogrodio.localhost
+      VIRTUAL_PORT: 3000
+      NODE_ENV: production
+    networks:
+      - reverse_proxy_network
+
+networks:
+  reverse_proxy_network:
+    external: true

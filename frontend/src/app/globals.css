@@ -1,0 +1,135 @@
+@import "tailwindcss";
+
+:root {
+  --background: #eef1f6;
+  --foreground: #0f172a;
+  --surface: #ffffff;
+  --brand: #0d9488;
+  --brand-strong: #0f766e;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-surface: var(--surface);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: #99f6e4;
+  color: #0f172a;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+.hero-surface {
+  background-color: #0a1020;
+  background-image:
+    radial-gradient(
+      70% 120% at 50% -10%,
+      rgba(16, 185, 129, 0.24),
+      transparent 60%
+    ),
+    radial-gradient(
+      50% 90% at 90% 0%,
+      rgba(20, 184, 166, 0.14),
+      transparent 55%
+    ),
+    linear-gradient(180deg, #0b1224 0%, #0a1020 100%);
+}
+
+.garden-calendar .fc {
+  --fc-border-color: #e2e8f0;
+  --fc-button-bg-color: #047857;
+  --fc-button-border-color: #047857;
+  --fc-button-hover-bg-color: #065f46;
+  --fc-button-hover-border-color: #065f46;
+  --fc-button-active-bg-color: #064e3b;
+  --fc-button-active-border-color: #064e3b;
+  --fc-event-border-color: #047857;
+  --fc-event-bg-color: #047857;
+  --fc-today-bg-color: #ecfdf5;
+  font-size: 0.875rem;
+}
+
+.garden-calendar .fc .fc-toolbar {
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.garden-calendar .fc .fc-toolbar-title {
+  font-size: 1.35rem;
+  font-weight: 900;
+  color: #0f172a;
+}
+
+.garden-calendar .fc .fc-button {
+  border-radius: 0.5rem;
+  font-weight: 800;
+  text-transform: none;
+  box-shadow: none;
+}
+
+.garden-calendar .fc .fc-col-header-cell-cushion,
+.garden-calendar .fc .fc-daygrid-day-number {
+  color: #334155;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.garden-calendar .fc .fc-daygrid-event {
+  border-radius: 0.45rem;
+  padding: 0.15rem 0.25rem;
+  font-weight: 800;
+}
+
+.garden-calendar .fc .garden-calendar-selected-day {
+  background: #d1fae5;
+  box-shadow: inset 0 0 0 2px #047857;
+}
+
+.garden-calendar .fc .garden-calendar-selected-day .fc-daygrid-day-number {
+  display: inline-grid;
+  min-width: 1.75rem;
+  place-items: center;
+  border-radius: 999px;
+  background: #047857;
+  color: white;
+}
+
+.garden-calendar .fc .fc-list-event-title,
+.garden-calendar .fc .fc-list-event-time {
+  font-weight: 800;
+}
+
+@media (max-width: 720px) {
+  .garden-calendar .fc .fc-toolbar {
+    flex-direction: column;
+  }
+
+  .garden-calendar .fc .fc-toolbar-chunk {
+    width: 100%;
+  }
+
+  .garden-calendar .fc .fc-toolbar-chunk:last-child {
+    display: flex;
+    overflow-x: auto;
+  }
+}

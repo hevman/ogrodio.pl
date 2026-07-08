@@ -1,0 +1,15 @@
+[Unit]
+Description=Ogrodio — backup bazy i plików
+After=docker.service
+Requires=docker.service
+
+[Service]
+Type=oneshot
+WorkingDirectory=/opt/ogrodio/app
+Environment=BACKUP_DIR=/opt/ogrodio/backups
+ExecStart=/bin/bash /opt/ogrodio/app/deploy/backup.sh
+StandardOutput=append:/var/log/ogrodio/backup.log
+StandardError=append:/var/log/ogrodio/backup.log
+
+[Install]
+WantedBy=multi-user.target

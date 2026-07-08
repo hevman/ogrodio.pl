@@ -1,0 +1,357 @@
+{
+  "slug": "malina-zolta-uprawa-odmiany",
+  "title": "Żółta malina — odmiany, uprawa i kiedy dojrzewa. Wszystko o malinach żółtych i pomarańczowych",
+  "topic": "Owoce w ogrodzie",
+  "summary": "Żółte i pomarańczowe maliny to mniej znana alternatywa dla klasycznych czerwonych — słodsze, aromatyczne i równie łatwe w uprawie. Poznaj odmiany letnie i jesienne, terminy dojrzewania i jak uprawiać maliny żeby owocowały obficie.",
+  "reading_minutes": 10,
+  "cover_image": "/images/articles/malina-zolta-cover.webp",
+  "cover_alt": "Żółta malina z dojrzałymi pomarańczowymi owocami — Rubus idaeus odmiana żółta krzewy z owocami w ogrodzie",
+  "discover": {
+    "enabled": true,
+    "headline": "Żółta malina: odmiany, uprawa i kiedy dojrzewa. Wszystko o malinach żółtych i pomarańczowych",
+    "description": "Żółte i pomarańczowe maliny to mniej znana alternatywa dla klasycznych czerwonych — słodsze, aromatyczne i równie łatwe w uprawie. Poznaj odmiany letnie i jesienne, terminy dojrzewania i jak uprawiać.",
+    "image": "/images/articles/malina-zolta-cover.webp",
+    "imageAlt": "Żółta malina z dojrzałymi pomarańczowymi owocami — Rubus idaeus odmiana żółta krzewy z owocami w ogrodzie",
+    "angle": "uprawa owoców w ogrodzie",
+    "freshness": "2026-07-04"
+  },
+  "inline_image": {
+    "src": "/images/articles/malina-zolta-owoc-detail.webp",
+    "alt": "Dojrzały owoc żółtej maliny z bliska — duże pomarańczowe jagody maliny na gałązce z pająkiem"
+  },
+  "ganttChart": {
+    "title": "Kalendarz dojrzewania odmian maliny",
+    "subtitle": "Orientacyjne terminy dla Polski środkowej — maliny letnie i jesienne (remontantne)",
+    "months": [
+      {
+        "label": "Czerwiec",
+        "weeks": 4
+      },
+      {
+        "label": "Lipiec",
+        "weeks": 5
+      },
+      {
+        "label": "Sierpień",
+        "weeks": 4
+      },
+      {
+        "label": "Wrzesień",
+        "weeks": 4
+      },
+      {
+        "label": "Październik",
+        "weeks": 4
+      }
+    ],
+    "rows": [
+      {
+        "name": "Laszka",
+        "group": "letnia",
+        "start": 2,
+        "end": 6
+      },
+      {
+        "name": "Polka",
+        "group": "letnia",
+        "start": 3,
+        "end": 7
+      },
+      {
+        "name": "Benefis",
+        "group": "letnia",
+        "start": 3,
+        "end": 7
+      },
+      {
+        "name": "Glen Ample",
+        "group": "letnia",
+        "start": 3,
+        "end": 7
+      },
+      {
+        "name": "Tulameen",
+        "group": "letnia",
+        "start": 4,
+        "end": 8
+      },
+      {
+        "name": "Żółta Antwerpska",
+        "group": "żółta letnia",
+        "start": 3,
+        "end": 7
+      },
+      {
+        "name": "Golden Queen",
+        "group": "żółta letnia",
+        "start": 4,
+        "end": 8
+      },
+      {
+        "name": "Pokusa",
+        "group": "remontantna",
+        "start": 7,
+        "end": 13
+      },
+      {
+        "name": "Polana",
+        "group": "remontantna",
+        "start": 7,
+        "end": 13
+      },
+      {
+        "name": "Autumn Bliss",
+        "group": "remontantna",
+        "start": 8,
+        "end": 14
+      },
+      {
+        "name": "Kweli",
+        "group": "remontantna",
+        "start": 8,
+        "end": 14
+      },
+      {
+        "name": "Złota Jesień",
+        "group": "żółta remontantna",
+        "start": 8,
+        "end": 15
+      },
+      {
+        "name": "Anne",
+        "group": "żółta remontantna",
+        "start": 8,
+        "end": 15
+      }
+    ]
+  },
+  "varietyTable": {
+    "caption": "Porównanie odmian malin — letnie, remontantne, żółte",
+    "tableIntro": "Żółte maliny letnie (Amber, Golden Bliss) dojrzewają w lipcu, remontantne (Polana Gold, Fallgold) owocują od sierpnia do przymrozków. Remontantne dają drugi plon na pędach tegorocznych — to największa zaleta żółtych odmian. Poniżej zestawienie odmian z terminami dojrzewania, smakiem i plonem.",
+    "rows": [
+      {
+        "name": "Laszka",
+        "group": "letnia",
+        "harvest": "koniec cze – lip",
+        "fruitSize": "b. duży",
+        "taste": "słodko-kwaśny, aromatyczny",
+        "yield": "2–4 kg/m",
+        "notes": "popularna, bardzo plenna"
+      },
+      {
+        "name": "Polka",
+        "group": "letnia",
+        "harvest": "lipiec",
+        "fruitSize": "duży",
+        "taste": "słodki, intensywny",
+        "yield": "2–3 kg/m",
+        "notes": "polska odmiana, odporna"
+      },
+      {
+        "name": "Benefis",
+        "group": "letnia",
+        "harvest": "lipiec",
+        "fruitSize": "b. duży",
+        "taste": "słodki, aromatyczny",
+        "yield": "2–4 kg/m",
+        "notes": "dobra trwałość po zbiorze"
+      },
+      {
+        "name": "Glen Ample",
+        "group": "letnia",
+        "harvest": "lipiec",
+        "fruitSize": "b. duży",
+        "taste": "słodko-kwaśny",
+        "yield": "3–5 kg/m",
+        "notes": "szkocka, bardzo plenna"
+      },
+      {
+        "name": "Tulameen",
+        "group": "letnia",
+        "harvest": "lip – sie",
+        "fruitSize": "b. duży",
+        "taste": "słodki, miękki",
+        "yield": "2–3 kg/m",
+        "notes": "długa łodyga, lubi ciepło"
+      },
+      {
+        "name": "Żółta Antwerpska",
+        "group": "żółta letnia",
+        "harvest": "lipiec",
+        "fruitSize": "średni",
+        "taste": "słodki, łagodny",
+        "yield": "1–2 kg/m",
+        "notes": "stara odmiana, mniej plenna"
+      },
+      {
+        "name": "Golden Queen",
+        "group": "żółta letnia",
+        "harvest": "lip – sie",
+        "fruitSize": "duży",
+        "taste": "bardzo słodki",
+        "yield": "2–3 kg/m",
+        "notes": "pomarańczowo-złota, aromatyczna"
+      },
+      {
+        "name": "Pokusa",
+        "group": "remontantna",
+        "harvest": "sie – paź",
+        "fruitSize": "b. duży",
+        "taste": "słodki, wyrazisty",
+        "yield": "3–5 kg/m",
+        "notes": "polska, najpopularniejsza remontantna"
+      },
+      {
+        "name": "Polana",
+        "group": "remontantna",
+        "harvest": "sie – paź",
+        "fruitSize": "duży",
+        "taste": "słodko-kwaśny",
+        "yield": "2–4 kg/m",
+        "notes": "polska, odporna na choroby"
+      },
+      {
+        "name": "Autumn Bliss",
+        "group": "remontantna",
+        "harvest": "sie – wrz",
+        "fruitSize": "duży",
+        "taste": "słodki",
+        "yield": "2–3 kg/m",
+        "notes": "angielska, wcześnie remontantna"
+      },
+      {
+        "name": "Kweli",
+        "group": "remontantna",
+        "harvest": "sie – paź",
+        "fruitSize": "b. duży",
+        "taste": "słodki, aromatyczny",
+        "yield": "3–5 kg/m",
+        "notes": "duże owoce, dobra trwałość"
+      },
+      {
+        "name": "Złota Jesień",
+        "group": "żółta remontantna",
+        "harvest": "sie – paź",
+        "fruitSize": "duży",
+        "taste": "bardzo słodki, miodowy",
+        "yield": "2–3 kg/m",
+        "notes": "polska żółta remontantna"
+      },
+      {
+        "name": "Anne",
+        "group": "żółta remontantna",
+        "harvest": "sie – paź",
+        "fruitSize": "b. duży",
+        "taste": "słodki, aromatyczny",
+        "yield": "2–4 kg/m",
+        "notes": "amarykańska, duże żółte owoce"
+      }
+    ]
+  },
+  "sections": [
+    {
+      "heading": "Żółta malina — co to jest i dlaczego warto ją sadzić?",
+      "paragraphs": [
+        "Żółte i pomarańczowe maliny to po prostu odmiany maliny właściwej (Rubus idaeus) z mutacją barwnikową — brakuje im antocyjanów które dają czerwony kolor. Smak jest często słodszy i mniej kwaśny niż czerwonych, z miodowo-morelowym aromatem. Na zdjęciach widać typowy kolor dojrzałej żółtej maliny — głęboki pomarańcz.",
+        "Żółte maliny mają jedną praktyczną zaletę: ptaki je mniej atakują. Ptaki kojarzą dojrzałość z czerwonym kolorem — żółte owoce długo są ignorowane co daje Ci więcej czasu na zbiór.",
+        "Poza żółtymi istnieją też maliny czarne (Rubus occidentalis) i fioletowe (hybridy) — każdy kolor ma swój profil smakowy i wymagania."
+      ]
+    },
+    {
+      "heading": "Maliny letnie vs remontantne — kluczowa różnica",
+      "paragraphs": [
+        "To najważniejszy podział odmian. Maliny letnie owocują raz w roku — na dwuletnich łodygach, w czerwcu i lipcu, podobnie jak wczesne odmiany w [kalendarzu dojrzewania borówki](/porady/owoce-w-ogrodzie/odmiany-borowki-terminy-dojrzewania). Wymagają regularnego cięcia: po zbiorach wytnij łodygi które owocowały (ciemniejsze, starsze), zostaw tegoroczne zielone łodygi które będą owocować w przyszłym roku.",
+        "Maliny remontantne (jesienne) owocują dwa razy: na wierzchołkach tegorocznych łodyg w sierpniu–październiku, i w następnym roku na tych samych łodygach poniżej miejsca poprzedniego kwitnienia (czerwiec–lipiec). Prostszy wariant cięcia: wytnij wszystkie łodygi przy ziemi po sezonie — tracisz letni plon ale upraszczasz pielęgnację i unikasz chorób.",
+        "Żółte odmiany są dostępne w obu wersjach: żółte letnie (Żółta Antwerpska, Golden Queen) i żółte remontantne (Złota Jesień, Anne). Remontantne żółte to coraz popularniejszy wybór — długi sezon zbiorów od sierpnia do przymrozków."
+      ]
+    },
+    {
+      "heading": "Gdzie i jak sadzić maliny?",
+      "paragraphs": [
+        "Stanowisko: słoneczne lub lekko półcieniste. W cieniu maliny rosną ale owocują słabo. Dobra cyrkulacja powietrza ogranicza choroby grzybowe — unikaj gęstych nasadzeń i miejsc gdzie powietrze stoi.",
+        "Gleba: żyzna, próchnicza, lekko kwaśna (pH 5,5–6,5), wilgotna ale przepuszczalna. Maliny nie tolerują stojącej wody — gnicie korzeni to ich wróg numer jeden. Dodaj kompost przed sadzeniem.",
+        "Sadzenie: wiosna (marzec–kwiecień) lub jesień (październik–listopad). Odstęp między roślinami 40–50 cm w rzędzie, między rzędami 1,5–2 m. Maliny rozrastają się przez korzeniowe odrosty — zaplanuj miejsce na rozrost lub ogranicz barierą.",
+        "Podpora: maliny potrzebują prowadzenia na drutach lub palach. Bez podpory łamią się przy wietrze i owocach. Dwa druty na wysokości 60 i 120 cm przywiązane do palów — klasyczny i skuteczny system."
+      ]
+    },
+    {
+      "heading": "Pielęgnacja malin przez sezon",
+      "paragraphs": [
+        "Podlewanie: maliny potrzebują regularnej wilgoci szczególnie w czasie zawiązywania i dojrzewania owoców. Susza w lipcu i sierpniu = małe i suche owoce. Ściółkowanie słomą lub korą pod krzewami utrzymuje wilgoć i ogranicza chwasty.",
+        "Nawożenie: wiosną nawóz azotowy (stymuluje wzrost nowych łodyg), po zbiorach nawóz z wyższym potasem. Unikaj nadmiernego azotu latem — zbyt bujne łodygi są bardziej podatne na choroby i wylegają.",
+        "Cięcie malin letnich: tuż po zbiorach (sierpień) wytnij przy ziemi wszystkie łodygi które owocowały. Zostaw nowe tegoroczne pędy — przysyp je do zimowania lub przywiąż do drutu. Wiosną skróć do 1,2–1,5 m.",
+        "Cięcie malin remontantnych (uproszczone): po sezonie (październik–listopad lub wczesna wiosna) wytnij WSZYSTKIE łodygi przy ziemi. Tracisz letni plon ale krzew jest zdrowy i nie wymaga sortowania łodyg."
+      ]
+    },
+    {
+      "heading": "Choroby i szkodniki malin",
+      "paragraphs": [
+        "Plamistość liści malin (Didymella applanata, Elsinoe veneta): ciemne plamy na liściach jak widać na zdjęciach — charakterystyczne fioletowe lub brązowe plamy z jaśniejszym centrum. Zwalczaj fungicydami miedzianymi lub kaptan. Usuwaj porażone liście i wytnij zainfekowane łodygi.",
+        "Maliniaczek (Byturus tomentosus): mały brązowy chrząszcz którego larwy żerują wewnątrz owoców — robaczywość malin. Zbieraj i niszcz opaszone owoce. Oprysk pyretryną lub spinosadem w fazie różowego pąka (tuż przed kwitnieniem).",
+        "Kwieciak malinowiec (Anthonomus rubi): samice składają jaja w pąkach kwiatowych, które następnie obgryzają szypułkę — pąki wieszają się i opadają. Zwalczaj jak maliniaczek — w fazie pąków.",
+        "Wirus mozaiki maliny: nieregularne jasne plamy na liściach, deformacja i zwijanie. Brak leku — zainfekowane rośliny usuń. Wirus przenoszą mszyce — zwalczaj mszyce profilaktycznie."
+      ]
+    },
+    {
+      "heading": "Kiedy zbierać maliny i jak je przechowywać?",
+      "paragraphs": [
+        "Maliny dojrzewają nierównomiernie — na jednym krzewu jednocześnie są niedojrzałe, dojrzałe i przejrzałe. Zbieraj co 2–3 dni w szczycie sezonu. Dojrzała malina jest miękka, intensywnie wybarwiona i łatwo odchodzi od szypułki bez szarpania.",
+        "Świeże maliny wytrzymują w lodówce 2–3 dni — są bardzo delikatne. Zbieraj do płaskich pojemników żeby nie gniotły się wzajemnie. Nie myj przed przechowywaniem — wilgoć przyspiesza pleśnienie.",
+        "Mrożenie: rozsyp na blaszce w jednej warstwie, zamroź, potem przesyp do woreczka. Maliny nie sklejają się i możesz pobierać porcjami. Zachowują wartości odżywcze przez rok."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "question": "Czym różni się żółta malina od czerwonej?",
+      "answer": "Tylko barwą i smakiem — żółte maliny mają mutację barwnikową (brak antocyjanów = brak czerwieni). Smak jest często słodszy i mniej kwaśny, z miodowo-morelowym aromatem. Uprawa identyczna jak czerwonych odmian."
+    },
+    {
+      "question": "Kiedy ciąć maliny letnie?",
+      "answer": "Tuż po zbiorach — w sierpniu. Wytnij przy ziemi wszystkie łodygi które owocowały (starsze, ciemniejsze). Zostaw tegoroczne zielone łodygi — to one będą owocować w przyszłym roku. Wiosną skróć je do 1,2–1,5 m."
+    },
+    {
+      "question": "Dlaczego moje maliny są robaczliwe?",
+      "answer": "To maliniaczek (Byturus tomentosus) — małe chrząszcze których larwy żerują wewnątrz owoców. Zwalczanie: oprysk pyretryną lub spinosadem w fazie różowego pąka (przed kwitnieniem). Zbieraj i niszcz zaatakowane owoce."
+    },
+    {
+      "question": "Maliny letnie czy remontantne — które wybrać?",
+      "answer": "Letnie: wcześniejszy plon (czerwiec–lipiec), wymaga sortowania łodyg przy cięciu. Remontantne: późniejszy lub dłuższy plon (sierpień–przymrozki), prostsze cięcie (wszystko przy ziemi). Do ogrodu przydomowego remontantne są wygodniejsze. Dla dużego plonu letniego — odmiany letnie."
+    }
+  ],
+  "tips": [
+    "Żółte maliny ptaki atakują rzadziej — dojrzałość kojarzą z czerwienią.",
+    "Maliny remontantne: wytnij wszystko przy ziemi po sezonie — prościej i zdrowiej.",
+    "Ściółka ze słomy pod malinami utrzymuje wilgoć i eliminuje chwasty.",
+    "Zbieraj co 2–3 dni — maliny nie czekają, szybko przejrzewają.",
+    "Plamistość liści: usuń i spal porażone liście, nie kompostuj."
+  ],
+  "related_services": [
+    "Sadzenie krzewów owocowych",
+    "Pielęgnacja ogrodu owocowego",
+    "Konsultacje ogrodnicze"
+  ],
+  "related_articles": [
+    "odmiany-borowki-terminy-dojrzewania",
+    "czarna-porzeczka-uprawa-pielegnacja-zbiory",
+    "agrest-uprawa-pielegnacja-zbiory"
+  ],
+  "seo": {
+    "title": "Żółta malina — odmiany, kiedy dojrzewa i jak uprawiać | Poradnik",
+    "description": "Żółte i pomarańczowe maliny: odmiany letnie i remontantne z terminami dojrzewania. Jak uprawiać maliny, ciąć i zbierać. Tabela odmian z plonami i smakiem.",
+    "keywords": [
+      "żółta malina uprawa",
+      "malina żółta odmiany",
+      "maliny letnie vs remontantne",
+      "kiedy dojrzewają maliny",
+      "maliny remontantne cięcie",
+      "malina Anne Złota Jesień",
+      "robaczywość malin jak zwalczyć",
+      "maliny pielęgnacja ogród"
+    ]
+  },
+  "status": "published",
+  "published_at": "2026-07-08T00:00:00Z",
+  "created_at": "2026-07-08T00:00:00Z",
+  "updated_at": "2026-07-08T00:00:00Z"
+}

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-label="Rosliny domowe">
+  <rect width="1200" height="900" fill="#f2f0e8"/>
+  <rect x="0" y="655" width="1200" height="245" fill="#d7c8ad"/>
+  <rect x="450" y="500" width="300" height="260" rx="28" fill="#b8734a"/>
+  <rect x="430" y="490" width="340" height="60" rx="22" fill="#cf8c5c"/>
+  <g fill="#1d6f45">
+    <ellipse cx="520" cy="350" rx="80" ry="190" transform="rotate(-28 520 350)"/>
+    <ellipse cx="620" cy="310" rx="82" ry="215" transform="rotate(8 620 310)"/>
+    <ellipse cx="710" cy="370" rx="78" ry="180" transform="rotate(32 710 370)"/>
+    <ellipse cx="560" cy="430" rx="65" ry="150" transform="rotate(-55 560 430)"/>
+    <ellipse cx="680" cy="455" rx="66" ry="145" transform="rotate(52 680 455)"/>
+  </g>
+  <g fill="none" stroke="#a5d6a7" stroke-linecap="round" stroke-width="10" opacity=".8">
+    <path d="M505 230c30 70 40 140 30 220"/>
+    <path d="M620 110c10 120 5 230-15 350"/>
+    <path d="M750 245c-40 75-68 145-80 210"/>
+  </g>
+  <circle cx="190" cy="155" r="82" fill="#f2cf76"/>
+  <text x="90" y="835" fill="#173f2d" font-family="Arial, sans-serif" font-size="54" font-weight="700">Rosliny domowe</text>
+</svg>
