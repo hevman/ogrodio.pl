@@ -8,6 +8,12 @@ set -euo pipefail
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 cd "$ROOT"
 
+if [ -d .git ]; then
+  echo "==> Aktualizacja kodu (git pull)"
+  git fetch origin main
+  git pull --ff-only origin main
+fi
+
 MODE="${1:-}"
 
 COMPOSE="docker compose -f docker-compose.yml -f docker-compose.prod.yml"
