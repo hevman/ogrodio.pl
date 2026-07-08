@@ -262,17 +262,19 @@ export function SiteHeader({ initialIsShopHost = false }: { initialIsShopHost?: 
   ) : (
     <>
       <Link
+        aria-label={t("common.login")}
         className="inline-flex h-10 items-center gap-2 rounded-lg border border-slate-200 px-3 text-sm font-black text-slate-700 transition hover:bg-slate-50"
         href={appPath("/login")}
       >
-        <UserRound className="h-4 w-4" />
+        <UserRound aria-hidden="true" className="h-4 w-4" />
         <span className="hidden sm:inline">{t("common.login")}</span>
       </Link>
       <Link
+        aria-label={t("common.register")}
         className="inline-flex h-10 items-center gap-2 rounded-lg bg-emerald-700 px-3 text-sm font-black text-white transition hover:bg-emerald-800"
         href={appPath("/register")}
       >
-        <Sprout className="h-4 w-4" />
+        <Sprout aria-hidden="true" className="h-4 w-4" />
         <span className="hidden sm:inline">{t("common.register")}</span>
       </Link>
     </>
