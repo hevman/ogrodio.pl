@@ -84,6 +84,13 @@ if [ -f "$SERVER_DIR/docker/daemon.json" ]; then
   systemctl restart docker
 fi
 
+log "Docker — dostęp użytkownika deploy"
+DEPLOY_USER="${INSTALL_USER:-${SUDO_USER:-debian}}"
+if id "$DEPLOY_USER" &>/dev/null; then
+  usermod -aG docker "$DEPLOY_USER"
+  echo "Użytkownik $DEPLOY_USER dodany do grupy docker"
+fi
+
 log "Katalogi aplikacji"
 mkdir -p /opt/ogrodio/app
 mkdir -p /opt/ogrodio/backups

@@ -1,6 +1,7 @@
 # Wdrożenie Ogrodio na nowy VPS
 
-Repozytorium: **[github.com/hevman/ogrodio.pl](https://github.com/hevman/ogrodio.pl)**
+Repozytorium: **[github.com/hevman/ogrodio.pl](https://github.com/hevman/ogrodio.pl)**  
+VPS: **51.83.162.34** — szczegóły: [SERVER.md](SERVER.md)
 
 ## Jedna komenda — przygotowanie serwera (root)
 

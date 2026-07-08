@@ -22,6 +22,13 @@ fi
 export COMPOSE_PROJECT_NAME="${COMPOSE_PROJECT_NAME:-ogrodio}"
 export NGINX_CONF="${NGINX_CONF:-nginx.prod.conf}"
 
+if ! docker info >/dev/null 2>&1; then
+  echo "Brak dostępu do Docker (permission denied)."
+  echo "Napraw: sudo usermod -aG docker $USER && newgrp docker"
+  echo "Albo:  sudo bash deploy/deploy.sh"
+  exit 1
+fi
+
 if [ ! -f .env ]; then
   echo "Brak .env — cp .env.production.example .env"
   exit 1
