@@ -15,6 +15,7 @@ import { t } from "@/i18n";
 import { getFeaturedAdvice } from "@/lib/advice";
 import { siteShell } from "@/lib/layout";
 import { blogCategories, getArticlePath, site } from "@/lib/site-config";
+import { shopPath } from "@/lib/shop-url";
 
 export const dynamic = "force-dynamic";
 export const revalidate = 60;
@@ -44,7 +45,7 @@ const quickLinks = [
   { href: "/porady?topic=trawnik", labelKey: "home.quickLawn" as const, textKey: "home.quickLawnText" as const },
   { href: "/porady?topic=owoce-w-ogrodzie", labelKey: "home.quickFruits" as const, textKey: "home.quickFruitsText" as const },
   { href: "/porady?topic=choroby-roslin", labelKey: "home.quickDiseases" as const, textKey: "home.quickDiseasesText" as const },
-  { href: "/sklep", labelKey: "home.quickShop" as const, textKey: "home.quickShopText" as const },
+  { href: shopPath(), labelKey: "home.quickShop" as const, textKey: "home.quickShopText" as const },
 ];
 
 const shopCategoryKeys = [
@@ -110,7 +111,7 @@ export default async function HomePage() {
               </Link>
               <Link
                 className="inline-flex h-12 items-center gap-2 rounded-lg border border-white/25 px-5 text-sm font-black text-white transition hover:bg-white/10"
-                href="/sklep"
+                href={shopPath()}
               >
                 <ShoppingBag className="h-4 w-4" />
                 {t("home.goToShop")}
@@ -252,14 +253,14 @@ export default async function HomePage() {
             <div className="mt-7 flex flex-wrap gap-3">
               <Link
                 className="inline-flex h-11 items-center gap-2 rounded-lg bg-slate-950 px-4 text-sm font-black text-white transition hover:bg-emerald-800"
-                href="/sklep"
+                href={shopPath()}
               >
                 {t("home.openShop")}
                 <ArrowRight className="h-4 w-4" />
               </Link>
               <Link
                 className="inline-flex h-11 items-center gap-2 rounded-lg border border-slate-200 px-4 text-sm font-black text-slate-800 transition hover:border-emerald-300 hover:text-emerald-800"
-                href="/szukaj"
+                href={shopPath("/szukaj")}
               >
                 <Search className="h-4 w-4" />
                 {t("home.searchProduct")}

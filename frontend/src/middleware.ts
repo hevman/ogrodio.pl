@@ -1,8 +1,49 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 
+const SHOP_ROUTE_PREFIXES = [
+  "/sklep",
+  "/produkt",
+  "/szukaj",
+  "/checkout",
+  "/dostawa",
+  "/zwroty",
+  "/reklamacje",
+  "/status-zamowienia",
+];
+
 function isHost(host: string, subdomain: string) {
   return host === `${subdomain}.ogrodio.localhost` || host === `${subdomain}.ogrodio.pl`;
+}
+
+function isMainSiteHost(host: string) {
+  return (
+    host === "ogrodio.pl" ||
+    host === "www.ogrodio.pl" ||
+    host === "ogrodio.localhost" ||
+    host === "www.ogrodio.localhost"
+  );
+}
+
+function getShopBaseUrl() {
+  return (process.env.NEXT_PUBLIC_SHOP_URL || "https://sklep.ogrodio.pl").replace(/\/$/, "");
+}
+
+function isShopRoute(pathname: string) {
+  return SHOP_ROUTE_PREFIXES.some(
+    (prefix) => pathname === prefix || pathname.startsWith(`${prefix}/`),
+  );
+}
+
+function shopRedirectUrl(pathname: string) {
+  const shopBase = getShopBaseUrl();
+  if (pathname === "/sklep" || pathname === "/sklep/") {
+    return `${shopBase}/`;
+  }
+  if (pathname.startsWith("/sklep/")) {
+    return `${shopBase}${pathname.slice("/sklep".length)}`;
+  }
+  return `${shopBase}${pathname}`;
 }
 
 export function middleware(request: NextRequest) {
@@ -20,6 +61,16 @@ export function middleware(request: NextRequest) {
   const isProtectedPanelRoute =
     pathname === "/panel" ||
     (pathname.startsWith("/panel/") && !pathname.startsWith("/panel/login"));
+
+  if (isMainSiteHost(host) && isShopRoute(pathname)) {
+    return NextResponse.redirect(shopRedirectUrl(pathname), 301);
+  }
+
+  if (isShopHost && (pathname === "/sklep" || pathname.startsWith("/sklep/"))) {
+    const url = request.nextUrl.clone();
+    url.pathname = pathname === "/sklep" ? "/" : pathname.slice("/sklep".length) || "/";
+    return NextResponse.redirect(url, 301);
+  }
 
   if (isShopHost && pathname === "/") {
     const url = request.nextUrl.clone();
@@ -83,6 +134,15 @@ export function middleware(request: NextRequest) {
 export const config = {
   matcher: [
     "/",
+    "/sklep",
+    "/sklep/:path*",
+    "/produkt/:path*",
+    "/szukaj",
+    "/checkout",
+    "/dostawa",
+    "/zwroty",
+    "/reklamacje",
+    "/status-zamowienia",
     "/login",
     "/register",
     "/panel",
