@@ -95,6 +95,12 @@ services:
       SUPERADMIN_PASSWORD: ${VENDURE_SUPERADMIN_PASSWORD:?Ustaw VENDURE_SUPERADMIN_PASSWORD}
       ASSET_URL_PREFIX: ${ASSET_URL_PREFIX:-https://sklep.ogrodio.pl/assets/}
       SHOP_URL: ${NEXT_PUBLIC_SHOP_URL:-https://sklep.ogrodio.pl}
+      SMTP_HOST: ${SMTP_HOST:-}
+      SMTP_PORT: ${SMTP_PORT:-587}
+      SMTP_USER: ${SMTP_USER:-}
+      SMTP_PASS: ${SMTP_PASS:-}
+      SMTP_FROM: ${SMTP_FROM:-"Ogrodio <noreply@ogrodio.pl>"}
+      SMTP_SECURE: ${SMTP_SECURE:-true}
     deploy:
       resources:
         limits:
@@ -110,6 +116,13 @@ services:
       SUPERADMIN_USERNAME: ${VENDURE_SUPERADMIN_USERNAME:?Ustaw VENDURE_SUPERADMIN_USERNAME}
       SUPERADMIN_PASSWORD: ${VENDURE_SUPERADMIN_PASSWORD:?Ustaw VENDURE_SUPERADMIN_PASSWORD}
       ASSET_URL_PREFIX: ${ASSET_URL_PREFIX:-https://sklep.ogrodio.pl/assets/}
+      SHOP_URL: ${NEXT_PUBLIC_SHOP_URL:-https://sklep.ogrodio.pl}
+      SMTP_HOST: ${SMTP_HOST:-}
+      SMTP_PORT: ${SMTP_PORT:-587}
+      SMTP_USER: ${SMTP_USER:-}
+      SMTP_PASS: ${SMTP_PASS:-}
+      SMTP_FROM: ${SMTP_FROM:-"Ogrodio <noreply@ogrodio.pl>"}
+      SMTP_SECURE: ${SMTP_SECURE:-true}
     deploy:
       resources:
         limits:

@@ -19,6 +19,29 @@ const assetUrlPrefix = process.env.ASSET_URL_PREFIX || (IS_DEV ? undefined : 'ht
 const shopUrl = (process.env.SHOP_URL || 'https://sklep.ogrodio.pl').replace(/\/$/, '');
 const trustProxy = process.env.TRUST_PROXY === 'true' ? 1 : IS_DEV ? false : 1;
 
+const emailTemplateLoader = new FileBasedTemplateLoader(path.join(__dirname, '../static/email/templates'));
+const emailGlobalTemplateVars = {
+    fromAddress: process.env.SMTP_FROM || '"Ogrodio" <noreply@ogrodio.pl>',
+    verifyEmailAddressUrl: `${shopUrl}/verify`,
+    passwordResetUrl: `${shopUrl}/password-reset`,
+    changeEmailAddressUrl: `${shopUrl}/verify-email-address-change`,
+};
+const emailTransport = (() => {
+    const host = process.env.SMTP_HOST;
+    if (!host) {
+        return { type: 'none' as const };
+    }
+    return {
+        type: 'smtp' as const,
+        host,
+        port: +(process.env.SMTP_PORT || 587),
+        secure: process.env.SMTP_SECURE === 'true',
+        auth: process.env.SMTP_USER
+            ? { user: process.env.SMTP_USER, pass: process.env.SMTP_PASS || '' }
+            : undefined,
+    };
+})();
+
 export const config: VendureConfig = {
     apiOptions: {
         port: serverPort,
@@ -103,21 +126,25 @@ export const config: VendureConfig = {
         DefaultSchedulerPlugin.init(),
         DefaultJobQueuePlugin.init({ useDatabaseForBuffer: true }),
         DefaultSearchPlugin.init({ bufferUpdates: false, indexStockStatus: true }),
-        EmailPlugin.init({
-            devMode: IS_DEV,
-            ...(IS_DEV ? {
-                outputPath: path.join(__dirname, '../static/email/test-emails'),
-                route: 'mailbox',
-            } : {}),
-            handlers: defaultEmailHandlers,
-            templateLoader: new FileBasedTemplateLoader(path.join(__dirname, '../static/email/templates')),
-            globalTemplateVars: {
-                fromAddress: process.env.SMTP_FROM || '"Ogrodio" <noreply@ogrodio.pl>',
-                verifyEmailAddressUrl: `${shopUrl}/verify`,
-                passwordResetUrl: `${shopUrl}/password-reset`,
-                changeEmailAddressUrl: `${shopUrl}/verify-email-address-change`,
-            },
-        }),
+        ...(IS_DEV
+            ? [
+                EmailPlugin.init({
+                    devMode: true,
+                    outputPath: path.join(__dirname, '../static/email/test-emails'),
+                    route: 'mailbox',
+                    handlers: defaultEmailHandlers,
+                    templateLoader: emailTemplateLoader,
+                    globalTemplateVars: emailGlobalTemplateVars,
+                }),
+            ]
+            : [
+                EmailPlugin.init({
+                    handlers: defaultEmailHandlers,
+                    templateLoader: emailTemplateLoader,
+                    globalTemplateVars: emailGlobalTemplateVars,
+                    transport: emailTransport,
+                }),
+            ]),
         DashboardPlugin.init({
             route: 'dashboard',
             appDir: IS_DEV
