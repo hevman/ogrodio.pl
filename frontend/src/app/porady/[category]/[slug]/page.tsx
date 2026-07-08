@@ -156,6 +156,7 @@ export default async function AdviceArticlePage({ params }: Props) {
           fetchPriority="high"
           fill
           priority
+          quality={68}
           sizes="100vw"
           src={article.coverImage}
         />
@@ -212,6 +213,7 @@ export default async function AdviceArticlePage({ params }: Props) {
                       alt={article.inlineImage.alt}
                       className="w-full object-cover"
                       height={600}
+                      quality={64}
                       sizes="(max-width: 1024px) 100vw, 720px"
                       src={article.inlineImage.src}
                       width={1000}

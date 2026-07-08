@@ -5,7 +5,15 @@ import type { AdviceArticle } from "@/lib/advice-types";
 import { formatArticleDate } from "@/lib/format-date";
 import { getArticlePath } from "@/lib/site-config";
 
-export function AdviceCard({ article, categorySlug }: { article: AdviceArticle; categorySlug?: string }) {
+export function AdviceCard({
+  article,
+  categorySlug,
+  priority = false,
+}: {
+  article: AdviceArticle;
+  categorySlug?: string;
+  priority?: boolean;
+}) {
   const href = categorySlug
     ? `/porady/${categorySlug}/${article.slug}`
     : getArticlePath(article);
@@ -20,7 +28,9 @@ export function AdviceCard({ article, categorySlug }: { article: AdviceArticle; 
           alt={article.coverAlt}
           className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
           fill
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          priority={priority}
+          quality={60}
+          sizes="(max-width: 768px) 100vw, (max-width: 1280px) 46vw, 31vw"
           src={article.coverImage}
         />
         <span className="absolute left-4 top-4 rounded-full bg-white/95 px-3 py-1 text-xs font-bold text-teal-800 shadow-sm">

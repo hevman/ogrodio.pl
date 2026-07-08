@@ -85,6 +85,7 @@ export default async function HomePage() {
           fetchPriority="high"
           fill
           priority
+          quality={66}
           sizes="100vw"
           src="/images/articles/wiosenne-prace-ogrod.webp"
         />
@@ -173,7 +174,8 @@ export default async function HomePage() {
                     alt={leadArticle.coverAlt}
                     className="object-cover transition duration-500 group-hover:scale-105"
                     fill
-                    sizes="(max-width: 1024px) 100vw, 48vw"
+                    quality={62}
+                    sizes="(max-width: 1024px) 100vw, 44vw"
                     src={leadArticle.coverImage}
                   />
                 </div>
@@ -204,6 +206,7 @@ export default async function HomePage() {
                         alt={article.coverAlt}
                         className="object-cover transition duration-500 group-hover:scale-105"
                         fill
+                        quality={56}
                         sizes="112px"
                         src={article.coverImage}
                       />

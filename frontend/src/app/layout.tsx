@@ -16,6 +16,14 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
 });
 
+function getOrigin(url: string) {
+  try {
+    return new URL(url).origin;
+  } catch {
+    return "";
+  }
+}
+
 export async function generateMetadata(): Promise<Metadata> {
   const host = (await headers()).get("host")?.split(":")[0] || "";
   const isShopHost = host === "sklep.ogrodio.localhost" || host === "sklep.ogrodio.pl";
@@ -73,6 +81,12 @@ export default async function RootLayout({
     name: site.name,
     url: site.publicUrl,
   };
+  const crossAppOrigin = getOrigin(site.appUrl);
+  const crossShopOrigin = getOrigin(site.shopUrl);
+  const crossSiteOrigin = getOrigin(site.siteUrl);
+  const crossOrigins = Array.from(
+    new Set([crossAppOrigin, crossShopOrigin, crossSiteOrigin].filter(Boolean)),
+  );
 
   return (
     <html
@@ -84,6 +98,12 @@ export default async function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
           type="application/ld+json"
         />
+        {crossOrigins.map((origin) => (
+          <link href={origin} key={`${origin}-dns`} rel="dns-prefetch" />
+        ))}
+        {crossOrigins.map((origin) => (
+          <link crossOrigin="" href={origin} key={`${origin}-preconnect`} rel="preconnect" />
+        ))}
       </head>
       <body className="flex min-h-full flex-col bg-[#eef1f6] text-slate-900">
         {isPanelHost ? null : <SiteHeader initialIsShopHost={isShopHost} />}

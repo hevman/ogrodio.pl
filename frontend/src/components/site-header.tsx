@@ -59,6 +59,8 @@ export function SiteHeader({ initialIsShopHost = false }: { initialIsShopHost?: 
   const [notifications, setNotifications] = useState<GardenNotification[]>([]);
   const [unreadCount, setUnreadCount] = useState(0);
   const [isNotificationsOpen, setIsNotificationsOpen] = useState(false);
+  const siteHomeHref = isShopHost ? site.siteUrl : "/";
+  const siteAdviceHref = isShopHost ? sitePath("/porady") : "/porady";
 
   useEffect(() => {
     const updateCartCount = () => {
@@ -327,9 +329,9 @@ export function SiteHeader({ initialIsShopHost = false }: { initialIsShopHost?: 
                     {department.label}
                   </Link>
                 ))}
-                <a className="rounded-lg px-3 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-50" href={sitePath("/porady")}>
+                <Link className="rounded-lg px-3 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-50" href={siteAdviceHref}>
                   {t("header.blogAndAdvice")}
-                </a>
+                </Link>
               </nav>
             </details>
           </div>
@@ -482,9 +484,9 @@ export function SiteHeader({ initialIsShopHost = false }: { initialIsShopHost?: 
                 {department.label}
               </Link>
             ))}
-            <a className="ml-auto shrink-0 rounded-lg px-3 py-2 text-slate-700 transition hover:bg-white hover:text-emerald-800" href={sitePath("/porady")}>
+            <Link className="ml-auto shrink-0 rounded-lg px-3 py-2 text-slate-700 transition hover:bg-white hover:text-emerald-800" href={siteAdviceHref}>
               {t("header.gardenAdvice")}
-            </a>
+            </Link>
           </div>
         </nav>
         {isCartOpen ? (
@@ -623,31 +625,31 @@ export function SiteHeader({ initialIsShopHost = false }: { initialIsShopHost?: 
   return (
     <header className={`sticky top-0 z-30 border-b border-slate-200 bg-white/90 text-slate-900 backdrop-blur ${siteGutter}`}>
       <div className={`flex h-16 items-center justify-between gap-4 ${siteContainer}`}>
-        <a className="flex items-center gap-2.5" href={site.siteUrl}>
+        <Link className="flex items-center gap-2.5" href={siteHomeHref}>
           <LogoMark size={36} />
           <span className="text-lg font-bold tracking-tight text-slate-900">
             {t("site.name")}
           </span>
-        </a>
+        </Link>
 
         <nav className="hidden items-center gap-6 text-sm font-medium lg:flex">
           {navLinks.map((link) => (
             link.href === "/" ? (
-              <a
+              <Link
                 key={link.href}
                 className={navClassName(isActive(pathname, link.href))}
-                href={site.siteUrl}
+                href={siteHomeHref}
               >
                 {link.label}
-              </a>
+              </Link>
             ) : link.href === "/porady" ? (
-              <a
+              <Link
                 key={link.href}
                 className={navClassName(isActive(pathname, link.href))}
-                href={sitePath("/porady")}
+                href={siteAdviceHref}
               >
                 {link.label}
-              </a>
+              </Link>
             ) : link.href === "/app" ? (
               <a
                 key={link.href}
@@ -676,7 +678,7 @@ export function SiteHeader({ initialIsShopHost = false }: { initialIsShopHost?: 
 
           <Link
             className="hidden h-10 items-center gap-2 rounded-xl border border-teal-200 px-4 text-sm font-semibold text-teal-700 transition hover:border-teal-300 hover:bg-teal-50 sm:inline-flex"
-            href={sitePath("/porady")}
+            href={siteAdviceHref}
           >
             {t("footer.site.advice")}
           </Link>
@@ -689,25 +691,25 @@ export function SiteHeader({ initialIsShopHost = false }: { initialIsShopHost?: 
             <nav className="absolute right-0 top-12 z-40 grid min-w-[220px] gap-1 rounded-xl border border-slate-200 bg-white p-2 shadow-lg">
               {navLinks.map((link) => (
                 link.href === "/" ? (
-                  <a
+                  <Link
                     key={link.href}
                     className={`rounded-lg px-3 py-2 text-sm font-semibold hover:bg-slate-50 ${
                       isActive(pathname, link.href) ? "bg-teal-50 text-teal-700" : "text-slate-700"
                     }`}
-                    href={site.siteUrl}
+                    href={siteHomeHref}
                   >
                     {link.label}
-                  </a>
+                  </Link>
                 ) : link.href === "/porady" ? (
-                  <a
+                  <Link
                     key={link.href}
                     className={`rounded-lg px-3 py-2 text-sm font-semibold hover:bg-slate-50 ${
                       isActive(pathname, link.href) ? "bg-teal-50 text-teal-700" : "text-slate-700"
                     }`}
-                    href={sitePath("/porady")}
+                    href={siteAdviceHref}
                   >
                     {link.label}
-                  </a>
+                  </Link>
                 ) : link.href === "/app" ? (
                   <a
                     key={link.href}

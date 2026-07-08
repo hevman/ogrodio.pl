@@ -89,8 +89,13 @@ export default async function AdvicePage() {
                 </Link>
               </div>
               <div className="mt-5 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-                {preview.map(article => (
-                  <AdviceCard article={article} categorySlug={cat.slug} key={article.slug} />
+                {preview.map((article, index) => (
+                  <AdviceCard
+                    article={article}
+                    categorySlug={cat.slug}
+                    key={article.slug}
+                    priority={index === 0}
+                  />
                 ))}
               </div>
             </div>
