@@ -35,6 +35,12 @@ function Find-Rsync {
     return $null
 }
 
+function Test-RemoteRsync {
+    param([string]$Remote)
+    ssh $Remote "command -v rsync >/dev/null 2>&1"
+    return ($LASTEXITCODE -eq 0)
+}
+
 function Invoke-RsyncUpload {
     param(
         [hashtable]$Rsync,
@@ -68,9 +74,27 @@ function Invoke-RsyncUpload {
         & $Rsync.Bin @rsyncArgs
     }
 
-    if ($LASTEXITCODE -ne 0) {
-        throw "rsync zakonczyl sie kodem $LASTEXITCODE"
+    return ($LASTEXITCODE -eq 0)
+}
+
+function Get-RemoteWebpSizes {
+    param(
+        [string]$Remote,
+        [string]$RemotePath,
+        [string]$Socket
+    )
+
+    $sizes = @{}
+    $lines = ssh -o ControlPath=$Socket $Remote `
+        "find '$RemotePath' -maxdepth 1 -name '*.webp' -printf '%f %s\n' 2>/dev/null || true"
+
+    foreach ($line in ($lines -split "`n")) {
+        if ($line -match '^(\S+)\s+(\d+)$') {
+            $sizes[$Matches[1]] = [int64]$Matches[2]
+        }
     }
+
+    return $sizes
 }
 
 function Invoke-ScpUpload {
@@ -81,22 +105,37 @@ function Invoke-ScpUpload {
     )
 
     $socket = Join-Path $env:TEMP ("ogrodio-ssh-{0}" -f [guid]::NewGuid().ToString('n'))
+    $uploaded = 0
+    $skipped = 0
+
     try {
         ssh -o ControlMaster=yes -o ControlPath=$socket -o ControlPersist=120 `
             $Remote "mkdir -p `"$RemotePath`""
 
+        $remoteSizes = Get-RemoteWebpSizes -Remote $Remote -RemotePath $RemotePath -Socket $socket
+
         $i = 0
         foreach ($file in $Files) {
             $i++
-            Write-Host "[$i/$($Files.Count)] $($file.Name)"
+            if ($remoteSizes.ContainsKey($file.Name) -and $remoteSizes[$file.Name] -eq $file.Length) {
+                Write-Host "[$i/$($Files.Count)] skip $($file.Name)"
+                $skipped++
+                continue
+            }
+
+            Write-Host "[$i/$($Files.Count)] upload $($file.Name)"
             scp -o ControlPath=$socket $file.FullName "${Remote}:${RemotePath}/"
             if ($LASTEXITCODE -ne 0) {
                 throw "scp nieudany dla $($file.Name)"
             }
+            $uploaded++
         }
     } finally {
         ssh -o ControlPath=$socket -O exit $Remote 2>$null
     }
+
+    Write-Host ""
+    Write-Host "SCP: wyslano $uploaded, pominieto $skipped (bez zmian)"
 }
 
 $Root = (Resolve-Path (Join-Path $PSScriptRoot "..")).Path
@@ -120,16 +159,29 @@ Write-Host "Lokalnie: $LocalDir"
 Write-Host "WebP:     $($files.Count) plikow, ${sizeMB} MB (JPG pomijane)"
 Write-Host "Cel:      ${RemoteHost}:${RemoteDir}"
 Write-Host ""
+Write-Host "Podaj haslo SSH gdy zostaniesz poproszony..."
+Write-Host ""
 
+ssh $RemoteHost "mkdir -p `"$RemoteDir`""
+
+$usedRsync = $false
 $rsync = Find-Rsync
-if ($rsync) {
+if ($rsync -and (Test-RemoteRsync -Remote $RemoteHost)) {
     Write-Host "Tryb: rsync (tylko nowe/zmienione pliki)..."
-    Write-Host "Podaj haslo SSH gdy zostaniesz poproszony..."
     Write-Host ""
-    Invoke-RsyncUpload -Rsync $rsync -LocalDir $LocalDir -Remote $RemoteHost -RemotePath $RemoteDir
-} else {
-    Write-Host "Tryb: scp plik po pliku (brak rsync - zainstaluj WSL lub Git for Windows)"
-    Write-Host "Podaj haslo SSH raz na poczatku..."
+    $usedRsync = Invoke-RsyncUpload -Rsync $rsync -LocalDir $LocalDir -Remote $RemoteHost -RemotePath $RemoteDir
+    if (-not $usedRsync) {
+        Write-Host "rsync nieudany, przechodze na scp..." -ForegroundColor Yellow
+        Write-Host ""
+    }
+} elseif ($rsync) {
+    Write-Host "Na VPS brak rsync - uzywam scp plik po pliku."
+    Write-Host "Opcjonalnie na serwerze: sudo apt install -y rsync"
+    Write-Host ""
+}
+
+if (-not $usedRsync) {
+    Write-Host "Tryb: scp (pomija pliki o tym samym rozmiarze na serwerze)..."
     Write-Host ""
     Invoke-ScpUpload -Remote $RemoteHost -RemotePath $RemoteDir -Files $files
 }

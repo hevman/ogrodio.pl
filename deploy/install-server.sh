@@ -44,7 +44,7 @@ log "Aktualizacja systemu"
 apt-get update
 apt-get upgrade -y
 apt-get install -y \
-  ca-certificates curl git gnupg ufw fail2ban htop unzip \
+  ca-certificates curl git gnupg ufw fail2ban htop unzip rsync \
   unattended-upgrades apt-listchanges logrotate openssl
 
 log "Automatyczne aktualizacje bezpieczeństwa"
