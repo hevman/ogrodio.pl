@@ -35,7 +35,7 @@ Szczegóły: [`deploy/QUICKSTART.md`](deploy/QUICKSTART.md) · [`deploy/DEPLOY.m
 
 ### Zdjęcia artykułów
 
-Katalog `frontend/public/images/articles/` jest **poza git**. Na serwer trafiają **tylko pliki WebP** (~52 MB); oryginały JPG zostają na maszynie dev.
+Katalog `frontend/public/images/articles/` jest **poza git**. Na serwer trafiają **tylko pliki WebP**; oryginały JPG zostają na maszynie dev. **rsync** wysyła plik po pliku — przy kolejnych uruchomieniach tylko nowe/zmienione.
 
 ```powershell
 # Windows

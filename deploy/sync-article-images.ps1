@@ -1,5 +1,6 @@
-# Wgranie zdjec artykulow na VPS — tylko WebP (~52 MB)
-# Oryginaly JPG zostaja lokalnie na PC (poza git).
+# Wgranie zdjec artykulow na VPS — tylko WebP, plik po pliku (rsync/scp)
+# Przy kolejnych uruchomieniach rsync wysyla tylko nowe/zmienione pliki.
+# Oryginaly JPG zostaja lokalnie na PC.
 #
 #   D:\www_work\garden\deploy\sync-article-images.bat
 #   powershell -File D:\www_work\garden\deploy\sync-article-images.ps1
@@ -18,15 +19,85 @@ function Convert-ToWslPath([string]$Path) {
         $rest = $matches[2] -replace '\\', '/'
         return "/mnt/$drive/$rest"
     }
-    throw "Nie mozna przekonwertowac sciezki Windows na WSL: $Path"
+    throw "Nie mozna przekonwertowac sciezki: $Path"
 }
 
-function Invoke-CmdTarPipe {
-    param([string]$SourceDir, [string]$Remote, [string]$RemotePath)
-    # cmd.exe zachowuje binarny strumien tar (PowerShell | psuje archiwum)
-    $inner = "cd /d `"$SourceDir`" && tar -cf - *.webp | ssh $Remote `"mkdir -p $RemotePath && cd $RemotePath && tar -xf -`""
-    cmd /c $inner
-    if ($LASTEXITCODE -ne 0) { throw "tar+ssh zakonczyl sie kodem $LASTEXITCODE" }
+function Find-Rsync {
+    $wsl = Get-Command wsl -ErrorAction SilentlyContinue
+    if ($wsl) { return @{ Type = "wsl"; Bin = "wsl" } }
+
+    $gitRsync = "${env:ProgramFiles}\Git\usr\bin\rsync.exe"
+    if (Test-Path $gitRsync) { return @{ Type = "git"; Bin = $gitRsync } }
+
+    $gitRsync32 = "${env:ProgramFiles(x86)}\Git\usr\bin\rsync.exe"
+    if (Test-Path $gitRsync32) { return @{ Type = "git"; Bin = $gitRsync32 } }
+
+    return $null
+}
+
+function Invoke-RsyncUpload {
+    param(
+        [hashtable]$Rsync,
+        [string]$LocalDir,
+        [string]$Remote,
+        [string]$RemotePath
+    )
+
+    $args = @(
+        "-avz",
+        "--progress",
+        "--include=*.webp",
+        "--exclude=*",
+        "$($LocalDir -replace '\\', '/')/",
+        "${Remote}:${RemotePath}/"
+    )
+
+    if ($Rsync.Type -eq "wsl") {
+        $wslLocal = Convert-ToWslPath $LocalDir
+        $wslArgs = @(
+            "rsync",
+            "-avz",
+            "--progress",
+            "--include=*.webp",
+            "--exclude=*",
+            "$wslLocal/",
+            "${Remote}:${RemotePath}/"
+        )
+        & wsl @wslArgs
+    } else {
+        & $Rsync.Bin @args
+    }
+
+    if ($LASTEXITCODE -ne 0) {
+        throw "rsync zakonczyl sie kodem $LASTEXITCODE"
+    }
+}
+
+function Invoke-ScpUpload {
+    param(
+        [string]$LocalDir,
+        [string]$Remote,
+        [string]$RemotePath,
+        [System.IO.FileInfo[]]$Files
+    )
+
+    $socket = Join-Path $env:TEMP ("ogrodio-ssh-{0}" -f [guid]::NewGuid().ToString('n'))
+    try {
+        ssh -o ControlMaster=yes -o ControlPath=$socket -o ControlPersist=120 `
+            $Remote "mkdir -p `"$RemotePath`""
+
+        $i = 0
+        foreach ($file in $Files) {
+            $i++
+            Write-Host "[$i/$($Files.Count)] $($file.Name)"
+            scp -o ControlPath=$socket $file.FullName "${Remote}:${RemotePath}/"
+            if ($LASTEXITCODE -ne 0) {
+                throw "scp nieudany dla $($file.Name)"
+            }
+        }
+    } finally {
+        ssh -o ControlPath=$socket -O exit $Remote 2>$null
+    }
 }
 
 $Root = (Resolve-Path (Join-Path $PSScriptRoot "..")).Path
@@ -34,13 +105,12 @@ $LocalDir = Join-Path $Root "frontend\public\images\articles"
 
 if (-not (Test-Path $LocalDir)) {
     Write-Host "BLAD: Brak katalogu: $LocalDir" -ForegroundColor Red
-    Write-Host "Uruchom: D:\www_work\garden\deploy\sync-article-images.bat"
     exit 1
 }
 
-$files = Get-ChildItem $LocalDir -Filter *.webp -File
+$files = @(Get-ChildItem $LocalDir -Filter *.webp -File)
 if ($files.Count -eq 0) {
-    Write-Host "BLAD: Brak plikow .webp w $LocalDir" -ForegroundColor Red
+    Write-Host "BLAD: Brak plikow .webp" -ForegroundColor Red
     exit 1
 }
 
@@ -51,28 +121,18 @@ Write-Host "Lokalnie: $LocalDir"
 Write-Host "WebP:     $($files.Count) plikow, ${sizeMB} MB (JPG pomijane)"
 Write-Host "Cel:      ${RemoteHost}:${RemoteDir}"
 Write-Host ""
-Write-Host "Podaj haslo SSH (moze byc 2x — mkdir + upload)..."
-Write-Host ""
 
-ssh $RemoteHost "mkdir -p `"$RemoteDir`""
-
-$uploaded = $false
-$wsl = Get-Command wsl -ErrorAction SilentlyContinue
-
-if ($wsl) {
-    try {
-        $wslLocal = Convert-ToWslPath $LocalDir
-        Write-Host "WSL rsync z: $wslLocal"
-        wsl rsync -avz --progress --include='*.webp' --exclude='*' "$wslLocal/" "${RemoteHost}:${RemoteDir}/"
-        if ($LASTEXITCODE -eq 0) { $uploaded = $true }
-    } catch {
-        Write-Host "WSL rsync nieudany: $($_.Exception.Message)" -ForegroundColor Yellow
-    }
-}
-
-if (-not $uploaded) {
-    Write-Host "Wysylam przez tar+ssh (cmd.exe)..."
-    Invoke-CmdTarPipe -SourceDir $LocalDir -Remote $RemoteHost -RemotePath $RemoteDir
+$rsync = Find-Rsync
+if ($rsync) {
+    Write-Host "Tryb: rsync (tylko nowe/zmienione pliki)..."
+    Write-Host "Podaj haslo SSH gdy zostaniesz poproszony..."
+    Write-Host ""
+    Invoke-RsyncUpload -Rsync $rsync -LocalDir $LocalDir -Remote $RemoteHost -RemotePath $RemoteDir
+} else {
+    Write-Host "Tryb: scp plik po pliku (brak rsync — zainstaluj WSL lub Git for Windows)"
+    Write-Host "Podaj haslo SSH raz na poczatku..."
+    Write-Host ""
+    Invoke-ScpUpload -LocalDir $LocalDir -Remote $RemoteHost -RemotePath $RemoteDir -Files $files
 }
 
 Write-Host ""
