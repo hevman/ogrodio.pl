@@ -1,7 +1,6 @@
 import { Body, Controller, Get, Post, Req, Res, UseGuards } from "@nestjs/common";
 import type { Request, Response } from "express";
 import { AuthService } from "./auth.service";
-import { JwtAuthGuard } from "./jwt-auth.guard";
 import { LocalAuthGuard } from "./local-auth.guard";
 
 @Controller("api/auth")
@@ -29,11 +28,19 @@ export class AuthController {
     return res.json({ ok: true });
   }
 
+  /**
+   * Endpoint sesyjny: dla gościa zwraca 200 z user:null zamiast 401,
+   * żeby przeglądarka nie logowała błędów na każdej stronie publicznej.
+   */
   @Get("me")
-  @UseGuards(JwtAuthGuard)
   me(@Req() req: Request, @Res({ passthrough: true }) res: Response) {
-    const user = req.user as any;
-    this.auth.setCookie(res, user);
+    const token =
+      req.cookies?.garden_access ||
+      (req.headers.authorization?.startsWith("Bearer ") ? req.headers.authorization.slice(7) : null);
+    const user = token ? this.auth.verifyToken(token) : null;
+    if (user) {
+      this.auth.setCookie(res, user);
+    }
     return { user };
   }
 }

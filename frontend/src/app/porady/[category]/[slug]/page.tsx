@@ -153,11 +153,11 @@ export default async function AdviceArticlePage({ params }: Props) {
         <Image
           alt={article.coverAlt}
           className="object-cover opacity-75"
+          fetchPriority="high"
           fill
           priority
           sizes="100vw"
           src={article.coverImage}
-          unoptimized
         />
         <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/60 to-slate-950/20" />
         <div className={`relative flex min-h-[18rem] flex-col justify-end pb-10 pt-28 lg:min-h-[22rem] lg:pb-12 ${siteShell}`}>
@@ -212,8 +212,8 @@ export default async function AdviceArticlePage({ params }: Props) {
                       alt={article.inlineImage.alt}
                       className="w-full object-cover"
                       height={600}
+                      sizes="(max-width: 1024px) 100vw, 720px"
                       src={article.inlineImage.src}
-                      unoptimized
                       width={1000}
                     />
                     <figcaption className="bg-slate-50 px-5 py-3 text-sm text-slate-500">

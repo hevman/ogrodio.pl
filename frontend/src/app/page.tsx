@@ -82,11 +82,11 @@ export default async function HomePage() {
         <Image
           alt={t("home.heroAlt")}
           className="object-cover opacity-70"
+          fetchPriority="high"
           fill
           priority
           sizes="100vw"
           src="/images/articles/wiosenne-prace-ogrod.webp"
-          unoptimized
         />
         <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(2,6,23,.92),rgba(2,6,23,.62)_46%,rgba(2,6,23,.18))]" />
         <div className={`relative flex min-h-[640px] flex-col justify-end pb-10 pt-28 sm:pb-14 ${siteShell}`}>
@@ -175,7 +175,6 @@ export default async function HomePage() {
                     fill
                     sizes="(max-width: 1024px) 100vw, 48vw"
                     src={leadArticle.coverImage}
-                    unoptimized
                   />
                 </div>
                 <div className="flex flex-col justify-end p-6 sm:p-8">
@@ -207,7 +206,6 @@ export default async function HomePage() {
                         fill
                         sizes="112px"
                         src={article.coverImage}
-                        unoptimized
                       />
                     </div>
                     <div>

@@ -106,7 +106,7 @@ export function SiteFooter({ variant = "site" }: { variant?: "site" | "shop" }) 
         <div>
           <p className="text-xl font-bold tracking-tight">{t("site.name")}</p>
           <p className="mt-3 max-w-md text-sm leading-6 text-slate-500">{site.description}</p>
-          <p className="mt-4 text-sm text-slate-400">© {new Date().getFullYear()} {t("site.name")}</p>
+          <p className="mt-4 text-sm text-slate-500">© {new Date().getFullYear()} {t("site.name")}</p>
         </div>
 
         <div>

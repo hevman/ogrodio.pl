@@ -11,7 +11,8 @@ type LogoMarkProps = {
 export function LogoMark({ className = "", size = 36, href, priority = false }: LogoMarkProps) {
   const image = (
     <Image
-      alt="Ogrodio"
+      // Logo jest dekoracyjne — nazwa marki zawsze występuje obok jako tekst
+      alt=""
       className={`rounded-lg object-contain ${className}`}
       height={size}
       priority={priority}

@@ -62,7 +62,7 @@ export function HomeAppSection() {
             {t("home.appCta")}
             <ArrowRight className="h-4 w-4" />
           </Link>
-          <p className="mt-3 text-xs font-semibold text-slate-500">{t("home.appNote")}</p>
+          <p className="mt-3 text-xs font-semibold text-slate-600">{t("home.appNote")}</p>
         </div>
         <div className="grid gap-3 sm:grid-cols-3 lg:grid-cols-1 xl:grid-cols-3">
           {(["home.appFeature1", "home.appFeature2", "home.appFeature3"] as const).map((key) => (

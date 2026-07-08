@@ -41,6 +41,9 @@ export function AppShell({ children }: { children: React.ReactNode }) {
     let isMounted = true;
     Promise.all([me(), fetchGardenOrganization().catch(() => null)])
       .then(([userData, organizationData]) => {
+        if (!userData.user) {
+          throw new Error("guest");
+        }
         if (!isMounted) return;
         setUser(userData.user);
         setOrganization(organizationData);

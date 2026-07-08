@@ -22,7 +22,6 @@ export function AdviceCard({ article, categorySlug }: { article: AdviceArticle; 
           fill
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           src={article.coverImage}
-          unoptimized
         />
         <span className="absolute left-4 top-4 rounded-full bg-white/95 px-3 py-1 text-xs font-bold text-teal-800 shadow-sm">
           {article.topic}

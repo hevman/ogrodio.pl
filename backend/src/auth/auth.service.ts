@@ -41,6 +41,20 @@ export class AuthService {
     res.cookie(this.accessCookieName, this.jwt.sign(user), this.cookieOptions());
   }
 
+  verifyToken(token: string): ShopUser | null {
+    try {
+      const payload = this.jwt.verify(token);
+      return {
+        id: Number(payload.id),
+        email: String(payload.email),
+        name: String(payload.name),
+        phone: String(payload.phone || ""),
+      };
+    } catch {
+      return null;
+    }
+  }
+
   clearCookie(res: Response) {
     const { maxAge, ...options } = this.cookieOptions();
     res.clearCookie(this.accessCookieName, options);

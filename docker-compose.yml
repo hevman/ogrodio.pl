@@ -50,6 +50,9 @@ services:
       MEILISEARCH_MASTER_KEY: ${MEILISEARCH_MASTER_KEY:-garden-meili-local-key}
       # URL backendu NestJS dostępny z kontenera frontendu
       BACKEND_URL: http://backend:3000
+    volumes:
+      # Zdjęcia artykułów nie trafiają do obrazu (patrz frontend/.dockerignore)
+      - ./frontend/public/images/articles:/app/public/images/articles:ro
     depends_on:
       - commerce-server
       - backend

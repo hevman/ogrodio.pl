@@ -47,6 +47,8 @@ export function SiteHeader({ initialIsShopHost = false }: { initialIsShopHost?: 
   const [cartCount, setCartCount] = useState(0);
   const [cart, setCart] = useState<CartItem[]>([]);
   const [products, setProducts] = useState<Product[]>([]);
+  const [productsLoaded, setProductsLoaded] = useState(false);
+  const [productsLoading, setProductsLoading] = useState(false);
   const [isCartOpen, setIsCartOpen] = useState(false);
   const [cartStatus, setCartStatus] = useState("");
   const [searchQuery, setSearchQuery] = useState("");
@@ -96,6 +98,7 @@ export function SiteHeader({ initialIsShopHost = false }: { initialIsShopHost?: 
     me()
       .then((data) => {
         setUser(data.user);
+        if (!data.user) return;
         fetchGardenNotifications()
           .then((notificationData) => {
             setNotifications(notificationData.items);
@@ -106,15 +109,18 @@ export function SiteHeader({ initialIsShopHost = false }: { initialIsShopHost?: 
       .catch(() => setUser(null));
   }, []);
 
-  useEffect(() => {
-    if (!isShopHost) return;
+  function loadShopProducts() {
+    if (!isShopHost || productsLoaded || productsLoading) return;
+    setProductsLoading(true);
     fetchProducts()
       .then((items) => {
         setProducts(items);
         setSuggestions(items.slice(0, 5));
+        setProductsLoaded(true);
       })
-      .catch((error) => setCartStatus(error instanceof Error ? error.message : t("common.cartFetchFailed")));
-  }, [isShopHost]);
+      .catch((error) => setCartStatus(error instanceof Error ? error.message : t("common.cartFetchFailed")))
+      .finally(() => setProductsLoading(false));
+  }
 
   useEffect(() => {
     if (!isShopHost) return;
@@ -339,7 +345,10 @@ export function SiteHeader({ initialIsShopHost = false }: { initialIsShopHost?: 
                 setSearchQuery(event.target.value);
                 setIsSearchOpen(true);
               }}
-              onFocus={() => setIsSearchOpen(true)}
+              onFocus={() => {
+                loadShopProducts();
+                setIsSearchOpen(true);
+              }}
               placeholder={t("header.searchPlaceholder")}
               type="search"
               value={searchQuery}
@@ -388,7 +397,10 @@ export function SiteHeader({ initialIsShopHost = false }: { initialIsShopHost?: 
             {authActions}
             <button
               className="relative inline-flex h-10 items-center gap-2 rounded-lg bg-emerald-700 px-3 text-sm font-black text-white"
-              onClick={() => setIsCartOpen(true)}
+              onClick={() => {
+                loadShopProducts();
+                setIsCartOpen(true);
+              }}
               type="button"
             >
               <ShoppingBag className="h-4 w-4" />
@@ -411,7 +423,10 @@ export function SiteHeader({ initialIsShopHost = false }: { initialIsShopHost?: 
               setSearchQuery(event.target.value);
               setIsSearchOpen(true);
             }}
-            onFocus={() => setIsSearchOpen(true)}
+            onFocus={() => {
+              loadShopProducts();
+              setIsSearchOpen(true);
+            }}
             placeholder={t("header.searchPlaceholderShort")}
             type="search"
             value={searchQuery}

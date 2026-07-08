@@ -41,6 +41,7 @@ export function logout() {
   return authRequest<{ ok: true }>("logout", { method: "POST" });
 }
 
+/** Dla gościa backend zwraca 200 z user:null (bez błędu 401 w konsoli). */
 export function me() {
-  return authRequest<{ user: ShopUser }>("me");
+  return authRequest<{ user: ShopUser | null }>("me");
 }

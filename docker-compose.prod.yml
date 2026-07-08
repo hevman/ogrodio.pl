@@ -49,6 +49,10 @@ services:
         NEXT_PUBLIC_SHOP_URL: ${NEXT_PUBLIC_SHOP_URL:-https://sklep.ogrodio.pl}
         NEXT_PUBLIC_APP_URL: ${NEXT_PUBLIC_APP_URL:-https://app.ogrodio.pl}
         NEXT_PUBLIC_PANEL_URL: ${NEXT_PUBLIC_PANEL_URL:-https://panel.ogrodio.pl}
+    volumes:
+      # Zdjęcia artykułów są synchronizowane na hosta (poza obrazem Dockera, patrz .dockerignore);
+      # optymalizator obrazów Next.js potrzebuje do nich dostępu w kontenerze.
+      - ./frontend/public/images/articles:/app/public/images/articles:ro
     deploy:
       resources:
         limits:
