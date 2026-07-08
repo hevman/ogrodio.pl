@@ -213,8 +213,8 @@ export default async function AdviceArticlePage({ params }: Props) {
                       alt={article.inlineImage.alt}
                       className="w-full object-cover"
                       height={600}
-                      quality={64}
-                      sizes="(max-width: 1024px) 100vw, 720px"
+                      quality={85}
+                      sizes="(max-width: 768px) 100vw, (max-width: 1280px) min(100vw - 3rem, 900px), 900px"
                       src={article.inlineImage.src}
                       width={1000}
                     />

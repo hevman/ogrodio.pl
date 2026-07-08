@@ -46,6 +46,8 @@ services:
     environment:
       NODE_ENV: production
       NEXT_PUBLIC_VENDURE_SHOP_API_URL: /shop-api
+      VENDURE_SHOP_API_URL: http://commerce-server:3000/shop-api
+      VENDURE_SHOP_HOST: sklep.ogrodio.localhost
       MEILISEARCH_HOST: http://meilisearch:7700
       MEILISEARCH_MASTER_KEY: ${MEILISEARCH_MASTER_KEY:-garden-meili-local-key}
       # URL backendu NestJS dostępny z kontenera frontendu

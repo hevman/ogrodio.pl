@@ -53,6 +53,12 @@ services:
       # Zdjęcia artykułów są synchronizowane na hosta (poza obrazem Dockera, patrz .dockerignore);
       # optymalizator obrazów Next.js potrzebuje do nich dostępu w kontenerze.
       - ./frontend/public/images/articles:/app/public/images/articles:ro
+    environment:
+      VENDURE_SHOP_API_URL: http://commerce-server:3000/shop-api
+      VENDURE_SHOP_HOST: sklep.ogrodio.pl
+      MEILISEARCH_HOST: http://meilisearch:7700
+      MEILISEARCH_MASTER_KEY: ${MEILISEARCH_MASTER_KEY:-garden-meili-local-key}
+      BACKEND_URL: http://backend:3000
     deploy:
       resources:
         limits:

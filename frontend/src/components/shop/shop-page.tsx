@@ -1,10 +1,7 @@
-"use client";
-
+import Image from "next/image";
 import { Check, ChevronRight, Clock, Leaf, PackageCheck, Search, ShieldCheck, ShoppingBag, Sparkles, Sprout, Star, Truck } from "lucide-react";
 import Link from "next/link";
-import { useEffect, useState } from "react";
 import type { Product } from "@/lib/shop-api";
-import { fetchProducts } from "@/lib/shop-api";
 import { departmentHighlights, money, productImage } from "@/components/shop/shop-shared";
 import { t } from "@/i18n";
 
@@ -29,19 +26,7 @@ const promoTiles = [
   },
 ];
 
-export function ShopPage() {
-  const [products, setProducts] = useState<Product[]>([]);
-  const [status, setStatus] = useState(t("shop.loadingProducts"));
-
-  useEffect(() => {
-    fetchProducts()
-      .then((items) => {
-        setProducts(items);
-        setStatus(items.length ? "" : t("shop.noProducts"));
-      })
-      .catch((error) => setStatus(error instanceof Error ? error.message : t("common.fetchProductsFailed")));
-  }, []);
-
+export function ShopPage({ products, status = "" }: { products: Product[]; status?: string }) {
   const featured = products.slice(0, 4);
   const bestsellers = products.slice(3, 7);
   const perkLabels = [t("shop.perkCourier"), t("shop.perkCheckout"), t("shop.perkHelp")];
@@ -51,30 +36,43 @@ export function ShopPage() {
       <section className="border-b border-emerald-900/10 bg-white">
         <div className="mx-auto grid max-w-[1680px] gap-6 px-6 py-6 lg:grid-cols-[1fr_420px] 2xl:px-8">
           <div className="overflow-hidden rounded-lg border border-emerald-900/10 bg-slate-950 text-white">
-            <div className="grid min-h-[520px] content-end bg-[linear-gradient(90deg,rgba(2,6,23,.86),rgba(2,6,23,.22)),url('/products/garden-hero-real.jpg')] bg-cover bg-center p-6 md:p-10 xl:min-h-[590px]">
-              <p className="mb-3 inline-flex w-fit items-center gap-2 rounded-lg bg-emerald-400/15 px-3 py-2 text-sm font-black uppercase text-emerald-100">
-                <Leaf className="h-4 w-4" />
-                {t("header.shopBrand")}
-              </p>
-              <h1 className="max-w-3xl text-4xl font-black tracking-tight md:text-6xl">{t("shop.heroTitle")}</h1>
-              <p className="mt-4 max-w-2xl text-base leading-7 text-emerald-50">{t("shop.heroText")}</p>
-              <div className="mt-6 flex flex-wrap gap-3">
-                <Link className="inline-flex h-11 items-center gap-2 rounded-lg bg-emerald-500 px-4 text-sm font-black text-white" href="/szukaj">
-                  {t("shop.goToCatalog")}
-                  <ChevronRight className="h-4 w-4" />
-                </Link>
-                <Link className="inline-flex h-11 items-center gap-2 rounded-lg border border-white/20 px-4 text-sm font-black text-white" href="/szukaj?category=balkon-i-taras">
-                  {t("shop.balconySeason")}
-                  <Sprout className="h-4 w-4" />
-                </Link>
-              </div>
-              <div className="mt-7 grid gap-2 text-sm font-bold text-emerald-50 sm:grid-cols-3">
-                {perkLabels.map((item) => (
-                  <span className="inline-flex items-center gap-2" key={item}>
-                    <Check className="h-4 w-4 text-emerald-300" />
-                    {item}
-                  </span>
-                ))}
+            <div className="relative grid min-h-[520px] content-end p-6 md:p-10 xl:min-h-[590px]">
+              <Image
+                alt=""
+                className="object-cover"
+                fetchPriority="high"
+                fill
+                priority
+                quality={72}
+                sizes="(max-width: 1024px) 100vw, 58vw"
+                src="/products/garden-hero-real.jpg"
+              />
+              <div className="absolute inset-0 bg-gradient-to-r from-slate-950/86 via-slate-950/45 to-slate-950/20" />
+              <div className="relative">
+                <p className="mb-3 inline-flex w-fit items-center gap-2 rounded-lg bg-emerald-400/15 px-3 py-2 text-sm font-black uppercase text-emerald-100">
+                  <Leaf className="h-4 w-4" />
+                  {t("header.shopBrand")}
+                </p>
+                <h1 className="max-w-3xl text-4xl font-black tracking-tight md:text-6xl">{t("shop.heroTitle")}</h1>
+                <p className="mt-4 max-w-2xl text-base leading-7 text-emerald-50">{t("shop.heroText")}</p>
+                <div className="mt-6 flex flex-wrap gap-3">
+                  <Link className="inline-flex h-11 items-center gap-2 rounded-lg bg-emerald-500 px-4 text-sm font-black text-white" href="/szukaj">
+                    {t("shop.goToCatalog")}
+                    <ChevronRight className="h-4 w-4" />
+                  </Link>
+                  <Link className="inline-flex h-11 items-center gap-2 rounded-lg border border-white/20 px-4 text-sm font-black text-white" href="/szukaj?category=balkon-i-taras">
+                    {t("shop.balconySeason")}
+                    <Sprout className="h-4 w-4" />
+                  </Link>
+                </div>
+                <div className="mt-7 grid gap-2 text-sm font-bold text-emerald-50 sm:grid-cols-3">
+                  {perkLabels.map((item) => (
+                    <span className="inline-flex items-center gap-2" key={item}>
+                      <Check className="h-4 w-4 text-emerald-300" />
+                      {item}
+                    </span>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
@@ -127,7 +125,17 @@ export function ShopPage() {
               href={`/szukaj?category=${department.query}`}
               key={department.label}
             >
-              <img className="h-32 w-full object-cover 2xl:h-36" src={department.image} alt="" />
+              <div className="relative h-32 2xl:h-36">
+                <Image
+                  alt=""
+                  className="object-cover"
+                  fill
+                  loading="lazy"
+                  quality={62}
+                  sizes="(max-width: 640px) 50vw, 20vw"
+                  src={department.image}
+                />
+              </div>
               <span className="flex min-h-14 items-center justify-between gap-2 px-4 py-3 text-sm font-black">
                 {department.label}
                 <ChevronRight className="h-4 w-4 text-emerald-700 transition group-hover:translate-x-0.5" />
@@ -140,7 +148,15 @@ export function ShopPage() {
       <section className="mx-auto grid max-w-[1680px] gap-5 px-6 py-4 lg:grid-cols-2 2xl:px-8">
         {promoTiles.map((tile) => (
           <Link className="group relative grid min-h-80 content-end overflow-hidden rounded-lg border border-emerald-900/10 bg-slate-950 p-6 text-white shadow-sm xl:min-h-96" href={tile.href} key={tile.titleKey}>
-            <img className="absolute inset-0 h-full w-full object-cover opacity-80 transition duration-300 group-hover:scale-[1.03]" src={tile.image} alt="" />
+            <Image
+              alt=""
+              className="object-cover opacity-80 transition duration-300 group-hover:scale-[1.03]"
+              fill
+              loading="lazy"
+              quality={65}
+              sizes="(max-width: 1024px) 100vw, 50vw"
+              src={tile.image}
+            />
             <div className="absolute inset-0 bg-gradient-to-r from-slate-950/85 via-slate-950/45 to-transparent" />
             <div className="relative">
               <p className="text-sm font-black uppercase text-emerald-200">{t("shop.seasonalOffer")}</p>
@@ -169,7 +185,17 @@ export function ShopPage() {
           <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
             {featured.map((product) => (
               <Link className="group overflow-hidden rounded-lg border border-emerald-900/10 bg-white shadow-sm transition hover:-translate-y-0.5 hover:shadow-md" href={`/produkt/${product.slug}`} key={product.variantId}>
-                <img className="h-52 w-full object-cover 2xl:h-60" src={productImage(product)} alt="" />
+                <div className="relative h-52 2xl:h-60">
+                  <Image
+                    alt=""
+                    className="object-cover"
+                    fill
+                    loading="lazy"
+                    quality={62}
+                    sizes="(max-width: 768px) 50vw, 25vw"
+                    src={productImage(product)}
+                  />
+                </div>
                 <div className="p-4">
                   <p className="text-xs font-black uppercase text-emerald-700">{product.categoryLabel}</p>
                   <h3 className="mt-1 min-h-12 font-black group-hover:text-emerald-800">{product.name}</h3>
@@ -190,7 +216,17 @@ export function ShopPage() {
           <div className="mt-5 grid gap-3">
             {bestsellers.map((product) => (
               <Link className="grid grid-cols-[76px_1fr_auto] items-center gap-3 rounded-lg border border-slate-200 p-2 transition hover:bg-slate-50" href={`/produkt/${product.slug}`} key={product.variantId}>
-                <img className="h-16 w-20 rounded-lg object-cover" src={productImage(product)} alt="" />
+                <div className="relative h-16 w-20 overflow-hidden rounded-lg">
+                  <Image
+                    alt=""
+                    className="object-cover"
+                    fill
+                    loading="lazy"
+                    quality={58}
+                    sizes="80px"
+                    src={productImage(product)}
+                  />
+                </div>
                 <div>
                   <p className="font-black">{product.name}</p>
                   <p className="mt-1 text-xs font-bold uppercase text-emerald-700">{product.categoryLabel}</p>

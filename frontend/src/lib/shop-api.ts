@@ -88,22 +88,43 @@ type VendureResponse<T> = {
   errors?: Array<{ message: string }>;
 };
 
-const shopApiUrl = process.env.NEXT_PUBLIC_VENDURE_SHOP_API_URL || "/shop-api";
+function resolveShopApiUrl() {
+  if (typeof window !== "undefined") {
+    return process.env.NEXT_PUBLIC_VENDURE_SHOP_API_URL || "/shop-api";
+  }
+  return (
+    process.env.VENDURE_SHOP_API_URL ||
+    process.env.NEXT_PUBLIC_VENDURE_SHOP_API_URL ||
+    "http://commerce-server:3000/shop-api"
+  );
+}
+
+function shopApiHeaders(): HeadersInit {
+  const host = process.env.VENDURE_SHOP_HOST;
+  return host ? { Host: host } : {};
+}
 
 export async function vendureShop<T>(query: string, variables?: Record<string, unknown>): Promise<T> {
-  const response = await fetch(shopApiUrl, {
+  const response = await fetch(resolveShopApiUrl(), {
     method: "POST",
     credentials: "include",
     headers: {
       "Content-Type": "application/json",
+      ...shopApiHeaders(),
     },
     body: JSON.stringify({ query, variables }),
+    ...(typeof window === "undefined" ? { next: { revalidate: 300 } } : {}),
   });
   const payload = (await response.json().catch(() => ({}))) as VendureResponse<T>;
   if (!response.ok || payload.errors?.length) {
     throw new Error(payload.errors?.[0]?.message || t("common.vendureQueryError"));
   }
   return payload.data as T;
+}
+
+export async function fetchShopHomeProducts(): Promise<Product[]> {
+  const { searchProductsServer } = await import("@/lib/products-search");
+  return searchProductsServer({ limit: 24, stock: "in-stock" });
 }
 
 export async function fetchProducts(): Promise<Product[]> {

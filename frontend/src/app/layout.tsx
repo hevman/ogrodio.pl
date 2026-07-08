@@ -84,7 +84,12 @@ export default async function RootLayout({
   const crossAppOrigin = getOrigin(site.appUrl);
   const crossShopOrigin = getOrigin(site.shopUrl);
   const crossSiteOrigin = getOrigin(site.siteUrl);
-  const crossOrigins = Array.from(
+  const preconnectOrigins = isShopHost
+    ? []
+    : isAppHost
+      ? [crossShopOrigin].filter(Boolean)
+      : [crossShopOrigin, crossAppOrigin].filter(Boolean);
+  const dnsPrefetchOrigins = Array.from(
     new Set([crossAppOrigin, crossShopOrigin, crossSiteOrigin].filter(Boolean)),
   );
 
@@ -98,10 +103,10 @@ export default async function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
           type="application/ld+json"
         />
-        {crossOrigins.map((origin) => (
+        {dnsPrefetchOrigins.map((origin) => (
           <link href={origin} key={`${origin}-dns`} rel="dns-prefetch" />
         ))}
-        {crossOrigins.map((origin) => (
+        {preconnectOrigins.map((origin) => (
           <link crossOrigin="" href={origin} key={`${origin}-preconnect`} rel="preconnect" />
         ))}
       </head>
