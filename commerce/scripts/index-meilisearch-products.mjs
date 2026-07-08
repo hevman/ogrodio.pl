@@ -1,4 +1,5 @@
 const vendureShopApiUrl = process.env.VENDURE_SHOP_API_URL || 'http://127.0.0.1:8080/shop-api';
+const vendureShopHost = process.env.VENDURE_SHOP_HOST || 'sklep.ogrodio.localhost';
 const meiliHost = process.env.MEILISEARCH_HOST || 'http://127.0.0.1:7700';
 const meiliKey = process.env.MEILISEARCH_MASTER_KEY || 'garden-meili-local-key';
 const indexName = 'garden_products';
@@ -8,7 +9,7 @@ async function vendureShop(query, variables = {}) {
     method: 'POST',
     headers: {
       'content-type': 'application/json',
-      host: 'sklep.ogrodio.localhost',
+      host: vendureShopHost,
     },
     body: JSON.stringify({ query, variables }),
   });

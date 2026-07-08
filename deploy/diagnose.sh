@@ -46,6 +46,7 @@ run git log -1 --oneline
 run git status --short
 
 section "Docker compose"
+run docker compose version
 run $COMPOSE ps
 
 section "Docker containers"
@@ -56,7 +57,7 @@ run docker exec garden-nginx nginx -t
 run docker inspect garden-nginx --format '{{range .Config.Env}}{{println .}}{{end}}'
 
 section "DNS local resolver"
-for host in ogrodio.pl sklep.ogrodio.pl app.ogrodio.pl panel.ogrodio.pl api.ogrodio.pl www.sklep.ogrodio.pl; do
+for host in ogrodio.pl www.ogrodio.pl sklep.ogrodio.pl app.ogrodio.pl panel.ogrodio.pl api.ogrodio.pl; do
   echo "--- $host"
   getent hosts "$host" || true
 done
@@ -64,11 +65,11 @@ done
 section "HTTP public"
 http_head "https://ogrodio.pl/health"
 http_head "https://ogrodio.pl/"
+http_head "https://www.ogrodio.pl/"
 http_head "https://sklep.ogrodio.pl/"
 http_head "https://app.ogrodio.pl/login"
 http_head "https://panel.ogrodio.pl/"
 http_head "https://api.ogrodio.pl/health"
-http_head "https://www.sklep.ogrodio.pl/"
 
 section "HTTP local origin"
 http_head "http://127.0.0.1/health"

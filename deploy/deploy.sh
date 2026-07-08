@@ -8,6 +8,7 @@
 #   IMPORT_NEW_ARTICLES=1 bash deploy/deploy.sh          - dodaje tylko nowe JSON-y, bez aktualizacji istniejacych
 #   REINDEX_ARTICLES=1 bash deploy/deploy.sh             - odswieza tylko indeks Meilisearch z bazy
 #   OVERWRITE_ARTICLES_FROM_JSON=1 bash deploy/deploy.sh - pelny sync JSON -> baza, nadpisuje istniejace tresci
+#   INDEX_PRODUCTS=1 bash deploy/deploy.sh               - odswieza indeks produktow Meilisearch
 
 set -euo pipefail
 
@@ -65,7 +66,7 @@ $COMPOSE build
 echo "==> Start kontenerow"
 $COMPOSE up -d
 
-if [ "${IMPORT_NEW_ARTICLES:-}" = "1" ] || [ "${REINDEX_ARTICLES:-}" = "1" ] || [ "${OVERWRITE_ARTICLES_FROM_JSON:-}" = "1" ]; then
+if [ "${IMPORT_NEW_ARTICLES:-}" = "1" ] || [ "${REINDEX_ARTICLES:-}" = "1" ] || [ "${OVERWRITE_ARTICLES_FROM_JSON:-}" = "1" ] || [ "${INDEX_PRODUCTS:-}" = "1" ]; then
   echo "==> Czekam na Postgres..."
   sleep 15
 fi
@@ -92,6 +93,19 @@ else
   echo "    Nowe JSON-y bez nadpisywania: IMPORT_NEW_ARTICLES=1 bash deploy/deploy.sh"
   echo "    Tylko reindeks:               REINDEX_ARTICLES=1 bash deploy/deploy.sh"
   echo "    Pelny sync z nadpisaniem:     OVERWRITE_ARTICLES_FROM_JSON=1 bash deploy/deploy.sh"
+fi
+
+if [ "${INDEX_PRODUCTS:-}" = "1" ]; then
+  echo "==> Indeks produktow Meili"
+  docker exec \
+    -e VENDURE_SHOP_API_URL=http://commerce-server:3000/shop-api \
+    -e VENDURE_SHOP_HOST=sklep.ogrodio.pl \
+    -e MEILISEARCH_HOST=http://meilisearch:7700 \
+    -e MEILISEARCH_MASTER_KEY="${MEILISEARCH_MASTER_KEY:-garden-meili-local-key}" \
+    garden-commerce-server npm run index:meili
+else
+  echo "==> Pomijam indeks produktow (INDEX_PRODUCTS != 1)"
+  echo "    Tylko reindeks produktow:     INDEX_PRODUCTS=1 bash deploy/deploy.sh"
 fi
 
 echo ""
