@@ -2,6 +2,7 @@
 
 import { FormEvent, useEffect, useMemo, useState } from "react";
 import Link from "next/link";
+import { useSearchParams } from "next/navigation";
 import { ChevronDown, ChevronRight, Leaf, Plus, Search, Trash2 } from "lucide-react";
 import {
   ColumnDef,
@@ -33,6 +34,7 @@ import { canWriteGarden, plantHealthLabel, plantStatusLabel, roleLabel } from "@
 
 function PrivatePlantsView() {
   const { organization } = useAppContext();
+  const searchParams = useSearchParams();
   const [catalog, setCatalog] = useState<PlantDefinition[]>([]);
   const [plants, setPlants] = useState<GardenPlant[]>([]);
   const [plantType, setPlantType] = useState("borowka");
@@ -48,6 +50,11 @@ function PrivatePlantsView() {
 
   async function refresh() {
     const [catalogData, plantsData] = await Promise.all([fetchGardenCatalog(), fetchGardenPlants()]);
+    const requestedPlantType = searchParams.get("plantType");
+    if (requestedPlantType && catalogData.plants.some((plant) => plant.type === requestedPlantType)) {
+      setPlantType(requestedPlantType);
+      setShowForm(true);
+    }
     setCatalog(catalogData.plants);
     setPlants(plantsData.plants);
   }
@@ -56,7 +63,7 @@ function PrivatePlantsView() {
     refresh()
       .then(() => setStatus(""))
       .catch((error) => setStatus(error instanceof Error ? error.message : t("app.errors.fetchPlantsFailed")));
-  }, []);
+  }, [searchParams]);
 
   async function addPlant(event: FormEvent) {
     event.preventDefault();
