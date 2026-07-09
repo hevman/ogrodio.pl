@@ -1,6 +1,8 @@
 {
   "slug": "czarna-porzeczka",
-  "appAliases": ["porzeczka"],
+  "appAliases": [
+    "porzeczka"
+  ],
   "name": "Czarna porzeczka",
   "latinName": "Ribes nigrum",
   "group": "Owoce",
@@ -13,16 +15,165 @@
   "water": "Regularnie w maju i czerwcu",
   "spacing": "1,2-1,5 m między krzewami",
   "harvest": "Lipiec",
-  "tags": ["krzew owocowy", "sok", "mrozoodporna"],
-  "calendar": [
-    { "month": "II", "task": "Cięcie najstarszych pędów przy ziemi", "type": "care" },
-    { "month": "IV", "task": "Ściółkowanie i kompost pod krzew", "type": "care" },
-    { "month": "VI", "task": "Kontrola mszyc i podlewanie", "type": "care" },
-    { "month": "VII", "task": "Zbiór całych gron owoców", "type": "harvest" }
+  "tags": [
+    "krzew owocowy",
+    "sok",
+    "mrozoodporna"
   ],
-  "problems": ["Mszyca porzeczkowo-czyściecowa", "Zagęszczenie krzewu", "Słabszy plon na starych pędach"],
+  "calendar": [
+    {
+      "month": "I",
+      "tasks": [
+        {
+          "task": "Kontrola okryć zimowych i stanu pędów",
+          "type": "care"
+        }
+      ]
+    },
+    {
+      "month": "II",
+      "tasks": [
+        {
+          "task": "Cięcie najstarszych pędów przy ziemi",
+          "type": "care",
+          "week": null,
+          "articleHref": null
+        }
+      ]
+    },
+    {
+      "month": "III",
+      "tasks": [
+        {
+          "task": "Obserwuj wzrost i dostosuj podlewanie do pogody",
+          "type": "care"
+        }
+      ]
+    },
+    {
+      "month": "IV",
+      "tasks": [
+        {
+          "task": "Ściółkowanie i kompost pod krzew",
+          "type": "care",
+          "week": null,
+          "articleHref": null
+        }
+      ]
+    },
+    {
+      "month": "V",
+      "tasks": [
+        {
+          "task": "Obserwuj wzrost i dostosuj podlewanie do pogody",
+          "type": "care"
+        }
+      ]
+    },
+    {
+      "month": "VI",
+      "tasks": [
+        {
+          "task": "Kontrola mszyc i podlewanie",
+          "type": "care",
+          "week": null,
+          "articleHref": null
+        }
+      ]
+    },
+    {
+      "month": "VII",
+      "tasks": [
+        {
+          "task": "Zbiór całych gron owoców",
+          "type": "harvest",
+          "week": null,
+          "articleHref": null
+        }
+      ]
+    },
+    {
+      "month": "VIII",
+      "tasks": [
+        {
+          "task": "Regularna kontrola podlewania i zdrowia rośliny",
+          "type": "care"
+        }
+      ]
+    },
+    {
+      "month": "IX",
+      "tasks": [
+        {
+          "task": "Przygotowanie rośliny na chłodniejsze noce",
+          "type": "care"
+        }
+      ]
+    },
+    {
+      "month": "X",
+      "tasks": [
+        {
+          "task": "Przygotowanie rośliny na chłodniejsze noce",
+          "type": "care"
+        }
+      ]
+    },
+    {
+      "month": "XI",
+      "tasks": [
+        {
+          "task": "Zabezpieczenie na zimę i uzupełnienie ściółki",
+          "type": "care"
+        }
+      ]
+    },
+    {
+      "month": "XII",
+      "tasks": [
+        {
+          "task": "Kontrola okryć zimowych i stanu pędów",
+          "type": "care"
+        }
+      ]
+    }
+  ],
+  "problems": [
+    {
+      "symptom": "Mszyca porzeczkowo-czyściecowa"
+    },
+    {
+      "symptom": "Zagęszczenie krzewu"
+    },
+    {
+      "symptom": "Słabszy plon na starych pędach"
+    }
+  ],
   "relatedArticles": [
-    { "title": "Czarna porzeczka - uprawa i zbiory", "href": "/porady/owoce-w-ogrodzie/czarna-porzeczka-uprawa-pielegnacja-zbiory" },
-    { "title": "Mszyca galasówka porzeczki", "href": "/porady/choroby-i-szkodniki/mszyca-galasowka-porzeczki" }
-  ]
+    {
+      "title": "Czarna porzeczka - uprawa i zbiory",
+      "href": "/porady/owoce-w-ogrodzie/czarna-porzeczka-uprawa-pielegnacja-zbiory"
+    },
+    {
+      "title": "Mszyca galasówka porzeczki",
+      "href": "/porady/choroby-i-szkodniki/mszyca-galasowka-porzeczki"
+    }
+  ],
+  "risks": [
+    {
+      "title": "Kontrola zdrowotna",
+      "months": [
+        "V",
+        "VI",
+        "VII",
+        "VIII",
+        "IX"
+      ],
+      "urgency": "średnie",
+      "symptom": "Plamy na liściach, osłabiony wzrost lub obecność szkodników",
+      "action": "Raz w tygodniu obejrzyj liście i pędy. Reaguj wcześnie.",
+      "articleHref": null
+    }
+  ],
+  "varieties": []
 }

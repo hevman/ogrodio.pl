@@ -12,15 +12,159 @@
   "water": "Często małymi dawkami",
   "spacing": "20-25 cm między roślinami",
   "harvest": "Kwiecień-czerwiec i wrzesień-październik",
-  "tags": ["szybki plon", "liście", "grządka"],
-  "calendar": [
-    { "month": "III", "task": "Pierwszy siew pod osłoną lub do gruntu", "type": "start" },
-    { "month": "IV", "task": "Dosiew co 2-3 tygodnie", "type": "start" },
-    { "month": "V", "task": "Zbiór zewnętrznych liści", "type": "harvest" },
-    { "month": "VIII", "task": "Siew jesienny po największych upałach", "type": "start" }
+  "tags": [
+    "szybki plon",
+    "liście",
+    "grządka"
   ],
-  "problems": ["Wybijanie w pęd kwiatowy w upały", "Ślimaki", "Gorzknienie przy suszy"],
+  "calendar": [
+    {
+      "month": "I",
+      "tasks": [
+        {
+          "task": "Kontrola okryć zimowych i stanu pędów",
+          "type": "care"
+        }
+      ]
+    },
+    {
+      "month": "II",
+      "tasks": [
+        {
+          "task": "Przegląd rośliny i plan prac na wiosnę",
+          "type": "care"
+        }
+      ]
+    },
+    {
+      "month": "III",
+      "tasks": [
+        {
+          "task": "Pierwszy siew pod osłoną lub do gruntu",
+          "type": "start",
+          "week": null,
+          "articleHref": null
+        }
+      ]
+    },
+    {
+      "month": "IV",
+      "tasks": [
+        {
+          "task": "Dosiew co 2-3 tygodnie",
+          "type": "start",
+          "week": null,
+          "articleHref": null
+        }
+      ]
+    },
+    {
+      "month": "V",
+      "tasks": [
+        {
+          "task": "Zbiór zewnętrznych liści",
+          "type": "harvest",
+          "week": null,
+          "articleHref": null
+        }
+      ]
+    },
+    {
+      "month": "VI",
+      "tasks": [
+        {
+          "task": "Regularna kontrola podlewania i zdrowia rośliny",
+          "type": "care"
+        }
+      ]
+    },
+    {
+      "month": "VII",
+      "tasks": [
+        {
+          "task": "Regularna kontrola podlewania i zdrowia rośliny",
+          "type": "care"
+        }
+      ]
+    },
+    {
+      "month": "VIII",
+      "tasks": [
+        {
+          "task": "Siew jesienny po największych upałach",
+          "type": "start",
+          "week": null,
+          "articleHref": null
+        }
+      ]
+    },
+    {
+      "month": "IX",
+      "tasks": [
+        {
+          "task": "Przygotowanie rośliny na chłodniejsze noce",
+          "type": "care"
+        }
+      ]
+    },
+    {
+      "month": "X",
+      "tasks": [
+        {
+          "task": "Przygotowanie rośliny na chłodniejsze noce",
+          "type": "care"
+        }
+      ]
+    },
+    {
+      "month": "XI",
+      "tasks": [
+        {
+          "task": "Zabezpieczenie na zimę i uzupełnienie ściółki",
+          "type": "care"
+        }
+      ]
+    },
+    {
+      "month": "XII",
+      "tasks": [
+        {
+          "task": "Kontrola okryć zimowych i stanu pędów",
+          "type": "care"
+        }
+      ]
+    }
+  ],
+  "problems": [
+    {
+      "symptom": "Wybijanie w pęd kwiatowy w upały"
+    },
+    {
+      "symptom": "Ślimaki"
+    },
+    {
+      "symptom": "Gorzknienie przy suszy"
+    }
+  ],
   "relatedArticles": [
-    { "title": "Sałata liściowa - uprawa i zbiory", "href": "/porady/warzywnik/salata-lisciowa-uprawa-zbiory" }
-  ]
+    {
+      "title": "Sałata liściowa - uprawa i zbiory",
+      "href": "/porady/warzywnik/salata-lisciowa-uprawa-zbiory"
+    }
+  ],
+  "risks": [
+    {
+      "title": "Stres wodny w sezonie ciepłym",
+      "months": [
+        "VI",
+        "VII",
+        "VIII"
+      ],
+      "urgency": "wysokie",
+      "symptom": "Liście więdną, wzrost zwalnia lub owoce kurczą się",
+      "action": "Podlewaj rano małymi dawkami i utrzymuj ściółkę.",
+      "articleHref": null
+    }
+  ],
+  "varieties": []
 }

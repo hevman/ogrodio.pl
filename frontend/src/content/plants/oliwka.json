@@ -12,15 +12,174 @@
   "water": "Umiarkowanie, po przeschnięciu wierzchu ziemi",
   "spacing": "Donica z odpływem i warstwą drenażu",
   "harvest": "Dekoracyjna cały rok",
-  "tags": ["doniczka", "taras", "zimowanie"],
-  "calendar": [
-    { "month": "IV", "task": "Wyniesienie na zewnątrz po hartowaniu", "type": "care" },
-    { "month": "VI", "task": "Regularne podlewanie i lekkie nawożenie", "type": "care" },
-    { "month": "IX", "task": "Ograniczenie nawożenia przed zimą", "type": "care" },
-    { "month": "XI", "task": "Przeniesienie do chłodnego, jasnego miejsca", "type": "care" }
+  "tags": [
+    "doniczka",
+    "taras",
+    "zimowanie"
   ],
-  "problems": ["Brązowe plamy na liściach", "Opadanie liści zimą", "Przelanie w donicy"],
+  "calendar": [
+    {
+      "month": "I",
+      "tasks": [
+        {
+          "task": "Kontrola okryć zimowych i stanu pędów",
+          "type": "care"
+        }
+      ]
+    },
+    {
+      "month": "II",
+      "tasks": [
+        {
+          "task": "Przegląd rośliny i plan prac na wiosnę",
+          "type": "care"
+        }
+      ]
+    },
+    {
+      "month": "III",
+      "tasks": [
+        {
+          "task": "Obserwuj wzrost i dostosuj podlewanie do pogody",
+          "type": "care"
+        }
+      ]
+    },
+    {
+      "month": "IV",
+      "tasks": [
+        {
+          "task": "Wyniesienie na zewnątrz po hartowaniu",
+          "type": "care",
+          "week": null,
+          "articleHref": null
+        }
+      ]
+    },
+    {
+      "month": "V",
+      "tasks": [
+        {
+          "task": "Obserwuj wzrost i dostosuj podlewanie do pogody",
+          "type": "care"
+        }
+      ]
+    },
+    {
+      "month": "VI",
+      "tasks": [
+        {
+          "task": "Regularne podlewanie i lekkie nawożenie",
+          "type": "care",
+          "week": null,
+          "articleHref": null
+        }
+      ]
+    },
+    {
+      "month": "VII",
+      "tasks": [
+        {
+          "task": "Regularna kontrola podlewania i zdrowia rośliny",
+          "type": "care"
+        }
+      ]
+    },
+    {
+      "month": "VIII",
+      "tasks": [
+        {
+          "task": "Regularna kontrola podlewania i zdrowia rośliny",
+          "type": "care"
+        }
+      ]
+    },
+    {
+      "month": "IX",
+      "tasks": [
+        {
+          "task": "Ograniczenie nawożenia przed zimą",
+          "type": "care",
+          "week": null,
+          "articleHref": null
+        }
+      ]
+    },
+    {
+      "month": "X",
+      "tasks": [
+        {
+          "task": "Przygotowanie rośliny na chłodniejsze noce",
+          "type": "care"
+        }
+      ]
+    },
+    {
+      "month": "XI",
+      "tasks": [
+        {
+          "task": "Przeniesienie do chłodnego, jasnego miejsca",
+          "type": "care",
+          "week": null,
+          "articleHref": null
+        }
+      ]
+    },
+    {
+      "month": "XII",
+      "tasks": [
+        {
+          "task": "Kontrola okryć zimowych i stanu pędów",
+          "type": "care"
+        }
+      ]
+    }
+  ],
+  "problems": [
+    {
+      "symptom": "Brązowe plamy na liściach"
+    },
+    {
+      "symptom": "Opadanie liści zimą"
+    },
+    {
+      "symptom": "Przelanie w donicy"
+    }
+  ],
   "relatedArticles": [
-    { "title": "Oliwka w donicy - uprawa i brązowe liście", "href": "/porady/rosliny-ozdobne/oliwka-w-donicy-uprawa-brazowe-liscie" }
-  ]
+    {
+      "title": "Oliwka w donicy - uprawa i brązowe liście",
+      "href": "/porady/rosliny-ozdobne/oliwka-w-donicy-uprawa-brazowe-liscie"
+    }
+  ],
+  "risks": [
+    {
+      "title": "Ryzyko chłodu i przymrozków",
+      "months": [
+        "III",
+        "IV",
+        "X",
+        "XI"
+      ],
+      "urgency": "średnie",
+      "symptom": "Czerniejące pędy lub uszkodzone młode liście po chłodnej nocy",
+      "action": "Zabezpiecz roślinę przed spadkami temperatury i opóźnij prace w polu.",
+      "articleHref": null
+    },
+    {
+      "title": "Kontrola zdrowotna",
+      "months": [
+        "V",
+        "VI",
+        "VII",
+        "VIII",
+        "IX"
+      ],
+      "urgency": "średnie",
+      "symptom": "Plamy na liściach, osłabiony wzrost lub obecność szkodników",
+      "action": "Raz w tygodniu obejrzyj liście i pędy. Reaguj wcześnie.",
+      "articleHref": null
+    }
+  ],
+  "varieties": []
 }

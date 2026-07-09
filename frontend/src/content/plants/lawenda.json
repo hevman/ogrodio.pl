@@ -12,15 +12,160 @@
   "water": "Oszczędnie po ukorzenieniu",
   "spacing": "30-40 cm między sadzonkami",
   "harvest": "Kwitnienie: czerwiec-sierpień",
-  "tags": ["miododajna", "sucholubna", "rabata"],
-  "calendar": [
-    { "month": "IV", "task": "Sadzenie i lekkie cięcie po zimie", "type": "start" },
-    { "month": "VI", "task": "Zbiór kwiatów do suszenia", "type": "harvest" },
-    { "month": "VIII", "task": "Cięcie po kwitnieniu bez wchodzenia w stare drewno", "type": "care" },
-    { "month": "XI", "task": "Ochrona przed zimową wilgocią", "type": "care" }
+  "tags": [
+    "miododajna",
+    "sucholubna",
+    "rabata"
   ],
-  "problems": ["Gnicie w ciężkiej ziemi", "Łysienie od dołu bez cięcia", "Przemarzanie na mokrym stanowisku"],
+  "calendar": [
+    {
+      "month": "I",
+      "tasks": [
+        {
+          "task": "Kontrola okryć zimowych i stanu pędów",
+          "type": "care"
+        }
+      ]
+    },
+    {
+      "month": "II",
+      "tasks": [
+        {
+          "task": "Przegląd rośliny i plan prac na wiosnę",
+          "type": "care"
+        }
+      ]
+    },
+    {
+      "month": "III",
+      "tasks": [
+        {
+          "task": "Obserwuj wzrost i dostosuj podlewanie do pogody",
+          "type": "care"
+        }
+      ]
+    },
+    {
+      "month": "IV",
+      "tasks": [
+        {
+          "task": "Sadzenie i lekkie cięcie po zimie",
+          "type": "start",
+          "week": null,
+          "articleHref": null
+        }
+      ]
+    },
+    {
+      "month": "V",
+      "tasks": [
+        {
+          "task": "Obserwuj wzrost i dostosuj podlewanie do pogody",
+          "type": "care"
+        }
+      ]
+    },
+    {
+      "month": "VI",
+      "tasks": [
+        {
+          "task": "Zbiór kwiatów do suszenia",
+          "type": "harvest",
+          "week": null,
+          "articleHref": null
+        }
+      ]
+    },
+    {
+      "month": "VII",
+      "tasks": [
+        {
+          "task": "Regularna kontrola podlewania i zdrowia rośliny",
+          "type": "care"
+        }
+      ]
+    },
+    {
+      "month": "VIII",
+      "tasks": [
+        {
+          "task": "Cięcie po kwitnieniu bez wchodzenia w stare drewno",
+          "type": "care",
+          "week": null,
+          "articleHref": null
+        }
+      ]
+    },
+    {
+      "month": "IX",
+      "tasks": [
+        {
+          "task": "Przygotowanie rośliny na chłodniejsze noce",
+          "type": "care"
+        }
+      ]
+    },
+    {
+      "month": "X",
+      "tasks": [
+        {
+          "task": "Przygotowanie rośliny na chłodniejsze noce",
+          "type": "care"
+        }
+      ]
+    },
+    {
+      "month": "XI",
+      "tasks": [
+        {
+          "task": "Ochrona przed zimową wilgocią",
+          "type": "care",
+          "week": null,
+          "articleHref": null
+        }
+      ]
+    },
+    {
+      "month": "XII",
+      "tasks": [
+        {
+          "task": "Kontrola okryć zimowych i stanu pędów",
+          "type": "care"
+        }
+      ]
+    }
+  ],
+  "problems": [
+    {
+      "symptom": "Gnicie w ciężkiej ziemi"
+    },
+    {
+      "symptom": "Łysienie od dołu bez cięcia"
+    },
+    {
+      "symptom": "Przemarzanie na mokrym stanowisku"
+    }
+  ],
   "relatedArticles": [
-    { "title": "Lawenda - jak sadzić i pielęgnować", "href": "/porady/pielegnacja/lawenda-sadzenie-i-pielegnacja" }
-  ]
+    {
+      "title": "Lawenda - jak sadzić i pielęgnować",
+      "href": "/porady/pielegnacja/lawenda-sadzenie-i-pielegnacja"
+    }
+  ],
+  "risks": [
+    {
+      "title": "Ryzyko chłodu i przymrozków",
+      "months": [
+        "III",
+        "IV",
+        "X",
+        "XI"
+      ],
+      "urgency": "średnie",
+      "symptom": "Czerniejące pędy lub uszkodzone młode liście po chłodnej nocy",
+      "action": "Zabezpiecz roślinę przed spadkami temperatury i opóźnij prace w polu.",
+      "articleHref": null
+    }
+  ],
+  "varieties": []
 }

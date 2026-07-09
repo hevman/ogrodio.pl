@@ -12,15 +12,174 @@
   "water": "Obficie pod korzeń, bez moczenia liści",
   "spacing": "80-100 cm między roślinami",
   "harvest": "Czerwiec-wrzesień",
-  "tags": ["warzywo", "szybki plon", "ciepłolubna"],
-  "calendar": [
-    { "month": "IV", "task": "Wysiew rozsady w domu", "type": "start" },
-    { "month": "V", "task": "Sadzenie po przymrozkach do gruntu", "type": "start" },
-    { "month": "VI", "task": "Podlewanie i ściółkowanie pod liśćmi", "type": "care" },
-    { "month": "VII", "task": "Zbiór młodych owoców co kilka dni", "type": "harvest" }
+  "tags": [
+    "warzywo",
+    "szybki plon",
+    "ciepłolubna"
   ],
-  "problems": ["Mączniak prawdziwy pod koniec lata", "Zrzucanie zawiązków przy chłodzie", "Przesuszenie dużych liści"],
+  "calendar": [
+    {
+      "month": "I",
+      "tasks": [
+        {
+          "task": "Kontrola okryć zimowych i stanu pędów",
+          "type": "care"
+        }
+      ]
+    },
+    {
+      "month": "II",
+      "tasks": [
+        {
+          "task": "Przegląd rośliny i plan prac na wiosnę",
+          "type": "care"
+        }
+      ]
+    },
+    {
+      "month": "III",
+      "tasks": [
+        {
+          "task": "Obserwuj wzrost i dostosuj podlewanie do pogody",
+          "type": "care"
+        }
+      ]
+    },
+    {
+      "month": "IV",
+      "tasks": [
+        {
+          "task": "Wysiew rozsady w domu",
+          "type": "start",
+          "week": null,
+          "articleHref": null
+        }
+      ]
+    },
+    {
+      "month": "V",
+      "tasks": [
+        {
+          "task": "Sadzenie po przymrozkach do gruntu",
+          "type": "start",
+          "week": null,
+          "articleHref": null
+        }
+      ]
+    },
+    {
+      "month": "VI",
+      "tasks": [
+        {
+          "task": "Podlewanie i ściółkowanie pod liśćmi",
+          "type": "care",
+          "week": null,
+          "articleHref": null
+        }
+      ]
+    },
+    {
+      "month": "VII",
+      "tasks": [
+        {
+          "task": "Zbiór młodych owoców co kilka dni",
+          "type": "harvest",
+          "week": null,
+          "articleHref": null
+        }
+      ]
+    },
+    {
+      "month": "VIII",
+      "tasks": [
+        {
+          "task": "Regularna kontrola podlewania i zdrowia rośliny",
+          "type": "care"
+        }
+      ]
+    },
+    {
+      "month": "IX",
+      "tasks": [
+        {
+          "task": "Przygotowanie rośliny na chłodniejsze noce",
+          "type": "care"
+        }
+      ]
+    },
+    {
+      "month": "X",
+      "tasks": [
+        {
+          "task": "Przygotowanie rośliny na chłodniejsze noce",
+          "type": "care"
+        }
+      ]
+    },
+    {
+      "month": "XI",
+      "tasks": [
+        {
+          "task": "Zabezpieczenie na zimę i uzupełnienie ściółki",
+          "type": "care"
+        }
+      ]
+    },
+    {
+      "month": "XII",
+      "tasks": [
+        {
+          "task": "Kontrola okryć zimowych i stanu pędów",
+          "type": "care"
+        }
+      ]
+    }
+  ],
+  "problems": [
+    {
+      "symptom": "Mączniak prawdziwy pod koniec lata"
+    },
+    {
+      "symptom": "Zrzucanie zawiązków przy chłodzie"
+    },
+    {
+      "symptom": "Przesuszenie dużych liści"
+    }
+  ],
   "relatedArticles": [
-    { "title": "Co siejemy w maju", "href": "/porady/wysiew-nasion-i-sadzenie/co-siejemy-w-maju" }
-  ]
+    {
+      "title": "Co siejemy w maju",
+      "href": "/porady/wysiew-nasion-i-sadzenie/co-siejemy-w-maju"
+    }
+  ],
+  "risks": [
+    {
+      "title": "Ryzyko chłodu i przymrozków",
+      "months": [
+        "III",
+        "IV",
+        "X",
+        "XI"
+      ],
+      "urgency": "średnie",
+      "symptom": "Czerniejące pędy lub uszkodzone młode liście po chłodnej nocy",
+      "action": "Zabezpiecz roślinę przed spadkami temperatury i opóźnij prace w polu.",
+      "articleHref": null
+    },
+    {
+      "title": "Kontrola zdrowotna",
+      "months": [
+        "V",
+        "VI",
+        "VII",
+        "VIII",
+        "IX"
+      ],
+      "urgency": "średnie",
+      "symptom": "Plamy na liściach, osłabiony wzrost lub obecność szkodników",
+      "action": "Raz w tygodniu obejrzyj liście i pędy. Reaguj wcześnie.",
+      "articleHref": null
+    }
+  ],
+  "varieties": []
 }

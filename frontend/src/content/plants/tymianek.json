@@ -12,15 +12,146 @@
   "water": "Oszczędnie po ukorzenieniu",
   "spacing": "20-30 cm między roślinami",
   "harvest": "Maj-wrzesień",
-  "tags": ["zioło", "miododajny", "sucholubny"],
-  "calendar": [
-    { "month": "IV", "task": "Sadzenie lub cięcie po zimie", "type": "start" },
-    { "month": "VI", "task": "Zbiór pędów przed pełnią kwitnienia", "type": "harvest" },
-    { "month": "VIII", "task": "Lekkie przycięcie dla zagęszczenia", "type": "care" },
-    { "month": "XI", "task": "Ochrona donic przed przemarznięciem", "type": "care" }
+  "tags": [
+    "zioło",
+    "miododajny",
+    "sucholubny"
   ],
-  "problems": ["Wypadanie w mokrej ziemi", "Drewnienie bez cięcia", "Przemarzanie małych donic"],
+  "calendar": [
+    {
+      "month": "I",
+      "tasks": [
+        {
+          "task": "Kontrola okryć zimowych i stanu pędów",
+          "type": "care"
+        }
+      ]
+    },
+    {
+      "month": "II",
+      "tasks": [
+        {
+          "task": "Przegląd rośliny i plan prac na wiosnę",
+          "type": "care"
+        }
+      ]
+    },
+    {
+      "month": "III",
+      "tasks": [
+        {
+          "task": "Obserwuj wzrost i dostosuj podlewanie do pogody",
+          "type": "care"
+        }
+      ]
+    },
+    {
+      "month": "IV",
+      "tasks": [
+        {
+          "task": "Sadzenie lub cięcie po zimie",
+          "type": "start",
+          "week": null,
+          "articleHref": null
+        }
+      ]
+    },
+    {
+      "month": "V",
+      "tasks": [
+        {
+          "task": "Obserwuj wzrost i dostosuj podlewanie do pogody",
+          "type": "care"
+        }
+      ]
+    },
+    {
+      "month": "VI",
+      "tasks": [
+        {
+          "task": "Zbiór pędów przed pełnią kwitnienia",
+          "type": "harvest",
+          "week": null,
+          "articleHref": null
+        }
+      ]
+    },
+    {
+      "month": "VII",
+      "tasks": [
+        {
+          "task": "Regularna kontrola podlewania i zdrowia rośliny",
+          "type": "care"
+        }
+      ]
+    },
+    {
+      "month": "VIII",
+      "tasks": [
+        {
+          "task": "Lekkie przycięcie dla zagęszczenia",
+          "type": "care",
+          "week": null,
+          "articleHref": null
+        }
+      ]
+    },
+    {
+      "month": "IX",
+      "tasks": [
+        {
+          "task": "Przygotowanie rośliny na chłodniejsze noce",
+          "type": "care"
+        }
+      ]
+    },
+    {
+      "month": "X",
+      "tasks": [
+        {
+          "task": "Przygotowanie rośliny na chłodniejsze noce",
+          "type": "care"
+        }
+      ]
+    },
+    {
+      "month": "XI",
+      "tasks": [
+        {
+          "task": "Ochrona donic przed przemarznięciem",
+          "type": "care",
+          "week": null,
+          "articleHref": null
+        }
+      ]
+    },
+    {
+      "month": "XII",
+      "tasks": [
+        {
+          "task": "Kontrola okryć zimowych i stanu pędów",
+          "type": "care"
+        }
+      ]
+    }
+  ],
+  "problems": [
+    {
+      "symptom": "Wypadanie w mokrej ziemi"
+    },
+    {
+      "symptom": "Drewnienie bez cięcia"
+    },
+    {
+      "symptom": "Przemarzanie małych donic"
+    }
+  ],
   "relatedArticles": [
-    { "title": "Tymianek i rozmaryn - uprawa", "href": "/porady/pielegnacja/tymianek-rozmaryn-uprawa" }
-  ]
+    {
+      "title": "Tymianek i rozmaryn - uprawa",
+      "href": "/porady/pielegnacja/tymianek-rozmaryn-uprawa"
+    }
+  ],
+  "risks": [],
+  "varieties": []
 }

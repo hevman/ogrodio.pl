@@ -33,14 +33,29 @@ type PlantCatalogJson = {
   summary: string;
   tags?: string[];
   water?: string;
-  calendar?: {
-    month: string;
-    task: string;
-    type: "start" | "care" | "harvest";
-  }[];
-  problems?: string[];
+  calendar?: (
+    | { month: string; task: string; type: "start" | "care" | "harvest" }
+    | { month: string; tasks: { task: string; type: "start" | "care" | "harvest" }[] }
+  )[];
+  problems?: (string | { symptom: string })[];
   relatedArticles?: { title: string; href: string }[];
 };
+
+function flattenCalendarEntries(calendar: NonNullable<PlantCatalogJson["calendar"]>) {
+  return calendar.flatMap((entry) => {
+    if ("tasks" in entry && Array.isArray(entry.tasks)) {
+      return entry.tasks.map((task) => ({
+        month: entry.month,
+        task: task.task,
+        type: task.type,
+      }));
+    }
+    if ("task" in entry) {
+      return [{ month: entry.month, task: entry.task, type: entry.type }];
+    }
+    return [];
+  });
+}
 
 function slug(value: string) {
   return value.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
@@ -86,6 +101,9 @@ function loadPlantCatalogJson() {
 }
 
 function articleKeywords(plant: PlantCatalogJson) {
+  const problemText = (plant.problems || []).flatMap((problem) =>
+    typeof problem === "string" ? problem : [problem.symptom],
+  );
   return Array.from(new Set([
     plant.slug,
     ...plant.slug.split("-"),
@@ -93,7 +111,7 @@ function articleKeywords(plant: PlantCatalogJson) {
     ...plant.name.toLowerCase().split(/\s+/),
     plant.group.toLowerCase(),
     ...(plant.tags || []),
-    ...(plant.problems || []).flatMap((problem) => problem.toLowerCase().split(/\s+/)),
+    ...problemText.flatMap((problem) => problem.toLowerCase().split(/\s+/)),
   ].map((keyword) => keyword.trim()).filter((keyword) => keyword.length >= 3)));
 }
 
@@ -134,7 +152,7 @@ function plantDefinitionForType(type: string) {
 }
 
 const TASKS: TaskTemplate[] = PLANT_CATALOG.flatMap((plant) =>
-  (plant.calendar || []).flatMap((entry) => {
+  flattenCalendarEntries(plant.calendar || []).flatMap((entry) => {
     const month = monthNumbers[entry.month];
     if (!month) return [];
     const kind = taskKind(entry.task, entry.type);

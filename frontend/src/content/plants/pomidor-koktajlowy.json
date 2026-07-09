@@ -12,15 +12,159 @@
   "water": "Regularnie, najlepiej rano pod korzeń",
   "spacing": "Jedna roślina na dużą donicę",
   "harvest": "Lipiec-październik",
-  "tags": ["balkon", "donica", "ciepłolubny"],
-  "calendar": [
-    { "month": "III", "task": "Wysiew rozsady w domu", "type": "start" },
-    { "month": "V", "task": "Sadzenie po zimnych ogrodnikach", "type": "start" },
-    { "month": "VI", "task": "Podwiązywanie i nawożenie potasem", "type": "care" },
-    { "month": "VII", "task": "Zbiór pierwszych gron", "type": "harvest" }
+  "tags": [
+    "balkon",
+    "donica",
+    "ciepłolubny"
   ],
-  "problems": ["Pękanie owoców po nierównym podlewaniu", "Zaraza ziemniaczana", "Niedobory w małej donicy"],
+  "calendar": [
+    {
+      "month": "I",
+      "tasks": [
+        {
+          "task": "Kontrola okryć zimowych i stanu pędów",
+          "type": "care"
+        }
+      ]
+    },
+    {
+      "month": "II",
+      "tasks": [
+        {
+          "task": "Przegląd rośliny i plan prac na wiosnę",
+          "type": "care"
+        }
+      ]
+    },
+    {
+      "month": "III",
+      "tasks": [
+        {
+          "task": "Wysiew rozsady w domu",
+          "type": "start",
+          "week": null,
+          "articleHref": null
+        }
+      ]
+    },
+    {
+      "month": "IV",
+      "tasks": [
+        {
+          "task": "Obserwuj wzrost i dostosuj podlewanie do pogody",
+          "type": "care"
+        }
+      ]
+    },
+    {
+      "month": "V",
+      "tasks": [
+        {
+          "task": "Sadzenie po zimnych ogrodnikach",
+          "type": "start",
+          "week": null,
+          "articleHref": null
+        }
+      ]
+    },
+    {
+      "month": "VI",
+      "tasks": [
+        {
+          "task": "Podwiązywanie i nawożenie potasem",
+          "type": "care",
+          "week": null,
+          "articleHref": null
+        }
+      ]
+    },
+    {
+      "month": "VII",
+      "tasks": [
+        {
+          "task": "Zbiór pierwszych gron",
+          "type": "harvest",
+          "week": null,
+          "articleHref": null
+        }
+      ]
+    },
+    {
+      "month": "VIII",
+      "tasks": [
+        {
+          "task": "Regularna kontrola podlewania i zdrowia rośliny",
+          "type": "care"
+        }
+      ]
+    },
+    {
+      "month": "IX",
+      "tasks": [
+        {
+          "task": "Przygotowanie rośliny na chłodniejsze noce",
+          "type": "care"
+        }
+      ]
+    },
+    {
+      "month": "X",
+      "tasks": [
+        {
+          "task": "Przygotowanie rośliny na chłodniejsze noce",
+          "type": "care"
+        }
+      ]
+    },
+    {
+      "month": "XI",
+      "tasks": [
+        {
+          "task": "Zabezpieczenie na zimę i uzupełnienie ściółki",
+          "type": "care"
+        }
+      ]
+    },
+    {
+      "month": "XII",
+      "tasks": [
+        {
+          "task": "Kontrola okryć zimowych i stanu pędów",
+          "type": "care"
+        }
+      ]
+    }
+  ],
+  "problems": [
+    {
+      "symptom": "Pękanie owoców po nierównym podlewaniu"
+    },
+    {
+      "symptom": "Zaraza ziemniaczana"
+    },
+    {
+      "symptom": "Niedobory w małej donicy"
+    }
+  ],
   "relatedArticles": [
-    { "title": "Pomidory koktajlowe w donicy", "href": "/porady/warzywnik/pomidory-koktajlowe-w-donicy" }
-  ]
+    {
+      "title": "Pomidory koktajlowe w donicy",
+      "href": "/porady/warzywnik/pomidory-koktajlowe-w-donicy"
+    }
+  ],
+  "risks": [
+    {
+      "title": "Stres wodny w sezonie ciepłym",
+      "months": [
+        "VI",
+        "VII",
+        "VIII"
+      ],
+      "urgency": "wysokie",
+      "symptom": "Liście więdną, wzrost zwalnia lub owoce kurczą się",
+      "action": "Podlewaj rano małymi dawkami i utrzymuj ściółkę.",
+      "articleHref": null
+    }
+  ],
+  "varieties": []
 }

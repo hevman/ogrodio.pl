@@ -12,16 +12,163 @@
   "water": "Często w czasie upałów i kwitnienia",
   "spacing": "1-1,5 m zależnie od odmiany",
   "harvest": "Kwitnienie: czerwiec-wrzesień",
-  "tags": ["krzew ozdobny", "półcień", "kwiaty"],
-  "calendar": [
-    { "month": "III", "task": "Cięcie zgodne z gatunkiem i usunięcie suchych kwiatostanów", "type": "care" },
-    { "month": "IV", "task": "Nawożenie dla hortensji i ściółka", "type": "care" },
-    { "month": "VII", "task": "Podlewanie w upały, kontrola więdnięcia", "type": "care" },
-    { "month": "XI", "task": "Okrycie wrażliwych odmian ogrodowych", "type": "care" }
+  "tags": [
+    "krzew ozdobny",
+    "półcień",
+    "kwiaty"
   ],
-  "problems": ["Przemarzanie pąków", "Więdnięcie w upały", "Zły termin cięcia"],
+  "calendar": [
+    {
+      "month": "I",
+      "tasks": [
+        {
+          "task": "Kontrola okryć zimowych i stanu pędów",
+          "type": "care"
+        }
+      ]
+    },
+    {
+      "month": "II",
+      "tasks": [
+        {
+          "task": "Przegląd rośliny i plan prac na wiosnę",
+          "type": "care"
+        }
+      ]
+    },
+    {
+      "month": "III",
+      "tasks": [
+        {
+          "task": "Cięcie zgodne z gatunkiem i usunięcie suchych kwiatostanów",
+          "type": "care",
+          "week": null,
+          "articleHref": null
+        }
+      ]
+    },
+    {
+      "month": "IV",
+      "tasks": [
+        {
+          "task": "Nawożenie dla hortensji i ściółka",
+          "type": "care",
+          "week": null,
+          "articleHref": null
+        }
+      ]
+    },
+    {
+      "month": "V",
+      "tasks": [
+        {
+          "task": "Obserwuj wzrost i dostosuj podlewanie do pogody",
+          "type": "care"
+        }
+      ]
+    },
+    {
+      "month": "VI",
+      "tasks": [
+        {
+          "task": "Regularna kontrola podlewania i zdrowia rośliny",
+          "type": "care"
+        }
+      ]
+    },
+    {
+      "month": "VII",
+      "tasks": [
+        {
+          "task": "Podlewanie w upały, kontrola więdnięcia",
+          "type": "care",
+          "week": null,
+          "articleHref": null
+        }
+      ]
+    },
+    {
+      "month": "VIII",
+      "tasks": [
+        {
+          "task": "Regularna kontrola podlewania i zdrowia rośliny",
+          "type": "care"
+        }
+      ]
+    },
+    {
+      "month": "IX",
+      "tasks": [
+        {
+          "task": "Przygotowanie rośliny na chłodniejsze noce",
+          "type": "care"
+        }
+      ]
+    },
+    {
+      "month": "X",
+      "tasks": [
+        {
+          "task": "Przygotowanie rośliny na chłodniejsze noce",
+          "type": "care"
+        }
+      ]
+    },
+    {
+      "month": "XI",
+      "tasks": [
+        {
+          "task": "Okrycie wrażliwych odmian ogrodowych",
+          "type": "care",
+          "week": null,
+          "articleHref": null
+        }
+      ]
+    },
+    {
+      "month": "XII",
+      "tasks": [
+        {
+          "task": "Kontrola okryć zimowych i stanu pędów",
+          "type": "care"
+        }
+      ]
+    }
+  ],
+  "problems": [
+    {
+      "symptom": "Przemarzanie pąków"
+    },
+    {
+      "symptom": "Więdnięcie w upały"
+    },
+    {
+      "symptom": "Zły termin cięcia"
+    }
+  ],
   "relatedArticles": [
-    { "title": "Hortensja w ogrodzie - uprawa i cięcie", "href": "/porady/pielegnacja/hortensja-uprawa-pielegnacja" },
-    { "title": "Hortensja bukietowa - uprawa i cięcie", "href": "/porady/rosliny-ozdobne/hortensja-bukietowa-uprawa-ciecie-limonkowe-kwiaty" }
-  ]
+    {
+      "title": "Hortensja w ogrodzie - uprawa i cięcie",
+      "href": "/porady/pielegnacja/hortensja-uprawa-pielegnacja"
+    },
+    {
+      "title": "Hortensja bukietowa - uprawa i cięcie",
+      "href": "/porady/rosliny-ozdobne/hortensja-bukietowa-uprawa-ciecie-limonkowe-kwiaty"
+    }
+  ],
+  "risks": [
+    {
+      "title": "Stres wodny w sezonie ciepłym",
+      "months": [
+        "VI",
+        "VII",
+        "VIII"
+      ],
+      "urgency": "wysokie",
+      "symptom": "Liście więdną, wzrost zwalnia lub owoce kurczą się",
+      "action": "Podlewaj rano małymi dawkami i utrzymuj ściółkę.",
+      "articleHref": null
+    }
+  ],
+  "varieties": []
 }

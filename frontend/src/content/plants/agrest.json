@@ -12,15 +12,173 @@
   "water": "Regularnie w suszy i podczas dojrzewania owoców",
   "spacing": "1-1,5 m między krzewami",
   "harvest": "Czerwiec-lipiec",
-  "tags": ["krzew owocowy", "mały ogród", "przetwory"],
-  "calendar": [
-    { "month": "III", "task": "Cięcie prześwietlające i usuwanie starych pędów", "type": "care" },
-    { "month": "IV", "task": "Ściółkowanie i nawożenie kompostem", "type": "care" },
-    { "month": "VI", "task": "Kontrola mączniaka i podlewanie w suszy", "type": "care" },
-    { "month": "VII", "task": "Zbiór owoców na świeżo i przetwory", "type": "harvest" }
+  "tags": [
+    "krzew owocowy",
+    "mały ogród",
+    "przetwory"
   ],
-  "problems": ["Mączniak agrestu", "Opadanie owoców przy suszy", "Zagęszczony środek krzewu"],
+  "calendar": [
+    {
+      "month": "I",
+      "tasks": [
+        {
+          "task": "Kontrola okryć zimowych i stanu pędów",
+          "type": "care"
+        }
+      ]
+    },
+    {
+      "month": "II",
+      "tasks": [
+        {
+          "task": "Przegląd rośliny i plan prac na wiosnę",
+          "type": "care"
+        }
+      ]
+    },
+    {
+      "month": "III",
+      "tasks": [
+        {
+          "task": "Cięcie prześwietlające i usuwanie starych pędów",
+          "type": "care",
+          "week": null,
+          "articleHref": null
+        }
+      ]
+    },
+    {
+      "month": "IV",
+      "tasks": [
+        {
+          "task": "Ściółkowanie i nawożenie kompostem",
+          "type": "care",
+          "week": null,
+          "articleHref": null
+        }
+      ]
+    },
+    {
+      "month": "V",
+      "tasks": [
+        {
+          "task": "Obserwuj wzrost i dostosuj podlewanie do pogody",
+          "type": "care"
+        }
+      ]
+    },
+    {
+      "month": "VI",
+      "tasks": [
+        {
+          "task": "Kontrola mączniaka i podlewanie w suszy",
+          "type": "care",
+          "week": null,
+          "articleHref": null
+        }
+      ]
+    },
+    {
+      "month": "VII",
+      "tasks": [
+        {
+          "task": "Zbiór owoców na świeżo i przetwory",
+          "type": "harvest",
+          "week": null,
+          "articleHref": null
+        }
+      ]
+    },
+    {
+      "month": "VIII",
+      "tasks": [
+        {
+          "task": "Regularna kontrola podlewania i zdrowia rośliny",
+          "type": "care"
+        }
+      ]
+    },
+    {
+      "month": "IX",
+      "tasks": [
+        {
+          "task": "Przygotowanie rośliny na chłodniejsze noce",
+          "type": "care"
+        }
+      ]
+    },
+    {
+      "month": "X",
+      "tasks": [
+        {
+          "task": "Przygotowanie rośliny na chłodniejsze noce",
+          "type": "care"
+        }
+      ]
+    },
+    {
+      "month": "XI",
+      "tasks": [
+        {
+          "task": "Zabezpieczenie na zimę i uzupełnienie ściółki",
+          "type": "care"
+        }
+      ]
+    },
+    {
+      "month": "XII",
+      "tasks": [
+        {
+          "task": "Kontrola okryć zimowych i stanu pędów",
+          "type": "care"
+        }
+      ]
+    }
+  ],
+  "problems": [
+    {
+      "symptom": "Mączniak agrestu"
+    },
+    {
+      "symptom": "Opadanie owoców przy suszy"
+    },
+    {
+      "symptom": "Zagęszczony środek krzewu"
+    }
+  ],
   "relatedArticles": [
-    { "title": "Agrest - uprawa, pielęgnacja i zbiory", "href": "/porady/owoce-w-ogrodzie/agrest-uprawa-pielegnacja-zbiory" }
-  ]
+    {
+      "title": "Agrest - uprawa, pielęgnacja i zbiory",
+      "href": "/porady/owoce-w-ogrodzie/agrest-uprawa-pielegnacja-zbiory"
+    }
+  ],
+  "risks": [
+    {
+      "title": "Stres wodny w sezonie ciepłym",
+      "months": [
+        "VI",
+        "VII",
+        "VIII"
+      ],
+      "urgency": "wysokie",
+      "symptom": "Liście więdną, wzrost zwalnia lub owoce kurczą się",
+      "action": "Podlewaj rano małymi dawkami i utrzymuj ściółkę.",
+      "articleHref": null
+    },
+    {
+      "title": "Kontrola zdrowotna",
+      "months": [
+        "V",
+        "VI",
+        "VII",
+        "VIII",
+        "IX"
+      ],
+      "urgency": "średnie",
+      "symptom": "Plamy na liściach, osłabiony wzrost lub obecność szkodników",
+      "action": "Raz w tygodniu obejrzyj liście i pędy. Reaguj wcześnie.",
+      "articleHref": null
+    }
+  ],
+  "varieties": []
 }

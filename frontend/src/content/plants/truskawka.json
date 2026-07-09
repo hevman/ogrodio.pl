@@ -12,16 +12,177 @@
   "water": "Regularnie, bez zalewania korony rośliny",
   "spacing": "25-35 cm między sadzonkami",
   "harvest": "Czerwiec-lipiec, odmiany powtarzające dłużej",
-  "tags": ["balkon", "donica", "owoce dla początkujących"],
-  "calendar": [
-    { "month": "III", "task": "Usunięcie starych liści i lekkie nawożenie", "type": "care" },
-    { "month": "IV", "task": "Sadzenie nowych sadzonek", "type": "start" },
-    { "month": "VI", "task": "Zbiór owoców i regularne podlewanie", "type": "harvest" },
-    { "month": "VIII", "task": "Ukorzenianie rozłogów na nowe sadzonki", "type": "start" }
+  "tags": [
+    "balkon",
+    "donica",
+    "owoce dla początkujących"
   ],
-  "problems": ["Przesychanie donic", "Szara pleśń na owocach", "Słabe owocowanie w cieniu"],
+  "calendar": [
+    {
+      "month": "I",
+      "tasks": [
+        {
+          "task": "Kontrola okryć zimowych i stanu pędów",
+          "type": "care"
+        }
+      ]
+    },
+    {
+      "month": "II",
+      "tasks": [
+        {
+          "task": "Przegląd rośliny i plan prac na wiosnę",
+          "type": "care"
+        }
+      ]
+    },
+    {
+      "month": "III",
+      "tasks": [
+        {
+          "task": "Usunięcie starych liści i lekkie nawożenie",
+          "type": "care",
+          "week": null,
+          "articleHref": null
+        }
+      ]
+    },
+    {
+      "month": "IV",
+      "tasks": [
+        {
+          "task": "Sadzenie nowych sadzonek",
+          "type": "start",
+          "week": null,
+          "articleHref": null
+        }
+      ]
+    },
+    {
+      "month": "V",
+      "tasks": [
+        {
+          "task": "Obserwuj wzrost i dostosuj podlewanie do pogody",
+          "type": "care"
+        }
+      ]
+    },
+    {
+      "month": "VI",
+      "tasks": [
+        {
+          "task": "Zbiór owoców i regularne podlewanie",
+          "type": "harvest",
+          "week": null,
+          "articleHref": null
+        }
+      ]
+    },
+    {
+      "month": "VII",
+      "tasks": [
+        {
+          "task": "Regularna kontrola podlewania i zdrowia rośliny",
+          "type": "care"
+        }
+      ]
+    },
+    {
+      "month": "VIII",
+      "tasks": [
+        {
+          "task": "Ukorzenianie rozłogów na nowe sadzonki",
+          "type": "start",
+          "week": null,
+          "articleHref": null
+        }
+      ]
+    },
+    {
+      "month": "IX",
+      "tasks": [
+        {
+          "task": "Przygotowanie rośliny na chłodniejsze noce",
+          "type": "care"
+        }
+      ]
+    },
+    {
+      "month": "X",
+      "tasks": [
+        {
+          "task": "Przygotowanie rośliny na chłodniejsze noce",
+          "type": "care"
+        }
+      ]
+    },
+    {
+      "month": "XI",
+      "tasks": [
+        {
+          "task": "Zabezpieczenie na zimę i uzupełnienie ściółki",
+          "type": "care"
+        }
+      ]
+    },
+    {
+      "month": "XII",
+      "tasks": [
+        {
+          "task": "Kontrola okryć zimowych i stanu pędów",
+          "type": "care"
+        }
+      ]
+    }
+  ],
+  "problems": [
+    {
+      "symptom": "Przesychanie donic"
+    },
+    {
+      "symptom": "Szara pleśń na owocach"
+    },
+    {
+      "symptom": "Słabe owocowanie w cieniu"
+    }
+  ],
   "relatedArticles": [
-    { "title": "Truskawka w donicy - uprawa i podlewanie", "href": "/porady/owoce-w-ogrodzie/truskawka-w-donicy-uprawa" },
-    { "title": "Co siejemy w sierpniu", "href": "/porady/wysiew-nasion-i-sadzenie/co-siejemy-w-sierpniu" }
-  ]
+    {
+      "title": "Truskawka w donicy - uprawa i podlewanie",
+      "href": "/porady/owoce-w-ogrodzie/truskawka-w-donicy-uprawa"
+    },
+    {
+      "title": "Co siejemy w sierpniu",
+      "href": "/porady/wysiew-nasion-i-sadzenie/co-siejemy-w-sierpniu"
+    }
+  ],
+  "risks": [
+    {
+      "title": "Stres wodny w sezonie ciepłym",
+      "months": [
+        "VI",
+        "VII",
+        "VIII"
+      ],
+      "urgency": "wysokie",
+      "symptom": "Liście więdną, wzrost zwalnia lub owoce kurczą się",
+      "action": "Podlewaj rano małymi dawkami i utrzymuj ściółkę.",
+      "articleHref": null
+    },
+    {
+      "title": "Kontrola zdrowotna",
+      "months": [
+        "V",
+        "VI",
+        "VII",
+        "VIII",
+        "IX"
+      ],
+      "urgency": "średnie",
+      "symptom": "Plamy na liściach, osłabiony wzrost lub obecność szkodników",
+      "action": "Raz w tygodniu obejrzyj liście i pędy. Reaguj wcześnie.",
+      "articleHref": null
+    }
+  ],
+  "varieties": []
 }

@@ -12,15 +12,159 @@
   "water": "Najważniejsze po posadzeniu i w czasie suszy",
   "spacing": "2-4 m zależnie od podkładki",
   "harvest": "Sierpień-październik",
-  "tags": ["sad", "drzewo owocowe", "cięcie"],
-  "calendar": [
-    { "month": "II", "task": "Cięcie prześwietlające w suchy dzień", "type": "care" },
-    { "month": "IV", "task": "Obserwacja kwitnienia i ochrona przed przymrozkiem", "type": "care" },
-    { "month": "VI", "task": "Przerzedzanie zawiązków przy nadmiarze owoców", "type": "care" },
-    { "month": "IX", "task": "Zbiór odmian jesiennych", "type": "harvest" }
+  "tags": [
+    "sad",
+    "drzewo owocowe",
+    "cięcie"
   ],
-  "problems": ["Parch jabłoni", "Owocówka jabłkóweczka", "Zbyt gęsta korona"],
+  "calendar": [
+    {
+      "month": "I",
+      "tasks": [
+        {
+          "task": "Kontrola okryć zimowych i stanu pędów",
+          "type": "care"
+        }
+      ]
+    },
+    {
+      "month": "II",
+      "tasks": [
+        {
+          "task": "Cięcie prześwietlające w suchy dzień",
+          "type": "care",
+          "week": null,
+          "articleHref": null
+        }
+      ]
+    },
+    {
+      "month": "III",
+      "tasks": [
+        {
+          "task": "Obserwuj wzrost i dostosuj podlewanie do pogody",
+          "type": "care"
+        }
+      ]
+    },
+    {
+      "month": "IV",
+      "tasks": [
+        {
+          "task": "Obserwacja kwitnienia i ochrona przed przymrozkiem",
+          "type": "care",
+          "week": null,
+          "articleHref": null
+        }
+      ]
+    },
+    {
+      "month": "V",
+      "tasks": [
+        {
+          "task": "Obserwuj wzrost i dostosuj podlewanie do pogody",
+          "type": "care"
+        }
+      ]
+    },
+    {
+      "month": "VI",
+      "tasks": [
+        {
+          "task": "Przerzedzanie zawiązków przy nadmiarze owoców",
+          "type": "care",
+          "week": null,
+          "articleHref": null
+        }
+      ]
+    },
+    {
+      "month": "VII",
+      "tasks": [
+        {
+          "task": "Regularna kontrola podlewania i zdrowia rośliny",
+          "type": "care"
+        }
+      ]
+    },
+    {
+      "month": "VIII",
+      "tasks": [
+        {
+          "task": "Regularna kontrola podlewania i zdrowia rośliny",
+          "type": "care"
+        }
+      ]
+    },
+    {
+      "month": "IX",
+      "tasks": [
+        {
+          "task": "Zbiór odmian jesiennych",
+          "type": "harvest",
+          "week": null,
+          "articleHref": null
+        }
+      ]
+    },
+    {
+      "month": "X",
+      "tasks": [
+        {
+          "task": "Przygotowanie rośliny na chłodniejsze noce",
+          "type": "care"
+        }
+      ]
+    },
+    {
+      "month": "XI",
+      "tasks": [
+        {
+          "task": "Zabezpieczenie na zimę i uzupełnienie ściółki",
+          "type": "care"
+        }
+      ]
+    },
+    {
+      "month": "XII",
+      "tasks": [
+        {
+          "task": "Kontrola okryć zimowych i stanu pędów",
+          "type": "care"
+        }
+      ]
+    }
+  ],
+  "problems": [
+    {
+      "symptom": "Parch jabłoni"
+    },
+    {
+      "symptom": "Owocówka jabłkóweczka"
+    },
+    {
+      "symptom": "Zbyt gęsta korona"
+    }
+  ],
   "relatedArticles": [
-    { "title": "Jabłonie w sadzie - pielęgnacja i cięcie", "href": "/porady/owoce-w-ogrodzie/jablonie-pielegnacja-sadu" }
-  ]
+    {
+      "title": "Jabłonie w sadzie - pielęgnacja i cięcie",
+      "href": "/porady/owoce-w-ogrodzie/jablonie-pielegnacja-sadu"
+    }
+  ],
+  "risks": [
+    {
+      "title": "Stres wodny w sezonie ciepłym",
+      "months": [
+        "VI",
+        "VII",
+        "VIII"
+      ],
+      "urgency": "wysokie",
+      "symptom": "Liście więdną, wzrost zwalnia lub owoce kurczą się",
+      "action": "Podlewaj rano małymi dawkami i utrzymuj ściółkę.",
+      "articleHref": null
+    }
+  ],
+  "varieties": []
 }

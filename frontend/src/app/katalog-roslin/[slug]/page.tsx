@@ -3,12 +3,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import {
-  AlertTriangle,
   ArrowLeft,
   ArrowUpRight,
-  CalendarDays,
   CheckCircle2,
-  ClipboardList,
   Droplets,
   Leaf,
   Ruler,
@@ -17,6 +14,7 @@ import {
 } from "lucide-react";
 import { Breadcrumb } from "@/components/breadcrumb";
 import { PageSection } from "@/components/page-shell";
+import { PlantIntelligencePanel } from "@/components/plant-intelligence-panel";
 import { getPlantBySlug, getPlantIntelligence, plantCatalog } from "@/lib/plant-catalog";
 import { site } from "@/lib/site-config";
 
@@ -45,23 +43,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       url: `/katalog-roslin/${plant.slug}`,
     },
   };
-}
-
-function calendarClass(type: string) {
-  if (type === "start") return "border-emerald-200 bg-emerald-50 text-emerald-800";
-  if (type === "harvest") return "border-amber-200 bg-amber-50 text-amber-800";
-  return "border-sky-200 bg-sky-50 text-sky-800";
-}
-
-function taskTypeLabel(type: string) {
-  if (type === "start") return "Start";
-  if (type === "harvest") return "Zbiory";
-  return "Opieka";
-}
-
-function riskClass(level: string) {
-  if (level === "wysokie") return "border-rose-200 bg-rose-50 text-rose-900";
-  return "border-amber-200 bg-amber-50 text-amber-900";
 }
 
 export default async function PlantPage({ params }: Props) {
@@ -132,34 +113,7 @@ export default async function PlantPage({ params }: Props) {
       <PageSection>
         <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_340px] lg:items-start">
           <article className="space-y-8">
-            <section className="rounded-2xl border border-teal-100 bg-[#f2fbf8] p-5 shadow-sm sm:p-6">
-              <div className="flex flex-col gap-5 md:flex-row md:items-start md:justify-between">
-                <div>
-                  <p className="text-sm font-bold uppercase tracking-wide text-teal-700">Ogrodio Plant Intelligence</p>
-                  <h2 className="mt-2 text-2xl font-bold text-slate-900">{intelligence.actionWindow.label}: co zrobić</h2>
-                  <div className="mt-4 grid gap-3">
-                    {intelligence.actionWindow.entries.map((entry) => (
-                      <div className={`rounded-xl border p-4 ${calendarClass(entry.type)}`} key={`${entry.month}-${entry.task}`}>
-                        <p className="text-xs font-black uppercase tracking-wide">{taskTypeLabel(entry.type)} / {entry.month}</p>
-                        <p className="mt-1 text-sm leading-6">{entry.task}</p>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-                <div className="rounded-xl border border-teal-200 bg-white p-4 md:w-64">
-                  <ClipboardList className="h-5 w-5 text-teal-700" />
-                  <p className="mt-3 text-sm font-bold text-slate-900">
-                    {intelligence.appTaskCount} sezonowe wpisy z tej karty zasilają kalendarz aplikacji.
-                  </p>
-                  <a
-                    className="mt-4 inline-flex h-10 w-full items-center justify-center rounded-lg bg-teal-700 px-4 text-sm font-bold text-white transition hover:bg-teal-800"
-                    href={appAddUrl}
-                  >
-                    Dodaj do mojego ogrodu
-                  </a>
-                </div>
-              </div>
-            </section>
+            <PlantIntelligencePanel appAddUrl={appAddUrl} plant={plant} variant="catalog" />
 
             <section className="grid gap-4 sm:grid-cols-2">
               {[
@@ -189,45 +143,6 @@ export default async function PlantPage({ params }: Props) {
               </div>
             </section>
 
-            {intelligence.seasonalRisks.length > 0 ? (
-              <section className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-6">
-                <div className="flex items-center gap-3">
-                  <AlertTriangle className="h-5 w-5 text-amber-600" />
-                  <div>
-                    <p className="text-sm font-bold uppercase tracking-wide text-teal-700">Ryzyka sezonowe</p>
-                    <h2 className="text-2xl font-bold text-slate-900">Na co uważać teraz</h2>
-                  </div>
-                </div>
-                <div className="mt-5 grid gap-3 sm:grid-cols-2">
-                  {intelligence.seasonalRisks.map((risk) => (
-                    <div className={`rounded-xl border p-4 ${riskClass(risk.level)}`} key={risk.title}>
-                      <p className="text-xs font-black uppercase tracking-wide">Ryzyko: {risk.level}</p>
-                      <h3 className="mt-1 font-bold">{risk.title}</h3>
-                      <p className="mt-2 text-sm leading-6">{risk.detail}</p>
-                    </div>
-                  ))}
-                </div>
-              </section>
-            ) : null}
-
-            <section className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-6">
-              <div className="flex items-center gap-3">
-                <CalendarDays className="h-5 w-5 text-teal-700" />
-                <div>
-                  <p className="text-sm font-bold uppercase tracking-wide text-teal-700">Kalendarz prac</p>
-                  <h2 className="text-2xl font-bold text-slate-900">Plan sezonu</h2>
-                </div>
-              </div>
-              <div className="mt-5 grid gap-3 sm:grid-cols-2">
-                {plant.calendar.map((entry) => (
-                  <div className={`rounded-xl border p-4 ${calendarClass(entry.type)}`} key={`${entry.month}-${entry.task}`}>
-                    <p className="text-sm font-black">{entry.month}</p>
-                    <p className="mt-1 text-sm leading-6">{entry.task}</p>
-                  </div>
-                ))}
-              </div>
-            </section>
-
             <section className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-6">
               <div className="flex items-center gap-3">
                 <Sprout className="h-5 w-5 text-teal-700" />
@@ -238,9 +153,17 @@ export default async function PlantPage({ params }: Props) {
               </div>
               <div className="mt-5 grid gap-3">
                 {plant.problems.map((problem) => (
-                  <div className="flex gap-3 rounded-xl bg-slate-50 p-4 text-sm leading-6 text-slate-700" key={problem}>
+                  <div className="flex gap-3 rounded-xl bg-slate-50 p-4 text-sm leading-6 text-slate-700" key={problem.symptom}>
                     <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-teal-700" />
-                    {problem}
+                    <div>
+                      <p>{problem.symptom}</p>
+                      {problem.articleHref ? (
+                        <Link className="mt-1 inline-flex items-center gap-1 text-xs font-bold text-teal-700 underline" href={problem.articleHref}>
+                          Poradnik
+                          <ArrowUpRight className="h-3 w-3" />
+                        </Link>
+                      ) : null}
+                    </div>
                   </div>
                 ))}
               </div>

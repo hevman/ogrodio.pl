@@ -12,15 +12,173 @@
   "water": "Regularnie po posadzeniu i przed zimą",
   "spacing": "50-80 cm w żywopłocie zależnie od odmiany",
   "harvest": "Dekoracyjna cały rok",
-  "tags": ["żywopłot", "iglak", "zimozielona"],
-  "calendar": [
-    { "month": "III", "task": "Kontrola brązowienia i podlewanie po suchej zimie", "type": "care" },
-    { "month": "IV", "task": "Nawożenie iglaków i uzupełnienie ściółki", "type": "care" },
-    { "month": "VI", "task": "Lekkie cięcie formujące żywopłot", "type": "care" },
-    { "month": "X", "task": "Podlewanie przed zimą przy suchej jesieni", "type": "care" }
+  "tags": [
+    "żywopłot",
+    "iglak",
+    "zimozielona"
   ],
-  "problems": ["Susza fizjologiczna", "Zbyt mocne cięcie w stare drewno", "Szyszkowanie mylone z chorobą"],
+  "calendar": [
+    {
+      "month": "I",
+      "tasks": [
+        {
+          "task": "Kontrola okryć zimowych i stanu pędów",
+          "type": "care"
+        }
+      ]
+    },
+    {
+      "month": "II",
+      "tasks": [
+        {
+          "task": "Przegląd rośliny i plan prac na wiosnę",
+          "type": "care"
+        }
+      ]
+    },
+    {
+      "month": "III",
+      "tasks": [
+        {
+          "task": "Kontrola brązowienia i podlewanie po suchej zimie",
+          "type": "care",
+          "week": null,
+          "articleHref": null
+        }
+      ]
+    },
+    {
+      "month": "IV",
+      "tasks": [
+        {
+          "task": "Nawożenie iglaków i uzupełnienie ściółki",
+          "type": "care",
+          "week": null,
+          "articleHref": null
+        }
+      ]
+    },
+    {
+      "month": "V",
+      "tasks": [
+        {
+          "task": "Obserwuj wzrost i dostosuj podlewanie do pogody",
+          "type": "care"
+        }
+      ]
+    },
+    {
+      "month": "VI",
+      "tasks": [
+        {
+          "task": "Lekkie cięcie formujące żywopłot",
+          "type": "care",
+          "week": null,
+          "articleHref": null
+        }
+      ]
+    },
+    {
+      "month": "VII",
+      "tasks": [
+        {
+          "task": "Regularna kontrola podlewania i zdrowia rośliny",
+          "type": "care"
+        }
+      ]
+    },
+    {
+      "month": "VIII",
+      "tasks": [
+        {
+          "task": "Regularna kontrola podlewania i zdrowia rośliny",
+          "type": "care"
+        }
+      ]
+    },
+    {
+      "month": "IX",
+      "tasks": [
+        {
+          "task": "Przygotowanie rośliny na chłodniejsze noce",
+          "type": "care"
+        }
+      ]
+    },
+    {
+      "month": "X",
+      "tasks": [
+        {
+          "task": "Podlewanie przed zimą przy suchej jesieni",
+          "type": "care",
+          "week": null,
+          "articleHref": null
+        }
+      ]
+    },
+    {
+      "month": "XI",
+      "tasks": [
+        {
+          "task": "Zabezpieczenie na zimę i uzupełnienie ściółki",
+          "type": "care"
+        }
+      ]
+    },
+    {
+      "month": "XII",
+      "tasks": [
+        {
+          "task": "Kontrola okryć zimowych i stanu pędów",
+          "type": "care"
+        }
+      ]
+    }
+  ],
+  "problems": [
+    {
+      "symptom": "Susza fizjologiczna"
+    },
+    {
+      "symptom": "Zbyt mocne cięcie w stare drewno"
+    },
+    {
+      "symptom": "Szyszkowanie mylone z chorobą"
+    }
+  ],
   "relatedArticles": [
-    { "title": "Tuja - żółte szyszki i kwitnienie", "href": "/porady/rosliny-ozdobne/tuja-zolte-szyszki-kwitnienie" }
-  ]
+    {
+      "title": "Tuja - żółte szyszki i kwitnienie",
+      "href": "/porady/rosliny-ozdobne/tuja-zolte-szyszki-kwitnienie"
+    }
+  ],
+  "risks": [
+    {
+      "title": "Stres wodny w sezonie ciepłym",
+      "months": [
+        "VI",
+        "VII",
+        "VIII"
+      ],
+      "urgency": "wysokie",
+      "symptom": "Liście więdną, wzrost zwalnia lub owoce kurczą się",
+      "action": "Podlewaj rano małymi dawkami i utrzymuj ściółkę.",
+      "articleHref": null
+    },
+    {
+      "title": "Kontrola zdrowotna",
+      "months": [
+        "V",
+        "VI",
+        "VII",
+        "VIII",
+        "IX"
+      ],
+      "urgency": "średnie",
+      "symptom": "Plamy na liściach, osłabiony wzrost lub obecność szkodników",
+      "action": "Raz w tygodniu obejrzyj liście i pędy. Reaguj wcześnie.",
+      "articleHref": null
+    }
+  ],
+  "varieties": []
 }

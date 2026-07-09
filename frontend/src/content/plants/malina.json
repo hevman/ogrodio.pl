@@ -12,15 +12,146 @@
   "water": "Regularnie podczas kwitnienia i owocowania",
   "spacing": "40-50 cm w rzędzie",
   "harvest": "Czerwiec-październik zależnie od odmiany",
-  "tags": ["owoce miękkie", "odmiany jesienne", "podpory"],
-  "calendar": [
-    { "month": "III", "task": "Cięcie zgodne z typem odmiany", "type": "care" },
-    { "month": "IV", "task": "Podwiązanie pędów i ściółka", "type": "care" },
-    { "month": "VII", "task": "Zbiór odmian letnich", "type": "harvest" },
-    { "month": "IX", "task": "Zbiór odmian jesiennych", "type": "harvest" }
+  "tags": [
+    "owoce miękkie",
+    "odmiany jesienne",
+    "podpory"
   ],
-  "problems": ["Zasychanie pędów", "Robaczywienie owoców", "Rozrastanie poza wyznaczony pas"],
+  "calendar": [
+    {
+      "month": "I",
+      "tasks": [
+        {
+          "task": "Kontrola okryć zimowych i stanu pędów",
+          "type": "care"
+        }
+      ]
+    },
+    {
+      "month": "II",
+      "tasks": [
+        {
+          "task": "Przegląd rośliny i plan prac na wiosnę",
+          "type": "care"
+        }
+      ]
+    },
+    {
+      "month": "III",
+      "tasks": [
+        {
+          "task": "Cięcie zgodne z typem odmiany",
+          "type": "care",
+          "week": null,
+          "articleHref": null
+        }
+      ]
+    },
+    {
+      "month": "IV",
+      "tasks": [
+        {
+          "task": "Podwiązanie pędów i ściółka",
+          "type": "care",
+          "week": null,
+          "articleHref": null
+        }
+      ]
+    },
+    {
+      "month": "V",
+      "tasks": [
+        {
+          "task": "Obserwuj wzrost i dostosuj podlewanie do pogody",
+          "type": "care"
+        }
+      ]
+    },
+    {
+      "month": "VI",
+      "tasks": [
+        {
+          "task": "Regularna kontrola podlewania i zdrowia rośliny",
+          "type": "care"
+        }
+      ]
+    },
+    {
+      "month": "VII",
+      "tasks": [
+        {
+          "task": "Zbiór odmian letnich",
+          "type": "harvest",
+          "week": null,
+          "articleHref": null
+        }
+      ]
+    },
+    {
+      "month": "VIII",
+      "tasks": [
+        {
+          "task": "Regularna kontrola podlewania i zdrowia rośliny",
+          "type": "care"
+        }
+      ]
+    },
+    {
+      "month": "IX",
+      "tasks": [
+        {
+          "task": "Zbiór odmian jesiennych",
+          "type": "harvest",
+          "week": null,
+          "articleHref": null
+        }
+      ]
+    },
+    {
+      "month": "X",
+      "tasks": [
+        {
+          "task": "Przygotowanie rośliny na chłodniejsze noce",
+          "type": "care"
+        }
+      ]
+    },
+    {
+      "month": "XI",
+      "tasks": [
+        {
+          "task": "Zabezpieczenie na zimę i uzupełnienie ściółki",
+          "type": "care"
+        }
+      ]
+    },
+    {
+      "month": "XII",
+      "tasks": [
+        {
+          "task": "Kontrola okryć zimowych i stanu pędów",
+          "type": "care"
+        }
+      ]
+    }
+  ],
+  "problems": [
+    {
+      "symptom": "Zasychanie pędów"
+    },
+    {
+      "symptom": "Robaczywienie owoców"
+    },
+    {
+      "symptom": "Rozrastanie poza wyznaczony pas"
+    }
+  ],
   "relatedArticles": [
-    { "title": "Malina żółta - uprawa i odmiany", "href": "/porady/owoce-w-ogrodzie/malina-zolta-uprawa-odmiany" }
-  ]
+    {
+      "title": "Malina żółta - uprawa i odmiany",
+      "href": "/porady/owoce-w-ogrodzie/malina-zolta-uprawa-odmiany"
+    }
+  ],
+  "risks": [],
+  "varieties": []
 }

@@ -12,16 +12,150 @@
   "water": "Umiarkowanie, szczególnie po posadzeniu",
   "spacing": "1-1,5 m między krzewami",
   "harvest": "Maj-czerwiec",
-  "tags": ["wczesne owoce", "mrozoodporna", "zapylanie"],
-  "calendar": [
-    { "month": "III", "task": "Kontrola pąków i ściółka pod krzewami", "type": "care" },
-    { "month": "IV", "task": "Obserwacja kwitnienia i aktywności zapylaczy", "type": "care" },
-    { "month": "V", "task": "Zbiór pierwszych owoców", "type": "harvest" },
-    { "month": "VIII", "task": "Delikatne cięcie po zbiorach, jeśli krzew jest zagęszczony", "type": "care" }
+  "tags": [
+    "wczesne owoce",
+    "mrozoodporna",
+    "zapylanie"
   ],
-  "problems": ["Słabe zapylenie bez drugiej odmiany", "Opadanie owoców po dojrzeniu", "Chloroza na złym stanowisku"],
+  "calendar": [
+    {
+      "month": "I",
+      "tasks": [
+        {
+          "task": "Kontrola okryć zimowych i stanu pędów",
+          "type": "care"
+        }
+      ]
+    },
+    {
+      "month": "II",
+      "tasks": [
+        {
+          "task": "Przegląd rośliny i plan prac na wiosnę",
+          "type": "care"
+        }
+      ]
+    },
+    {
+      "month": "III",
+      "tasks": [
+        {
+          "task": "Kontrola pąków i ściółka pod krzewami",
+          "type": "care",
+          "week": null,
+          "articleHref": null
+        }
+      ]
+    },
+    {
+      "month": "IV",
+      "tasks": [
+        {
+          "task": "Obserwacja kwitnienia i aktywności zapylaczy",
+          "type": "care",
+          "week": null,
+          "articleHref": null
+        }
+      ]
+    },
+    {
+      "month": "V",
+      "tasks": [
+        {
+          "task": "Zbiór pierwszych owoców",
+          "type": "harvest",
+          "week": null,
+          "articleHref": null
+        }
+      ]
+    },
+    {
+      "month": "VI",
+      "tasks": [
+        {
+          "task": "Regularna kontrola podlewania i zdrowia rośliny",
+          "type": "care"
+        }
+      ]
+    },
+    {
+      "month": "VII",
+      "tasks": [
+        {
+          "task": "Regularna kontrola podlewania i zdrowia rośliny",
+          "type": "care"
+        }
+      ]
+    },
+    {
+      "month": "VIII",
+      "tasks": [
+        {
+          "task": "Delikatne cięcie po zbiorach, jeśli krzew jest zagęszczony",
+          "type": "care",
+          "week": null,
+          "articleHref": null
+        }
+      ]
+    },
+    {
+      "month": "IX",
+      "tasks": [
+        {
+          "task": "Przygotowanie rośliny na chłodniejsze noce",
+          "type": "care"
+        }
+      ]
+    },
+    {
+      "month": "X",
+      "tasks": [
+        {
+          "task": "Przygotowanie rośliny na chłodniejsze noce",
+          "type": "care"
+        }
+      ]
+    },
+    {
+      "month": "XI",
+      "tasks": [
+        {
+          "task": "Zabezpieczenie na zimę i uzupełnienie ściółki",
+          "type": "care"
+        }
+      ]
+    },
+    {
+      "month": "XII",
+      "tasks": [
+        {
+          "task": "Kontrola okryć zimowych i stanu pędów",
+          "type": "care"
+        }
+      ]
+    }
+  ],
+  "problems": [
+    {
+      "symptom": "Słabe zapylenie bez drugiej odmiany"
+    },
+    {
+      "symptom": "Opadanie owoców po dojrzeniu"
+    },
+    {
+      "symptom": "Chloroza na złym stanowisku"
+    }
+  ],
   "relatedArticles": [
-    { "title": "Jagoda kamczacka - uprawa i pielęgnacja", "href": "/porady/owoce-w-ogrodzie/jagoda-kamczacka-uprawa-i-pielegnacja" },
-    { "title": "Jagoda kamczacka - kwitnienie i zapylanie", "href": "/porady/owoce-w-ogrodzie/jagoda-kamczacka-kwitnienie-zapylanie" }
-  ]
+    {
+      "title": "Jagoda kamczacka - uprawa i pielęgnacja",
+      "href": "/porady/owoce-w-ogrodzie/jagoda-kamczacka-uprawa-i-pielegnacja"
+    },
+    {
+      "title": "Jagoda kamczacka - kwitnienie i zapylanie",
+      "href": "/porady/owoce-w-ogrodzie/jagoda-kamczacka-kwitnienie-zapylanie"
+    }
+  ],
+  "risks": [],
+  "varieties": []
 }

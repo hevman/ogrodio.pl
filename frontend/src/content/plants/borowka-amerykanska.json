@@ -15,12 +15,141 @@
   "harvest": "Lipiec-wrzesień",
   "tags": ["kwaśna ziemia", "owoce deserowe", "odmiany"],
   "calendar": [
-    { "month": "III", "task": "Cięcie sanitarne i odmładzające starszych pędów", "type": "care" },
-    { "month": "IV", "task": "Uzupełnienie ściółki z kory i kontrola pH", "type": "care" },
-    { "month": "VI", "task": "Stałe podlewanie podczas zawiązywania owoców", "type": "care" },
-    { "month": "VII", "task": "Zbiór odmian wczesnych i średnich", "type": "harvest" }
+    {
+      "month": "I",
+      "tasks": [
+        { "task": "Kontrola okryć zimowych i stanu pędów", "type": "care", "week": "cały" }
+      ]
+    },
+    {
+      "month": "II",
+      "tasks": [
+        { "task": "Przegląd krzewów i plan cięcia na marzec", "type": "care", "week": "cały" }
+      ]
+    },
+    {
+      "month": "III",
+      "tasks": [
+        { "task": "Cięcie sanitarne i odmładzające starszych pędów", "type": "care", "week": "1-2" }
+      ]
+    },
+    {
+      "month": "IV",
+      "tasks": [
+        { "task": "Uzupełnienie ściółki z kory i kontrola pH", "type": "care", "week": "cały" },
+        { "task": "Pierwsze nawożenie preparatem kwaśnym", "type": "care", "week": "3-4" }
+      ]
+    },
+    {
+      "month": "V",
+      "tasks": [
+        { "task": "Kontrola pąków kwiatowych i podlewanie w suszy", "type": "care", "week": "cały" }
+      ]
+    },
+    {
+      "month": "VI",
+      "tasks": [
+        { "task": "Stałe podlewanie podczas zawiązywania owoców", "type": "care", "week": "cały" },
+        { "task": "Ochrona dojrzałych owoców przed ptakami", "type": "care", "week": "3-4" }
+      ]
+    },
+    {
+      "month": "VII",
+      "tasks": [
+        {
+          "task": "Zbiór odmian wczesnych i średnich",
+          "type": "harvest",
+          "week": "1-2",
+          "articleHref": "/porady/owoce-w-ogrodzie/odmiany-borowki-terminy-dojrzewania"
+        },
+        { "task": "Podlewanie deszczówką małymi dawkami w upały", "type": "care", "week": "cały" }
+      ]
+    },
+    {
+      "month": "VIII",
+      "tasks": [
+        {
+          "task": "Zbiór odmian późnych",
+          "type": "harvest",
+          "week": "cały",
+          "articleHref": "/porady/owoce-w-ogrodzie/odmiany-borowki-terminy-dojrzewania"
+        },
+        { "task": "Kontrola zasychania owoców przy suszy", "type": "care", "week": "cały" }
+      ]
+    },
+    {
+      "month": "IX",
+      "tasks": [
+        { "task": "Ostatnie zbiory i lżejsze podlewanie", "type": "harvest", "week": "1-2" },
+        { "task": "Ocena stanu liści po sezonie", "type": "care", "week": "3-4" }
+      ]
+    },
+    {
+      "month": "X",
+      "tasks": [
+        { "task": "Lekkie cięcie po zbiorze — usuń chore pędy", "type": "care", "week": "1-2" }
+      ]
+    },
+    {
+      "month": "XI",
+      "tasks": [
+        { "task": "Gruba warstwa ściółki z kory na zimę", "type": "care", "week": "cały" }
+      ]
+    },
+    {
+      "month": "XII",
+      "tasks": [
+        { "task": "Kontrola okryć przy bezśnieżnych mrozach", "type": "care", "week": "cały" }
+      ]
+    }
   ],
-  "problems": ["Chloroza przy zbyt wysokim pH", "Poparzenia słoneczne liści", "Zasychanie owoców przy suszy"],
+  "problems": [
+    {
+      "symptom": "Chloroza przy zbyt wysokim pH",
+      "months": ["IV", "V", "VI"],
+      "articleHref": "/porady/choroby-i-szkodniki/chloroza-borowki-jagody-kamczackiej"
+    },
+    {
+      "symptom": "Poparzenia słoneczne liści",
+      "months": ["VI", "VII", "VIII"]
+    },
+    {
+      "symptom": "Zasychanie owoców przy suszy",
+      "months": ["VI", "VII", "VIII"]
+    }
+  ],
+  "risks": [
+    {
+      "title": "Zasychanie owoców przy suszy",
+      "months": ["VI", "VII", "VIII"],
+      "urgency": "wysokie",
+      "symptom": "Owoce kurczą się i schną na krzewie mimo dojrzałego wyglądu",
+      "action": "Podlewaj deszczówką małymi dawkami rano, utrzymuj ściółkę z kory.",
+      "articleHref": "/porady/owoce-w-ogrodzie/odmiany-borowki-terminy-dojrzewania"
+    },
+    {
+      "title": "Chloroza na alkalicznej glebie",
+      "months": ["IV", "V", "VI"],
+      "urgency": "wysokie",
+      "symptom": "Żółknące liście z zielonymi żyłkami, słaby wzrost i mniejsze owoce",
+      "action": "Sprawdź pH, uzupełnij ściółkę i zastosuj nawóz kwaśny.",
+      "articleHref": "/porady/choroby-i-szkodniki/chloroza-borowki-jagody-kamczackiej"
+    },
+    {
+      "title": "Poparzenia słoneczne liści",
+      "months": ["VI", "VII", "VIII"],
+      "urgency": "średnie",
+      "symptom": "Brązowe lub czerwone plamy na liściach po upalnych dniach",
+      "action": "Zwiększ podlewanie rano i rozważ lekki cień w najgorętsze godziny.",
+      "articleHref": null
+    }
+  ],
+  "varieties": [
+    { "name": "Duke", "harvest": "VII wczesny", "notes": "Bardzo wczesna, odporna na przymrozki wiosenne" },
+    { "name": "Bluecrop", "harvest": "VII środek", "notes": "Popularna odmiana uniwersalna, regularne plony" },
+    { "name": "Patriot", "harvest": "VII", "notes": "Wytrzymała, dobra na kwaśne gleby" },
+    { "name": "Elliot", "harvest": "VIII-IX", "notes": "Późna odmiana przedłużająca sezon zbiorów" }
+  ],
   "relatedArticles": [
     { "title": "Odmiany borówki - terminy dojrzewania", "href": "/porady/owoce-w-ogrodzie/odmiany-borowki-terminy-dojrzewania" },
     { "title": "Chloroza borówki i jagody kamczackiej", "href": "/porady/choroby-i-szkodniki/chloroza-borowki-jagody-kamczackiej" }

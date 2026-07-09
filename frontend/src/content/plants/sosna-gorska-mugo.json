@@ -12,15 +12,172 @@
   "water": "Po posadzeniu regularnie, później oszczędnie",
   "spacing": "0,8-1,5 m zależnie od odmiany",
   "harvest": "Dekoracyjna cały rok",
-  "tags": ["iglak", "skalniak", "zimozielona"],
-  "calendar": [
-    { "month": "IV", "task": "Sadzenie i podlewanie po posadzeniu", "type": "start" },
-    { "month": "VI", "task": "Opcjonalne uszczykiwanie młodych przyrostów", "type": "care" },
-    { "month": "VIII", "task": "Kontrola przesuszenia młodych roślin", "type": "care" },
-    { "month": "XI", "task": "Podlanie przed zimą przy suchej jesieni", "type": "care" }
+  "tags": [
+    "iglak",
+    "skalniak",
+    "zimozielona"
   ],
-  "problems": ["Zbyt mokra gleba", "Brązowienie po suszy zimowej", "Za mało miejsca dla odmiany"],
+  "calendar": [
+    {
+      "month": "I",
+      "tasks": [
+        {
+          "task": "Kontrola okryć zimowych i stanu pędów",
+          "type": "care"
+        }
+      ]
+    },
+    {
+      "month": "II",
+      "tasks": [
+        {
+          "task": "Przegląd rośliny i plan prac na wiosnę",
+          "type": "care"
+        }
+      ]
+    },
+    {
+      "month": "III",
+      "tasks": [
+        {
+          "task": "Obserwuj wzrost i dostosuj podlewanie do pogody",
+          "type": "care"
+        }
+      ]
+    },
+    {
+      "month": "IV",
+      "tasks": [
+        {
+          "task": "Sadzenie i podlewanie po posadzeniu",
+          "type": "start",
+          "week": null,
+          "articleHref": null
+        }
+      ]
+    },
+    {
+      "month": "V",
+      "tasks": [
+        {
+          "task": "Obserwuj wzrost i dostosuj podlewanie do pogody",
+          "type": "care"
+        }
+      ]
+    },
+    {
+      "month": "VI",
+      "tasks": [
+        {
+          "task": "Opcjonalne uszczykiwanie młodych przyrostów",
+          "type": "care",
+          "week": null,
+          "articleHref": null
+        }
+      ]
+    },
+    {
+      "month": "VII",
+      "tasks": [
+        {
+          "task": "Regularna kontrola podlewania i zdrowia rośliny",
+          "type": "care"
+        }
+      ]
+    },
+    {
+      "month": "VIII",
+      "tasks": [
+        {
+          "task": "Kontrola przesuszenia młodych roślin",
+          "type": "care",
+          "week": null,
+          "articleHref": null
+        }
+      ]
+    },
+    {
+      "month": "IX",
+      "tasks": [
+        {
+          "task": "Przygotowanie rośliny na chłodniejsze noce",
+          "type": "care"
+        }
+      ]
+    },
+    {
+      "month": "X",
+      "tasks": [
+        {
+          "task": "Przygotowanie rośliny na chłodniejsze noce",
+          "type": "care"
+        }
+      ]
+    },
+    {
+      "month": "XI",
+      "tasks": [
+        {
+          "task": "Podlanie przed zimą przy suchej jesieni",
+          "type": "care",
+          "week": null,
+          "articleHref": null
+        }
+      ]
+    },
+    {
+      "month": "XII",
+      "tasks": [
+        {
+          "task": "Kontrola okryć zimowych i stanu pędów",
+          "type": "care"
+        }
+      ]
+    }
+  ],
+  "problems": [
+    {
+      "symptom": "Zbyt mokra gleba"
+    },
+    {
+      "symptom": "Brązowienie po suszy zimowej"
+    },
+    {
+      "symptom": "Za mało miejsca dla odmiany"
+    }
+  ],
   "relatedArticles": [
-    { "title": "Sosna górska mugo - uprawa na skalniaku", "href": "/porady/rosliny-ozdobne/sosna-gorska-mugo-uprawa-skalniak" }
-  ]
+    {
+      "title": "Sosna górska mugo - uprawa na skalniaku",
+      "href": "/porady/rosliny-ozdobne/sosna-gorska-mugo-uprawa-skalniak"
+    }
+  ],
+  "risks": [
+    {
+      "title": "Stres wodny w sezonie ciepłym",
+      "months": [
+        "VI",
+        "VII",
+        "VIII"
+      ],
+      "urgency": "wysokie",
+      "symptom": "Liście więdną, wzrost zwalnia lub owoce kurczą się",
+      "action": "Podlewaj rano małymi dawkami i utrzymuj ściółkę.",
+      "articleHref": null
+    },
+    {
+      "title": "Ryzyko chłodu i przymrozków",
+      "months": [
+        "III",
+        "IV",
+        "X",
+        "XI"
+      ],
+      "urgency": "średnie",
+      "symptom": "Czerniejące pędy lub uszkodzone młode liście po chłodnej nocy",
+      "action": "Zabezpiecz roślinę przed spadkami temperatury i opóźnij prace w polu.",
+      "articleHref": null
+    }
+  ],
+  "varieties": []
 }

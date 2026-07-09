@@ -12,15 +12,161 @@
   "water": "Rzadziej, ale obficie pod korzeń",
   "spacing": "1,5-2 m od kolejnej róży",
   "harvest": "Kwitnienie: czerwiec-wrzesień",
-  "tags": ["pergola", "kwiaty", "cięcie"],
-  "calendar": [
-    { "month": "III", "task": "Usunięcie martwych pędów i kontrola podpór", "type": "care" },
-    { "month": "IV", "task": "Nawożenie i ściółka", "type": "care" },
-    { "month": "VI", "task": "Usuwanie przekwitłych kwiatów", "type": "care" },
-    { "month": "XI", "task": "Kopczykowanie podstawy przed zimą", "type": "care" }
+  "tags": [
+    "pergola",
+    "kwiaty",
+    "cięcie"
   ],
-  "problems": ["Czarna plamistość", "Mszyce", "Przemarzanie młodych pędów"],
+  "calendar": [
+    {
+      "month": "I",
+      "tasks": [
+        {
+          "task": "Kontrola okryć zimowych i stanu pędów",
+          "type": "care"
+        }
+      ]
+    },
+    {
+      "month": "II",
+      "tasks": [
+        {
+          "task": "Przegląd rośliny i plan prac na wiosnę",
+          "type": "care"
+        }
+      ]
+    },
+    {
+      "month": "III",
+      "tasks": [
+        {
+          "task": "Usunięcie martwych pędów i kontrola podpór",
+          "type": "care",
+          "week": null,
+          "articleHref": null
+        }
+      ]
+    },
+    {
+      "month": "IV",
+      "tasks": [
+        {
+          "task": "Nawożenie i ściółka",
+          "type": "care",
+          "week": null,
+          "articleHref": null
+        }
+      ]
+    },
+    {
+      "month": "V",
+      "tasks": [
+        {
+          "task": "Obserwuj wzrost i dostosuj podlewanie do pogody",
+          "type": "care"
+        }
+      ]
+    },
+    {
+      "month": "VI",
+      "tasks": [
+        {
+          "task": "Usuwanie przekwitłych kwiatów",
+          "type": "care",
+          "week": null,
+          "articleHref": null
+        }
+      ]
+    },
+    {
+      "month": "VII",
+      "tasks": [
+        {
+          "task": "Regularna kontrola podlewania i zdrowia rośliny",
+          "type": "care"
+        }
+      ]
+    },
+    {
+      "month": "VIII",
+      "tasks": [
+        {
+          "task": "Regularna kontrola podlewania i zdrowia rośliny",
+          "type": "care"
+        }
+      ]
+    },
+    {
+      "month": "IX",
+      "tasks": [
+        {
+          "task": "Przygotowanie rośliny na chłodniejsze noce",
+          "type": "care"
+        }
+      ]
+    },
+    {
+      "month": "X",
+      "tasks": [
+        {
+          "task": "Przygotowanie rośliny na chłodniejsze noce",
+          "type": "care"
+        }
+      ]
+    },
+    {
+      "month": "XI",
+      "tasks": [
+        {
+          "task": "Kopczykowanie podstawy przed zimą",
+          "type": "care",
+          "week": null,
+          "articleHref": null
+        }
+      ]
+    },
+    {
+      "month": "XII",
+      "tasks": [
+        {
+          "task": "Kontrola okryć zimowych i stanu pędów",
+          "type": "care"
+        }
+      ]
+    }
+  ],
+  "problems": [
+    {
+      "symptom": "Czarna plamistość"
+    },
+    {
+      "symptom": "Mszyce"
+    },
+    {
+      "symptom": "Przemarzanie młodych pędów"
+    }
+  ],
   "relatedArticles": [
-    { "title": "Róża pnąca - uprawa, cięcie i pielęgnacja", "href": "/porady/pielegnacja/roza-pnaca-uprawa-i-pielegnacja" }
-  ]
+    {
+      "title": "Róża pnąca - uprawa, cięcie i pielęgnacja",
+      "href": "/porady/pielegnacja/roza-pnaca-uprawa-i-pielegnacja"
+    }
+  ],
+  "risks": [
+    {
+      "title": "Kontrola zdrowotna",
+      "months": [
+        "V",
+        "VI",
+        "VII",
+        "VIII",
+        "IX"
+      ],
+      "urgency": "średnie",
+      "symptom": "Plamy na liściach, osłabiony wzrost lub obecność szkodników",
+      "action": "Raz w tygodniu obejrzyj liście i pędy. Reaguj wcześnie.",
+      "articleHref": null
+    }
+  ],
+  "varieties": []
 }

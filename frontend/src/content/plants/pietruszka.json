@@ -12,16 +12,163 @@
   "water": "Równomiernie do wschodów i w suszy",
   "spacing": "Rzędy co 25-30 cm",
   "harvest": "Natka od maja, korzeń jesienią",
-  "tags": ["warzywo korzeniowe", "natka", "długi wschód"],
-  "calendar": [
-    { "month": "III", "task": "Siew wprost do gruntu", "type": "start" },
-    { "month": "IV", "task": "Utrzymanie wilgotności do wschodów", "type": "care" },
-    { "month": "VI", "task": "Zbiór natki i przerywanie zbyt gęstych rzędów", "type": "harvest" },
-    { "month": "X", "task": "Zbiór korzeni przed silnymi mrozami", "type": "harvest" }
+  "tags": [
+    "warzywo korzeniowe",
+    "natka",
+    "długi wschód"
   ],
-  "problems": ["Długi i nierówny wschód", "Rozwidlone korzenie w zbitej ziemi", "Przesuszenie po siewie"],
+  "calendar": [
+    {
+      "month": "I",
+      "tasks": [
+        {
+          "task": "Kontrola okryć zimowych i stanu pędów",
+          "type": "care"
+        }
+      ]
+    },
+    {
+      "month": "II",
+      "tasks": [
+        {
+          "task": "Przegląd rośliny i plan prac na wiosnę",
+          "type": "care"
+        }
+      ]
+    },
+    {
+      "month": "III",
+      "tasks": [
+        {
+          "task": "Siew wprost do gruntu",
+          "type": "start",
+          "week": null,
+          "articleHref": null
+        }
+      ]
+    },
+    {
+      "month": "IV",
+      "tasks": [
+        {
+          "task": "Utrzymanie wilgotności do wschodów",
+          "type": "care",
+          "week": null,
+          "articleHref": null
+        }
+      ]
+    },
+    {
+      "month": "V",
+      "tasks": [
+        {
+          "task": "Obserwuj wzrost i dostosuj podlewanie do pogody",
+          "type": "care"
+        }
+      ]
+    },
+    {
+      "month": "VI",
+      "tasks": [
+        {
+          "task": "Zbiór natki i przerywanie zbyt gęstych rzędów",
+          "type": "harvest",
+          "week": null,
+          "articleHref": null
+        }
+      ]
+    },
+    {
+      "month": "VII",
+      "tasks": [
+        {
+          "task": "Regularna kontrola podlewania i zdrowia rośliny",
+          "type": "care"
+        }
+      ]
+    },
+    {
+      "month": "VIII",
+      "tasks": [
+        {
+          "task": "Regularna kontrola podlewania i zdrowia rośliny",
+          "type": "care"
+        }
+      ]
+    },
+    {
+      "month": "IX",
+      "tasks": [
+        {
+          "task": "Przygotowanie rośliny na chłodniejsze noce",
+          "type": "care"
+        }
+      ]
+    },
+    {
+      "month": "X",
+      "tasks": [
+        {
+          "task": "Zbiór korzeni przed silnymi mrozami",
+          "type": "harvest",
+          "week": null,
+          "articleHref": null
+        }
+      ]
+    },
+    {
+      "month": "XI",
+      "tasks": [
+        {
+          "task": "Zabezpieczenie na zimę i uzupełnienie ściółki",
+          "type": "care"
+        }
+      ]
+    },
+    {
+      "month": "XII",
+      "tasks": [
+        {
+          "task": "Kontrola okryć zimowych i stanu pędów",
+          "type": "care"
+        }
+      ]
+    }
+  ],
+  "problems": [
+    {
+      "symptom": "Długi i nierówny wschód"
+    },
+    {
+      "symptom": "Rozwidlone korzenie w zbitej ziemi"
+    },
+    {
+      "symptom": "Przesuszenie po siewie"
+    }
+  ],
   "relatedArticles": [
-    { "title": "Pietruszka i koper - uprawa w ogrodzie", "href": "/porady/warzywnik/pietruszka-koper-uprawa-w-ogrodzie" },
-    { "title": "Co siejemy w czerwcu", "href": "/porady/wysiew-nasion-i-sadzenie/co-siejemy-w-czerwcu" }
-  ]
+    {
+      "title": "Pietruszka i koper - uprawa w ogrodzie",
+      "href": "/porady/warzywnik/pietruszka-koper-uprawa-w-ogrodzie"
+    },
+    {
+      "title": "Co siejemy w czerwcu",
+      "href": "/porady/wysiew-nasion-i-sadzenie/co-siejemy-w-czerwcu"
+    }
+  ],
+  "risks": [
+    {
+      "title": "Stres wodny w sezonie ciepłym",
+      "months": [
+        "VI",
+        "VII",
+        "VIII"
+      ],
+      "urgency": "wysokie",
+      "symptom": "Liście więdną, wzrost zwalnia lub owoce kurczą się",
+      "action": "Podlewaj rano małymi dawkami i utrzymuj ściółkę.",
+      "articleHref": null
+    }
+  ],
+  "varieties": []
 }

@@ -6,6 +6,7 @@ import { useParams } from "next/navigation";
 import { ArrowLeft, Camera, Check, Leaf, Save } from "lucide-react";
 import { AppShell } from "@/components/app/app-shell";
 import { useAppContext } from "@/components/app/app-context";
+import { PlantIntelligencePanel } from "@/components/plant-intelligence-panel";
 import { TaskCard } from "@/components/app/task-card";
 import { t } from "@/i18n";
 import {
@@ -23,6 +24,7 @@ import {
   type PlantDefinition,
 } from "@/lib/garden-api";
 import { canWriteGarden, plantHealthLabel, plantStatusLabel } from "@/lib/garden-permissions";
+import { getPlantByAppType } from "@/lib/plant-catalog";
 
 function PrivatePlantDetail({ plantId }: { plantId: string }) {
   const { organization } = useAppContext();
@@ -40,6 +42,7 @@ function PrivatePlantDetail({ plantId }: { plantId: string }) {
   const canWrite = canWriteGarden(organization);
 
   const plantDef = useMemo(() => catalog.find((c) => c.type === plant?.plantType), [catalog, plant]);
+  const catalogPlant = useMemo(() => (plant ? getPlantByAppType(plant.plantType) : undefined), [plant]);
   const plantTasks = useMemo(() => tasks.filter((t) => String(t.plantId) === plantId && t.status !== "done"), [plantId, tasks]);
   const photos = useMemo(() => entries.filter((e) => e.imageUrl), [entries]);
 
@@ -130,6 +133,12 @@ function PrivatePlantDetail({ plantId }: { plantId: string }) {
       </header>
 
       {status ? <p className="my-4 text-sm font-bold text-emerald-950">{status}</p> : null}
+
+      {catalogPlant ? (
+        <section className="mt-5">
+          <PlantIntelligencePanel plant={catalogPlant} variant="app" />
+        </section>
+      ) : null}
 
       {plantTasks.length ? (
         <section className="mt-5">
