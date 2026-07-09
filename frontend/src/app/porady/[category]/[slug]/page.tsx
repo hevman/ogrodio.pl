@@ -19,7 +19,6 @@ import { siteShell } from "@/lib/layout";
 import { site, articleCategories, getArticleCategorySlug } from "@/lib/site-config";
 import { IMAGE_QUALITY_ARTICLE_HERO, IMAGE_QUALITY_ARTICLE_INLINE } from "@/lib/image-quality";
 
-export const dynamic = "force-dynamic";
 export const revalidate = 300;
 
 type Props = { params: Promise<{ category: string; slug: string }> };

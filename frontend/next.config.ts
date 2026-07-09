@@ -2,6 +2,7 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   output: "standalone",
+  poweredByHeader: false,
   images: {
     // Tylko WebP — AVIF jest zbyt kosztowny na 2 vCPU VPS
     formats: ["image/webp"],

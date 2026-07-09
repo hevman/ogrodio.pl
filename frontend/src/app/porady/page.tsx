@@ -6,7 +6,6 @@ import { PageShell, PageSection } from "@/components/page-shell";
 import { getAdviceArticles } from "@/lib/advice";
 import { articleCategories } from "@/lib/site-config";
 
-export const dynamic = "force-dynamic";
 export const revalidate = 300;
 
 export const metadata: Metadata = {
