@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { AlertTriangle, ArrowUpRight, CalendarDays, ClipboardList, Sprout } from "lucide-react";
+import { AlertTriangle, ArrowUpRight, CalendarDays, CheckCircle2, ClipboardList, Sprout } from "lucide-react";
 import type { PlantCatalogItem } from "@/lib/plant-intelligence/schema";
 import { getPlantIntelligence } from "@/lib/plant-intelligence/engine";
 
@@ -16,9 +16,9 @@ function calendarClass(type: string) {
 }
 
 function taskTypeLabel(type: string) {
-  if (type === "start") return "Start";
+  if (type === "start") return "Sadzenie i siew";
   if (type === "harvest") return "Zbiory";
-  return "Opieka";
+  return "Pielęgnacja";
 }
 
 function riskClass(level: string) {
@@ -29,9 +29,9 @@ function riskClass(level: string) {
 
 function weekLabel(week: string | null | undefined) {
   if (!week || week === "cały") return null;
-  if (week === "1-2") return "tydz. 1–2";
-  if (week === "3-4") return "tydz. 3–4";
-  return `tydz. ${week}`;
+  if (week === "1-2") return "tydzień 1-2";
+  if (week === "3-4") return "tydzień 3-4";
+  return `tydzień ${week}`;
 }
 
 export function PlantIntelligencePanel({ plant, appAddUrl, variant = "catalog" }: Props) {
@@ -46,14 +46,14 @@ export function PlantIntelligencePanel({ plant, appAddUrl, variant = "catalog" }
         <div className="flex flex-col gap-5 md:flex-row md:items-start md:justify-between">
           <div className="min-w-0 flex-1">
             <p className={`text-sm font-bold uppercase tracking-wide ${accentText}`}>
-              Ogrodio Plant Intelligence
+              Plan opieki
               {variant === "catalog" ? (
                 <Link className="ml-2 font-semibold normal-case underline" href="/ogrodio-plant-intelligence">
-                  więcej o Ogrodio Plant Intelligence
+                  jak działa w Ogrodio
                 </Link>
               ) : null}
             </p>
-            <h2 className="mt-2 text-2xl font-bold text-slate-900">{intelligence.actionWindow.label}: co zrobić</h2>
+            <h2 className="mt-2 text-2xl font-bold text-slate-900">{intelligence.actionWindow.label}: najbliższa praca</h2>
             <div className="mt-4 grid gap-3">
               {intelligence.actionWindow.entries.map((entry) => (
                 <div className={`rounded-xl border p-4 ${calendarClass(entry.type)}`} key={`${entry.month}-${entry.task}-${entry.week}`}>
@@ -64,7 +64,7 @@ export function PlantIntelligencePanel({ plant, appAddUrl, variant = "catalog" }
                   <p className="mt-1 text-sm leading-6">{entry.task}</p>
                   {entry.articleHref ? (
                     <Link className="mt-2 inline-flex items-center gap-1 text-xs font-bold underline" href={entry.articleHref}>
-                      Poradnik
+                      Przeczytaj poradnik
                       <ArrowUpRight className="h-3 w-3" />
                     </Link>
                   ) : null}
@@ -77,7 +77,7 @@ export function PlantIntelligencePanel({ plant, appAddUrl, variant = "catalog" }
             <div className={`rounded-xl border bg-white p-4 md:w-64 ${variant === "catalog" ? "border-teal-200" : "border-emerald-200"}`}>
               <ClipboardList className={`h-5 w-5 ${accentText}`} />
               <p className="mt-3 text-sm font-bold text-slate-900">
-                {intelligence.appTaskCount} sezonowych wpisów z tej karty zasilają kalendarz aplikacji.
+                Dodaj roślinę do ogrodu, a Ogrodio przypomni o tych pracach w kalendarzu.
               </p>
               <a
                 className={`mt-4 inline-flex h-10 w-full items-center justify-center rounded-lg px-4 text-sm font-bold text-white transition ${accentBg}`}
@@ -95,20 +95,20 @@ export function PlantIntelligencePanel({ plant, appAddUrl, variant = "catalog" }
           <div className="flex items-center gap-3">
             <AlertTriangle className="h-5 w-5 text-amber-600" />
             <div>
-              <p className={`text-sm font-bold uppercase tracking-wide ${accentText}`}>Ryzyka sezonowe</p>
-              <h2 className="text-2xl font-bold text-slate-900">Na co uważać teraz</h2>
+              <p className={`text-sm font-bold uppercase tracking-wide ${accentText}`}>Na co uważać</p>
+              <h2 className="text-2xl font-bold text-slate-900">Typowe problemy w tym czasie</h2>
             </div>
           </div>
           <div className="mt-5 grid gap-3 sm:grid-cols-2">
             {intelligence.seasonalRisks.map((risk) => (
               <div className={`rounded-xl border p-4 ${riskClass(risk.level)}`} key={risk.title}>
-                <p className="text-xs font-black uppercase tracking-wide">Ryzyko: {risk.level}</p>
+                <p className="text-xs font-black uppercase tracking-wide">Uwaga: {risk.level}</p>
                 <h3 className="mt-1 font-bold">{risk.title}</h3>
                 <p className="mt-1 text-xs font-semibold uppercase tracking-wide opacity-80">{risk.symptom}</p>
                 <p className="mt-2 text-sm leading-6">{risk.action}</p>
                 {risk.articleHref ? (
                   <Link className="mt-2 inline-flex items-center gap-1 text-xs font-bold underline" href={risk.articleHref}>
-                    Czytaj poradnik
+                    Zobacz poradnik
                     <ArrowUpRight className="h-3 w-3" />
                   </Link>
                 ) : null}
@@ -124,7 +124,7 @@ export function PlantIntelligencePanel({ plant, appAddUrl, variant = "catalog" }
             <Sprout className={`h-5 w-5 ${accentText}`} />
             <div>
               <p className={`text-sm font-bold uppercase tracking-wide ${accentText}`}>Odmiany</p>
-              <h2 className="text-2xl font-bold text-slate-900">Terminy i charakter</h2>
+              <h2 className="text-2xl font-bold text-slate-900">Co wybrać do ogrodu</h2>
             </div>
           </div>
           <div className="mt-5 grid gap-3 sm:grid-cols-2">
@@ -143,8 +143,8 @@ export function PlantIntelligencePanel({ plant, appAddUrl, variant = "catalog" }
         <div className="flex items-center gap-3">
           <CalendarDays className={`h-5 w-5 ${accentText}`} />
           <div>
-            <p className={`text-sm font-bold uppercase tracking-wide ${accentText}`}>Kalendarz prac</p>
-            <h2 className="text-2xl font-bold text-slate-900">Plan na cały rok</h2>
+            <p className={`text-sm font-bold uppercase tracking-wide ${accentText}`}>Kalendarz</p>
+            <h2 className="text-2xl font-bold text-slate-900">Prace w ciągu roku</h2>
           </div>
         </div>
         <div className="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">

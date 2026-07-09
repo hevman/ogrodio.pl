@@ -48,9 +48,9 @@ export default function PlantCatalogPage() {
       />
       <PageShell
         breadcrumb={[{ href: "/", label: "Start" }, { label: "Katalog roślin" }]}
-        description="Pierwszy publiczny katalog Ogrodio: konkretne wymagania, kalendarz prac i problemy oparte o poradniki oraz nasze zdjęcia z ogrodu."
+        description="Karty roślin z konkretnymi wymaganiami, najbliższymi pracami, typowymi problemami i przejściami do poradników Ogrodio."
         eyebrow="Katalog roślin"
-        title="Rośliny opisane praktycznie, nie encyklopedycznie"
+        title="Rośliny opisane tak, żeby łatwiej o nie dbać"
       >
         <PageSection>
           <div className="grid gap-4 lg:grid-cols-[minmax(0,1fr)_320px] lg:items-start">
@@ -80,15 +80,15 @@ export default function PlantCatalogPage() {
             </div>
 
             <aside className="rounded-2xl border border-slate-200 bg-[#f4f7f2] p-5">
-              <p className="text-sm font-bold uppercase tracking-wide text-teal-700">Ogrodio Plant Intelligence</p>
+              <p className="text-sm font-bold uppercase tracking-wide text-teal-700">Plan opieki</p>
               <p className="mt-2 text-sm leading-6 text-slate-700">
-                Własny system sezonowej wiedzy: kalendarz na cały rok, ryzyka i powiązania z poradnikami — w katalogu i aplikacji.
+                Każda karta pokazuje najbliższe prace, typowe problemy i przejścia do poradników. Po dodaniu rośliny do aplikacji te dane mogą zasilać kalendarz.
               </p>
               <Link
                 className="mt-4 inline-flex items-center gap-2 text-sm font-bold text-teal-700 transition hover:text-teal-900"
                 href="/ogrodio-plant-intelligence"
               >
-                Jak działa Ogrodio Plant Intelligence
+                Jak działa plan opieki
                 <ArrowUpRight className="h-4 w-4" />
               </Link>
             </aside>
@@ -164,9 +164,9 @@ export default function PlantCatalogPage() {
               <CalendarDays className="h-5 w-5" />
             </span>
             <div>
-              <h2 className="text-lg font-bold text-slate-900">Następny etap</h2>
+              <h2 className="text-lg font-bold text-slate-900">Katalog połączony z aplikacją</h2>
               <p className="mt-1 text-sm leading-6 text-slate-700">
-                Te same dane można podpiąć pod przypomnienia sezonowe w aplikacji: sadzenie, cięcie, nawożenie, zbiory i alerty problemów.
+                Te same dane pomagają budować przypomnienia sezonowe w aplikacji: sadzenie, cięcie, nawożenie, zbiory i obserwację problemów.
               </p>
             </div>
           </div>

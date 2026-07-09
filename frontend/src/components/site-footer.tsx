@@ -158,7 +158,7 @@ export function SiteFooter({ variant = "site" }: { variant?: "site" | "shop" }) 
               Katalog roślin
             </Link>
             <Link className="text-sm text-slate-500 transition hover:text-teal-700" href="/ogrodio-plant-intelligence">
-              Ogrodio Plant Intelligence
+              Plan opieki nad roślinami
             </Link>
             <Link className="text-sm text-slate-500 transition hover:text-teal-700" href="/o-nas">
               {t("footer.site.about")}
