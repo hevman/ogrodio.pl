@@ -90,7 +90,7 @@ export function middleware(request: NextRequest) {
     return NextResponse.redirect(url, 301);
   }
 
-  if (isShopHost && isMainSiteRoute(pathname)) {
+  if ((isShopHost || isAppHost || isPanelHost) && isMainSiteRoute(pathname)) {
     return NextResponse.redirect(`${getSiteBaseUrl()}${pathname}${request.nextUrl.search}`, 301);
   }
 
