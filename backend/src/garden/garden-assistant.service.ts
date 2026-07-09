@@ -25,6 +25,13 @@ type TaskTemplate = {
   kind: "watering" | "fertilizing" | "cutting" | "inspection" | "protection" | "custom";
 };
 
+type PlantTaskType = "start" | "care" | "harvest";
+
+type PlantCalendarMonthJson = {
+  month: string;
+  tasks: { task: string; type: PlantTaskType }[];
+};
+
 type PlantCatalogJson = {
   slug: string;
   appAliases?: string[];
@@ -33,29 +40,10 @@ type PlantCatalogJson = {
   summary: string;
   tags?: string[];
   water?: string;
-  calendar?: (
-    | { month: string; task: string; type: "start" | "care" | "harvest" }
-    | { month: string; tasks: { task: string; type: "start" | "care" | "harvest" }[] }
-  )[];
+  calendar?: PlantCalendarMonthJson[];
   problems?: (string | { symptom: string })[];
   relatedArticles?: { title: string; href: string }[];
 };
-
-function flattenCalendarEntries(calendar: NonNullable<PlantCatalogJson["calendar"]>) {
-  return calendar.flatMap((entry) => {
-    if ("tasks" in entry && Array.isArray(entry.tasks)) {
-      return entry.tasks.map((task) => ({
-        month: entry.month,
-        task: task.task,
-        type: task.type,
-      }));
-    }
-    if ("task" in entry) {
-      return [{ month: entry.month, task: entry.task, type: entry.type }];
-    }
-    return [];
-  });
-}
 
 function slug(value: string) {
   return value.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
@@ -115,7 +103,7 @@ function articleKeywords(plant: PlantCatalogJson) {
   ].map((keyword) => keyword.trim()).filter((keyword) => keyword.length >= 3)));
 }
 
-function taskKind(task: string, type: NonNullable<PlantCatalogJson["calendar"]>[number]["type"]): TaskTemplate["kind"] {
+function taskKind(task: string, type: PlantTaskType): TaskTemplate["kind"] {
   const value = task.toLowerCase();
   if (value.includes("podle")) return "watering";
   if (value.includes("nawo") || value.includes("kompost")) return "fertilizing";
@@ -126,7 +114,7 @@ function taskKind(task: string, type: NonNullable<PlantCatalogJson["calendar"]>[
   return "custom";
 }
 
-function taskPriority(kind: TaskTemplate["kind"], type: NonNullable<PlantCatalogJson["calendar"]>[number]["type"]): TaskTemplate["priority"] {
+function taskPriority(kind: TaskTemplate["kind"], type: PlantTaskType): TaskTemplate["priority"] {
   if (kind === "watering" || kind === "protection") return "high";
   if (type === "harvest") return "medium";
   return "medium";
@@ -152,19 +140,21 @@ function plantDefinitionForType(type: string) {
 }
 
 const TASKS: TaskTemplate[] = PLANT_CATALOG.flatMap((plant) =>
-  flattenCalendarEntries(plant.calendar || []).flatMap((entry) => {
-    const month = monthNumbers[entry.month];
-    if (!month) return [];
-    const kind = taskKind(entry.task, entry.type);
-    return [{
-      plantTypes: plantTypes(plant),
-      months: [month],
-      title: entry.task,
-      description: `${plant.name}: ${entry.task}. ${plant.summary}`,
-      priority: taskPriority(kind, entry.type),
-      kind,
-    }];
-  }),
+  (plant.calendar || []).flatMap((monthBlock) =>
+    monthBlock.tasks.flatMap((task) => {
+      const month = monthNumbers[monthBlock.month];
+      if (!month) return [];
+      const kind = taskKind(task.task, task.type);
+      return [{
+        plantTypes: plantTypes(plant),
+        months: [month],
+        title: task.task,
+        description: `${plant.name}: ${task.task}. ${plant.summary}`,
+        priority: taskPriority(kind, task.type),
+        kind,
+      }];
+    }),
+  ),
 );
 @Injectable()
 export class GardenAssistantService {

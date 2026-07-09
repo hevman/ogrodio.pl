@@ -25,12 +25,6 @@ export const plantCalendarMonthSchema = z.object({
 
 export type PlantCalendarMonth = z.infer<typeof plantCalendarMonthSchema>;
 
-export const legacyCalendarEntrySchema = z.object({
-  month: z.string(),
-  task: z.string(),
-  type: plantTaskTypeSchema,
-});
-
 export const plantRiskSchema = z.object({
   title: z.string(),
   months: z.array(romanMonthSchema).min(1),
@@ -73,14 +67,8 @@ export const plantCatalogRawSchema = z.object({
   spacing: z.string(),
   harvest: z.string(),
   tags: z.array(z.string()),
-  calendar: z.union([
-    z.array(plantCalendarMonthSchema),
-    z.array(legacyCalendarEntrySchema),
-  ]),
-  problems: z.union([
-    z.array(z.string()),
-    z.array(plantProblemSchema),
-  ]),
+  calendar: z.array(plantCalendarMonthSchema).length(12),
+  problems: z.array(plantProblemSchema),
   risks: z.array(plantRiskSchema).optional().default([]),
   varieties: z.array(plantVarietySchema).optional().default([]),
   relatedArticles: z.array(plantRelatedArticleSchema),
