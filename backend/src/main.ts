@@ -1,18 +1,27 @@
 import 'reflect-metadata';
 import * as cookieParser from 'cookie-parser';
 import * as express from 'express';
+import type { NextFunction, Request, Response } from 'express';
 import { join } from 'path';
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
+  const expressApp = app.getHttpAdapter().getInstance();
+  expressApp.disable('x-powered-by');
 
   // Globalny prefix — wszystkie kontrolery
   // Klienci sklepu:  /api/auth/*, /api/shop/*
   // Panel staff:     /panel-api/staff/*
   // Prefix jest ustawiony w dekoratorach @Controller(), więc tu nie ustawiamy globalnego
   app.use(cookieParser());
+  app.use((_req: Request, res: Response, next: NextFunction) => {
+    res.setHeader('X-Content-Type-Options', 'nosniff');
+    res.setHeader('Referrer-Policy', 'strict-origin-when-cross-origin');
+    res.setHeader('X-Frame-Options', 'DENY');
+    next();
+  });
   app.use('/uploads', express.static(join(process.cwd(), 'uploads'), {
     immutable: true,
     maxAge: '30d',

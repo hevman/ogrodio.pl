@@ -26,6 +26,7 @@ export class StaffAuthService {
     res.cookie('panel_access', token, {
       httpOnly: true,
       sameSite: 'lax',
+      secure: process.env.AUTH_COOKIE_SECURE === 'true',
       path: '/',
       maxAge: 15 * 60 * 1000,
     });
@@ -40,6 +41,7 @@ export class StaffAuthService {
     res.cookie('panel_refresh', token, {
       httpOnly: true,
       sameSite: 'lax',
+      secure: process.env.AUTH_COOKIE_SECURE === 'true',
       path: '/panel-api/staff/auth/refresh',
       maxAge: 7 * 24 * 60 * 60 * 1000,
     });

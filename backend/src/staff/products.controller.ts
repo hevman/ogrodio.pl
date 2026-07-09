@@ -37,6 +37,8 @@ export class ProductsController {
   }
 
   @Get('tax-categories')
+  @UseGuards(StaffJwtGuard)
+  @Permission('products')
   async getTaxCategories() {
     const data = await this.vendure.query(`
       query {
