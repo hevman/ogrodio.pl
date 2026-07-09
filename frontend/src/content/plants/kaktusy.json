@@ -1,0 +1,26 @@
+{
+  "slug": "kaktusy",
+  "name": "Kaktusy",
+  "latinName": "Cactaceae",
+  "group": "Rośliny domowe",
+  "image": "/images/articles/kaktusy-kompozycja-cover.webp",
+  "imageAlt": "Kompozycja kaktusów w dekoracyjnej misce",
+  "summary": "Rośliny do bardzo jasnych miejsc i oszczędnego podlewania. Najczęstszy błąd to zbyt ciężka ziemia i nadmiar wody.",
+  "difficulty": "łatwa",
+  "sun": "Bardzo jasno, najlepiej parapet południowy",
+  "soil": "Mineralna, przepuszczalna mieszanka do kaktusów",
+  "water": "Rzadko; dopiero po przeschnięciu podłoża",
+  "spacing": "Doniczka tylko trochę większa od bryły korzeniowej",
+  "harvest": "Dekoracyjne cały rok",
+  "tags": ["roślina domowa", "sukulent", "mało wody"],
+  "calendar": [
+    { "month": "III", "task": "Powrót do podlewania po zimowym spoczynku", "type": "care" },
+    { "month": "V", "task": "Przesadzanie do mineralnego podłoża", "type": "care" },
+    { "month": "VII", "task": "Bardzo jasne stanowisko i wietrzenie", "type": "care" },
+    { "month": "XI", "task": "Ograniczenie podlewania na zimę", "type": "care" }
+  ],
+  "problems": ["Gnicie korzeni", "Wyciąganie pędów przy braku światła", "Wełnowce"],
+  "relatedArticles": [
+    { "title": "Kaktusy w misce - kompozycja i pielęgnacja", "href": "/porady/rosliny-domowe-i-balkonowe/kaktusy-kompozycja-w-misce" }
+  ]
+}

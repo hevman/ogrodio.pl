@@ -1,0 +1,26 @@
+{
+  "slug": "agrest",
+  "name": "Agrest",
+  "latinName": "Ribes uva-crispa",
+  "group": "Owoce",
+  "image": "/images/articles/agrest-uprawa-cover.webp",
+  "imageAlt": "Krzew agrestu z owocami w ogrodzie",
+  "summary": "Wytrzymały krzew owocowy do małych ogrodów. Najlepiej plonuje w słońcu, w żyznej i stale lekko wilgotnej ziemi.",
+  "difficulty": "łatwa",
+  "sun": "Słońce lub lekki półcień",
+  "soil": "Żyzna, próchnicza, umiarkowanie wilgotna",
+  "water": "Regularnie w suszy i podczas dojrzewania owoców",
+  "spacing": "1-1,5 m między krzewami",
+  "harvest": "Czerwiec-lipiec",
+  "tags": ["krzew owocowy", "mały ogród", "przetwory"],
+  "calendar": [
+    { "month": "III", "task": "Cięcie prześwietlające i usuwanie starych pędów", "type": "care" },
+    { "month": "IV", "task": "Ściółkowanie i nawożenie kompostem", "type": "care" },
+    { "month": "VI", "task": "Kontrola mączniaka i podlewanie w suszy", "type": "care" },
+    { "month": "VII", "task": "Zbiór owoców na świeżo i przetwory", "type": "harvest" }
+  ],
+  "problems": ["Mączniak agrestu", "Opadanie owoców przy suszy", "Zagęszczony środek krzewu"],
+  "relatedArticles": [
+    { "title": "Agrest - uprawa, pielęgnacja i zbiory", "href": "/porady/owoce-w-ogrodzie/agrest-uprawa-pielegnacja-zbiory" }
+  ]
+}

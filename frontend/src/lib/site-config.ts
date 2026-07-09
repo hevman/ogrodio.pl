@@ -19,6 +19,7 @@ export const site = {
 export const navLinks = [
   { href: "/", label: t("site.nav.start") },
   { href: "/app", label: t("site.nav.app") },
+  { href: "/katalog-roslin", label: "Rośliny" },
   { href: "/porady", label: t("site.nav.advice") },
   { href: "/sklep", label: t("site.nav.shop") },
 ] as const;

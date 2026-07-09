@@ -1,0 +1,26 @@
+{
+  "slug": "malina",
+  "name": "Malina",
+  "latinName": "Rubus idaeus",
+  "group": "Owoce",
+  "image": "/images/articles/malina-zolta-cover.webp",
+  "imageAlt": "Żółte maliny dojrzewające na pędach",
+  "summary": "Owocowy klasyk do słonecznego miejsca. Kluczowe jest rozróżnienie odmian letnich i jesiennych, bo tnie się je inaczej.",
+  "difficulty": "średnia",
+  "sun": "Pełne słońce",
+  "soil": "Żyzna, próchnicza, lekko kwaśna",
+  "water": "Regularnie podczas kwitnienia i owocowania",
+  "spacing": "40-50 cm w rzędzie",
+  "harvest": "Czerwiec-październik zależnie od odmiany",
+  "tags": ["owoce miękkie", "odmiany jesienne", "podpory"],
+  "calendar": [
+    { "month": "III", "task": "Cięcie zgodne z typem odmiany", "type": "care" },
+    { "month": "IV", "task": "Podwiązanie pędów i ściółka", "type": "care" },
+    { "month": "VII", "task": "Zbiór odmian letnich", "type": "harvest" },
+    { "month": "IX", "task": "Zbiór odmian jesiennych", "type": "harvest" }
+  ],
+  "problems": ["Zasychanie pędów", "Robaczywienie owoców", "Rozrastanie poza wyznaczony pas"],
+  "relatedArticles": [
+    { "title": "Malina żółta - uprawa i odmiany", "href": "/porady/owoce-w-ogrodzie/malina-zolta-uprawa-odmiany" }
+  ]
+}

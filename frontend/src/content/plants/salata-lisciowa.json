@@ -1,0 +1,26 @@
+{
+  "slug": "salata-lisciowa",
+  "name": "Sałata liściowa",
+  "latinName": "Lactuca sativa",
+  "group": "Warzywnik",
+  "image": "/images/articles/salata-lisciowa-uprawa-zbiory-cover.webp",
+  "imageAlt": "Mieszanka sałat liściowych na grządce",
+  "summary": "Szybka roślina na świeże liście. Najlepiej wychodzi wiosną i jesienią, kiedy nie ma upałów.",
+  "difficulty": "łatwa",
+  "sun": "Słońce wiosną, lekki półcień latem",
+  "soil": "Żyzna, lekka, stale lekko wilgotna",
+  "water": "Często małymi dawkami",
+  "spacing": "20-25 cm między roślinami",
+  "harvest": "Kwiecień-czerwiec i wrzesień-październik",
+  "tags": ["szybki plon", "liście", "grządka"],
+  "calendar": [
+    { "month": "III", "task": "Pierwszy siew pod osłoną lub do gruntu", "type": "start" },
+    { "month": "IV", "task": "Dosiew co 2-3 tygodnie", "type": "start" },
+    { "month": "V", "task": "Zbiór zewnętrznych liści", "type": "harvest" },
+    { "month": "VIII", "task": "Siew jesienny po największych upałach", "type": "start" }
+  ],
+  "problems": ["Wybijanie w pęd kwiatowy w upały", "Ślimaki", "Gorzknienie przy suszy"],
+  "relatedArticles": [
+    { "title": "Sałata liściowa - uprawa i zbiory", "href": "/porady/warzywnik/salata-lisciowa-uprawa-zbiory" }
+  ]
+}

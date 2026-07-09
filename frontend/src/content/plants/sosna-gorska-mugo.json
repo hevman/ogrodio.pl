@@ -1,0 +1,26 @@
+{
+  "slug": "sosna-gorska-mugo",
+  "name": "Sosna górska mugo",
+  "latinName": "Pinus mugo",
+  "group": "Iglaki",
+  "image": "/images/articles/sosna-gorska-mugo-skalniak-cover.webp",
+  "imageAlt": "Sosna górska mugo na skalniaku",
+  "summary": "Karłowy iglak do skalniaków, skarp i małych ogrodów. Dobrze znosi słońce, ubogą glebę i suszę po ukorzenieniu.",
+  "difficulty": "łatwa",
+  "sun": "Pełne słońce",
+  "soil": "Przepuszczalna, lekka, może być uboższa",
+  "water": "Po posadzeniu regularnie, później oszczędnie",
+  "spacing": "0,8-1,5 m zależnie od odmiany",
+  "harvest": "Dekoracyjna cały rok",
+  "tags": ["iglak", "skalniak", "zimozielona"],
+  "calendar": [
+    { "month": "IV", "task": "Sadzenie i podlewanie po posadzeniu", "type": "start" },
+    { "month": "VI", "task": "Opcjonalne uszczykiwanie młodych przyrostów", "type": "care" },
+    { "month": "VIII", "task": "Kontrola przesuszenia młodych roślin", "type": "care" },
+    { "month": "XI", "task": "Podlanie przed zimą przy suchej jesieni", "type": "care" }
+  ],
+  "problems": ["Zbyt mokra gleba", "Brązowienie po suszy zimowej", "Za mało miejsca dla odmiany"],
+  "relatedArticles": [
+    { "title": "Sosna górska mugo - uprawa na skalniaku", "href": "/porady/rosliny-ozdobne/sosna-gorska-mugo-uprawa-skalniak" }
+  ]
+}

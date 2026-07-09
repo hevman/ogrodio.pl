@@ -1,0 +1,26 @@
+{
+  "slug": "lawenda",
+  "name": "Lawenda",
+  "latinName": "Lavandula angustifolia",
+  "group": "Rośliny ozdobne",
+  "image": "/images/articles/lawenda-sadzenie-cover.webp",
+  "imageAlt": "Sadzonki lawendy przygotowane do sadzenia",
+  "summary": "Śródziemnomorska bylina do słońca i przepuszczalnej ziemi. Lepiej znosi suszę niż ciężką, mokrą glebę.",
+  "difficulty": "łatwa",
+  "sun": "Pełne słońce",
+  "soil": "Przepuszczalna, lekko zasadowa, niezbyt żyzna",
+  "water": "Oszczędnie po ukorzenieniu",
+  "spacing": "30-40 cm między sadzonkami",
+  "harvest": "Kwitnienie: czerwiec-sierpień",
+  "tags": ["miododajna", "sucholubna", "rabata"],
+  "calendar": [
+    { "month": "IV", "task": "Sadzenie i lekkie cięcie po zimie", "type": "start" },
+    { "month": "VI", "task": "Zbiór kwiatów do suszenia", "type": "harvest" },
+    { "month": "VIII", "task": "Cięcie po kwitnieniu bez wchodzenia w stare drewno", "type": "care" },
+    { "month": "XI", "task": "Ochrona przed zimową wilgocią", "type": "care" }
+  ],
+  "problems": ["Gnicie w ciężkiej ziemi", "Łysienie od dołu bez cięcia", "Przemarzanie na mokrym stanowisku"],
+  "relatedArticles": [
+    { "title": "Lawenda - jak sadzić i pielęgnować", "href": "/porady/pielegnacja/lawenda-sadzenie-i-pielegnacja" }
+  ]
+}

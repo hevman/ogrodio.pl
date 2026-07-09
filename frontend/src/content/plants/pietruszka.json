@@ -1,0 +1,27 @@
+{
+  "slug": "pietruszka",
+  "name": "Pietruszka",
+  "latinName": "Petroselinum crispum",
+  "group": "Warzywnik",
+  "image": "/images/articles/pietruszka-grządka-czerwiec-cover.webp",
+  "imageAlt": "Pietruszka rosnąca w rzędach na grządce",
+  "summary": "Warzywo i zioło do wysiewu wprost do gruntu. Kiełkuje wolno, więc wymaga cierpliwości i równej wilgotności gleby.",
+  "difficulty": "łatwa",
+  "sun": "Słońce lub lekki półcień",
+  "soil": "Głęboko spulchniona, bez świeżego obornika",
+  "water": "Równomiernie do wschodów i w suszy",
+  "spacing": "Rzędy co 25-30 cm",
+  "harvest": "Natka od maja, korzeń jesienią",
+  "tags": ["warzywo korzeniowe", "natka", "długi wschód"],
+  "calendar": [
+    { "month": "III", "task": "Siew wprost do gruntu", "type": "start" },
+    { "month": "IV", "task": "Utrzymanie wilgotności do wschodów", "type": "care" },
+    { "month": "VI", "task": "Zbiór natki i przerywanie zbyt gęstych rzędów", "type": "harvest" },
+    { "month": "X", "task": "Zbiór korzeni przed silnymi mrozami", "type": "harvest" }
+  ],
+  "problems": ["Długi i nierówny wschód", "Rozwidlone korzenie w zbitej ziemi", "Przesuszenie po siewie"],
+  "relatedArticles": [
+    { "title": "Pietruszka i koper - uprawa w ogrodzie", "href": "/porady/warzywnik/pietruszka-koper-uprawa-w-ogrodzie" },
+    { "title": "Co siejemy w czerwcu", "href": "/porady/wysiew-nasion-i-sadzenie/co-siejemy-w-czerwcu" }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "slug": "oliwka",
+  "name": "Oliwka europejska",
+  "latinName": "Olea europaea",
+  "group": "Rośliny balkonowe",
+  "image": "/images/articles/oliwka-w-donicy-uprawa-cover.webp",
+  "imageAlt": "Oliwka europejska uprawiana w donicy",
+  "summary": "Roślina donicowa do bardzo jasnego miejsca. Latem lubi taras, zimą potrzebuje chłodnego i widnego pomieszczenia.",
+  "difficulty": "średnia",
+  "sun": "Pełne słońce",
+  "soil": "Przepuszczalna mieszanka z drenażem",
+  "water": "Umiarkowanie, po przeschnięciu wierzchu ziemi",
+  "spacing": "Donica z odpływem i warstwą drenażu",
+  "harvest": "Dekoracyjna cały rok",
+  "tags": ["doniczka", "taras", "zimowanie"],
+  "calendar": [
+    { "month": "IV", "task": "Wyniesienie na zewnątrz po hartowaniu", "type": "care" },
+    { "month": "VI", "task": "Regularne podlewanie i lekkie nawożenie", "type": "care" },
+    { "month": "IX", "task": "Ograniczenie nawożenia przed zimą", "type": "care" },
+    { "month": "XI", "task": "Przeniesienie do chłodnego, jasnego miejsca", "type": "care" }
+  ],
+  "problems": ["Brązowe plamy na liściach", "Opadanie liści zimą", "Przelanie w donicy"],
+  "relatedArticles": [
+    { "title": "Oliwka w donicy - uprawa i brązowe liście", "href": "/porady/rosliny-ozdobne/oliwka-w-donicy-uprawa-brazowe-liscie" }
+  ]
+}

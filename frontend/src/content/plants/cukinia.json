@@ -1,0 +1,26 @@
+{
+  "slug": "cukinia",
+  "name": "Cukinia",
+  "latinName": "Cucurbita pepo",
+  "group": "Warzywnik",
+  "image": "/images/articles/cukinia-zolta-zawiazek-maj-cover.webp",
+  "imageAlt": "Żółta cukinia z kwiatem i młodym zawiązkiem owocu",
+  "summary": "Szybko rosnące warzywo do żyznej grządki. Potrzebuje ciepła, miejsca i regularnego zbioru młodych owoców.",
+  "difficulty": "łatwa",
+  "sun": "Pełne słońce i ciepłe stanowisko",
+  "soil": "Bardzo żyzna, kompostowa, wilgotna",
+  "water": "Obficie pod korzeń, bez moczenia liści",
+  "spacing": "80-100 cm między roślinami",
+  "harvest": "Czerwiec-wrzesień",
+  "tags": ["warzywo", "szybki plon", "ciepłolubna"],
+  "calendar": [
+    { "month": "IV", "task": "Wysiew rozsady w domu", "type": "start" },
+    { "month": "V", "task": "Sadzenie po przymrozkach do gruntu", "type": "start" },
+    { "month": "VI", "task": "Podlewanie i ściółkowanie pod liśćmi", "type": "care" },
+    { "month": "VII", "task": "Zbiór młodych owoców co kilka dni", "type": "harvest" }
+  ],
+  "problems": ["Mączniak prawdziwy pod koniec lata", "Zrzucanie zawiązków przy chłodzie", "Przesuszenie dużych liści"],
+  "relatedArticles": [
+    { "title": "Co siejemy w maju", "href": "/porady/wysiew-nasion-i-sadzenie/co-siejemy-w-maju" }
+  ]
+}

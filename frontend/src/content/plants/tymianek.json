@@ -1,0 +1,26 @@
+{
+  "slug": "tymianek",
+  "name": "Tymianek",
+  "latinName": "Thymus vulgaris",
+  "group": "Zioła",
+  "image": "/images/articles/tymianek-rozmaryn-sadzonki-detail.webp",
+  "imageAlt": "Sadzonki tymianku i rozmarynu z bliska",
+  "summary": "Niskie, aromatyczne zioło do słońca, donic i obrzeży rabat. Nie lubi ciężkiej, mokrej ziemi.",
+  "difficulty": "łatwa",
+  "sun": "Pełne słońce",
+  "soil": "Lekka, przepuszczalna, raczej sucha",
+  "water": "Oszczędnie po ukorzenieniu",
+  "spacing": "20-30 cm między roślinami",
+  "harvest": "Maj-wrzesień",
+  "tags": ["zioło", "miododajny", "sucholubny"],
+  "calendar": [
+    { "month": "IV", "task": "Sadzenie lub cięcie po zimie", "type": "start" },
+    { "month": "VI", "task": "Zbiór pędów przed pełnią kwitnienia", "type": "harvest" },
+    { "month": "VIII", "task": "Lekkie przycięcie dla zagęszczenia", "type": "care" },
+    { "month": "XI", "task": "Ochrona donic przed przemarznięciem", "type": "care" }
+  ],
+  "problems": ["Wypadanie w mokrej ziemi", "Drewnienie bez cięcia", "Przemarzanie małych donic"],
+  "relatedArticles": [
+    { "title": "Tymianek i rozmaryn - uprawa", "href": "/porady/pielegnacja/tymianek-rozmaryn-uprawa" }
+  ]
+}

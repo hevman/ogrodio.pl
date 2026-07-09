@@ -61,6 +61,7 @@ export function SiteHeader({ initialIsShopHost = false }: { initialIsShopHost?: 
   const [isNotificationsOpen, setIsNotificationsOpen] = useState(false);
   const siteHomeHref = isShopHost ? site.siteUrl : "/";
   const siteAdviceHref = isShopHost ? sitePath("/porady") : "/porady";
+  const sitePlantCatalogHref = isShopHost ? sitePath("/katalog-roslin") : "/katalog-roslin";
 
   useEffect(() => {
     const updateCartCount = () => {
@@ -650,6 +651,14 @@ export function SiteHeader({ initialIsShopHost = false }: { initialIsShopHost?: 
               >
                 {link.label}
               </Link>
+            ) : link.href === "/katalog-roslin" ? (
+              <Link
+                key={link.href}
+                className={navClassName(isActive(pathname, link.href))}
+                href={sitePlantCatalogHref}
+              >
+                {link.label}
+              </Link>
             ) : link.href === "/app" ? (
               <a
                 key={link.href}
@@ -707,6 +716,16 @@ export function SiteHeader({ initialIsShopHost = false }: { initialIsShopHost?: 
                       isActive(pathname, link.href) ? "bg-teal-50 text-teal-700" : "text-slate-700"
                     }`}
                     href={siteAdviceHref}
+                  >
+                    {link.label}
+                  </Link>
+                ) : link.href === "/katalog-roslin" ? (
+                  <Link
+                    key={link.href}
+                    className={`rounded-lg px-3 py-2 text-sm font-semibold hover:bg-slate-50 ${
+                      isActive(pathname, link.href) ? "bg-teal-50 text-teal-700" : "text-slate-700"
+                    }`}
+                    href={sitePlantCatalogHref}
                   >
                     {link.label}
                   </Link>

@@ -1,0 +1,26 @@
+{
+  "slug": "winorosl",
+  "name": "Winorośl",
+  "latinName": "Vitis",
+  "group": "Owoce",
+  "image": "/images/articles/winorosl-uprawa-cover.webp",
+  "imageAlt": "Liść winorośli w tunelu ogrodowym",
+  "summary": "Pnącze owocowe do ciepłego i słonecznego miejsca. Wymaga prowadzenia, cięcia i przewiewu wokół liści.",
+  "difficulty": "średnia",
+  "sun": "Pełne słońce, ciepła ściana lub pergola",
+  "soil": "Przepuszczalna, umiarkowanie żyzna",
+  "water": "Po posadzeniu regularnie, starsze rośliny głęboko w suszy",
+  "spacing": "1-1,5 m między krzewami",
+  "harvest": "Sierpień-październik",
+  "tags": ["pnącze", "pergola", "cięcie"],
+  "calendar": [
+    { "month": "II", "task": "Cięcie zimowe przed ruszeniem soków", "type": "care" },
+    { "month": "V", "task": "Podwiązywanie młodych latorośli", "type": "care" },
+    { "month": "VII", "task": "Prześwietlanie liści wokół gron", "type": "care" },
+    { "month": "IX", "task": "Zbiór dojrzałych gron", "type": "harvest" }
+  ],
+  "problems": ["Mączniak", "Pękanie owoców po deszczach", "Zbyt późne cięcie zimowe"],
+  "relatedArticles": [
+    { "title": "Winorośl - uprawa w ogrodzie", "href": "/porady/owoce-w-ogrodzie/winorosl-uprawa-w-ogrodzie" }
+  ]
+}

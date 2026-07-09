@@ -1,0 +1,27 @@
+{
+  "slug": "truskawka",
+  "name": "Truskawka",
+  "latinName": "Fragaria x ananassa",
+  "group": "Owoce",
+  "image": "/images/articles/truskawka-w-donicy-uprawa-cover.webp",
+  "imageAlt": "Truskawka rosnąca w donicy na tarasie",
+  "summary": "Jedna z najlepszych roślin do startu na balkonie i w ogrodzie. Kluczowe są słońce, podlewanie i żyzna ziemia.",
+  "difficulty": "łatwa",
+  "sun": "Pełne słońce",
+  "soil": "Żyzna, przepuszczalna, lekko kwaśna",
+  "water": "Regularnie, bez zalewania korony rośliny",
+  "spacing": "25-35 cm między sadzonkami",
+  "harvest": "Czerwiec-lipiec, odmiany powtarzające dłużej",
+  "tags": ["balkon", "donica", "owoce dla początkujących"],
+  "calendar": [
+    { "month": "III", "task": "Usunięcie starych liści i lekkie nawożenie", "type": "care" },
+    { "month": "IV", "task": "Sadzenie nowych sadzonek", "type": "start" },
+    { "month": "VI", "task": "Zbiór owoców i regularne podlewanie", "type": "harvest" },
+    { "month": "VIII", "task": "Ukorzenianie rozłogów na nowe sadzonki", "type": "start" }
+  ],
+  "problems": ["Przesychanie donic", "Szara pleśń na owocach", "Słabe owocowanie w cieniu"],
+  "relatedArticles": [
+    { "title": "Truskawka w donicy - uprawa i podlewanie", "href": "/porady/owoce-w-ogrodzie/truskawka-w-donicy-uprawa" },
+    { "title": "Co siejemy w sierpniu", "href": "/porady/wysiew-nasion-i-sadzenie/co-siejemy-w-sierpniu" }
+  ]
+}

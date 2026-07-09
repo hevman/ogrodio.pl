@@ -1,0 +1,27 @@
+{
+  "slug": "borowka-amerykanska",
+  "name": "Borówka amerykańska",
+  "latinName": "Vaccinium corymbosum",
+  "group": "Owoce",
+  "image": "/images/articles/borowka-terminy-dojrzewania-cover.webp",
+  "imageAlt": "Dojrzewające owoce borówki amerykańskiej na krzewie",
+  "summary": "Wymaga kwaśnej ziemi i stabilnej wilgotności. Odwdzięcza się długim zbiorem, jeśli posadzisz kilka odmian o różnych terminach dojrzewania.",
+  "difficulty": "średnia",
+  "sun": "Pełne słońce",
+  "soil": "Kwaśna, przepuszczalna, pH 3,8-4,8",
+  "water": "Często, małymi dawkami; najlepiej deszczówką",
+  "spacing": "1-1,2 m między krzewami",
+  "harvest": "Lipiec-wrzesień",
+  "tags": ["kwaśna ziemia", "owoce deserowe", "odmiany"],
+  "calendar": [
+    { "month": "III", "task": "Cięcie sanitarne i odmładzające starszych pędów", "type": "care" },
+    { "month": "IV", "task": "Uzupełnienie ściółki z kory i kontrola pH", "type": "care" },
+    { "month": "VI", "task": "Stałe podlewanie podczas zawiązywania owoców", "type": "care" },
+    { "month": "VII", "task": "Zbiór odmian wczesnych i średnich", "type": "harvest" }
+  ],
+  "problems": ["Chloroza przy zbyt wysokim pH", "Poparzenia słoneczne liści", "Zasychanie owoców przy suszy"],
+  "relatedArticles": [
+    { "title": "Odmiany borówki - terminy dojrzewania", "href": "/porady/owoce-w-ogrodzie/odmiany-borowki-terminy-dojrzewania" },
+    { "title": "Chloroza borówki i jagody kamczackiej", "href": "/porady/choroby-i-szkodniki/chloroza-borowki-jagody-kamczackiej" }
+  ]
+}

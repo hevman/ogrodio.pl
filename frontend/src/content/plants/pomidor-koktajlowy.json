@@ -1,0 +1,26 @@
+{
+  "slug": "pomidor-koktajlowy",
+  "name": "Pomidor koktajlowy",
+  "latinName": "Solanum lycopersicum var. cerasiforme",
+  "group": "Warzywnik",
+  "image": "/images/articles/pomidory-koktajlowe-donica-cover.webp",
+  "imageAlt": "Pomidory koktajlowe uprawiane w donicy na balkonie",
+  "summary": "Dobry wybór na balkon i taras. Potrzebuje słońca, dużej donicy, podpory i regularnego nawożenia.",
+  "difficulty": "średnia",
+  "sun": "Pełne słońce, osłona przed deszczem",
+  "soil": "Żyzna ziemia warzywna, donica minimum 10-15 l",
+  "water": "Regularnie, najlepiej rano pod korzeń",
+  "spacing": "Jedna roślina na dużą donicę",
+  "harvest": "Lipiec-październik",
+  "tags": ["balkon", "donica", "ciepłolubny"],
+  "calendar": [
+    { "month": "III", "task": "Wysiew rozsady w domu", "type": "start" },
+    { "month": "V", "task": "Sadzenie po zimnych ogrodnikach", "type": "start" },
+    { "month": "VI", "task": "Podwiązywanie i nawożenie potasem", "type": "care" },
+    { "month": "VII", "task": "Zbiór pierwszych gron", "type": "harvest" }
+  ],
+  "problems": ["Pękanie owoców po nierównym podlewaniu", "Zaraza ziemniaczana", "Niedobory w małej donicy"],
+  "relatedArticles": [
+    { "title": "Pomidory koktajlowe w donicy", "href": "/porady/warzywnik/pomidory-koktajlowe-w-donicy" }
+  ]
+}

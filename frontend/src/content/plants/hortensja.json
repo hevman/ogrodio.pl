@@ -1,0 +1,27 @@
+{
+  "slug": "hortensja",
+  "name": "Hortensja",
+  "latinName": "Hydrangea",
+  "group": "Rośliny ozdobne",
+  "image": "/images/articles/hortensja-niebieska-cover.webp",
+  "imageAlt": "Niebieska hortensja ogrodowa w pełni kwitnienia",
+  "summary": "Efektowny krzew do półcienia i żyznej, wilgotnej gleby. Gatunek ma znaczenie, bo hortensje ogrodowe i bukietowe tnie się inaczej.",
+  "difficulty": "średnia",
+  "sun": "Półcień lub łagodne słońce rano",
+  "soil": "Próchnicza, wilgotna, lekko kwaśna",
+  "water": "Często w czasie upałów i kwitnienia",
+  "spacing": "1-1,5 m zależnie od odmiany",
+  "harvest": "Kwitnienie: czerwiec-wrzesień",
+  "tags": ["krzew ozdobny", "półcień", "kwiaty"],
+  "calendar": [
+    { "month": "III", "task": "Cięcie zgodne z gatunkiem i usunięcie suchych kwiatostanów", "type": "care" },
+    { "month": "IV", "task": "Nawożenie dla hortensji i ściółka", "type": "care" },
+    { "month": "VII", "task": "Podlewanie w upały, kontrola więdnięcia", "type": "care" },
+    { "month": "XI", "task": "Okrycie wrażliwych odmian ogrodowych", "type": "care" }
+  ],
+  "problems": ["Przemarzanie pąków", "Więdnięcie w upały", "Zły termin cięcia"],
+  "relatedArticles": [
+    { "title": "Hortensja w ogrodzie - uprawa i cięcie", "href": "/porady/pielegnacja/hortensja-uprawa-pielegnacja" },
+    { "title": "Hortensja bukietowa - uprawa i cięcie", "href": "/porady/rosliny-ozdobne/hortensja-bukietowa-uprawa-ciecie-limonkowe-kwiaty" }
+  ]
+}

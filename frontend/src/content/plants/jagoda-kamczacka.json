@@ -1,0 +1,27 @@
+{
+  "slug": "jagoda-kamczacka",
+  "name": "Jagoda kamczacka",
+  "latinName": "Lonicera caerulea var. kamtschatica",
+  "group": "Owoce",
+  "image": "/images/articles/jagoda-kamczacka-krzew.webp",
+  "imageAlt": "Krzew jagody kamczackiej z owocami",
+  "summary": "Bardzo wczesny i odporny krzew owocowy. Dla dobrego plonu potrzebuje drugiej odmiany kwitnącej w tym samym czasie.",
+  "difficulty": "łatwa",
+  "sun": "Słońce lub lekki półcień",
+  "soil": "Próchnicza, lekko kwaśna do obojętnej",
+  "water": "Umiarkowanie, szczególnie po posadzeniu",
+  "spacing": "1-1,5 m między krzewami",
+  "harvest": "Maj-czerwiec",
+  "tags": ["wczesne owoce", "mrozoodporna", "zapylanie"],
+  "calendar": [
+    { "month": "III", "task": "Kontrola pąków i ściółka pod krzewami", "type": "care" },
+    { "month": "IV", "task": "Obserwacja kwitnienia i aktywności zapylaczy", "type": "care" },
+    { "month": "V", "task": "Zbiór pierwszych owoców", "type": "harvest" },
+    { "month": "VIII", "task": "Delikatne cięcie po zbiorach, jeśli krzew jest zagęszczony", "type": "care" }
+  ],
+  "problems": ["Słabe zapylenie bez drugiej odmiany", "Opadanie owoców po dojrzeniu", "Chloroza na złym stanowisku"],
+  "relatedArticles": [
+    { "title": "Jagoda kamczacka - uprawa i pielęgnacja", "href": "/porady/owoce-w-ogrodzie/jagoda-kamczacka-uprawa-i-pielegnacja" },
+    { "title": "Jagoda kamczacka - kwitnienie i zapylanie", "href": "/porady/owoce-w-ogrodzie/jagoda-kamczacka-kwitnienie-zapylanie" }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "slug": "roza-pnaca",
+  "name": "Róża pnąca",
+  "latinName": "Rosa",
+  "group": "Rośliny ozdobne",
+  "image": "/images/articles/roza-pnaca-cover.webp",
+  "imageAlt": "Różowa róża pnąca w pełnym kwitnieniu",
+  "summary": "Efektowna roślina na pergolę, łuk lub ścianę. Potrzebuje słońca, przewiewu i cierpliwego prowadzenia pędów.",
+  "difficulty": "średnia",
+  "sun": "Słońce, przewiewne miejsce",
+  "soil": "Żyzna, głęboka, lekko gliniasta",
+  "water": "Rzadziej, ale obficie pod korzeń",
+  "spacing": "1,5-2 m od kolejnej róży",
+  "harvest": "Kwitnienie: czerwiec-wrzesień",
+  "tags": ["pergola", "kwiaty", "cięcie"],
+  "calendar": [
+    { "month": "III", "task": "Usunięcie martwych pędów i kontrola podpór", "type": "care" },
+    { "month": "IV", "task": "Nawożenie i ściółka", "type": "care" },
+    { "month": "VI", "task": "Usuwanie przekwitłych kwiatów", "type": "care" },
+    { "month": "XI", "task": "Kopczykowanie podstawy przed zimą", "type": "care" }
+  ],
+  "problems": ["Czarna plamistość", "Mszyce", "Przemarzanie młodych pędów"],
+  "relatedArticles": [
+    { "title": "Róża pnąca - uprawa, cięcie i pielęgnacja", "href": "/porady/pielegnacja/roza-pnaca-uprawa-i-pielegnacja" }
+  ]
+}

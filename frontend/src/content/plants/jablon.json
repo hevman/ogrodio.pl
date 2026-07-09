@@ -1,0 +1,26 @@
+{
+  "slug": "jablon",
+  "name": "Jabłoń",
+  "latinName": "Malus domestica",
+  "group": "Owoce",
+  "image": "/images/articles/jablonie-sad-cover.webp",
+  "imageAlt": "Jabłonie w przydomowym sadzie",
+  "summary": "Podstawowe drzewo sadu przydomowego. Wymaga światła, cięcia i obserwacji chorób, ale potrafi dać plon przez dekady.",
+  "difficulty": "średnia",
+  "sun": "Pełne słońce",
+  "soil": "Żyzna, umiarkowanie wilgotna, bez zastoin wody",
+  "water": "Najważniejsze po posadzeniu i w czasie suszy",
+  "spacing": "2-4 m zależnie od podkładki",
+  "harvest": "Sierpień-październik",
+  "tags": ["sad", "drzewo owocowe", "cięcie"],
+  "calendar": [
+    { "month": "II", "task": "Cięcie prześwietlające w suchy dzień", "type": "care" },
+    { "month": "IV", "task": "Obserwacja kwitnienia i ochrona przed przymrozkiem", "type": "care" },
+    { "month": "VI", "task": "Przerzedzanie zawiązków przy nadmiarze owoców", "type": "care" },
+    { "month": "IX", "task": "Zbiór odmian jesiennych", "type": "harvest" }
+  ],
+  "problems": ["Parch jabłoni", "Owocówka jabłkóweczka", "Zbyt gęsta korona"],
+  "relatedArticles": [
+    { "title": "Jabłonie w sadzie - pielęgnacja i cięcie", "href": "/porady/owoce-w-ogrodzie/jablonie-pielegnacja-sadu" }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "slug": "czarna-porzeczka",
+  "name": "Czarna porzeczka",
+  "latinName": "Ribes nigrum",
+  "group": "Owoce",
+  "image": "/images/articles/czarna-porzeczka-uprawa-cover.webp",
+  "imageAlt": "Czarna porzeczka z dojrzałymi owocami",
+  "summary": "Krzew owocowy o mocnym aromacie i wysokiej odporności. Najlepiej owocuje na młodych, dobrze doświetlonych pędach.",
+  "difficulty": "łatwa",
+  "sun": "Słońce lub lekki półcień",
+  "soil": "Żyzna, lekko kwaśna, stale umiarkowanie wilgotna",
+  "water": "Regularnie w maju i czerwcu",
+  "spacing": "1,2-1,5 m między krzewami",
+  "harvest": "Lipiec",
+  "tags": ["krzew owocowy", "sok", "mrozoodporna"],
+  "calendar": [
+    { "month": "II", "task": "Cięcie najstarszych pędów przy ziemi", "type": "care" },
+    { "month": "IV", "task": "Ściółkowanie i kompost pod krzew", "type": "care" },
+    { "month": "VI", "task": "Kontrola mszyc i podlewanie", "type": "care" },
+    { "month": "VII", "task": "Zbiór całych gron owoców", "type": "harvest" }
+  ],
+  "problems": ["Mszyca porzeczkowo-czyściecowa", "Zagęszczenie krzewu", "Słabszy plon na starych pędach"],
+  "relatedArticles": [
+    { "title": "Czarna porzeczka - uprawa i zbiory", "href": "/porady/owoce-w-ogrodzie/czarna-porzeczka-uprawa-pielegnacja-zbiory" },
+    { "title": "Mszyca galasówka porzeczki", "href": "/porady/choroby-i-szkodniki/mszyca-galasowka-porzeczki" }
+  ]
+}

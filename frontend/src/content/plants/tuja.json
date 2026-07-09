@@ -1,0 +1,26 @@
+{
+  "slug": "tuja",
+  "name": "Tuja",
+  "latinName": "Thuja",
+  "group": "Iglaki",
+  "image": "/images/articles/tuja-zolte-szyszki-kwitnienie-cover.webp",
+  "imageAlt": "Tuja z żółtymi zawiązkami szyszek na pędach",
+  "summary": "Popularny iglak żywopłotowy. Najważniejsze są podlewanie po posadzeniu, ściółka i spokojne cięcie formujące.",
+  "difficulty": "łatwa",
+  "sun": "Słońce lub lekki półcień",
+  "soil": "Przeciętna ogrodowa, umiarkowanie wilgotna",
+  "water": "Regularnie po posadzeniu i przed zimą",
+  "spacing": "50-80 cm w żywopłocie zależnie od odmiany",
+  "harvest": "Dekoracyjna cały rok",
+  "tags": ["żywopłot", "iglak", "zimozielona"],
+  "calendar": [
+    { "month": "III", "task": "Kontrola brązowienia i podlewanie po suchej zimie", "type": "care" },
+    { "month": "IV", "task": "Nawożenie iglaków i uzupełnienie ściółki", "type": "care" },
+    { "month": "VI", "task": "Lekkie cięcie formujące żywopłot", "type": "care" },
+    { "month": "X", "task": "Podlewanie przed zimą przy suchej jesieni", "type": "care" }
+  ],
+  "problems": ["Susza fizjologiczna", "Zbyt mocne cięcie w stare drewno", "Szyszkowanie mylone z chorobą"],
+  "relatedArticles": [
+    { "title": "Tuja - żółte szyszki i kwitnienie", "href": "/porady/rosliny-ozdobne/tuja-zolte-szyszki-kwitnienie" }
+  ]
+}

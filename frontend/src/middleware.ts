@@ -14,6 +14,7 @@ const SHOP_ROUTE_PREFIXES = [
 
 const MAIN_SITE_ROUTE_PREFIXES = [
   "/porady",
+  "/katalog-roslin",
   "/o-nas",
   "/kontakt",
   "/polityka-redakcyjna",
@@ -160,6 +161,8 @@ export const config = {
     "/sklep/:path*",
     "/porady",
     "/porady/:path*",
+    "/katalog-roslin",
+    "/katalog-roslin/:path*",
     "/o-nas",
     "/kontakt",
     "/polityka-redakcyjna",
