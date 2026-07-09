@@ -45,7 +45,14 @@ export function PlantIntelligencePanel({ plant, appAddUrl, variant = "catalog" }
       <section className={`rounded-2xl border p-5 shadow-sm sm:p-6 ${panelBg}`}>
         <div className="flex flex-col gap-5 md:flex-row md:items-start md:justify-between">
           <div className="min-w-0 flex-1">
-            <p className={`text-sm font-bold uppercase tracking-wide ${accentText}`}>Ogrodio Plant Intelligence</p>
+            <p className={`text-sm font-bold uppercase tracking-wide ${accentText}`}>
+              Ogrodio Plant Intelligence
+              {variant === "catalog" ? (
+                <Link className="ml-2 font-semibold normal-case underline" href="/ogrodio-plant-intelligence">
+                  więcej o Ogrodio Plant Intelligence
+                </Link>
+              ) : null}
+            </p>
             <h2 className="mt-2 text-2xl font-bold text-slate-900">{intelligence.actionWindow.label}: co zrobić</h2>
             <div className="mt-4 grid gap-3">
               {intelligence.actionWindow.entries.map((entry) => (

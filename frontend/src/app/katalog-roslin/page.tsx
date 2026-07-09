@@ -80,10 +80,17 @@ export default function PlantCatalogPage() {
             </div>
 
             <aside className="rounded-2xl border border-slate-200 bg-[#f4f7f2] p-5">
-              <p className="text-sm font-bold uppercase tracking-wide text-teal-700">Wyróżnik</p>
+              <p className="text-sm font-bold uppercase tracking-wide text-teal-700">Ogrodio Plant Intelligence</p>
               <p className="mt-2 text-sm leading-6 text-slate-700">
-                Każda karta łączy zdjęcie, najważniejsze warunki, kalendarz prac i przejścia do poradników. To baza pod późniejsze przypomnienia w aplikacji.
+                Własny system sezonowej wiedzy: kalendarz na cały rok, ryzyka i powiązania z poradnikami — w katalogu i aplikacji.
               </p>
+              <Link
+                className="mt-4 inline-flex items-center gap-2 text-sm font-bold text-teal-700 transition hover:text-teal-900"
+                href="/ogrodio-plant-intelligence"
+              >
+                Jak działa Ogrodio Plant Intelligence
+                <ArrowUpRight className="h-4 w-4" />
+              </Link>
             </aside>
           </div>
 

@@ -15,6 +15,7 @@ const SHOP_ROUTE_PREFIXES = [
 const MAIN_SITE_ROUTE_PREFIXES = [
   "/porady",
   "/katalog-roslin",
+  "/ogrodio-plant-intelligence",
   "/o-nas",
   "/kontakt",
   "/polityka-redakcyjna",
@@ -162,6 +163,7 @@ export const config = {
     "/porady",
     "/porady/:path*",
     "/katalog-roslin",
+    "/ogrodio-plant-intelligence",
     "/katalog-roslin/:path*",
     "/o-nas",
     "/kontakt",

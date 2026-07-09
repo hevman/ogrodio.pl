@@ -30,7 +30,16 @@ const nextConfig: NextConfig = {
   },
   async rewrites() {
     return [];
-  }
+  },
+  async redirects() {
+    return [
+      {
+        source: "/plant-intelligence",
+        destination: "/ogrodio-plant-intelligence",
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;
