@@ -1,6 +1,7 @@
 import { BadRequestException, Injectable, NotFoundException } from "@nestjs/common";
+import { existsSync, readdirSync, readFileSync } from "fs";
 import { mkdir } from "fs/promises";
-import { join } from "path";
+import { join, resolve } from "path";
 import { randomUUID } from "crypto";
 import { DatabaseService } from "../database/database.service";
 
@@ -8,6 +9,7 @@ const sharp = require("sharp");
 
 type PlantDefinition = {
   type: string;
+  aliases?: string[];
   label: string;
   category: string;
   defaultName: string;
@@ -20,7 +22,24 @@ type TaskTemplate = {
   title: string;
   description: string;
   priority: "low" | "medium" | "high";
-  kind: "watering" | "fertilizing" | "cutting" | "inspection" | "protection";
+  kind: "watering" | "fertilizing" | "cutting" | "inspection" | "protection" | "custom";
+};
+
+type PlantCatalogJson = {
+  slug: string;
+  appAliases?: string[];
+  name: string;
+  group: string;
+  summary: string;
+  tags?: string[];
+  water?: string;
+  calendar?: {
+    month: string;
+    task: string;
+    type: "start" | "care" | "harvest";
+  }[];
+  problems?: string[];
+  relatedArticles?: { title: string; href: string }[];
 };
 
 function slug(value: string) {
@@ -31,82 +50,104 @@ function templateId(task: TaskTemplate) {
   return `${task.kind}-${slug(task.title)}`;
 }
 
-const PLANTS: PlantDefinition[] = [
-  { type: "borowka", label: "Borówka amerykańska", category: "Owoce", defaultName: "Borówka", articleKeywords: ["borów", "jagod", "owoce"] },
-  { type: "agrest", label: "Agrest", category: "Owoce", defaultName: "Agrest", articleKeywords: ["agrest", "owoce"] },
-  { type: "porzeczka", label: "Porzeczka", category: "Owoce", defaultName: "Porzeczka", articleKeywords: ["porzecz", "owoce"] },
-  { type: "jagoda-kamczacka", label: "Jagoda kamczacka", category: "Owoce", defaultName: "Jagoda kamczacka", articleKeywords: ["jagoda", "kamczack", "owoce"] },
-  { type: "trawnik", label: "Trawnik", category: "Trawnik", defaultName: "Trawnik", articleKeywords: ["trawnik"] },
-  { type: "czeresnia-wisnia", label: "Czereśnia / wiśnia", category: "Drzewa owocowe", defaultName: "Drzewo pestkowe", articleKeywords: ["czeres", "wiśn", "pestkow", "drzewa"] },
-];
+const monthNumbers: Record<string, number> = {
+  I: 1,
+  II: 2,
+  III: 3,
+  IV: 4,
+  V: 5,
+  VI: 6,
+  VII: 7,
+  VIII: 8,
+  IX: 9,
+  X: 10,
+  XI: 11,
+  XII: 12,
+};
 
-const TASKS: TaskTemplate[] = [
-  {
-    plantTypes: ["borowka"],
-    months: [5, 6, 7, 8],
-    title: "Sprawdź wilgotność podłoża borówki",
-    description: "Borówka ma płytki system korzeniowy. Jeśli wierzchnia warstwa jest sucha, podlej glebę, nie liście.",
-    priority: "high",
-    kind: "watering",
-  },
-  {
-    plantTypes: ["borowka"],
-    months: [5, 6, 7],
-    title: "Obejrzyj owoce i młode przyrosty",
-    description: "Szukaj mszyc, wciórniastków, zasychających jagód i objawów szarej pleśni po deszczu.",
-    priority: "medium",
-    kind: "inspection",
-  },
-  {
-    plantTypes: ["borowka", "agrest", "porzeczka"],
-    months: [3, 4],
-    title: "Cięcie sanitarne i przeswietlające",
-    description: "Usuń pędy chore, leżące na ziemi i zagęszczające środek krzewu. Poprawisz przewiew i ograniczysz choroby.",
-    priority: "medium",
-    kind: "cutting",
-  },
-  {
-    plantTypes: ["agrest", "porzeczka"],
-    months: [5, 6],
-    title: "Kontrola mszyc i zniekształconych liści",
-    description: "Sprawdź spód liści i wierzchołki pędów. Przy pierwszych koloniach reaguj szybko, zanim liście mocno się zdeformują.",
-    priority: "high",
-    kind: "inspection",
-  },
-  {
-    plantTypes: ["jagoda-kamczacka"],
-    months: [2, 3, 4],
-    title: "Pilnuj wczesnego kwitnienia jagody",
-    description: "Jagoda kamczacka startuje bardzo wcześnie. Przy zapowiadanym mrozie zabezpiecz kwiaty agrowłókniną.",
-    priority: "medium",
-    kind: "protection",
-  },
-  {
-    plantTypes: ["trawnik"],
-    months: [3, 4, 5],
-    title: "Regeneracja trawnika po zimie",
-    description: "Wygrab filc, dosiej puste miejsca i rozpocznij nawożenie, gdy trawa aktywnie ruszy ze wzrostem.",
-    priority: "medium",
-    kind: "fertilizing",
-  },
-  {
-    plantTypes: ["trawnik"],
-    months: [6, 7, 8],
-    title: "Podlewaj trawnik rzadziej, ale głęboko",
-    description: "Lepiej podlać mocniej 2–3 razy w tygodniu niż codziennie płytko. To wzmacnia korzenie.",
-    priority: "high",
-    kind: "watering",
-  },
-  {
-    plantTypes: ["czeresnia-wisnia"],
-    months: [5, 6, 7],
-    title: "Szukaj plam na liściach pestkowych",
-    description: "Po deszczach sprawdź drobną plamistość liści. Wczesna reakcja ogranicza przedwczesne opadanie liści.",
-    priority: "medium",
-    kind: "inspection",
-  },
-];
+function plantCatalogDir() {
+  const candidates = [
+    process.env.PLANT_CATALOG_DIR,
+    join(process.cwd(), "content", "plants"),
+    resolve(process.cwd(), "..", "frontend", "src", "content", "plants"),
+    resolve(process.cwd(), "frontend", "src", "content", "plants"),
+  ].filter(Boolean) as string[];
+  return candidates.find((candidate) => existsSync(candidate));
+}
 
+function loadPlantCatalogJson() {
+  const dir = plantCatalogDir();
+  if (!dir) return [];
+  return readdirSync(dir)
+    .filter((file) => file.endsWith(".json"))
+    .sort()
+    .map((file) => JSON.parse(readFileSync(join(dir, file), "utf8")) as PlantCatalogJson)
+    .filter((plant) => plant.slug && plant.name);
+}
+
+function articleKeywords(plant: PlantCatalogJson) {
+  return Array.from(new Set([
+    plant.slug,
+    ...plant.slug.split("-"),
+    plant.name.toLowerCase(),
+    ...plant.name.toLowerCase().split(/\s+/),
+    plant.group.toLowerCase(),
+    ...(plant.tags || []),
+    ...(plant.problems || []).flatMap((problem) => problem.toLowerCase().split(/\s+/)),
+  ].map((keyword) => keyword.trim()).filter((keyword) => keyword.length >= 3)));
+}
+
+function taskKind(task: string, type: NonNullable<PlantCatalogJson["calendar"]>[number]["type"]): TaskTemplate["kind"] {
+  const value = task.toLowerCase();
+  if (value.includes("podle")) return "watering";
+  if (value.includes("nawo") || value.includes("kompost")) return "fertilizing";
+  if (value.includes("ci\u0119") || value.includes("cie") || value.includes("przyci")) return "cutting";
+  if (value.includes("kontrol") || value.includes("obserw") || value.includes("sprawd")) return "inspection";
+  if (value.includes("okry") || value.includes("zabezpie") || value.includes("mroz")) return "protection";
+  if (type === "care") return "inspection";
+  return "custom";
+}
+
+function taskPriority(kind: TaskTemplate["kind"], type: NonNullable<PlantCatalogJson["calendar"]>[number]["type"]): TaskTemplate["priority"] {
+  if (kind === "watering" || kind === "protection") return "high";
+  if (type === "harvest") return "medium";
+  return "medium";
+}
+
+function plantTypes(plant: PlantCatalogJson) {
+  return [plant.slug, ...(plant.appAliases || [])];
+}
+
+const PLANT_CATALOG = loadPlantCatalogJson();
+
+const PLANTS: PlantDefinition[] = PLANT_CATALOG.map((plant) => ({
+  type: plant.slug,
+  aliases: plant.appAliases || [],
+  label: plant.name,
+  category: plant.group,
+  defaultName: plant.name,
+  articleKeywords: articleKeywords(plant),
+}));
+
+function plantDefinitionForType(type: string) {
+  return PLANTS.find((plant) => plant.type === type || (plant.aliases || []).includes(type));
+}
+
+const TASKS: TaskTemplate[] = PLANT_CATALOG.flatMap((plant) =>
+  (plant.calendar || []).flatMap((entry) => {
+    const month = monthNumbers[entry.month];
+    if (!month) return [];
+    const kind = taskKind(entry.task, entry.type);
+    return [{
+      plantTypes: plantTypes(plant),
+      months: [month],
+      title: entry.task,
+      description: `${plant.name}: ${entry.task}. ${plant.summary}`,
+      priority: taskPriority(kind, entry.type),
+      kind,
+    }];
+  }),
+);
 @Injectable()
 export class GardenAssistantService {
   constructor(private readonly db: DatabaseService) {}
@@ -777,7 +818,7 @@ export class GardenAssistantService {
     const organization = await this.ensureDefaultOrganization(userId);
     this.assertCanWrite(organization);
     const plantType = String(body?.plantType || body?.plant_type || "").trim();
-    const definition = PLANTS.find((plant) => plant.type === plantType);
+    const definition = plantDefinitionForType(plantType);
     if (!definition) {
       throw new BadRequestException("Wybierz rosline z katalogu");
     }
@@ -1184,7 +1225,7 @@ export class GardenAssistantService {
   async recommendations(userId: number) {
     const plants = await this.plants(userId);
     const plantTypes = Array.from(new Set(plants.map((plant: any) => plant.plantType)));
-    const keywords = plantTypes.flatMap((type) => PLANTS.find((plant) => plant.type === type)?.articleKeywords || []);
+    const keywords = plantTypes.flatMap((type) => plantDefinitionForType(type)?.articleKeywords || []);
 
     if (!keywords.length) {
       const fallback = await this.db.query(

@@ -24,6 +24,7 @@ export type PlantCalendarType = "start" | "care" | "harvest";
 
 export type PlantCatalogItem = {
   slug: string;
+  appAliases?: string[];
   name: string;
   latinName: string;
   group: string;
