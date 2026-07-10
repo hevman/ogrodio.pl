@@ -141,6 +141,34 @@ export default async function PlantPage({ params }: Props) {
                   Podlewanie: {plant.water.toLowerCase()}. Przy planowaniu miejsca zostaw {plant.spacing.toLowerCase()}, a efekt lub zbiory przypadają na: {plant.harvest.toLowerCase()}.
                 </p>
               </div>
+              {(plant.careProfile.goodFor?.length || plant.careProfile.avoid?.length) ? (
+                <div className="mt-5 grid gap-4 sm:grid-cols-2">
+                  {plant.careProfile.goodFor?.length ? (
+                    <div className="rounded-xl bg-emerald-50 p-4">
+                      <p className="text-xs font-black uppercase tracking-wide text-emerald-800">Dobrze pasuje</p>
+                      <div className="mt-3 flex flex-wrap gap-2">
+                        {plant.careProfile.goodFor.map((item) => (
+                          <span className="rounded-full bg-white px-2.5 py-1 text-xs font-bold text-emerald-800" key={item}>
+                            {item}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                  ) : null}
+                  {plant.careProfile.avoid?.length ? (
+                    <div className="rounded-xl bg-rose-50 p-4">
+                      <p className="text-xs font-black uppercase tracking-wide text-rose-800">Unikaj</p>
+                      <div className="mt-3 flex flex-wrap gap-2">
+                        {plant.careProfile.avoid.map((item) => (
+                          <span className="rounded-full bg-white px-2.5 py-1 text-xs font-bold text-rose-800" key={item}>
+                            {item}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                  ) : null}
+                </div>
+              ) : null}
             </section>
 
             <section className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-6">
@@ -180,6 +208,21 @@ export default async function PlantPage({ params }: Props) {
                 ))}
               </div>
             </section>
+
+            {plant.faqs.length > 0 ? (
+              <section className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-6">
+                <p className="text-sm font-bold uppercase tracking-wide text-teal-700">Najczęstsze pytania</p>
+                <h2 className="mt-1 text-2xl font-bold text-slate-900">Krótko i praktycznie</h2>
+                <div className="mt-5 divide-y divide-slate-200">
+                  {plant.faqs.map((item) => (
+                    <div className="py-4 first:pt-0 last:pb-0" key={item.question}>
+                      <h3 className="font-bold text-slate-900">{item.question}</h3>
+                      <p className="mt-2 text-sm leading-6 text-slate-700">{item.answer}</p>
+                    </div>
+                  ))}
+                </div>
+              </section>
+            ) : null}
 
             {plant.relatedArticles.length > 0 ? (
               <section className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-6">

@@ -46,6 +46,44 @@ export const plantVarietySchema = z.object({
   notes: z.string().optional(),
 });
 
+export const plantCareProfileSchema = z.object({
+  soilPh: z.string().optional(),
+  height: z.string().optional(),
+  lifeCycle: z.string().optional(),
+  hardiness: z.string().optional(),
+  container: z.string().optional(),
+  goodFor: z.array(z.string()).optional().default([]),
+  avoid: z.array(z.string()).optional().default([]),
+}).optional().default({ goodFor: [], avoid: [] });
+
+export const plantCareGuideSchema = z.object({
+  sowingOrPlanting: z.string().optional(),
+  watering: z.string().optional(),
+  feeding: z.string().optional(),
+  pruning: z.string().optional(),
+  wintering: z.string().optional(),
+  harvest: z.string().optional(),
+}).optional().default({});
+
+export const plantSignalSchema = z.object({
+  title: z.string(),
+  means: z.string(),
+  action: z.string(),
+  months: z.array(romanMonthSchema).optional(),
+  articleHref: z.string().nullable().optional(),
+});
+
+export const plantFaqSchema = z.object({
+  question: z.string(),
+  answer: z.string(),
+});
+
+export const plantAppHintSchema = z.object({
+  reminderLeadDays: z.number().int().min(0).max(21).optional(),
+  defaultPriority: z.enum(["low", "medium", "high"]).optional(),
+  journalPrompts: z.array(z.string()).optional().default([]),
+}).optional().default({ journalPrompts: [] });
+
 export const plantRelatedArticleSchema = z.object({
   title: z.string(),
   href: z.string(),
@@ -71,6 +109,12 @@ export const plantCatalogRawSchema = z.object({
   problems: z.array(plantProblemSchema),
   risks: z.array(plantRiskSchema).optional().default([]),
   varieties: z.array(plantVarietySchema).optional().default([]),
+  careProfile: plantCareProfileSchema,
+  careGuide: plantCareGuideSchema,
+  signals: z.array(plantSignalSchema).optional().default([]),
+  faqs: z.array(plantFaqSchema).optional().default([]),
+  appHints: plantAppHintSchema,
+  searchIntents: z.array(z.string()).optional().default([]),
   relatedArticles: z.array(plantRelatedArticleSchema),
 });
 
@@ -79,6 +123,11 @@ export type PlantCalendarEntry = PlantCalendarTask & { month: RomanMonth };
 export type PlantRisk = z.infer<typeof plantRiskSchema>;
 export type PlantProblem = z.infer<typeof plantProblemSchema>;
 export type PlantVariety = z.infer<typeof plantVarietySchema>;
+export type PlantCareProfile = z.infer<typeof plantCareProfileSchema>;
+export type PlantCareGuide = z.infer<typeof plantCareGuideSchema>;
+export type PlantSignal = z.infer<typeof plantSignalSchema>;
+export type PlantFaq = z.infer<typeof plantFaqSchema>;
+export type PlantAppHint = z.infer<typeof plantAppHintSchema>;
 export type PlantCatalogRaw = z.infer<typeof plantCatalogRawSchema>;
 
 export type PlantCatalogItem = Omit<PlantCatalogRaw, "calendar" | "problems"> & {

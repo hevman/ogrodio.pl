@@ -36,5 +36,11 @@ export function normalizePlantCatalogItem(raw: PlantCatalogRaw): PlantCatalogIte
     problems: raw.problems,
     risks: raw.risks ?? [],
     varieties: raw.varieties ?? [],
+    careProfile: raw.careProfile ?? {},
+    careGuide: raw.careGuide ?? {},
+    signals: raw.signals ?? [],
+    faqs: raw.faqs ?? [],
+    appHints: raw.appHints ?? {},
+    searchIntents: raw.searchIntents ?? [],
   };
 }

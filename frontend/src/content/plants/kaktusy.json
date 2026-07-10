@@ -166,5 +166,97 @@
       "articleHref": null
     }
   ],
-  "varieties": []
+  "varieties": [],
+  "careProfile": {
+    "soilPh": "zale?nie od gatunku",
+    "height": "zale?nie od odmiany",
+    "lifeCycle": "ro?lina wieloletnia ozdobna",
+    "hardiness": "zale?na od gatunku i stanowiska",
+    "container": "mo?liwa przy du?ej donicy i regularnym podlewaniu",
+    "goodFor": [
+      "rabata reprezentacyjna",
+      "ogr?d przy tarasie",
+      "kompozycje wieloletnie"
+    ],
+    "avoid": [
+      "przesuszenie po posadzeniu",
+      "brak ci?cia piel?gnacyjnego",
+      "stanowisko niezgodne z wymaganiami"
+    ]
+  },
+  "careGuide": {
+    "sowingOrPlanting": "Sad? w miejscu zgodnym z wymaganiami ?wiat?a i gleby. Po posadzeniu podlewaj regularnie przez pierwsze tygodnie.",
+    "watering": "M?ode ro?liny podlewaj systematycznie, starsze g??biej podczas d?u?szej suszy.",
+    "feeding": "Wiosn? u?yj kompostu lub nawozu dopasowanego do gatunku. Nie przeci?gaj nawo?enia azotowego do jesieni.",
+    "pruning": "Usuwaj p?dy chore, przekwit?e lub deformuj?ce pokr?j. Termin ci?cia zale?y od gatunku.",
+    "wintering": "Przed zim? ?ci??kuj podstaw? i zabezpieczaj tylko gatunki wra?liwe.",
+    "harvest": "Efektem jest kwitnienie, pokr?j albo zimozielona struktura. Obserwuj termin kwitnienia i kondycj? li?ci."
+  },
+  "signals": [
+    {
+      "title": "S?aby wzrost po posadzeniu",
+      "means": "Ro?lina mo?e budowa? korzenie albo mie? ?le dobrane stanowisko.",
+      "action": "Sprawd? wilgotno?? i ?wiat?o, nie przyspieszaj jej nadmiarem nawozu.",
+      "months": [
+        "IV",
+        "V",
+        "VI"
+      ],
+      "articleHref": null
+    },
+    {
+      "title": "Br?zowienie lub zasychanie li?ci",
+      "means": "Najcz??ciej to stres suszy, wiatru, mokrego pod?o?a albo zimy.",
+      "action": "Por?wnaj objaw z wymaganiami ro?liny i popraw wod?, drena? lub os?on?.",
+      "months": [
+        "III",
+        "IV",
+        "VI",
+        "VII",
+        "VIII"
+      ],
+      "articleHref": null
+    },
+    {
+      "title": "Ro?lina traci pokr?j",
+      "means": "Mo?e wymaga? ci?cia, odm?odzenia albo wi?kszej ilo?ci ?wiat?a.",
+      "action": "Zaplanuj lekkie ci?cie w terminie w?a?ciwym dla gatunku.",
+      "months": [
+        "V",
+        "VI",
+        "VII",
+        "VIII"
+      ],
+      "articleHref": null
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Czy kaktusy nadaje si? dla pocz?tkuj?cych?",
+      "answer": "Tak, je?li dobierzesz stanowisko zgodne z wymaganiami: bardzo jasno, najlepiej parapet południowy."
+    },
+    {
+      "question": "Co najcz??ciej psuje efekt uprawy?",
+      "answer": "Najcz??ciej problemem jest woda: rzadko; dopiero po przeschnięciu podłoża."
+    },
+    {
+      "question": "Kiedy zapisa? przypomnienie w aplikacji?",
+      "answer": "Najlepiej przed najwa?niejszym terminem z kalendarza oraz w czasie ryzyk sezonowych."
+    }
+  ],
+  "appHints": {
+    "reminderLeadDays": 4,
+    "defaultPriority": "medium",
+    "journalPrompts": [
+      "Zapisz obserwacj?: Kaktusy.",
+      "Dodaj zdj?cie, je?li wygl?d li?ci albo p?d?w si? zmienia.",
+      "Oznacz wykonane podlewanie, ci?cie, nawo?enie lub zbi?r."
+    ]
+  },
+  "searchIntents": [
+    "Kaktusy uprawa",
+    "Kaktusy wymagania",
+    "Kaktusy problemy",
+    "Kaktusy kalendarz prac"
+  ]
 }

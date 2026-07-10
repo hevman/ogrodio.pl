@@ -184,5 +184,110 @@
       "articleHref": null
     }
   ],
-  "varieties": []
+  "varieties": [
+    {
+      "name": "Honeoye",
+      "harvest": "VI",
+      "notes": "Wczesna, dobra na szybki pierwszy zbi?r."
+    },
+    {
+      "name": "Polka",
+      "harvest": "VI-VII",
+      "notes": "Popularna i do?? odporna w ogrodach amatorskich."
+    },
+    {
+      "name": "Ostara",
+      "harvest": "VI-IX",
+      "notes": "Powtarza owocowanie, dobra do donic."
+    }
+  ],
+  "careProfile": {
+    "soilPh": "5,5-6,5",
+    "height": "15-30 cm",
+    "lifeCycle": "bylina owocowa, zwykle prowadzona 3-4 sezony",
+    "hardiness": "zimuje w gruncie; w donicy wymaga os?ony bry?y korzeniowej",
+    "container": "minimum 5-7 l na ro?lin?, odp?yw obowi?zkowy",
+    "goodFor": [
+      "balkon",
+      "donica",
+      "grz?dka podwy?szona",
+      "dzieci?cy ogr?d"
+    ],
+    "avoid": [
+      "g??boki cie?",
+      "stale mokra korona",
+      "zag?szczenie bez przewiewu"
+    ]
+  },
+  "careGuide": {
+    "sowingOrPlanting": "Sad? zdrowe sadzonki wiosn? albo p??nym latem. Korona ro?liny ma zosta? tu? nad ziemi?, bo zbyt g??bokie sadzenie sprzyja gniciu.",
+    "watering": "Podlewaj regularnie przy ziemi. W donicy kontroluj wilgotno?? codziennie w upa?, bo przesuszenie szybko odbija si? na wielko?ci owoc?w.",
+    "feeding": "Na starcie wystarczy kompost i lekki naw?z do ro?lin owocowych. Po zbiorach daj ma?? dawk?, ?eby ro?lina odbudowa?a li?cie.",
+    "pruning": "Po zbiorach usu? chore i stare li?cie. Roz?ogi zostaw tylko wtedy, gdy chcesz zrobi? nowe sadzonki.",
+    "wintering": "W gruncie pomaga ?ci??ka. Donice ustaw przy ?cianie i os?o?, ?eby bry?a korzeniowa nie przemarz?a.",
+    "harvest": "Zbieraj w pe?ni wybarwione owoce rano lub wieczorem. Mokre owoce szybciej ple?niej?, wi?c nie trzymaj ich d?ugo w misce."
+  },
+  "signals": [
+    {
+      "title": "Owoce mi?kn? i szarzej?",
+      "means": "Najcz??ciej to szara ple?? po deszczu, rosie albo przy zbyt g?stych li?ciach.",
+      "action": "Usu? pora?one owoce, popraw przewiew i podlewaj przy ziemi.",
+      "months": [
+        "V",
+        "VI",
+        "VII"
+      ],
+      "articleHref": "/porady/owoce-w-ogrodzie/truskawka-w-donicy-uprawa"
+    },
+    {
+      "title": "Li?cie wi?dn? mimo podlewania",
+      "means": "Donica mog?a si? przegrza? albo korzenie stoj? w zbyt mokrym pod?o?u.",
+      "action": "Sprawd? odp?yw, podlewaj rano i przenie? donic? poza najostrzejsze po?udniowe s?o?ce.",
+      "months": [
+        "VI",
+        "VII",
+        "VIII"
+      ],
+      "articleHref": null
+    },
+    {
+      "title": "Du?o li?ci, ma?o owoc?w",
+      "means": "Ro?lina ma za ma?o s?o?ca albo dosta?a zbyt du?o azotu.",
+      "action": "Przenie? w ja?niejsze miejsce i ogranicz nawo?enie azotowe.",
+      "months": [
+        "V",
+        "VI"
+      ],
+      "articleHref": null
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Czy truskawka dobrze ro?nie w donicy?",
+      "answer": "Tak, je?li donica ma odp?yw, ?yzn? ziemi? i nie przesycha w czasie kwitnienia oraz owocowania."
+    },
+    {
+      "question": "Kiedy wymieni? stare sadzonki?",
+      "answer": "Najcz??ciej po 3-4 latach, gdy owoce drobniej?, a ro?lina s?abiej si? odnawia."
+    },
+    {
+      "question": "Czy trzeba ?ci??kowa??",
+      "answer": "Warto. S?oma, kora lub agrow??knina ograniczaj? brudzenie owoc?w i utrat? wody."
+    }
+  ],
+  "searchIntents": [
+    "truskawka w donicy",
+    "truskawka podlewanie",
+    "truskawka szara ple??",
+    "kiedy sadzi? truskawki"
+  ],
+  "appHints": {
+    "reminderLeadDays": 3,
+    "defaultPriority": "medium",
+    "journalPrompts": [
+      "Zapisz podlewanie i reakcj? ro?liny: Truskawka.",
+      "Dodaj zdj?cie li?ci, gdy pojawi? si? plamy albo wi?dni?cie.",
+      "Oznacz termin zbioru lub ci?cia, ?eby kalendarz by? dok?adniejszy w kolejnym sezonie."
+    ]
+  }
 }

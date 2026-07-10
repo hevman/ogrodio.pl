@@ -170,5 +170,111 @@
       "articleHref": null
     }
   ],
-  "varieties": []
+  "varieties": [
+    {
+      "name": "Cukrowa",
+      "harvest": "VIII-X",
+      "notes": "Wczesna korzeniowa, do szybkiego zbioru."
+    },
+    {
+      "name": "O?omu?cka",
+      "harvest": "IX-XI",
+      "notes": "P??niejsza, dobra do przechowywania."
+    },
+    {
+      "name": "Gigante d Italia",
+      "harvest": "V-X",
+      "notes": "Natkowa, du?e aromatyczne li?cie."
+    }
+  ],
+  "careProfile": {
+    "soilPh": "6,0-7,0",
+    "height": "25-40 cm natka, korze? zale?nie od odmiany",
+    "lifeCycle": "ro?lina dwuletnia uprawiana zwykle jako warzywo jednoroczne",
+    "hardiness": "dobrze znosi ch??d, natka mo?e zimowa? pod os?on?",
+    "container": "dla natki skrzynka 20 cm, dla korzeni g??boka donica 30 cm+",
+    "goodFor": [
+      "warzywnik",
+      "natka na parapecie z rozsady",
+      "grz?dka po lekkim spulchnieniu"
+    ],
+    "avoid": [
+      "?wie?y obornik",
+      "kamienista zbita gleba",
+      "przesuszanie po siewie"
+    ]
+  },
+  "careGuide": {
+    "sowingOrPlanting": "Siej wcze?nie, p?ytko i cierpliwie, bo pietruszka wschodzi d?ugo. Gleba musi by? wilgotna przez ca?y czas kie?kowania.",
+    "watering": "Najwa?niejsza jest wilgo? po siewie i w okresie grubienia korzeni. Nie zalewaj ci??kiej ziemi.",
+    "feeding": "Najlepszy jest dobrze roz?o?ony kompost z poprzedniego sezonu. ?wie?y obornik powoduje rozwidlanie korzeni.",
+    "pruning": "Natk? ?cinaj z zewn?trz, zostawiaj?c ?rodek ro?liny do odrastania.",
+    "wintering": "Cz??? ro?lin mo?na zostawi? na natk? pod lekk? os?on?. Korzenie zbierz przed silnymi mrozami.",
+    "harvest": "Natk? zbieraj na bie??co, korze? zwykle od p??nego lata do jesieni."
+  },
+  "signals": [
+    {
+      "title": "Brak wschod?w po siewie",
+      "means": "Nasiona kie?kuj? wolno, a przesuszenie przerywa proces.",
+      "action": "Utrzymuj wilgotno??, przykryj rz?d w??knin? i nie spulchniaj g??boko miejsca siewu.",
+      "months": [
+        "III",
+        "IV",
+        "V"
+      ],
+      "articleHref": null
+    },
+    {
+      "title": "Korzenie s? rozwidlone",
+      "means": "Gleba by?a zbita, kamienista albo ?wie?o nawo?ona obornikiem.",
+      "action": "W kolejnym sezonie wysiej w l?ejsz?, g??boko spulchnion? ziemi? bez ?wie?ego nawozu.",
+      "months": [
+        "VIII",
+        "IX",
+        "X"
+      ],
+      "articleHref": null
+    },
+    {
+      "title": "Natka ???knie",
+      "means": "Mo?liwy stres suszy, konkurencja chwast?w albo zbyt mokra ci??ka gleba.",
+      "action": "Sprawd? wilgotno??, przerwij ro?liny i usu? chwasty.",
+      "months": [
+        "V",
+        "VI",
+        "VII",
+        "VIII"
+      ],
+      "articleHref": null
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Dlaczego pietruszka d?ugo nie wschodzi?",
+      "answer": "To normalne. W ch?odnej ziemi wschody mog? trwa? kilka tygodni."
+    },
+    {
+      "question": "Czy natk? mo?na mie? w donicy?",
+      "answer": "Tak, natkowa pietruszka dobrze ro?nie w g??bszej skrzynce z regularnym podlewaniem."
+    },
+    {
+      "question": "Jak unikn?? krzywych korzeni?",
+      "answer": "Siej w lekk?, odchwaszczon? ziemi? bez kamieni i ?wie?ego obornika."
+    }
+  ],
+  "searchIntents": [
+    "pietruszka nie wschodzi",
+    "kiedy sia? pietruszk?",
+    "pietruszka korzeniowa uprawa",
+    "pietruszka w donicy"
+  ],
+  "appHints": {
+    "reminderLeadDays": 3,
+    "defaultPriority": "medium",
+    "journalPrompts": [
+      "Zapisz dat? siewu, bo pietruszka d?ugo kie?kuje.",
+      "Dodaj notatk? o wilgotno?ci gleby po siewie.",
+      "Oznacz pierwszy zbi?r natki lub korzeni."
+    ]
+  }
 }

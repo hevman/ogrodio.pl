@@ -4,6 +4,7 @@ import {
   type PlantCatalogItem,
   type PlantProblem,
   type PlantRisk,
+  type PlantSignal,
   type RomanMonth,
 } from "./schema";
 
@@ -92,6 +93,17 @@ export function getActiveProblems(plant: PlantCatalogItem, date = new Date()): P
   return plant.problems.filter((problem) => !problem.months?.length || problem.months.includes(current));
 }
 
+export function getActiveSignals(plant: PlantCatalogItem, date = new Date()): PlantSignal[] {
+  const current = currentRomanMonth(date);
+  const currentSignals = (plant.signals || []).filter((signal) => !signal.months?.length || signal.months.includes(current));
+
+  if (currentSignals.length > 0) {
+    return currentSignals.slice(0, 4);
+  }
+
+  return (plant.signals || []).slice(0, 4);
+}
+
 export function getYearCalendarByMonth(plant: PlantCatalogItem) {
   return monthOrder.map((month) => ({
     month,
@@ -107,12 +119,18 @@ export function getPlantIntelligence(plant: PlantCatalogItem, date = new Date())
     appTaskCount: plant.calendar.length,
     seasonalRisks: getActiveRisks(plant, date),
     activeProblems: getActiveProblems(plant, date),
+    activeSignals: getActiveSignals(plant, date),
     varieties: plant.varieties,
+    careProfile: plant.careProfile,
+    careGuide: plant.careGuide,
+    faqs: plant.faqs,
+    appHints: plant.appHints,
     yearCalendar: getYearCalendarByMonth(plant),
     searchTopics: Array.from(new Set([
       `${plant.name} uprawa`,
       `${plant.name} wymagania`,
       `${plant.name} podlewanie`,
+      ...(plant.searchIntents || []),
       ...plant.problems.map((problem) => `${plant.name} ${problem.symptom.toLowerCase()}`),
     ])).slice(0, 6),
   };

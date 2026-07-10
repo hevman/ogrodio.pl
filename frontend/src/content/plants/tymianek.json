@@ -153,5 +153,114 @@
     }
   ],
   "risks": [],
-  "varieties": []
+  "varieties": [
+    {
+      "name": "Tymianek w?a?ciwy",
+      "harvest": "V-VIII",
+      "notes": "Najbardziej klasyczny do kuchni i suszenia."
+    },
+    {
+      "name": "Tymianek cytrynowy",
+      "harvest": "V-VIII",
+      "notes": "Cytrusowy aromat, ?wietny do donic."
+    },
+    {
+      "name": "Tymianek p?o??cy",
+      "harvest": "VI-VIII",
+      "notes": "Dobry na suche obw?dki i szczeliny."
+    }
+  ],
+  "careProfile": {
+    "soilPh": "6,5-8,0",
+    "height": "15-30 cm",
+    "lifeCycle": "wieloletnia krzewinka zio?owa",
+    "hardiness": "zimuje najlepiej w suchej, przepuszczalnej ziemi",
+    "container": "donica 3-5 l z odp?ywem i mineralnym dodatkiem w pod?o?u",
+    "goodFor": [
+      "skalniak",
+      "sucha rabata",
+      "donica na s?o?cu",
+      "ogr?d zio?owy"
+    ],
+    "avoid": [
+      "ci??ka mokra gleba",
+      "cie?",
+      "nadmiar nawozu"
+    ]
+  },
+  "careGuide": {
+    "sowingOrPlanting": "Sad? w pe?nym s?o?cu do lekkiej ziemi. W donicy dodaj piasek lub drobny ?wir, ?eby korzenie nie sta?y w wodzie.",
+    "watering": "Podlewaj oszcz?dnie po przeschni?ciu pod?o?a. Sta?a wilgo? os?abia aromat i zimowanie.",
+    "feeding": "Nawo?enie minimalne. Zbyt ?yzna ziemia daje mi?kkie p?dy i s?abszy zapach.",
+    "pruning": "Po kwitnieniu lekko przytnij wierzcho?ki. Nie tnij g??boko w stare zdrewnia?e cz??ci.",
+    "wintering": "Zim? wa?ny jest odp?yw wody. Donice ustaw pod okapem albo przy ?cianie.",
+    "harvest": "?cinaj m?ode p?dy przed lub na pocz?tku kwitnienia, gdy aromat jest najmocniejszy."
+  },
+  "signals": [
+    {
+      "title": "P?dy czerniej? od do?u",
+      "means": "Najcz??ciej korzenie maj? za mokro albo ziemia jest zbyt ci??ka.",
+      "action": "Ogranicz podlewanie, popraw drena? i usu? martwe p?dy.",
+      "months": [
+        "XI",
+        "XII",
+        "I",
+        "II",
+        "III"
+      ],
+      "articleHref": null
+    },
+    {
+      "title": "Ro?lina wyci?ga si? i s?abo pachnie",
+      "means": "Ma za ma?o s?o?ca albo za du?o azotu.",
+      "action": "Przenie? w pe?niejsze s?o?ce i nie dokarmiaj intensywnie.",
+      "months": [
+        "V",
+        "VI",
+        "VII",
+        "VIII"
+      ],
+      "articleHref": null
+    },
+    {
+      "title": "?rodek k?py drewnieje",
+      "means": "Starszy tymianek naturalnie ?ysieje w ?rodku.",
+      "action": "Pobierz sadzonki albo odm??d? ro?lin? przez lekkie ci?cie po kwitnieniu.",
+      "months": [
+        "VI",
+        "VII",
+        "VIII"
+      ],
+      "articleHref": null
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Czy tymianek trzeba cz?sto podlewa??",
+      "answer": "Nie. Lepiej znosi kr?tk? susz? ni? mokre pod?o?e."
+    },
+    {
+      "question": "Czy zimuje w donicy?",
+      "answer": "Mo?e zimowa?, je?li donica nie przemaka i bry?a korzeniowa nie zamarza na d?ugo."
+    },
+    {
+      "question": "Kiedy ?cina? na suszenie?",
+      "answer": "Najlepiej tu? przed kwitnieniem albo na jego pocz?tku."
+    }
+  ],
+  "searchIntents": [
+    "tymianek w donicy",
+    "tymianek zimowanie",
+    "jak przycina? tymianek",
+    "tymianek podlewanie"
+  ],
+  "appHints": {
+    "reminderLeadDays": 3,
+    "defaultPriority": "medium",
+    "journalPrompts": [
+      "Zapisz podlewanie i reakcj? ro?liny: Tymianek.",
+      "Dodaj zdj?cie li?ci, gdy pojawi? si? plamy albo wi?dni?cie.",
+      "Oznacz termin zbioru lub ci?cia, ?eby kalendarz by? dok?adniejszy w kolejnym sezonie."
+    ]
+  }
 }

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { AlertTriangle, ArrowUpRight, CalendarDays, CheckCircle2, ClipboardList, Sprout } from "lucide-react";
+import { AlertTriangle, ArrowUpRight, CalendarDays, ClipboardList, Leaf, MessageCircleQuestion, Sprout } from "lucide-react";
 import type { PlantCatalogItem } from "@/lib/plant-intelligence/schema";
 import { getPlantIntelligence } from "@/lib/plant-intelligence/engine";
 
@@ -34,11 +34,23 @@ function weekLabel(week: string | null | undefined) {
   return `tydzień ${week}`;
 }
 
+const careGuideLabels: Record<string, string> = {
+  sowingOrPlanting: "Start",
+  watering: "Podlewanie",
+  feeding: "Nawożenie",
+  pruning: "Cięcie",
+  wintering: "Zima",
+  harvest: "Zbiory",
+};
+
 export function PlantIntelligencePanel({ plant, appAddUrl, variant = "catalog" }: Props) {
   const intelligence = getPlantIntelligence(plant);
   const accentText = variant === "catalog" ? "text-teal-700" : "text-emerald-700";
   const accentBg = variant === "catalog" ? "bg-teal-700 hover:bg-teal-800" : "bg-emerald-700 hover:bg-emerald-800";
   const panelBg = variant === "catalog" ? "border-teal-100 bg-[#f2fbf8]" : "border-emerald-100 bg-emerald-50/40";
+  const careGuideEntries = Object.entries(intelligence.careGuide)
+    .filter((entry): entry is [string, string] => Boolean(entry[1]))
+    .slice(0, 6);
 
   return (
     <div className="space-y-5">
@@ -90,6 +102,26 @@ export function PlantIntelligencePanel({ plant, appAddUrl, variant = "catalog" }
         </div>
       </section>
 
+      {careGuideEntries.length > 0 ? (
+        <section className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-6">
+          <div className="flex items-center gap-3">
+            <Leaf className={`h-5 w-5 ${accentText}`} />
+            <div>
+              <p className={`text-sm font-bold uppercase tracking-wide ${accentText}`}>Jak prowadzić</p>
+              <h2 className="text-2xl font-bold text-slate-900">Najważniejsze decyzje w uprawie</h2>
+            </div>
+          </div>
+          <div className="mt-5 grid gap-3 sm:grid-cols-2">
+            {careGuideEntries.map(([key, value]) => (
+              <div className="rounded-xl border border-slate-200 bg-slate-50 p-4" key={key}>
+                <p className="text-xs font-black uppercase tracking-wide text-slate-500">{careGuideLabels[key] || key}</p>
+                <p className="mt-2 text-sm leading-6 text-slate-700">{value}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+      ) : null}
+
       {intelligence.seasonalRisks.length > 0 ? (
         <section className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-6">
           <div className="flex items-center gap-3">
@@ -108,6 +140,33 @@ export function PlantIntelligencePanel({ plant, appAddUrl, variant = "catalog" }
                 <p className="mt-2 text-sm leading-6">{risk.action}</p>
                 {risk.articleHref ? (
                   <Link className="mt-2 inline-flex items-center gap-1 text-xs font-bold underline" href={risk.articleHref}>
+                    Zobacz poradnik
+                    <ArrowUpRight className="h-3 w-3" />
+                  </Link>
+                ) : null}
+              </div>
+            ))}
+          </div>
+        </section>
+      ) : null}
+
+      {intelligence.activeSignals.length > 0 ? (
+        <section className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-6">
+          <div className="flex items-center gap-3">
+            <MessageCircleQuestion className={`h-5 w-5 ${accentText}`} />
+            <div>
+              <p className={`text-sm font-bold uppercase tracking-wide ${accentText}`}>Sygnały z ogrodu</p>
+              <h2 className="text-2xl font-bold text-slate-900">Co oznaczają objawy na roślinie</h2>
+            </div>
+          </div>
+          <div className="mt-5 grid gap-3">
+            {intelligence.activeSignals.map((signal) => (
+              <div className="rounded-xl border border-slate-200 bg-slate-50 p-4" key={signal.title}>
+                <p className="font-bold text-slate-900">{signal.title}</p>
+                <p className="mt-1 text-sm leading-6 text-slate-600">{signal.means}</p>
+                <p className="mt-2 text-sm font-semibold leading-6 text-slate-800">{signal.action}</p>
+                {signal.articleHref ? (
+                  <Link className="mt-2 inline-flex items-center gap-1 text-xs font-bold text-teal-700 underline" href={signal.articleHref}>
                     Zobacz poradnik
                     <ArrowUpRight className="h-3 w-3" />
                   </Link>

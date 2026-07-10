@@ -153,5 +153,96 @@
     }
   ],
   "risks": [],
-  "varieties": []
+  "varieties": [],
+  "careProfile": {
+    "soilPh": "5,5-7,0 zale?nie od gatunku",
+    "height": "zale?nie od odmiany i prowadzenia",
+    "lifeCycle": "ro?lina wieloletnia owocowa",
+    "hardiness": "zwykle zimuje w gruncie, m?ode ro?liny warto ?ci??kowa?",
+    "container": "mo?liwa przy du?ej donicy i sta?ym podlewaniu",
+    "goodFor": [
+      "ogr?d owocowy",
+      "sad amatorski",
+      "grz?dka przy domu"
+    ],
+    "avoid": [
+      "zastoiska wody",
+      "g??boki cie?",
+      "brak ci?cia i prze?wietlania"
+    ]
+  },
+  "careGuide": {
+    "sowingOrPlanting": "Sad? zdrowe ro?liny w dobrze przygotowan? ziemi?. Po posadzeniu podlej obficie i ?ci??kuj, ?eby ograniczy? stres.",
+    "watering": "W pierwszym roku pilnuj wilgoci, p??niej podlewaj szczeg?lnie w czasie kwitnienia i dorastania owoc?w.",
+    "feeding": "Co roku uzupe?niaj kompost. Nadmiar azotu daje wzrost li?ci kosztem owocowania.",
+    "pruning": "Usuwaj p?dy chore, stare i zag?szczaj?ce. Celem jest ?wiat?o, przewiew i m?ode p?dy owocuj?ce.",
+    "wintering": "Przed zim? podlej przy suchej jesieni i uzupe?nij ?ci??k? wok?? korzeni.",
+    "harvest": "Zbieraj owoce w pe?nej dojrza?o?ci i nie zostawiaj pora?onych na ro?linie."
+  },
+  "signals": [
+    {
+      "title": "S?abe kwitnienie",
+      "means": "Ro?lina mo?e mie? za ma?o ?wiat?a, by? zbyt mocno nawo?ona azotem albo os?abiona po suszy.",
+      "action": "Popraw dost?p ?wiat?a, ogranicz azot i zadbaj o wod? w kolejnym sezonie.",
+      "months": [
+        "IV",
+        "V",
+        "VI"
+      ],
+      "articleHref": null
+    },
+    {
+      "title": "Plamy na li?ciach po deszczach",
+      "means": "Wilgo? i s?aby przewiew sprzyjaj? chorobom li?ci.",
+      "action": "Usu? pora?one cz??ci, prze?wietl ro?lin? i podlewaj przy ziemi.",
+      "months": [
+        "V",
+        "VI",
+        "VII",
+        "VIII",
+        "IX"
+      ],
+      "articleHref": null
+    },
+    {
+      "title": "Owoce drobniej?",
+      "means": "Najcz??ciej brakuje wody w kluczowym momencie albo ro?lina jest przeci??ona.",
+      "action": "?ci??kuj, podlewaj podczas suszy i wykonaj ci?cie odm?adzaj?ce po zbiorach.",
+      "months": [
+        "VI",
+        "VII",
+        "VIII"
+      ],
+      "articleHref": null
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Czy malina nadaje si? dla pocz?tkuj?cych?",
+      "answer": "Tak, je?li dobierzesz stanowisko zgodne z wymaganiami: pełne słońce."
+    },
+    {
+      "question": "Co najcz??ciej psuje efekt uprawy?",
+      "answer": "Najcz??ciej problemem jest woda: regularnie podczas kwitnienia i owocowania."
+    },
+    {
+      "question": "Kiedy zapisa? przypomnienie w aplikacji?",
+      "answer": "Najlepiej przed najwa?niejszym terminem z kalendarza oraz w czasie ryzyk sezonowych."
+    }
+  ],
+  "appHints": {
+    "reminderLeadDays": 4,
+    "defaultPriority": "medium",
+    "journalPrompts": [
+      "Zapisz obserwacj?: Malina.",
+      "Dodaj zdj?cie, je?li wygl?d li?ci albo p?d?w si? zmienia.",
+      "Oznacz wykonane podlewanie, ci?cie, nawo?enie lub zbi?r."
+    ]
+  },
+  "searchIntents": [
+    "Malina uprawa",
+    "Malina wymagania",
+    "Malina problemy",
+    "Malina kalendarz prac"
+  ]
 }

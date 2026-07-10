@@ -166,5 +166,112 @@
       "articleHref": null
     }
   ],
-  "varieties": []
+  "varieties": [
+    {
+      "name": "Lollo Rossa",
+      "harvest": "IV-VI, IX-X",
+      "notes": "Dekoracyjne czerwone li?cie, dobra do zbioru listk?w."
+    },
+    {
+      "name": "Lollo Bionda",
+      "harvest": "IV-VI, IX-X",
+      "notes": "Jasnozielona, delikatna, szybka w uprawie."
+    },
+    {
+      "name": "Mieszanki baby leaf",
+      "harvest": "IV-X",
+      "notes": "Najlepsze do cz?stego ci?cia m?odych li?ci."
+    }
+  ],
+  "careProfile": {
+    "soilPh": "6,0-7,0",
+    "height": "15-30 cm",
+    "lifeCycle": "warzywo jednoroczne o kr?tkim cyklu",
+    "hardiness": "znosi lekki ch??d, ?le reaguje na upa?",
+    "container": "skrzynka od 15 cm g??boko?ci, sta?a wilgotno??",
+    "goodFor": [
+      "szybki plon",
+      "warzywnik przy kuchni",
+      "skrzynki balkonowe",
+      "dosiewy mi?dzy plonami"
+    ],
+    "avoid": [
+      "upa? i susza",
+      "ci??ka zbita gleba",
+      "zbyt p??ny letni siew w pe?nym s?o?cu"
+    ]
+  },
+  "careGuide": {
+    "sowingOrPlanting": "Siej p?ytko co 2-3 tygodnie od marca do maja i ponownie od ko?ca sierpnia. W upa?y wybieraj p??cie?.",
+    "watering": "Utrzymuj r?wn? wilgotno??. Kr?tkie przesuszenie cz?sto ko?czy si? gorzkimi li??mi i szybkim wybiciem w p?d.",
+    "feeding": "Wystarczy kompost lub delikatnie zasilona ziemia. Nadmiar nawozu daje mi?kkie, mniej trwa?e li?cie.",
+    "pruning": "Nie tnij ca?ej ro?liny, je?li chcesz zbiera? d?u?ej. Obrywaj zewn?trzne li?cie i zostaw ?rodek.",
+    "wintering": "To uprawa sezonowa. Jesieni? pod os?on? mo?e da? ostatnie li?cie do pierwszych mocniejszych mroz?w.",
+    "harvest": "Zbieraj m?ode li?cie rano. Im starsze i bardziej zestresowane ro?liny, tym wi?ksze ryzyko goryczy."
+  },
+  "signals": [
+    {
+      "title": "Ro?lina wybija w p?d",
+      "means": "Sa?ata reaguje na d?ugi dzie?, ciep?o lub przesuszenie.",
+      "action": "Zbierz li?cie od razu, a kolejne siewy przenie? w ch?odniejszy termin lub lekki p??cie?.",
+      "months": [
+        "V",
+        "VI",
+        "VII"
+      ],
+      "articleHref": "/porady/warzywnik/salata-lisciowa-uprawa-zbiory"
+    },
+    {
+      "title": "Dziury w li?ciach noc?",
+      "means": "Najcz??ciej ?eruj? ?limaki, szczeg?lnie po deszczu.",
+      "action": "Zbieraj ?limaki wieczorem, ogranicz kryj?wki i podlewaj rano.",
+      "months": [
+        "IV",
+        "V",
+        "VI",
+        "IX"
+      ],
+      "articleHref": null
+    },
+    {
+      "title": "Li?cie s? gorzkie",
+      "means": "Ro?lina przesz?a stres wodny albo ros?a w zbyt wysokiej temperaturze.",
+      "action": "Utrzymuj wilgotno?? i planuj g??wne siewy na wiosn? oraz jesie?.",
+      "months": [
+        "V",
+        "VI",
+        "VIII"
+      ],
+      "articleHref": null
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Czy sa?at? mo?na sia? ca?e lato?",
+      "answer": "Mo?na, ale w ?rodku lata jako?? jest s?absza. Najlepsze s? terminy wiosenne i p??noletnie."
+    },
+    {
+      "question": "Jak zbiera?, ?eby odrasta?a?",
+      "answer": "Obrywaj zewn?trzne li?cie, nie uszkadzaj?c sto?ka wzrostu w ?rodku ro?liny."
+    },
+    {
+      "question": "Czy nadaje si? do skrzynki?",
+      "answer": "Tak, je?li skrzynka nie przesycha i stoi w miejscu z porannym s?o?cem albo lekkim p??cieniem."
+    }
+  ],
+  "searchIntents": [
+    "sa?ata li?ciowa uprawa",
+    "sa?ata w skrzynce",
+    "sa?ata wybija w p?d",
+    "kiedy sia? sa?at?"
+  ],
+  "appHints": {
+    "reminderLeadDays": 3,
+    "defaultPriority": "medium",
+    "journalPrompts": [
+      "Zapisz podlewanie i reakcj? ro?liny: Sałata liściowa.",
+      "Dodaj zdj?cie li?ci, gdy pojawi? si? plamy albo wi?dni?cie.",
+      "Oznacz termin zbioru lub ci?cia, ?eby kalendarz by? dok?adniejszy w kolejnym sezonie."
+    ]
+  }
 }

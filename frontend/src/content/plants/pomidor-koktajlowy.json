@@ -166,5 +166,96 @@
       "articleHref": null
     }
   ],
-  "varieties": []
+  "varieties": [],
+  "careProfile": {
+    "soilPh": "6,0-7,0 dla wi?kszo?ci warzyw",
+    "height": "zale?nie od gatunku",
+    "lifeCycle": "uprawa sezonowa",
+    "hardiness": "termin zale?y od wra?liwo?ci na ch??d",
+    "container": "mo?liwa przy dobraniu g??boko?ci do korzeni",
+    "goodFor": [
+      "grz?dka podwy?szona",
+      "warzywnik przy domu",
+      "uprawa sukcesywna"
+    ],
+    "avoid": [
+      "przesuszenie po siewie",
+      "zbyt g?sty siew",
+      "gleba bez kompostu"
+    ]
+  },
+  "careGuide": {
+    "sowingOrPlanting": "Siej lub sad? w terminie dobranym do temperatury gleby. Zbyt wczesny start w zimnej ziemi cz?sto op??nia wzrost.",
+    "watering": "Podlewaj regularnie po siewie, po posadzeniu rozsady i w czasie tworzenia plonu.",
+    "feeding": "Przed sezonem dodaj kompost. W trakcie dokarmiaj tylko wtedy, gdy ro?lina realnie tego potrzebuje.",
+    "pruning": "Usuwaj chore li?cie i przerzedzaj zbyt g?ste siewy, ?eby poprawi? przewiew.",
+    "wintering": "Po sezonie usu? resztki chore i przykryj gleb? kompostem albo ?ci??k?.",
+    "harvest": "Zbieraj m?ode plony regularnie, bo przero?ni?te cz?sto hamuj? kolejne zbiory."
+  },
+  "signals": [
+    {
+      "title": "Nier?wne wschody",
+      "means": "Najcz??ciej zawini?a zmienna wilgotno??, zbyt g??boki siew albo ch?odna gleba.",
+      "action": "Utrzymuj wilgo? w wierzchniej warstwie i dosiej braki w dobrym terminie.",
+      "months": [
+        "III",
+        "IV",
+        "V"
+      ],
+      "articleHref": null
+    },
+    {
+      "title": "Li?cie wi?dn? w po?udnie",
+      "means": "Ro?lina mo?e reagowa? na upa?, ale je?li nie wraca wieczorem, brakuje wody.",
+      "action": "Podlej g??boko rano i ?ci??kuj mi?dzyrz?dzia.",
+      "months": [
+        "VI",
+        "VII",
+        "VIII"
+      ],
+      "articleHref": null
+    },
+    {
+      "title": "Dziury i podgryzienia",
+      "means": "W warzywniku szybko pojawiaj? si? ?limaki, pche?ki albo g?sienice.",
+      "action": "Obejrzyj sp?d li?ci i reaguj wcze?nie mechanicznie lub os?on?.",
+      "months": [
+        "V",
+        "VI",
+        "VII",
+        "VIII",
+        "IX"
+      ],
+      "articleHref": null
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Czy pomidor koktajlowy nadaje si? dla pocz?tkuj?cych?",
+      "answer": "Tak, je?li dobierzesz stanowisko zgodne z wymaganiami: pełne słońce, osłona przed deszczem."
+    },
+    {
+      "question": "Co najcz??ciej psuje efekt uprawy?",
+      "answer": "Najcz??ciej problemem jest woda: regularnie, najlepiej rano pod korzeń."
+    },
+    {
+      "question": "Kiedy zapisa? przypomnienie w aplikacji?",
+      "answer": "Najlepiej przed najwa?niejszym terminem z kalendarza oraz w czasie ryzyk sezonowych."
+    }
+  ],
+  "appHints": {
+    "reminderLeadDays": 2,
+    "defaultPriority": "medium",
+    "journalPrompts": [
+      "Zapisz obserwacj?: Pomidor koktajlowy.",
+      "Dodaj zdj?cie, je?li wygl?d li?ci albo p?d?w si? zmienia.",
+      "Oznacz wykonane podlewanie, ci?cie, nawo?enie lub zbi?r."
+    ]
+  },
+  "searchIntents": [
+    "Pomidor koktajlowy uprawa",
+    "Pomidor koktajlowy wymagania",
+    "Pomidor koktajlowy problemy",
+    "Pomidor koktajlowy kalendarz prac"
+  ]
 }
