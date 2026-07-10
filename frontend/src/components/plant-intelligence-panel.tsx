@@ -51,6 +51,7 @@ export function PlantIntelligencePanel({ plant, appAddUrl, variant = "catalog" }
   const careGuideEntries = Object.entries(intelligence.careGuide)
     .filter((entry): entry is [string, string] => Boolean(entry[1]))
     .slice(0, 6);
+  const yearCalendarWithTasks = intelligence.yearCalendar.filter((block) => block.tasks.length > 0);
 
   return (
     <div className="space-y-5">
@@ -198,6 +199,7 @@ export function PlantIntelligencePanel({ plant, appAddUrl, variant = "catalog" }
         </section>
       ) : null}
 
+      {variant === "app" ? (
       <section className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-6">
         <div className="flex items-center gap-3">
           <CalendarDays className={`h-5 w-5 ${accentText}`} />
@@ -207,7 +209,7 @@ export function PlantIntelligencePanel({ plant, appAddUrl, variant = "catalog" }
           </div>
         </div>
         <div className="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-          {intelligence.yearCalendar.map((block) => (
+          {yearCalendarWithTasks.map((block) => (
             <div className="rounded-xl border border-slate-200 bg-slate-50 p-4" key={block.month}>
               <p className="text-sm font-black text-slate-900">{block.month}</p>
               <ul className="mt-2 space-y-2">
@@ -224,6 +226,7 @@ export function PlantIntelligencePanel({ plant, appAddUrl, variant = "catalog" }
           ))}
         </div>
       </section>
+      ) : null}
     </div>
   );
 }
