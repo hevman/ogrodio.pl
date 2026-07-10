@@ -1,4 +1,5 @@
 import type { AdviceArticle, AdviceDiscoverMeta } from "@/lib/advice-types";
+import { site } from "@/lib/site-config";
 
 export type { AdviceArticle, AdviceDiscoverMeta, AdviceSection, AdviceSeo } from "@/lib/advice-types";
 
@@ -9,7 +10,7 @@ export type { AdviceArticle, AdviceDiscoverMeta, AdviceSection, AdviceSeo } from
  */
 function backendUrl(): string {
   if (typeof window === "undefined") {
-    return process.env.BACKEND_URL || "http://backend:3000";
+    return process.env.BACKEND_URL || site.publicUrl;
   }
   return "";
 }
