@@ -15,6 +15,7 @@ import {
 import { Breadcrumb } from "@/components/breadcrumb";
 import { PageSection } from "@/components/page-shell";
 import { PlantIntelligencePanel } from "@/components/plant-intelligence-panel";
+import { PlantVisualGuideLoader } from "@/components/plant-visual-guide-loader";
 import { getPlantBySlug, getPlantIntelligence, plantCatalog } from "@/lib/plant-catalog";
 import { site } from "@/lib/site-config";
 
@@ -114,6 +115,7 @@ export default async function PlantPage({ params }: Props) {
         <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_340px] lg:items-start">
           <article className="space-y-8">
             <PlantIntelligencePanel appAddUrl={appAddUrl} plant={plant} variant="catalog" />
+            <PlantVisualGuideLoader plant={plant} />
 
             <section className="grid gap-4 sm:grid-cols-2">
               {[
