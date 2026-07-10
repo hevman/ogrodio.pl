@@ -195,39 +195,39 @@
     {
       "name": "Atena Polka F1",
       "harvest": "VII-IX",
-      "notes": "???te owoce, atrakcyjna na grz?dce."
+      "notes": "Żółte owoce, atrakcyjna na grządce."
     }
   ],
   "careProfile": {
     "soilPh": "6,0-7,0",
-    "height": "40-80 cm, szeroko?? cz?sto ponad 100 cm",
-    "lifeCycle": "warzywo jednoroczne ciep?olubne",
-    "hardiness": "nie znosi przymrozk?w",
-    "container": "bardzo du?a donica od 40 l tylko dla odmian kompaktowych",
+    "height": "40-80 cm, szerokość często ponad 100 cm",
+    "lifeCycle": "warzywo jednoroczne ciepłolubne",
+    "hardiness": "nie znosi przymrozków",
+    "container": "bardzo duża donica od 40 l tylko dla odmian kompaktowych",
     "goodFor": [
-      "ciep?a grz?dka",
+      "ciepła grządka",
       "kompostowa gleba",
-      "du?y warzywnik"
+      "duży warzywnik"
     ],
     "avoid": [
       "ciasne skrzynki",
       "zimna mokra ziemia",
-      "zraszanie li?ci wieczorem"
+      "zraszanie liści wieczorem"
     ]
   },
   "careGuide": {
-    "sowingOrPlanting": "Siej po po?owie maja do gruntu albo przygotuj rozsad? wcze?niej. Daj du?o miejsca, bo li?cie szybko zas?aniaj? s?siednie ro?liny.",
-    "watering": "Podlewaj obficie przy ziemi, zw?aszcza podczas kwitnienia i dorastania owoc?w.",
-    "feeding": "Cukinia lubi kompost i regularne dokarmianie. Przy s?abym ?ywieniu szybko przerywa zawi?zki.",
-    "pruning": "Usu? najstarsze chore li?cie, ale nie ogo?acaj ro?liny. Li?cie karmi? owoce.",
-    "wintering": "Po pierwszych przymrozkach ro?lina ko?czy wegetacj?. Resztki usu? z grz?dki.",
-    "harvest": "Zbieraj m?ode owoce co 2-3 dni. Przero?ni?te blokuj? tworzenie kolejnych."
+    "sowingOrPlanting": "Siej po połowie maja do gruntu albo przygotuj rozsadę wcześniej. Daj dużo miejsca, bo liście szybko zasłaniają sąsiednie rośliny.",
+    "watering": "Podlewaj obficie przy ziemi, zwłaszcza podczas kwitnienia i dorastania owoców.",
+    "feeding": "Cukinia lubi kompost i regularne dokarmianie. Przy słabym żywieniu szybko przerywa zawiązki.",
+    "pruning": "Usuń najstarsze chore liście, ale nie ogołacaj rośliny. Liście karmią owoce.",
+    "wintering": "Po pierwszych przymrozkach roślina kończy wegetację. Resztki usuń z grządki.",
+    "harvest": "Zbieraj młode owoce co 2-3 dni. Przerośnięte blokują tworzenie kolejnych."
   },
   "signals": [
     {
-      "title": "Ma?e owoce ???kn? i odpadaj?",
-      "means": "Cz?sto to brak zapylenia albo stres po ch?odnych nocach.",
-      "action": "W s?ab? pogod? zapyl r?cznie kwiat ?e?ski py?kiem z m?skiego i podlewaj r?wnomiernie.",
+      "title": "Małe owoce żółkną i odpadają",
+      "means": "Często to brak zapylenia albo stres po chłodnych nocach.",
+      "action": "W słabą pogodę zapyl ręcznie kwiat żeński pyłkiem z męskiego i podlewaj równomiernie.",
       "months": [
         "VI",
         "VII",
@@ -236,9 +236,9 @@
       "articleHref": null
     },
     {
-      "title": "Bia?y nalot na li?ciach",
-      "means": "Pod koniec sezonu zwykle pojawia si? m?czniak prawdziwy.",
-      "action": "Usu? najmocniej pora?one li?cie i podlewaj tylko ziemi?.",
+      "title": "Biały nalot na liściach",
+      "means": "Pod koniec sezonu zwykle pojawia się mączniak prawdziwy.",
+      "action": "Usuń najmocniej porażone liście i podlewaj tylko ziemię.",
       "months": [
         "VIII",
         "IX"
@@ -246,9 +246,9 @@
       "articleHref": null
     },
     {
-      "title": "Ro?lina kwitnie, ale nie ma owoc?w",
-      "means": "Na pocz?tku cukinia cz?sto tworzy g??wnie kwiaty m?skie.",
-      "action": "Poczekaj kilka dni, dbaj o wod? i nie przenawo? azotem.",
+      "title": "Roślina kwitnie, ale nie ma owoców",
+      "means": "Na początku cukinia często tworzy głównie kwiaty męskie.",
+      "action": "Poczekaj kilka dni, dbaj o wodę i nie przenawoź azotem.",
       "months": [
         "VI"
       ],
@@ -258,30 +258,30 @@
   "faqs": [
     {
       "question": "Ile miejsca potrzebuje cukinia?",
-      "answer": "Najbezpieczniej zostawi? oko?o 1 m dla jednej ro?liny."
+      "answer": "Najbezpieczniej zostawić około 1 m dla jednej rośliny."
     },
     {
-      "question": "Czy mo?na uprawia? w donicy?",
-      "answer": "Tak, ale tylko w bardzo du?ej donicy i najlepiej odmiany kompaktowe."
+      "question": "Czy można uprawiać w donicy?",
+      "answer": "Tak, ale tylko w bardzo dużej donicy i najlepiej odmiany kompaktowe."
     },
     {
-      "question": "Kiedy zbiera??",
-      "answer": "Najsmaczniejsze s? m?ode owoce d?ugo?ci oko?o 15-25 cm."
+      "question": "Kiedy zbierać?",
+      "answer": "Najsmaczniejsze są młode owoce długości około 15-25 cm."
     }
   ],
   "searchIntents": [
     "cukinia uprawa",
-    "cukinia nie zawi?zuje owoc?w",
-    "kiedy sia? cukini?",
-    "m?czniak na cukinii"
+    "cukinia nie zawiązuje owoców",
+    "kiedy siać cukinię",
+    "mączniak na cukinii"
   ],
   "appHints": {
-    "reminderLeadDays": 3,
+    "reminderLeadDays": 2,
     "defaultPriority": "medium",
     "journalPrompts": [
-      "Zapisz podlewanie i reakcj? ro?liny: Cukinia.",
-      "Dodaj zdj?cie li?ci, gdy pojawi? si? plamy albo wi?dni?cie.",
-      "Oznacz termin zbioru lub ci?cia, ?eby kalendarz by? dok?adniejszy w kolejnym sezonie."
+      "Zapisz obserwację: Cukinia.",
+      "Dodaj zdjęcie, jeśli wygląd liści albo pędów się zmienia.",
+      "Oznacz wykonane podlewanie, cięcie, nawożenie lub zbiór."
     ]
   }
 }

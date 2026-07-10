@@ -177,35 +177,35 @@
   ],
   "varieties": [],
   "careProfile": {
-    "soilPh": "5,5-7,0 zale?nie od gatunku",
-    "height": "zale?nie od odmiany i prowadzenia",
-    "lifeCycle": "ro?lina wieloletnia owocowa",
-    "hardiness": "zwykle zimuje w gruncie, m?ode ro?liny warto ?ci??kowa?",
-    "container": "mo?liwa przy du?ej donicy i sta?ym podlewaniu",
+    "soilPh": "5,5-7,0 zależnie od gatunku",
+    "height": "zależnie od odmiany i prowadzenia",
+    "lifeCycle": "roślina wieloletnia owocowa",
+    "hardiness": "zwykle zimuje w gruncie, młode rośliny warto ściółkować",
+    "container": "możliwa przy dużej donicy i stałym podlewaniu",
     "goodFor": [
-      "ogr?d owocowy",
+      "ogród owocowy",
       "sad amatorski",
-      "grz?dka przy domu"
+      "grządka przy domu"
     ],
     "avoid": [
       "zastoiska wody",
-      "g??boki cie?",
-      "brak ci?cia i prze?wietlania"
+      "głęboki cień",
+      "brak cięcia i prześwietlania"
     ]
   },
   "careGuide": {
-    "sowingOrPlanting": "Sad? zdrowe ro?liny w dobrze przygotowan? ziemi?. Po posadzeniu podlej obficie i ?ci??kuj, ?eby ograniczy? stres.",
-    "watering": "W pierwszym roku pilnuj wilgoci, p??niej podlewaj szczeg?lnie w czasie kwitnienia i dorastania owoc?w.",
-    "feeding": "Co roku uzupe?niaj kompost. Nadmiar azotu daje wzrost li?ci kosztem owocowania.",
-    "pruning": "Usuwaj p?dy chore, stare i zag?szczaj?ce. Celem jest ?wiat?o, przewiew i m?ode p?dy owocuj?ce.",
-    "wintering": "Przed zim? podlej przy suchej jesieni i uzupe?nij ?ci??k? wok?? korzeni.",
-    "harvest": "Zbieraj owoce w pe?nej dojrza?o?ci i nie zostawiaj pora?onych na ro?linie."
+    "sowingOrPlanting": "Sadź zdrowe rośliny w dobrze przygotowaną ziemię. Po posadzeniu podlej obficie i ściółkuj, żeby ograniczyć stres.",
+    "watering": "W pierwszym roku pilnuj wilgoci, później podlewaj szczególnie w czasie kwitnienia i dorastania owoców.",
+    "feeding": "Co roku uzupełniaj kompost. Nadmiar azotu daje wzrost liści kosztem owocowania.",
+    "pruning": "Usuwaj pędy chore, stare i zagęszczające. Celem jest światło, przewiew i młode pędy owocujące.",
+    "wintering": "Przed zimą podlej przy suchej jesieni i uzupełnij ściółkę wokół korzeni.",
+    "harvest": "Zbieraj owoce w pełnej dojrzałości i nie zostawiaj porażonych na roślinie."
   },
   "signals": [
     {
-      "title": "S?abe kwitnienie",
-      "means": "Ro?lina mo?e mie? za ma?o ?wiat?a, by? zbyt mocno nawo?ona azotem albo os?abiona po suszy.",
-      "action": "Popraw dost?p ?wiat?a, ogranicz azot i zadbaj o wod? w kolejnym sezonie.",
+      "title": "Słabe kwitnienie",
+      "means": "Roślina może mieć za mało światła, być zbyt mocno nawożona azotem albo osłabiona po suszy.",
+      "action": "Popraw dostęp światła, ogranicz azot i zadbaj o wodę w kolejnym sezonie.",
       "months": [
         "IV",
         "V",
@@ -214,9 +214,9 @@
       "articleHref": null
     },
     {
-      "title": "Plamy na li?ciach po deszczach",
-      "means": "Wilgo? i s?aby przewiew sprzyjaj? chorobom li?ci.",
-      "action": "Usu? pora?one cz??ci, prze?wietl ro?lin? i podlewaj przy ziemi.",
+      "title": "Plamy na liściach po deszczach",
+      "means": "Wilgoć i słaby przewiew sprzyjają chorobom liści.",
+      "action": "Usuń porażone części, prześwietl roślinę i podlewaj przy ziemi.",
       "months": [
         "V",
         "VI",
@@ -227,9 +227,9 @@
       "articleHref": null
     },
     {
-      "title": "Owoce drobniej?",
-      "means": "Najcz??ciej brakuje wody w kluczowym momencie albo ro?lina jest przeci??ona.",
-      "action": "?ci??kuj, podlewaj podczas suszy i wykonaj ci?cie odm?adzaj?ce po zbiorach.",
+      "title": "Owoce drobnieją",
+      "means": "Najczęściej brakuje wody w kluczowym momencie albo roślina jest przeciążona.",
+      "action": "Ściółkuj, podlewaj podczas suszy i wykonaj cięcie odmładzające po zbiorach.",
       "months": [
         "VI",
         "VII",
@@ -240,25 +240,25 @@
   ],
   "faqs": [
     {
-      "question": "Czy czarna porzeczka nadaje si? dla pocz?tkuj?cych?",
-      "answer": "Tak, je?li dobierzesz stanowisko zgodne z wymaganiami: słońce lub lekki półcień."
+      "question": "Czy czarna porzeczka nadaje się dla początkujących?",
+      "answer": "Tak, jeśli dobierzesz stanowisko zgodne z wymaganiami: słońce lub lekki półcień."
     },
     {
-      "question": "Co najcz??ciej psuje efekt uprawy?",
-      "answer": "Najcz??ciej problemem jest woda: regularnie w maju i czerwcu."
+      "question": "Co najczęściej psuje efekt uprawy?",
+      "answer": "Najczęściej problemem jest woda: regularnie w maju i czerwcu."
     },
     {
-      "question": "Kiedy zapisa? przypomnienie w aplikacji?",
-      "answer": "Najlepiej przed najwa?niejszym terminem z kalendarza oraz w czasie ryzyk sezonowych."
+      "question": "Kiedy zapisać przypomnienie w aplikacji?",
+      "answer": "Najlepiej przed najważniejszym terminem z kalendarza oraz w czasie ryzyk sezonowych."
     }
   ],
   "appHints": {
     "reminderLeadDays": 4,
     "defaultPriority": "medium",
     "journalPrompts": [
-      "Zapisz obserwacj?: Czarna porzeczka.",
-      "Dodaj zdj?cie, je?li wygl?d li?ci albo p?d?w si? zmienia.",
-      "Oznacz wykonane podlewanie, ci?cie, nawo?enie lub zbi?r."
+      "Zapisz obserwację: Czarna porzeczka.",
+      "Dodaj zdjęcie, jeśli wygląd liści albo pędów się zmienia.",
+      "Oznacz wykonane podlewanie, cięcie, nawożenie lub zbiór."
     ]
   },
   "searchIntents": [

@@ -282,12 +282,12 @@
     "kiedy sadzić truskawki"
   ],
   "appHints": {
-    "reminderLeadDays": 3,
+    "reminderLeadDays": 4,
     "defaultPriority": "medium",
     "journalPrompts": [
-      "Zapisz podlewanie i reakcję rośliny: Truskawka.",
-      "Dodaj zdjęcie liści, gdy pojawią się plamy albo więdnięcie.",
-      "Oznacz termin zbioru lub cięcia, żeby kalendarz był dokładniejszy w kolejnym sezonie."
+      "Zapisz obserwację: Truskawka.",
+      "Dodaj zdjęcie, jeśli wygląd liści albo pędów się zmienia.",
+      "Oznacz wykonane podlewanie, cięcie, nawożenie lub zbiór."
     ]
   }
 }

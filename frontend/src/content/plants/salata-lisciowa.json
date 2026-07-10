@@ -170,7 +170,7 @@
     {
       "name": "Lollo Rossa",
       "harvest": "IV-VI, IX-X",
-      "notes": "Dekoracyjne czerwone li?cie, dobra do zbioru listk?w."
+      "notes": "Dekoracyjne czerwone liście, dobra do zbioru listków."
     },
     {
       "name": "Lollo Bionda",
@@ -180,40 +180,40 @@
     {
       "name": "Mieszanki baby leaf",
       "harvest": "IV-X",
-      "notes": "Najlepsze do cz?stego ci?cia m?odych li?ci."
+      "notes": "Najlepsze do częstego cięcia młodych liści."
     }
   ],
   "careProfile": {
     "soilPh": "6,0-7,0",
     "height": "15-30 cm",
-    "lifeCycle": "warzywo jednoroczne o kr?tkim cyklu",
-    "hardiness": "znosi lekki ch??d, ?le reaguje na upa?",
-    "container": "skrzynka od 15 cm g??boko?ci, sta?a wilgotno??",
+    "lifeCycle": "warzywo jednoroczne o krótkim cyklu",
+    "hardiness": "znosi lekki chłód, źle reaguje na upał",
+    "container": "skrzynka od 15 cm głębokości, stała wilgotność",
     "goodFor": [
       "szybki plon",
       "warzywnik przy kuchni",
       "skrzynki balkonowe",
-      "dosiewy mi?dzy plonami"
+      "dosiewy między plonami"
     ],
     "avoid": [
-      "upa? i susza",
-      "ci??ka zbita gleba",
-      "zbyt p??ny letni siew w pe?nym s?o?cu"
+      "upał i susza",
+      "ciężka zbita gleba",
+      "zbyt późny letni siew w pełnym słońcu"
     ]
   },
   "careGuide": {
-    "sowingOrPlanting": "Siej p?ytko co 2-3 tygodnie od marca do maja i ponownie od ko?ca sierpnia. W upa?y wybieraj p??cie?.",
-    "watering": "Utrzymuj r?wn? wilgotno??. Kr?tkie przesuszenie cz?sto ko?czy si? gorzkimi li??mi i szybkim wybiciem w p?d.",
-    "feeding": "Wystarczy kompost lub delikatnie zasilona ziemia. Nadmiar nawozu daje mi?kkie, mniej trwa?e li?cie.",
-    "pruning": "Nie tnij ca?ej ro?liny, je?li chcesz zbiera? d?u?ej. Obrywaj zewn?trzne li?cie i zostaw ?rodek.",
-    "wintering": "To uprawa sezonowa. Jesieni? pod os?on? mo?e da? ostatnie li?cie do pierwszych mocniejszych mroz?w.",
-    "harvest": "Zbieraj m?ode li?cie rano. Im starsze i bardziej zestresowane ro?liny, tym wi?ksze ryzyko goryczy."
+    "sowingOrPlanting": "Siej płytko co 2-3 tygodnie od marca do maja i ponownie od końca sierpnia. W upały wybieraj półcień.",
+    "watering": "Utrzymuj równą wilgotność. Krótkie przesuszenie często kończy się gorzkimi liśćmi i szybkim wybiciem w pęd.",
+    "feeding": "Wystarczy kompost lub delikatnie zasilona ziemia. Nadmiar nawozu daje miękkie, mniej trwałe liście.",
+    "pruning": "Nie tnij całej rośliny, jeśli chcesz zbierać dłużej. Obrywaj zewnętrzne liście i zostaw środek.",
+    "wintering": "To uprawa sezonowa. Jesienią pod osłoną może dać ostatnie liście do pierwszych mocniejszych mrozów.",
+    "harvest": "Zbieraj młode liście rano. Im starsze i bardziej zestresowane rośliny, tym większe ryzyko goryczy."
   },
   "signals": [
     {
-      "title": "Ro?lina wybija w p?d",
-      "means": "Sa?ata reaguje na d?ugi dzie?, ciep?o lub przesuszenie.",
-      "action": "Zbierz li?cie od razu, a kolejne siewy przenie? w ch?odniejszy termin lub lekki p??cie?.",
+      "title": "Roślina wybija w pęd",
+      "means": "Sałata reaguje na długi dzień, ciepło lub przesuszenie.",
+      "action": "Zbierz liście od razu, a kolejne siewy przenieś w chłodniejszy termin lub lekki półcień.",
       "months": [
         "V",
         "VI",
@@ -222,9 +222,9 @@
       "articleHref": "/porady/warzywnik/salata-lisciowa-uprawa-zbiory"
     },
     {
-      "title": "Dziury w li?ciach noc?",
-      "means": "Najcz??ciej ?eruj? ?limaki, szczeg?lnie po deszczu.",
-      "action": "Zbieraj ?limaki wieczorem, ogranicz kryj?wki i podlewaj rano.",
+      "title": "Dziury w liściach nocą",
+      "means": "Najczęściej żerują ślimaki, szczególnie po deszczu.",
+      "action": "Zbieraj ślimaki wieczorem, ogranicz kryjówki i podlewaj rano.",
       "months": [
         "IV",
         "V",
@@ -234,9 +234,9 @@
       "articleHref": null
     },
     {
-      "title": "Li?cie s? gorzkie",
-      "means": "Ro?lina przesz?a stres wodny albo ros?a w zbyt wysokiej temperaturze.",
-      "action": "Utrzymuj wilgotno?? i planuj g??wne siewy na wiosn? oraz jesie?.",
+      "title": "Liście są gorzkie",
+      "means": "Roślina przeszła stres wodny albo rosła w zbyt wysokiej temperaturze.",
+      "action": "Utrzymuj wilgotność i planuj główne siewy na wiosnę oraz jesień.",
       "months": [
         "V",
         "VI",
@@ -247,31 +247,31 @@
   ],
   "faqs": [
     {
-      "question": "Czy sa?at? mo?na sia? ca?e lato?",
-      "answer": "Mo?na, ale w ?rodku lata jako?? jest s?absza. Najlepsze s? terminy wiosenne i p??noletnie."
+      "question": "Czy sałatę można siać całe lato?",
+      "answer": "Można, ale w środku lata jakość jest słabsza. Najlepsze są terminy wiosenne i późnoletnie."
     },
     {
-      "question": "Jak zbiera?, ?eby odrasta?a?",
-      "answer": "Obrywaj zewn?trzne li?cie, nie uszkadzaj?c sto?ka wzrostu w ?rodku ro?liny."
+      "question": "Jak zbierać, żeby odrastała?",
+      "answer": "Obrywaj zewnętrzne liście, nie uszkadzając stożka wzrostu w środku rośliny."
     },
     {
-      "question": "Czy nadaje si? do skrzynki?",
-      "answer": "Tak, je?li skrzynka nie przesycha i stoi w miejscu z porannym s?o?cem albo lekkim p??cieniem."
+      "question": "Czy nadaje się do skrzynki?",
+      "answer": "Tak, jeśli skrzynka nie przesycha i stoi w miejscu z porannym słońcem albo lekkim półcieniem."
     }
   ],
   "searchIntents": [
-    "sa?ata li?ciowa uprawa",
-    "sa?ata w skrzynce",
-    "sa?ata wybija w p?d",
-    "kiedy sia? sa?at?"
+    "sałata liściowa uprawa",
+    "sałata w skrzynce",
+    "sałata wybija w pęd",
+    "kiedy siać sałatę"
   ],
   "appHints": {
-    "reminderLeadDays": 3,
+    "reminderLeadDays": 2,
     "defaultPriority": "medium",
     "journalPrompts": [
-      "Zapisz podlewanie i reakcj? ro?liny: Sałata liściowa.",
-      "Dodaj zdj?cie li?ci, gdy pojawi? si? plamy albo wi?dni?cie.",
-      "Oznacz termin zbioru lub ci?cia, ?eby kalendarz by? dok?adniejszy w kolejnym sezonie."
+      "Zapisz obserwację: Sałata liściowa.",
+      "Dodaj zdjęcie, jeśli wygląd liści albo pędów się zmienia.",
+      "Oznacz wykonane podlewanie, cięcie, nawożenie lub zbiór."
     ]
   }
 }
