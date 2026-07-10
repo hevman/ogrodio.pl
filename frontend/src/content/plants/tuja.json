@@ -20,30 +20,18 @@
   "calendar": [
     {
       "month": "I",
-      "tasks": [
-        {
-          "task": "Kontrola okryć zimowych i stanu pędów",
-          "type": "care"
-        }
-      ]
+      "tasks": []
     },
     {
       "month": "II",
-      "tasks": [
-        {
-          "task": "Przegląd rośliny i plan prac na wiosnę",
-          "type": "care"
-        }
-      ]
+      "tasks": []
     },
     {
       "month": "III",
       "tasks": [
         {
-          "task": "Kontrola brązowienia i podlewanie po suchej zimie",
-          "type": "care",
-          "week": null,
-          "articleHref": null
+          "task": "Podlewanie po suchej zimie i usunięcie suchych pędów",
+          "type": "care"
         }
       ]
     },
@@ -51,10 +39,8 @@
       "month": "IV",
       "tasks": [
         {
-          "task": "Nawożenie iglaków i uzupełnienie ściółki",
-          "type": "care",
-          "week": null,
-          "articleHref": null
+          "task": "Sadzenie żywopłotu i mocne podlewanie po posadzeniu",
+          "type": "start"
         }
       ]
     },
@@ -62,7 +48,7 @@
       "month": "V",
       "tasks": [
         {
-          "task": "Obserwuj wzrost i dostosuj podlewanie do pogody",
+          "task": "Pierwsze lekkie cięcie formujące żywopłot",
           "type": "care"
         }
       ]
@@ -82,26 +68,21 @@
       "month": "VII",
       "tasks": [
         {
-          "task": "Regularna kontrola podlewania i zdrowia rośliny",
+          "task": "Podlewanie w czasie suszy i kontrola brązowienia",
           "type": "care"
         }
       ]
     },
     {
       "month": "VIII",
-      "tasks": [
-        {
-          "task": "Regularna kontrola podlewania i zdrowia rośliny",
-          "type": "care"
-        }
-      ]
+      "tasks": []
     },
     {
       "month": "IX",
       "tasks": [
         {
-          "task": "Przygotowanie rośliny na chłodniejsze noce",
-          "type": "care"
+          "task": "Sadzenie jesienne z zapasem wody przed zim?",
+          "type": "start"
         }
       ]
     },
@@ -109,30 +90,18 @@
       "month": "X",
       "tasks": [
         {
-          "task": "Podlewanie przed zimą przy suchej jesieni",
-          "type": "care",
-          "week": null,
-          "articleHref": null
+          "task": "Podlanie przed zim? przy suchej jesieni",
+          "type": "care"
         }
       ]
     },
     {
       "month": "XI",
-      "tasks": [
-        {
-          "task": "Zabezpieczenie na zimę i uzupełnienie ściółki",
-          "type": "care"
-        }
-      ]
+      "tasks": []
     },
     {
       "month": "XII",
-      "tasks": [
-        {
-          "task": "Kontrola okryć zimowych i stanu pędów",
-          "type": "care"
-        }
-      ]
+      "tasks": []
     }
   ],
   "problems": [

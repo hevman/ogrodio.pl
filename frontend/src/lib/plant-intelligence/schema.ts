@@ -20,7 +20,7 @@ export const plantCalendarTaskSchema = z.object({
 
 export const plantCalendarMonthSchema = z.object({
   month: romanMonthSchema,
-  tasks: z.array(plantCalendarTaskSchema).min(1),
+  tasks: z.array(plantCalendarTaskSchema),
 });
 
 export type PlantCalendarMonth = z.infer<typeof plantCalendarMonthSchema>;

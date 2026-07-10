@@ -23,12 +23,7 @@
   "calendar": [
     {
       "month": "I",
-      "tasks": [
-        {
-          "task": "Kontrola okryć zimowych i stanu pędów",
-          "type": "care"
-        }
-      ]
+      "tasks": []
     },
     {
       "month": "II",
@@ -45,7 +40,7 @@
       "month": "III",
       "tasks": [
         {
-          "task": "Obserwuj wzrost i dostosuj podlewanie do pogody",
+          "task": "Cięcie prześwietlające przed ruszeniem wegetacji",
           "type": "care"
         }
       ]
@@ -54,30 +49,21 @@
       "month": "IV",
       "tasks": [
         {
-          "task": "Ściółkowanie i kompost pod krzew",
-          "type": "care",
-          "week": null,
-          "articleHref": null
+          "task": "Sadzenie wiosenne i podlewanie po posadzeniu",
+          "type": "start"
         }
       ]
     },
     {
       "month": "V",
-      "tasks": [
-        {
-          "task": "Obserwuj wzrost i dostosuj podlewanie do pogody",
-          "type": "care"
-        }
-      ]
+      "tasks": []
     },
     {
       "month": "VI",
       "tasks": [
         {
-          "task": "Kontrola mszyc i podlewanie",
-          "type": "care",
-          "week": null,
-          "articleHref": null
+          "task": "Kontrola mszyc i wielkopąkowca",
+          "type": "care"
         }
       ]
     },
@@ -85,57 +71,35 @@
       "month": "VII",
       "tasks": [
         {
-          "task": "Zbiór całych gron owoców",
-          "type": "harvest",
-          "week": null,
-          "articleHref": null
+          "task": "Zbiór owoców i wycięcie najstarszych pędów po zbiorach",
+          "type": "harvest"
         }
       ]
     },
     {
       "month": "VIII",
-      "tasks": [
-        {
-          "task": "Regularna kontrola podlewania i zdrowia rośliny",
-          "type": "care"
-        }
-      ]
+      "tasks": []
     },
     {
       "month": "IX",
-      "tasks": [
-        {
-          "task": "Przygotowanie rośliny na chłodniejsze noce",
-          "type": "care"
-        }
-      ]
+      "tasks": []
     },
     {
       "month": "X",
       "tasks": [
         {
-          "task": "Przygotowanie rośliny na chłodniejsze noce",
-          "type": "care"
+          "task": "Sadzenie jesienne krzewów porzeczki",
+          "type": "start"
         }
       ]
     },
     {
       "month": "XI",
-      "tasks": [
-        {
-          "task": "Zabezpieczenie na zimę i uzupełnienie ściółki",
-          "type": "care"
-        }
-      ]
+      "tasks": []
     },
     {
       "month": "XII",
-      "tasks": [
-        {
-          "task": "Kontrola okryć zimowych i stanu pędów",
-          "type": "care"
-        }
-      ]
+      "tasks": []
     }
   ],
   "problems": [

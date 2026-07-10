@@ -20,30 +20,18 @@
   "calendar": [
     {
       "month": "I",
-      "tasks": [
-        {
-          "task": "Kontrola okryć zimowych i stanu pędów",
-          "type": "care"
-        }
-      ]
+      "tasks": []
     },
     {
       "month": "II",
-      "tasks": [
-        {
-          "task": "Przegląd rośliny i plan prac na wiosnę",
-          "type": "care"
-        }
-      ]
+      "tasks": []
     },
     {
       "month": "III",
       "tasks": [
         {
-          "task": "Wysiew rozsady w domu",
-          "type": "start",
-          "week": null,
-          "articleHref": null
+          "task": "Wysiew nasion na rozsad? w jasnym miejscu",
+          "type": "start"
         }
       ]
     },
@@ -51,7 +39,7 @@
       "month": "IV",
       "tasks": [
         {
-          "task": "Obserwuj wzrost i dostosuj podlewanie do pogody",
+          "task": "Pikowanie rozsady i hartowanie w ciepłe dni",
           "type": "care"
         }
       ]
@@ -60,10 +48,8 @@
       "month": "V",
       "tasks": [
         {
-          "task": "Sadzenie po zimnych ogrodnikach",
-          "type": "start",
-          "week": null,
-          "articleHref": null
+          "task": "Sadzenie po przymrozkach do gruntu lub dużej donicy",
+          "type": "start"
         }
       ]
     },
@@ -71,10 +57,8 @@
       "month": "VI",
       "tasks": [
         {
-          "task": "Podwiązywanie i nawożenie potasem",
-          "type": "care",
-          "week": null,
-          "articleHref": null
+          "task": "Podwiązywanie, podlewanie przy ziemi i usuwanie wilków",
+          "type": "care"
         }
       ]
     },
@@ -82,10 +66,8 @@
       "month": "VII",
       "tasks": [
         {
-          "task": "Zbiór pierwszych gron",
-          "type": "harvest",
-          "week": null,
-          "articleHref": null
+          "task": "Zbiór pierwszych owoców i regularne podlewanie",
+          "type": "harvest"
         }
       ]
     },
@@ -93,8 +75,8 @@
       "month": "VIII",
       "tasks": [
         {
-          "task": "Regularna kontrola podlewania i zdrowia rośliny",
-          "type": "care"
+          "task": "Zbiór owoców i kontrola chorób liści po deszczach",
+          "type": "harvest"
         }
       ]
     },
@@ -102,37 +84,22 @@
       "month": "IX",
       "tasks": [
         {
-          "task": "Przygotowanie rośliny na chłodniejsze noce",
+          "task": "Dojrzewanie ostatnich gron i usuwanie chorych liści",
           "type": "care"
         }
       ]
     },
     {
       "month": "X",
-      "tasks": [
-        {
-          "task": "Przygotowanie rośliny na chłodniejsze noce",
-          "type": "care"
-        }
-      ]
+      "tasks": []
     },
     {
       "month": "XI",
-      "tasks": [
-        {
-          "task": "Zabezpieczenie na zimę i uzupełnienie ściółki",
-          "type": "care"
-        }
-      ]
+      "tasks": []
     },
     {
       "month": "XII",
-      "tasks": [
-        {
-          "task": "Kontrola okryć zimowych i stanu pędów",
-          "type": "care"
-        }
-      ]
+      "tasks": []
     }
   ],
   "problems": [

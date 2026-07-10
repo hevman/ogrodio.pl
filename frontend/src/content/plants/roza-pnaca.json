@@ -20,30 +20,18 @@
   "calendar": [
     {
       "month": "I",
-      "tasks": [
-        {
-          "task": "Kontrola okryć zimowych i stanu pędów",
-          "type": "care"
-        }
-      ]
+      "tasks": []
     },
     {
       "month": "II",
-      "tasks": [
-        {
-          "task": "Przegląd rośliny i plan prac na wiosnę",
-          "type": "care"
-        }
-      ]
+      "tasks": []
     },
     {
       "month": "III",
       "tasks": [
         {
-          "task": "Usunięcie martwych pędów i kontrola podpór",
-          "type": "care",
-          "week": null,
-          "articleHref": null
+          "task": "Cięcie sanitarne i podwiązanie pędów po zimie",
+          "type": "care"
         }
       ]
     },
@@ -51,30 +39,21 @@
       "month": "IV",
       "tasks": [
         {
-          "task": "Nawożenie i ściółka",
-          "type": "care",
-          "week": null,
-          "articleHref": null
+          "task": "Sadzenie róż z pojemników lub gołym korzeniem",
+          "type": "start"
         }
       ]
     },
     {
       "month": "V",
-      "tasks": [
-        {
-          "task": "Obserwuj wzrost i dostosuj podlewanie do pogody",
-          "type": "care"
-        }
-      ]
+      "tasks": []
     },
     {
       "month": "VI",
       "tasks": [
         {
-          "task": "Usuwanie przekwitłych kwiatów",
-          "type": "care",
-          "week": null,
-          "articleHref": null
+          "task": "Kontrola mszyc i podlewanie w czasie kwitnienia",
+          "type": "care"
         }
       ]
     },
@@ -82,35 +61,25 @@
       "month": "VII",
       "tasks": [
         {
-          "task": "Regularna kontrola podlewania i zdrowia rośliny",
+          "task": "Usuwanie przekwitłych kwiatów i podwiązywanie przyrostów",
           "type": "care"
         }
       ]
     },
     {
       "month": "VIII",
-      "tasks": [
-        {
-          "task": "Regularna kontrola podlewania i zdrowia rośliny",
-          "type": "care"
-        }
-      ]
+      "tasks": []
     },
     {
       "month": "IX",
-      "tasks": [
-        {
-          "task": "Przygotowanie rośliny na chłodniejsze noce",
-          "type": "care"
-        }
-      ]
+      "tasks": []
     },
     {
       "month": "X",
       "tasks": [
         {
-          "task": "Przygotowanie rośliny na chłodniejsze noce",
-          "type": "care"
+          "task": "Sadzenie jesienne i kopczykowanie podstawy",
+          "type": "start"
         }
       ]
     },
@@ -127,12 +96,7 @@
     },
     {
       "month": "XII",
-      "tasks": [
-        {
-          "task": "Kontrola okryć zimowych i stanu pędów",
-          "type": "care"
-        }
-      ]
+      "tasks": []
     }
   ],
   "problems": [

@@ -20,30 +20,18 @@
   "calendar": [
     {
       "month": "I",
-      "tasks": [
-        {
-          "task": "Kontrola okryć zimowych i stanu pędów",
-          "type": "care"
-        }
-      ]
+      "tasks": []
     },
     {
       "month": "II",
-      "tasks": [
-        {
-          "task": "Przegląd rośliny i plan prac na wiosnę",
-          "type": "care"
-        }
-      ]
+      "tasks": []
     },
     {
       "month": "III",
       "tasks": [
         {
-          "task": "Cięcie zgodne z gatunkiem i usunięcie suchych kwiatostanów",
-          "type": "care",
-          "week": null,
-          "articleHref": null
+          "task": "Cięcie hortensji bukietowej lub sanitarne po zimie",
+          "type": "care"
         }
       ]
     },
@@ -51,27 +39,20 @@
       "month": "IV",
       "tasks": [
         {
-          "task": "Nawożenie dla hortensji i ściółka",
-          "type": "care",
-          "week": null,
-          "articleHref": null
+          "task": "Sadzenie w półcieniu i ściółkowanie kwaśnym materiałem",
+          "type": "start"
         }
       ]
     },
     {
       "month": "V",
-      "tasks": [
-        {
-          "task": "Obserwuj wzrost i dostosuj podlewanie do pogody",
-          "type": "care"
-        }
-      ]
+      "tasks": []
     },
     {
       "month": "VI",
       "tasks": [
         {
-          "task": "Regularna kontrola podlewania i zdrowia rośliny",
+          "task": "Regularne podlewanie przed kwitnieniem",
           "type": "care"
         }
       ]
@@ -80,10 +61,8 @@
       "month": "VII",
       "tasks": [
         {
-          "task": "Podlewanie w upały, kontrola więdnięcia",
-          "type": "care",
-          "week": null,
-          "articleHref": null
+          "task": "Podlewanie w czasie kwitnienia i usuwanie zwiędłych kwiatostanów",
+          "type": "care"
         }
       ]
     },
@@ -91,26 +70,21 @@
       "month": "VIII",
       "tasks": [
         {
-          "task": "Regularna kontrola podlewania i zdrowia rośliny",
+          "task": "Dalsze podlewanie podczas upałów",
           "type": "care"
         }
       ]
     },
     {
       "month": "IX",
-      "tasks": [
-        {
-          "task": "Przygotowanie rośliny na chłodniejsze noce",
-          "type": "care"
-        }
-      ]
+      "tasks": []
     },
     {
       "month": "X",
       "tasks": [
         {
-          "task": "Przygotowanie rośliny na chłodniejsze noce",
-          "type": "care"
+          "task": "Sadzenie jesienne i ściółkowanie podstawy",
+          "type": "start"
         }
       ]
     },
@@ -127,12 +101,7 @@
     },
     {
       "month": "XII",
-      "tasks": [
-        {
-          "task": "Kontrola okryć zimowych i stanu pędów",
-          "type": "care"
-        }
-      ]
+      "tasks": []
     }
   ],
   "problems": [

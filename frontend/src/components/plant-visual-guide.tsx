@@ -74,13 +74,17 @@ function CustomTooltip({ active, payload }: { active?: boolean; payload?: Array<
   return (
     <div className="max-w-72 rounded-lg border border-slate-200 bg-white p-3 text-sm shadow-lg">
       <p className="font-black text-slate-900">Miesiąc {data.month}</p>
-      <div className="mt-2 space-y-1 text-slate-700">
-        {data.tasks.map((task) => (
-          <p key={`${task.month}-${task.task}`}>
-            <span className="font-bold">{typeLabels[task.type]}:</span> {task.task}
-          </p>
-        ))}
-      </div>
+      {data.tasks.length > 0 ? (
+        <div className="mt-2 space-y-1 text-slate-700">
+          {data.tasks.map((task) => (
+            <p key={`${task.month}-${task.task}`}>
+              <span className="font-bold">{typeLabels[task.type]}:</span> {task.task}
+            </p>
+          ))}
+        </div>
+      ) : (
+        <p className="mt-2 text-slate-600">Brak zaplanowanej pracy w tym miesiącu.</p>
+      )}
     </div>
   );
 }
@@ -102,6 +106,9 @@ function Metric({ icon: Icon, label, value, score }: { icon: typeof SunMedium; l
 
 export function PlantVisualGuide({ plant }: Props) {
   const data = monthDataFor(plant);
+  const hasStart = data.some((month) => month.start > 0);
+  const hasCare = data.some((month) => month.care > 0);
+  const hasHarvest = data.some((month) => month.harvest > 0);
   const visibleRisks = [
     ...plant.risks.map((risk) => ({ title: risk.title, detail: risk.action, months: risk.months.join(", ") })),
     ...plant.signals.map((signal) => ({ title: signal.title, detail: signal.action, months: signal.months?.join(", ") || "cały sezon" })),
@@ -127,23 +134,29 @@ export function PlantVisualGuide({ plant }: Props) {
             <XAxis axisLine={false} dataKey="month" tickLine={false} />
             <YAxis allowDecimals={false} axisLine={false} tickLine={false} />
             <Tooltip content={<CustomTooltip />} cursor={{ fill: "#f1f5f9" }} />
-            <Bar dataKey="start" name="Start" stackId="tasks" radius={[0, 0, 0, 0]}>
-              {data.map((entry) => <Cell fill={barColors.start} key={`start-${entry.month}`} />)}
-            </Bar>
-            <Bar dataKey="care" name="Pielęgnacja" stackId="tasks" radius={[0, 0, 0, 0]}>
-              {data.map((entry) => <Cell fill={barColors.care} key={`care-${entry.month}`} />)}
-            </Bar>
-            <Bar dataKey="harvest" name="Zbiory" stackId="tasks" radius={[8, 8, 0, 0]}>
-              {data.map((entry) => <Cell fill={barColors.harvest} key={`harvest-${entry.month}`} />)}
-            </Bar>
+            {hasStart ? (
+              <Bar dataKey="start" name="Start" stackId="tasks" radius={[0, 0, 0, 0]}>
+                {data.map((entry) => <Cell fill={barColors.start} key={`start-${entry.month}`} />)}
+              </Bar>
+            ) : null}
+            {hasCare ? (
+              <Bar dataKey="care" name="Pielęgnacja" stackId="tasks" radius={[0, 0, 0, 0]}>
+                {data.map((entry) => <Cell fill={barColors.care} key={`care-${entry.month}`} />)}
+              </Bar>
+            ) : null}
+            {hasHarvest ? (
+              <Bar dataKey="harvest" name="Zbiory" stackId="tasks" radius={[8, 8, 0, 0]}>
+                {data.map((entry) => <Cell fill={barColors.harvest} key={`harvest-${entry.month}`} />)}
+              </Bar>
+            ) : null}
           </BarChart>
         </ResponsiveContainer>
       </div>
 
       <div className="mt-4 flex flex-wrap gap-3 text-xs font-bold text-slate-600">
-        <span className="inline-flex items-center gap-2"><span className="h-2.5 w-2.5 rounded-full bg-emerald-600" /> Sadzenie i siew</span>
-        <span className="inline-flex items-center gap-2"><span className="h-2.5 w-2.5 rounded-full bg-sky-600" /> Pielęgnacja</span>
-        <span className="inline-flex items-center gap-2"><span className="h-2.5 w-2.5 rounded-full bg-amber-600" /> Zbiory</span>
+        {hasStart ? <span className="inline-flex items-center gap-2"><span className="h-2.5 w-2.5 rounded-full bg-emerald-600" /> Sadzenie i siew</span> : null}
+        {hasCare ? <span className="inline-flex items-center gap-2"><span className="h-2.5 w-2.5 rounded-full bg-sky-600" /> Pielęgnacja</span> : null}
+        {hasHarvest ? <span className="inline-flex items-center gap-2"><span className="h-2.5 w-2.5 rounded-full bg-amber-600" /> Zbiory</span> : null}
       </div>
 
       <div className="mt-6 grid gap-4 md:grid-cols-2">

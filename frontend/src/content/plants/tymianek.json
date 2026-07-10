@@ -20,119 +20,71 @@
   "calendar": [
     {
       "month": "I",
-      "tasks": [
-        {
-          "task": "Kontrola okryć zimowych i stanu pędów",
-          "type": "care"
-        }
-      ]
+      "tasks": []
     },
     {
       "month": "II",
-      "tasks": [
-        {
-          "task": "Przegląd rośliny i plan prac na wiosnę",
-          "type": "care"
-        }
-      ]
+      "tasks": []
     },
     {
       "month": "III",
-      "tasks": [
-        {
-          "task": "Obserwuj wzrost i dostosuj podlewanie do pogody",
-          "type": "care"
-        }
-      ]
+      "tasks": []
     },
     {
       "month": "IV",
       "tasks": [
         {
-          "task": "Sadzenie lub cięcie po zimie",
-          "type": "start",
-          "week": null,
-          "articleHref": null
+          "task": "Sadzenie lub cięcie po zimie w suchym, słonecznym miejscu",
+          "type": "start"
         }
       ]
     },
     {
       "month": "V",
-      "tasks": [
-        {
-          "task": "Obserwuj wzrost i dostosuj podlewanie do pogody",
-          "type": "care"
-        }
-      ]
+      "tasks": []
     },
     {
       "month": "VI",
       "tasks": [
         {
           "task": "Zbiór pędów przed pełnią kwitnienia",
-          "type": "harvest",
-          "week": null,
-          "articleHref": null
+          "type": "harvest"
         }
       ]
     },
     {
       "month": "VII",
-      "tasks": [
-        {
-          "task": "Regularna kontrola podlewania i zdrowia rośliny",
-          "type": "care"
-        }
-      ]
+      "tasks": []
     },
     {
       "month": "VIII",
       "tasks": [
         {
-          "task": "Lekkie przycięcie dla zagęszczenia",
-          "type": "care",
-          "week": null,
-          "articleHref": null
+          "task": "Lekkie przycięcie dla zagęszczenia kępy",
+          "type": "care"
         }
       ]
     },
     {
       "month": "IX",
-      "tasks": [
-        {
-          "task": "Przygotowanie rośliny na chłodniejsze noce",
-          "type": "care"
-        }
-      ]
+      "tasks": []
     },
     {
       "month": "X",
-      "tasks": [
-        {
-          "task": "Przygotowanie rośliny na chłodniejsze noce",
-          "type": "care"
-        }
-      ]
+      "tasks": []
     },
     {
       "month": "XI",
       "tasks": [
         {
-          "task": "Ochrona donic przed przemarznięciem",
-          "type": "care",
-          "week": null,
-          "articleHref": null
+          "task": "Ochrona donic przed przemarznięciem i przemakaniem",
+          "type": "care"
         }
       ]
     },
     {
       "month": "XII",
-      "tasks": [
-        {
-          "task": "Kontrola okryć zimowych i stanu pędów",
-          "type": "care"
-        }
-      ]
+      "tasks": []
     }
   ],
   "problems": [

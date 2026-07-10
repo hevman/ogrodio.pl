@@ -20,27 +20,17 @@
   "calendar": [
     {
       "month": "I",
-      "tasks": [
-        {
-          "task": "Kontrola okryć zimowych i stanu pędów",
-          "type": "care"
-        }
-      ]
+      "tasks": []
     },
     {
       "month": "II",
-      "tasks": [
-        {
-          "task": "Przegląd rośliny i plan prac na wiosnę",
-          "type": "care"
-        }
-      ]
+      "tasks": []
     },
     {
       "month": "III",
       "tasks": [
         {
-          "task": "Obserwuj wzrost i dostosuj podlewanie do pogody",
+          "task": "Wiosenne cięcie po największych mrozach",
           "type": "care"
         }
       ]
@@ -49,30 +39,21 @@
       "month": "IV",
       "tasks": [
         {
-          "task": "Sadzenie i lekkie cięcie po zimie",
-          "type": "start",
-          "week": null,
-          "articleHref": null
+          "task": "Sadzenie do przepuszczalnej ziemi w pełnym słońcu",
+          "type": "start"
         }
       ]
     },
     {
       "month": "V",
-      "tasks": [
-        {
-          "task": "Obserwuj wzrost i dostosuj podlewanie do pogody",
-          "type": "care"
-        }
-      ]
+      "tasks": []
     },
     {
       "month": "VI",
       "tasks": [
         {
-          "task": "Zbiór kwiatów do suszenia",
-          "type": "harvest",
-          "week": null,
-          "articleHref": null
+          "task": "Zbiór pędów na suszenie przed pełnią kwitnienia",
+          "type": "harvest"
         }
       ]
     },
@@ -80,7 +61,7 @@
       "month": "VII",
       "tasks": [
         {
-          "task": "Regularna kontrola podlewania i zdrowia rośliny",
+          "task": "Cięcie po kwitnieniu dla utrzymania kępy",
           "type": "care"
         }
       ]
@@ -100,19 +81,14 @@
       "month": "IX",
       "tasks": [
         {
-          "task": "Przygotowanie rośliny na chłodniejsze noce",
-          "type": "care"
+          "task": "Sadzenie wczesnojesienne tylko w przepuszczalnym miejscu",
+          "type": "start"
         }
       ]
     },
     {
       "month": "X",
-      "tasks": [
-        {
-          "task": "Przygotowanie rośliny na chłodniejsze noce",
-          "type": "care"
-        }
-      ]
+      "tasks": []
     },
     {
       "month": "XI",
@@ -127,12 +103,7 @@
     },
     {
       "month": "XII",
-      "tasks": [
-        {
-          "task": "Kontrola okryć zimowych i stanu pędów",
-          "type": "care"
-        }
-      ]
+      "tasks": []
     }
   ],
   "problems": [

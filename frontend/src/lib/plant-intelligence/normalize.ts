@@ -18,7 +18,7 @@ export function readCalendarFromJson(calendar: PlantCatalogRaw["calendar"]): Pla
   );
 }
 
-export function assertFullYearCalendar(slug: string, calendar: PlantCalendarEntry[]) {
+export function assertFullYearCalendar(slug: string, calendar: PlantCatalogRaw["calendar"]) {
   const months = new Set(calendar.map((entry) => entry.month));
   const missing = monthOrder.filter((month) => !months.has(month));
   if (missing.length > 0) {
@@ -27,8 +27,8 @@ export function assertFullYearCalendar(slug: string, calendar: PlantCalendarEntr
 }
 
 export function normalizePlantCatalogItem(raw: PlantCatalogRaw): PlantCatalogItem {
+  assertFullYearCalendar(raw.slug, raw.calendar);
   const calendar = readCalendarFromJson(raw.calendar);
-  assertFullYearCalendar(raw.slug, calendar);
 
   return {
     ...raw,

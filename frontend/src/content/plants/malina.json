@@ -20,30 +20,18 @@
   "calendar": [
     {
       "month": "I",
-      "tasks": [
-        {
-          "task": "Kontrola okryć zimowych i stanu pędów",
-          "type": "care"
-        }
-      ]
+      "tasks": []
     },
     {
       "month": "II",
-      "tasks": [
-        {
-          "task": "Przegląd rośliny i plan prac na wiosnę",
-          "type": "care"
-        }
-      ]
+      "tasks": []
     },
     {
       "month": "III",
       "tasks": [
         {
-          "task": "Cięcie zgodne z typem odmiany",
-          "type": "care",
-          "week": null,
-          "articleHref": null
+          "task": "Cięcie pędów zależnie od typu odmiany",
+          "type": "care"
         }
       ]
     },
@@ -51,27 +39,20 @@
       "month": "IV",
       "tasks": [
         {
-          "task": "Podwiązanie pędów i ściółka",
-          "type": "care",
-          "week": null,
-          "articleHref": null
+          "task": "Sadzenie nowych sadzonek i prowadzenie przy podporach",
+          "type": "start"
         }
       ]
     },
     {
       "month": "V",
-      "tasks": [
-        {
-          "task": "Obserwuj wzrost i dostosuj podlewanie do pogody",
-          "type": "care"
-        }
-      ]
+      "tasks": []
     },
     {
       "month": "VI",
       "tasks": [
         {
-          "task": "Regularna kontrola podlewania i zdrowia rośliny",
+          "task": "Podlewanie podczas kwitnienia i zawiązywania owoców",
           "type": "care"
         }
       ]
@@ -81,29 +62,20 @@
       "tasks": [
         {
           "task": "Zbiór odmian letnich",
-          "type": "harvest",
-          "week": null,
-          "articleHref": null
+          "type": "harvest"
         }
       ]
     },
     {
       "month": "VIII",
-      "tasks": [
-        {
-          "task": "Regularna kontrola podlewania i zdrowia rośliny",
-          "type": "care"
-        }
-      ]
+      "tasks": []
     },
     {
       "month": "IX",
       "tasks": [
         {
           "task": "Zbiór odmian jesiennych",
-          "type": "harvest",
-          "week": null,
-          "articleHref": null
+          "type": "harvest"
         }
       ]
     },
@@ -111,28 +83,18 @@
       "month": "X",
       "tasks": [
         {
-          "task": "Przygotowanie rośliny na chłodniejsze noce",
-          "type": "care"
+          "task": "Sadzenie jesienne i ściółkowanie rzędów",
+          "type": "start"
         }
       ]
     },
     {
       "month": "XI",
-      "tasks": [
-        {
-          "task": "Zabezpieczenie na zimę i uzupełnienie ściółki",
-          "type": "care"
-        }
-      ]
+      "tasks": []
     },
     {
       "month": "XII",
-      "tasks": [
-        {
-          "task": "Kontrola okryć zimowych i stanu pędów",
-          "type": "care"
-        }
-      ]
+      "tasks": []
     }
   ],
   "problems": [

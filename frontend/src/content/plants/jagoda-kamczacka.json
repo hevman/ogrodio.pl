@@ -20,30 +20,18 @@
   "calendar": [
     {
       "month": "I",
-      "tasks": [
-        {
-          "task": "Kontrola okryć zimowych i stanu pędów",
-          "type": "care"
-        }
-      ]
+      "tasks": []
     },
     {
       "month": "II",
-      "tasks": [
-        {
-          "task": "Przegląd rośliny i plan prac na wiosnę",
-          "type": "care"
-        }
-      ]
+      "tasks": []
     },
     {
       "month": "III",
       "tasks": [
         {
-          "task": "Kontrola pąków i ściółka pod krzewami",
-          "type": "care",
-          "week": null,
-          "articleHref": null
+          "task": "Sadzenie wiosenne i ściółkowanie płytkich korzeni",
+          "type": "start"
         }
       ]
     },
@@ -62,10 +50,8 @@
       "month": "V",
       "tasks": [
         {
-          "task": "Zbiór pierwszych owoców",
-          "type": "harvest",
-          "week": null,
-          "articleHref": null
+          "task": "Zbiór najwcześniejszych owoców",
+          "type": "harvest"
         }
       ]
     },
@@ -73,19 +59,14 @@
       "month": "VI",
       "tasks": [
         {
-          "task": "Regularna kontrola podlewania i zdrowia rośliny",
-          "type": "care"
+          "task": "Dalszy zbiór i podlewanie po owocowaniu",
+          "type": "harvest"
         }
       ]
     },
     {
       "month": "VII",
-      "tasks": [
-        {
-          "task": "Regularna kontrola podlewania i zdrowia rośliny",
-          "type": "care"
-        }
-      ]
+      "tasks": []
     },
     {
       "month": "VIII",
@@ -100,39 +81,24 @@
     },
     {
       "month": "IX",
-      "tasks": [
-        {
-          "task": "Przygotowanie rośliny na chłodniejsze noce",
-          "type": "care"
-        }
-      ]
+      "tasks": []
     },
     {
       "month": "X",
       "tasks": [
         {
-          "task": "Przygotowanie rośliny na chłodniejsze noce",
-          "type": "care"
+          "task": "Sadzenie jesienne drugiej odmiany do zapylania",
+          "type": "start"
         }
       ]
     },
     {
       "month": "XI",
-      "tasks": [
-        {
-          "task": "Zabezpieczenie na zimę i uzupełnienie ściółki",
-          "type": "care"
-        }
-      ]
+      "tasks": []
     },
     {
       "month": "XII",
-      "tasks": [
-        {
-          "task": "Kontrola okryć zimowych i stanu pędów",
-          "type": "care"
-        }
-      ]
+      "tasks": []
     }
   ],
   "problems": [

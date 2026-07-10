@@ -20,39 +20,22 @@
   "calendar": [
     {
       "month": "I",
-      "tasks": [
-        {
-          "task": "Kontrola okryć zimowych i stanu pędów",
-          "type": "care"
-        }
-      ]
+      "tasks": []
     },
     {
       "month": "II",
-      "tasks": [
-        {
-          "task": "Przegląd rośliny i plan prac na wiosnę",
-          "type": "care"
-        }
-      ]
+      "tasks": []
     },
     {
       "month": "III",
-      "tasks": [
-        {
-          "task": "Obserwuj wzrost i dostosuj podlewanie do pogody",
-          "type": "care"
-        }
-      ]
+      "tasks": []
     },
     {
       "month": "IV",
       "tasks": [
         {
-          "task": "Wysiew rozsady w domu",
-          "type": "start",
-          "week": null,
-          "articleHref": null
+          "task": "Wysiew rozsady w domu pod koniec miesiąca",
+          "type": "start"
         }
       ]
     },
@@ -60,10 +43,8 @@
       "month": "V",
       "tasks": [
         {
-          "task": "Sadzenie po przymrozkach do gruntu",
-          "type": "start",
-          "week": null,
-          "articleHref": null
+          "task": "Sadzenie po przymrozkach albo siew wprost do ciepłej ziemi",
+          "type": "start"
         }
       ]
     },
@@ -71,10 +52,8 @@
       "month": "VI",
       "tasks": [
         {
-          "task": "Podlewanie i ściółkowanie pod liśćmi",
-          "type": "care",
-          "week": null,
-          "articleHref": null
+          "task": "Podlewanie przy ziemi i obserwacja zapylania kwiatów",
+          "type": "care"
         }
       ]
     },
@@ -83,9 +62,7 @@
       "tasks": [
         {
           "task": "Zbiór młodych owoców co kilka dni",
-          "type": "harvest",
-          "week": null,
-          "articleHref": null
+          "type": "harvest"
         }
       ]
     },
@@ -93,8 +70,8 @@
       "month": "VIII",
       "tasks": [
         {
-          "task": "Regularna kontrola podlewania i zdrowia rośliny",
-          "type": "care"
+          "task": "Dalszy zbiór i usuwanie liści z mączniakiem",
+          "type": "harvest"
         }
       ]
     },
@@ -102,37 +79,22 @@
       "month": "IX",
       "tasks": [
         {
-          "task": "Przygotowanie rośliny na chłodniejsze noce",
-          "type": "care"
+          "task": "Zbiór ostatnich owoców przed chłodami",
+          "type": "harvest"
         }
       ]
     },
     {
       "month": "X",
-      "tasks": [
-        {
-          "task": "Przygotowanie rośliny na chłodniejsze noce",
-          "type": "care"
-        }
-      ]
+      "tasks": []
     },
     {
       "month": "XI",
-      "tasks": [
-        {
-          "task": "Zabezpieczenie na zimę i uzupełnienie ściółki",
-          "type": "care"
-        }
-      ]
+      "tasks": []
     },
     {
       "month": "XII",
-      "tasks": [
-        {
-          "task": "Kontrola okryć zimowych i stanu pędów",
-          "type": "care"
-        }
-      ]
+      "tasks": []
     }
   ],
   "problems": [

@@ -23,31 +23,18 @@
   "calendar": [
     {
       "month": "I",
-      "tasks": [
-        {
-          "task": "Kontrola okryć zimowych i stanu pędów",
-          "type": "care",
-          "week": "cały"
-        }
-      ]
+      "tasks": []
     },
     {
       "month": "II",
-      "tasks": [
-        {
-          "task": "Przegląd krzewów i plan cięcia na marzec",
-          "type": "care",
-          "week": "cały"
-        }
-      ]
+      "tasks": []
     },
     {
       "month": "III",
       "tasks": [
         {
-          "task": "Cięcie sanitarne i odmładzające starszych pędów",
-          "type": "care",
-          "week": "1-2"
+          "task": "Sprawdzenie pH podłoża i uzupełnienie kwaśnej ściółki",
+          "type": "care"
         }
       ]
     },
@@ -55,14 +42,8 @@
       "month": "IV",
       "tasks": [
         {
-          "task": "Uzupełnienie ściółki z kory i kontrola pH",
-          "type": "care",
-          "week": "cały"
-        },
-        {
-          "task": "Pierwsze nawożenie preparatem kwaśnym",
-          "type": "care",
-          "week": "3-4"
+          "task": "Sadzenie do kwaśnego podłoża i podlewanie deszczówką",
+          "type": "start"
         }
       ]
     },
@@ -70,9 +51,8 @@
       "month": "V",
       "tasks": [
         {
-          "task": "Kontrola pąków kwiatowych i podlewanie w suszy",
-          "type": "care",
-          "week": "cały"
+          "task": "Podlewanie w czasie kwitnienia i kontrola przymrozków",
+          "type": "care"
         }
       ]
     },
@@ -80,14 +60,8 @@
       "month": "VI",
       "tasks": [
         {
-          "task": "Stałe podlewanie podczas zawiązywania owoców",
-          "type": "care",
-          "week": "cały"
-        },
-        {
-          "task": "Ochrona dojrzałych owoców przed ptakami",
-          "type": "care",
-          "week": "3-4"
+          "task": "Utrzymanie wilgotności podczas dorastania owoców",
+          "type": "care"
         }
       ]
     },
@@ -95,15 +69,8 @@
       "month": "VII",
       "tasks": [
         {
-          "task": "Zbiór odmian wczesnych i średnich",
-          "type": "harvest",
-          "week": "1-2",
-          "articleHref": "/porady/owoce-w-ogrodzie/odmiany-borowki-terminy-dojrzewania"
-        },
-        {
-          "task": "Podlewanie deszczówką małymi dawkami w upały",
-          "type": "care",
-          "week": "cały"
+          "task": "Zbiór dojrzałych owoców partiami",
+          "type": "harvest"
         }
       ]
     },
@@ -111,15 +78,8 @@
       "month": "VIII",
       "tasks": [
         {
-          "task": "Zbiór odmian późnych",
-          "type": "harvest",
-          "week": "cały",
-          "articleHref": "/porady/owoce-w-ogrodzie/odmiany-borowki-terminy-dojrzewania"
-        },
-        {
-          "task": "Kontrola zasychania owoców przy suszy",
-          "type": "care",
-          "week": "cały"
+          "task": "Dalszy zbiór późniejszych odmian i podlewanie w suszy",
+          "type": "harvest"
         }
       ]
     },
@@ -142,9 +102,8 @@
       "month": "X",
       "tasks": [
         {
-          "task": "Lekkie cięcie po zbiorze — usuń chore pędy",
-          "type": "care",
-          "week": "1-2"
+          "task": "Jesienne sadzenie i uzupełnienie kory sosnowej",
+          "type": "start"
         }
       ]
     },
@@ -160,13 +119,7 @@
     },
     {
       "month": "XII",
-      "tasks": [
-        {
-          "task": "Kontrola okryć przy bezśnieżnych mrozach",
-          "type": "care",
-          "week": "cały"
-        }
-      ]
+      "tasks": []
     }
   ],
   "problems": [

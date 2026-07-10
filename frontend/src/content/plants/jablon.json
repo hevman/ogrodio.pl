@@ -20,90 +20,57 @@
   "calendar": [
     {
       "month": "I",
-      "tasks": [
-        {
-          "task": "Kontrola okryć zimowych i stanu pędów",
-          "type": "care"
-        }
-      ]
+      "tasks": []
     },
     {
       "month": "II",
       "tasks": [
         {
-          "task": "Cięcie prześwietlające w suchy dzień",
-          "type": "care",
-          "week": null,
-          "articleHref": null
+          "task": "Zimowe cięcie prześwietlające w bezmroźny dzień",
+          "type": "care"
         }
       ]
     },
     {
       "month": "III",
-      "tasks": [
-        {
-          "task": "Obserwuj wzrost i dostosuj podlewanie do pogody",
-          "type": "care"
-        }
-      ]
+      "tasks": []
     },
     {
       "month": "IV",
       "tasks": [
         {
-          "task": "Obserwacja kwitnienia i ochrona przed przymrozkiem",
-          "type": "care",
-          "week": null,
-          "articleHref": null
+          "task": "Sadzenie drzewek i kontrola kwitnienia po przymrozkach",
+          "type": "start"
         }
       ]
     },
     {
       "month": "V",
-      "tasks": [
-        {
-          "task": "Obserwuj wzrost i dostosuj podlewanie do pogody",
-          "type": "care"
-        }
-      ]
+      "tasks": []
     },
     {
       "month": "VI",
       "tasks": [
         {
-          "task": "Przerzedzanie zawiązków przy nadmiarze owoców",
-          "type": "care",
-          "week": null,
-          "articleHref": null
+          "task": "Przerzedzanie zawiązków przy nadmiernym owocowaniu",
+          "type": "care"
         }
       ]
     },
     {
       "month": "VII",
-      "tasks": [
-        {
-          "task": "Regularna kontrola podlewania i zdrowia rośliny",
-          "type": "care"
-        }
-      ]
+      "tasks": []
     },
     {
       "month": "VIII",
-      "tasks": [
-        {
-          "task": "Regularna kontrola podlewania i zdrowia rośliny",
-          "type": "care"
-        }
-      ]
+      "tasks": []
     },
     {
       "month": "IX",
       "tasks": [
         {
-          "task": "Zbiór odmian jesiennych",
-          "type": "harvest",
-          "week": null,
-          "articleHref": null
+          "task": "Zbiór odmian jesiennych w miarę dojrzewania",
+          "type": "harvest"
         }
       ]
     },
@@ -111,28 +78,18 @@
       "month": "X",
       "tasks": [
         {
-          "task": "Przygotowanie rośliny na chłodniejsze noce",
-          "type": "care"
+          "task": "Sadzenie jesienne i bielenie pni przed zim?",
+          "type": "start"
         }
       ]
     },
     {
       "month": "XI",
-      "tasks": [
-        {
-          "task": "Zabezpieczenie na zimę i uzupełnienie ściółki",
-          "type": "care"
-        }
-      ]
+      "tasks": []
     },
     {
       "month": "XII",
-      "tasks": [
-        {
-          "task": "Kontrola okryć zimowych i stanu pędów",
-          "type": "care"
-        }
-      ]
+      "tasks": []
     }
   ],
   "problems": [

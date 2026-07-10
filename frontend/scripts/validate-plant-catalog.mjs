@@ -19,7 +19,7 @@ for (const file of files) {
 
   const months = new Set();
   for (const block of calendar) {
-    if (!block.month || !Array.isArray(block.tasks) || block.tasks.length === 0) {
+    if (!block.month || !Array.isArray(block.tasks)) {
       console.error(`${file}: invalid month block for ${block.month || "?"}`);
       failed = true;
       continue;

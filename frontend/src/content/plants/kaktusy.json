@@ -20,30 +20,18 @@
   "calendar": [
     {
       "month": "I",
-      "tasks": [
-        {
-          "task": "Kontrola okryć zimowych i stanu pędów",
-          "type": "care"
-        }
-      ]
+      "tasks": []
     },
     {
       "month": "II",
-      "tasks": [
-        {
-          "task": "Przegląd rośliny i plan prac na wiosnę",
-          "type": "care"
-        }
-      ]
+      "tasks": []
     },
     {
       "month": "III",
       "tasks": [
         {
-          "task": "Powrót do podlewania po zimowym spoczynku",
-          "type": "care",
-          "week": null,
-          "articleHref": null
+          "task": "Wybudzanie po zimowaniu i pierwsze ostrożne podlewanie",
+          "type": "care"
         }
       ]
     },
@@ -51,7 +39,7 @@
       "month": "IV",
       "tasks": [
         {
-          "task": "Obserwuj wzrost i dostosuj podlewanie do pogody",
+          "task": "Przesadzanie do mineralnego podłoża, jeśli doniczka jest za mała",
           "type": "care"
         }
       ]
@@ -71,7 +59,7 @@
       "month": "VI",
       "tasks": [
         {
-          "task": "Regularna kontrola podlewania i zdrowia rośliny",
+          "task": "Podlewanie po pełnym przeschnięciu podłoża",
           "type": "care"
         }
       ]
@@ -91,25 +79,20 @@
       "month": "VIII",
       "tasks": [
         {
-          "task": "Regularna kontrola podlewania i zdrowia rośliny",
+          "task": "Ostatnie mocniejsze podlewanie przed ograniczaniem wody",
           "type": "care"
         }
       ]
     },
     {
       "month": "IX",
-      "tasks": [
-        {
-          "task": "Przygotowanie rośliny na chłodniejsze noce",
-          "type": "care"
-        }
-      ]
+      "tasks": []
     },
     {
       "month": "X",
       "tasks": [
         {
-          "task": "Przygotowanie rośliny na chłodniejsze noce",
+          "task": "Przeniesienie na suche, chłodne zimowanie",
           "type": "care"
         }
       ]
@@ -127,12 +110,7 @@
     },
     {
       "month": "XII",
-      "tasks": [
-        {
-          "task": "Kontrola okryć zimowych i stanu pędów",
-          "type": "care"
-        }
-      ]
+      "tasks": []
     }
   ],
   "problems": [

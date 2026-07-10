@@ -20,30 +20,18 @@
   "calendar": [
     {
       "month": "I",
-      "tasks": [
-        {
-          "task": "Kontrola okryć zimowych i stanu pędów",
-          "type": "care"
-        }
-      ]
+      "tasks": []
     },
     {
       "month": "II",
-      "tasks": [
-        {
-          "task": "Przegląd rośliny i plan prac na wiosnę",
-          "type": "care"
-        }
-      ]
+      "tasks": []
     },
     {
       "month": "III",
       "tasks": [
         {
-          "task": "Siew wprost do gruntu",
-          "type": "start",
-          "week": null,
-          "articleHref": null
+          "task": "Siew wprost do gruntu w wilgotn?, spulchnion? ziemi?",
+          "type": "start"
         }
       ]
     },
@@ -52,87 +40,56 @@
       "tasks": [
         {
           "task": "Utrzymanie wilgotności do wschodów",
-          "type": "care",
-          "week": null,
-          "articleHref": null
+          "type": "care"
         }
       ]
     },
     {
       "month": "V",
-      "tasks": [
-        {
-          "task": "Obserwuj wzrost i dostosuj podlewanie do pogody",
-          "type": "care"
-        }
-      ]
+      "tasks": []
     },
     {
       "month": "VI",
       "tasks": [
         {
           "task": "Zbiór natki i przerywanie zbyt gęstych rzędów",
-          "type": "harvest",
-          "week": null,
-          "articleHref": null
+          "type": "harvest"
         }
       ]
     },
     {
       "month": "VII",
-      "tasks": [
-        {
-          "task": "Regularna kontrola podlewania i zdrowia rośliny",
-          "type": "care"
-        }
-      ]
+      "tasks": []
     },
     {
       "month": "VIII",
       "tasks": [
         {
-          "task": "Regularna kontrola podlewania i zdrowia rośliny",
+          "task": "Podlewanie w czasie grubienia korzeni",
           "type": "care"
         }
       ]
     },
     {
       "month": "IX",
-      "tasks": [
-        {
-          "task": "Przygotowanie rośliny na chłodniejsze noce",
-          "type": "care"
-        }
-      ]
+      "tasks": []
     },
     {
       "month": "X",
       "tasks": [
         {
           "task": "Zbiór korzeni przed silnymi mrozami",
-          "type": "harvest",
-          "week": null,
-          "articleHref": null
+          "type": "harvest"
         }
       ]
     },
     {
       "month": "XI",
-      "tasks": [
-        {
-          "task": "Zabezpieczenie na zimę i uzupełnienie ściółki",
-          "type": "care"
-        }
-      ]
+      "tasks": []
     },
     {
       "month": "XII",
-      "tasks": [
-        {
-          "task": "Kontrola okryć zimowych i stanu pędów",
-          "type": "care"
-        }
-      ]
+      "tasks": []
     }
   ],
   "problems": [

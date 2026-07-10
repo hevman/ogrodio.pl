@@ -20,30 +20,18 @@
   "calendar": [
     {
       "month": "I",
-      "tasks": [
-        {
-          "task": "Kontrola okryć zimowych i stanu pędów",
-          "type": "care"
-        }
-      ]
+      "tasks": []
     },
     {
       "month": "II",
-      "tasks": [
-        {
-          "task": "Przegląd rośliny i plan prac na wiosnę",
-          "type": "care"
-        }
-      ]
+      "tasks": []
     },
     {
       "month": "III",
       "tasks": [
         {
           "task": "Pierwszy siew pod osłoną lub do gruntu",
-          "type": "start",
-          "week": null,
-          "articleHref": null
+          "type": "start"
         }
       ]
     },
@@ -51,10 +39,8 @@
       "month": "IV",
       "tasks": [
         {
-          "task": "Dosiew co 2-3 tygodnie",
-          "type": "start",
-          "week": null,
-          "articleHref": null
+          "task": "Dosiew co 2-3 tygodnie dla ciągłego zbioru",
+          "type": "start"
         }
       ]
     },
@@ -62,39 +48,25 @@
       "month": "V",
       "tasks": [
         {
-          "task": "Zbiór zewnętrznych liści",
-          "type": "harvest",
-          "week": null,
-          "articleHref": null
+          "task": "Zbiór zewnętrznych liści przed upałami",
+          "type": "harvest"
         }
       ]
     },
     {
       "month": "VI",
-      "tasks": [
-        {
-          "task": "Regularna kontrola podlewania i zdrowia rośliny",
-          "type": "care"
-        }
-      ]
+      "tasks": []
     },
     {
       "month": "VII",
-      "tasks": [
-        {
-          "task": "Regularna kontrola podlewania i zdrowia rośliny",
-          "type": "care"
-        }
-      ]
+      "tasks": []
     },
     {
       "month": "VIII",
       "tasks": [
         {
           "task": "Siew jesienny po największych upałach",
-          "type": "start",
-          "week": null,
-          "articleHref": null
+          "type": "start"
         }
       ]
     },
@@ -102,8 +74,8 @@
       "month": "IX",
       "tasks": [
         {
-          "task": "Przygotowanie rośliny na chłodniejsze noce",
-          "type": "care"
+          "task": "Zbiór młodych liści z siewów jesiennych",
+          "type": "harvest"
         }
       ]
     },
@@ -111,28 +83,18 @@
       "month": "X",
       "tasks": [
         {
-          "task": "Przygotowanie rośliny na chłodniejsze noce",
-          "type": "care"
+          "task": "Zbiór pod osłoną do pierwszych mocniejszych chłodów",
+          "type": "harvest"
         }
       ]
     },
     {
       "month": "XI",
-      "tasks": [
-        {
-          "task": "Zabezpieczenie na zimę i uzupełnienie ściółki",
-          "type": "care"
-        }
-      ]
+      "tasks": []
     },
     {
       "month": "XII",
-      "tasks": [
-        {
-          "task": "Kontrola okryć zimowych i stanu pędów",
-          "type": "care"
-        }
-      ]
+      "tasks": []
     }
   ],
   "problems": [
