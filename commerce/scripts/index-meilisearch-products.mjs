@@ -48,13 +48,14 @@ async function waitForTask(taskUid) {
 }
 
 function categorySort(category) {
-  const order = ['ziola', 'balkon-i-taras', 'rosliny-domowe', 'ziemie-i-nawozy', 'donice-i-oslonki', 'nawadnianie'];
+  const order = ['ebooki', 'ziola', 'balkon-i-taras', 'rosliny-domowe', 'ziemie-i-nawozy', 'donice-i-oslonki', 'nawadnianie'];
   const position = order.indexOf(category);
   return position === -1 ? 99 : position;
 }
 
 function merchandising(product, variant, category) {
   const rules = {
+    'borowki-bez-bledow-ebook': { badge: 'Nowość', isNew: true, bestseller: true },
     'bazylia-genovese': { badge: 'Hit', oldPrice: 1590, bestseller: true },
     'lawenda-waskolistna': { badge: '-15%', oldPrice: 2190, promotion: true },
     'zestaw-balkonowy-start': { badge: 'Bestseller', oldPrice: 5990, bestseller: true, promotion: true },
@@ -63,13 +64,13 @@ function merchandising(product, variant, category) {
   };
   const rule = rules[product.slug] || {};
   return {
-    brand: category === 'nawadnianie' || category === 'donice-i-oslonki' ? 'Ogrodio Tools' : 'Ogrodio',
+    brand: category === 'ebooki' ? 'Ogrodio E-booki' : category === 'nawadnianie' || category === 'donice-i-oslonki' ? 'Ogrodio Tools' : 'Ogrodio',
     badge: rule.badge || '',
     oldPrice: rule.oldPrice ? rule.oldPrice / 100 : null,
     isPromotion: Boolean(rule.promotion || rule.oldPrice),
     isNew: Boolean(rule.isNew),
     isBestseller: Boolean(rule.bestseller),
-    deliveryTag: category === 'rosliny-domowe' || category === 'donice-i-oslonki' ? 'Kurier 24-48 h' : 'Wysylka po potwierdzeniu',
+    deliveryTag: category === 'ebooki' ? 'PDF + EPUB po płatności' : category === 'rosliny-domowe' || category === 'donice-i-oslonki' ? 'Kurier 24-48 h' : 'Wysylka po potwierdzeniu',
   };
 }
 
@@ -123,7 +124,7 @@ async function indexProducts() {
         categorySort: categorySort(categoryCode),
         price: variant.priceWithTax / 100,
         stock: variant.stockLevel,
-        image: product.featuredAsset?.preview,
+        image: product.slug === 'borowki-bez-bledow-ebook' ? '/products/ebook-borowki-cover.jpg' : product.featuredAsset?.preview,
         ...merchandising(product, variant, categoryCode),
       };
     });

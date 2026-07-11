@@ -16,6 +16,14 @@ function ShopFooter() {
               {site.email}
             </a>
           </p>
+          <p className="mt-2 font-bold text-emerald-200">
+            <a className="transition hover:text-white" href="tel:+48791172155">
+              +48 791 172 155
+            </a>
+          </p>
+          <p className="mt-3 text-xs leading-5 text-slate-500">
+            Paweł Kopytko, działalność nierejestrowana, NIP 8692010130
+          </p>
         </div>
 
         <div>
@@ -90,6 +98,12 @@ function ShopFooter() {
           </Link>
           <Link className="transition hover:text-white" href="/status-zamowienia">
             {t("footer.shop.orderStatus")}
+          </Link>
+          <Link className="transition hover:text-white" href="/regulamin">
+            Regulamin sklepu
+          </Link>
+          <Link className="transition hover:text-white" href="/polityka-prywatnosci">
+            Polityka prywatności
           </Link>
         </div>
       </div>

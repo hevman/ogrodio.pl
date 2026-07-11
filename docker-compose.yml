@@ -139,6 +139,12 @@ services:
       SUPERADMIN_USERNAME: ${VENDURE_SUPERADMIN_USERNAME:-superadmin}
       SUPERADMIN_PASSWORD: ${VENDURE_SUPERADMIN_PASSWORD:-superadmin}
       ASSET_URL_PREFIX: http://sklep.ogrodio.localhost/assets/
+      AUTOPAY_ENABLED: ${AUTOPAY_ENABLED:-false}
+      AUTOPAY_SERVICE_ID: ${AUTOPAY_SERVICE_ID:-}
+      AUTOPAY_HASH_KEY: ${AUTOPAY_HASH_KEY:-}
+      AUTOPAY_GATEWAY_URL: ${AUTOPAY_GATEWAY_URL:-https://testpay.autopay.eu/}
+      AUTOPAY_RETURN_URL: ${AUTOPAY_RETURN_URL:-http://sklep.ogrodio.localhost/checkout/potwierdzenie}
+      AUTOPAY_ITN_URL: ${AUTOPAY_ITN_URL:-http://sklep.ogrodio.localhost/shop-api/payments/autopay/itn}
     depends_on:
       commerce-postgres:
         condition: service_healthy
@@ -168,6 +174,12 @@ services:
       SUPERADMIN_USERNAME: ${VENDURE_SUPERADMIN_USERNAME:-superadmin}
       SUPERADMIN_PASSWORD: ${VENDURE_SUPERADMIN_PASSWORD:-superadmin}
       ASSET_URL_PREFIX: http://sklep.ogrodio.localhost/assets/
+      AUTOPAY_ENABLED: ${AUTOPAY_ENABLED:-false}
+      AUTOPAY_SERVICE_ID: ${AUTOPAY_SERVICE_ID:-}
+      AUTOPAY_HASH_KEY: ${AUTOPAY_HASH_KEY:-}
+      AUTOPAY_GATEWAY_URL: ${AUTOPAY_GATEWAY_URL:-https://testpay.autopay.eu/}
+      AUTOPAY_RETURN_URL: ${AUTOPAY_RETURN_URL:-http://sklep.ogrodio.localhost/checkout/potwierdzenie}
+      AUTOPAY_ITN_URL: ${AUTOPAY_ITN_URL:-http://sklep.ogrodio.localhost/shop-api/payments/autopay/itn}
     depends_on:
       commerce-postgres:
         condition: service_healthy

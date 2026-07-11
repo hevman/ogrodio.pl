@@ -2,6 +2,7 @@ import type { Product } from "@/lib/shop-api";
 import { formatMoney, t } from "@/i18n";
 
 export const categoryImages: Record<string, string> = {
+  ebooki: "/products/ebook-borowki-cover.jpg",
   ziola: "/products/herbs-real.jpg",
   "balkon-i-taras": "/products/balcony-real.jpg",
   "rosliny-domowe": "/products/houseplants-real.jpg",
@@ -12,6 +13,7 @@ export const categoryImages: Record<string, string> = {
 };
 
 export const departmentHighlights = [
+  { label: "E-booki", query: "ebooki", image: categoryImages.ebooki },
   { label: t("shop.departments.herbs"), query: "ziola", image: categoryImages.ziola },
   { label: t("shop.departments.balcony"), query: "balkon-i-taras", image: categoryImages["balkon-i-taras"] },
   { label: t("shop.departments.houseplants"), query: "rosliny-domowe", image: categoryImages["rosliny-domowe"] },
@@ -33,6 +35,7 @@ export function productImage(product: Product) {
 }
 
 export const shopDepartments = [
+  { label: "E-booki", href: "/szukaj?category=ebooki" },
   { label: t("header.departments.herbs"), href: "/szukaj?category=ziola" },
   { label: t("header.departments.balcony"), href: "/szukaj?category=balkon-i-taras" },
   { label: t("header.departments.houseplants"), href: "/szukaj?category=rosliny-domowe" },

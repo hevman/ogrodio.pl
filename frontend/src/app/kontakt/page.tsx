@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Mail, MessageSquareWarning, Send } from "lucide-react";
+import { Mail, MessageSquareWarning, Phone, Send } from "lucide-react";
 import { PageSection, PageShell } from "@/components/page-shell";
 import { t } from "@/i18n";
 import { site } from "@/lib/site-config";
@@ -20,7 +20,7 @@ export default function ContactPage() {
       />
 
       <PageSection>
-        <div className="grid gap-6 lg:grid-cols-3">
+        <div className="grid gap-6 lg:grid-cols-4">
           <a
             className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition hover:border-teal-200 hover:shadow-md"
             href={`mailto:${site.email}`}
@@ -28,6 +28,15 @@ export default function ContactPage() {
             <Mail className="h-6 w-6 text-teal-700" />
             <h2 className="mt-4 text-xl font-bold text-slate-900">{t("pages.contact.emailTitle")}</h2>
             <p className="mt-2 text-sm leading-6 text-slate-600">{site.email}</p>
+          </a>
+
+          <a
+            className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition hover:border-teal-200 hover:shadow-md"
+            href="tel:+48791172155"
+          >
+            <Phone className="h-6 w-6 text-teal-700" />
+            <h2 className="mt-4 text-xl font-bold text-slate-900">Telefon</h2>
+            <p className="mt-2 text-sm leading-6 text-slate-600">+48 791 172 155</p>
           </a>
 
           <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">

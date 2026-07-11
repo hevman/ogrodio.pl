@@ -144,7 +144,10 @@ export function ProductPage({ slug }: { slug: string }) {
   }
 
   const lineTotal = product.price * quantity;
-  const highlightTags = [product.categoryLabel, t("shop.product.deliveryInPoland"), t("shop.product.courierShipping")];
+  const isDigital = product.category === "ebooki";
+  const highlightTags = isDigital
+    ? [product.categoryLabel, "PDF + EPUB", "Dostęp po płatności"]
+    : [product.categoryLabel, t("shop.product.deliveryInPoland"), t("shop.product.courierShipping")];
 
   return (
     <main className="bg-[#f6f7f2] text-slate-950">
@@ -171,7 +174,7 @@ export function ProductPage({ slug }: { slug: string }) {
 
           <div className="overflow-hidden rounded-lg border border-emerald-900/10 bg-white shadow-sm">
             <img
-              className="aspect-[4/3] w-full object-cover"
+              className={`aspect-[4/3] w-full ${isDigital ? "object-contain p-6" : "object-cover"}`}
               src={imageSrc}
               alt={product.name}
               onError={() => setImageSrc(fallbackImage(product))}
@@ -270,17 +273,21 @@ export function ProductPage({ slug }: { slug: string }) {
 
           <div className="mt-5 grid gap-3 text-sm">
             <div className="flex gap-3 rounded-lg border border-slate-200 p-3">
-              <Truck className="h-5 w-5 text-emerald-700" />
+              {isDigital ? <BookOpen className="h-5 w-5 text-emerald-700" /> : <Truck className="h-5 w-5 text-emerald-700" />}
               <div>
-                <p className="font-black">{t("shop.product.deliveryNationwide")}</p>
-                <p className="mt-1 text-slate-600">{t("shop.product.shippingFrom", { price: formatMoney(18.99) })}</p>
+                <p className="font-black">{isDigital ? "PDF i EPUB" : t("shop.product.deliveryNationwide")}</p>
+                <p className="mt-1 text-slate-600">
+                  {isDigital ? "Bez kosztów wysyłki. PDF i EPUB otrzymasz e-mailem po potwierdzeniu płatności." : t("shop.product.shippingFrom", { price: formatMoney(18.99) })}
+                </p>
               </div>
             </div>
             <div className="flex gap-3 rounded-lg border border-slate-200 p-3">
               <ShieldCheck className="h-5 w-5 text-emerald-700" />
               <div>
-                <p className="font-black">{t("shop.product.safeOrder")}</p>
-                <p className="mt-1 text-slate-600">{t("shop.product.beforeShipping")}</p>
+                <p className="font-black">{isDigital ? "Produkt cyfrowy" : t("shop.product.safeOrder")}</p>
+                <p className="mt-1 text-slate-600">
+                  {isDigital ? "Pliki są wysyłane na adres e-mail podany w zamówieniu i są przeznaczone do osobistego użytku kupującego." : t("shop.product.beforeShipping")}
+                </p>
               </div>
             </div>
           </div>

@@ -10,6 +10,8 @@ const SHOP_ROUTE_PREFIXES = [
   "/zwroty",
   "/reklamacje",
   "/status-zamowienia",
+  "/polityka-prywatnosci",
+  "/regulamin",
 ];
 
 const MAIN_SITE_ROUTE_PREFIXES = [
@@ -168,10 +170,12 @@ export const config = {
     "/o-nas",
     "/kontakt",
     "/polityka-redakcyjna",
+    "/polityka-prywatnosci",
+    "/regulamin",
     "/faq",
     "/produkt/:path*",
     "/szukaj",
-    "/checkout",
+    "/checkout/:path*",
     "/dostawa",
     "/zwroty",
     "/reklamacje",

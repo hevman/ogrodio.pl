@@ -51,6 +51,7 @@ export default function CheckoutPage() {
   const [orderCode, setOrderCode] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [acceptedTerms, setAcceptedTerms] = useState(false);
+  const [acceptedDigitalDelivery, setAcceptedDigitalDelivery] = useState(false);
 
   useEffect(() => {
     const saved = JSON.parse(window.localStorage.getItem("garden-vendure-cart") || "[]") as CartItem[];
@@ -94,6 +95,7 @@ export default function CheckoutPage() {
   const shipping = shippingMethods.find((method) => method.id === shippingMethodId);
   const shippingPrice = shipping?.price || 0;
   const total = subtotal + shippingPrice;
+  const containsDigitalProduct = lines.some((line) => line.product.category === "ebooki");
 
   function updateAddress(field: keyof CheckoutAddress, value: string) {
     setAddress((current) => ({ ...current, [field]: value }));
@@ -209,12 +211,19 @@ export default function CheckoutPage() {
               {paymentMethods.map((method) => (
                 <label className={`flex cursor-pointer items-start justify-between gap-4 rounded-lg border p-4 ${paymentMethodCode === method.code ? "border-emerald-700 bg-emerald-50" : "border-slate-200"}`} key={method.code}>
                   <span>
-                    <span className="block font-black">{method.name}</span>
-                    <span className="mt-1 block text-sm leading-6 text-slate-600">{method.description}</span>
+                    <span className="block font-black">Przelew tradycyjny</span>
+                    <span className="mt-1 block text-sm leading-6 text-slate-600">Po złożeniu zamówienia otrzymasz dane do przelewu. E-book wysyłamy po zaksięgowaniu płatności.</span>
                   </span>
                   <input checked={paymentMethodCode === method.code} onChange={() => setPaymentMethodCode(method.code)} type="radio" />
                 </label>
               ))}
+              <label className="flex cursor-not-allowed items-start justify-between gap-4 rounded-lg border border-slate-200 bg-slate-50 p-4 opacity-60">
+                <span>
+                  <span className="block font-black">Autopay / BLIK / szybki przelew</span>
+                  <span className="mt-1 block text-sm leading-6 text-slate-600">Płatności automatyczne będą dostępne po aktywacji operatora.</span>
+                </span>
+                <input disabled type="radio" />
+              </label>
             </div>
           </article>
 
@@ -222,8 +231,14 @@ export default function CheckoutPage() {
             <h2 className="text-xl font-black">{t("shop.checkout.termsTitle")}</h2>
             <label className="mt-4 flex items-start gap-3 text-sm font-bold leading-6 text-slate-700">
               <input className="mt-1" checked={acceptedTerms} onChange={(event) => setAcceptedTerms(event.target.checked)} required type="checkbox" />
-              <span>{t("shop.checkout.termsAccept")}</span>
+              <span>Akceptuję <Link className="font-black text-emerald-800 underline" href="/regulamin" target="_blank">regulamin sklepu</Link> i zapoznałem się z <Link className="font-black text-emerald-800 underline" href="/polityka-prywatnosci" target="_blank">polityką prywatności</Link>.</span>
             </label>
+            {containsDigitalProduct ? (
+              <label className="mt-4 flex items-start gap-3 text-sm font-bold leading-6 text-slate-700">
+                <input className="mt-1" checked={acceptedDigitalDelivery} onChange={(event) => setAcceptedDigitalDelivery(event.target.checked)} required type="checkbox" />
+                <span>Wyrażam zgodę na dostarczenie e-booka przed upływem 14 dni i przyjmuję do wiadomości, że po dostarczeniu treści cyfrowej utracę prawo odstąpienia od umowy.</span>
+              </label>
+            ) : null}
             <div className="mt-4 grid gap-2 text-sm text-slate-600 sm:grid-cols-3">
               <span className="rounded-lg bg-slate-50 p-3 font-bold">{t("shop.checkout.returnWindow")}</span>
               <span className="rounded-lg bg-slate-50 p-3 font-bold">{t("shop.checkout.contactBeforeShipping")}</span>
@@ -235,11 +250,11 @@ export default function CheckoutPage() {
 
           <button
             className="flex h-12 items-center justify-center gap-2 rounded-lg bg-emerald-700 px-5 font-black text-white disabled:opacity-50"
-            disabled={!cart.length || !shippingMethodId || !paymentMethodCode || !acceptedTerms || isSubmitting}
+            disabled={!cart.length || !shippingMethodId || !paymentMethodCode || !acceptedTerms || (containsDigitalProduct && !acceptedDigitalDelivery) || isSubmitting}
             type="submit"
           >
             <PackageCheck className="h-5 w-5" />
-            {t("shop.checkout.submit")}
+            Kupuję i płacę
           </button>
         </form>
 
