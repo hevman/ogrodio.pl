@@ -139,6 +139,11 @@ services:
       SUPERADMIN_USERNAME: ${VENDURE_SUPERADMIN_USERNAME:-superadmin}
       SUPERADMIN_PASSWORD: ${VENDURE_SUPERADMIN_PASSWORD:-superadmin}
       ASSET_URL_PREFIX: http://sklep.ogrodio.localhost/assets/
+      VENDURE_ADMIN_API_URL: http://commerce-server:3000/admin-api
+      VENDURE_SHOP_API_URL: http://commerce-server:3000/shop-api
+      VENDURE_SHOP_HOST: ${VENDURE_SHOP_HOST:-sklep.ogrodio.localhost}
+      MEILISEARCH_HOST: http://meilisearch:7700
+      MEILISEARCH_MASTER_KEY: ${MEILISEARCH_MASTER_KEY:-garden-meili-local-key}
       AUTOPAY_ENABLED: ${AUTOPAY_ENABLED:-false}
       AUTOPAY_SERVICE_ID: ${AUTOPAY_SERVICE_ID:-}
       AUTOPAY_HASH_KEY: ${AUTOPAY_HASH_KEY:-}
@@ -174,6 +179,11 @@ services:
       SUPERADMIN_USERNAME: ${VENDURE_SUPERADMIN_USERNAME:-superadmin}
       SUPERADMIN_PASSWORD: ${VENDURE_SUPERADMIN_PASSWORD:-superadmin}
       ASSET_URL_PREFIX: http://sklep.ogrodio.localhost/assets/
+      VENDURE_ADMIN_API_URL: http://commerce-server:3000/admin-api
+      VENDURE_SHOP_API_URL: http://commerce-server:3000/shop-api
+      VENDURE_SHOP_HOST: ${VENDURE_SHOP_HOST:-sklep.ogrodio.localhost}
+      MEILISEARCH_HOST: http://meilisearch:7700
+      MEILISEARCH_MASTER_KEY: ${MEILISEARCH_MASTER_KEY:-garden-meili-local-key}
       AUTOPAY_ENABLED: ${AUTOPAY_ENABLED:-false}
       AUTOPAY_SERVICE_ID: ${AUTOPAY_SERVICE_ID:-}
       AUTOPAY_HASH_KEY: ${AUTOPAY_HASH_KEY:-}

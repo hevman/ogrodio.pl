@@ -1,6 +1,7 @@
 ﻿const endpoint = process.env.VENDURE_ADMIN_API_URL || 'http://commerce-server:3000/admin-api';
-const username = process.env.VENDURE_SUPERADMIN_USERNAME || 'superadmin';
-const password = process.env.VENDURE_SUPERADMIN_PASSWORD || 'superadmin';
+const username = process.env.VENDURE_SUPERADMIN_USERNAME || process.env.SUPERADMIN_USERNAME || 'superadmin';
+const password = process.env.VENDURE_SUPERADMIN_PASSWORD || process.env.SUPERADMIN_PASSWORD || 'superadmin';
+const vendureHost = process.env.VENDURE_SHOP_HOST || 'sklep.ogrodio.localhost';
 
 const products = [
   {
@@ -20,7 +21,7 @@ async function gql(query, variables = {}, token) {
     method: 'POST',
     headers: {
       'content-type': 'application/json',
-      host: 'sklep.ogrodio.localhost',
+      host: vendureHost,
       ...(token ? { authorization: `Bearer ${token}` } : {}),
     },
     body: JSON.stringify({ query, variables }),
