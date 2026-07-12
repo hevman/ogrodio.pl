@@ -69,6 +69,13 @@ function fallbackImage(product?: Product | null) {
   return categoryImages[product.category] || categoryImages.produkty;
 }
 
+function ebookPreviewImages(product: Product) {
+  if (product.slug !== "borowki-bez-bledow-ebook") return [];
+  return Array.from({ length: 5 }, (_, index) =>
+    `/products/ebooks/borowki-bez-bledow/preview-${String(index + 1).padStart(2, "0")}.jpg`,
+  );
+}
+
 export function ProductPage({ slug }: { slug: string }) {
   const [product, setProduct] = useState<Product | null>(null);
   const [imageSrc, setImageSrc] = useState(categoryImages.produkty);
@@ -145,6 +152,7 @@ export function ProductPage({ slug }: { slug: string }) {
 
   const lineTotal = product.price * quantity;
   const isDigital = product.category === "ebooki";
+  const previewImages = isDigital ? ebookPreviewImages(product) : [];
   const highlightTags = isDigital
     ? [product.categoryLabel, "PDF + EPUB", "Dostęp po płatności"]
     : [product.categoryLabel, t("shop.product.deliveryInPoland"), t("shop.product.courierShipping")];
@@ -293,6 +301,50 @@ export function ProductPage({ slug }: { slug: string }) {
           </div>
         </aside>
       </section>
+
+      {previewImages.length ? (
+        <section className="mx-auto max-w-[1680px] px-6 pb-12 2xl:px-8">
+          <article className="rounded-lg border border-emerald-900/10 bg-white p-6 shadow-sm">
+            <div className="flex flex-wrap items-end justify-between gap-4">
+              <div>
+                <p className="flex items-center gap-2 text-sm font-black uppercase text-emerald-800">
+                  <BookOpen className="h-4 w-4" />
+                  Podgląd e-booka
+                </p>
+                <h2 className="mt-2 text-2xl font-black">Zobacz pierwsze strony przed zakupem</h2>
+                <p className="mt-2 max-w-2xl text-sm leading-6 text-slate-600">
+                  Fragment pokazuje skład, styl poradnika i sposób prowadzenia czytelnika. Pełny plik PDF i EPUB wysyłamy po potwierdzeniu płatności.
+                </p>
+              </div>
+              <span className="rounded-lg bg-emerald-50 px-3 py-2 text-sm font-black text-emerald-900">
+                5 stron podglądu
+              </span>
+            </div>
+
+            <div className="mt-6 grid gap-4 sm:grid-cols-2 xl:grid-cols-5">
+              {previewImages.map((src, index) => (
+                <a
+                  className="group overflow-hidden rounded-lg border border-slate-200 bg-slate-50 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md"
+                  href={src}
+                  key={src}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <img
+                    className="aspect-[210/297] w-full object-contain"
+                    src={src}
+                    alt={`Podgląd e-booka, strona ${index + 1}`}
+                    loading="lazy"
+                  />
+                  <span className="block border-t border-slate-200 bg-white px-3 py-2 text-sm font-black text-slate-700 group-hover:text-emerald-800">
+                    Strona {index + 1}
+                  </span>
+                </a>
+              ))}
+            </div>
+          </article>
+        </section>
+      ) : null}
 
       <section className="mx-auto grid max-w-[1680px] gap-6 px-6 pb-12 lg:grid-cols-[1fr_1fr] 2xl:px-8">
         <article className="rounded-lg border border-emerald-900/10 bg-white p-6 shadow-sm">
