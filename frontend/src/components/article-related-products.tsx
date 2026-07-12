@@ -31,7 +31,7 @@ export function ArticleRelatedProducts({ products, topic }: Props) {
               >
                 <Image
                   alt=""
-                  className="h-12 w-12 rounded-lg object-cover"
+                  className="h-12 w-12 rounded-lg bg-white object-contain p-1"
                   height={48}
                   src={productImage(product)}
                   width={48}

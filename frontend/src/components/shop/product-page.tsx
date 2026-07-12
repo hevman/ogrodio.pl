@@ -174,7 +174,7 @@ export function ProductPage({ slug }: { slug: string }) {
 
           <div className="overflow-hidden rounded-lg border border-emerald-900/10 bg-white shadow-sm">
             <img
-              className={`aspect-[4/3] w-full ${isDigital ? "object-contain p-6" : "object-cover"}`}
+              className="aspect-[4/3] w-full bg-slate-50 object-contain p-6"
               src={imageSrc}
               alt={product.name}
               onError={() => setImageSrc(fallbackImage(product))}

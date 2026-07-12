@@ -376,7 +376,7 @@ export function SiteHeader({ initialIsShopHost = false }: { initialIsShopHost?: 
                           setSearchQuery("");
                         }}
                       >
-                        <img className="h-12 w-14 rounded-md object-cover" src={product.image || "/products/garden-products-real.jpg"} alt="" />
+                        <img className="h-12 w-14 rounded-md bg-slate-50 object-contain p-1" src={product.image || "/products/garden-products-real.jpg"} alt="" />
                         <span>
                           <span className="block text-sm font-black text-slate-900">{product.name}</span>
                           <span className="mt-0.5 block text-xs font-bold uppercase text-emerald-700">{product.categoryLabel}</span>
@@ -454,7 +454,7 @@ export function SiteHeader({ initialIsShopHost = false }: { initialIsShopHost?: 
                         setSearchQuery("");
                       }}
                     >
-                      <img className="h-12 w-14 rounded-md object-cover" src={product.image || "/products/garden-products-real.jpg"} alt="" />
+                      <img className="h-12 w-14 rounded-md bg-slate-50 object-contain p-1" src={product.image || "/products/garden-products-real.jpg"} alt="" />
                       <span>
                         <span className="block text-sm font-black text-slate-900">{product.name}</span>
                         <span className="mt-0.5 block text-xs font-bold uppercase text-emerald-700">{product.categoryLabel}</span>
@@ -535,7 +535,7 @@ export function SiteHeader({ initialIsShopHost = false }: { initialIsShopHost?: 
                       if (!product) return null;
                       return (
                         <div className="grid grid-cols-[72px_1fr] gap-3 rounded-lg border border-slate-200 bg-white p-3" key={item.productVariantId}>
-                          <img className="h-20 w-[72px] rounded-lg object-cover" src={product.image || "/products/garden-products-real.jpg"} alt="" />
+                          <img className="h-20 w-[72px] rounded-lg bg-slate-50 object-contain p-1" src={product.image || "/products/garden-products-real.jpg"} alt="" />
                           <div className="grid gap-3">
                             <div className="flex items-start justify-between gap-3">
                               <Link className="font-black leading-5 hover:text-emerald-800" href={`/produkt/${product.slug}`} onClick={() => setIsCartOpen(false)}>
@@ -584,7 +584,7 @@ export function SiteHeader({ initialIsShopHost = false }: { initialIsShopHost?: 
                           onClick={() => persistCart([...cart, { productVariantId: product.variantId, quantity: 1 }])}
                           type="button"
                         >
-                          <img className="h-12 w-12 rounded-md object-cover" src={product.image || "/products/garden-products-real.jpg"} alt="" />
+                          <img className="h-12 w-12 rounded-md bg-slate-50 object-contain p-1" src={product.image || "/products/garden-products-real.jpg"} alt="" />
                           <span>
                             <span className="block text-sm font-black">{product.name}</span>
                             <span className="text-xs font-bold text-slate-500">{product.categoryLabel}</span>

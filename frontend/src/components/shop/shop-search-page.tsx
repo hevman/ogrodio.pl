@@ -218,8 +218,8 @@ export function ShopSearchPage() {
               {products.map((product) => (
                 <article className="flex h-full min-h-[470px] flex-col overflow-hidden rounded-lg border border-emerald-900/10 bg-white shadow-sm transition hover:-translate-y-0.5 hover:shadow-md" key={product.variantId}>
                   <Link href={`/produkt/${product.slug}`}>
-                    <span className="relative block">
-                      <img className="h-52 w-full object-cover transition duration-200 hover:scale-[1.02] 2xl:h-56" src={productImage(product)} alt="" />
+                    <span className="relative block bg-slate-50">
+                      <img className="h-52 w-full object-contain p-3 transition duration-200 hover:scale-[1.02] 2xl:h-56" src={productImage(product)} alt="" />
                       {product.badge ? <span className="absolute left-3 top-3 rounded-md bg-red-600 px-2 py-1 text-xs font-black uppercase text-white">{product.badge}</span> : null}
                     </span>
                   </Link>

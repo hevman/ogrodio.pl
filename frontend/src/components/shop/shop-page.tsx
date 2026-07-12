@@ -185,10 +185,10 @@ export function ShopPage({ products, status = "" }: { products: Product[]; statu
           <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
             {featured.map((product) => (
               <Link className="group overflow-hidden rounded-lg border border-emerald-900/10 bg-white shadow-sm transition hover:-translate-y-0.5 hover:shadow-md" href={`/produkt/${product.slug}`} key={product.variantId}>
-                <div className="relative h-52 2xl:h-60">
+                <div className="relative h-52 bg-slate-50 2xl:h-60">
                   <Image
                     alt=""
-                    className="object-cover"
+                    className="object-contain p-3"
                     fill
                     loading="lazy"
                     quality={62}
@@ -216,10 +216,10 @@ export function ShopPage({ products, status = "" }: { products: Product[]; statu
           <div className="mt-5 grid gap-3">
             {bestsellers.map((product) => (
               <Link className="grid grid-cols-[76px_1fr_auto] items-center gap-3 rounded-lg border border-slate-200 p-2 transition hover:bg-slate-50" href={`/produkt/${product.slug}`} key={product.variantId}>
-                <div className="relative h-16 w-20 overflow-hidden rounded-lg">
+                <div className="relative h-16 w-20 overflow-hidden rounded-lg bg-slate-50">
                   <Image
                     alt=""
-                    className="object-cover"
+                    className="object-contain p-1"
                     fill
                     loading="lazy"
                     quality={58}
