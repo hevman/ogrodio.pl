@@ -71,7 +71,7 @@ function fallbackImage(product?: Product | null) {
 
 function ebookPreviewPdf(product: Product) {
   if (product.slug !== "borowki-bez-bledow-ebook") return "";
-  return "/products/ebooks/borowki-bez-bledow/preview.pdf";
+  return "/products/ebooks/borowki-bez-bledow/preview-borowki-bez-bledow.pdf";
 }
 
 export function ProductPage({ slug }: { slug: string }) {
