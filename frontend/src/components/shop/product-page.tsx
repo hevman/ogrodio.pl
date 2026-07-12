@@ -180,9 +180,9 @@ export function ProductPage({ slug }: { slug: string }) {
             {t("common.backToShop")}
           </Link>
 
-          <div className="overflow-hidden rounded-lg border border-emerald-900/10 bg-white shadow-sm">
+          <div className={`overflow-hidden rounded-lg border border-emerald-900/10 bg-white shadow-sm ${isDigital ? "mx-auto max-w-xl" : ""}`}>
             <img
-              className="aspect-[4/3] w-full bg-slate-50 object-contain p-6"
+              className={`${isDigital ? "aspect-[210/297]" : "aspect-[4/3]"} w-full bg-slate-50 object-contain p-6`}
               src={imageSrc}
               alt={product.name}
               onError={() => setImageSrc(fallbackImage(product))}

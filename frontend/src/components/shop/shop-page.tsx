@@ -185,7 +185,7 @@ export function ShopPage({ products, status = "" }: { products: Product[]; statu
           <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
             {featured.map((product) => (
               <Link className="group overflow-hidden rounded-lg border border-emerald-900/10 bg-white shadow-sm transition hover:-translate-y-0.5 hover:shadow-md" href={`/produkt/${product.slug}`} key={product.variantId}>
-                <div className="relative h-52 bg-slate-50 2xl:h-60">
+                <div className={`relative bg-slate-50 ${product.category === "ebooki" ? "mx-auto aspect-[210/297] w-full max-w-[240px]" : "h-52 2xl:h-60"}`}>
                   <Image
                     alt=""
                     className="object-contain p-3"
