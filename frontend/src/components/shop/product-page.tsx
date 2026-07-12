@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import {
   ArrowLeft,
@@ -69,11 +69,9 @@ function fallbackImage(product?: Product | null) {
   return categoryImages[product.category] || categoryImages.produkty;
 }
 
-function ebookPreviewImages(product: Product) {
-  if (product.slug !== "borowki-bez-bledow-ebook") return [];
-  return Array.from({ length: 5 }, (_, index) =>
-    `/products/ebooks/borowki-bez-bledow/preview-${String(index + 1).padStart(2, "0")}.jpg`,
-  );
+function ebookPreviewPdf(product: Product) {
+  if (product.slug !== "borowki-bez-bledow-ebook") return "";
+  return "/products/ebooks/borowki-bez-bledow/preview.pdf";
 }
 
 export function ProductPage({ slug }: { slug: string }) {
@@ -152,9 +150,9 @@ export function ProductPage({ slug }: { slug: string }) {
 
   const lineTotal = product.price * quantity;
   const isDigital = product.category === "ebooki";
-  const previewImages = isDigital ? ebookPreviewImages(product) : [];
+  const previewPdf = isDigital ? ebookPreviewPdf(product) : "";
   const highlightTags = isDigital
-    ? [product.categoryLabel, "PDF + EPUB", "Dostęp po płatności"]
+    ? [product.categoryLabel, "PDF + EPUB", "DostÄ™p po pĹ‚atnoĹ›ci"]
     : [product.categoryLabel, t("shop.product.deliveryInPoland"), t("shop.product.courierShipping")];
 
   return (
@@ -285,7 +283,7 @@ export function ProductPage({ slug }: { slug: string }) {
               <div>
                 <p className="font-black">{isDigital ? "PDF i EPUB" : t("shop.product.deliveryNationwide")}</p>
                 <p className="mt-1 text-slate-600">
-                  {isDigital ? "Bez kosztów wysyłki. PDF i EPUB otrzymasz e-mailem po potwierdzeniu płatności." : t("shop.product.shippingFrom", { price: formatMoney(18.99) })}
+                  {isDigital ? "Bez kosztĂłw wysyĹ‚ki. PDF i EPUB otrzymasz e-mailem po potwierdzeniu pĹ‚atnoĹ›ci." : t("shop.product.shippingFrom", { price: formatMoney(18.99) })}
                 </p>
               </div>
             </div>
@@ -294,7 +292,7 @@ export function ProductPage({ slug }: { slug: string }) {
               <div>
                 <p className="font-black">{isDigital ? "Produkt cyfrowy" : t("shop.product.safeOrder")}</p>
                 <p className="mt-1 text-slate-600">
-                  {isDigital ? "Pliki są wysyłane na adres e-mail podany w zamówieniu i są przeznaczone do osobistego użytku kupującego." : t("shop.product.beforeShipping")}
+                  {isDigital ? "Pliki sÄ… wysyĹ‚ane na adres e-mail podany w zamĂłwieniu i sÄ… przeznaczone do osobistego uĹĽytku kupujÄ…cego." : t("shop.product.beforeShipping")}
                 </p>
               </div>
             </div>
@@ -302,7 +300,7 @@ export function ProductPage({ slug }: { slug: string }) {
         </aside>
       </section>
 
-      {previewImages.length ? (
+      {previewPdf ? (
         <section className="mx-auto max-w-[1680px] px-6 pb-12 2xl:px-8">
           <article className="rounded-lg border border-emerald-900/10 bg-white p-6 shadow-sm">
             <div className="flex flex-wrap items-end justify-between gap-4">
@@ -313,39 +311,29 @@ export function ProductPage({ slug }: { slug: string }) {
                 </p>
                 <h2 className="mt-2 text-2xl font-black">Zobacz pierwsze strony przed zakupem</h2>
                 <p className="mt-2 max-w-2xl text-sm leading-6 text-slate-600">
-                  Fragment pokazuje skład, styl poradnika i sposób prowadzenia czytelnika. Pełny plik PDF i EPUB wysyłamy po potwierdzeniu płatności.
+                  To krótki PDF z pierwszymi 5 stronami poradnika. Pełny plik PDF i EPUB wysyłamy po potwierdzeniu płatności.
                 </p>
               </div>
-              <span className="rounded-lg bg-emerald-50 px-3 py-2 text-sm font-black text-emerald-900">
-                5 stron podglądu
-              </span>
+              <a
+                className="inline-flex h-11 items-center rounded-lg bg-emerald-700 px-4 text-sm font-black text-white"
+                href={previewPdf}
+                target="_blank"
+                rel="noreferrer"
+              >
+                Otwórz PDF
+              </a>
             </div>
 
-            <div className="mt-6 grid gap-4 sm:grid-cols-2 xl:grid-cols-5">
-              {previewImages.map((src, index) => (
-                <a
-                  className="group overflow-hidden rounded-lg border border-slate-200 bg-slate-50 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md"
-                  href={src}
-                  key={src}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <img
-                    className="aspect-[210/297] w-full object-contain"
-                    src={src}
-                    alt={`Podgląd e-booka, strona ${index + 1}`}
-                    loading="lazy"
-                  />
-                  <span className="block border-t border-slate-200 bg-white px-3 py-2 text-sm font-black text-slate-700 group-hover:text-emerald-800">
-                    Strona {index + 1}
-                  </span>
-                </a>
-              ))}
+            <div className="mt-6 overflow-hidden rounded-lg border border-slate-200 bg-slate-50">
+              <iframe
+                className="h-[680px] w-full bg-white"
+                src={`${previewPdf}#toolbar=0&navpanes=0`}
+                title="Podgląd e-booka Borówki bez błędów"
+              />
             </div>
           </article>
         </section>
       ) : null}
-
       <section className="mx-auto grid max-w-[1680px] gap-6 px-6 pb-12 lg:grid-cols-[1fr_1fr] 2xl:px-8">
         <article className="rounded-lg border border-emerald-900/10 bg-white p-6 shadow-sm">
           <p className="flex items-center gap-2 text-sm font-black uppercase text-emerald-800">
