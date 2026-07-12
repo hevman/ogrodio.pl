@@ -152,7 +152,7 @@ export function ProductPage({ slug }: { slug: string }) {
   const isDigital = product.category === "ebooki";
   const previewPdf = isDigital ? ebookPreviewPdf(product) : "";
   const highlightTags = isDigital
-    ? [product.categoryLabel, "PDF + EPUB", "DostÄ™p po pĹ‚atnoĹ›ci"]
+    ? [product.categoryLabel, "PDF + EPUB", "Dostęp po płatności"]
     : [product.categoryLabel, t("shop.product.deliveryInPoland"), t("shop.product.courierShipping")];
 
   return (
@@ -283,7 +283,7 @@ export function ProductPage({ slug }: { slug: string }) {
               <div>
                 <p className="font-black">{isDigital ? "PDF i EPUB" : t("shop.product.deliveryNationwide")}</p>
                 <p className="mt-1 text-slate-600">
-                  {isDigital ? "Bez kosztĂłw wysyĹ‚ki. PDF i EPUB otrzymasz e-mailem po potwierdzeniu pĹ‚atnoĹ›ci." : t("shop.product.shippingFrom", { price: formatMoney(18.99) })}
+                  {isDigital ? "Bez kosztów wysyłki. PDF i EPUB otrzymasz e-mailem po potwierdzeniu płatności." : t("shop.product.shippingFrom", { price: formatMoney(18.99) })}
                 </p>
               </div>
             </div>
@@ -292,7 +292,7 @@ export function ProductPage({ slug }: { slug: string }) {
               <div>
                 <p className="font-black">{isDigital ? "Produkt cyfrowy" : t("shop.product.safeOrder")}</p>
                 <p className="mt-1 text-slate-600">
-                  {isDigital ? "Pliki sÄ… wysyĹ‚ane na adres e-mail podany w zamĂłwieniu i sÄ… przeznaczone do osobistego uĹĽytku kupujÄ…cego." : t("shop.product.beforeShipping")}
+                  {isDigital ? "Pliki są wysyłane na adres e-mail podany w zamówieniu i są przeznaczone do osobistego użytku kupującego." : t("shop.product.beforeShipping")}
                 </p>
               </div>
             </div>
@@ -311,25 +311,16 @@ export function ProductPage({ slug }: { slug: string }) {
                 </p>
                 <h2 className="mt-2 text-2xl font-black">Zobacz pierwsze strony przed zakupem</h2>
                 <p className="mt-2 max-w-2xl text-sm leading-6 text-slate-600">
-                  To krótki PDF z pierwszymi 5 stronami poradnika. Pełny plik PDF i EPUB wysyłamy po potwierdzeniu płatności.
+                  Pobierz krótki PDF z pierwszymi 5 stronami poradnika. Pełny plik PDF i EPUB wysyłamy po potwierdzeniu płatności.
                 </p>
               </div>
               <a
                 className="inline-flex h-11 items-center rounded-lg bg-emerald-700 px-4 text-sm font-black text-white"
                 href={previewPdf}
-                target="_blank"
-                rel="noreferrer"
+                download
               >
-                Otwórz PDF
+                Pobierz PDF
               </a>
-            </div>
-
-            <div className="mt-6 overflow-hidden rounded-lg border border-slate-200 bg-slate-50">
-              <iframe
-                className="h-[680px] w-full bg-white"
-                src={`${previewPdf}#toolbar=0&navpanes=0`}
-                title="Podgląd e-booka Borówki bez błędów"
-              />
             </div>
           </article>
         </section>

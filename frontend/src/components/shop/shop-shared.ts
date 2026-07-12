@@ -2,7 +2,7 @@ import type { Product } from "@/lib/shop-api";
 import { formatMoney, t } from "@/i18n";
 
 export const categoryImages: Record<string, string> = {
-  ebooki: "/products/ebook-borowki-cover.jpg",
+  ebooki: "/products/ebooks/borowki-bez-bledow/cover.png",
   ziola: "/products/herbs-real.jpg",
   "balkon-i-taras": "/products/balcony-real.jpg",
   "rosliny-domowe": "/products/houseplants-real.jpg",
@@ -31,6 +31,9 @@ export function stockLabel(stock: string) {
 }
 
 export function productImage(product: Product) {
+  if (product.slug === "borowki-bez-bledow-ebook") {
+    return "/products/ebooks/borowki-bez-bledow/cover.png";
+  }
   return product.image || categoryImages[product.category] || categoryImages.produkty;
 }
 

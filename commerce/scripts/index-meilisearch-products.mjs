@@ -124,7 +124,7 @@ async function indexProducts() {
         categorySort: categorySort(categoryCode),
         price: variant.priceWithTax / 100,
         stock: variant.stockLevel,
-        image: product.slug === 'borowki-bez-bledow-ebook' ? '/products/ebook-borowki-cover.jpg' : product.featuredAsset?.preview,
+        image: product.slug === 'borowki-bez-bledow-ebook' ? '/products/ebooks/borowki-bez-bledow/cover.png' : product.featuredAsset?.preview,
         ...merchandising(product, variant, categoryCode),
       };
     });
