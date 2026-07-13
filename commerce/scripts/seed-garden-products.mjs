@@ -14,6 +14,16 @@ const products = [
     stock: 9999,
     description: 'Borówki bez błędów to praktyczny e-book dla osób, które chcą posadzić borówkę, poprawić kwaśną glebę albo uratować słaby krzew bez zgadywania. W środku znajdziesz plan przygotowania stanowiska, kontrolę pH, sadzenie, podlewanie, nawożenie, cięcie, diagnozę najczęstszych problemów oraz checklisty do pracy w ogrodzie. Otrzymujesz PDF do druku i EPUB na czytnik. Pliki wysyłamy po potwierdzeniu płatności.',
   },
+  {
+    name: 'Pomidory bez błędów - e-book PDF + EPUB',
+    slug: 'pomidory-bez-bledow-ebook',
+    sku: 'OG-EBK-POM-001',
+    category: 'ebooki',
+    categoryLabel: 'E-booki',
+    price: 3900,
+    stock: 9999,
+    description: 'Pomidory bez błędów to 45-stronicowy praktyczny e-book dla osób uprawiających pomidory w gruncie, tunelu lub donicy. Prowadzi od wyboru odmiany i rozsady przez sadzenie, podlewanie, nawożenie oraz prowadzenie rośliny aż po zbiory. W środku są trzy gotowe plany uprawy, kalendarz sezonu, diagnostyka liści, kwiatów, owoców i korzeni oraz karty ratunkowe na najczęstsze problemy. Otrzymujesz PDF do druku i EPUB na czytnik. Pliki wysyłamy po potwierdzeniu płatności.',
+  },
 ];
 
 async function gql(query, variables = {}, token) {

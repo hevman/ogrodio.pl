@@ -29,6 +29,28 @@ const assetUrlPrefix = process.env.ASSET_URL_PREFIX || (IS_DEV ? undefined : 'ht
 const shopUrl = (process.env.SHOP_URL || 'https://sklep.ogrodio.pl').replace(/\/$/, '');
 const trustProxy = process.env.TRUST_PROXY === 'true' ? 1 : IS_DEV ? false : 1;
 const digitalProductsPath = path.join(__dirname, '../static/digital-products');
+const digitalProductAttachments: Record<string, { filename: string; path: string }[]> = {
+    'OG-EBK-BOR-001': [
+        {
+            filename: 'Borowki-bez-bledow-Ogrodio.pdf',
+            path: path.join(digitalProductsPath, 'borowki-bez-bledow/borowki-bez-bledow.pdf'),
+        },
+        {
+            filename: 'Borowki-bez-bledow-Ogrodio.epub',
+            path: path.join(digitalProductsPath, 'borowki-bez-bledow/borowki-bez-bledow.epub'),
+        },
+    ],
+    'OG-EBK-POM-001': [
+        {
+            filename: 'Pomidory-bez-bledow-Ogrodio.pdf',
+            path: path.join(digitalProductsPath, 'pomidory-bez-bledow/pomidory-bez-bledow.pdf'),
+        },
+        {
+            filename: 'Pomidory-bez-bledow-Ogrodio.epub',
+            path: path.join(digitalProductsPath, 'pomidory-bez-bledow/pomidory-bez-bledow.epub'),
+        },
+    ],
+};
 
 const emailTemplateLoader = new FileBasedTemplateLoader(path.join(__dirname, '../static/email/templates'));
 const emailGlobalTemplateVars = {
@@ -105,18 +127,7 @@ const paidOrderHandler = new EmailEventListener('order-confirmation')
     .setSubject('Ogrodio: płatność potwierdzona — zamówienie #{{ order.code }}')
     .setTemplateVars(event => ({ order: event.order, shippingLines: event.data.shippingLines }))
     .setAttachments(event => {
-        const hasBlueberryEbook = event.order.lines.some(line => line.productVariant.sku === 'OG-EBK-BOR-001');
-        if (!hasBlueberryEbook) return [];
-        return [
-            {
-                filename: 'Borowki-bez-bledow-Ogrodio.pdf',
-                path: path.join(digitalProductsPath, 'borowki-bez-bledow/borowki-bez-bledow.pdf'),
-            },
-            {
-                filename: 'Borowki-bez-bledow-Ogrodio.epub',
-                path: path.join(digitalProductsPath, 'borowki-bez-bledow/borowki-bez-bledow.epub'),
-            },
-        ];
+        return event.order.lines.flatMap(line => digitalProductAttachments[line.productVariant.sku] ?? []);
     });
 
 const emailHandlers = [

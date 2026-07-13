@@ -54,13 +54,49 @@ const careContent: Record<CareKey, { location: MessageKey; watering: MessageKey;
   },
 };
 
-const ebookBenefits = [
-  "konkretny plan przygotowania kwaśnego stanowiska pod borówkę",
-  "checklisty: zakupy przed sadzeniem, kontrola pH, sezonowe prace",
-  "diagnoza problemów: żółte liście, brak owoców, drobne owoce i słaby wzrost",
-  "rozdziały o podlewaniu, nawożeniu, cięciu, ochronie i zbiorach",
-  "PDF do druku oraz EPUB na czytnik, telefon lub tablet",
-];
+const ebookDetails: Record<string, {
+  previewPdf: string;
+  title: string;
+  intro: string;
+  benefits: string[];
+  audienceTitle: string;
+  audience: [string, string];
+}> = {
+  "borowki-bez-bledow-ebook": {
+    previewPdf: "/products/ebooks/borowki-bez-bledow/preview-borowki-bez-bledow.pdf",
+    title: "Poradnik do realnej pracy przy borówkach",
+    intro: "Ten e-book nie jest zbiorem ogólników. Prowadzi przez decyzje, które najczęściej decydują o powodzeniu uprawy: kwaśne podłoże, wilgotność, sadzenie, cięcie i szybkie rozpoznanie błędów.",
+    benefits: [
+      "konkretny plan przygotowania kwaśnego stanowiska pod borówkę",
+      "checklisty: zakupy przed sadzeniem, kontrola pH, sezonowe prace",
+      "diagnoza problemów: żółte liście, brak owoców, drobne owoce i słaby wzrost",
+      "rozdziały o podlewaniu, nawożeniu, cięciu, ochronie i zbiorach",
+      "PDF do druku oraz EPUB na czytnik, telefon lub tablet",
+    ],
+    audienceTitle: "Dla działki, ogrodu i pierwszych krzewów",
+    audience: [
+      "Jeśli dopiero sadzisz borówki, zaczniesz od listy zakupów, rozstawy, podłoża i podlewania po posadzeniu.",
+      "Jeśli krzew już słabnie, przejdziesz przez diagnozę pH, objawów na liściach, błędów w nawożeniu i cięciu.",
+    ],
+  },
+  "pomidory-bez-bledow-ebook": {
+    previewPdf: "/products/ebooks/pomidory-bez-bledow/preview-pomidory-bez-bledow.pdf",
+    title: "Plan prowadzenia pomidorów przez cały sezon",
+    intro: "To praktyczny poradnik do realnej uprawy w donicy, gruncie i tunelu. Zamiast ogólników dostajesz decyzje na każdy etap: od wyboru sadzonki po diagnozę plam, kwiatów i owoców.",
+    benefits: [
+      "45 stron praktycznej wiedzy: rozsada, stanowisko, podlewanie, nawożenie i prowadzenie",
+      "trzy gotowe plany uprawy: balkon, grunt i tunel",
+      "karty ratunkowe: pękanie owoców, czarne dno, więdnięcie, plamy i brak zawiązków",
+      "rozszerzona diagnostyka liści, kwiatów, owoców i korzeni",
+      "PDF do druku oraz EPUB na czytnik, telefon lub tablet",
+    ],
+    audienceTitle: "Dla balkonu, działki i tunelu",
+    audience: [
+      "Jeśli zaczynasz, wybierzesz odmianę, donicę lub miejsce w gruncie i bezpiecznie posadzisz pierwsze sadzonki.",
+      "Jeśli pomidory już rosną, przejdziesz przez podlewanie, prowadzenie pędów, choroby i karty szybkiej diagnozy.",
+    ],
+  },
+};
 
 function careItems(category: string) {
   const key = careByCategory[category] || "careDefault";
@@ -75,11 +111,6 @@ function careItems(category: string) {
 function fallbackImage(product?: Product | null) {
   if (!product) return categoryImages.produkty;
   return categoryImages[product.category] || categoryImages.produkty;
-}
-
-function ebookPreviewPdf(product: Product) {
-  if (product.slug !== "borowki-bez-bledow-ebook") return "";
-  return "/products/ebooks/borowki-bez-bledow/preview-borowki-bez-bledow.pdf";
 }
 
 export function ProductPage({ slug }: { slug: string }) {
@@ -158,7 +189,8 @@ export function ProductPage({ slug }: { slug: string }) {
 
   const lineTotal = product.price * quantity;
   const isDigital = product.category === "ebooki";
-  const previewPdf = isDigital ? ebookPreviewPdf(product) : "";
+  const ebook = isDigital ? ebookDetails[product.slug] : undefined;
+  const previewPdf = ebook?.previewPdf || "";
   const highlightTags = isDigital
     ? [product.categoryLabel, "PDF + EPUB", "Dostęp po płatności"]
     : [product.categoryLabel, t("shop.product.deliveryInPoland"), t("shop.product.courierShipping")];
@@ -337,12 +369,10 @@ export function ProductPage({ slug }: { slug: string }) {
         <section className="mx-auto grid max-w-[1680px] gap-6 px-6 pb-12 lg:grid-cols-[1.1fr_.9fr] 2xl:px-8">
           <article className="rounded-lg border border-emerald-900/10 bg-white p-6 shadow-sm">
             <p className="text-sm font-black uppercase text-emerald-800">Co dostajesz</p>
-            <h2 className="mt-2 text-2xl font-black">Poradnik do realnej pracy przy borówkach</h2>
-            <p className="mt-3 text-sm leading-6 text-slate-600">
-              Ten e-book nie jest zbiorem ogólników. Prowadzi przez decyzje, które najczęściej decydują o powodzeniu uprawy: kwaśne podłoże, wilgotność, sadzenie, cięcie i szybkie rozpoznanie błędów.
-            </p>
+            <h2 className="mt-2 text-2xl font-black">{ebook?.title || "Praktyczny poradnik do pracy w ogrodzie"}</h2>
+            <p className="mt-3 text-sm leading-6 text-slate-600">{ebook?.intro}</p>
             <ul className="mt-5 grid gap-3">
-              {ebookBenefits.map((benefit) => (
+              {(ebook?.benefits || []).map((benefit) => (
                 <li className="flex gap-3 rounded-lg bg-slate-50 p-3 text-sm font-bold leading-6 text-slate-700" key={benefit}>
                   <Check className="mt-0.5 h-4 w-4 shrink-0 text-emerald-700" />
                   <span>{benefit}</span>
@@ -353,14 +383,9 @@ export function ProductPage({ slug }: { slug: string }) {
 
           <article className="rounded-lg border border-emerald-900/10 bg-white p-6 shadow-sm">
             <p className="text-sm font-black uppercase text-emerald-800">Dla kogo</p>
-            <h2 className="mt-2 text-2xl font-black">Dla działki, ogrodu i pierwszych krzewów</h2>
+            <h2 className="mt-2 text-2xl font-black">{ebook?.audienceTitle || "Dla ogrodników"}</h2>
             <div className="mt-5 grid gap-3 text-sm leading-6 text-slate-600">
-              <p className="rounded-lg bg-slate-50 p-4">
-                Jeśli dopiero sadzisz borówki, zaczniesz od listy zakupów, rozstawy, podłoża i podlewania po posadzeniu.
-              </p>
-              <p className="rounded-lg bg-slate-50 p-4">
-                Jeśli krzew już słabnie, przejdziesz przez diagnozę pH, objawów na liściach, błędów w nawożeniu i cięciu.
-              </p>
+              {ebook?.audience.map((item) => <p className="rounded-lg bg-slate-50 p-4" key={item}>{item}</p>)}
               <p className="rounded-lg bg-emerald-50 p-4 font-bold text-emerald-950">
                 Po zakupie wybierasz przelew tradycyjny. PDF i EPUB wysyłamy na e-mail po potwierdzeniu płatności.
               </p>

@@ -31,9 +31,11 @@ export function stockLabel(stock: string) {
 }
 
 export function productImage(product: Product) {
-  if (product.slug === "borowki-bez-bledow-ebook") {
-    return "/products/ebooks/borowki-bez-bledow/cover.png";
-  }
+  const ebookCovers: Record<string, string> = {
+    "borowki-bez-bledow-ebook": "/products/ebooks/borowki-bez-bledow/cover.png",
+    "pomidory-bez-bledow-ebook": "/products/ebooks/pomidory-bez-bledow/cover.png",
+  };
+  if (ebookCovers[product.slug]) return ebookCovers[product.slug];
   return product.image || categoryImages[product.category] || categoryImages.produkty;
 }
 
