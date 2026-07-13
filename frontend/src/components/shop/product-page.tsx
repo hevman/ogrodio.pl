@@ -54,6 +54,14 @@ const careContent: Record<CareKey, { location: MessageKey; watering: MessageKey;
   },
 };
 
+const ebookBenefits = [
+  "konkretny plan przygotowania kwaśnego stanowiska pod borówkę",
+  "checklisty: zakupy przed sadzeniem, kontrola pH, sezonowe prace",
+  "diagnoza problemów: żółte liście, brak owoców, drobne owoce i słaby wzrost",
+  "rozdziały o podlewaniu, nawożeniu, cięciu, ochronie i zbiorach",
+  "PDF do druku oraz EPUB na czytnik, telefon lub tablet",
+];
+
 function careItems(category: string) {
   const key = careByCategory[category] || "careDefault";
   const content = careContent[key];
@@ -321,6 +329,41 @@ export function ProductPage({ slug }: { slug: string }) {
               >
                 Pobierz PDF
               </a>
+            </div>
+          </article>
+        </section>
+      ) : null}
+      {isDigital ? (
+        <section className="mx-auto grid max-w-[1680px] gap-6 px-6 pb-12 lg:grid-cols-[1.1fr_.9fr] 2xl:px-8">
+          <article className="rounded-lg border border-emerald-900/10 bg-white p-6 shadow-sm">
+            <p className="text-sm font-black uppercase text-emerald-800">Co dostajesz</p>
+            <h2 className="mt-2 text-2xl font-black">Poradnik do realnej pracy przy borówkach</h2>
+            <p className="mt-3 text-sm leading-6 text-slate-600">
+              Ten e-book nie jest zbiorem ogólników. Prowadzi przez decyzje, które najczęściej decydują o powodzeniu uprawy: kwaśne podłoże, wilgotność, sadzenie, cięcie i szybkie rozpoznanie błędów.
+            </p>
+            <ul className="mt-5 grid gap-3">
+              {ebookBenefits.map((benefit) => (
+                <li className="flex gap-3 rounded-lg bg-slate-50 p-3 text-sm font-bold leading-6 text-slate-700" key={benefit}>
+                  <Check className="mt-0.5 h-4 w-4 shrink-0 text-emerald-700" />
+                  <span>{benefit}</span>
+                </li>
+              ))}
+            </ul>
+          </article>
+
+          <article className="rounded-lg border border-emerald-900/10 bg-white p-6 shadow-sm">
+            <p className="text-sm font-black uppercase text-emerald-800">Dla kogo</p>
+            <h2 className="mt-2 text-2xl font-black">Dla działki, ogrodu i pierwszych krzewów</h2>
+            <div className="mt-5 grid gap-3 text-sm leading-6 text-slate-600">
+              <p className="rounded-lg bg-slate-50 p-4">
+                Jeśli dopiero sadzisz borówki, zaczniesz od listy zakupów, rozstawy, podłoża i podlewania po posadzeniu.
+              </p>
+              <p className="rounded-lg bg-slate-50 p-4">
+                Jeśli krzew już słabnie, przejdziesz przez diagnozę pH, objawów na liściach, błędów w nawożeniu i cięciu.
+              </p>
+              <p className="rounded-lg bg-emerald-50 p-4 font-bold text-emerald-950">
+                Po zakupie wybierasz przelew tradycyjny. PDF i EPUB wysyłamy na e-mail po potwierdzeniu płatności.
+              </p>
             </div>
           </article>
         </section>

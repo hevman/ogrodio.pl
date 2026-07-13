@@ -90,7 +90,7 @@ type VendureResponse<T> = {
 
 function resolveShopApiUrl() {
   if (typeof window !== "undefined") {
-    return process.env.NEXT_PUBLIC_VENDURE_SHOP_API_URL || "/shop-api";
+    return "/api/commerce/shop";
   }
   return (
     process.env.VENDURE_SHOP_API_URL ||
@@ -117,7 +117,7 @@ export async function vendureShop<T>(query: string, variables?: Record<string, u
   });
   const payload = (await response.json().catch(() => ({}))) as VendureResponse<T>;
   if (!response.ok || payload.errors?.length) {
-    throw new Error(payload.errors?.[0]?.message || t("common.vendureQueryError"));
+    throw new Error(payload.errors?.map((error) => error.message).join("\n") || t("common.vendureQueryError"));
   }
   return payload.data as T;
 }
@@ -254,7 +254,7 @@ export async function removeFavorite(productVariantId: string) {
 }
 
 export async function addItemToVendureOrder(productVariantId: string, quantity: number) {
-  return vendureShop<{
+  const data = await vendureShop<{
     addItemToOrder:
       | { __typename: "Order"; id: string; code: string; totalWithTax: number }
       | { __typename: string; message: string };
@@ -276,6 +276,11 @@ export async function addItemToVendureOrder(productVariantId: string, quantity: 
     `,
     { productVariantId, quantity },
   );
+  if (data.addItemToOrder.__typename !== "Order") {
+    const error = data.addItemToOrder as { message?: string };
+    throw new Error(error.message || t("common.genericError"));
+  }
+  return data.addItemToOrder;
 }
 
 const orderFragment = `

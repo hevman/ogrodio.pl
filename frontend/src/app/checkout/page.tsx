@@ -92,10 +92,24 @@ export default function CheckoutPage() {
     })
     .filter(Boolean) as Array<CartItem & { product: Product; total: number }>;
   const subtotal = lines.reduce((sum, item) => sum + item.total, 0);
-  const shipping = shippingMethods.find((method) => method.id === shippingMethodId);
+  const containsDigitalProduct = lines.some((line) => line.product.category === "ebooki");
+  const visibleShippingMethods = useMemo(
+    () =>
+      shippingMethods.filter((method) =>
+        containsDigitalProduct ? method.code === "dostawa-cyfrowa" : method.code !== "dostawa-cyfrowa",
+      ),
+    [containsDigitalProduct, shippingMethods],
+  );
+  const shipping = visibleShippingMethods.find((method) => method.id === shippingMethodId) || visibleShippingMethods[0];
   const shippingPrice = shipping?.price || 0;
   const total = subtotal + shippingPrice;
-  const containsDigitalProduct = lines.some((line) => line.product.category === "ebooki");
+
+  useEffect(() => {
+    if (!visibleShippingMethods.length) return;
+    if (!visibleShippingMethods.some((method) => method.id === shippingMethodId)) {
+      setShippingMethodId(visibleShippingMethods[0].id);
+    }
+  }, [shippingMethodId, visibleShippingMethods]);
 
   function updateAddress(field: keyof CheckoutAddress, value: string) {
     setAddress((current) => ({ ...current, [field]: value }));
@@ -186,7 +200,7 @@ export default function CheckoutPage() {
             </h2>
             <p className="mt-2 text-sm leading-6 text-slate-600">{t("shop.checkout.shippingEta")}</p>
             <div className="mt-5 grid gap-3">
-              {shippingMethods.map((method) => (
+              {visibleShippingMethods.map((method) => (
                 <label className={`flex cursor-pointer items-start justify-between gap-4 rounded-lg border p-4 ${shippingMethodId === method.id ? "border-emerald-700 bg-emerald-50" : "border-slate-200"}`} key={method.id}>
                   <span>
                     <span className="block font-black">{method.name}</span>
@@ -206,24 +220,28 @@ export default function CheckoutPage() {
               <CreditCard className="h-5 w-5 text-emerald-700" />
               {t("shop.checkout.paymentMethod")}
             </h2>
-            <p className="mt-2 text-sm leading-6 text-slate-600">{t("shop.checkout.termsNote")}</p>
+            <p className="mt-2 text-sm leading-6 text-slate-600">
+              Wybierz aktywną metodę płatności. Szybkie płatności Autopay są przygotowane jako kolejny etap, ale teraz nie są dostępne dla klienta.
+            </p>
             <div className="mt-5 grid gap-3">
               {paymentMethods.map((method) => (
                 <label className={`flex cursor-pointer items-start justify-between gap-4 rounded-lg border p-4 ${paymentMethodCode === method.code ? "border-emerald-700 bg-emerald-50" : "border-slate-200"}`} key={method.code}>
                   <span>
-                    <span className="block font-black">Przelew tradycyjny</span>
-                    <span className="mt-1 block text-sm leading-6 text-slate-600">Po złożeniu zamówienia otrzymasz dane do przelewu. E-book wysyłamy po zaksięgowaniu płatności.</span>
+                    <span className="block font-black">{method.name || "Przelew tradycyjny"}</span>
+                    <span className="mt-1 block text-sm leading-6 text-slate-600">
+                      {method.description || "Po złożeniu zamówienia otrzymasz dane do przelewu. E-book wysyłamy po zaksięgowaniu płatności."}
+                    </span>
                   </span>
                   <input checked={paymentMethodCode === method.code} onChange={() => setPaymentMethodCode(method.code)} type="radio" />
                 </label>
               ))}
-              <label className="flex cursor-not-allowed items-start justify-between gap-4 rounded-lg border border-slate-200 bg-slate-50 p-4 opacity-60">
+              <div className="flex items-start justify-between gap-4 rounded-lg border border-dashed border-slate-300 bg-slate-50 p-4 text-slate-500">
                 <span>
                   <span className="block font-black">Autopay / BLIK / szybki przelew</span>
-                  <span className="mt-1 block text-sm leading-6 text-slate-600">Płatności automatyczne będą dostępne po aktywacji operatora.</span>
+                  <span className="mt-1 block text-sm leading-6">Płatności automatyczne będą dostępne po aktywacji operatora.</span>
                 </span>
-                <input disabled type="radio" />
-              </label>
+                <span className="rounded-md bg-white px-2 py-1 text-xs font-black uppercase text-slate-500">wkrótce</span>
+              </div>
             </div>
           </article>
 

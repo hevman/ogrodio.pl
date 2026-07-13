@@ -12,7 +12,7 @@ const products = [
     categoryLabel: 'E-booki',
     price: 3900,
     stock: 9999,
-    description: 'Praktyczny poradnik Ogrodio o przygotowaniu gleby, sadzeniu, podlewaniu, nawożeniu, cięciu oraz diagnozowaniu problemów borówki wysokiej. Otrzymujesz 58-stronicowy PDF do druku i EPUB na czytnik. Pliki wysyłamy po potwierdzeniu płatności.',
+    description: 'Borówki bez błędów to praktyczny e-book dla osób, które chcą posadzić borówkę, poprawić kwaśną glebę albo uratować słaby krzew bez zgadywania. W środku znajdziesz plan przygotowania stanowiska, kontrolę pH, sadzenie, podlewanie, nawożenie, cięcie, diagnozę najczęstszych problemów oraz checklisty do pracy w ogrodzie. Otrzymujesz PDF do druku i EPUB na czytnik. Pliki wysyłamy po potwierdzeniu płatności.',
   },
 ];
 

@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import { headers } from "next/headers";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
+import { shopIndexingEnabled } from "@/lib/seo/shop-indexing";
 import { site } from "@/lib/site-config";
 import "./globals.css";
 
@@ -26,10 +27,9 @@ function getOrigin(url: string) {
 
 export async function generateMetadata(): Promise<Metadata> {
   const host = (await headers()).get("host")?.split(":")[0] || "";
-  const isShopHost = host === "sklep.ogrodio.localhost" || host === "sklep.ogrodio.pl";
   const isAppHost = host === "app.ogrodio.localhost" || host === "app.ogrodio.pl";
   const isPanelHost = host === "panel.ogrodio.localhost" || host === "panel.ogrodio.pl";
-  const noIndex = isShopHost || isAppHost || isPanelHost;
+  const noIndex = isAppHost || isPanelHost || !shopIndexingEnabled;
 
   return {
     metadataBase: new URL(site.publicUrl),
