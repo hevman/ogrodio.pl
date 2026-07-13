@@ -1,0 +1,63 @@
+{
+  "title": "Wybierz typ i odmianę do swojego miejsca",
+  "summary": "Nie każda odmiana nadaje się na balkon, a nie każda roślina wysoka jest dobrym wyborem dla początkującego. Najpierw dopasuj sposób wzrostu do przestrzeni i czasu, którym dysponujesz.",
+  "sections": [
+    {
+      "heading": "Samokończące czy wysokie",
+      "paragraphs": [
+        "Odmiany samokończące, często opisywane jako krzaczaste, kończą wzrost po wytworzeniu określonej liczby gron. Są wygodne do donic i dla osób, które nie chcą co kilka dni usuwać pędów bocznych. Zwykle owocują bardziej jednorazowo.",
+        "Odmiany wysokie rosną przez sezon i potrzebują mocnej podpory oraz systematycznego prowadzenia. W zamian mogą dawać owoce dłużej, ale nie wybaczają zaniedbanego podwiązywania i nadmiernego zagęszczenia."
+      ],
+      "table": {
+        "caption": "Dobór typu pomidora",
+        "headers": ["Warunek", "Lepszy wybór", "Dlaczego"],
+        "rows": [
+          ["mały balkon lub skrzynia", "odmiana samokończąca, karłowa", "mniejsza wysokość i mniej cięcia"],
+          ["duża donica oraz wysoka podpora", "odmiana wysoka koktajlowa", "dłuższe owocowanie i możliwość prowadzenia na pęd"],
+          ["tunel lub osłonięta ściana", "odmiana wysoka", "łatwiej utrzymać przewiew i suchsze liście"],
+          ["mało czasu na pielęgnację", "odmiana samokończąca", "mniej regularnych zabiegów formujących"]
+        ]
+      }
+    },
+    {
+      "heading": "Nie kupuj rośliny bez informacji",
+      "paragraphs": [
+        "Na etykiecie szukaj nazwy odmiany, typu wzrostu, przewidywanej wielkości owoców i zalecanego miejsca uprawy. Hasło „pomidor balkonowy” nie mówi jeszcze, czy roślina zmieści się w Twojej donicy ani czy potrzebuje palika.",
+        "Wybieraj sadzonki krępe, zielone i bez plam. Nie powinny mieć silnie wydłużonej, cienkiej łodygi ani być już przeładowane kwiatami. Taka roślina może wyglądać sprzedażowo dobrze, ale po przesadzeniu łatwiej przechodzi stres."
+      ],
+      "checklist": [
+        "sprawdź, czy odmiana jest wysoka czy samokończąca",
+        "dobierz pojemnik do końcowej wielkości rośliny, nie do obecnej sadzonki",
+        "wybierz 2-3 odmiany zamiast dziesięciu przypadkowych",
+        "zapisz nazwy odmian: później łatwiej ocenisz, co sprawdziło się w Twoich warunkach"
+      ]
+    },
+    {
+      "heading": "Zbuduj małą kolekcję zamiast kupować przypadkiem",
+      "paragraphs": [
+        "Na pierwszy sezon nie potrzebujesz dziesięciu odmian. Lepiej wybrać trzy rośliny o różnych zadaniach: jedną łatwą do jedzenia prosto z krzaka, jedną do dłuższego zbioru i jedną o owocach wygodnych do sosu lub pieczenia. Dzięki temu porównasz rośliny w tych samych warunkach bez zamieniania balkonu lub grządki w eksperyment bez kontroli.",
+        "Nie oceniaj odmiany wyłącznie po pierwszym plonie. Zapisz odporność na pękanie, tempo dojrzewania, smak, potrzebę podlewania i zachowanie po deszczu. Dopiero taki zestaw obserwacji mówi, czy odmiana jest dobra dla Ciebie."
+      ],
+      "table": {
+        "caption": "Trzy role w małej uprawie pomidorów",
+        "headers": ["Rola", "Jakiej rośliny szukać", "Po co"],
+        "rows": [
+          ["codzienny zbiór", "koktajlowa o długim owocowaniu", "małe owoce łatwo wykorzystać na świeżo"],
+          ["balkon bez dużej podpory", "karłowa lub samokończąca", "mniej pracy przy formowaniu rośliny"],
+          ["sosy i pieczenie", "odmiana o mięsistych owocach", "mniej wody i wygodniejsze przetwarzanie"]
+        ]
+      }
+    },
+    {
+      "heading": "Karta wyboru sadzonki",
+      "checklist": [
+        "nazwa odmiany jest czytelna na etykiecie",
+        "wiesz, czy roślina jest wysoka czy samokończąca",
+        "liście są zielone, bez brunatnych lub mokrych plam",
+        "łodyga jest sztywna, ale nie nienaturalnie wydłużona",
+        "bryła korzeniowa nie jest przesuszona ani stojąca w wodzie",
+        "masz już miejsce, podporę i pojemnik odpowiedni dla tej rośliny"
+      ]
+    }
+  ]
+}

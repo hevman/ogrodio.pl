@@ -1,0 +1,55 @@
+{
+  "title": "Źródła i notatki praktyczne",
+  "summary": "Ten poradnik jest napisany dla ogrodnika amatora. Dane z opracowań doradczych zostały przełożone na praktyczne decyzje: jak zapobiegać, co obserwować i kiedy nie działać pochopnie.",
+  "sections": [
+    {
+      "heading": "Na czym oparto zalecenia",
+      "paragraphs": [
+        "Przy tworzeniu poradnika wykorzystano metodyki Instytutu Ogrodnictwa i PIORiN dotyczące integrowanej ochrony pomidora w uprawie polowej oraz pod osłonami. Wnioski o stanowisku, zmianowaniu, monitoringu i ograniczaniu zwilżania liści zostały zapisane własnym językiem, bez kopiowania tabel, rysunków lub fragmentów tekstu.",
+        "E-book łączy te źródła z praktyką uprawy domowej w gruncie i pojemnikach. Nie jest metodyką produkcji towarowej ani instrukcją stosowania środków ochrony roślin."
+      ],
+      "table": {
+        "caption": "Źródła danych i ich wykorzystanie",
+        "headers": ["Materiał", "Zakres", "Wykorzystanie w e-booku"],
+        "rows": [
+          ["Instytut Ogrodnictwa, Metodyka integrowanej ochrony pomidora w uprawie polowej", "stanowisko, zmianowanie, choroby, monitoring", "weryfikacja profilaktyki i kolejności diagnozy"],
+          ["PIORiN, Metodyka integrowanej produkcji pomidorów pod osłonami, 2023", "higiena, warunki uprawy, obserwacja", "weryfikacja zaleceń dla tunelu i osłoniętego stanowiska"],
+          ["MRiRW / PIORiN, wyszukiwarka środków ochrony roślin", "aktualne etykiety i rejestracje", "zasada: e-book nie podaje stałej listy preparatów ani dawek"],
+          ["Ogrodio, własne zdjęcia i notatki z uprawy donicowej", "donice, rozsada, balkon", "ilustracje oraz praktyczne listy kontrolne"]
+        ]
+      }
+    },
+    {
+      "heading": "Jak bezpiecznie korzystać z poradnika",
+      "checklist": [
+        "parafrazujemy wnioski źródeł, nie kopiujemy ich tabel, zdjęć ani rysunków",
+        "poradnik nie zastępuje aktualnej etykiety środka ochrony roślin",
+        "przed zastosowaniem środka potwierdź diagnozę i sprawdź aktualną rejestrację",
+        "nie wykonuj zabiegów podczas oblotu zapylaczy ani nie mieszaj preparatów bez podstawy z etykiety",
+        "przy niejasnym lub szybko postępującym problemie skorzystaj z lokalnego doradztwa ogrodniczego"
+      ],
+      "premiumBox": {
+        "title": "Najpierw profilaktyka",
+        "body": "Zdrowa rozsada, zmiana miejsca uprawy, przewiew, podlewanie pod korzeń i szybkie usuwanie porażonych części zwykle dają więcej niż pochopna interwencja."
+      }
+    },
+    {
+      "heading": "Jak aktualizujemy poradnik",
+      "paragraphs": [
+        "Zalecenia dotyczące środków ochrony roślin, ich rejestracji i etykiet mogą się zmieniać. Dlatego nie budujemy wartości e-booka na stałej liście nazw preparatów. Wartością są decyzje, które pozostają aktualne: profilaktyka, obserwacja, higiena i właściwe rozpoznanie problemu.",
+        "Przy kolejnych wydaniach aktualizujemy źródła, ilustracje oraz wskazówki praktyczne. Numer wydania pozwala odróżnić materiał, który czytasz, od nowszej wersji poradnika."
+      ]
+    },
+    {
+      "heading": "Na koniec",
+      "paragraphs": [
+        "Dobry sezon z pomidorami nie polega na tym, że nic się nie wydarza. Polega na tym, że szybko widzisz zmianę, rozumiesz jej możliwą przyczynę i wykonujesz jeden właściwy krok zamiast kilku przypadkowych.",
+        "Zapisuj swoje obserwacje. Po jednym sezonie będziesz mieć własną, konkretną wiedzę o tym, które odmiany, miejsca i rytm podlewania działają najlepiej właśnie w Twoim ogrodzie."
+      ],
+      "premiumBox": {
+        "title": "Najważniejsze zdanie",
+        "body": "Stabilne warunki i regularna obserwacja wygrywają z perfekcyjnym planem, którego nie da się utrzymać w praktyce."
+      }
+    }
+  ]
+}

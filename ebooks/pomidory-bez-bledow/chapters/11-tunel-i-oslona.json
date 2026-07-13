@@ -1,0 +1,48 @@
+{
+  "title": "Tunel i osłona przeciwdeszczowa",
+  "summary": "Osłona może wydłużyć sezon i ograniczyć zwilżanie liści, ale nie rozwiązuje problemów sama. Bez wietrzenia łatwo tworzy zbyt ciepłe i wilgotne środowisko.",
+  "sections": [
+    {
+      "heading": "Co naprawdę daje osłona",
+      "paragraphs": [
+        "Największą korzyścią z tunelu, szklarni lub prostego daszku nad pomidorami jest ograniczenie długotrwałego moczenia liści przez deszcz. Dzięki temu łatwiej kontrolować wilgotność i ryzyko chorób związanych z mokrymi roślinami.",
+        "Osłona nie oznacza jednak, że rośliny są bezpieczne bez kontroli. Powietrze musi przez nią przepływać. Zamknięty tunel w ciepły dzień może przegrzać kwiaty, ograniczyć zapylanie i podnieść wilgotność nocą."
+      ],
+      "premiumBox": {
+        "title": "Najważniejszy nawyk w tunelu",
+        "body": "Rano sprawdź temperaturę i wilgoć, a po podlaniu nie zostawiaj wnętrza bez wymiany powietrza. Pomidor potrzebuje osłony przed deszczem, nie dusznej kapsuły."
+      }
+    },
+    {
+      "heading": "Wietrzenie i podlewanie",
+      "table": {
+        "caption": "Codzienna obserwacja uprawy pod osłoną",
+        "headers": ["Sygnał", "Co może oznaczać", "Pierwszy krok"],
+        "rows": [
+          ["skroplona para rano", "zbyt wysoka wilgotność nocą", "wietrz wcześnie, nie podlewaj wieczorem"],
+          ["kwiaty opadają w upał", "za wysoka temperatura lub stres wodny", "otwórz tunel, sprawdź wilgotność bryły korzeniowej"],
+          ["wilgotna ziemia, więdnące liście", "korzenie mogą mieć za mało powietrza", "nie dolewaj wody, sprawdź odpływ i strukturę podłoża"],
+          ["bardzo gęsty zapach i brak ruchu powietrza", "niedostateczny przewiew", "usuń nadmiar dolnych liści i popraw wentylację"]
+        ]
+      }
+    },
+    {
+      "heading": "Pomidor pod daszkiem w ogrodzie",
+      "paragraphs": [
+        "Prosty daszek nad rzędem może być wystarczający dla kilku roślin. Musi być wyższy od roślin, nie może blokować światła i powinien pozostawiać boki otwarte. Nie przykrywaj roślin folią bezpośrednio, bo ograniczysz przewiew i zwiększysz ryzyko przegrzania.",
+        "Pod osłoną deszcz nie podleje roślin za Ciebie. Ustal własny rytm kontroli gleby; po kilku suchych dniach system korzeniowy może potrzebować wody mimo pochmurnej pogody."
+      ]
+    },
+    {
+      "heading": "Higiena w tunelu",
+      "checklist": [
+        "wietrz od rana, gdy warunki na zewnątrz na to pozwalają",
+        "podlewaj pod korzeń i nie zostawiaj mokrych liści na noc",
+        "usuń opadłe liście oraz owoce z podłoża",
+        "nie zagęszczaj roślin tylko dlatego, że tunel wygląda na pusty",
+        "czyść narzędzia po pracy z rośliną podejrzaną o chorobę",
+        "przed nowym sezonem umyj konstrukcję i usuń stare sznurki"
+      ]
+    }
+  ]
+}

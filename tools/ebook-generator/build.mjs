@@ -2,6 +2,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { pathToFileURL } from "node:url";
 import JSZip from "jszip";
+import { PDFDocument } from "pdf-lib";
 
 const root = process.cwd();
 const ebooksRoot = path.join(root, "ebooks");
@@ -174,7 +175,7 @@ function renderHtml(ebook) {
     .chapter section { break-inside: auto; margin-bottom: 18px; }
     .eyebrow { color: #2f6b4f; font-size: 13px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
     h2 { font-size: 34px; line-height: 1.15; margin: 0 0 8px; }
-    h3 { font-size: 22px; margin: 28px 0 8px; }
+    h3 { break-after: avoid-page; font-size: 22px; margin: 28px 0 8px; page-break-after: avoid; }
     p, li { font-size: 16px; }
     figure { break-inside: avoid; margin: 14px 0; }
     img { display: block; height: auto; max-height: 92mm; max-width: 100%; object-fit: cover; width: 100%; }
@@ -182,13 +183,13 @@ function renderHtml(ebook) {
     .checklist { list-style: none; margin: 12px 0 14px; padding: 0; }
     .checklist li { border-bottom: 1px solid #ded5c7; font-size: 14px; line-height: 1.55; padding: 0 0 8px 22px; position: relative; }
     .checklist li::before { border: 1.5px solid #2f6b4f; border-radius: 3px; content: ""; height: 12px; left: 0; position: absolute; top: 4px; width: 12px; }
-    .table-wrap { break-inside: avoid; margin: 14px 0 16px; }
+    .table-wrap { break-inside: avoid-page; margin: 14px 0 16px; page-break-inside: avoid; }
     table { border-collapse: collapse; font-size: 12.5px; line-height: 1.45; width: 100%; }
     th { background: #edf5ef; color: #2f6b4f; font-weight: 800; text-align: left; }
     th, td { border: 1px solid #ded5c7; padding: 7px 8px; vertical-align: top; }
     .summary { color: #665f55; }
-    .note { background: #edf5ef; border-left: 4px solid #2f6b4f; margin: 18px 0; padding: 12px 14px; }
-    .premium-box { background: #fff8e6; border: 1px solid #e7c86b; border-radius: 6px; display: grid; gap: 4px; margin: 14px 0; padding: 12px 14px; }
+    .note { background: #edf5ef; border-left: 4px solid #2f6b4f; break-inside: avoid-page; margin: 18px 0; page-break-inside: avoid; padding: 12px 14px; }
+    .premium-box { background: #fff8e6; border: 1px solid #e7c86b; border-radius: 6px; break-inside: avoid-page; display: grid; gap: 4px; margin: 14px 0; page-break-inside: avoid; padding: 12px 14px; }
     .premium-box strong { color: #7a5600; font-size: 13px; }
     .premium-box span { font-size: 14px; line-height: 1.6; }
   </style>
@@ -222,8 +223,9 @@ async function writePdf(htmlPath, outDir) {
   const browser = await chromium.launch();
   const page = await browser.newPage();
   await page.goto(pathToFileURL(htmlPath).href, { waitUntil: "networkidle" });
+  const pdfPath = path.join(outDir, "book.pdf");
   await page.pdf({
-    path: path.join(outDir, "book.pdf"),
+    path: pdfPath,
     format: "A4",
     printBackground: true,
     displayHeaderFooter: true,
@@ -232,6 +234,16 @@ async function writePdf(htmlPath, outDir) {
     margin: { top: "16mm", right: "16mm", bottom: "16mm", left: "16mm" },
   });
   await browser.close();
+  return pdfPath;
+}
+
+async function writePdfPreview(pdfPath, outDir, requestedPageCount) {
+  const source = await PDFDocument.load(fs.readFileSync(pdfPath));
+  const preview = await PDFDocument.create();
+  const pageCount = Math.min(Math.max(1, requestedPageCount), source.getPageCount());
+  const pages = await preview.copyPages(source, Array.from({ length: pageCount }, (_, index) => index));
+  pages.forEach((page) => preview.addPage(page));
+  fs.writeFileSync(path.join(outDir, "preview.pdf"), await preview.save());
 }
 
 function epubXhtml(title, body, bodyClass = "") {
@@ -436,7 +448,12 @@ async function buildOne(slug) {
   fs.mkdirSync(outDir, { recursive: true });
 
   const htmlPath = writeHtml(ebook, outDir);
-  if (format === "pdf" || format === "all") await writePdf(htmlPath, outDir);
+  if (format === "pdf" || format === "all") {
+    const pdfPath = await writePdf(htmlPath, outDir);
+    if (ebook.manifest.previewPages) {
+      await writePdfPreview(pdfPath, outDir, ebook.manifest.previewPages);
+    }
+  }
   if (format === "epub" || format === "all") await writeEpub(ebook, outDir);
 
   console.log(`Built ${slug} -> ${path.relative(root, outDir)}`);

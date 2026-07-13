@@ -1,0 +1,89 @@
+{
+  "title": "Diagnostyka objawów: liść, kwiat, owoc, korzeń",
+  "summary": "To rozszerzona karta obserwacji. Jej zadaniem jest zawęzić przyczynę i wskazać pierwszy bezpieczny krok, a nie stawiać diagnozę na podstawie jednego zdjęcia.",
+  "sections": [
+    {
+      "heading": "Zacznij od miejsca objawu",
+      "paragraphs": [
+        "Objawy na starych dolnych liściach i na młodych wierzchołkach często mają inne znaczenie. Stare liście mogą naturalnie słabnąć, gdy roślina przekierowuje energię do wzrostu i owoców. Młody przyrost szybciej pokazuje bieżący stan rośliny.",
+        "Zwróć uwagę, czy objaw pojawił się jednostronnie, po stronie najbardziej nasłonecznionej, przy samej ziemi, czy na wielu roślinach jednocześnie. To drobne szczegóły, które odróżniają uszkodzenie pogodowe od problemu systemowego."
+      ],
+      "table": {
+        "caption": "Miejsce objawu jako pierwsza wskazówka",
+        "headers": ["Gdzie widzisz problem", "Co sprawdzić", "Nie zakładaj automatycznie"],
+        "rows": [
+          ["najstarsze dolne liście", "kontakt z ziemią, naturalne starzenie, wilgoć", "że to od razu niedobór nawozu"],
+          ["młode wierzchołki", "szkodniki, deformacje, warunki wzrostu", "że każdy skręt liścia to choroba zakaźna"],
+          ["owoce od strony słońca", "oparzenie i nagłe odsłonięcie", "że plama przeniesie się na wszystkie owoce"],
+          ["cała roślina", "wilgotność korzeni, temperaturę, uszkodzenie systemu korzeniowego", "że wystarczy opryskać liście"]
+        ]
+      }
+    },
+    {
+      "heading": "Liście zwijają się lub są sztywne",
+      "paragraphs": [
+        "Liście mogą zwijać się przy upale, silnym świetle, stresie wodnym albo po gwałtownej zmianie warunków. Jeżeli są zielone, bez szybko rosnących plam, a nowe przyrosty wyglądają zdrowo, najpierw popraw stabilność wody i obserwuj przez kilka dni.",
+        "Jeżeli zwijaniu towarzyszy mozaika barw, silne deformacje nowych liści, zahamowanie wzrostu lub podobne objawy na wielu roślinach, nie przenoś narzędzi między roślinami i szukaj potwierdzenia diagnozy."
+      ]
+    },
+    {
+      "heading": "Kwiaty są, ale owoców mało",
+      "paragraphs": [
+        "Najpierw odtwórz warunki z ostatniego tygodnia: upał, chłodne noce, przesuszenie, przelewanie lub brak przewiewu. Każdy z nich może ograniczyć zawiązywanie owoców. W tunelu dodaj do listy przegrzanie i brak ruchu powietrza.",
+        "Nie poprawiaj tego jednocześnie nawozem, mocnym cięciem i zmianą podlewania. Wybierz jedną przyczynę najbardziej prawdopodobną, ustabilizuj warunki i obserwuj kolejne grona."
+      ],
+      "table": {
+        "caption": "Gdy kwiaty nie przechodzą w owoce",
+        "headers": ["Sytuacja", "Pierwszy ruch", "Ocena po kilku dniach"],
+        "rows": [
+          ["bardzo gorący tunel", "wietrz i ogranicz przegrzewanie", "czy kolejne kwiaty pozostają na roślinie"],
+          ["przesuszona donica", "podlewaj regularnie pod korzeń", "czy roślina odzyskuje rytm bez gwałtownych zmian"],
+          ["gęsta roślina pod osłoną", "popraw przewiew zgodnie z typem odmiany", "czy łatwiej dotrzeć do gron i liście szybciej schną"]
+        ]
+      }
+    },
+    {
+      "heading": "Oceń korzenie bez wyrywania rośliny",
+      "paragraphs": [
+        "W donicy możesz ocenić odpływ, zapach podłoża i jego wilgotność na różnych głębokościach. W gruncie ostrożnie odgarnij wierzchnią warstwę obok rośliny, nie rozkopując całej strefy korzeniowej.",
+        "Kwaśny, beztlenowy zapach, długo stojąca woda lub całkowicie sucha bryła są ważniejszą wskazówką niż kolor pojedynczego liścia. Najpierw popraw warunki korzeni, bo to one decydują o pobieraniu wody i składników."
+      ],
+      "checklist": [
+        "sprawdź, czy woda odpływa z donicy",
+        "porównaj wilgotność przy powierzchni i głębiej",
+        "obejrzyj, czy korzenie nie są odsłonięte",
+        "nie wzruszaj gleby agresywnie tuż przy łodydze",
+        "zapisz pogodę i ostatnie podlewanie przed zmianą warunków"
+      ]
+    },
+    {
+      "heading": "Kiedy zrobić zdjęcia do porównania",
+      "paragraphs": [
+        "Zdjęcie całej rośliny, zbliżenie objawu oraz zdjęcie spodu liścia tworzą znacznie lepszy zapis niż pojedynczy kadr. Rób fotografie w podobnym świetle i zapisuj datę. Dzięki temu po tygodniu zobaczysz, czy problem postępuje, czy roślina wraca do formy.",
+        "Takie zdjęcia są również najlepszym materiałem do konsultacji w szkółce, u doradcy albo później w aplikacji Ogrodio."
+      ],
+      "premiumBox": {
+        "title": "Diagnoza to proces",
+        "body": "Najpierw obserwacja, potem jedna rozsądna korekta, następnie porównanie stanu. To skuteczniejsze niż wykonywanie kilku zabiegów naraz."
+      }
+    },
+    {
+      "heading": "Karta jednej obserwacji",
+      "paragraphs": [
+        "Zapisz datę, odmianę, miejsce uprawy, pogodę z ostatnich dni, objaw oraz jedną podjętą czynność. Wystarczy pięć krótkich zdań. Po tygodniu sprawdź, czy objaw postępuje, zatrzymał się czy zniknął na nowych liściach.",
+        "Ten prosty zapis chroni przed pamięcią wybiórczą. Dzięki niemu nie będziesz przypisywać poprawy przypadkowemu preparatowi, gdy realną zmianą było na przykład regularne podlewanie albo wietrzenie tunelu."
+      ],
+      "table": {
+        "caption": "Szablon obserwacji do skopiowania",
+        "headers": ["Pole", "Co wpisać"],
+        "rows": [
+          ["data i roślina", "np. 14 lipca, pomidor koktajlowy w donicy"],
+          ["objaw", "gdzie jest widoczny i jak wygląda"],
+          ["warunki", "upał, deszcz, przesuszenie, chłodna noc lub inne ważne zdarzenie"],
+          ["jedna reakcja", "np. poprawa wietrzenia albo ustabilizowanie podlewania"],
+          ["kontrola", "zdjęcie i ocena po 3-7 dniach"]
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "title": "Kalendarz prac od lutego do października",
+  "summary": "To nie jest sztywny terminarz. Pogoda i region mają znaczenie, ale kalendarz pomaga pilnować kolejności decyzji przez cały sezon.",
+  "sections": [
+    {
+      "heading": "Rok z pomidorem",
+      "table": {
+        "caption": "Najważniejsze prace w sezonie",
+        "headers": ["Okres", "Priorytet", "Co zrobić"],
+        "rows": [
+          ["luty-marzec", "rozsada", "wysiej tylko tyle roślin, ile masz szansę doświetlić i później posadzić"],
+          ["kwiecień", "pikowanie i hartowanie", "przesadź siewki, zapewnij światło, zacznij krótkie wystawianie w osłonięte miejsce"],
+          ["maj", "sadzenie", "po zahartowaniu posadź do nagrzanej gleby lub dużej donicy, przygotuj podpory"],
+          ["czerwiec", "korzenie i forma", "podlewaj regularnie, podwiązuj odmiany wysokie, sprawdzaj pierwsze objawy"],
+          ["lipiec-sierpień", "owoce i zdrowie", "zbieraj regularnie, kontroluj po deszczu, utrzymuj przewiew"],
+          ["wrzesień", "ostatnie grona", "usuń chore części, zbieraj dojrzewające owoce przed chłodem"],
+          ["październik", "porządek", "zakończ uprawę, usuń resztki, umyj pojemniki i zaplanuj zmianowanie"]
+        ]
+      }
+    },
+    {
+      "heading": "Co zrobić teraz",
+      "paragraphs": [
+        "Jeżeli dopiero zaczynasz: wybierz miejsce i typ odmiany. Jeżeli masz już sadzonki: skup się na przyjęciu roślin po posadzeniu, a nie na intensywnym nawożeniu. Jeżeli masz owoce: pilnuj stabilnej wody i przewiewu. Jeżeli sezon się kończy: chroń zdrowe owoce, ale nie zostawiaj na grządce chorych resztek.",
+        "W aplikacji Ogrodio warto dodać przypomnienia o hartowaniu, sadzeniu, kontroli po deszczu oraz pierwszym zbiorze. Te cztery sygnały są użyteczniejsze niż codzienny alarm „podlej pomidory”."
+      ],
+      "checklist": [
+        "zapisz datę sadzenia",
+        "ustaw przypomnienie o kontroli po kilku dniach upału",
+        "ustaw przypomnienie o oględzinach po długim deszczu",
+        "zapisz pierwsze kwitnienie i pierwszy zbiór",
+        "zrób jedno zdjęcie rośliny co dwa tygodnie do porównania"
+      ]
+    },
+    {
+      "heading": "Cztery momenty, których nie warto przegapić",
+      "paragraphs": [
+        "Pierwszy to hartowanie: od niego zależy, czy rozsada przejdzie z mieszkania do ogrodu bez oparzeń i zahamowania. Drugi to sadzenie z gotową podporą. Trzeci to pierwsza dłuższa fala upałów, kiedy warto sprawdzić realne tempo wysychania podłoża.",
+        "Czwarty moment to pierwszy dłuższy okres deszczu lub wilgoci pod osłoną. Wtedy oględziny liści, przewiew i higiena są ważniejsze niż rutynowe dokładanie nawozu."
+      ],
+      "table": {
+        "caption": "Kalendarz reagowania na warunki",
+        "headers": ["Sygnał w sezonie", "Przypomnienie", "Działanie"],
+        "rows": [
+          ["kilka upalnych dni", "kontrola donic rano i wieczorem", "sprawdź głębszą wilgotność, nie tylko powierzchnię"],
+          ["pierwszy silny deszcz po suszy", "oględziny owoców i podłoża", "zbierz pękające owoce, nie dolewaj wody automatycznie"],
+          ["mokra noc w tunelu", "poranne wietrzenie", "usuń skropliny i popraw przepływ powietrza"],
+          ["ochłodzenie pod koniec sezonu", "zbiory zdrowych owoców", "nie zostawiaj dojrzałych owoców na ryzyko gnicia"]
+        ]
+      }
+    }
+  ]
+}

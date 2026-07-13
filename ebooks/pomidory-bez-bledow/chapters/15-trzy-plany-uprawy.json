@@ -1,0 +1,58 @@
+{
+  "title": "Trzy plany uprawy do skopiowania",
+  "summary": "Zamiast składać poradę z przypadkowych wskazówek, wybierz model pasujący do Twojego miejsca. Każdy plan pokazuje, co jest ważne od zakupu do zbioru.",
+  "sections": [
+    {
+      "heading": "Plan A: dwa pomidory na słonecznym balkonie",
+      "paragraphs": [
+        "Wybierz dwie odmiany o znanym typie wzrostu. Najprostszy zestaw to jedna roślina samokończąca oraz jedna koktajlowa wysoka, o ile masz miejsce na dużą donicę i stabilną podporę. Dzięki temu porównasz ilość pracy, tempo dojrzewania i smak.",
+        "Przygotuj pojemniki z odpływem, podłoże do warzyw, podpory i sposób podlewania przed kupnem sadzonek. Na balkonie najczęściej przegrywa nie brak nawozu, lecz zbyt mała donica oraz przesuszenie podczas dwóch gorących dni."
+      ],
+      "table": {
+        "caption": "Kolejność działań na balkonie",
+        "headers": ["Etap", "Decyzja", "Kontrola"],
+        "rows": [
+          ["przed zakupem", "ustal, gdzie będą stały donice i jak będą podlewane", "co najmniej kilka godzin bezpośredniego słońca"],
+          ["sadzenie", "posadź jedną roślinę w jednym odpowiednio dużym pojemniku", "odpływ wody i podpora są gotowe"],
+          ["pierwszy miesiąc", "obserwuj wilgotność, podwiązuj wysoką odmianę", "sprawdzenie rano i wieczorem w upał"],
+          ["owocowanie", "zbieraj regularnie i nie zmieniaj gwałtownie podlewania", "pękanie, kondycja liści, stabilność podpory"]
+        ]
+      },
+      "checklist": [
+        "dwa osobne pojemniki zamiast przepełnionej skrzynki",
+        "podstawki, które nie zatrzymują stale wody przy dnie donicy",
+        "miękkie wiązanie do podwiązywania",
+        "dostęp do konewki bez noszenia wody przez całe mieszkanie",
+        "miejsce z przewiewem, ale bez ciągłego silnego wiatru"
+      ]
+    },
+    {
+      "heading": "Plan B: cztery pomidory w gruncie",
+      "paragraphs": [
+        "Wybierz słoneczny fragment ogrodu, w którym w ostatnim czasie nie rosły rośliny psiankowate. Zaplanuj rząd tak, aby dało się przejść między roślinami, podlać przy korzeniu i obejrzeć liście po deszczu.",
+        "Na małej grządce łatwiej utrzymać porządek niż na dużej, gęsto obsadzonej rabacie. Cztery dobrze prowadzone rośliny często dadzą więcej satysfakcji niż kilkanaście, których nie da się obserwować."
+      ],
+      "table": {
+        "caption": "Plan pracy w gruncie",
+        "headers": ["Moment", "Co przygotować", "Najczęstsze potknięcie"],
+        "rows": [
+          ["przed sadzeniem", "kompost, podpory, dostęp do wody", "sadzenie bez zaplanowanego podlewania"],
+          ["po sadzeniu", "ściółkę i luźne podwiązanie", "zostawienie dolnych liści przy ziemi"],
+          ["po deszczu", "lustrację liści i przewiew", "pracę przy mokrych roślinach"],
+          ["przed końcem sezonu", "notatkę o odmianach i zdrowych owocach", "zostawienie chorych resztek na grządce"]
+        ]
+      }
+    },
+    {
+      "heading": "Plan C: pomidory pod osłoną",
+      "paragraphs": [
+        "W tunelu lub pod daszkiem priorytetem jest wymiana powietrza. Wybierz mniej roślin, niż wydaje się możliwe na pierwszy rzut oka. Zostaw miejsce na wejście, podlewanie i usuwanie liści bez ocierania o kolejne pędy.",
+        "Własna rutyna powinna obejmować poranne wietrzenie, sprawdzenie podłoża i krótką lustrację. Pod osłoną pomidor może rosnąć szybciej, ale błędy w wilgoci i temperaturze również kumulują się szybciej."
+      ],
+      "premiumBox": {
+        "title": "Wybierz jeden plan",
+        "body": "Nie łącz od razu balkonu, tunelu i gruntu, jeśli to Twój pierwszy sezon. Jeden dobrze prowadzony system da Ci wiedzę, którą później rozszerzysz."
+      }
+    }
+  ]
+}

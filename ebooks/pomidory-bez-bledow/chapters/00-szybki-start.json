@@ -1,0 +1,50 @@
+{
+  "title": "Szybki start: zanim kupisz sadzonki",
+  "summary": "Pomidory odwdzięczają się za dobry start, ale źle znoszą przypadkowość. Ustal miejsce, typ rośliny i sposób podlewania, zanim posadzisz pierwszą sadzonkę.",
+  "sections": [
+    {
+      "heading": "Trzy decyzje, które robią różnicę",
+      "paragraphs": [
+        "Najwięcej problemów nie zaczyna się od choroby, tylko od złego dopasowania rośliny do miejsca. Pomidor potrzebuje pełnego słońca, ciepłego stanowiska i podłoża, które równocześnie trzyma wodę oraz przepuszcza powietrze do korzeni.",
+        "Zanim kupisz sadzonkę, odpowiedz sobie na trzy pytania: czy masz co najmniej sześć godzin bezpośredniego słońca, czy możesz podlewać regularnie i czy roślina będzie miała osłonę przed długim deszczem. Jeżeli na któreś odpowiadasz „nie”, wybierz odporniejszy typ uprawy albo zmień miejsce, zamiast liczyć na nawóz jako ratunek."
+      ],
+      "premiumBox": {
+        "title": "Cel tego poradnika",
+        "body": "Masz umieć podjąć właściwą decyzję zanim pojawi się problem: co posadzić, jak poprowadzić roślinę i od czego zacząć diagnozę, gdy liście lub owoce wyglądają źle."
+      }
+    },
+    {
+      "heading": "Lista zakupów",
+      "checklist": [
+        "zdrowe sadzonki z etykietą odmiany i typu wzrostu",
+        "żyzne podłoże do warzyw albo przygotowana, odchwaszczona grządka",
+        "palik, sznurek lub stabilna podpora dobrana do wysokości odmiany",
+        "konewka lub nawadnianie kroplowe kierujące wodę pod korzeń",
+        "materiał do ściółkowania: słoma, rozdrobniona kora liściasta lub dojrzały kompost",
+        "nawóz do warzyw stosowany zgodnie z etykietą",
+        "sekator albo czyste nożyczki wyłącznie do usuwania chorych części",
+        "notatnik lub aplikacja Ogrodio do zapisywania podlewania, nawożenia i objawów"
+      ]
+    },
+    {
+      "heading": "Plan pierwszego tygodnia",
+      "table": {
+        "caption": "Co zrobić bezpośrednio po posadzeniu",
+        "headers": ["Dzień", "Działanie", "Po co"],
+        "rows": [
+          ["dzień sadzenia", "posadź głęboko, podlej pod korzeń i zamontuj podporę", "roślina szybciej buduje korzenie, a później nie uszkodzisz ich palikiem"],
+          ["1-3 dzień", "sprawdź wilgotność podłoża, ale nie podlewaj automatycznie", "korzenie potrzebują wilgoci, nie ciągłego zalania"],
+          ["4-7 dzień", "przywiąż pęd miękką taśmą, usuń tylko liść dotykający ziemi", "ograniczasz uszkodzenia i kontakt liści z wilgotnym podłożem"],
+          ["po tygodniu", "oceniaj nowe przyrosty, nie kolor starych liści", "nowy wzrost najszybciej pokazuje, czy roślina się przyjęła"]
+        ]
+      }
+    },
+    {
+      "heading": "Zasada ratunkowa",
+      "paragraphs": [
+        "Nie reaguj na każdy objaw nawozem ani opryskiem. Najpierw sprawdź wilgotność bryły korzeniowej, stanowisko, pogodę z ostatnich dni i to, czy objaw dotyczy starych czy młodych liści. Dopiero potem rozważ dalsze działanie.",
+        "Pomidory szczególnie źle reagują na serię chaotycznych korekt: przesuszenie, gwałtowne zalanie, mocny nawóz i kolejne podlewanie. Stabilność daje im więcej niż jednorazowy „mocny” zabieg."
+      ]
+    }
+  ]
+}

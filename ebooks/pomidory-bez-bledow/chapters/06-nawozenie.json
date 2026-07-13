@@ -1,0 +1,58 @@
+{
+  "title": "Nawożenie bez przenawożenia",
+  "summary": "Pomidory są żarłoczne, ale nie potrzebują ciągłego dokładania nawozu. Najpierw budują korzenie i liście, potem kwiaty oraz owoce. Nadmiar azotu może dać imponujący krzak i słaby plon.",
+  "sections": [
+    {
+      "heading": "Najpierw gleba, potem nawóz",
+      "paragraphs": [
+        "W gruncie podstawą jest dobrze przygotowane podłoże z dojrzałym kompostem. W donicy zapas składników kończy się szybciej, dlatego nawożenie w sezonie ma większe znaczenie, ale zawsze stosuj produkt zgodnie z etykietą.",
+        "Nie nawoź rośliny przesuszonej. Najpierw przywróć prawidłową wilgotność, a dopiero później podaj nawóz. Skoncentrowany roztwór w suchej bryle korzeniowej może pogorszyć stres."
+      ]
+    },
+    {
+      "heading": "Czy roślina naprawdę potrzebuje nawozu",
+      "table": {
+        "caption": "Objaw nie zawsze oznacza ten sam niedobór",
+        "headers": ["Objaw", "Co jeszcze może być przyczyną", "Co sprawdzić przed nawożeniem"],
+        "rows": [
+          ["jasne starsze liście", "naturalne starzenie, przelanie, zbyt chłodne podłoże", "wilgotność, temperaturę, stan nowych liści"],
+          ["dużo liści, mało kwiatów", "nadmiar azotu, za mało światła", "skład nawozu, nasłonecznienie, zagęszczenie"],
+          ["opadanie kwiatów", "upał, chłodne noce, stres wodny", "temperaturę i regularność podlewania"],
+          ["twarda ciemna plama na spodzie owocu", "zaburzone pobieranie wapnia przez nieregularną wodę", "wilgotność podłoża i kondycję korzeni"]
+        ]
+      }
+    },
+    {
+      "heading": "Prosty rytm sezonu",
+      "paragraphs": [
+        "Po przyjęciu się rośliny obserwuj jej wzrost. W okresie silnego budowania zielonej masy nie przesadzaj z azotem. Gdy pojawiają się kwiaty i pierwsze zawiązki, wybieraj nawożenie dostosowane do roślin owocujących.",
+        "W donicach lepiej podawać mniejsze dawki zgodnie z zaleceniem producenta niż jednorazowo próbować „nadrobić” cały sezon. Prowadź notatkę: data, produkt, dawka i reakcja rośliny."
+      ],
+      "premiumBox": {
+        "title": "Czego nie robić",
+        "body": "Nie łącz kilku nawozów naraz, nie zwiększaj dawki po jednym słabszym dniu i nie próbuj leczyć choroby zakaźnej nawozem."
+      }
+    },
+    {
+      "heading": "Cztery kroki przed kolejnym nawożeniem",
+      "paragraphs": [
+        "Najpierw sprawdź, kiedy i czym roślina była nawożona ostatnio. Następnie oceń wilgotność podłoża oraz wygląd nowych liści. Dopiero potem zdecyduj, czy kolejna dawka jest potrzebna zgodnie z planem, czy problem leży w wodzie, świetle albo korzeniach.",
+        "Taka krótka przerwa przed działaniem chroni przed typowym błędem: dokładaniem kolejnych składników do rośliny, która nie jest w stanie ich pobrać z powodu przesuszenia albo przelania."
+      ],
+      "checklist": [
+        "zapisz datę ostatniego nawożenia i użyty produkt",
+        "sprawdź wilgotność przed podaniem roztworu",
+        "obejrzyj młode liście oraz najnowsze grono kwiatowe",
+        "zastosuj dawkę z etykiety, nie dawkę „na oko”",
+        "zrób zdjęcie rośliny przed zmianą i porównaj ją za tydzień"
+      ]
+    },
+    {
+      "heading": "Przykład spokojnej decyzji",
+      "paragraphs": [
+        "Jeżeli roślina ma dużo liści, ale słabo kwitnie, nie dodawaj od razu nawozu. Sprawdź, czy nie dostała ostatnio zbyt dużo azotu, czy ma wystarczająco dużo światła i czy w tunelu nie jest za gorąco. Dopiero po tej ocenie koryguj program nawożenia.",
+        "Jeżeli roślina w donicy jest blada i podłoże wysycha codziennie, najpierw ustabilizuj wodę oraz rozważ większy pojemnik w kolejnym sezonie. Nawóz nie zastąpi przestrzeni dla korzeni."
+      ]
+    }
+  ]
+}

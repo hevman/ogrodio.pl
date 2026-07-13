@@ -1,0 +1,50 @@
+{
+  "title": "Prowadzenie, podwiązywanie i kwiaty",
+  "summary": "Forma rośliny decyduje o przewiewie, dostępie światła i łatwości obserwacji. Prowadzenie nie polega na wycinaniu wszystkiego, lecz na dopasowaniu zabiegu do typu odmiany.",
+  "sections": [
+    {
+      "heading": "Pędy boczne, czyli „wilki”",
+      "paragraphs": [
+        "U odmian wysokich pędy wyrastające w kątach liści mogą szybko zagęścić roślinę. Gdy chcesz prowadzić pomidora na jeden lub dwa pędy, usuwaj wybrane młode pędy regularnie, czystymi palcami lub narzędziem.",
+        "Nie przenoś tej zasady automatycznie na odmiany samokończące. Ich bardziej krzaczasty pokrój jest naturalny; nadmierne usuwanie pędów może zmniejszyć plon."
+      ],
+      "table": {
+        "caption": "Prowadzenie według typu wzrostu",
+        "headers": ["Typ", "Co robisz", "Czego unikasz"],
+        "rows": [
+          ["wysoki", "regularnie podwiązujesz i ograniczasz liczbę pędów", "zostawiania gęstego środka rośliny bez kontroli"],
+          ["samokończący", "podpierasz ciężkie grona i usuwasz części chore", "rutynowego obrywania wszystkich pędów bocznych"],
+          ["w donicy", "zapewniasz jedną stabilną podporę i dostęp powietrza", "ciasnego ustawiania roślin przy ścianie bez przewiewu"]
+        ]
+      }
+    },
+    {
+      "heading": "Liście i przewiew",
+      "paragraphs": [
+        "Usuń liście chore, połamane i leżące na ziemi. Dolne liście można usuwać stopniowo, gdy roślina jest zdrowa, ale nie ogołacaj jej gwałtownie. Liście produkują cukry potrzebne owocom.",
+        "Wykonuj cięcie w suchy dzień. Nie pracuj kolejno przy chorej i zdrowej roślinie tym samym nieoczyszczonym narzędziem."
+      ]
+    },
+    {
+      "heading": "Dlaczego kwiaty opadają",
+      "paragraphs": [
+        "Kwiaty mogą opadać podczas upałów, chłodnych nocy, przesuszenia albo po gwałtownym przesadzeniu. Zanim zastosujesz preparat, popraw stabilność warunków i sprawdź, czy roślina nie stoi w przegrzanej donicy.",
+        "Na osłoniętym balkonie lub w tunelu delikatne potrząśnięcie kwitnącym gronem w suchej części dnia może ułatwić zapylenie. Nie rób tego na mokrych roślinach ani z użyciem silnego strumienia wody."
+      ]
+    },
+    {
+      "heading": "Krótka rutyna przy kwitnieniu",
+      "paragraphs": [
+        "W okresie kwitnienia nie zmieniaj kilku rzeczy naraz. Utrzymuj spokojne podlewanie, zapewnij przewiew i obserwuj kolejne grona. Jeżeli warunki są stabilne, roślina zwykle sama reguluje liczbę zawiązywanych owoców.",
+        "Na balkonie wystarczy raz na kilka dni sprawdzić, czy roślina nie stoi w przesuszonej donicy i czy kwiaty nie są zasłonięte przez bardzo gęste liście. W tunelu dodatkowo pilnuj temperatury oraz porannego wietrzenia."
+      ],
+      "checklist": [
+        "sprawdź wilgotność podłoża przed południem",
+        "obejrzyj najnowsze grona, nie tylko stare liście",
+        "delikatnie porusz kwitnącym gronem tylko w suchych warunkach",
+        "nie dodawaj nawozu wyłącznie dlatego, że pojedynczy kwiat opadł",
+        "zapisz okres długiego upału lub zimnych nocy przy roślinie"
+      ]
+    }
+  ]
+}

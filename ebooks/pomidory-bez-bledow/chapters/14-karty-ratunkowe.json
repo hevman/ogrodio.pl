@@ -1,0 +1,45 @@
+{
+  "title": "Karty ratunkowe: co zrobić dziś",
+  "summary": "Poniższe scenariusze pomagają uspokoić sytuację i uniknąć pochopnych działań. Każdy zaczyna się od obserwacji, nie od kupowania kolejnego preparatu.",
+  "sections": [
+    {
+      "heading": "Liście więdną w południe",
+      "paragraphs": [
+        "Jeżeli wieczorem odzyskują jędrność, roślina może reagować chwilowo na wysoką temperaturę. Sprawdź podłoże rano. Gdy jest suche głębiej, podlej przy korzeniu. Gdy jest mokre, nie dolewaj wody: problemem może być przegrzanie lub niedotlenienie korzeni.",
+        "W donicy sprawdź, czy pojemnik nie stoi na rozgrzanym betonie i czy odpływ działa. W gruncie rozważ ściółkę, ale nie zakrywaj nią wilgotnej łodygi."
+      ],
+      "premiumBox": {
+        "title": "Dzisiaj",
+        "body": "Sprawdź wilgotność na głębokości kilku centymetrów. Nie podejmuj decyzji wyłącznie po wyglądzie liści w pełnym słońcu."
+      }
+    },
+    {
+      "heading": "Owoce pękają",
+      "paragraphs": [
+        "Najczęściej przyczyną jest szybka zmiana dostępności wody: dłuższa susza, a później ulewa albo bardzo obfite podlewanie. Pęknięte owoce zbierz szybciej i wykorzystaj od razu, aby ograniczyć gnicie.",
+        "Na przyszłość ściółkuj, podlewaj regularniej i nie doprowadzaj donicy do całkowitego wyschnięcia. Nie próbuj leczyć pękania dodatkową dawką nawozu."
+      ]
+    },
+    {
+      "heading": "Czarne dno owocu",
+      "paragraphs": [
+        "Twarda ciemna plama po stronie kwiatu to zwykle wierzchołkowa sucha zgnilizna. Nie jest to choroba zakaźna, która przeskakuje z owocu na owoc. Często wiąże się z zaburzonym pobieraniem wapnia, gdy roślina przechodzi skoki wilgotności lub ma uszkodzone korzenie.",
+        "Usuń uszkodzony owoc, ustabilizuj wodę i sprawdź, czy podłoże nie jest raz bardzo suche, a raz zalane. Nie zakładaj automatycznie, że jedynym problemem jest brak wapnia w glebie."
+      ]
+    },
+    {
+      "heading": "Szybko przybywa ciemnych plam",
+      "paragraphs": [
+        "Ogranicz pracę przy mokrych roślinach. Obejrzyj również sąsiednie pomidory i ziemniaki. Usuń silnie porażone części do odpadu, umyj narzędzia i popraw przewiew.",
+        "Gdy sytuacja rozwija się szybko, nie zgaduj preparatu. Potwierdź diagnozę i sprawdź aktualne zalecenia oraz etykietę rozwiązania dopuszczonego do danej uprawy."
+      ]
+    },
+    {
+      "heading": "Roślina ma piękne liście, ale mało owoców",
+      "paragraphs": [
+        "Sprawdź ilość słońca, typ odmiany i skład dotychczasowego nawożenia. Nadmiar azotu może wspierać liście kosztem kwitnienia, a w tunelu problemem może być też zbyt wysoka temperatura.",
+        "Nie wycinaj gwałtownie liści i nie zwiększaj nawozu. Najpierw usuń zagęszczenie zgodnie z typem odmiany, zapewnij stabilne warunki i obserwuj nowe kwiaty."
+      ]
+    }
+  ]
+}

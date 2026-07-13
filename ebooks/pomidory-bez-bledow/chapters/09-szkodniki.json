@@ -1,0 +1,55 @@
+{
+  "title": "Szkodniki: obserwuj, zanim zareagujesz",
+  "summary": "Najważniejsze jest wczesne wykrycie. Regularne oglądanie spodów liści i młodych przyrostów pozwala zacząć od prostych metod, zanim problem stanie się masowy.",
+  "sections": [
+    {
+      "heading": "Pięć minut lustracji",
+      "paragraphs": [
+        "Raz lub dwa razy w tygodniu obejrzyj młode wierzchołki, spody liści i miejsca przy podporach. Szukaj skupisk mszyc, bardzo drobnych pajęczynek, deformacji młodych liści oraz śladów żerowania.",
+        "Nie zakładaj, że każdy owad jest szkodnikiem. Zanim zaczniesz działanie, zrób zdjęcie i sprawdź, czy widzisz same szkodniki, ich uszkodzenia albo również owady pożyteczne."
+      ]
+    },
+    {
+      "heading": "Proste działania pierwszego wyboru",
+      "table": {
+        "caption": "Reakcja adekwatna do skali problemu",
+        "headers": ["Sytuacja", "Pierwsza reakcja", "Czego nie robić"],
+        "rows": [
+          ["pojedyncze mszyce na młodym pędzie", "usuń silnie zasiedlony fragment lub spłucz je łagodnym strumieniem wody", "nie stosuj od razu szerokiego zabiegu na całą roślinę"],
+          ["sucha, gorąca donica i jasne punkty na liściach", "sprawdź spód liści pod kątem przędziorków, popraw warunki wodne", "nie zraszaj stale liści wieczorem"],
+          ["duże uszkodzenia albo szybki wzrost populacji", "potwierdź gatunek i skorzystaj z aktualnej etykiety dopuszczonego rozwiązania", "nie stosuj przypadkowych domowych mieszanin na jadalne owoce"]
+        ]
+      }
+    },
+    {
+      "heading": "Profilaktyka",
+      "checklist": [
+        "nie przenoś szkodników z nowo kupionych roślin bez kontroli",
+        "nie przenawoź azotem, bo miękkie przyrosty łatwiej zasiedlają mszyce",
+        "utrzymuj przewiew między roślinami",
+        "usuń mocno porażone liście i wynieś je poza uprawę",
+        "nie wykonuj zabiegów w pełnym słońcu ani podczas oblotu zapylaczy"
+      ]
+    },
+    {
+      "heading": "Nowa roślina to potencjalne źródło problemu",
+      "paragraphs": [
+        "Sadzonki kupione w innym miejscu, rośliny ozdobne przenoszone na balkon i nawet bukiet z działki mogą przynieść mszyce lub przędziorki. Przed ustawieniem ich obok pomidorów obejrzyj spody liści i młode przyrosty.",
+        "Jeżeli masz podejrzenie problemu, ustaw nową roślinę osobno na kilka dni. To prosta praktyka, która może oszczędzić późniejsze oględziny całej uprawy."
+      ]
+    },
+    {
+      "heading": "Notatka z obserwacji",
+      "table": {
+        "caption": "Co zapisać, gdy zauważysz szkodnika",
+        "headers": ["Informacja", "Dlaczego jest przydatna"],
+        "rows": [
+          ["data i miejsce na roślinie", "pozwala ocenić tempo rozwoju problemu"],
+          ["zdjęcie spodu liścia i całej rośliny", "ułatwia właściwą identyfikację"],
+          ["pogoda i ostatnie podlewanie", "pomaga oddzielić szkodnika od stresu środowiskowego"],
+          ["co zostało zrobione", "zapobiega powtarzaniu nieskutecznych lub zbyt częstych działań"]
+        ]
+      }
+    }
+  ]
+}

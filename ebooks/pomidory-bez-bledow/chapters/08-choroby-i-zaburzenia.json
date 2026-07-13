@@ -1,0 +1,77 @@
+{
+  "title": "Choroby i zaburzenia: diagnoza przed działaniem",
+  "summary": "Plama na liściu nie jest diagnozą. Oddziel objawy nieinfekcyjne od problemów zakaźnych i zacznij od higieny, przewiewu oraz ograniczenia zwilżania liści.",
+  "sections": [
+    {
+      "heading": "Zaraza ziemniaczana: kiedy zachować czujność",
+      "paragraphs": [
+        "Ryzyko wzrasta po dłuższych okresach chłodu, wilgoci i zwilżenia liści. Oglądaj rośliny regularnie, zwłaszcza po deszczach, i nie ignoruj szybko powiększających się ciemnych plam.",
+        "Usuń wyraźnie porażone części do zamkniętego odpadu, nie zostawiaj ich pod rośliną ani w kompostowniku przydomowym. Nie pracuj przy mokrych liściach, bo łatwiej przenosić problem po roślinach."
+      ],
+      "premiumBox": {
+        "title": "Bezpieczna zasada ochrony",
+        "body": "E-book nie zastępuje aktualnej etykiety środka ochrony roślin. Jeżeli rozważasz ochronę chemiczną, potwierdź diagnozę i sprawdź bieżącą rejestrację oraz etykietę konkretnego preparatu."
+      }
+    },
+    {
+      "heading": "Najczęstsze objawy",
+      "table": {
+        "caption": "Pierwszy ruch przy problemie z pomidorem",
+        "headers": ["Objaw", "Możliwa przyczyna", "Co zrobić najpierw"],
+        "rows": [
+          ["ciemne plamy, szybko postępujące po wilgotnej pogodzie", "choroba zakaźna, w tym zaraza", "odizoluj porażone części, popraw przewiew, obserwuj sąsiednie rośliny"],
+          ["czarne dno owocu", "zaburzenie pobierania wapnia związane z wodą", "ustabilizuj podlewanie; nie traktuj jak infekcji"],
+          ["pękanie skórki", "nagła zmiana wilgotności", "podlewaj równiej, zbieraj owoce częściej"],
+          ["żółknięcie wyłącznie dolnych, starych liści", "starzenie lub stres korzeni", "oceniaj nowe liście i wilgotność, usuń liść jeśli dotyka ziemi"],
+          ["drobne, jasne plamki i pajęczynki", "możliwy przędziorek", "obejrzyj spód liści i odizoluj silnie porażoną roślinę"]
+        ]
+      }
+    },
+    {
+      "heading": "Plan kontroli po deszczu",
+      "checklist": [
+        "obejrzyj dolne i wewnętrzne liście",
+        "usuń liście dotykające wilgotnej ziemi",
+        "nie podlewaj ponownie, jeśli podłoże nadal jest mokre",
+        "sprawdź, czy rośliny nie są zbyt ciasno ustawione",
+        "zrób zdjęcie podejrzanego objawu i porównaj je po 24-48 godzinach",
+        "gdy objawy szybko postępują, skorzystaj z aktualnych źródeł doradczych lub konsultacji"
+      ]
+    },
+    {
+      "heading": "Trzy grupy problemów, których nie wolno mylić",
+      "paragraphs": [
+        "Problemy infekcyjne zwykle postępują: plam przybywa, zmieniają się owoce lub objawy przechodzą na sąsiednie rośliny. Zaburzenia fizjologiczne częściej wynikają z wody, temperatury, korzeni albo dostępności składników i nie rozchodzą się z rośliny na roślinę w ten sam sposób.",
+        "Trzecia grupa to uszkodzenia mechaniczne oraz pogodowe: otarcia od podpory, oparzenia słoneczne, ślady po gradzie lub pęknięcia po ulewie. Każda z tych grup wymaga innego działania, dlatego sama nazwa koloru plamy nie wystarczy do diagnozy."
+      ],
+      "table": {
+        "caption": "Pytania przed podjęciem działania",
+        "headers": ["Pytanie", "Jeśli odpowiedź brzmi: tak", "Co to sugeruje"],
+        "rows": [
+          ["czy objaw pojawił się nagle po pogodzie?", "upał, zimno lub ulewa były niedawno", "najpierw oceń stres środowiskowy"],
+          ["czy plamy powiększają się z dnia na dzień?", "tak", "traktuj problem jako pilny i ogranicz rozprzestrzenianie"],
+          ["czy problem dotyczy też innych roślin?", "tak", "sprawdź wspólną przyczynę: wodę, warunki lub infekcję"],
+          ["czy nowe liście wyglądają lepiej?", "tak", "roślina może wychodzić ze starszego stresu"]
+        ]
+      }
+    },
+    {
+      "heading": "Oparzenia i uszkodzenia słoneczne",
+      "paragraphs": [
+        "Owoce i liście mogą ulec oparzeniu po gwałtownym odsłonięciu na silne słońce, zwłaszcza gdy wcześniej były schowane w gęstej koronie albo pod osłoną. Nie usuwaj dużej liczby liści jednego dnia, a roślin zahartowanych w cieniu nie wystawiaj nagle na pełne popołudniowe słońce.",
+        "Oparzenie nie jest chorobą zakaźną, ale uszkodzona tkanka łatwiej staje się miejscem wtórnego gnicia. Uszkodzone owoce wykorzystaj szybko albo usuń, gdy zaczynają mięknąć."
+      ]
+    },
+    {
+      "heading": "Kiedy odpuścić ratowanie jednej rośliny",
+      "paragraphs": [
+        "Gdy objawy zakaźne szybko przechodzą na kolejne pędy, owoce lub sąsiednie rośliny, ochrona całej uprawy bywa ważniejsza niż próba uratowania jednego egzemplarza. Usuń silnie porażoną roślinę ostrożnie, wynieś poza uprawę i zdezynfekuj narzędzia.",
+        "To nie jest porażka. Szybkie odizolowanie źródła problemu często chroni pozostałe rośliny i daje lepszy materiał do analizy na następny sezon."
+      ],
+      "premiumBox": {
+        "title": "Czerwone flagi",
+        "body": "Szybkie powiększanie plam, gnicie owoców, objawy na wielu roślinach i mokra pogoda wymagają szybkiej oceny oraz działania higienicznego."
+      }
+    }
+  ]
+}

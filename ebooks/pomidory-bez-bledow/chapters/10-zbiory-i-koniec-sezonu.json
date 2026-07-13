@@ -1,0 +1,55 @@
+{
+  "title": "Zbiory, dojrzewanie i koniec sezonu",
+  "summary": "Regularny zbiór zmniejsza ryzyko pękania dojrzałych owoców i pozwala zauważyć problemy wcześniej. Koniec sezonu jest równie ważny: od niego zależy zdrowie kolejnej uprawy.",
+  "sections": [
+    {
+      "heading": "Kiedy zbierać",
+      "paragraphs": [
+        "Zbieraj owoce, gdy mają kolor właściwy dla odmiany i lekko ustępują pod delikatnym naciskiem. Nie czekaj, aż każdy owoc będzie bardzo miękki, zwłaszcza przed spodziewanym deszczem lub spadkiem temperatury.",
+        "Regularny zbiór pomaga roślinie kierować energię do kolejnych gron. Owoce z pękniętą skórką zużyj od razu po wycięciu uszkodzonego miejsca, a owoce z objawami gnicia odrzuć."
+      ]
+    },
+    {
+      "heading": "Co zrobić z zielonymi pomidorami",
+      "paragraphs": [
+        "Przed końcem sezonu zbierz zdrowe owoce, które zaczęły zmieniać barwę. Mogą dojrzewać w temperaturze pokojowej, w przewiewnym miejscu, z dala od bezpośredniego słońca.",
+        "Nie przechowuj razem owoców zdrowych i takich z uszkodzeniami lub plamami. Sprawdzaj je co kilka dni, aby nie dopuścić do rozwoju gnicia."
+      ]
+    },
+    {
+      "heading": "Porządek po sezonie",
+      "checklist": [
+        "usuń z grządki całe resztki roślin, zwłaszcza chore liście i owoce",
+        "nie kompostuj przydomowo wyraźnie porażonych części pomidora",
+        "umyj i zdezynfekuj podpory, pojemniki oraz narzędzia",
+        "zapisz odmiany, termin sadzenia, największe problemy i najlepsze wyniki",
+        "zaplanuj zmianowanie: nie wracaj z pomidorem na to samo miejsce w kolejnym sezonie"
+      ],
+      "premiumBox": {
+        "title": "Najcenniejsza notatka",
+        "body": "Zapisz nie tylko plon, ale też miejsce: ile było słońca, jak często podlewałeś i kiedy pojawiły się pierwsze objawy. To dane, które w następnym roku mają większą wartość niż pamięć."
+      }
+    },
+    {
+      "heading": "Ostatnie tygodnie przed chłodem",
+      "paragraphs": [
+        "Pod koniec sezonu skup się na zdrowych owocach i porządku w uprawie. Nie próbuj pobudzać rośliny do nowego, intensywnego wzrostu. Nowe późne kwiaty nie zawsze zdążą wydać wartościowy plon, a zagęszczenie utrudnia dojrzewanie istniejących gron.",
+        "Jeżeli noce robią się chłodne, kontroluj prognozę. Zdrowe owoce z początkiem przebarwienia można zebrać wcześniej i pozwolić im dojrzewać w domu."
+      ]
+    },
+    {
+      "heading": "Bilans sezonu",
+      "table": {
+        "caption": "Pięć pytań po ostatnim zbiorze",
+        "headers": ["Pytanie", "Po co"],
+        "rows": [
+          ["która odmiana smakowała najlepiej?", "wybór nasion i sadzonek na kolejny rok"],
+          ["która dawała plon najdłużej?", "dopasowanie terminu i miejsca"],
+          ["kiedy pojawił się pierwszy problem?", "lepsza profilaktyka w następnym sezonie"],
+          ["czy donica lub podpora były wystarczające?", "zakupy przed sezonem zamiast w jego środku"],
+          ["co chcę uprościć?", "mniej pracy i mniej chaotycznych decyzji"]
+        ]
+      }
+    }
+  ]
+}

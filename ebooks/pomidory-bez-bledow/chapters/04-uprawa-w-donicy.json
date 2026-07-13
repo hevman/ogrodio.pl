@@ -1,0 +1,38 @@
+{
+  "title": "Pomidory w donicy: mała przestrzeń, duża precyzja",
+  "summary": "Donica daje kontrolę nad podłożem, ale szybciej wysycha i szybciej wybacza mniej. Najważniejszy jest jej realny litraż, odpływ wody i regularność.",
+  "sections": [
+    {
+      "heading": "Wielkość pojemnika",
+      "image": "pomidory-balkonowe-doniczki-detail.webp",
+      "imageCaption": "W donicy liczy się objętość podłoża, odpływ wody i miejsce na podporę.",
+      "paragraphs": [
+        "Dla pomidora wysokiego wybieraj jeden duży pojemnik na jedną roślinę. Odmiany karłowe i samokończące mogą rosnąć w mniejszej objętości, ale także potrzebują miejsca na korzenie oraz zapasu wody w upalne dni.",
+        "Donica musi mieć otwory odpływowe. Warstwa drenażowa nie naprawi pojemnika bez odpływu. Stojąca woda wypiera powietrze z podłoża i uszkadza korzenie."
+      ],
+      "table": {
+        "caption": "Praktyczny dobór donicy",
+        "headers": ["Typ rośliny", "Minimalny kierunek", "Prowadzenie"],
+        "rows": [
+          ["karłowa, samokończąca", "duża donica balkonowa", "zwykle niewielka podpora, bez intensywnego usuwania pędów"],
+          ["koktajlowa wysoka", "co najmniej jeden pojemnik na jedną roślinę", "mocny palik lub sznurek, regularne podwiązywanie"],
+          ["dużoowocowa wysoka", "największy dostępny pojemnik", "prowadzenie na ograniczoną liczbę pędów i stabilna podpóra"]
+        ]
+      }
+    },
+    {
+      "heading": "Balkon ma własny mikroklimat",
+      "paragraphs": [
+        "Ściany odbijają ciepło, wiatr szybciej wysusza podłoże, a zadaszenie może ograniczać deszcz i zapylanie. Obserwuj roślinę rano oraz wieczorem, nie tylko w południowym słońcu.",
+        "W czasie upału zacienienie donicy od strony ściany lub postawienie jej na izolującej podstawce może ograniczyć przegrzewanie korzeni. Nie zacieniaj jednak całej rośliny na stałe, bo ograniczysz dojrzewanie owoców."
+      ],
+      "checklist": [
+        "sprawdź otwory odpływowe przed sadzeniem",
+        "nie ustawiaj donicy bezpośrednio w podstawce pełnej wody",
+        "przygotuj podporę na starcie",
+        "w upał kontroluj wilgotność dwa razy dziennie",
+        "zostaw przejście powietrza między donicami"
+      ]
+    }
+  ]
+}

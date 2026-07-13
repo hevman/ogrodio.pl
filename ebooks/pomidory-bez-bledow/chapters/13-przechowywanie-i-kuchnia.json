@@ -1,0 +1,45 @@
+{
+  "title": "Przechowywanie i wykorzystanie plonu",
+  "summary": "Dojrzałe pomidory smakują najlepiej, gdy są przechowywane rozsądnie i wykorzystywane na bieżąco. Plon warto podzielić według stopnia dojrzałości, a nie wrzucać wszystko do jednej miski.",
+  "sections": [
+    {
+      "heading": "Po zbiorze",
+      "paragraphs": [
+        "Zbieraj owoce do płytkiego pojemnika, w jednej lub dwóch warstwach. Nie układaj ciężkich owoców na bardzo dojrzałych koktajlowych, bo mikrouszkodzenia szybko skracają trwałość.",
+        "Zdrowe, dojrzałe pomidory najlepiej przechowuj krótko w temperaturze pokojowej, z dala od ostrego słońca. Lodówka bywa przydatna przy bardzo dojrzałych owocach, gdy nie zdążysz ich zużyć, ale może osłabiać aromat."
+      ],
+      "table": {
+        "caption": "Sortowanie owoców po zbiorze",
+        "headers": ["Stan owocu", "Najlepsze użycie", "Co kontrolować"],
+        "rows": [
+          ["w pełni dojrzały i jędrny", "sałatki, kanapki, jedzenie na świeżo", "zużyj w pierwszej kolejności"],
+          ["bardzo miękki, ale zdrowy", "sos, zupa, pieczenie", "nie przechowuj długo"],
+          ["z pęknięciem bez pleśni", "użyj od razu po wycięciu uszkodzonej części", "nie odkładaj do wspólnego pojemnika"],
+          ["zielony z początkiem przebarwienia", "dojrzewanie w domu", "sprawdzaj co kilka dni"],
+          ["z nalotem, miękkim gniciem lub podejrzeniem choroby", "odpad", "nie dodawaj do przetworów"]
+        ]
+      }
+    },
+    {
+      "heading": "Trzy proste sposoby na nadmiar",
+      "paragraphs": [
+        "Pomidory o różnej wielkości i stopniu dojrzałości dobrze sprawdzają się w sosie pieczonym, passacie lub suszeniu. Do przetwarzania wybieraj wyłącznie zdrowe owoce bez pleśni i gnicia.",
+        "Najpierw uporządkuj plon: owoce na świeżo, owoce do szybkiego użycia i owoce do przetworzenia. Dzięki temu nie tracisz najlepszych pomidorów w szufladzie lodówki i nie przetwarzasz przypadkowo owoców uszkodzonych."
+      ],
+      "checklist": [
+        "myj owoce bezpośrednio przed użyciem, nie przed długim przechowywaniem",
+        "do przetworów wybieraj wyłącznie zdrowe, dojrzałe owoce",
+        "opisuj słoiki datą i sposobem przygotowania",
+        "stosuj sprawdzone przepisy konserwacji oraz zasady bezpieczeństwa żywności",
+        "nie używaj owoców z pleśnią ani miękkim gniciem"
+      ]
+    },
+    {
+      "heading": "Co zapisać po zbiorach",
+      "paragraphs": [
+        "Zapisz, które odmiany dojrzewały najwcześniej, które pękały i które były naprawdę smaczne w Twoich warunkach. Właśnie te trzy informacje ułatwią wybór nasion w kolejnym sezonie.",
+        "Własny ranking odmian ma większą wartość niż ogólna lista z internetu, bo uwzględnia Twoje słońce, glebę, balkon albo tunel i sposób podlewania."
+      ]
+    }
+  ]
+}

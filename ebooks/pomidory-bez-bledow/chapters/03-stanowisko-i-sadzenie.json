@@ -1,0 +1,60 @@
+{
+  "title": "Stanowisko i sadzenie w gruncie lub tunelu",
+  "summary": "Słońce, przewiew i zdrowa gleba są ważniejsze niż nadmiar nawozu. Dobrze posadzony pomidor ma czas zbudować korzenie, zanim nadejdą upały i okres chorób.",
+  "sections": [
+    {
+      "heading": "Gdzie nie sadzić",
+      "paragraphs": [
+        "Nie sadź pomidorów tam, gdzie w ostatnich latach rosły pomidory, ziemniaki, papryka lub bakłażan. Przerwa w uprawie roślin psiankowatych ogranicza ryzyko problemów chorobowych przenoszonych przez glebę i resztki roślinne.",
+        "Unikaj bliskiego sąsiedztwa ziemniaków. Zaraza ziemniaczana może dotknąć oba gatunki, dlatego warto obserwować rośliny po okresach chłodu i długiego zwilżenia liści."
+      ],
+      "premiumBox": {
+        "title": "Najlepsze miejsce",
+        "body": "Pełne słońce, przewiew bez stałego silnego wiatru oraz możliwość podlewania pod korzeń. Osłona przed deszczem jest szczególnie cenna w drugiej połowie lata."
+      }
+    },
+    {
+      "heading": "Sadzenie krok po kroku",
+      "checklist": [
+        "sadź po ustąpieniu ryzyka przymrozków i po zahartowaniu rozsady",
+        "przygotuj dołek głębszy niż bryła korzeniowa",
+        "usuń tylko liście, które znalazłyby się pod ziemią",
+        "posadź łodygę głębiej lub lekko ukośnie, jeśli rozsada jest wyciągnięta",
+        "podlej glebę przy korzeniu, nie mocz liści",
+        "od razu wstaw palik albo poprowadź sznurek",
+        "zostaw przestrzeń między roślinami na powietrze i dostęp do pielęgnacji"
+      ]
+    },
+    {
+      "heading": "Kompost i gleba",
+      "paragraphs": [
+        "Pomidor lubi glebę żyzną, nagrzewającą się i niepodmokłą. Dojrzały kompost poprawia strukturę oraz zdolność podłoża do zatrzymywania wody. Nie mieszaj świeżego obornika bezpośrednio w dołku pod sadzonką.",
+        "Jeżeli gleba jest ciężka, pracuj nad jej strukturą i rozważ grządkę podwyższoną. Jeżeli jest bardzo lekka, szczególnie ważne będzie ściółkowanie oraz regularne, spokojne podlewanie."
+      ]
+    },
+    {
+      "heading": "Rozstawa i dostęp powietrza",
+      "paragraphs": [
+        "Pozostawiaj między roślinami tyle miejsca, aby można było swobodnie obejrzeć liście i podlać pod korzeń. Gęsto posadzone pomidory wyglądają obiecująco w maju, lecz w lipcu tworzą wilgotny środek, w którym trudniej zauważyć pierwsze objawy choroby.",
+        "Dokładna odległość zależy od odmiany, systemu prowadzenia i miejsca uprawy. Zamiast kierować się jedną liczbą, sprawdź zalecenie producenta odmiany i potraktuj je jako minimum, gdy roślina będzie prowadzona wysoko."
+      ],
+      "premiumBox": {
+        "title": "Test przewiewu",
+        "body": "Jeśli po deszczu lub podlewaniu nie możesz bez odginania pędów zobaczyć środka rośliny, uprawa jest prawdopodobnie zbyt gęsta."
+      }
+    },
+    {
+      "heading": "Pierwsze dwa tygodnie w ziemi",
+      "table": {
+        "caption": "Obserwacja po posadzeniu",
+        "headers": ["Moment", "Co sprawdzić", "Prawidłowa reakcja"],
+        "rows": [
+          ["następny poranek", "czy podłoże nie osiadło i nie odsłoniło korzeni", "uzupełnij ziemię tylko, jeśli jest to konieczne"],
+          ["po 3-5 dniach", "czy liście odzyskują jędrność po nocy", "podlewaj tylko po kontroli wilgotności"],
+          ["po tygodniu", "czy pojawia się nowy przyrost", "nie przyspieszaj nawożenia, jeśli roślina się przyjmuje"],
+          ["po dwóch tygodniach", "czy podpora nadal jest stabilna", "podwiąż roślinę luźno i przygotuj ściółkę"]
+        ]
+      }
+    }
+  ]
+}

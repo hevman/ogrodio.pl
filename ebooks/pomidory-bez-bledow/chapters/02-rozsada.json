@@ -1,0 +1,56 @@
+{
+  "title": "Rozsada: zdrowy start bez wyciągania roślin",
+  "summary": "Własna rozsada daje wybór odmian, ale tylko wtedy, gdy ma dużo światła, umiarkowaną temperaturę i nie jest przelewana.",
+  "sections": [
+    {
+      "heading": "Wysiew i światło",
+      "image": "rozsadnik-pomidory-marzec-detail.webp",
+      "imageCaption": "Zdrowa rozsada ma krótkie międzywęźla i wyraźnie zielone liście.",
+      "paragraphs": [
+        "Termin wysiewu dobierz do planowanej daty sadzenia i możliwości doświetlania. Zbyt wczesny siew w ciemnym mieszkaniu daje długie, wiotkie rośliny, których później nie naprawi żaden nawóz.",
+        "Po wschodach rozsada potrzebuje możliwie jasnego miejsca. Obracaj pojemniki, jeśli światło pada z jednej strony, i nie stawiaj ich nad gorącym kaloryferem. Ciepło przy braku światła przyspiesza wyciąganie pędów."
+      ]
+    },
+    {
+      "heading": "Pikowanie i hartowanie",
+      "paragraphs": [
+        "Gdy siewki mają liście właściwe, przesadź je pojedynczo do większych pojemników. Chwytaj roślinę za liście, nie za łodygę, która łatwo się uszkadza. Przy przesadzaniu możesz umieścić łodygę trochę głębiej, bo pomidor tworzy korzenie przybyszowe.",
+        "Hartowanie zaczynaj stopniowo. Najpierw wystaw rozsady na godzinę lub dwie w jasne, osłonięte miejsce, potem wydłużaj czas. Nie zostawiaj ich od razu na silnym wietrze ani w zimną noc."
+      ],
+      "table": {
+        "caption": "Objawy złej rozsady i pierwsza korekta",
+        "headers": ["Objaw", "Najczęstsza przyczyna", "Co zmienić"],
+        "rows": [
+          ["długi, cienki pęd", "za mało światła i za dużo ciepła", "dodatkowe światło, chłodniejsze miejsce, głębsze przesadzenie"],
+          ["żółknięcie dolnych liści", "przelanie albo wyczerpane podłoże", "sprawdź odpływ wody i podlewaj po lekkim przeschnięciu wierzchu"],
+          ["fioletowy odcień liści", "stres chłodu lub słabe pobieranie składników", "nie nawoź w ciemno; najpierw zapewnij ciepło i prawidłową wilgotność"],
+          ["oparzone jasne plamy po wyniesieniu", "zbyt gwałtowne hartowanie", "cofnij roślinę do półcienia i wydłużaj ekspozycję stopniowo"]
+        ]
+      }
+    },
+    {
+      "heading": "Kiedy rozsada jest gotowa do posadzenia",
+      "paragraphs": [
+        "Gotowa rozsada nie musi być ogromna. Lepiej sadzić roślinę krępą, z dobrze rozwiniętym systemem korzeniowym, niż przerośnięty egzemplarz z kwiatami w zbyt małej doniczce. Pojawienie się pierwszego grona kwiatowego nie oznacza, że trzeba ją natychmiast wynieść do zimnej ziemi.",
+        "Przed sadzeniem sprawdź prognozę nocnych temperatur i stan gleby. Roślina po kilku dniach hartowania lepiej przyjmie zmianę miejsca, ale przymrozek lub wielodniowe zimno potrafią zahamować ją na długo."
+      ],
+      "table": {
+        "caption": "Decyzja: sadzić, hartować czy jeszcze poczekać",
+        "headers": ["Stan rozsady", "Najlepsza decyzja", "Dlaczego"],
+        "rows": [
+          ["krępa, zielona, po kilku dniach hartowania", "można sadzić przy stabilnej prognozie", "ma największą szansę szybko się przyjąć"],
+          ["wydłużona, ale zdrowa", "posadź głębiej po zahartowaniu", "łodyga może wytworzyć dodatkowe korzenie"],
+          ["wyraźnie więdnie po krótkim pobycie na zewnątrz", "wróć do łagodniejszego hartowania", "roślina nie jest gotowa na pełne słońce i wiatr"],
+          ["ma plamy, zdeformowane liście lub oznaki szkodników", "nie sadź jej obok zdrowych roślin", "problem łatwiej zatrzymać przed wniesieniem do uprawy"]
+        ]
+      }
+    },
+    {
+      "heading": "Najczęstsze błędy przy rozsadzaniu",
+      "paragraphs": [
+        "Najczęstszy błąd to zbyt wczesny siew bez dodatkowego światła. Drugi to podlewanie małymi porcjami kilka razy dziennie tylko po powierzchni. Korzenie wtedy zostają płytko, a podłoże bywa stale mokre przy dnie.",
+        "Nie przyspieszaj sezonu sadzeniem osłabionej rozsady. Pomidor może przez kilka tygodni „stać w miejscu”, a później nie nadrobić różnicy wobec rośliny posadzonej później, ale w lepszych warunkach."
+      ]
+    }
+  ]
+}

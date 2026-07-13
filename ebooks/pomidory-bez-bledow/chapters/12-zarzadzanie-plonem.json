@@ -1,0 +1,37 @@
+{
+  "title": "Zarządzanie plonem: mniej chaosu, lepsze owoce",
+  "summary": "Dobre prowadzenie rośliny to kompromis między liczbą owoców a jej zdolnością do ich wykarmienia. Nie ma jednej liczby pędów i gron dla każdego ogrodu.",
+  "sections": [
+    {
+      "heading": "Kiedy ograniczać wzrost",
+      "paragraphs": [
+        "U wysokich odmian w gruncie i tunelu warto pod koniec sezonu ograniczyć dalszy wzrost wierzchołka, gdy nowe kwiaty nie mają już realnej szansy wydać dojrzałych owoców. Termin zależy od pogody, regionu i osłony, dlatego obserwuj roślinę, a nie tylko datę w kalendarzu.",
+        "Nie rób tego zbyt wcześnie. Liście powyżej gron są potrzebne do dojrzewania, a gwałtowne ogołocenie rośliny może odsłonić owoce na oparzenia."
+      ]
+    },
+    {
+      "heading": "Dużo kwiatów nie zawsze znaczy duży plon",
+      "paragraphs": [
+        "W czasie stresu roślina może zawiązać mniej owoców albo część kwiatów zrzucić. To często reakcja na temperaturę i wodę, nie dowód, że trzeba natychmiast zwiększyć dawkę nawozu.",
+        "Przy bardzo obciążonej roślinie zbieraj dojrzałe owoce regularnie. Ograniczaj tylko wyraźnie uszkodzone, zdeformowane lub chore zawiązki. Nie wycinaj zdrowych gron rutynowo, jeśli nie wiesz, jaki jest cel zabiegu."
+      ],
+      "table": {
+        "caption": "Decyzje przy dużym obciążeniu owocami",
+        "headers": ["Objaw", "Nie rób", "Zrób"],
+        "rows": [
+          ["pędy uginają się pod owocami", "nie czekaj aż się złamią", "dodaj podporę i podwiąż grona lub pęd miękkim materiałem"],
+          ["owoce drobnieją, podłoże szybko wysycha", "nie podlewaj skokowo ogromną dawką", "ustabilizuj podlewanie i sprawdź, czy donica nie jest za mała"],
+          ["nowe kwiaty pojawiają się bardzo późno", "nie licz na każdy kwiat przed chłodem", "oceniaj, czy roślina ma czas na rozwój i dojrzewanie kolejnego grona"],
+          ["liście zasłaniają środek", "nie obrywaj połowy rośliny jednego dnia", "usuń stopniowo najstarsze lub chore liście, poprawiając przewiew"]
+        ]
+      }
+    },
+    {
+      "heading": "Podwiązywanie bez uszkodzeń",
+      "paragraphs": [
+        "Nie wiąż łodygi cienkim sznurkiem ani drutem. Użyj miękkiej taśmy, klipsów ogrodniczych albo szerokiego sznurka. Zostaw luz na przyrost pędu i kontroluj wiązanie co kilka dni.",
+        "Podpora ma stabilizować roślinę, nie ściskać ją. Szczególnie po ulewie i silnym wietrze sprawdź, czy pędy nie ocierają się o konstrukcję."
+      ]
+    }
+  ]
+}

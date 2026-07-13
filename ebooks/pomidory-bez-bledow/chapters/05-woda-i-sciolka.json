@@ -1,0 +1,66 @@
+{
+  "title": "Woda i ściółka: stabilność zamiast huśtawki",
+  "summary": "Nieregularna wilgotność jest jedną z głównych przyczyn pękania owoców, słabego wzrostu i problemów z pobieraniem składników. Celem nie jest mokra ziemia, tylko równa wilgotność w strefie korzeni.",
+  "sections": [
+    {
+      "heading": "Jak sprawdzać, czy podlać",
+      "paragraphs": [
+        "Nie podlewaj według zegarka. Wsuń palec kilka centymetrów w podłoże albo użyj prostego miernika wilgotności. Wierzch może być suchy po słońcu, gdy głębiej wciąż jest właściwie wilgotno.",
+        "Podlewaj wolniej i przy korzeniu. Woda powinna dotrzeć do bryły korzeniowej, a nie spłynąć po przesuszonym podłożu bokiem. W donicy po bardzo suchym okresie podlewaj w dwóch mniejszych turach, w odstępie kilku minut."
+      ],
+      "premiumBox": {
+        "title": "Najprostsza zasada",
+        "body": "Pomidory lepiej reagują na spokojną regularność niż na cykl: całkowite przesuszenie, a potem wiadro wody."
+      }
+    },
+    {
+      "heading": "Kiedy podlewać",
+      "table": {
+        "caption": "Sygnały do kontroli podlewania",
+        "headers": ["Sytuacja", "Co obserwować", "Pierwsze działanie"],
+        "rows": [
+          ["upał i wiatr", "szybko przesychający wierzch, lekkie więdnięcie po południu", "sprawdź podłoże rano i wieczorem; podlej pod korzeń, jeśli jest suche głębiej"],
+          ["po ulewie", "ciężka, mokra ziemia i ochlapane liście", "nie dolewaj wody, popraw odpływ i usuń liście dotykające ziemi"],
+          ["owoce pękają", "pęknięcia po deszczu lub obfitym podlewaniu", "ustabilizuj wilgotność, zbieraj dojrzewające owoce częściej"],
+          ["czarne dno owocu", "twarda ciemna plama od strony kwiatu", "sprawdź regularność podlewania i kondycję korzeni; nie traktuj tego jak choroby zakaźnej"]
+        ]
+      }
+    },
+    {
+      "heading": "Po co ściółkować",
+      "paragraphs": [
+        "Ściółka ogranicza parowanie, łagodzi skoki temperatury gleby i zmniejsza rozpryskiwanie ziemi na dolne liście podczas deszczu. To prosty element profilaktyki, szczególnie w gruncie.",
+        "Rozkładaj ją na wilgotnej glebie, ale zostaw niewielką przerwę przy samej łodydze. Nie używaj materiału z chorych roślin pomidora jako ściółki."
+      ],
+      "checklist": [
+        "podlej glebę przed rozłożeniem ściółki",
+        "nie zasypuj podstawy łodygi mokrym materiałem",
+        "kontroluj wilgotność pod ściółką, a nie tylko jej powierzchnię",
+        "w donicy wybierz cienką warstwę, która nie blokuje odpływu wody"
+      ]
+    },
+    {
+      "heading": "Nawadnianie kroplowe czy konewka",
+      "paragraphs": [
+        "Nawadnianie kroplowe pomaga utrzymywać równe warunki, zwłaszcza gdy masz więcej roślin lub często wyjeżdżasz. Nie zwalnia jednak z obserwacji: kroplownik może się zatkać, a różne donice wysychają w różnym tempie.",
+        "Konewka daje większą kontrolę przy kilku roślinach. Kieruj strumień nisko pod roślinę i podlewaj spokojnie. Rozchlapywanie ziemi na dolne liście jest niepotrzebne i utrudnia higienę uprawy."
+      ],
+      "table": {
+        "caption": "Wybór sposobu podlewania",
+        "headers": ["Warunki", "Lepszy sposób", "Punkt kontroli"],
+        "rows": [
+          ["1-4 donice na balkonie", "konewka lub prosty system kroplowy", "wilgotność każdej donicy może być inna"],
+          ["długi rząd w gruncie", "nawadnianie kroplowe", "sprawdź, czy woda dociera do końca linii"],
+          ["upał i silny wiatr", "częstsza kontrola niezależnie od systemu", "nie zwiększaj dawki bez sprawdzenia głębszej wilgotności"]
+        ]
+      }
+    },
+    {
+      "heading": "Czego uczy deszcz",
+      "paragraphs": [
+        "Deszcz nie zawsze oznacza, że pomidory zostały podlane. Gęsta korona liści i zadaszony balkon mogą zatrzymać krople ponad podłożem, a lekki deszcz może zwilżyć tylko powierzchnię. Z drugiej strony intensywna ulewa może szybko przelać donicę.",
+        "Po opadach nie podejmuj decyzji po samym widoku mokrych liści. Zawsze sprawdź glebę oraz odpływ wody z pojemnika."
+      ]
+    }
+  ]
+}
