@@ -332,7 +332,34 @@ async function ensurePaymentMethods(token) {
     { code: 'payment-on-confirmation', name: 'Przelew tradycyjny', description: 'Po złożeniu zamówienia otrzymasz dane do przelewu. E-book wysyłamy po zaksięgowaniu płatności.' },
   ];
   for (const method of methods) {
-    if (existing.payload.data.paymentMethods.items.some(item => item.code === method.code)) continue;
+    const current = existing.payload.data.paymentMethods.items.find(item => item.code === method.code);
+    if (current) {
+      await gql(`
+        mutation UpdatePaymentMethod($input: UpdatePaymentMethodInput!) {
+          updatePaymentMethod(input: $input) {
+            id
+            code
+          }
+        }
+      `, {
+        input: {
+          id: current.id,
+          code: method.code,
+          enabled: true,
+          handler: {
+            code: 'manual-bank-transfer-handler',
+            arguments: [],
+          },
+          translations: [{
+            languageCode: 'en',
+            name: method.name,
+            description: method.description,
+          }],
+        },
+      }, token);
+      console.log(`Updated payment method ${method.name}`);
+      continue;
+    }
     await gql(`
       mutation CreatePaymentMethod($input: CreatePaymentMethodInput!) {
         createPaymentMethod(input: $input) {
@@ -345,8 +372,8 @@ async function ensurePaymentMethods(token) {
         code: method.code,
         enabled: true,
         handler: {
-          code: 'dummy-payment-handler',
-          arguments: [{ name: 'automaticSettle', value: 'true' }],
+          code: 'manual-bank-transfer-handler',
+          arguments: [],
         },
         translations: [{
           languageCode: 'en',

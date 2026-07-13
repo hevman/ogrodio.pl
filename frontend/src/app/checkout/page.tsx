@@ -124,6 +124,8 @@ export default function CheckoutPage() {
         address,
         shippingMethodId,
         paymentMethodCode,
+        acceptedTermsAt: new Date().toISOString(),
+        acceptedDigitalDeliveryAt: containsDigitalProduct ? new Date().toISOString() : undefined,
       });
       setOrderCode(order.code);
       window.localStorage.setItem("garden-vendure-cart", "[]");

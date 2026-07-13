@@ -366,6 +366,8 @@ export async function completeVendureCheckout(input: {
   address: CheckoutAddress;
   shippingMethodId: string;
   paymentMethodCode: string;
+  acceptedTermsAt: string;
+  acceptedDigitalDeliveryAt?: string;
 }) {
   const customer = await vendureShop<{
     setCustomerForOrder: { __typename: string; message?: string };
@@ -483,7 +485,11 @@ export async function completeVendureCheckout(input: {
     {
       input: {
         method: input.paymentMethodCode,
-        metadata: {},
+        metadata: {
+          termsVersion: "1.1-2026-07-13",
+          acceptedTermsAt: input.acceptedTermsAt,
+          acceptedDigitalDeliveryAt: input.acceptedDigitalDeliveryAt || null,
+        },
       },
     },
   );

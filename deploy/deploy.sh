@@ -9,6 +9,7 @@
 #   UPDATE_ARTICLE_SLUG=slug bash deploy/deploy.sh       - aktualizuje jeden istniejacy artykul z JSON
 #   REINDEX_ARTICLES=1 bash deploy/deploy.sh             - odswieza tylko indeks Meilisearch z bazy
 #   OVERWRITE_ARTICLES_FROM_JSON=1 bash deploy/deploy.sh - pelny sync JSON -> baza, nadpisuje istniejace tresci
+#   SEED_PRODUCTS=1 bash deploy/deploy.sh                - dodaje lub aktualizuje produkty i metody platnosci
 #   INDEX_PRODUCTS=1 bash deploy/deploy.sh               - odswieza indeks produktow Meilisearch
 
 set -euo pipefail
@@ -67,7 +68,7 @@ $COMPOSE build
 echo "==> Start kontenerow"
 $COMPOSE up -d
 
-if [ "${IMPORT_NEW_ARTICLES:-}" = "1" ] || [ -n "${UPDATE_ARTICLE_SLUG:-}" ] || [ "${REINDEX_ARTICLES:-}" = "1" ] || [ "${OVERWRITE_ARTICLES_FROM_JSON:-}" = "1" ] || [ "${INDEX_PRODUCTS:-}" = "1" ]; then
+if [ "${IMPORT_NEW_ARTICLES:-}" = "1" ] || [ -n "${UPDATE_ARTICLE_SLUG:-}" ] || [ "${REINDEX_ARTICLES:-}" = "1" ] || [ "${OVERWRITE_ARTICLES_FROM_JSON:-}" = "1" ] || [ "${SEED_PRODUCTS:-}" = "1" ] || [ "${INDEX_PRODUCTS:-}" = "1" ]; then
   echo "==> Czekam na Postgres..."
   sleep 15
 fi
@@ -100,6 +101,18 @@ else
   echo "    Jeden artykul z JSON:         UPDATE_ARTICLE_SLUG=slug bash deploy/deploy.sh"
   echo "    Tylko reindeks:               REINDEX_ARTICLES=1 bash deploy/deploy.sh"
   echo "    Pelny sync z nadpisaniem:     OVERWRITE_ARTICLES_FROM_JSON=1 bash deploy/deploy.sh"
+fi
+
+if [ "${SEED_PRODUCTS:-}" = "1" ]; then
+  echo "==> Produkty i metody platnosci Vendure"
+  docker exec \
+    -e VENDURE_ADMIN_API_URL=http://commerce-server:3000/admin-api \
+    -e VENDURE_SHOP_API_URL=http://commerce-server:3000/shop-api \
+    -e VENDURE_SHOP_HOST=sklep.ogrodio.pl \
+    garden-commerce-server npm run seed:garden
+else
+  echo "==> Pomijam seed produktow (SEED_PRODUCTS != 1)"
+  echo "    Produkty i platnosci:         SEED_PRODUCTS=1 bash deploy/deploy.sh"
 fi
 
 if [ "${INDEX_PRODUCTS:-}" = "1" ]; then

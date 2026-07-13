@@ -1,0 +1,89 @@
+{{> header title="Potwierdzenie zamówienia Ogrodio" }}
+
+<mj-section background-color="#ffffff" padding="28px 24px 12px">
+    <mj-column>
+        <mj-text font-size="18px" font-weight="bold" color="#0f172a">
+            Dziękujemy za zamówienie, {{ order.customer.firstName }}.
+        </mj-text>
+        <mj-text color="#475569" line-height="22px">
+            Przyjęliśmy zamówienie nr <strong>{{ order.code }}</strong>. Zachowaj tę wiadomość — jest potwierdzeniem
+            zawarcia umowy i jej warunków na trwałym nośniku.
+        </mj-text>
+    </mj-column>
+</mj-section>
+
+<mj-section background-color="#ecfdf5" padding="16px 24px">
+    <mj-column>
+        <mj-text color="#065f46"><strong>Numer zamówienia</strong><br />{{ order.code }}</mj-text>
+    </mj-column>
+    <mj-column>
+        <mj-text color="#065f46"><strong>Data</strong><br />{{ formatDate order.orderPlacedAt }}</mj-text>
+    </mj-column>
+    <mj-column>
+        <mj-text color="#065f46"><strong>Razem</strong><br />{{ formatMoney order.totalWithTax order.currencyCode 'pl' }}</mj-text>
+    </mj-column>
+</mj-section>
+
+<mj-section background-color="#ffffff" padding="16px 24px">
+    <mj-column>
+        <mj-text><h3>Podsumowanie</h3></mj-text>
+        <mj-table cellpadding="8px">
+            {{#each order.lines }}
+                <tr style="border-bottom:1px solid #e2e8f0">
+                    <td>{{ quantity }} × {{ productVariant.name }}</td>
+                    <td style="text-align:right">{{ formatMoney discountedLinePriceWithTax ../order.currencyCode 'pl' }}</td>
+                </tr>
+            {{/each}}
+            {{#each shippingLines }}
+                <tr style="border-bottom:1px solid #e2e8f0">
+                    <td>Dostawa: {{ shippingMethod.name }}</td>
+                    <td style="text-align:right">{{ formatMoney priceWithTax ../order.currencyCode 'pl' }}</td>
+                </tr>
+            {{/each}}
+            <tr>
+                <td><strong>Do zapłaty</strong></td>
+                <td style="text-align:right"><strong>{{ formatMoney order.totalWithTax order.currencyCode 'pl' }}</strong></td>
+            </tr>
+        </mj-table>
+    </mj-column>
+</mj-section>
+
+<mj-section background-color="#ffffff" padding="8px 24px">
+    <mj-column>
+        <mj-text><h3>Płatność przelewem tradycyjnym</h3></mj-text>
+        {{#if bankAccountNumber}}
+            <mj-text color="#334155" line-height="22px">
+                Odbiorca: <strong>{{ bankAccountHolder }}</strong><br />
+                Numer rachunku: <strong>{{ bankAccountNumber }}</strong><br />
+                Tytuł przelewu: <strong>Zamówienie {{ order.code }}</strong>
+            </mj-text>
+        {{else}}
+            <mj-text color="#9a3412" line-height="22px">
+                Dane do przelewu prześlemy w oddzielnej wiadomości. Nie wykonuj płatności bez numeru rachunku.
+            </mj-text>
+        {{/if}}
+        <mj-text color="#475569" line-height="22px">
+            E-book zostanie dostarczony na ten adres e-mail po zaksięgowaniu płatności, nie później niż w ciągu 2 dni roboczych.
+        </mj-text>
+    </mj-column>
+</mj-section>
+
+<mj-section background-color="#f8fafc" padding="16px 24px">
+    <mj-column>
+        <mj-text color="#334155" line-height="22px">
+            <strong>Treść cyfrowa:</strong> jeżeli zamówienie obejmuje e-book, potwierdzamy, że podczas składania
+            zamówienia wyraziłeś zgodę na dostarczenie go przed upływem 14 dni i przyjąłeś do wiadomości, że po
+            dostarczeniu treści cyfrowej utracisz prawo odstąpienia od umowy. Nie ogranicza to prawa do reklamacji pliku
+            niezgodnego z umową.
+        </mj-text>
+        <mj-text color="#334155" line-height="22px">
+            Regulamin obowiązujący przy zamówieniu: wersja 1.1 z 13 lipca 2026 r.<br />
+            <a href="{{ shopUrl }}/regulamin">Regulamin</a> ·
+            <a href="{{ shopUrl }}/zwroty">Odstąpienie i formularz</a> ·
+            <a href="{{ shopUrl }}/reklamacje">Reklamacje</a> ·
+            <a href="{{ shopUrl }}/polityka-prywatnosci">Polityka prywatności</a>
+        </mj-text>
+    </mj-column>
+</mj-section>
+
+{{> footer }}

@@ -111,6 +111,8 @@ services:
       SMTP_PASS: ${SMTP_PASS:-}
       SMTP_FROM: ${SMTP_FROM:-"Ogrodio <noreply@ogrodio.pl>"}
       SMTP_SECURE: ${SMTP_SECURE:-true}
+      BANK_ACCOUNT_NUMBER: ${BANK_ACCOUNT_NUMBER:-}
+      BANK_ACCOUNT_HOLDER: ${BANK_ACCOUNT_HOLDER:-Paweł Kopytko}
     deploy:
       resources:
         limits:
@@ -133,6 +135,8 @@ services:
       SMTP_PASS: ${SMTP_PASS:-}
       SMTP_FROM: ${SMTP_FROM:-"Ogrodio <noreply@ogrodio.pl>"}
       SMTP_SECURE: ${SMTP_SECURE:-true}
+      BANK_ACCOUNT_NUMBER: ${BANK_ACCOUNT_NUMBER:-}
+      BANK_ACCOUNT_HOLDER: ${BANK_ACCOUNT_HOLDER:-Paweł Kopytko}
     deploy:
       resources:
         limits:

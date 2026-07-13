@@ -6,6 +6,7 @@ import { LockKeyhole, Mail, Phone, UserRound } from "lucide-react";
 import { t } from "@/i18n";
 import { register } from "@/lib/auth-api";
 import { appPath } from "@/lib/app-url";
+import { site } from "@/lib/site-config";
 
 function registerTarget() {
   const value = new URLSearchParams(window.location.search).get("next") || "/app";
@@ -19,6 +20,7 @@ export default function RegisterPage() {
   const [phone, setPhone] = useState("");
   const [status, setStatus] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [acceptedTerms, setAcceptedTerms] = useState(false);
 
   async function submit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -86,9 +88,29 @@ export default function RegisterPage() {
             </span>
           </label>
 
+          <label className="flex items-start gap-3 text-sm font-semibold leading-6 text-slate-700">
+            <input
+              checked={acceptedTerms}
+              className="mt-1"
+              onChange={(event) => setAcceptedTerms(event.target.checked)}
+              required
+              type="checkbox"
+            />
+            <span>
+              Akceptuję{" "}
+              <a className="font-black text-emerald-800 underline" href={`${site.shopUrl}/regulamin`} target="_blank">
+                regulamin usług Ogrodio
+              </a>{" "}
+              i zapoznałem się z{" "}
+              <a className="font-black text-emerald-800 underline" href={`${site.shopUrl}/polityka-prywatnosci`} target="_blank">
+                polityką prywatności
+              </a>.
+            </span>
+          </label>
+
           {status ? <p className="rounded-lg bg-red-50 px-4 py-3 text-sm font-bold text-red-800">{status}</p> : null}
 
-          <button className="h-12 rounded-lg bg-emerald-700 px-5 font-black text-white disabled:opacity-50" disabled={isSubmitting} type="submit">
+          <button className="h-12 rounded-lg bg-emerald-700 px-5 font-black text-white disabled:opacity-50" disabled={isSubmitting || !acceptedTerms} type="submit">
             {t("common.register")}
           </button>
         </form>
