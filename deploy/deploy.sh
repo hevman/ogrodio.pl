@@ -3,7 +3,8 @@
 #   bash deploy/deploy.sh           - normalny deploy (HTTPS)
 #   bash deploy/deploy.sh bootstrap - pierwszy deploy (HTTP, przed SSL)
 #
-# Artykuly sa zasilane z JSON-ow. Backend synchronizuje je przed kazdym startem.
+# Artykuly publiczne sa odczytywane bezposrednio z JSON-ow.
+# Synchronizacja tabeli CMS jest opcjonalna i nigdy nie blokuje startu aplikacji.
 # Deploy czeka na gotowy backend i odswieza indeks Meilisearch.
 #   SEED_PRODUCTS=1 bash deploy/deploy.sh                - dodaje lub aktualizuje produkty i metody platnosci
 #   INDEX_PRODUCTS=1 bash deploy/deploy.sh               - odswieza indeks produktow Meilisearch
@@ -84,7 +85,7 @@ $COMPOSE build
 echo "==> Start kontenerow"
 $COMPOSE up -d
 
-echo "==> Czekam na backend po synchronizacji artykulow"
+echo "==> Czekam na backend"
 backend_ready=0
 for attempt in $(seq 1 30); do
   if docker exec garden-backend node -e "fetch('http://127.0.0.1:3000/api/articles').then((response) => process.exit(response.ok ? 0 : 1)).catch(() => process.exit(1))"; then
@@ -95,9 +96,16 @@ for attempt in $(seq 1 30); do
 done
 
 if [ "$backend_ready" -ne 1 ]; then
-  echo "Backend nie uruchomil sie po synchronizacji artykulow."
+  echo "Backend nie uruchomil sie."
   docker logs --tail=120 garden-backend
   exit 1
+fi
+
+if [ "${SYNC_ARTICLES_TO_CMS:-}" = "1" ]; then
+  echo "==> Opcjonalna synchronizacja artykulow JSON do CMS"
+  docker exec garden-backend node src/scripts/sync-articles-from-files.js
+else
+  echo "==> Pomijam synchronizacje JSON do CMS (SYNC_ARTICLES_TO_CMS != 1)"
 fi
 
 echo "==> Indeks artykulow Meili"

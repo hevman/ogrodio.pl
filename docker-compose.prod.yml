@@ -65,7 +65,6 @@ services:
           memory: 512M
 
   backend:
-    command: ["sh", "-c", "node src/scripts/sync-articles-from-files.js && exec node dist/src/main.js"]
     environment:
       POSTGRES_USER: ${BACKEND_POSTGRES_USER:-garden}
       POSTGRES_PASSWORD: ${BACKEND_POSTGRES_PASSWORD:?Ustaw BACKEND_POSTGRES_PASSWORD}
