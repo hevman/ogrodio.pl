@@ -1,65 +1,67 @@
+const fs = require('fs');
+const path = require('path');
 const { articleToMeiliDocument } = require('./article-content');
-const { createPool } = require('./pg-config');
 
-const pool = createPool();
-
+const ARTICLES_DIR = path.join(__dirname, '../../content/articles');
 const MEILISEARCH_HOST = process.env.MEILISEARCH_HOST || 'http://meilisearch:7700';
 const MEILISEARCH_MASTER_KEY = process.env.MEILISEARCH_MASTER_KEY || '';
 
 async function fetchMeili(endpoint, options = {}) {
-  const url = `${MEILISEARCH_HOST}${endpoint}`;
-  const headers = {
-    'Content-Type': 'application/json',
-  };
-  
+  const headers = { 'Content-Type': 'application/json' };
   if (MEILISEARCH_MASTER_KEY) {
-    headers['Authorization'] = `Bearer ${MEILISEARCH_MASTER_KEY}`;
+    headers.Authorization = `Bearer ${MEILISEARCH_MASTER_KEY}`;
   }
 
-  const response = await fetch(url, {
+  const response = await fetch(`${MEILISEARCH_HOST}${endpoint}`, {
     ...options,
     headers,
   });
 
   if (!response.ok) {
-    const errorText = await response.text();
-    throw new Error(`Meilisearch error: ${response.status} - ${errorText}`);
+    throw new Error(`Meilisearch error: ${response.status} - ${await response.text()}`);
   }
 
   return response.json();
 }
 
+function collectJsonFiles(dir) {
+  if (!fs.existsSync(dir)) {
+    throw new Error(`Brak katalogu artykulow: ${dir}`);
+  }
+
+  return fs.readdirSync(dir, { withFileTypes: true }).flatMap((entry) => {
+    const fullPath = path.join(dir, entry.name);
+    if (entry.isDirectory()) return collectJsonFiles(fullPath);
+    return entry.isFile() && entry.name.endsWith('.json') ? [fullPath] : [];
+  });
+}
+
 async function indexArticles() {
   try {
-    console.log('📊 Pobieram artykuły z bazy danych...');
-    
-    const result = await pool.query(
-      "SELECT * FROM articles WHERE status = 'published'",
-    );
+    const articles = collectJsonFiles(ARTICLES_DIR)
+      .map((filePath) => JSON.parse(fs.readFileSync(filePath, 'utf8')))
+      .filter((article) => article.status === 'published');
 
-    console.log(`📄 Znaleziono ${result.rows.length} opublikowanych artykułów`);
-
-    if (result.rows.length === 0) {
-      console.log('⚠️  Brak artykułów do indeksowania');
+    if (articles.length === 0) {
+      console.log('Brak opublikowanych artykulow JSON do indeksowania');
       return;
     }
 
-    const documents = result.rows.map((article) => articleToMeiliDocument(article));
-    await fetchMeili('/indexes/articles/documents', { method: 'DELETE' });
+    const documents = articles.map((article) => articleToMeiliDocument({
+      ...article,
+      id: article.slug,
+    }));
 
-    console.log('📤 Wysyłam do Meilisearch...');
-    
+    // PUT replaces the whole index, so deleted source files cannot stay searchable.
     await fetchMeili('/indexes/articles/documents', {
-      method: 'POST',
+      method: 'PUT',
       body: JSON.stringify(documents),
     });
 
-    console.log(`✅ Zindeksowano ${documents.length} artykułów w Meilisearch`);
+    console.log(`Zindeksowano ${documents.length} artykulow JSON w Meilisearch`);
   } catch (error) {
-    console.error('❌ Błąd podczas indeksowania:', error.message);
+    console.error('Blad podczas indeksowania artykulow:', error.message);
     process.exit(1);
-  } finally {
-    await pool.end();
   }
 }
 
