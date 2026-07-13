@@ -30,6 +30,16 @@ fi
 # Wygeneruj brakujące sekrety jeśli puste
 gen_secret() { openssl rand -base64 32 | tr -d '/+=' | head -c 43; }
 
+set_env_value() {
+  local key="$1"
+  local value="$2"
+  if grep -q "^${key}=" .env; then
+    sed -i "s|^${key}=.*|${key}=${value}|" .env
+  else
+    echo "${key}=${value}" >> .env
+  fi
+}
+
 # shellcheck disable=SC1091
 source "$(dirname "$0")/lib/load-env.sh"
 fix_env_file .env
@@ -37,32 +47,32 @@ load_env_file .env
 
 if [ -z "${GARDEN_JWT_SECRET:-}" ]; then
   GARDEN_JWT_SECRET="$(gen_secret)"
-  echo "GARDEN_JWT_SECRET=${GARDEN_JWT_SECRET}" >> .env
+  set_env_value "GARDEN_JWT_SECRET" "$GARDEN_JWT_SECRET"
   ok "Wygenerowano GARDEN_JWT_SECRET"
 fi
 if [ -z "${VENDURE_COOKIE_SECRET:-}" ]; then
   VENDURE_COOKIE_SECRET="$(gen_secret)"
-  echo "VENDURE_COOKIE_SECRET=${VENDURE_COOKIE_SECRET}" >> .env
+  set_env_value "VENDURE_COOKIE_SECRET" "$VENDURE_COOKIE_SECRET"
   ok "Wygenerowano VENDURE_COOKIE_SECRET"
 fi
 if [ -z "${MEILISEARCH_MASTER_KEY:-}" ]; then
   MEILISEARCH_MASTER_KEY="$(gen_secret)"
-  echo "MEILISEARCH_MASTER_KEY=${MEILISEARCH_MASTER_KEY}" >> .env
+  set_env_value "MEILISEARCH_MASTER_KEY" "$MEILISEARCH_MASTER_KEY"
   ok "Wygenerowano MEILISEARCH_MASTER_KEY"
 fi
 if [ -z "${DIGEST_CRON_SECRET:-}" ]; then
   DIGEST_CRON_SECRET="$(gen_secret)"
-  echo "DIGEST_CRON_SECRET=${DIGEST_CRON_SECRET}" >> .env
+  set_env_value "DIGEST_CRON_SECRET" "$DIGEST_CRON_SECRET"
   ok "Wygenerowano DIGEST_CRON_SECRET"
 fi
 if [ -z "${BACKEND_POSTGRES_PASSWORD:-}" ]; then
   BACKEND_POSTGRES_PASSWORD="$(gen_secret)"
-  echo "BACKEND_POSTGRES_PASSWORD=${BACKEND_POSTGRES_PASSWORD}" >> .env
+  set_env_value "BACKEND_POSTGRES_PASSWORD" "$BACKEND_POSTGRES_PASSWORD"
   ok "Wygenerowano BACKEND_POSTGRES_PASSWORD"
 fi
 if [ -z "${COMMERCE_POSTGRES_PASSWORD:-}" ]; then
   COMMERCE_POSTGRES_PASSWORD="$(gen_secret)"
-  echo "COMMERCE_POSTGRES_PASSWORD=${COMMERCE_POSTGRES_PASSWORD}" >> .env
+  set_env_value "COMMERCE_POSTGRES_PASSWORD" "$COMMERCE_POSTGRES_PASSWORD"
   ok "Wygenerowano COMMERCE_POSTGRES_PASSWORD"
 fi
 if [ -z "${VENDURE_SUPERADMIN_USERNAME:-}" ]; then

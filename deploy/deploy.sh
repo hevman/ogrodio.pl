@@ -49,6 +49,26 @@ if [ ! -f .env ]; then
   exit 1
 fi
 
+require_env() {
+  local key="$1"
+  if [ -z "${!key:-}" ]; then
+    echo "Brak wymaganej wartosci $key w .env. Uruchom jednorazowo: bash deploy/post-install.sh"
+    exit 1
+  fi
+}
+
+for key in \
+  GARDEN_JWT_SECRET \
+  VENDURE_COOKIE_SECRET \
+  MEILISEARCH_MASTER_KEY \
+  DIGEST_CRON_SECRET \
+  BACKEND_POSTGRES_PASSWORD \
+  COMMERCE_POSTGRES_PASSWORD \
+  VENDURE_SUPERADMIN_USERNAME \
+  VENDURE_SUPERADMIN_PASSWORD; do
+  require_env "$key"
+done
+
 if [ "$MODE" = "bootstrap" ] || [ "${NGINX_CONF:-nginx.prod.conf}" = "nginx.prod-bootstrap.conf" ]; then
   echo "==> Bootstrap: nginx HTTP (bez SSL) - tylko bez Cloudflare / przed Origin Cert"
   NGINX_CONF=nginx.prod-bootstrap.conf $COMPOSE up -d --build
@@ -121,7 +141,7 @@ if [ "${INDEX_PRODUCTS:-}" = "1" ]; then
     -e VENDURE_SHOP_API_URL=http://commerce-server:3000/shop-api \
     -e VENDURE_SHOP_HOST=sklep.ogrodio.pl \
     -e MEILISEARCH_HOST=http://meilisearch:7700 \
-    -e MEILISEARCH_MASTER_KEY="${MEILISEARCH_MASTER_KEY:-garden-meili-local-key}" \
+    -e MEILISEARCH_MASTER_KEY="${MEILISEARCH_MASTER_KEY}" \
     garden-commerce-server npm run index:meili
 else
   echo "==> Pomijam indeks produktow (INDEX_PRODUCTS != 1)"

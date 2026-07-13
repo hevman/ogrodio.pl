@@ -57,7 +57,7 @@ services:
       VENDURE_SHOP_API_URL: http://commerce-server:3000/shop-api
       VENDURE_SHOP_HOST: sklep.ogrodio.pl
       MEILISEARCH_HOST: http://meilisearch:7700
-      MEILISEARCH_MASTER_KEY: ${MEILISEARCH_MASTER_KEY:-garden-meili-local-key}
+      MEILISEARCH_MASTER_KEY: ${MEILISEARCH_MASTER_KEY:?Ustaw MEILISEARCH_MASTER_KEY}
       BACKEND_URL: http://backend:3000
     deploy:
       resources:
@@ -87,6 +87,7 @@ services:
   meilisearch:
     environment:
       MEILI_ENV: production
+      MEILI_MASTER_KEY: ${MEILISEARCH_MASTER_KEY:?Ustaw MEILISEARCH_MASTER_KEY}
       MEILI_MAX_INDEXING_MEMORY: 256Mb
     ports: []
     deploy:
