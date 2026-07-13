@@ -1,31 +1,57 @@
 #!/usr/bin/env bash
-# Wgranie zdjęć artykułów na VPS — tylko WebP, plik po pliku (rsync)
-# Kolejne uruchomienia wysyłają tylko nowe/zmienione pliki.
+# Wgranie obrazow WebP artykulow na VPS przez rsync.
 #
 #   bash deploy/sync-article-images.sh
-#   bash deploy/sync-article-images.sh debian@51.83.162.34
+#   bash deploy/sync-article-images.sh --remote debian@51.83.162.34
+#   bash deploy/sync-article-images.sh --only obraz.webp --only drugi-obraz.webp
 
 set -euo pipefail
 
-REMOTE="${1:-debian@51.83.162.34}"
+REMOTE="debian@51.83.162.34"
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 LOCAL="$ROOT/frontend/public/images/articles"
 REMOTE_DIR="/opt/ogrodio/app/frontend/public/images/articles"
+FILES=()
+
+while [ "$#" -gt 0 ]; do
+  case "$1" in
+    --remote)
+      REMOTE="$2"
+      shift 2
+      ;;
+    --only)
+      FILES+=("$2")
+      shift 2
+      ;;
+    *)
+      echo "Nieznany parametr: $1" >&2
+      exit 1
+      ;;
+  esac
+done
 
 if [ ! -d "$LOCAL" ]; then
   echo "Brak katalogu: $LOCAL" >&2
   exit 1
 fi
 
-count="$(find "$LOCAL" -maxdepth 1 -type f -name '*.webp' | wc -l)"
-echo "Lokalnie: $LOCAL ($count plików WebP, JPG pomijane)"
 echo "Cel: ${REMOTE}:${REMOTE_DIR}"
-echo "Tryb: rsync (tylko nowe/zmienione)"
-echo ""
-
 ssh "$REMOTE" "mkdir -p '$REMOTE_DIR'"
-rsync -avz --progress --include='*.webp' --exclude='*' "$LOCAL/" "${REMOTE}:${REMOTE_DIR}/"
 
-echo ""
-echo "Gotowe. Test:"
-echo "  curl -sI https://ogrodio.pl/images/articles/wiosenne-prace-ogrod.webp"
+if [ "${#FILES[@]}" -gt 0 ]; then
+  for file in "${FILES[@]}"; do
+    if [[ "$file" == */* ]] || [[ "$file" != *.webp ]] || [ ! -f "$LOCAL/$file" ]; then
+      echo "Nieprawidlowy lub brakujacy plik WebP: $file" >&2
+      exit 1
+    fi
+  done
+
+  echo "Tryb: tylko wskazane pliki (${#FILES[@]})"
+  rsync -avz --progress "${FILES[@]/#/$LOCAL/}" "${REMOTE}:${REMOTE_DIR}/"
+else
+  count="$(find "$LOCAL" -maxdepth 1 -type f -name '*.webp' | wc -l)"
+  echo "Tryb: wszystkie WebP (tylko nowe/zmienione, lokalnie: $count)"
+  rsync -avz --progress --include='*.webp' --exclude='*' "$LOCAL/" "${REMOTE}:${REMOTE_DIR}/"
+fi
+
+echo "Gotowe."
