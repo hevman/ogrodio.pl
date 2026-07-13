@@ -4,6 +4,28 @@ import { navLinks, site } from "@/lib/site-config";
 import { appPath } from "@/lib/app-url";
 import { t } from "@/i18n";
 
+function FacebookLink({ tone = "dark" }: { tone?: "light" | "dark" }) {
+  const classes = tone === "light"
+    ? "border-white/20 text-white hover:border-white hover:bg-white hover:text-slate-950"
+    : "border-slate-200 text-slate-600 hover:border-teal-700 hover:bg-teal-700 hover:text-white";
+
+  return (
+    <a
+      aria-label="Facebook Ogrodio"
+      className={`inline-flex size-9 items-center justify-center rounded-full border transition ${classes}`}
+      href={site.facebook}
+      rel="noopener noreferrer"
+      target="_blank"
+      title="Facebook Ogrodio"
+    >
+      <svg aria-hidden="true" className="size-4" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M13.8 21v-8h2.7l.4-3.1h-3.1V7.95c0-.9.25-1.5 1.54-1.5H16.9V3.67c-.28-.04-1.23-.12-2.34-.12-2.31 0-3.9 1.4-3.9 4v2.35H8.04V13h2.62v8h3.14Z" />
+      </svg>
+      <span className="sr-only">Facebook Ogrodio</span>
+    </a>
+  );
+}
+
 function ShopFooter() {
   return (
     <footer className="mt-auto border-t border-emerald-900/10 bg-slate-950 px-6 py-10 text-white 2xl:px-8">
@@ -21,16 +43,9 @@ function ShopFooter() {
               +48 791 172 155
             </a>
           </p>
-          <p className="mt-2 font-bold text-emerald-200">
-            <a
-              className="transition hover:text-white"
-              href={site.facebook}
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              Facebook
-            </a>
-          </p>
+          <div className="mt-5">
+            <FacebookLink tone="light" />
+          </div>
         </div>
 
         <div>
@@ -127,6 +142,9 @@ export function SiteFooter({ variant = "site" }: { variant?: "site" | "shop" }) 
         <div>
           <p className="text-xl font-bold tracking-tight">{t("site.name")}</p>
           <p className="mt-3 max-w-md text-sm leading-6 text-slate-500">{site.description}</p>
+          <div className="mt-5">
+            <FacebookLink />
+          </div>
           <p className="mt-4 text-sm text-slate-500">© {new Date().getFullYear()} {t("site.name")}</p>
         </div>
 
@@ -192,14 +210,6 @@ export function SiteFooter({ variant = "site" }: { variant?: "site" | "shop" }) 
             </Link>
             <a className="text-sm text-slate-500 transition hover:text-teal-700" href={`mailto:${site.email}`}>
               {site.email}
-            </a>
-            <a
-              className="text-sm text-slate-500 transition hover:text-teal-700"
-              href={site.facebook}
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              Facebook
             </a>
           </div>
         </div>
