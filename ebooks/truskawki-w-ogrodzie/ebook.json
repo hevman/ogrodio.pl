@@ -1,0 +1,18 @@
+{
+  "slug": "truskawki-w-ogrodzie",
+  "title": "Truskawki w ogrodzie",
+  "subtitle": "Sadzenie, pielęgnacja i zbiory krok po kroku",
+  "description": "Praktyczny e-book do lokalnego testu generatora. Treść jest podzielona na rozdziały, więc łatwo rozbudować ją do pełnej książki.",
+  "author": "Ebook Studio",
+  "publisher": "Ogrodio",
+  "publisherLogo": "ogrodio-leaf.jpg",
+  "language": "pl",
+  "category": "Ogród",
+  "version": "1.0.0",
+  "cover": "",
+  "chapters": [
+    "01-wstep",
+    "02-stanowisko",
+    "03-sadzenie"
+  ]
+}

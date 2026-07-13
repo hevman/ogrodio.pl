@@ -1,0 +1,82 @@
+{
+  "title": "Przechowywanie, mrożenie i przetwory",
+  "summary": "Borówka dobrze znosi przechowywanie i mrożenie, jeśli owoce są suche, dojrzałe i szybko schłodzone po zbiorze.",
+  "sections": [
+    {
+      "heading": "Świeże owoce po zbiorze",
+      "paragraphs": [
+        "Najważniejsze są trzy rzeczy: zbiór w suchy dzień, szybkie schłodzenie i brak mycia przed przechowywaniem. Mokre owoce szybciej miękną i pleśnieją.",
+        "Przechowuj borówki w płaskich pojemnikach, bez zgniatania. Jeśli zbierasz dla siebie, sortuj od razu: owoce miękkie i uszkodzone przeznacz na szybkie użycie, a jędrne do lodówki albo mrożenia."
+      ],
+      "checklist": [
+        "zbieraj rano, gdy owoce są chłodne i suche",
+        "nie myj owoców przed włożeniem do lodówki",
+        "usuń owoce pęknięte, miękkie i z nalotem pleśni",
+        "przechowuj w płaskim pojemniku z dostępem powietrza",
+        "myj dopiero tuż przed jedzeniem albo przerobem"
+      ]
+    },
+    {
+      "heading": "Chłodzenie: najważniejsze pierwsze godziny",
+      "paragraphs": [
+        "Po zbiorze owoce nadal oddychają. Im są cieplejsze, tym szybciej tracą jędrność i tym łatwiej rozwijają się choroby przechowalnicze. Dlatego owoce przeznaczone do przechowania powinny jak najszybciej trafić do chłodu.",
+        "W domu nie potrzebujesz profesjonalnej chłodni, ale zasada jest ta sama: płytki pojemnik, szybkie przebranie, brak mycia i lodówka. Nie trzymaj borówek w zamkniętej, ciepłej torbie po zbiorze, bo skroplona wilgoć i temperatura skracają trwałość."
+      ],
+      "checklist": [
+        "przebierz owoce od razu po zbiorze",
+        "nie dosypuj ciepłych owoców do już schłodzonych",
+        "nie zamykaj mokrych owoców w szczelnym pojemniku",
+        "trzymaj owoce płytko, bez zgniatania",
+        "schłódź partię do przechowania jak najszybciej"
+      ]
+    },
+    {
+      "heading": "Czego nie robić przy przechowywaniu",
+      "paragraphs": [
+        "Technologie stosowane w profesjonalnym przechowywaniu, takie jak atmosfera modyfikowana, pochłaniacze etylenu, ozonowanie czy kontrolowana atmosfera, wymagają parametrów i kontroli. W ogrodzie przydomowym nie próbuj ich improwizować. Zbyt szczelne opakowanie, zbyt dużo wilgoci albo brak chłodu da efekt odwrotny: zaparzenie, obcy zapach i szybsze psucie.",
+        "Dla domowego użytkownika najbezpieczniejsze są proste zasady: zdrowy owoc, sucha powierzchnia, szybkie schłodzenie i krótki czas przechowywania. Jeśli masz większy zbiór, lepiej zamrozić część owoców tego samego dnia niż trzymać wszystko w lodówce z nadzieją, że wytrzyma tydzień."
+      ],
+      "table": {
+        "caption": "Błędy, które skracają trwałość borówek",
+        "headers": ["Błąd", "Co się dzieje", "Lepsze rozwiązanie"],
+        "rows": [
+          ["mycie przed lodówką", "wilgoć przyspiesza pleśnienie", "myć dopiero przed jedzeniem"],
+          ["głębokie wiadro", "owoce na dole są zgniatane", "płytki pojemnik lub tacka"],
+          ["ciepłe owoce w szczelnej torbie", "skraplanie pary i zaparzenie", "schłodzić w przewiewnym pojemniku"],
+          ["mieszanie zdrowych z uszkodzonymi", "jedna miękka jagoda psuje partię", "sortować od razu po zbiorze"],
+          ["długie trzymanie zamiast mrożenia", "spadek jędrności i aromatu", "mrozić nadwyżkę w dniu zbioru"]
+        ]
+      }
+    },
+    {
+      "heading": "Mrożenie bez utraty jakości",
+      "paragraphs": [
+        "Badania nad mrożeniem borówki wysokiej wskazują, że sam proces zamrażania nie musi istotnie obniżać zawartości antocyjanów. Przy przechowywaniu przez kilka miesięcy w temperaturze -18°C i niższej owoce mogą zachować bardzo dobrą jakość barwników.",
+        "Dla domowej kuchni najważniejsza jest technika: najpierw zamroź owoce luzem w jednej warstwie, a dopiero potem przesyp do woreczków lub pojemników."
+      ],
+      "table": {
+        "caption": "Mrożenie borówek krok po kroku",
+        "headers": ["Krok", "Co zrobić", "Dlaczego"],
+        "rows": [
+          ["1", "posortuj owoce", "uszkodzone jagody pogarszają jakość całej partii"],
+          ["2", "nie myj, jeśli owoce są czyste i suche", "nadmiar wody tworzy lód i skleja owoce"],
+          ["3", "rozłóż jedną warstwę na tacy", "owoce zamrożą się osobno"],
+          ["4", "mroź 2-3 godziny", "powierzchnia owocu twardnieje i nie skleja się w bryłę"],
+          ["5", "przesyp do szczelnych opakowań", "łatwo wyjąć dokładnie tyle owoców, ile potrzeba"],
+          ["6", "zużyj najlepiej w ciągu 12 miesięcy", "smak i aromat są wtedy najpewniejsze"]
+        ]
+      }
+    },
+    {
+      "heading": "Dżem, konfitura i sok",
+      "paragraphs": [
+        "Borówki mają mniej pektyn niż część owoców sadowniczych, dlatego dżem bez dodatku pektyny może być rzadszy. Jeśli chcesz gęstszy produkt, użyj pektyny jabłkowej albo połącz borówki z niewielkim dodatkiem jabłka.",
+        "Najlepsze przetwory powstają z owoców w pełni dojrzałych, ale nie przejrzałych. Owoce z oznakami pleśni wyrzuć, nie odkrawaj tylko fragmentu."
+      ],
+      "premiumBox": {
+        "title": "Produkt premium z własnej uprawy",
+        "body": "Najłatwiej sprzedać albo podarować nie sam dżem, lecz zestaw: mały słoik konfitury, krótka historia odmiany i informacja, że owoce były zbierane ręcznie w pełnej dojrzałości."
+      }
+    }
+  ]
+}

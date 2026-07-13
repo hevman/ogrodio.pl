@@ -1,0 +1,47 @@
+services:
+  ebook-studio:
+    build:
+      context: .
+      target: development
+    expose:
+      - "3000"
+    environment:
+      VIRTUAL_HOST: ebook.localhost
+      VIRTUAL_PORT: 3000
+      NEXT_TELEMETRY_DISABLED: "1"
+      NODE_ENV: development
+      WATCHPACK_POLLING: "true"
+    volumes:
+      - ./app:/app/app
+      - ./components:/app/components
+      - ./ebooks:/app/ebooks
+      - ./exports:/app/exports
+      - ./lib:/app/lib
+      - ./tools:/app/tools
+      - ./next.config.ts:/app/next.config.ts
+      - ./tsconfig.json:/app/tsconfig.json
+      - next_cache:/app/.next
+    command: npm run dev -- --hostname 0.0.0.0 --port 3000
+    networks:
+      - default
+      - reverse_proxy_network
+
+  ebook-generator:
+    build:
+      context: .
+    profiles:
+      - generator
+    volumes:
+      - ./ebooks:/app/ebooks
+      - ./exports:/app/exports
+      - ./tools:/app/tools
+    command: npm run ebook:build
+    networks:
+      - default
+
+networks:
+  reverse_proxy_network:
+    external: true
+
+volumes:
+  next_cache:

@@ -1,0 +1,62 @@
+{
+  "title": "Przycinanie i formowanie",
+  "summary": "Borówka owocuje na pędach z poprzedniego roku. Regularne cięcie to jedyny sposób, żeby krzew owocował obficie przez dekady zamiast stopniowo degenerować.",
+  "sections": [
+    {
+      "heading": "Zrozumieć zanim przytniesz",
+      "paragraphs": [
+        "Borówka tworzy pąki kwiatowe na pędach jednorocznych. Im młodszy pęd i im więcej słońca dochodziło do jego pąków, tym większe i smaczniejsze owoce. Stare, wieloletnie konary nadal żyją i wyglądają zdrowo, ale ich pąki owocowe zawiązują coraz drobniejsze jagody, bo są coraz dalej od słońca i coraz głębiej w cieniu gęstego krzewu.",
+        "Cel cięcia to utrzymanie krzewu w optymalnej strukturze: 8–12 głównych pędów o zróżnicowanym wieku (1–7 lat), dobrze nasłonecznionych, z aktywną strefą owocowania. Kiedy konar ma ponad 7–8 lat, wytnij go i zastąp silnym jednorocznym przyrostem z podstawy."
+      ]
+    },
+    {
+      "heading": "Kiedy ciąć",
+      "paragraphs": [
+        "Najlepszy termin to wczesna wiosna, przed pękaniem pąków — luty lub marzec, zależnie od regionu. Krzew jest wtedy w spoczynku, pąki są jeszcze zamknięte (więc łatwo odróżnić pąki kwiatowe od wegetatywnych), a rany goją się szybko po starcie wegetacji.",
+        "Cięcie jesienne (po opadnięciu liści, październik–listopad) jest możliwe, ale nie optymalne — odsłonięte rany przez zimę są bardziej narażone na choroby. Absolutnie unikaj cięcia latem, podczas wzrostu — otwarte rany są łatwą bramą dla grzybów."
+      ],
+      "note": "Przed cięciem odkażaj sekatora alkoholem izopropylowym lub 10% roztworem podchloranu sodu. Jeden chory krzew może zakazić zdrowy przez niesterylne narzędzie."
+    },
+    {
+      "heading": "Co i jak ciąć — krok po kroku",
+      "image": "borowka-ciecie-odmładzajace-cover.webp",
+      "imageCaption": "Cięcie odmładzające polega na stopniowym usuwaniu najstarszych pędów.",
+      "paragraphs": [
+        "Krok 1: usuń wszystkie pędy złamane, przemrożone i wyraźnie chore. To priorytet — zanim zajmiesz się formowaniem, wyeliminuj źródła choroby.",
+        "Krok 2: wytnij przy ziemi najstarsze, najgrubsze konary. Stare drewno ma ciemną, szorstką korę i wyraźnie grubszy pień niż nowe przyrosty. Wytnij 1–3 najstarsze konary rocznie — nie wszystkie naraz, bo osłabi to krzew.",
+        "Krok 3: usuń cienkie, słabe pędy wyrastające przy podstawie krzewu (tzw. wilki). Odciągają energię, nie owocują i zagęszczają środek krzewu.",
+        "Krok 4: przenieś uwagę na górę — skróć końcówki najdłuższych pędów o 1/4. To stymuluje rozgałęzianie i tworzenie większej liczby pąków kwiatowych.",
+        "Krok 5: oceń gęstość środka krzewu. Jeśli gałęzie krzyżują się i dotykają, usuń te rosnące do środka. W centrum krzewu powinno być dość miejsca, żeby przesunąć rękę."
+      ],
+      "bullets": [
+        "Zostaw 8–12 głównych pędów różnego wieku",
+        "Wytnij 1–3 najstarsze konary każdego roku",
+        "Usuń wilki i gałęzie krzyżujące się w centrum",
+        "Skróć końcówki o 1/4 dla lepszego rozgałęzienia"
+      ]
+    },
+    {
+      "heading": "Cięcie przez lata — harmonogram",
+      "paragraphs": [
+        "Rok 1: nie tniej — usuń tylko kwiaty. Krzew buduje korzenie.",
+        "Rok 2–3: lekkie cięcie formujące. Usuń słabe i krzyżujące się gałęzie. Nie tniej mocno.",
+        "Rok 4–5: pełne cięcie pielęgnacyjne. Zacznij systematycznie wycinać najstarsze konary.",
+        "Rok 6 i dalej: coroczna rutyna. Wytnij 1–3 stare konary, utrzymuj 8–12 pędów głównych, skracaj końcówki. Dobrze prowadzony krzew owocuje w ten sposób przez 25–30 lat."
+      ],
+      "table": {
+        "caption": "Cięcie borówki według wieku krzewu",
+        "headers": ["Wiek krzewu", "Cel cięcia", "Co usunąć"],
+        "rows": [
+          ["1 rok", "ukorzenienie i budowa pędów", "tylko pędy złamane; usuń kwiaty, żeby nie osłabiać krzewu"],
+          ["2-3 lata", "lekkie formowanie", "pędy słabe, chore, krzyżujące się i rosnące do środka"],
+          ["4-5 lat", "wejście w pełne owocowanie", "część najstarszych pędów, zagęszczenie środka, cienkie wilki"],
+          ["6 lat i więcej", "odmładzanie i stabilny plon", "1-3 najstarsze konary rocznie oraz wszystko, co ogranicza światło i przewiew"]
+        ]
+      },
+      "premiumBox": {
+        "title": "Najważniejsza zasada cięcia",
+        "body": "Nie próbuj odmłodzić starego krzewu jednym radykalnym cięciem. Lepiej usuwać najstarsze pędy stopniowo przez 2-3 sezony, żeby nie stracić całego plonu naraz."
+      }
+    }
+  ]
+}

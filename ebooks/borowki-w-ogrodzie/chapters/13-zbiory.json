@@ -1,0 +1,66 @@
+{
+  "title": "Zbiory",
+  "summary": "Sztuka zbiorów polega na tym, żeby zbierać we właściwym momencie, szybko i bez uszkadzania owoców. To brzmi prosto, ale ma swoje niuanse.",
+  "sections": [
+    {
+      "heading": "Kiedy borówka jest gotowa",
+      "image": "borowka-dojrzaly-owoc-detail.webp",
+      "imageCaption": "Dojrzałe owoce są równomiernie wybarwione i łatwo odchodzą od szypułki.",
+      "paragraphs": [
+        "Kolor to tylko wskazówka, nie wyrocznia. Borówka niebieskawieje kilka dni przed pełną dojrzałością — wiele odmian ma pełny kolor, ale wciąż jest twarda i kwaśna. Prawdziwa dojrzałość to kombinacja czterech cech: głęboki granatowoniebiesko-fioletowy kolor z wyraźnym woskowym nalotem, lekka miękkość przy delikatnym ucisku (nie musi być miękka jak śliwka — ma być lekko ugięta, nie twarda), słodki aromat wyczuwalny nawet bez rozgniatania, łatwe odpadanie od szypułki przy delikatnym przekręceniu.",
+        "Zbiory przy jednym krzewie rozłożone są na 3–6 tygodni — owoce dojrzewają stopniowo od góry krzewu i od zewnętrza grona. Zbieraj co 3–5 dni. Czekanie aż dojrzeją wszystkie jagody naraz oznacza, że pierwsze są już przejrzałe gdy ostatnie dopiero się zabarwiają."
+      ]
+    },
+    {
+      "heading": "Technika zbioru",
+      "paragraphs": [
+        "Zbieraj rano, gdy owoce są chłodne i twarde. Jagody zebrane w południu przy 25°C są ciepłe, miękną szybciej i mają znacznie krótszą trwałość.",
+        "Technika manualna: uchwyć gałązkę z owocem i kciukiem przesuwaj po gronach z góry na dół. Dojrzałe jagody wpadają do dłoni. Ta metoda (strip picking) jest szybka i mało uszkadzająca. Nie szarp ani nie wyrywaj — uszkodzone jagody psują się w ciągu doby.",
+        "Używaj płaskich, szerokich pojemników zamiast głębokich wiader. Jagody w głębokim wiadrze są gniecione ciężarem tych powyżej. Przekładanie do płytszych pojemników po zbiorze też uszkadza owoce. Skrzynki o głębokości 8–10 cm to optimum."
+      ],
+      "note": "Nie myj borówek przed zbiorem ani bezpośrednio po. Woskowy nalot to naturalna ochrona przed wilgocią i mikroorganizmami. Myj tuż przed spożyciem lub przetworzeniem."
+    },
+    {
+      "heading": "Zbiór pod przechowywanie",
+      "paragraphs": [
+        "Zalecenia technologiczne dla borówki podkreślają, że trwałość owoców zaczyna się jeszcze na krzewie. Do dłuższego przechowywania wybieraj owoce suche, jędrne, bez pęknięć, nalotu pleśni i uszkodzeń skórki. Owoce bardzo dojrzałe są świetne do jedzenia od razu, ale gorzej znoszą transport i lodówkę.",
+        "Największy błąd po zbiorze to zostawienie ciepłych owoców w misce na kilka godzin. Temperatura przyspiesza oddychanie owoców, mięknięcie i rozwój chorób przechowalniczych. Jeśli chcesz zachować jakość, schłodzenie jest tak samo ważne jak sam termin zbioru."
+      ],
+      "table": {
+        "caption": "Co zrobić z owocami po zbiorze",
+        "headers": ["Partia owoców", "Najlepsze przeznaczenie", "Pierwsza decyzja"],
+        "rows": [
+          ["suche, jędrne, równe owoce", "lodówka, mrożenie, podarowanie", "schłodzić szybko i nie myć"],
+          ["bardzo słodkie, miększe owoce", "jedzenie tego dnia, ciasto, koktajl", "nie mieszać z partią do przechowywania"],
+          ["pęknięte lub zgniecione owoce", "szybki przerób po przebraniu", "usunąć sztuki z nalotem i zapachem fermentacji"],
+          ["owoce po deszczu", "raczej szybkie użycie", "osuszyć na papierze i nie zamykać szczelnie od razu"]
+        ]
+      }
+    },
+    {
+      "heading": "Plony — czego się spodziewać",
+      "paragraphs": [
+        "Rok 1: zero (usuń kwiaty). Rok 2: 0,5–1 kg z krzewu. Rok 3: 1,5–3 kg. Rok 4: 3–5 kg. Rok 5 i kolejne: 5–8 kg z dojrzałego krzewu w optymalnych warunkach. Rekordowe plony dobrze prowadzonych krzewów Chandler sięgają 10–12 kg.",
+        "To są liczby dla dobrze pielęgnowanego krzewu na właściwej glebie. Przy błędach w pH, podlewaniu lub cięciu plony mogą być dwu-trzykrotnie niższe."
+      ],
+      "table": {
+        "caption": "Jak ocenić, czy plon jest dobry",
+        "headers": ["Sytuacja", "Co oznacza", "Co sprawdzić"],
+        "rows": [
+          ["młody krzew ma mało owoców", "to normalne w pierwszych latach", "czy buduje mocne przyrosty zamiast owocować za wcześnie"],
+          ["dużo kwiatów, mało owoców", "możliwy problem z zapylaniem lub przymrozkiem", "liczbę odmian, obecność owadów i pogodę w czasie kwitnienia"],
+          ["owoce są drobne", "krzew mógł mieć za mało wody lub zbyt dużo pędów", "wilgotność w czerwcu i lipcu oraz potrzebę cięcia"],
+          ["plon spada u starego krzewu", "krzew może być zagęszczony i wymagać odmłodzenia", "udział najstarszych pędów i dostęp światła do środka"],
+          ["owoce dojrzewają nierówno", "często wynika to z odmiany i pogody", "zbieraj partiami co kilka dni, nie czekaj na cały krzew"]
+        ]
+      },
+      "checklist": [
+        "zapisz orientacyjny plon z każdego krzewu po sezonie",
+        "notuj, która odmiana dojrzewa najwcześniej i najpóźniej",
+        "oddziel owoce do jedzenia, mrożenia i szybkiego przerobu",
+        "po słabym plonie sprawdź pH, podlewanie i cięcie, zanim zmienisz nawóz",
+        "jeśli krzew jest młody, oceniaj głównie siłę przyrostów, nie kilogramy owoców"
+      ]
+    }
+  ]
+}

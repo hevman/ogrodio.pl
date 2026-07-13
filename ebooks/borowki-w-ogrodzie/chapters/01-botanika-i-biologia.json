@@ -1,0 +1,43 @@
+{
+  "title": "Botanika i biologia borówki",
+  "summary": "Żeby dobrze uprawiać borówkę, warto zrozumieć jak rośnie, jak kwitnie i co decyduje o tym, że jeden krzew owocuje obficie przez trzydzieści lat, a drugi ledwo wegetuje.",
+  "sections": [
+    {
+      "heading": "Skąd pochodzi borówka amerykańska",
+      "paragraphs": [
+        "Borówka wysoka, zwana amerykańską (Vaccinium corymbosum L.), pochodzi ze wschodnich wybrzeży Ameryki Północnej. Indianie zbierali jej owoce od tysięcy lat, ale systematyczna uprawa ogrodnicza zaczęła się dopiero na początku XX wieku. W 1908 roku botaniczka Elizabeth Coleman White i naukowiec Frederick Coville jako pierwsi wyselekcjonowali odmiany zdatne do uprawy towarowej. Dziś borówka wysoka to jedna z najważniejszych roślin jagodowych świata, uprawiana na wszystkich kontynentach z wyjątkiem Antarktydy.",
+        "Do Europy trafiła w latach trzydziestych XX wieku. W Polsce pierwsze plantacje towarowe powstały w latach osiemdziesiątych, ale prawdziwy boom nastąpił po roku 2000. Dziś Polska jest jednym z największych producentów borówki w Unii Europejskiej, a popyt wciąż rośnie szybciej niż podaż."
+      ]
+    },
+    {
+      "heading": "Jak zbudowany jest krzew",
+      "paragraphs": [
+        "Borówka wysoka to wieloletni krzew liściasty osiągający 1,5–2,5 m wysokości. Wyrasta z grubego, zdrewniałego systemu korzeniowego, który z wiekiem zagłębia się do 60–80 cm. Korzenie są cienkie, włókniste i pozbawione włośników — to kluczowa informacja, bo oznacza, że roślina pobiera wodę i składniki pokarmowe wyłącznie przez symbiozę z grzybami mikoryzowymi. Bez odpowiedniego środowiska glebowego ta symbioza nie działa i krzew głoduje, nawet jeśli w glebie jest dość składników.",
+        "Pędy dzielimy na stare (wieloletnie szkieletowe konary), pędy owocujące (1–3 letnie) oraz jednoroczne przyrosty wegetatywne. Owoce zawiązują się na pędach z poprzedniego roku, na tzw. pąkach kwiatowych, które tworzą się latem i dojrzewają jesienią. To dlatego chłodne, suche lato bez suszy daje obfite kwitnienie w kolejnym roku.",
+        "Liście są eliptyczne, ciemnozielone latem i spektakularne jesienią — borówka to jedna z niewielu roślin jagodowych, która barwi się na intensywną czerwień i pomarańcz, co czyni ją równie wartościową ozdobnie jak użytkowo."
+      ]
+    },
+    {
+      "heading": "Kwitnienie i zapylanie",
+      "paragraphs": [
+        "Borówka kwitnie od końca kwietnia do połowy maja, zależnie od odmiany i regionu. Kwiaty są dzwonkowate, białe lub różowawe, zebrane w grona. Ich budowa sprawia, że pszczoły miodne mają utrudniony dostęp do nektaru — znacznie skuteczniejszymi zapylaczami są trzmiele i pszczoły samotnice, które potrafią wibrować kwiaty i wytrząsać z nich pyłek (tzw. buzz pollination).",
+        "Borówka jest rośliną samopylną, ale owocowanie z jednym krzewem jest wyraźnie słabsze. Przy dwóch lub więcej odmianach o zbliżonym terminie kwitnienia plony rosną o 20–50%, a owoce są większe i dojrzewają bardziej równomiernie. To nie jest mit marketingowy, lecz udokumentowany efekt krzyżowego zapylenia."
+      ],
+      "note": "Jeśli w pobliżu Twojego ogrodu są trzmieliska lub dzikie pszczoły samotnice, masz naturalną przewagę. Możesz ją wzmocnić, sadząc wokół borówek rośliny wabące owady — facelię, macierzankę lub lawendę."
+    },
+    {
+      "heading": "Rytm roczny — co krzew robi przez cały rok",
+      "paragraphs": [
+        "Styczeń–luty: spoczynek zimowy. Krzew jest odporny na mróz, ale pąki kwiatowe mogą przemarzać przy -25°C lub przy gwałtownych wahaniach temperatury po odwilży. Marzec: przebudzenie, nabrzmiewanie pąków. Dobry czas na cięcie i nawożenie. Kwiecień–maj: kwitnienie. Unikaj oprysków chemicznych, które szkodzą zapylaczom. Czerwiec: zawiązywanie owoców, intensywny wzrost pędów. Lipiec–sierpień: dojrzewanie (zależnie od odmiany). Sierpień–wrzesień: wzrost pąków na przyszły rok i gromadzenie zapasów. Październik–listopad: przebarwienie liści i opadanie. Grudzień: spoczynek."
+      ],
+      "bullets": [
+        "Marzec: cięcie i pierwsze nawożenie",
+        "Kwiecień–maj: kwitnienie — nie opryskuj",
+        "Czerwiec: podlewanie krytyczne",
+        "Lipiec–sierpień: zbiory, zależnie od odmiany",
+        "Sierpień: drugie nawożenie (ostatnie w sezonie)",
+        "Jesień: mulczowanie i przygotowanie do zimy"
+      ]
+    }
+  ]
+}

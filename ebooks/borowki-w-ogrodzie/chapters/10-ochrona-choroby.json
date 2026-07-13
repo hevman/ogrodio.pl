@@ -1,0 +1,70 @@
+{
+  "title": "Choroby — rozpoznanie i leczenie",
+  "summary": "Borówka jest stosunkowo odporna, ale kilka chorób grzybowych może w sprzyjających warunkach poważnie ograniczyć plony. Kluczem jest wczesne rozpoznanie i działanie zapobiegawcze.",
+  "sections": [
+    {
+      "heading": "Najpierw obserwacja, potem decyzja",
+      "paragraphs": [
+        "W integrowanej ochronie nie zaczyna się od oprysku, tylko od lustracji krzewów. Obejrzyj pąki, kwiaty, młode pędy, liście, owoce i ziemię pod krzewem. Dopiero po rozpoznaniu objawu decydujesz, czy wystarczy cięcie, higiena i poprawa przewiewu, czy problem wymaga konsultacji i środka ochrony roślin.",
+        "Dla ogrodu przydomowego najważniejsze są trzy pytania: czy objaw się rozszerza, czy dotyczy wielu krzewów i czy pojawia się w warunkach sprzyjających chorobie, na przykład po długich opadach albo przy bardzo gęstym krzewie."
+      ],
+      "table": {
+        "caption": "Prosta lustracja chorób w ogrodzie",
+        "headers": ["Co sprawdzić", "Kiedy", "Po co"],
+        "rows": [
+          ["mumie owoców pod krzewem", "jesienią, zimą i przed ruszeniem wegetacji", "ogranicza źródło infekcji na kolejny sezon"],
+          ["brązowiejące kwiaty i młode pędy", "kwiecień-maj", "odróżnienie przymrozku od infekcji"],
+          ["szary nalot na owocach i kwiatach", "po deszczach i przy gęstym krzewie", "szybkie usunięcie chorych owoców"],
+          ["plamy, pęknięcia i zasychanie pędów", "podczas cięcia i po zimie", "wycięcie chorego pędu zanim osłabi cały krzew"],
+          ["mozaiki i nietypowe przebarwienia liści", "od wiosny do lata", "wyłapanie problemów, których nie naprawi nawóz"]
+        ]
+      }
+    },
+    {
+      "heading": "Zasada integrowanej ochrony",
+      "paragraphs": [
+        "Oficjalne metodyki ochrony borówki kładą nacisk na obserwację, profilaktykę, higienę uprawy i ochronę organizmów pożytecznych. W ogrodzie oznacza to: nie opryskuj profilaktycznie, nie zagęszczaj krzewu, nie zostawiaj porażonych owoców i nie ignoruj podlewania oraz pH, bo osłabiony krzew choruje łatwiej.",
+        "Ochrona chemiczna jest ostatnim krokiem, nie skrótem. Jeśli jest potrzebna, wybieraj wyłącznie preparat z aktualną etykietą dla borówki i konkretnej choroby. Etykieta decyduje o dawce, terminie, karencji i bezpieczeństwie zapylaczy."
+      ],
+      "checklist": [
+        "najpierw rozpoznaj objaw, nie zgaduj",
+        "usuń chore owoce i pędy z ogrodu",
+        "tnij tak, żeby krzew szybko obsychał po deszczu",
+        "nie podlewaj po liściach i owocach",
+        "przed środkiem ochrony sprawdź aktualną etykietę MRiRW"
+      ]
+    },
+    {
+      "heading": "Mumifikacja jagód",
+      "paragraphs": [
+        "Sprawca: Monilinia vaccinii-corymbosi. To jedna z najpoważniejszych chorób borówki w Polsce. Grzyb zimuje w mumifikowanych jagodach leżących na ziemi lub pozostałych na krzewie. Wiosną zarodzniki infekują kwiaty — zainfekowane kwiaty brązowieją i więdną (wygląda to jak przemrożenie). Następnie choroba przenosi się na młode pędy, które zasychają i wyginają się w charakterystyczny sposób. Latem zainfekowane jagody marszczą się i twardnieją, zamieniając się w pomarszczone mumie.",
+        "Zwalczanie: zbieraj i niszcz wszystkie mumifikowane owoce przed zimą — to podstawowy zabieg ograniczający źródło infekcji. Przy dużym nasileniu ochronę chemiczną dobieraj wyłącznie według aktualnej etykiety środka zarejestrowanego dla borówki i danej choroby. Ważna jest cyrkulacja powietrza — gęsty, nieprzycięty krzew sprzyja chorobie."
+      ]
+    },
+    {
+      "heading": "Szara pleśń",
+      "paragraphs": [
+        "Sprawca: Botrytis cinerea. Klasyczny grzyb wilgotnych sezonów. Atakuje kwiaty, pędy i dojrzewające owoce podczas deszczowej pogody. Charakterystyczny objaw to szarobrązowy, pylący nalot — zarodniki grzyba widoczne gołym okiem. Zainfekowane owoce miękną i gniją, zanim zdążą dojrzeć.",
+        "Zapobieganie jest ważniejsze niż leczenie: odpowiednie cięcie (dobra cyrkulacja powietrza), unikanie zraszania liści i owoców przy podlewaniu, zbieranie wszystkich padłych owoców. Jeśli szara pleśń pojawia się co roku, rozważ wybór odmian o luźnej budowie grona (Chandler, Draper) zamiast gęstych (Duke).",
+        "Przy silnym nasileniu sprawdź aktualne możliwości ochrony w rejestrze środków ochrony roślin i kieruj się etykietą konkretnego preparatu. Nie wykonuj zabiegów w czasie oblotu zapylaczy i nie traktuj oprysku jako zamiennika cięcia oraz przewiewnego prowadzenia krzewu."
+      ]
+    },
+    {
+      "heading": "Rak pędów i zgorzel",
+      "paragraphs": [
+        "Sprawcy: Fusicoccum putrefaciens i Phomopsis vaccinii. Objawy: ciemnienie i marszczenie kory na pędach, czerwonawobrązowe plamy na łodygach, zasychanie całych gałęzi. Najczęściej pojawia się na pędach osłabionych mrozem, suszą lub uszkodzeniami mechanicznymi.",
+        "Leczenie: wytnij chore pędy z marginesem 5–10 cm zdrowego drewna. Narzędzia bezwzględnie odkażaj między cięciami. Ranę możesz zabezpieczyć preparatem na bazie miedzi. Pędów ze zgorzelą nie kompostuj — niszcz (spalaj lub wyrzucaj do odpadów)."
+      ]
+    },
+    {
+      "heading": "Wirusy — zagrożenie, którego nie widać",
+      "image": "borowka-mozaika-wirusowa-cover.webp",
+      "imageCaption": "Mozaikowe przebarwienia liści mogą wskazywać na problem wirusowy.",
+      "paragraphs": [
+        "Blueberry scorch virus (BSV) i inne wirusy borówki są mniej znane w Polsce, ale stopniowo się rozprzestrzeniają, przywleczone z sadzonkami importowanymi. Objawy: nagłe brązowienie kwiatów i liści wiosną (wygląda jak przemrożenie, ale bez ujemnych temperatur), mozaikowe wzory na liściach, zahamowanie wzrostu.",
+        "Wirusów nie można wyleczyć. Zainfekowany krzew trzeba usunąć i zniszczyć. Profilaktyka: kupuj sadzonki z certyfikowanych szkółek z atestem fitosanitarnym. Nie przeszczepiaj materiału z nieznanego źródła."
+      ],
+      "note": "Jeśli widzisz objawy, których nie potrafisz jednoznacznie zidentyfikować — zrób zdjęcia i skonsultuj się z doradcą ogrodniczym lub wyślij próbkę do instytutu badań roślin. Błędna diagnoza i niewłaściwe leczenie to najczęstszy błąd przy chorobach borówki."
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "title": "Sadzenie",
+  "summary": "Pierwsze tygodnie po posadzeniu decydują o tym, czy krzew szybko się zakorzenI i zacznie rosnąć, czy będzie przez rok odrabiał straty. Szczegóły tutaj mają znaczenie.",
+  "sections": [
+    {
+      "heading": "Najlepszy termin",
+      "paragraphs": [
+        "Borówkę można sadzić wiosną lub jesienią. Sadzenie wiosenne — od momentu gdy gleba odmarzła do połowy maja — jest bezpieczniejsze, bo roślina ma całe lato na ukorzenienie przed zimą. Sadzenie jesienne (październik) jest równie skuteczne jeśli wykonamy je odpowiednio wcześnie, ale wymaga ochrony na zimę w pierwszym roku.",
+        "Unikaj sadzenia podczas suszy i upałów powyżej 22°C. Najlepsze są chłodne, pochmurne dni. Jeśli sadzisz wiosną podczas ciepłej, suchej aury, zasłoń sadzonki agrowłókniną na pierwsze dwa tygodnie — zmniejszy to parowanie i ułatwi aklimatyzację."
+      ]
+    },
+    {
+      "heading": "Jak wybrać sadzonkę",
+      "paragraphs": [
+        "Kupuj sadzonki z certyfikowanych szkółek, najlepiej w doniczkach 2–5 litrów z dobrze wykorzeloną bryłą. Większa bryła to szybsze ukorzenienie — sadzonka 3-letnia zacznie owocować rok wcześniej niż 1-roczna.",
+        "Sprawdź korzenie: powinny być białe lub kremowe, bez brązowych plam gnilnych. Unikaj sadzonek z obnażonymi, wysuszonymi korzeniami lub sprzedawanych luźno bez donicy. Liście powinny być zielone i zdrowe — bez żółtych plam, białego nalotu czy zasychających końcówek."
+      ],
+      "note": "Dwuletnia sadzonka z dobrej szkółki kosztuje dwukrotnie więcej niż jednoroczna, ale owocuje rok wcześniej i jest bardziej odporna na stres przy sadzeniu. To jedna z nielicznych decyzji ogrodniczych, w której warto zapłacić więcej."
+    },
+    {
+      "heading": "Przygotowanie dołu i technika sadzenia",
+      "image": "borowka-nowe-przyrosty.webp",
+      "imageCaption": "Zdrowe, zielone przyrosty po posadzeniu są sygnałem, że krzew dobrze się przyjmuje.",
+      "paragraphs": [
+        "Wykop dół o średnicy 50–60 cm i głębokości 40 cm. Wykopaną ziemię zastąp w całości przygotowanym podłożem (torf + piasek + kompost) opisanym w rozdziale o glebie. Nie sądź w czystej rodzimej ziemi ogrodowej — nawet po zakwaszeniu ma złą strukturę dla korzeni borówki.",
+        "Przed posadzeniem namocz bryłę korzeniową w wiadrze wody przez 20–30 minut. Jeśli korzenie są mocno skręcone lub zwinięte, delikatnie je rozplątaj palcami — zwinięte korzenie hamują wzrost przez kilka lat.",
+        "Ustaw sadzonkę tak, by korona (miejsce gdzie pędy wychodzą z korzeni) znajdowała się 2–3 cm poniżej poziomu gruntu. Zasyp podłożem, lekko ugniatając warstwami, by nie zostawić kieszeni powietrznych. Obficie podlej — 10 litrów na krzew. Od razu nałóż mulcz z kory sosnowej, 10–15 cm, pozostawiając 5 cm wolne przy pędach."
+      ],
+      "bullets": [
+        "Dół: 50–60 cm szerokości, 40 cm głębokości",
+        "Wypełnienie: podłoże torfowo-piaskowe, nie ziemia ogrodowa",
+        "Namocz bryłę 20–30 min przed sadzeniem",
+        "Posadź 2–3 cm głębiej niż w doniczce",
+        "Podlej 10 litrów, nałóż mulcz 10–15 cm"
+      ]
+    },
+    {
+      "heading": "Pierwsze dwa miesiące",
+      "paragraphs": [
+        "Przez pierwsze 8 tygodni sprawdzaj wilgotność podłoża co 2–3 dni. Pod mulczem powinna być stale lekko wilgotna — ani sucha ani przemoczona. Korzenie borówki są w tym czasie bardzo wrażliwe na stres wodny.",
+        "Usuń wszystkie kwiatostany które pojawią się w pierwszym roku. To jeden z najtrudniejszych momentów w uprawie — kilkanaście jagód wydaje się niewinne, ale każdy owoc odbiera energię krzewowi potrzebną do budowy systemu korzeniowego. Krzew, który owocuje w pierwszym roku, jest słabszy przez kolejne dwa sezony.",
+        "Nie nawóź w pierwszym roku, chyba że liście mają wyraźne objawy niedoboru (żółknienie). Zbyt wczesne nawożenie azotowe powoduje bujny wzrost liści kosztem korzeni."
+      ],
+      "checklist": [
+        "pierwszy tydzień: sprawdzaj wilgotność codziennie",
+        "pierwszy miesiąc: podlewaj małymi dawkami, ale regularnie",
+        "po dwóch tygodniach: sprawdź, czy ściółka nie dotyka pędów",
+        "przy upałach: cieniuj młody krzew przez kilka dni",
+        "w pierwszym roku: usuwaj kwiaty i nie oceniaj rośliny po plonie"
+      ],
+      "premiumBox": {
+        "title": "Dobry znak po posadzeniu",
+        "body": "Jeżeli po kilku tygodniach liście pozostają jędrne, a krzew wypuszcza nowe przyrosty, najczęściej oznacza to, że wilgotność i podłoże są dobrze dobrane."
+      }
+    }
+  ]
+}

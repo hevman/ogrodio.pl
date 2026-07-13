@@ -1,0 +1,18 @@
+{
+  "title": "Sadzenie",
+  "summary": "Przykład rozdziału roboczego, który później można wzbogacić zdjęciami.",
+  "sections": [
+    {
+      "heading": "Rozstawa",
+      "paragraphs": [
+        "Sadzonki warto rozmieścić tak, aby liście szybko obsychały po deszczu. Zbyt gęste sadzenie utrudnia pielęgnację i zwiększa ryzyko chorób grzybowych.",
+        "W sekcji zdjęć dla tego e-booka można dodać pliki do folderu images i podpiąć je polem image w JSON-ie rozdziału."
+      ],
+      "bullets": [
+        "zostaw miejsce na rozrastanie się rozet",
+        "nie zakopuj serca sadzonki",
+        "po posadzeniu podlej i uzupełnij ściółkę"
+      ]
+    }
+  ]
+}

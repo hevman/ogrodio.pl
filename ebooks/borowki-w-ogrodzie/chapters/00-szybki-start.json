@@ -1,0 +1,94 @@
+{
+  "title": "Szybki start: plan bez pomyłek",
+  "summary": "Najważniejsze decyzje, zakupy i kontrole zebrane w jednym miejscu. Ten rozdział pomaga zacząć praktycznie, zanim wejdziesz w szczegóły uprawy.",
+  "sections": [
+    {
+      "heading": "Obietnica tego poradnika",
+      "paragraphs": [
+        "Borówka nie jest trudna, jeśli od początku kontrolujesz trzy rzeczy: kwaśne podłoże, wilgotność i światło. Większość problemów z borówkami nie wynika z braku nawozu, tylko z błędnego startu: zbyt wysokiego pH, przesuszenia korzeni albo posadzenia krzewu w zwykłej ziemi ogrodowej.",
+        "Ten e-book prowadzi Cię przez decyzje w kolejności, która naprawdę ma znaczenie: najpierw sprawdzasz warunki, potem przygotowujesz stanowisko, sadzisz, podlewasz, ściółkujesz i dopiero na końcu myślisz o nawożeniu oraz cięciu."
+      ],
+      "premiumBox": {
+        "title": "Cel praktyczny",
+        "body": "Po przeczytaniu masz wiedzieć, co kupić, kiedy działać i jak rozpoznać, czy krzew potrzebuje wody, zakwaszenia, cięcia czy interwencji przy chorobie."
+      }
+    },
+    {
+      "heading": "Lista zakupów przed sadzeniem",
+      "paragraphs": [
+        "Nie kupuj najpierw sadzonek, jeśli nie masz przygotowanego miejsca. Borówka źle znosi przypadkowe sadzenie, a przesuszone albo zalane korzenie potrafią spowolnić krzew na cały sezon."
+      ],
+      "checklist": [
+        "minimum 2 odmiany borówki o podobnym terminie kwitnienia",
+        "kwaśny torf lub gotowe podłoże do borówek",
+        "kora sosnowa albo zrębki iglaste do ściółkowania",
+        "miernik pH lub zestaw kroplowy do badania gleby",
+        "siarka ogrodnicza, jeśli pH gleby jest za wysokie",
+        "linia kroplująca albo konewka do regularnego podlewania",
+        "sekator do cięcia sanitarnego i odmładzającego",
+        "siatka przeciw ptakom na czas dojrzewania owoców"
+      ]
+    },
+    {
+      "heading": "Test pH krok po kroku",
+      "paragraphs": [
+        "pH jest najważniejszym parametrem w uprawie borówki. Krzew może mieć wodę, nawóz i słońce, ale przy zbyt wysokim pH nie pobierze żelaza i zacznie żółknąć."
+      ],
+      "table": {
+        "caption": "Interpretacja wyniku pH przed sadzeniem borówki",
+        "headers": ["Wynik pH", "Co oznacza", "Co zrobić"],
+        "rows": [
+          ["4,0-4,8", "bardzo dobre warunki dla borówki", "utrzymuj kwaśną ściółkę i podlewaj regularnie"],
+          ["4,9-5,5", "akceptowalne, ale wymaga kontroli", "dodaj kwaśne podłoże i ściółkuj korą sosnową"],
+          ["5,6-6,5", "za wysoko dla stabilnej uprawy", "zakwaś glebę siarką z wyprzedzeniem lub sadź w przygotowanym dołku"],
+          ["powyżej 6,5", "duże ryzyko chlorozy i słabego wzrostu", "rozważ uprawę w pojemniku albo pełną wymianę podłoża"]
+        ]
+      },
+      "checklist": [
+        "pobierz próbkę z kilku miejsc, nie tylko z jednego punktu",
+        "nie badaj świeżo po nawożeniu ani bezpośrednio po ulewnym deszczu",
+        "zapisz wynik i wróć do pomiaru po 6-8 tygodniach od zakwaszania"
+      ]
+    },
+    {
+      "heading": "Kalendarz prac w skrócie",
+      "paragraphs": [
+        "Ten kalendarz jest szybkim planem sezonu. Szczegóły znajdziesz w kolejnych rozdziałach, ale już tutaj widać, że borówka wymaga kilku konkretnych kontroli, a nie codziennego kombinowania."
+      ],
+      "table": {
+        "caption": "Najważniejsze prace przy borówce w ciągu roku",
+        "headers": ["Termin", "Co zrobić", "Po co"],
+        "rows": [
+          ["luty-marzec", "cięcie sanitarne i odmładzające", "usunąć stare, chore i zagęszczające pędy"],
+          ["marzec-kwiecień", "kontrola pH i uzupełnienie ściółki", "utrzymać kwaśne, wilgotne podłoże"],
+          ["kwiecień-maj", "sadzenie nowych krzewów", "dać korzeniom czas na start przed upałami"],
+          ["maj-czerwiec", "podlewanie w czasie kwitnienia i zawiązywania owoców", "ograniczyć opadanie kwiatów i drobnienie jagód"],
+          ["lipiec-sierpień", "zbiory partiami i ochrona przed ptakami", "zbierać owoce w pełnej dojrzałości"],
+          ["wrzesień-październik", "ocena kondycji liści i pędów", "wyłapać chlorozy, suszę i choroby przed kolejnym sezonem"],
+          ["listopad", "uzupełnienie ściółki przed zimą", "ochronić płytki system korzeniowy"]
+        ]
+      }
+    },
+    {
+      "heading": "Szybka diagnoza problemów",
+      "paragraphs": [
+        "Jeśli krzew wygląda źle, najpierw nazwij objaw. Dopiero potem działaj. Przypadkowe nawożenie często pogarsza problem, szczególnie gdy przyczyną jest pH albo podlewanie."
+      ],
+      "table": {
+        "caption": "Objaw, najbardziej prawdopodobna przyczyna i pierwsza reakcja",
+        "headers": ["Objaw", "Najczęstsza przyczyna", "Pierwszy ruch"],
+        "rows": [
+          ["żółte liście z zielonymi nerwami", "zbyt wysokie pH i blokada żelaza", "zmierz pH, zakwaś podłoże, nie dosypuj przypadkowego nawozu"],
+          ["krzew stoi w miejscu", "słabe korzenie, przesuszenie albo zła gleba", "sprawdź wilgotność na głębokości korzeni i strukturę podłoża"],
+          ["kwitnie, ale nie owocuje", "brak zapylenia, przymrozki lub stres wodny", "dosadź drugą odmianę i kontroluj podlewanie w maju"],
+          ["owoce są drobne", "za dużo starych pędów albo susza w czerwcu", "zaplanować cięcie i utrzymać wilgotność podczas dorastania owoców"],
+          ["owoce gniją przed zbiorem", "zbyt gęsty krzew, wilgoć i choroby grzybowe", "popraw przewiew, usuń porażone owoce i ogranicz zraszanie liści"]
+        ]
+      },
+      "premiumBox": {
+        "title": "Zasada ratunkowa",
+        "body": "Gdy nie wiesz, co się dzieje, nie zaczynaj od nawozu. Zacznij od pH, wilgotności i obejrzenia młodych liści oraz owoców."
+      }
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "title": "Podlewanie",
+  "summary": "Borówka ma płytki system korzeniowy i bardzo źle znosi przesuszenie. Dobre podlewanie nie polega na częstym moczeniu liści, tylko na stabilnej wilgotności kwaśnego podłoża.",
+  "sections": [
+    {
+      "heading": "Dlaczego woda decyduje o plonie",
+      "paragraphs": [
+        "Korzenie borówki pracują płytko, dlatego krzew szybko reaguje na przesuszenie górnej warstwy podłoża. Najbardziej wrażliwy okres przypada na kwitnienie, zawiązywanie owoców i ich dorastanie.",
+        "Badania z nawadnianiem kroplowym odmian Spartan i Patriot pokazały, że uzupełnianie wody może wyraźnie zwiększać plon oraz masę owoców. Wniosek dla ogrodu jest prosty: susza w czerwcu i lipcu kosztuje Cię nie tylko część plonu, ale też wielkość jagód."
+      ],
+      "premiumBox": {
+        "title": "Wniosek praktyczny",
+        "body": "Jeżeli masz zainwestować w jeden element techniczny przy borówkach, wybierz linię kroplującą i grubą ściółkę. To daje większy efekt niż przypadkowe dosypywanie nawozów."
+      }
+    },
+    {
+      "heading": "Plan podlewania w sezonie",
+      "paragraphs": [
+        "Podlewaj rzadziej, ale dokładniej. Celem jest wilgotna strefa korzeni, nie mokra powierzchnia gleby. W upały sprawdzaj wilgotność pod ściółką palcem albo prostym wilgotnościomierzem."
+      ],
+      "table": {
+        "caption": "Orientacyjny plan podlewania borówki w ogrodzie",
+        "headers": ["Okres", "Priorytet", "Jak działać"],
+        "rows": [
+          ["marzec-kwiecień", "start wegetacji i sadzenie", "utrzymuj lekką wilgotność, nie zalewaj zimnej gleby"],
+          ["maj", "kwitnienie i zawiązywanie owoców", "nie dopuszczaj do przesuszenia; podlewaj przy gruncie"],
+          ["czerwiec-lipiec", "dorastanie owoców", "najważniejszy okres; podlewaj regularnie i obficie"],
+          ["sierpień", "zbiory i koniec silnego wzrostu", "utrzymuj wilgoć, ale ogranicz zalewanie po zbiorach"],
+          ["wrzesień-październik", "przygotowanie do spoczynku", "podlewaj tylko przy suszy, uzupełnij ściółkę"]
+        ]
+      }
+    },
+    {
+      "heading": "Jak podlewać technicznie",
+      "paragraphs": [
+        "Najlepsze jest nawadnianie kroplowe prowadzone pod ściółką. Woda trafia tam, gdzie są korzenie, liście pozostają suche, a ryzyko chorób grzybowych jest mniejsze.",
+        "Jeśli podlewasz konewką, lej powoli wokół krzewu, nie po liściach. Po podlaniu odgarnij ściółkę i sprawdź, czy wilgoć doszła głębiej niż tylko na powierzchnię."
+      ],
+      "checklist": [
+        "podlewaj przy gruncie, nie po liściach",
+        "utrzymuj 5-8 cm ściółki z kory lub zrębków iglastych",
+        "w upały sprawdzaj wilgotność pod ściółką, nie samą powierzchnię",
+        "unikaj długiego stania wody przy korzeniach",
+        "do małej uprawy zbieraj deszczówkę, jeśli masz taką możliwość"
+      ]
+    },
+    {
+      "heading": "Objawy złego podlewania",
+      "paragraphs": [
+        "Przesuszenie daje zwijanie liści, więdnięcie końcówek pędów i drobnienie owoców. Nadmiar wody częściej objawia się żółknięciem, słabym wzrostem i gnilnym zapachem podłoża.",
+        "Nie reaguj automatycznie nawozem. Najpierw sprawdź wilgotność i pH, bo objawy niedoborów często zaczynają się od problemów z wodą albo zbyt wysokiego pH."
+      ]
+    }
+  ]
+}

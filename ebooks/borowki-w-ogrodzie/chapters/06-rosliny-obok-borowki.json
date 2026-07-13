@@ -1,0 +1,57 @@
+{
+  "title": "Co sadzić obok borówki",
+  "summary": "Dobre sąsiedztwo pomaga utrzymać kwaśne, wilgotne i spokojne stanowisko. Złe sąsiedztwo konkuruje o wodę, podnosi pH albo utrudnia pielęgnację.",
+  "sections": [
+    {
+      "heading": "Najważniejsza zasada sąsiedztwa",
+      "paragraphs": [
+        "Borówka najlepiej czuje się obok roślin, które lubią kwaśne lub lekko kwaśne podłoże, nie wymagają wapnowania i nie zabierają jej agresywnie wody. To wyklucza część popularnych warzyw oraz roślin, które regularnie nawozi się obornikiem, kompostem zasadowym albo wapnem.",
+        "Nie chodzi o to, żeby każdą przestrzeń pod krzewem obsadzić. Borówka ma płytki, wrażliwy system korzeniowy. Najbezpieczniejszym sąsiedztwem bezpośrednio pod krzewem jest ściółka z kory, igliwia albo zrębków z drzew iglastych."
+      ],
+      "note": "Jeżeli masz wątpliwość, zostaw pod borówką samą ściółkę. Puste, dobrze ściółkowane miejsce jest dla borówki lepsze niż efektowna rabata, która zabiera wodę i wymusza inne nawożenie."
+    },
+    {
+      "heading": "Rośliny, które pasują do borówki",
+      "paragraphs": [
+        "Najlepiej sprawdzają się rośliny wrzosowate i leśne, bo mają podobne wymagania. Możesz sadzić je w pobliżu, ale nie wciskaj ich bezpośrednio w bryłę korzeniową borówki.",
+        "Dobre sąsiedztwo ma też funkcję praktyczną: utrzymuje spójny charakter kwaśnej rabaty, przyciąga zapylacze albo pozwala zagospodarować obrzeże bez ryzyka dla krzewów."
+      ],
+      "table": {
+        "caption": "Rośliny do kwaśnej rabaty z borówką",
+        "headers": ["Grupa", "Przykłady", "Jak sadzić"],
+        "rows": [
+          ["krzewinki", "wrzosy, wrzośce, żurawina", "na obrzeżach, w tej samej kwaśnej strefie"],
+          ["rośliny leśne", "borówka brusznica, poziomka leśna", "raczej luźno, bez przekopywania pod krzewem"],
+          ["zioła i rośliny dla owadów", "macierzanka, facelia w pobliżu, lawenda na suchszym brzegu", "nie w mokrej kwaśnej misie borówki"],
+          ["krzewy ozdobne kwasolubne", "azalie, rododendrony, pierisy", "w większym oddaleniu, z osobną przestrzenią korzeniową"],
+          ["drzewa i iglaki", "sosna jako źródło igliwia, nie jako bliski konkurent", "daleko od korzeni, bez zacieniania borówki"]
+        ]
+      }
+    },
+    {
+      "heading": "Czego nie sadzić obok borówki",
+      "paragraphs": [
+        "Unikaj roślin, które wymagają wapnowania, silnego nawożenia azotem azotanowym albo częstego przekopywania. Borówka nie lubi naruszania korzeni i źle reaguje na podnoszenie pH.",
+        "Szczególnie ostrożnie podchodź do warzywnika prowadzonego tuż przy borówkach. Pomidory, kapustne, większość ziół śródziemnomorskich i rośliny lubiące zasadowe podłoże mają inne potrzeby niż borówka."
+      ],
+      "checklist": [
+        "nie wapnuj rabaty, na której rośnie borówka",
+        "nie sadź roślin wymagających częstego przekopywania",
+        "nie dosypuj obornika pod borówki",
+        "nie obsadzaj ciasno podstawy krzewu",
+        "nie pozwól, żeby wysokie rośliny zacieniały borówkę od południa"
+      ]
+    },
+    {
+      "heading": "Układ rabaty w praktyce",
+      "paragraphs": [
+        "Najprostszy układ to pas borówek w rozstawie dobranej do odmiany, pod krzewami gruba ściółka, a dopiero przed nimi lub za nimi niższe rośliny kwaśnolubne. Dzięki temu masz dostęp do cięcia, podlewania, pomiaru pH i zbiorów.",
+        "Jeśli chcesz efekt ozdobny, zrób kwaśną rabatę warstwowo: z tyłu borówki, z boku azalie lub pierisy, z przodu wrzosy i żurawina. Nie mieszaj tego z klasycznym warzywnikiem wymagającym innego nawożenia."
+      ],
+      "premiumBox": {
+        "title": "Rabata, która pomaga uprawie",
+        "body": "Najlepsze sąsiedztwo borówki nie jest ozdobą na siłę. Ma utrzymać kwaśne środowisko, nie zabierać wody i zostawić Ci wygodny dostęp do krzewu."
+      }
+    }
+  ]
+}

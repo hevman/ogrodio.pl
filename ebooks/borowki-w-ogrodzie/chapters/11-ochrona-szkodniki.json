@@ -1,0 +1,69 @@
+{
+  "title": "Szkodniki — rozpoznanie i metody zwalczania",
+  "summary": "Szkodniki borówki to nie tylko owady widoczne na owocu. Niektóre z nich, jak Drosophila suzukii, są podstępne — szkody widać dopiero po zbiorach.",
+  "sections": [
+    {
+      "heading": "Monitoring zamiast przypadkowego oprysku",
+      "paragraphs": [
+        "W małym ogrodzie najskuteczniejszym początkiem ochrony jest regularna lustracja. Raz w tygodniu obejrzyj wierzchołki pędów, dolną stronę liści, pąki kwiatowe, dojrzewające owoce i ziemię pod krzewem. W czasie kwitnienia i dojrzewania warto robić to częściej, bo wtedy strata plonu powstaje najszybciej.",
+        "Metodyka integrowanej ochrony podkreśla, że decyzja o zabiegu powinna wynikać z obserwacji, fazy rozwoju rośliny, liczebności szkodnika i obecności organizmów pożytecznych. W praktyce działkowca oznacza to: najpierw sprawdź, czy problem naprawdę jest, a potem wybierz najłagodniejszą skuteczną metodę."
+      ],
+      "table": {
+        "caption": "Szybka lustracja szkodników borówki",
+        "headers": ["Objaw", "Co podejrzewać", "Pierwsze działanie"],
+        "rows": [
+          ["mszyce na młodych przyrostach", "kolonie mszyc", "zgnieść małe kolonie, wspierać biedronki, nie pryskać w ciemno"],
+          ["zwijające się liście i oprzęd", "zwójki lub gąsienice", "usunąć porażone liście, sprawdzić kilka krzewów"],
+          ["srebrzyste kropki na liściach", "przędziorki", "sprawdzić spód liści, poprawić podlewanie i ograniczyć stres suszy"],
+          ["mięknące owoce z larwą w środku", "muszka plamoskrzydła", "zbierać częściej, użyć pułapek i siatki o drobnym oczku"],
+          ["nagłe więdnięcie krzewu", "uszkodzone korzenie lub pędraki", "sprawdzić bryłę korzeniową i glebę wokół krzewu"]
+        ]
+      }
+    },
+    {
+      "heading": "Jak ograniczać szkodniki bez niszczenia pożytecznych organizmów",
+      "paragraphs": [
+        "Borówka korzysta z obecności biedronek, pająków, drapieżnych roztoczy, ptaków owadożernych i zapylaczy. Szerokie, profilaktyczne opryski osłabiają tę naturalną równowagę. Dlatego najpierw stosuj metody mechaniczne, higienę, siatki, pułapki monitoringowe i poprawę warunków uprawy.",
+        "Jeżeli sięgasz po środek ochrony roślin, sprawdź etykietę pod kątem uprawy, agrofaga, terminu użycia i karencji. Nie wykonuj zabiegów w czasie oblotu zapylaczy i nie traktuj środka chemicznego jako zamiennika lustracji."
+      ],
+      "checklist": [
+        "nie opryskuj podczas kwitnienia",
+        "sprawdzaj dolną stronę liści, nie tylko wierzch krzewu",
+        "zbieraj i usuwaj porażone owoce",
+        "zakładaj siatkę zanim ptaki odkryją dojrzewające owoce",
+        "środek ochrony dobieraj tylko według aktualnej etykiety"
+      ]
+    },
+    {
+      "heading": "Drosophila suzukii — największe zagrożenie ostatnich lat",
+      "paragraphs": [
+        "Muszka plamoskrzydła (Spotted Wing Drosophila) to inwazyjny szkodnik z Azji, który w ciągu dekady stał się największym problemem w uprawie miękkich owoców w Europie i Ameryce Północnej. W Polsce jest obecna od kilku lat i jej populacja rośnie każdego sezonu.",
+        "Co odróżnia ją od zwykłych muszek owocówek: Drosophila suzukii atakuje dojrzewające owoce, a nie tylko zgniłe i uszkodzone. Samica nacina skórkę zdrowej jagody i składa jaja wewnątrz. Larwy rozwijają się szybko, a zainfekowany owoc mięknie, zapada się i gnije. Zewnętrznie owoc może wyglądać zdrowo — uszkodzenie często widać dopiero po przekrojeniu.",
+        "Zwalczanie: monitoring za pomocą pułapek feromonowych lub octem jabłkowym z dodatkiem cukru (sprawdź je co tydzień od czerwca). Siatki o oczkach poniżej 1 mm zakładane na krzewy podczas dojrzewania. Zbieraj owoce regularnie i nie zostawiaj dojrzałych jagód na krzewie — to zapobiega namnażaniu się szkodnika. Jeżeli sytuacja wymaga ochrony chemicznej, sprawdź aktualną etykietę środka w wyszukiwarce MRiRW dla uprawy borówki i konkretnego szkodnika."
+      ],
+      "note": "Muszka plamoskrzydła wymaga regularnego monitoringu, szczególnie w czasie dojrzewania owoców. Im szybciej zauważysz problem, tym większa szansa na ograniczenie strat."
+    },
+    {
+      "heading": "Kwieciak borówkowiec",
+      "paragraphs": [
+        "Mały ryjkowiec (3–4 mm) zimujący w glebie pod krzewami. Dorosłe osobniki pojawiają się wiosną i wygryzają pąki kwiatowe od środka. Charakterystyczny objaw: pąki kwiatowe z okrągłym otworem lub wisząca, wysuszona gałązka z nienaruszonym pąkiem — w środku pusta. Szkody bywają poważne szczególnie przy dużej populacji.",
+        "Zwalczanie: najpierw monitoring pąków przy ruszaniu wegetacji i usuwanie uszkodzonych części. Zbiórka i niszczenie opadłych liści ogranicza miejsca zimowania. Ewentualny zabieg środkiem ochrony roślin dobieraj wyłącznie według aktualnej etykiety i rejestru MRiRW — substancje dopuszczone do użycia mogą się zmieniać."
+      ]
+    },
+    {
+      "heading": "Przędziorki",
+      "paragraphs": [
+        "Drobne pajęczaki, niewidoczne gołym okiem. Pojawiają się w czasie suszy, od maja do września. Objawy: delikatna, cienka pajęczynka na spodzie liści, srebrzyste lub brązowe plamki na blaszkach liściowych, ogólne bladawe zabarwienie, a przy silnym ataku — zwijanie i zasychanie liści.",
+        "Naturalni wrogowie przędziorka (drapieżne roztocza) skutecznie ograniczają jego populację jeśli nie są niszczone przez szerokoszeregowe pestycydy. Unikaj profilaktycznych oprysków — zniszczenie biocenozy jest gorsze niż sam szkodnik.",
+        "Przy silnym nalocie rozważ środki dopuszczone do zwalczania przędziorków w borówce, ale tylko po sprawdzeniu aktualnej etykiety. Podlewaj regularnie — sucha, upalna aura sprzyja przędziorkom, a poprawa wilgotności i ograniczenie stresu często zmniejsza presję szkodnika."
+      ]
+    },
+    {
+      "heading": "Larwy chrabąszcza i szarańczaki",
+      "paragraphs": [
+        "Larwy chrabąszcza majowego i kasztanowca żerują w glebie na korzeniach borówki. Objaw: krzew nagle więdnie i zamiera bez żadnego widocznego powodu nadziemnego. Po wyciągnięciu z ziemi — zniszczony system korzeniowy z larwami w glebie.",
+        "Biologiczne zwalczanie: preparaty zawierające nicienie pasożytnicze Heterorhabditis bacteriophora lub Steinernema kraussei. Aplikuje się je do gleby latem, gdy larwy są młode. Skuteczność dobra, bez efektów ubocznych dla środowiska."
+      ]
+    }
+  ]
+}

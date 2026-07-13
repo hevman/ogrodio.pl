@@ -1,0 +1,8 @@
+node_modules
+.next
+.git
+.gitignore
+npm-debug.log*
+README.md
+# exports are generated at runtime, not baked into image
+exports

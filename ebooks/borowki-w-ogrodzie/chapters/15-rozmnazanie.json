@@ -1,0 +1,85 @@
+{
+  "title": "Rozmnażanie borówki",
+  "summary": "Rozmnażanie borówki jest możliwe, ale wymaga cierpliwości. W ogrodzie amatorskim ma sens głównie wtedy, gdy chcesz powielić sprawdzony krzew i nie zależy Ci na szybkim owocowaniu.",
+  "sections": [
+    {
+      "heading": "Czy warto rozmnażać borówkę samodzielnie",
+      "paragraphs": [
+        "Najuczciwsza odpowiedź brzmi: czasem tak, ale nie zawsze. Kupiona sadzonka z dobrej szkółki zwykle szybciej wchodzi w owocowanie i ma pewną odmianę. Samodzielne rozmnażanie jest tańsze, ale wymaga czasu, miejsca i większej liczby prób.",
+        "Ma to sens, gdy masz zdrowy, dobrze owocujący krzew, który chcesz powielić dla siebie. Nie ma sensu rozmnażać krzewu słabego, chorującego, o drobnych owocach albo niepewnej odmianie."
+      ],
+      "premiumBox": {
+        "title": "Zasada wyboru rośliny matecznej",
+        "body": "Rozmnażaj tylko krzew, który sam chciałbyś kupić: zdrowy, silny, regularnie owocujący i bez objawów chorób wirusowych."
+      }
+    },
+    {
+      "heading": "Sadzonki półzdrewniałe",
+      "paragraphs": [
+        "To jedna z najpraktyczniejszych metod dla amatora. Sadzonki pobiera się latem z młodych, częściowo zdrewniałych przyrostów. Powinny być zdrowe, elastyczne i bez plam na liściach.",
+        "Dolne liście usuń, końcówkę możesz zanurzyć w ukorzeniaczu do sadzonek półzdrewniałych, a potem umieść sadzonkę w kwaśnym, przepuszczalnym podłożu. Najtrudniejsze jest utrzymanie wysokiej wilgotności powietrza bez gnicia."
+      ],
+      "checklist": [
+        "pobierz sadzonkę ze zdrowego przyrostu",
+        "usuń dolne liście",
+        "użyj kwaśnego, lekkiego podłoża",
+        "utrzymuj wilgoć, ale nie zalewaj",
+        "chroń przed ostrym słońcem",
+        "nie przesadzaj za wcześnie"
+      ]
+    },
+    {
+      "heading": "Sadzonki zdrewniałe",
+      "paragraphs": [
+        "Sadzonki zdrewniałe pobiera się w okresie spoczynku, najczęściej późną zimą lub bardzo wczesną wiosną. To metoda wolniejsza i mniej widowiskowa, ale pozwala przygotować większą liczbę sadzonek z pędów po cięciu.",
+        "Pędy tnie się na odcinki z kilkoma pąkami i umieszcza w wilgotnym, kwaśnym podłożu. Ukorzenianie trwa długo, a część sadzonek wypadnie. Dlatego przygotuj ich więcej, niż faktycznie potrzebujesz."
+      ],
+      "table": {
+        "caption": "Porównanie metod rozmnażania",
+        "headers": ["Metoda", "Termin", "Trudność", "Dla kogo"],
+        "rows": [
+          ["sadzonki półzdrewniałe", "lato", "średnia", "dla osób, które mogą pilnować wilgotności"],
+          ["sadzonki zdrewniałe", "zima / przedwiośnie", "średnia", "dla osób robiących cięcie i chcących wykorzystać pędy"],
+          ["odkłady", "wiosna", "łatwiejsza, ale wolna", "dla cierpliwych i przy niskich pędach"],
+          ["kupno sadzonki", "wiosna / jesień", "najłatwiejsza", "dla osób, które chcą szybko mieć plon"]
+        ]
+      }
+    },
+    {
+      "heading": "Odkłady poziome i kopczykowanie",
+      "paragraphs": [
+        "Odkład polega na przygięciu niskiego pędu do ziemi, przysypaniu jego fragmentu kwaśnym podłożem i utrzymaniu wilgoci do czasu wytworzenia korzeni. To metoda prosta, ale wymaga miejsca przy krzewie i cierpliwości.",
+        "Kopczykowanie polega na obsypaniu podstawy krzewu kwaśnym, lekkim podłożem, aby młode pędy wytworzyły korzenie. W praktyce amatorskiej łatwiejsze są odkłady poziome, bo mniej ingerują w cały krzew."
+      ],
+      "note": "Nie oddzielaj młodej rośliny zbyt wcześnie. Lepiej poczekać dłużej i odciąć dobrze ukorzeniony odkład niż stracić sadzonkę po przesadzeniu."
+    },
+    {
+      "heading": "Pielęgnacja młodych sadzonek",
+      "paragraphs": [
+        "Młoda sadzonka borówki potrzebuje stabilnej wilgotności, kwaśnego podłoża i ochrony przed upałem. Nie przyspieszaj jej nawożeniem. Zbyt duża dawka nawozu łatwo uszkadza delikatne korzenie.",
+        "Pierwszy sezon traktuj jako budowanie systemu korzeniowego. Usuń kwiaty, jeśli się pojawią. Owocowanie młodej sadzonki wygląda kusząco, ale osłabia roślinę i opóźnia jej wejście w normalny wzrost."
+      ],
+      "table": {
+        "caption": "Kiedy rozmnażać, a kiedy kupić sadzonkę",
+        "headers": ["Sytuacja", "Lepsza decyzja"],
+        "rows": [
+          ["chcesz szybko mieć owoce", "kup mocną sadzonkę z donicy 2-5 l"],
+          ["masz sprawdzony, zdrowy krzew", "warto zrobić kilka sadzonek dla siebie"],
+          ["nie znasz odmiany albo krzew choruje", "nie rozmnażaj go"],
+          ["masz miejsce i cierpliwość", "potraktuj rozmnażanie jako projekt na 2 sezony"]
+        ]
+      },
+      "checklist": [
+        "utrzymuj lekko wilgotne podłoże",
+        "nie trzymaj sadzonek w pełnym upale",
+        "nie nawoź mocno w pierwszych tygodniach",
+        "usuwaj kwiaty w pierwszym sezonie",
+        "zimuj młode rośliny w miejscu osłoniętym"
+      ],
+      "premiumBox": {
+        "title": "Cierpliwość się opłaca",
+        "body": "Własna sadzonka zwykle potrzebuje kilku sezonów, zanim zacznie dawać sensowny plon. Dlatego rozmnażanie traktuj jako sposób na powiększenie ogrodu, a nie szybki zamiennik kupionej, mocnej sadzonki."
+      }
+    }
+  ]
+}

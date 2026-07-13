@@ -1,0 +1,72 @@
+{
+  "title": "Diagnoza problemów i najczęstsze błędy",
+  "summary": "Większość problemów z borówką ma kilka możliwych przyczyn. Ten rozdział to przewodnik diagnostyczny — od obserwowanego objawu do przyczyny i rozwiązania.",
+  "sections": [
+    {
+      "heading": "Żółte liście z zielonymi nerwami (chloroza)",
+      "image": "borowka-chloroza-detail.webp",
+      "imageCaption": "Chloroza często wynika ze zbyt wysokiego pH i zablokowanego pobierania żelaza.",
+      "paragraphs": [
+        "To najczęstszy i najpoważniejszy sygnał alarmowy. Chloroza żelazowa lub manganowa niemal zawsze oznacza jedno: pH gleby jest za wysokie. Roślina nie może pobrać żelaza i manganu nawet jeśli są w glebie.",
+        "Działanie: natychmiastowo zmierz pH. Jeśli przekracza 5,5 — zakwaszaj siarka elementarną lub doraźnie zastosuj chelat żelaza dolistnie (szybka pomoc, nie leczy przyczyny). Sprawdź też źródło wody — twarda woda kranowa regularnie podwyższa pH nawet dobrze zakwaszonej gleby."
+      ]
+    },
+    {
+      "heading": "Krzew nie rośnie lub rośnie bardzo słabo",
+      "paragraphs": [
+        "Możliwe przyczyny w kolejności prawdopodobieństwa: zbyt wysokie pH (patrz wyżej), uszkodzenie korzeni przez larwy chrabąszcza (sprawdź kopając przy podstawie), zbyt głębokie posadzenie lub zasypany pnień, nieodpowiednia gleba (brak torfu, za ciężka), podlewanie nieregularne (sucho-mokro).",
+        "Test: wyciągnij delikatnie sadzonkę z gleby (jeśli to możliwe przy młodym krzewie) i sprawdź korzenie. Białe i zdrowe — problem jest w glebie lub nawożeniu. Brązowe i gnijące — za mokro lub patogen korzeniowy."
+      ]
+    },
+    {
+      "heading": "Krzewy kwitną, ale nie zawiązują owoców",
+      "paragraphs": [
+        "Najczęstsza przyczyna: brak zapylaczy lub mała liczba owadów zapylających w ogrodzie. Upewnij się, że masz co najmniej dwie odmiany o zbliżonym terminie kwitnienia. Sprawdź czy nie stosujesz insektycydów podczas kwitnienia — one zabijają pszczoły i trzmiele.",
+        "Inna przyczyna: przymrozek w czasie kwitnienia. Zamarznięte kwiaty wyglądają jak zdrowe, ale środek kwiatu jest ciemny i martwy. Przekrój kwiat sekatorem — zdrowy pistil jest zielony."
+      ]
+    },
+    {
+      "heading": "Owoce drobne mimo obfitego kwitnienia",
+      "paragraphs": [
+        "Przyczyny: niedobór wody podczas nalewania (czerwiec–lipiec) — to najczęstsza przyczyna drobnych owoców. Zbyt duże obciążenie krzewu owocami bez korekty cięciem (odmiana Chandler wymaga szczególnie mocnego przerzedziania). Zbyt wysokie pH. Słabe zapylenie (mało owadów lub zła kombinacja odmian)."
+      ]
+    },
+    {
+      "heading": "Owoce gniją przed dojrzeniem",
+      "image": "borowka-zamieranie-owocow-detail.webp",
+      "imageCaption": "Zamieranie i gnicie owoców wymaga szybkiej poprawy przewiewu i higieny krzewu.",
+      "paragraphs": [
+        "Jeśli gnicie zaczyna się od środka bez widocznych uszkodzeń zewnętrznych — to Drosophila suzukii. Przekrój owoc — jeśli są larwy lub mała dziurka w skórce, potwierdzono diagnozę. Jeśli gnicie zaczyna się od zewnątrz z szarobrązowym nalotem — szara pleśń (Botrytis)."
+      ]
+    },
+    {
+      "heading": "Pięć błędów, które najczęściej rujnują uprawę",
+      "paragraphs": [
+        "Błąd 1: Sadzenie w niezmienionej glebie ogrodowej. Nawet chwilowe zakwaszenie powierzchni nie wystarczy — podłoże musi być zmienione w całości dołu.",
+        "Błąd 2: Brak mulczu. Rośliny bez mulczu są stale narażone na stres wodny, wahania temperatury korzeni i wzrost pH. Mulcz to najprostszy zabieg o największym efekcie.",
+        "Błąd 3: Owocowanie w pierwszym roku. Kilkanaście jagód kosztuje krzew rok zahamowania wzrostu. Bezwzględnie usuń kwiaty w pierwszym sezonie.",
+        "Błąd 4: Nawożenie po sierpniu. Stymulacja wzrostu jesienią prowadzi do słabo zdrewniałych pędów, które przemarzają przy pierwszym mrozie.",
+        "Błąd 5: Ignorowanie ptaków. Jeden szpak może w godzinę opróżnić krzew, nad którym pracowałeś przez trzy lata. Siatka to nie opcja — to konieczność."
+      ],
+      "note": "Borówka jest rośliną wymagającą, ale wyjątkowo wdzięczną gdy dostanie to, czego potrzebuje. Ogrodnik, który pilnuje pH, mulczu i regularnego podlewania, może spodziewać się plonów przez ćwierć wieku z tego samego krzewu."
+    },
+    {
+      "heading": "Plan ratunkowy na jeden weekend",
+      "paragraphs": [
+        "Jeśli krzew wygląda słabo i nie wiesz od czego zacząć, nie rób wszystkiego naraz. Najpierw sprawdź rzeczy, które najczęściej decydują o kondycji borówki: pH, wilgotność, ściółkę i stan pędów.",
+        "Dopiero po tych czterech krokach oceniaj nawożenie. Zbyt szybkie dosypywanie nawozu do krzewu, który ma złe pH albo przesuszone korzenie, często pogarsza sytuację."
+      ],
+      "checklist": [
+        "zmierz pH pod krzewem i zapisz wynik",
+        "sprawdź wilgotność pod ściółką na głębokości kilku centymetrów",
+        "uzupełnij korę sosnową, zostawiając wolne miejsce przy pędach",
+        "wytnij pędy martwe, chore i złamane",
+        "zrób zdjęcia liści i owoców, żeby porównać stan za 2-3 tygodnie"
+      ],
+      "premiumBox": {
+        "title": "Nie poprawiaj wszystkiego jednego dnia",
+        "body": "Borówka reaguje wolniej niż warzywa. Daj jej czas po korekcie pH, podlewania lub ściółki, zanim dołożysz kolejne zabiegi."
+      }
+    }
+  ]
+}

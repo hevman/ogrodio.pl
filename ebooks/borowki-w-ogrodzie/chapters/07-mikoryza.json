@@ -1,0 +1,57 @@
+{
+  "title": "Mikoryza bez marketingu",
+  "summary": "Mikoryza może pomóc borówce, ale nie naprawi złej gleby, złego pH ani przesuszenia. Warto wiedzieć, kiedy ma sens, a kiedy jest tylko drogim dodatkiem.",
+  "sections": [
+    {
+      "heading": "Czym jest mikoryza u borówki",
+      "paragraphs": [
+        "Borówka należy do roślin wrzosowatych i naturalnie współpracuje z grzybami mikoryzowymi. Jej korzenie są cienkie, płytkie i pozbawione klasycznych włośników, dlatego środowisko glebowe ma ogromne znaczenie dla pobierania wody oraz składników pokarmowych.",
+        "Mikoryza działa jak biologiczne przedłużenie systemu korzeniowego. Pomaga roślinie korzystać z trudno dostępnych składników, ale potrzebuje kwaśnego, wilgotnego i przewiewnego podłoża. W zasadowej, zbitej ziemi efekt będzie słaby albo żaden."
+      ],
+      "premiumBox": {
+        "title": "Najważniejsze",
+        "body": "Mikoryza nie jest zamiennikiem przygotowania gleby. To wsparcie dla dobrze posadzonej borówki, nie ratunek dla krzewu posadzonego w przypadkowej ziemi."
+      }
+    },
+    {
+      "heading": "Kiedy warto zastosować mikoryzę",
+      "paragraphs": [
+        "Najlepszy moment to sadzenie albo przesadzanie krzewu, kiedy preparat może trafić blisko korzeni. Wtedy grzyby mają szansę skolonizować młodą bryłę korzeniową zanim roślina zacznie intensywnie rosnąć.",
+        "Mikoryza ma najwięcej sensu przy nowych nasadzeniach, słabszych sadzonkach, uprawie w pojemnikach i w ogrodach, gdzie podłoże było przygotowywane od zera. Przy starym, zdrowym krzewie rosnącym dobrze od lat efekt może być niewielki."
+      ],
+      "checklist": [
+        "stosuj przy sadzeniu, nie po wierzchu na suchą korę",
+        "wybieraj preparat do roślin wrzosowatych lub borówek",
+        "umieść preparat przy wilgotnych korzeniach",
+        "po aplikacji podlej i utrzymuj równą wilgotność",
+        "nie oczekuj efektu po kilku dniach"
+      ]
+    },
+    {
+      "heading": "Kiedy mikoryza nie pomoże",
+      "paragraphs": [
+        "Jeśli pH gleby jest za wysokie, korzenie stoją w wodzie albo podłoże regularnie przesycha na wiór, preparat mikoryzowy nie rozwiąże problemu. Najpierw trzeba poprawić warunki fizyczne i chemiczne gleby.",
+        "Nie warto też łączyć świeżej aplikacji mikoryzy z agresywnymi zabiegami glebowymi. Nadmiar nawozu, przesolenie podłoża, fungicydy stosowane w strefę korzeniową i brak wilgoci utrudniają zasiedlenie korzeni."
+      ],
+      "table": {
+        "caption": "Mikoryza: sens czy strata pieniędzy",
+        "headers": ["Sytuacja", "Czy warto", "Co zrobić najpierw"],
+        "rows": [
+          ["nowe sadzenie w przygotowanym kwaśnym podłożu", "tak", "dać preparat przy korzeniach"],
+          ["borówka w donicy", "tak", "pilnować wilgotności i jakości podłoża"],
+          ["pH powyżej 6,0", "nie teraz", "najpierw obniżyć pH"],
+          ["ciężka glina i zastoiska wody", "nie teraz", "zrobić drenaż lub wymienić podłoże"],
+          ["stary krzew rośnie bardzo dobrze", "opcjonalnie", "lepiej inwestować w ściółkę i podlewanie"]
+        ]
+      }
+    },
+    {
+      "heading": "Jak stosować bez błędów",
+      "paragraphs": [
+        "Preparat powinien mieć kontakt z korzeniami. Samo rozsypanie go na wierzchu ściółki zwykle niewiele daje. Przy sadzeniu najłatwiej oprószyć wilgotną bryłę korzeniową albo wsypać preparat do strefy, z którą korzenie zetkną się od razu.",
+        "Po zastosowaniu mikoryzy nie doprowadzaj do przesuszenia bryły. Grzyby potrzebują wilgoci, ale nie lubią braku powietrza. Dlatego najlepsze warunki daje podłoże kwaśne, próchniczne, przepuszczalne i ściółkowane."
+      ],
+      "note": "Jeśli masz ograniczony budżet, kolejność inwestycji jest taka: dobre kwaśne podłoże, ściółka, podlewanie, pomiar pH, a dopiero potem mikoryza."
+    }
+  ]
+}

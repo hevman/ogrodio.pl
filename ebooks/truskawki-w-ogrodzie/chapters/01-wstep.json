@@ -1,0 +1,14 @@
+{
+  "title": "Od czego zacząć",
+  "summary": "Krótki rozdział otwierający, który pokazuje styl danych i układ treści.",
+  "sections": [
+    {
+      "heading": "Cel e-booka",
+      "paragraphs": [
+        "Ten plik jest przykładem struktury. Każdy rozdział jest osobnym JSON-em, dzięki czemu książka może mieć kilkanaście albo kilkadziesiąt rozdziałów bez robienia jednego ogromnego pliku.",
+        "Generator wykorzystuje te same dane do podglądu HTML, PDF-a i EPUB-a. Dzięki temu poprawiasz treść raz, a formaty wynikowe można odtworzyć lokalnie."
+      ],
+      "note": "To jest miejsce na ważną poradę, ostrzeżenie albo ramkę z praktycznym wnioskiem."
+    }
+  ]
+}

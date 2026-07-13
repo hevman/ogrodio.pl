@@ -1,0 +1,41 @@
+{
+  "title": "Ściółkowanie",
+  "summary": "Mulcz pod borówką to nie estetyczny dodatek — to jeden z najważniejszych zabiegów pielęgnacyjnych, który zastępuje część podlewania, nawożenia i pielenia jednocześnie.",
+  "sections": [
+    {
+      "heading": "Dlaczego mulcz jest kluczowy",
+      "paragraphs": [
+        "Korzenie borówki są płytkie i włókniste. Sięgają zaledwie 30–40 cm w głąb, a większość masy korzeniowej koncentruje się w warstwie 10–20 cm od powierzchni. To strefa najbardziej narażona na wysychanie latem, przemarzanie zimą i mechaniczne uszkodzenia przy pieleniu. Gruba warstwa mulczu tworzy bufor chroniący tę wrażliwą strefę.",
+        "Właściwy mulcz przez cały sezon utrzymuje wilgotność gleby, co pozwala wydłużyć odstępy między podlewaniami o 30–50%. Utrzymuje niską temperaturę korzeni latem (co jest ważne, bo borówka nie toleruje przegrzania strefy korzeniowej). Hamuje wzrost chwastów. A przy rozkładzie stopniowo uwalnia kwasy organiczne, które zakwaszają glebę — to naturalna, powolna korekta pH."
+      ]
+    },
+    {
+      "heading": "Jaki mulcz stosować",
+      "paragraphs": [
+        "Kora sosnowa, grubo mielona (frakcja 20–60 mm) to absolutny numer jeden dla borówek. Ma kwaśne pH (3,5–4,5), wolno się rozkłada, jest dostępna w każdym sklepie ogrodniczym i dobrze wygląda. Unikaj kory mieszanej lub z drzew liściastych — ma wyższe pH.",
+        "Zrębki drzew iglastych (świerk, sosna, jodła) to tańsza alternatywa. Dostaniesz je za darmo od firm zajmujących się wycinką lub od leśnictwa. Używaj zrębek ze zdrowych drzew — chore mogą przenosić patogeny.",
+        "Trociny z drzew iglastych działają jako mulcz, ale wysychają szybko i mogą zbrylać się w twardą skorupę. Lepsze niż nic, ale gorsze od kory.",
+        "Czego unikać: słoma (podnosi pH przy rozkładzie, przyciąga gryzonie), kora z drzew liściastych (wyższe pH), kompost (zazwyczaj zbyt alkaliczny), agrowłóknina (nie zakwasza, nie oddycha dobrze)."
+      ]
+    },
+    {
+      "heading": "Jak i kiedy ściółkować",
+      "paragraphs": [
+        "Idealna warstwa mulczu to 10–15 cm. Cieńsza warstwa szybko przesycha i nie hamuje chwastów. Grubsza może utrudniać wnikanie wody przy intensywnym deszczu.",
+        "Pierwsze ściółkowanie: zaraz po posadzeniu lub wiosną, gdy gleba trochę się nagrzeje. Nie kładź mulczu na zmarzniętą glebę — zatrzymasz zimno przy korzeniach. Zostaw 5 cm wolnej przestrzeni wokół pędów tuż przy gruncie — mokry mulcz przy szyjce korzeniowej sprzyja gniciu.",
+        "Uzupełnij mulcz każdej wiosny, dodając 5–8 cm świeżej kory. Stara warstwa powoli się rozkłada i miesza z glebą — to naturalny nawóz organiczny."
+      ],
+      "table": {
+        "caption": "Szybki wybór ściółki",
+        "headers": ["Materiał", "Ocena", "Uwagi"],
+        "rows": [
+          ["kora sosnowa gruba", "najlepszy wybór", "wolno się rozkłada i dobrze pasuje do kwaśnego stanowiska"],
+          ["zrębki iglaste", "dobry wybór", "sprawdź, czy pochodzą ze zdrowego drewna"],
+          ["trociny iglaste", "awaryjnie", "mogą się zbijać i szybciej przesychać"],
+          ["słoma, kompost, kora liściasta", "unikać", "mogą podnosić pH albo pogarszać warunki przy korzeniach"]
+        ]
+      },
+      "note": "Jeśli masz wybrać jeden zabieg, który maksymalnie poprawia warunki wzrostu borówki przy minimalnym nakładzie pracy — to właśnie ściółkowanie. Jedno popołudnie pracy wiosną oszczędza godziny podlewania i pielenia przez cały sezon."
+    }
+  ]
+}

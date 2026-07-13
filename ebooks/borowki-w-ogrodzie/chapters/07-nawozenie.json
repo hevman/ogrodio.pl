@@ -1,0 +1,43 @@
+{
+  "title": "Nawożenie",
+  "summary": "Borówka jest rośliną o stosunkowo skromnych wymaganiach pokarmowych, ale ma specyficzne preferencje co do formy azotu i odczynu nawozu. Złe nawożenie to jeden z najczęstszych powodów niepowodzeń.",
+  "sections": [
+    {
+      "heading": "Czego borówka potrzebuje",
+      "paragraphs": [
+        "Borówka pobiera azot, fosfor, potas, siarkę, magnez i mikroelementy. Spośród nich azot ma największe znaczenie dla wzrostu i plonowania, ale musi być dostarczony w odpowiedniej formie. Borówka pobiera azot amonowy (NH4+), a nie azotanowy (NO3-). To kluczowa różnica — większość standardowych nawozów ogrodowych zawiera azot azotanowy, który przy niskim pH gleby i tak jest słabo przyswajalny przez borówkę.",
+        "Dlatego stosuj wyłącznie nawozy przeznaczone dla roślin kwasolubnych (borówka, wrzos, azalia, rododendron) lub nawozy zawierające siarczan amonu jako formę azotu. Sprawdź etykietę przed zakupem."
+      ]
+    },
+    {
+      "heading": "Kiedy i ile nawozić",
+      "paragraphs": [
+        "Pierwsze nawożenie: wczesna wiosna, gdy zaczynają pękać pąki (koniec marca–kwiecień). Stosuj dawkę zgodną z zaleceniem na opakowaniu. W pierwszym roku uprawy stosuj połowę zalecanej dawki.",
+        "Drugie nawożenie: tuż przed kwitnieniem lub na początku kwitnienia (maj). To nawożenie wspiera formowanie owoców i wzrost pędów. Możesz użyć nawozu z wyższą zawartością potasu (K) — wspiera twardość owoców.",
+        "Trzecie nawożenie (opcjonalne): po zbiorach, nie później niż połowa sierpnia. Pomaga krzewie gromadzić zapasy na zimę i budować pąki kwiatowe na następny rok. Po sierpniu bezwzględnie przestań nawozić — stymulowanie wzrostu jesienią zmniejsza mrozoodporność.",
+        "Nawożenie dolistne: w przypadku wyraźnych objawów niedoboru (żółknienie liści przy zielonych nerwach — chloroza) możesz zastosować chelat żelaza lub manganu dolistnie. To szybka pomoc, ale nie zastępuje korekty pH."
+      ],
+      "bullets": [
+        "Kwiecień: nawóz do roślin kwasolubnych, pełna dawka",
+        "Maj: nawóz z wyższym potasem przed kwitnieniem",
+        "Sierpień: ostatnie nawożenie sezonu",
+        "Nigdy po sierpniu — zmniejsza mrozoodporność"
+      ]
+    },
+    {
+      "heading": "Siarczan amonu — nawóz podstawowy",
+      "paragraphs": [
+        "Siarczan amonu (NH4)2SO4 to nawóz szczególnie polecany do borówek z dwóch powodów: dostarcza azot w formie amonowej (preferowanej przez borówkę) i lekko zakwasza glebę przy każdej aplikacji dzięki siarce. Stosuj 50–100 g na dorosły krzew wiosną.",
+        "Uwaga: siarczan amonu jest nawozem szybko działającym — przy przesadzeniu może spalić korzenie. Rozsypuj go równomiernie pod krzewem (nie przy samym pniu), nie łącz z siarką elementarną w tej samej dawce i zawsze podlewaj po aplikacji."
+      ],
+      "note": "Nie nawóź borówek nawozami uniwersalnymi, obornikowym granulowanym ani nawozami do pomidorów lub trawnika — mają zbyt wysokie pH i zły skład azotowy. Borówka zareaguje chlorozą lub w najlepszym razie — brakiem efektu."
+    },
+    {
+      "heading": "Mikoryza — nawóz, o którym się nie myśli",
+      "paragraphs": [
+        "Mikoryza nie jest klasycznym nawozem, ale wpływa na to, jak borówka korzysta z wody i składników pokarmowych. Największy sens ma przy sadzeniu, gdy preparat może trafić bezpośrednio przy korzeniach.",
+        "Szczegółowy schemat stosowania, sytuacje kiedy warto ją kupić i przypadki, w których nie pomoże, znajdziesz w osobnym rozdziale o mikoryzie."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "title": "Gleba i pH — fundament uprawy",
+  "summary": "Żadna inna roślina ogrodowa nie jest tak wrażliwa na odczyn gleby jak borówka. pH to nie szczegół techniczny — to warunek, bez spełnienia którego krzew nigdy nie da zadowalających plonów.",
+  "sections": [
+    {
+      "heading": "Dlaczego pH jest tak ważne",
+      "paragraphs": [
+        "Borówka potrzebuje pH gleby w przedziale 4,0–5,5. To środowisko silnie kwaśne, niespotykane w przypadku większości warzyw i drzew owocowych. Przy pH powyżej 6,0 roślina nie jest w stanie pobierać żelaza, manganu i cynku — nawet jeśli pierwiastki te są w glebie w wystarczających ilościach. Efekt jest zawsze taki sam: chloroza (żółknienie liści), zahamowanie wzrostu, dramatyczny spadek plonów.",
+        "Mechanizm jest chemiczny: przy wyższym pH metale przechodzą w formy niedostępne dla korzeni. Nawożenie żelazem chelowanym może chwilowo pomóc, ale nie rozwiąże problemu — konieczna jest korekta samego pH.",
+        "Co ważne: naturalna gleba ogrodowa w Polsce ma pH 6,0–7,5, czyli zbyt wysokie. Dlatego uprawa borówki prawie zawsze wymaga świadomego zakwaszenia lub stworzenia sztucznego podłoża."
+      ]
+    },
+    {
+      "heading": "Jak zmierzyć pH",
+      "paragraphs": [
+        "Nie zakładaj niczego bez pomiaru. Test papierkiem lakmusowym lub prostym elektrycznym miernikiem pH daje wynik w 30 sekund. Bardziej precyzyjna jest analiza próbki gleby w stacji chemiczno-rolniczej (koszt kilkudziesięciu złotych) — polecamy przynajmniej jedno takie badanie przed założeniem uprawy.",
+        "Pobierz próbkę z głębokości 15–30 cm — tam żyją korzenie borówki. Nie mierz pH na powierzchni, bo jest tam zniekształcone przez opadłe liście, mulcz i deszcz."
+      ]
+    },
+    {
+      "heading": "Jak zakwasić glebę",
+      "paragraphs": [
+        "Siarka elementarna (ogrodnicza) to najskuteczniejsza i najtańsza metoda długoterminowego zakwaszenia. Bakterie glebowe utleniają ją do kwasu siarkowego, który zakwasza środowisko. Efekt pojawia się po 3–6 miesiącach, więc siarkę stosuje się z wyprzedzeniem — najlepiej jesienią przed planowanym sadzeniem wiosną. Dawka: 100–300 g/m² w zależności od wyjściowego pH i rodzaju gleby.",
+        "Kwaśny torf to drugi filar zakwaszenia. Sam w sobie ma pH 3,5–4,5 i bardzo dobre właściwości fizyczne — zatrzymuje wodę i napowietrza glebę. Stosowany jako komponent podłoża w proporcji 40–60% daje trwały efekt zakwaszający.",
+        "Siarczan amonu jako nawóz azotowy lekko zakwasza glebę przy każdej aplikacji. Stosowany systematycznie przez kilka lat może obniżyć pH o 0,3–0,5 jednostki.",
+        "Czego unikać: wapna w jakiejkolwiek formie (podwyższa pH), popiołu drzewnego (pH 10–12 — katastrofa dla borówki), obornika z ferm przemysłowych (często alkaliczny)."
+      ],
+      "note": "Sprawdzaj pH co roku, zawsze wiosną. Nawet dobrze zakwaszona gleba może stopniowo wracać do wyższego odczynu — zwłaszcza na terenach z twardą wodą kranową lub gleba bogata w wapień."
+    },
+    {
+      "heading": "Struktura gleby — czego borówka potrzebuje",
+      "paragraphs": [
+        "Borówka najlepiej rośnie w glebie próchniczej, luźnej i przepuszczalnej — zbliżonej do leśnej gleby pod drzewami iglastymi. Twarda, zbita glina to środowisko, w którym korzenie borówki dosłownie się duszą.",
+        "Idealne podłoże do uprawy borówki: 50% kwaśny torf wysokotorfowiskowy, 25% gruboziarnisty piasek lub perlit, 25% kompost z kory sosnowej lub zrębki z drzew iglastych. Wszystkie składniki mieszamy na głębokość 30–40 cm. Takie podłoże ma odpowiednie pH, dobrą przepuszczalność i zasoby próchnicy na wiele lat.",
+        "W glebach ciężkich i gliniastych warto rozważyć stworzenie podwyższonych grzędek (30–40 cm) wypełnionych przygotowanym podłożem. To wymaga jednorazowego nakładu pracy i kosztów, ale eliminuje większość problemów na lata."
+      ]
+    }
+  ]
+}

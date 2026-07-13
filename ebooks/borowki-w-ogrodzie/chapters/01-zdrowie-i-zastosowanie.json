@@ -1,0 +1,58 @@
+{
+  "title": "Dlaczego warto uprawiać borówki",
+  "summary": "Borówka ma sens nie tylko dlatego, że dobrze wygląda na krzewie. To owoc, który łatwo jeść na świeżo, mrozić, przerabiać i wykorzystywać w kuchni przez cały rok.",
+  "sections": [
+    {
+      "heading": "Owoc, który naprawdę znika z miski",
+      "paragraphs": [
+        "Największą zaletą borówki w ogrodzie jest jej praktyczność. Owoce nie wymagają obierania, drylowania ani długiej obróbki. Można je jeść prosto z krzewu, dodać do owsianki, jogurtu, ciasta, naleśników albo zamrozić bez utraty wygody użycia.",
+        "To ważne, bo w ogrodzie warto sadzić rośliny, z których faktycznie korzystasz. Borówka jest jedną z tych upraw, które szybko wchodzą do codziennej kuchni, a nie kończą jako jednorazowy eksperyment."
+      ],
+      "premiumBox": {
+        "title": "Sens uprawy w domu",
+        "body": "Domowa borówka nie musi konkurować z plantacją ilością. Jej przewagą jest zbiór w pełnej dojrzałości, świeżość i kontrola nad tym, czym był podlewany oraz nawożony krzew."
+      }
+    },
+    {
+      "heading": "Do czego wykorzystać borówki",
+      "paragraphs": [
+        "Najlepszy plan to podzielić zbiory na trzy strumienie: jedzenie na świeżo, mrożenie i szybkie przetwory. Dzięki temu nie czekasz, aż owoce zmiękną w lodówce, tylko od razu decydujesz, co z nimi zrobić.",
+        "Owoce przeznaczone do mrożenia powinny być suche, jędrne i nieprzejrzałe. Owoce bardzo dojrzałe są świetne do sosów, koktajli, dżemów i ciast, ale gorzej znoszą transport oraz dłuższe przechowywanie."
+      ],
+      "table": {
+        "caption": "Najprostszy podział zbiorów",
+        "headers": ["Rodzaj owoców", "Najlepsze użycie", "Co zrobić od razu"],
+        "rows": [
+          ["jędrne i suche", "świeże jedzenie, mrożenie", "schłodzić lub rozsypać na tacy do mrożenia"],
+          ["bardzo dojrzałe", "koktajle, sosy, ciasta", "zużyć tego samego dnia"],
+          ["lekko miękkie", "dżem, mus, sok", "przebrać i podgrzać"],
+          ["pęknięte lub z nalotem", "nie używać", "wyrzucić, nie mieszać ze zdrowymi"]
+        ]
+      }
+    },
+    {
+      "heading": "Co daje własny krzew",
+      "paragraphs": [
+        "Własna borówka daje coś, czego trudno dopilnować przy owocach kupionych w sklepie: moment zbioru. Owoce zebrane zbyt wcześnie są kwaśniejsze i mniej aromatyczne. Te, które zostaną na krzewie kilka dni po wybarwieniu, zwykle są słodsze i pełniejsze w smaku.",
+        "Dlatego w tym poradniku skupiamy się nie na tym, żeby krzew tylko przeżył. Celem jest krzew, który ma dobre podłoże, zdrowe przyrosty, mocne pąki kwiatowe i owoce zbierane wtedy, kiedy faktycznie są gotowe."
+      ],
+      "table": {
+        "caption": "Co daje własna uprawa",
+        "headers": ["Korzyść", "Co to znaczy w praktyce"],
+        "rows": [
+          ["lepszy moment zbioru", "zbierasz owoce wtedy, gdy są słodkie, a nie wtedy, gdy muszą przetrwać transport"],
+          ["kontrola podlewania i nawożenia", "wiesz, co trafia pod krzew i kiedy było stosowane"],
+          ["mniej strat", "nadwyżkę możesz od razu zamrozić albo przerobić"],
+          ["nauka przez obserwację", "z roku na rok widzisz, które odmiany i zabiegi działają w Twoim ogrodzie"]
+        ]
+      },
+      "checklist": [
+        "sadź przynajmniej dwie odmiany, jeśli masz miejsce",
+        "zbieraj owoce partiami, nie wszystko jednego dnia",
+        "nie myj owoców przed przechowywaniem",
+        "najładniejsze owoce mroź osobno na tacy",
+        "miękkie owoce przerabiaj od razu"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "title": "Bibliografia i ważne informacje",
+  "summary": "Wybrane opracowania naukowe i doradcze, które pomogły przygotować praktyczne zalecenia zawarte w poradniku.",
+  "sections": [
+    {
+      "heading": "Bibliografia",
+      "paragraphs": [
+        "Poradnik powstał na podstawie doświadczeń ogrodniczych, aktualnych zaleceń doradczych oraz publicznie dostępnych opracowań naukowych dotyczących borówki wysokiej. Poniższe źródła wykorzystano do weryfikacji informacji o odmianach, glebie, podlewaniu, ochronie, zbiorze i przechowywaniu owoców."
+      ],
+      "table": {
+        "caption": "Wybrane źródła wykorzystane przy opracowaniu poradnika",
+        "headers": ["Źródło", "Zakres"],
+        "rows": [
+          ["M. Koniarski, M. Kubik, 2024, Ocena wzrostu, kwitnienia, dojrzewania oraz jakości owoców wybranych odmian borówki wysokiej", "odmiany, terminy dojrzewania, jakość owoców"],
+          ["Ł. Seliga, S. Pluta, 2017, Wstępna ocena wzrostu i plonowania wybranych odmian borówki wysokiej", "wzrost, plonowanie i cechy odmian"],
+          ["Dolnośląski Ośrodek Doradztwa Rolniczego, 2020, Zakładanie plantacji borówki wysokiej", "gleba, pH, stanowisko, praktyka zakładania uprawy"],
+          ["Z. Koszański i wsp., 2011, Reakcja borówki wysokiej odmiany Spartan i Patriot na nawadnianie kroplowe", "znaczenie nawadniania i stabilnej wilgotności podłoża"],
+          ["I. Ścibisz, M. Mitek, 2007, Influence of freezing process and frozen storage on anthocyanin contents of highbush blueberries", "mrożenie i jakość owoców po przechowywaniu"],
+          ["Instytut Ogrodnictwa - PIB, Metodyka integrowanej ochrony borówki wysokiej", "monitoring chorób i szkodników, zasady integrowanej ochrony"],
+          ["Ministerstwo Rolnictwa i Rozwoju Wsi, Metodyka integrowanej produkcji borówki wysokiej", "profilaktyka, obserwacja uprawy i ograniczanie ryzyka w ochronie roślin"],
+          ["Instytut Ogrodnictwa - PIB, 2023, Zalecenia technologiczne dla przechowywania i transportu borówki wysokiej", "zbiór, chłodzenie, przechowywanie i jakość pozbiorcza"]
+        ]
+      }
+    },
+    {
+      "heading": "Zakres poradnika",
+      "paragraphs": [
+        "Ten e-book jest poradnikiem ogrodniczym dla uprawy amatorskiej i przydomowej. Zalecenia zostały opisane w sposób praktyczny: co sprawdzić, jak rozpoznać problem, jak ograniczyć ryzyko i kiedy działać.",
+        "Warunki w ogrodach różnią się glebą, mikroklimatem, odmianą, wiekiem krzewu i sposobem pielęgnacji. Dlatego obserwuj własne rośliny i traktuj poradnik jako pomoc w podejmowaniu decyzji, a nie jako automatyczną receptę na każdą sytuację."
+      ],
+      "premiumBox": {
+        "title": "Najważniejsza zasada",
+        "body": "Przy borówce najczęściej wygrywa systematyczna obserwacja: pH, wilgotność, zdrowe pędy, przewiewny krzew i szybkie usuwanie problemów zanim obejmą całą roślinę."
+      }
+    },
+    {
+      "heading": "Środki ochrony roślin",
+      "paragraphs": [
+        "Informacje o chorobach i szkodnikach mają pomóc w rozpoznaniu problemu oraz wyborze najbezpieczniejszego kierunku działania. W pierwszej kolejności stosuj profilaktykę: zdrowy materiał szkółkarski, właściwe pH, przewiewne cięcie, usuwanie porażonych części, siatki, monitoring i higienę wokół krzewów.",
+        "Jeżeli potrzebny jest środek ochrony roślin, zawsze sprawdź aktualną etykietę konkretnego preparatu oraz jego rejestrację dla borówki wysokiej i danego problemu. Etykieta określa termin stosowania, dawkę, karencję, środki ostrożności i zasady bezpieczeństwa dla ludzi, zwierząt oraz zapylaczy."
+      ],
+      "checklist": [
+        "nie wykonuj zabiegów chemicznych w czasie oblotu zapylaczy",
+        "nie stosuj preparatu bez aktualnej etykiety dla borówki",
+        "nie przekraczaj dawek i liczby zabiegów z etykiety",
+        "zachowuj karencję przed zbiorem owoców",
+        "w razie wątpliwości skonsultuj objawy z doradcą ogrodniczym lub najbliższą jednostką doradztwa rolniczego"
+      ]
+    },
+    {
+      "heading": "Jak korzystać z e-booka w praktyce",
+      "paragraphs": [
+        "Jeśli dopiero sadzisz borówki, zacznij od rozdziału szybkiego startu, gleby i sadzenia. Jeśli masz już krzewy i problem, przejdź od razu do diagnozy i wróć do rozdziałów o pH, podlewaniu oraz cięciu.",
+        "Największą wartość daje powracanie do checklist w odpowiednim miesiącu. Borówka nie potrzebuje codziennej opieki, ale potrzebuje kilku dobrze wykonanych decyzji w sezonie."
+      ]
+    }
+  ]
+}

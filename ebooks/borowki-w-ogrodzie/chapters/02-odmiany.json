@@ -1,0 +1,59 @@
+{
+  "title": "Odmiany - jak wybrać właściwą",
+  "summary": "Dobór odmian decyduje o długości sezonu, smaku owoców i odporności uprawy na błędy. Ten rozdział przekłada dane z badań odmianowych na prosty wybór dla ogrodu.",
+  "sections": [
+    {
+      "heading": "Najpierw zdecyduj, czego oczekujesz",
+      "paragraphs": [
+        "Nie ma jednej najlepszej odmiany dla każdego ogrodu. Innej borówki potrzebujesz, jeśli chcesz mieć pierwsze owoce jak najwcześniej, innej do dużych deserowych jagód, a jeszcze innej do mrożenia i przetworów.",
+        "Badania odmianowe prowadzone w Polsce pokazują wyraźne różnice między odmianami: w terminie kwitnienia, terminie dojrzewania, sile wzrostu, wielkości owoców i zawartości ekstraktu. Dlatego zestaw 2-4 odmian jest bezpieczniejszy niż sadzenie kilku krzewów jednej odmiany."
+      ],
+      "premiumBox": {
+        "title": "Najprostsza zasada wyboru",
+        "body": "Do małego ogrodu wybierz minimum dwie odmiany: jedną wczesną i jedną średnią lub późną. Zyskasz dłuższy sezon zbioru i lepsze zapylenie."
+      }
+    },
+    {
+      "heading": "Tabela wyboru odmian do ogrodu",
+      "paragraphs": [
+        "Poniższa tabela jest praktycznym skrótem: nie zastępuje opisu odmiany, ale pozwala szybko wybrać kierunek. Uwzględnia wyniki badań odmianowych z Instytutu Ogrodnictwa oraz nowsze dane z oceny odmian prowadzonej w latach 2021-2023."
+      ],
+      "table": {
+        "caption": "Odmiany borówki według celu uprawy",
+        "headers": ["Cel", "Odmiany warte rozważenia", "Dlaczego"],
+        "rows": [
+          ["pierwsze owoce w sezonie", "Duke, Earliblue, Draper, Weymouth", "wczesny termin dojrzewania, dobre jako odmiany otwierające sezon"],
+          ["duże owoce deserowe", "Chandler, Liberty, Spartan, Duke", "duże jagody, atrakcyjne do jedzenia prosto z krzewu"],
+          ["długi sezon zbiorów", "Duke + Bluecrop + Liberty/Aurora", "połączenie odmian wczesnych, średnich i późnych wydłuża zbiór"],
+          ["sprawdzona odmiana na start", "Bluecrop, Duke", "odmiany popularne, dobrze opisane i przewidywalne w uprawie"],
+          ["późny zbiór", "Lateblue, Aurora, Liberty, Elizabeth", "wydłużają sezon do drugiej połowy sierpnia, a czasem dłużej"],
+          ["słodszy smak i wysoki ekstrakt", "Earliblue, Spartan, Liberty, Sunrise", "w badaniach wyróżniały się jakością owoców lub zawartością ekstraktu"]
+        ]
+      }
+    },
+    {
+      "heading": "Jak złożyć zestaw odmian",
+      "image": "borowka-terminy-dojrzewania-cover.webp",
+      "imageCaption": "Różne terminy dojrzewania pozwalają wydłużyć sezon zbiorów.",
+      "paragraphs": [
+        "Najbezpieczniejszy zestaw do ogrodu to trzy terminy dojrzewania: odmiana wczesna, odmiana środka sezonu i odmiana późna. Taki układ zmniejsza ryzyko, że jedna fala pogody zniszczy cały plon, i sprawia, że owoce dojrzewają partiami.",
+        "Jeśli masz miejsce tylko na dwa krzewy, wybierz odmiany o podobnym terminie kwitnienia, ale różnym terminie dojrzewania. Dla początkujących dobrym punktem wyjścia jest zestaw Duke + Bluecrop albo Duke + Liberty."
+      ],
+      "checklist": [
+        "nie sadź tylko jednej odmiany, jeśli masz miejsce na dwie",
+        "łącz odmiany o różnym terminie dojrzewania",
+        "unikaj sadzenia samych późnych odmian w chłodniejszych rejonach",
+        "przy małym ogrodzie wybieraj odmiany sprawdzone, nie kolekcjonerskie nowinki",
+        "kupuj sadzonki z pewnego źródła, bez objawów wirusów i chlorozy"
+      ]
+    },
+    {
+      "heading": "Czego nie obiecywać sobie po odmianie",
+      "paragraphs": [
+        "Odmiana nie naprawi złego pH, przesuszonego podłoża ani braku cięcia. Nawet najlepszy Chandler nie da dużych owoców, jeśli krzew będzie zagęszczony i niedostatecznie podlewany podczas dorastania jagód.",
+        "Traktuj odmianę jak potencjał, a nie gwarancję. To gleba, woda, światło i cięcie decydują, czy ten potencjał zostanie wykorzystany."
+      ],
+      "note": "W badaniach odmianowych wielkość owoców i zawartość ekstraktu zależały od odmiany, ale w ogrodzie wynik zawsze będzie dodatkowo zależał od warunków uprawy."
+    }
+  ]
+}
