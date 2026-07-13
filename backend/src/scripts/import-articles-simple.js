@@ -1,16 +1,10 @@
 const fs = require('fs');
 const path = require('path');
-const { Pool } = require('pg');
+const { createPool } = require('./pg-config');
 
 const ARTICLES_DIR = path.join(__dirname, '../../content/articles');
 
-const pool = new Pool({
-  host: process.env.DB_HOST || 'garden-backend-postgres',
-  port: parseInt(process.env.DB_PORT || '5432', 10),
-  database: process.env.DB_NAME || 'garden_backend',
-  user: process.env.DB_USER || 'garden',
-  password: process.env.DB_PASSWORD || 'garden',
-});
+const pool = createPool();
 
 async function importArticlesFromFiles() {
   try {

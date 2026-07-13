@@ -82,6 +82,11 @@ async function syncArticlesFromFiles() {
 
     const files = collectJsonFiles(ARTICLES_DIR);
     console.log(`Znaleziono ${files.length} plikow artykulow`);
+    const sourceSlugs = files.map((filePath) => {
+      const article = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
+      if (!article.slug) throw new Error(`Brak slug w pliku: ${filePath}`);
+      return article.slug;
+    });
 
     let created = 0;
     let updated = 0;
@@ -206,9 +211,18 @@ async function syncArticlesFromFiles() {
       }
     }
 
-    console.log(
-      `\nSynchronizacja zakonczona. Utworzono: ${created}, zaktualizowano: ${updated}, bledy: ${failed}`,
+    const deleted = await pool.query(
+      `DELETE FROM articles WHERE NOT (slug = ANY($1::text[]))`,
+      [sourceSlugs],
     );
+
+    console.log(
+      `\nSynchronizacja zakonczona. Utworzono: ${created}, zaktualizowano: ${updated}, usunieto: ${deleted.rowCount ?? 0}, bledy: ${failed}`,
+    );
+
+    if (failed > 0) {
+      throw new Error(`Nie udalo sie zsynchronizowac ${failed} artykulow`);
+    }
 
     if (process.env.SKIP_MEILI === '1') {
       console.log('Pomijam indeksowanie Meilisearch (SKIP_MEILI=1)');

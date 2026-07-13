@@ -6,7 +6,7 @@ export const site = {
   description: messages.site.description,
   email: "kontakt@ogrodio.pl",
   instagram: "",
-  facebook: "",
+  facebook: "https://www.facebook.com/ogrodiopl/",
   publicUrl: process.env.NEXT_PUBLIC_SITE_URL || "https://ogrodio.pl",
   siteUrl: process.env.NEXT_PUBLIC_SITE_URL || "http://ogrodio.localhost",
   shopUrl: process.env.NEXT_PUBLIC_SHOP_URL || "http://sklep.ogrodio.localhost",

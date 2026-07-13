@@ -21,6 +21,16 @@ function ShopFooter() {
               +48 791 172 155
             </a>
           </p>
+          <p className="mt-2 font-bold text-emerald-200">
+            <a
+              className="transition hover:text-white"
+              href={site.facebook}
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              Facebook
+            </a>
+          </p>
         </div>
 
         <div>
@@ -182,6 +192,14 @@ export function SiteFooter({ variant = "site" }: { variant?: "site" | "shop" }) 
             </Link>
             <a className="text-sm text-slate-500 transition hover:text-teal-700" href={`mailto:${site.email}`}>
               {site.email}
+            </a>
+            <a
+              className="text-sm text-slate-500 transition hover:text-teal-700"
+              href={site.facebook}
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              Facebook
             </a>
           </div>
         </div>

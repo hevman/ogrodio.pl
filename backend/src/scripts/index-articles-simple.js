@@ -45,6 +45,7 @@ async function indexArticles() {
     }
 
     const documents = result.rows.map((article) => articleToMeiliDocument(article));
+    await fetchMeili('/indexes/articles/documents', { method: 'DELETE' });
 
     console.log('📤 Wysyłam do Meilisearch...');
     

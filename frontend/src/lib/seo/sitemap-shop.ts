@@ -8,11 +8,11 @@ export async function getShopSitemapEntries(): Promise<MetadataRoute.Sitemap> {
 
   try {
     const products = await fetchProducts();
-    const base = site.publicUrl;
+    const base = site.shopUrl.replace(/\/$/, "");
     const uniqueProductSlugs = Array.from(new Set(products.map((product) => product.slug)));
 
     return [
-      { url: `${base}/sklep`, changeFrequency: "daily", priority: 0.8 },
+      { url: `${base}/`, changeFrequency: "daily", priority: 0.8 },
       ...uniqueProductSlugs.map((slug) => ({
         url: `${base}/produkt/${slug}`,
         changeFrequency: "weekly" as const,

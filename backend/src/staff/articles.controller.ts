@@ -18,6 +18,7 @@ import { FileInterceptor } from '@nestjs/platform-express';
 import type { Request } from 'express';
 import { memoryStorage } from 'multer';
 import { ArticleMediaService } from './article-media.service';
+import { ArticleContentService } from './article-content.service';
 import { ArticlesService } from './articles.service';
 import { MeilisearchService } from './meilisearch.service';
 import { Permission, StaffJwtGuard } from './staff-auth.guard';
@@ -25,23 +26,23 @@ import { Permission, StaffJwtGuard } from './staff-auth.guard';
 @Controller('api/articles')
 export class ArticlesPublicController {
   constructor(
-    private readonly articles: ArticlesService,
+    private readonly content: ArticleContentService,
     private readonly meilisearch: MeilisearchService,
   ) {}
 
   @Get()
   listPublished() {
-    return this.articles.findPublished();
+    return this.content.listPublished();
   }
 
   @Get('topics')
   listTopics() {
-    return this.articles.listTopics();
+    return this.content.listTopics();
   }
 
   @Get('topic/:topic')
   getByTopic(@Param('topic') topic: string) {
-    return this.articles.findByTopic(decodeURIComponent(topic));
+    return this.content.findByTopic(decodeURIComponent(topic));
   }
 
   @Get('search')
@@ -53,12 +54,15 @@ export class ArticlesPublicController {
     if (!q) {
       return { hits: [], total: 0 };
     }
-    return this.meilisearch.searchArticles(q, { topic, limit: limit ? Number(limit) : 20 });
+    return this.meilisearch.searchArticles(q, { topic, limit: limit ? Number(limit) : 20 })
+      .then((result) => Array.isArray(result.hits) && result.hits.length
+        ? result
+        : this.content.search(q, topic, Number(limit) || 20));
   }
 
   @Get(':slug')
   getPublished(@Param('slug') slug: string) {
-    return this.articles.findPublished(slug);
+    return this.content.findPublished(slug);
   }
 }
 

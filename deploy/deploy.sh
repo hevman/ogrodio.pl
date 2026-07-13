@@ -3,12 +3,8 @@
 #   bash deploy/deploy.sh           - normalny deploy (HTTPS)
 #   bash deploy/deploy.sh bootstrap - pierwszy deploy (HTTP, przed SSL)
 #
-# Artykuly NIE sa dotykane podczas zwyklego deployu.
-# Jawne tryby:
-#   IMPORT_NEW_ARTICLES=1 bash deploy/deploy.sh          - dodaje tylko nowe JSON-y, bez aktualizacji istniejacych
-#   UPDATE_ARTICLE_SLUG=slug bash deploy/deploy.sh       - aktualizuje jeden istniejacy artykul z JSON
-#   REINDEX_ARTICLES=1 bash deploy/deploy.sh             - odswieza tylko indeks Meilisearch z bazy
-#   OVERWRITE_ARTICLES_FROM_JSON=1 bash deploy/deploy.sh - pelny sync JSON -> baza, nadpisuje istniejace tresci
+# Artykuly sa zasilane z JSON-ow. Backend synchronizuje je przed kazdym startem.
+# Deploy czeka na gotowy backend i odswieza indeks Meilisearch.
 #   SEED_PRODUCTS=1 bash deploy/deploy.sh                - dodaje lub aktualizuje produkty i metody platnosci
 #   INDEX_PRODUCTS=1 bash deploy/deploy.sh               - odswieza indeks produktow Meilisearch
 
@@ -88,40 +84,24 @@ $COMPOSE build
 echo "==> Start kontenerow"
 $COMPOSE up -d
 
-if [ "${IMPORT_NEW_ARTICLES:-}" = "1" ] || [ -n "${UPDATE_ARTICLE_SLUG:-}" ] || [ "${REINDEX_ARTICLES:-}" = "1" ] || [ "${OVERWRITE_ARTICLES_FROM_JSON:-}" = "1" ] || [ "${SEED_PRODUCTS:-}" = "1" ] || [ "${INDEX_PRODUCTS:-}" = "1" ]; then
-  echo "==> Czekam na Postgres..."
-  sleep 15
+echo "==> Czekam na backend po synchronizacji artykulow"
+backend_ready=0
+for attempt in $(seq 1 30); do
+  if docker exec garden-backend node -e "fetch('http://127.0.0.1:3000/api/articles').then((response) => process.exit(response.ok ? 0 : 1)).catch(() => process.exit(1))"; then
+    backend_ready=1
+    break
+  fi
+  sleep 2
+done
+
+if [ "$backend_ready" -ne 1 ]; then
+  echo "Backend nie uruchomil sie po synchronizacji artykulow."
+  docker logs --tail=120 garden-backend
+  exit 1
 fi
 
-echo "==> Artykuly: operacje tylko na jawna flage"
-
-if [ "${IMPORT_NEW_ARTICLES:-}" = "1" ]; then
-  echo "==> Import nowych artykulow z JSON (bez aktualizacji istniejacych)"
-  docker exec garden-backend node src/scripts/import-articles-simple.js
-fi
-
-if [ -n "${UPDATE_ARTICLE_SLUG:-}" ]; then
-  echo "==> Aktualizacja jednego artykulu z JSON: ${UPDATE_ARTICLE_SLUG}"
-  docker exec -e ARTICLE_SLUG="${UPDATE_ARTICLE_SLUG}" garden-backend node src/scripts/sync-one-article-from-file.js
-fi
-
-if [ "${OVERWRITE_ARTICLES_FROM_JSON:-}" = "1" ]; then
-  echo "==> UWAGA: pelny sync artykulow z JSON nadpisuje istniejace tresci w bazie"
-  docker exec garden-backend node src/scripts/sync-articles-from-files.js
-else
-  echo "==> Pomijam pelny sync artykulow z JSON (OVERWRITE_ARTICLES_FROM_JSON != 1)"
-fi
-
-if [ "${IMPORT_NEW_ARTICLES:-}" = "1" ] || [ "${REINDEX_ARTICLES:-}" = "1" ] || [ "${OVERWRITE_ARTICLES_FROM_JSON:-}" = "1" ]; then
-  echo "==> Indeks artykulow Meili"
-  docker exec garden-backend node src/scripts/index-articles-simple.js
-else
-  echo "==> Pomijam indeks artykulow (REINDEX_ARTICLES != 1)"
-  echo "    Nowe JSON-y bez nadpisywania: IMPORT_NEW_ARTICLES=1 bash deploy/deploy.sh"
-  echo "    Jeden artykul z JSON:         UPDATE_ARTICLE_SLUG=slug bash deploy/deploy.sh"
-  echo "    Tylko reindeks:               REINDEX_ARTICLES=1 bash deploy/deploy.sh"
-  echo "    Pelny sync z nadpisaniem:     OVERWRITE_ARTICLES_FROM_JSON=1 bash deploy/deploy.sh"
-fi
+echo "==> Indeks artykulow Meili"
+docker exec garden-backend node src/scripts/index-articles-simple.js
 
 if [ "${SEED_PRODUCTS:-}" = "1" ]; then
   echo "==> Produkty i metody platnosci Vendure"

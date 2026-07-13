@@ -33,6 +33,7 @@ import { ProductsController } from './staff/products.controller';
 import { ArticlesService } from './staff/articles.service';
 import { ArticlesController, ArticlesPublicController } from './staff/articles.controller';
 import { ArticleMediaService } from './staff/article-media.service';
+import { ArticleContentService } from './staff/article-content.service';
 import { SyncAuthGuard } from './staff/sync-auth.guard';
 import { MeilisearchService } from './staff/meilisearch.service';
 
@@ -76,6 +77,7 @@ import { MeilisearchService } from './staff/meilisearch.service';
     OrdersService,
     ArticlesService,
     ArticleMediaService,
+    ArticleContentService,
     SyncAuthGuard,
     MeilisearchService,
   ],

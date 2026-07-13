@@ -1,8 +1,8 @@
-import { getShopSitemapEntries } from "@/lib/seo/sitemap-shop";
-import { urlSetXml, xmlResponse } from "@/lib/seo/sitemap-xml";
+import { NextResponse } from "next/server";
+import { site } from "@/lib/site-config";
 
 export const revalidate = 300;
 
-export async function GET() {
-  return xmlResponse(urlSetXml(await getShopSitemapEntries()));
+export function GET() {
+  return NextResponse.redirect(`${site.shopUrl.replace(/\/$/, "")}/sitemap.xml`, 301);
 }
