@@ -44,6 +44,7 @@ export function AdviceSearchResults() {
         { href: '/porady', label: 'Porady' },
         { label: 'Wyniki wyszukiwania' },
       ]}
+      description={q ? `Wyniki wyszukiwania dla „${q}" w poradnikach ogrodniczych.` : 'Wyszukaj poradniki ogrodnicze.'}
       eyebrow="Wyszukiwarka"
       title={q ? `Wyniki dla „${q}"` : 'Szukaj porad'}
     >
