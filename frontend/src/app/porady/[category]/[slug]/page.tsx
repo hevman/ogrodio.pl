@@ -29,13 +29,25 @@ function absoluteSiteUrl(pathOrUrl: string) {
   return `${site.publicUrl}${pathOrUrl.startsWith("/") ? pathOrUrl : `/${pathOrUrl}`}`;
 }
 
+/**
+ * Zwraca URL obrazka zoptymalizowanego przez Next.js Image Optimization.
+ * Facebook pobiera og:image bezpośrednio — bez tego dostaje surowy plik.
+ * Szerokość 1200px, jakość 85 → dobry balans jakość/rozmiar dla OG.
+ */
+function ogImageUrl(pathOrUrl: string): string {
+  const absolute = absoluteSiteUrl(pathOrUrl);
+  const encoded = encodeURIComponent(absolute);
+  return `${site.publicUrl}/_next/image?url=${encoded}&w=1200&q=85`;
+}
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { category, slug } = await params;
   const article = await getAdviceArticle(slug);
   if (!article) return { title: "Porada" };
   const discoverMeta = getAdviceDiscoverMeta(article);
   const pagePath = `/porady/${category}/${slug}`;
-  const discoverImageUrl = absoluteSiteUrl(discoverMeta.image);
+  const pageUrl = absoluteSiteUrl(pagePath);
+  const discoverImageUrl = ogImageUrl(discoverMeta.image);
   const publishedAt = article.createdAt || article.updatedAt;
   const modifiedAt = article.updatedAt || article.createdAt;
 
@@ -43,7 +55,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: discoverMeta.headline,
     description: discoverMeta.description,
     keywords: article.seo.keywords,
-    alternates: { canonical: pagePath },
+    alternates: { canonical: pageUrl },
     robots: {
       googleBot: {
         "max-image-preview": "large",
@@ -56,7 +68,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       images: [{ url: discoverImageUrl, alt: discoverMeta.imageAlt, width: 1200, height: 630 }],
       title: discoverMeta.headline,
       type: "article",
-      url: pagePath,
+      url: pageUrl,
       publishedTime: publishedAt,
       modifiedTime: modifiedAt,
     },
@@ -96,7 +108,7 @@ export default async function AdviceArticlePage({ params }: Props) {
   const publishedAt = article.createdAt || article.updatedAt;
   const modifiedAt = article.updatedAt || article.createdAt;
   const schemaImages = [
-    absoluteSiteUrl(discoverMeta.image),
+    ogImageUrl(discoverMeta.image),
     ...(article.inlineImage ? [absoluteSiteUrl(article.inlineImage.src)] : []),
   ];
 

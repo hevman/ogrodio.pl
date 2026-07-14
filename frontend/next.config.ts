@@ -18,6 +18,16 @@ const nextConfig: NextConfig = {
       },
       {
         protocol: "https",
+        hostname: "ogrodio.pl",
+        pathname: "/images/articles/**",
+      },
+      {
+        protocol: "http",
+        hostname: "ogrodio.localhost",
+        pathname: "/images/articles/**",
+      },
+      {
+        protocol: "https",
         hostname: "sklep.ogrodio.pl",
         pathname: "/assets/**",
       },
