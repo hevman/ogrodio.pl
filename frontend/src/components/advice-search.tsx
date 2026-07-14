@@ -2,7 +2,7 @@
 
 import { useRouter } from 'next/navigation';
 import { useEffect, useRef, useState, useCallback } from 'react';
-import { Loader2, Search, X } from 'lucide-react';
+import { ArrowUpRight, Loader2, Search, X } from 'lucide-react';
 import { searchArticles, type ArticleHit } from '@/lib/search-api';
 import { getArticleCategorySlug } from '@/lib/site-config';
 
