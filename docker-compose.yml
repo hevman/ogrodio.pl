@@ -4,13 +4,13 @@ services:
     container_name: garden-commerce-postgres
     restart: unless-stopped
     environment:
-      POSTGRES_USER: vendure
-      POSTGRES_PASSWORD: vendure
-      POSTGRES_DB: vendure
+      POSTGRES_USER: ${COMMERCE_POSTGRES_USER:-vendure}
+      POSTGRES_PASSWORD: ${COMMERCE_POSTGRES_PASSWORD:-vendure}
+      POSTGRES_DB: ${COMMERCE_POSTGRES_DB:-vendure}
     volumes:
       - commerce_postgres_data:/var/lib/postgresql/data
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U vendure -d vendure"]
+      test: ["CMD-SHELL", "pg_isready -U ${COMMERCE_POSTGRES_USER:-vendure} -d ${COMMERCE_POSTGRES_DB:-vendure}"]
       interval: 5s
       timeout: 5s
       retries: 10
@@ -22,14 +22,14 @@ services:
     container_name: garden-backend-postgres
     restart: unless-stopped
     environment:
-      POSTGRES_USER: garden
-      POSTGRES_PASSWORD: garden
-      POSTGRES_DB: garden_backend
+      POSTGRES_USER: ${BACKEND_POSTGRES_USER:-garden}
+      POSTGRES_PASSWORD: ${BACKEND_POSTGRES_PASSWORD:-garden}
+      POSTGRES_DB: ${BACKEND_POSTGRES_DB:-garden_backend}
     volumes:
       - backend_postgres_data:/var/lib/postgresql/data
       - ./docker/postgres-init.sql:/docker-entrypoint-initdb.d/init.sql:ro
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U garden -d garden_backend"]
+      test: ["CMD-SHELL", "pg_isready -U ${BACKEND_POSTGRES_USER:-garden} -d ${BACKEND_POSTGRES_DB:-garden_backend}"]
       interval: 5s
       timeout: 5s
       retries: 10
@@ -73,9 +73,9 @@ services:
       PORT: 3000
       POSTGRES_HOST: backend-postgres
       POSTGRES_PORT: 5432
-      POSTGRES_DB: garden_backend
-      POSTGRES_USER: garden
-      POSTGRES_PASSWORD: garden
+      POSTGRES_DB: ${BACKEND_POSTGRES_DB:-garden_backend}
+      POSTGRES_USER: ${BACKEND_POSTGRES_USER:-garden}
+      POSTGRES_PASSWORD: ${BACKEND_POSTGRES_PASSWORD:-garden}
       JWT_SECRET: ${GARDEN_JWT_SECRET:-garden-dev-secret-change-me}
       AUTH_COOKIE_DOMAIN: ogrodio.localhost
       AUTH_COOKIE_SECURE: "false"
