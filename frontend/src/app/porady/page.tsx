@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { Suspense } from "react";
 import { ArrowUpRight } from "lucide-react";
 import { AdviceCard } from "@/components/advice-card";
+import { AdviceSearch } from "@/components/advice-search";
 import { PageShell, PageSection } from "@/components/page-shell";
 import { getAdviceArticles } from "@/lib/advice";
 import { articleCategories } from "@/lib/site-config";
@@ -40,6 +42,12 @@ export default async function AdvicePage() {
       title="Wiedza, która zostaje na lata"
     >
       <PageSection>
+        {/* Wyszukiwarka */}
+        <div className="mb-8">
+          <Suspense>
+            <AdviceSearch />
+          </Suspense>
+        </div>
         {/* Siatka kategorii */}
         <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-4">
           {articleCategories.map(cat => {

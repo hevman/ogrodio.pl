@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowUpRight, CalendarDays, Droplets, Search, SunMedium } from "lucide-react";
+import { Suspense } from "react";
+import { ArrowUpRight, CalendarDays, Droplets, SunMedium } from "lucide-react";
+import { PlantSearch } from "@/components/plant-search";
 import { PageSection, PageShell } from "@/components/page-shell";
 import { plantCatalog, plantGroups } from "@/lib/plant-catalog";
 import { site } from "@/lib/site-config";
@@ -53,17 +55,19 @@ export default function PlantCatalogPage() {
         title="Rośliny opisane tak, żeby łatwiej o nie dbać"
       >
         <PageSection>
+          {/* Wyszukiwarka */}
+          <div className="mb-6">
+            <Suspense>
+              <PlantSearch />
+            </Suspense>
+          </div>
+
           <div className="grid gap-4 lg:grid-cols-[minmax(0,1fr)_320px] lg:items-start">
             <div className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm sm:p-5">
               <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-                <div className="flex items-center gap-3">
-                  <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-teal-50 text-teal-700">
-                    <Search className="h-5 w-5" />
-                  </span>
-                  <div>
-                    <p className="font-bold text-slate-900">{plantCatalog.length} roślin testowych</p>
-                    <p className="text-sm text-slate-500">Owoce, warzywnik, zioła, iglaki i rośliny ozdobne.</p>
-                  </div>
+                <div>
+                  <p className="font-bold text-slate-900">{plantCatalog.length} roślin</p>
+                  <p className="text-sm text-slate-500">Owoce, warzywnik, zioła, iglaki i rośliny ozdobne.</p>
                 </div>
                 <div className="flex flex-wrap gap-2">
                   {plantGroups.map((group) => (

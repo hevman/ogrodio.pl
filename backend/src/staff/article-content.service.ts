@@ -1,6 +1,7 @@
-import { Injectable, NotFoundException } from '@nestjs/common';
+import { Injectable, Logger, NotFoundException, OnModuleInit } from '@nestjs/common';
 import { existsSync, readdirSync, readFileSync, statSync } from 'fs';
 import { join } from 'path';
+import { MeilisearchService } from './meilisearch.service';
 
 type ContentArticle = Record<string, any> & {
   slug: string;
@@ -10,13 +11,24 @@ type ContentArticle = Record<string, any> & {
 };
 
 @Injectable()
-export class ArticleContentService {
+export class ArticleContentService implements OnModuleInit {
+  private readonly logger = new Logger(ArticleContentService.name);
   private readonly articles: ContentArticle[];
   private readonly bySlug: Map<string, ContentArticle>;
 
-  constructor() {
+  constructor(private readonly meili: MeilisearchService) {
     this.articles = this.loadArticles();
     this.bySlug = new Map(this.articles.map((article) => [article.slug, article]));
+  }
+
+  async onModuleInit() {
+    // Auto-indeksuj artykuły przy starcie — bez tego Meili search zwraca 0 wyników
+    try {
+      await this.meili.indexArticles(this.articles);
+      this.logger.log(`Auto-indexed ${this.articles.length} articles in Meilisearch`);
+    } catch (err: any) {
+      this.logger.warn(`Article auto-indexing failed: ${err.message}`);
+    }
   }
 
   listPublished() {
