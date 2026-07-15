@@ -8,6 +8,8 @@ import type { AdviceArticle } from "@/lib/advice-types";
 import { formatArticleDate } from "@/lib/format-date";
 import { getArticlePath } from "@/lib/site-config";
 
+const PLACEHOLDER = "/images/articles/ogrod-placeholder-cover.webp";
+
 export function AdviceCard({
   article,
   categorySlug,
@@ -21,7 +23,7 @@ export function AdviceCard({
     ? `/porady/${categorySlug}/${article.slug}`
     : getArticlePath(article);
 
-  const [imgSrc, setImgSrc] = useState(article.coverImage || "/brand/ogrodio-leaf.jpg");
+  const [imgSrc, setImgSrc] = useState(article.coverImage || PLACEHOLDER);
 
   return (
     <Link
@@ -37,7 +39,7 @@ export function AdviceCard({
           quality={60}
           sizes="(max-width: 768px) 100vw, (max-width: 1280px) 46vw, 31vw"
           src={imgSrc}
-          onError={() => setImgSrc("/brand/ogrodio-leaf.jpg")}
+          onError={() => setImgSrc(PLACEHOLDER)}
         />
         <span className="absolute left-4 top-4 rounded-full bg-white/95 px-3 py-1 text-xs font-bold text-teal-800 shadow-sm">
           {article.topic}

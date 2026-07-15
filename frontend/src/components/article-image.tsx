@@ -3,6 +3,8 @@
 import Image from "next/image";
 import { useState } from "react";
 
+const PLACEHOLDER = "/images/articles/ogrod-placeholder-cover.webp";
+
 export function ArticleHeroImage({
   src,
   alt,
@@ -12,7 +14,7 @@ export function ArticleHeroImage({
   alt: string;
   quality: number;
 }) {
-  const [imgSrc, setImgSrc] = useState(src || "/brand/ogrodio-leaf.jpg");
+  const [imgSrc, setImgSrc] = useState(src || PLACEHOLDER);
 
   return (
     <Image
@@ -24,7 +26,7 @@ export function ArticleHeroImage({
       quality={quality}
       sizes="100vw"
       src={imgSrc}
-      onError={() => setImgSrc("/brand/ogrodio-leaf.jpg")}
+      onError={() => setImgSrc(PLACEHOLDER)}
     />
   );
 }
@@ -38,7 +40,7 @@ export function ArticleInlineImage({
   alt: string;
   quality: number;
 }) {
-  const [imgSrc, setImgSrc] = useState(src || "/brand/ogrodio-leaf.jpg");
+  const [imgSrc, setImgSrc] = useState(src || PLACEHOLDER);
 
   return (
     <Image
@@ -49,7 +51,7 @@ export function ArticleInlineImage({
       sizes="(max-width: 768px) 100vw, (max-width: 1280px) min(100vw - 3rem, 900px), min(100vw - 22rem, 1340px)"
       src={imgSrc}
       width={1000}
-      onError={() => setImgSrc("/brand/ogrodio-leaf.jpg")}
+      onError={() => setImgSrc(PLACEHOLDER)}
     />
   );
 }
