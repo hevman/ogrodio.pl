@@ -33,19 +33,33 @@ bash deploy/post-install.sh
 
 Szczegóły: [`deploy/QUICKSTART.md`](deploy/QUICKSTART.md) · [`deploy/DEPLOY.md`](deploy/DEPLOY.md) · [`deploy/CLOUDFLARE.md`](deploy/CLOUDFLARE.md)
 
-### Zdjęcia artykułów
+### Dodawanie zdjęć do artykułów
 
-Katalog `frontend/public/images/articles/` jest **poza git**. Na serwer trafiają **tylko pliki WebP**; oryginały JPG zostają na maszynie dev. **rsync** wysyła plik po pliku — przy kolejnych uruchomieniach tylko nowe/zmienione.
-
-```powershell
-# Windows
-.\deploy\sync-article-images.ps1
-```
+Workflow — robisz zdjęcia telefonem, lokalnie konwertujesz i committujesz przez git:
 
 ```bash
-# Linux / macOS / WSL
-bash deploy/sync-article-images.sh debian@TWOJE_IP
+# 1. Skopiuj zdjęcia z telefonu do frontend/public/images/articles/
+#    Nazwa: slug-artykulu-cover.jpg, slug-artykulu-inline.jpg
+
+# 2. Konwertuj JPG → WebP i zaktualizuj JSON artykułów
+cd frontend
+npm run articles:images
+# Skrypt: resize 1800px, quality 82%, EXIF rotation, aktualizuje cover_image/inline_image w JSON
+
+# 3. Commituj i pushuj TYLKO WebP (JPG/PNG ignorowane przez git, zostają lokalnie)
+git add frontend/public/images/articles/*.webp backend/content/articles/*.json
+git commit -m "feat: dodaj zdjecia do artykulu XYZ"
+git push
+
+# 4. Na VPS:
+git pull
+# Backend fs.watch automatycznie przeładuje artykuły — bez restartu
 ```
+
+**Ważne:**
+- JPG/PNG są w `.gitignore` — oryginały zostają tylko na maszynie dev
+- WebP trafia do repo (~150-300 KB każdy) — VPS pobiera przez `git pull`
+- Nie ma potrzeby rsync ani ręcznego kopiowania plików na serwer
 
 ## Struktura
 

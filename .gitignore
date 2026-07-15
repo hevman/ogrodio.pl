@@ -46,9 +46,13 @@ data/*.jpeg
 data/*.png
 data/*.webp
 
-# Zdjęcia artykułów (~350 MB — kopiuj z backupu VPS lub uruchom articles:sync-media)
-frontend/public/images/articles/*
-!frontend/public/images/articles/.gitkeep
+# Surowe zdjęcia źródłowe (JPG/PNG przed konwersją do WebP)
+frontend/public/images/articles/*.jpg
+frontend/public/images/articles/*.jpeg
+frontend/public/images/articles/*.png
+
+# WebP trafia do repo, więc NIE ignorujemy:
+# frontend/public/images/articles/*.webp ← celowo zakomentowane
 
 # ─── Logi i OS ───────────────────────────────────────────────────────────────
 *.log
