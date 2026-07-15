@@ -11,7 +11,7 @@ import { siteShell } from "@/lib/layout";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 
-export const revalidate = 300;
+export const dynamic = "force-dynamic";
 
 type Props = { params: Promise<{ category: string }> };
 

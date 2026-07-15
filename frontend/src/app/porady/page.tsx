@@ -8,7 +8,7 @@ import { PageShell, PageSection } from "@/components/page-shell";
 import { getAdviceArticles } from "@/lib/advice";
 import { articleCategories } from "@/lib/site-config";
 
-export const revalidate = 300;
+export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
   title: "Porady ogrodnicze — Ogrodio",
