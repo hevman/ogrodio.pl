@@ -31,7 +31,7 @@ export function AdviceCard({
           priority={priority}
           quality={60}
           sizes="(max-width: 768px) 100vw, (max-width: 1280px) 46vw, 31vw"
-          src={article.coverImage}
+          src={article.coverImage || "/brand/ogrodio-leaf.jpg"}
         />
         <span className="absolute left-4 top-4 rounded-full bg-white/95 px-3 py-1 text-xs font-bold text-teal-800 shadow-sm">
           {article.topic}

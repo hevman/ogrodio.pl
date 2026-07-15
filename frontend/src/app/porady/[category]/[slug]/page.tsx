@@ -188,7 +188,7 @@ export default async function AdviceArticlePage({ params }: Props) {
           priority
           quality={IMAGE_QUALITY_ARTICLE_HERO}
           sizes="100vw"
-          src={article.coverImage}
+          src={article.coverImage || "/brand/ogrodio-leaf.jpg"}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/60 to-slate-950/20" />
         <div className={`relative flex min-h-[18rem] flex-col justify-end pb-10 pt-28 lg:min-h-[22rem] lg:pb-12 ${siteShell}`}>
@@ -250,7 +250,7 @@ export default async function AdviceArticlePage({ params }: Props) {
                       height={600}
                       quality={IMAGE_QUALITY_ARTICLE_INLINE}
                       sizes="(max-width: 768px) 100vw, (max-width: 1280px) min(100vw - 3rem, 900px), min(100vw - 22rem, 1340px)"
-                      src={article.inlineImage.src}
+                      src={article.inlineImage.src || "/brand/ogrodio-leaf.jpg"}
                       width={1000}
                     />
                     <figcaption className="bg-slate-50 px-5 py-3 text-sm text-slate-500">
