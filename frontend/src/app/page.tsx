@@ -11,6 +11,7 @@ import {
 } from "lucide-react";
 import { AdviceCard } from "@/components/advice-card";
 import { HomeAppSection } from "@/components/app/app-onboarding";
+import { HomeLeadArticleImage, HomeSideArticleImage } from "@/components/home-article-image";
 import { t } from "@/i18n";
 import { getFeaturedAdvice } from "@/lib/advice";
 import { siteShell } from "@/lib/layout";
@@ -169,13 +170,9 @@ export default async function HomePage() {
                 href={getArticlePath(leadArticle)}
               >
                 <div className="relative min-h-[280px]">
-                  <Image
-                    alt={leadArticle.coverAlt}
-                    className="object-cover transition duration-500 group-hover:scale-105"
-                    fill
-                    quality={62}
-                    sizes="(max-width: 1024px) 100vw, 44vw"
+                  <HomeLeadArticleImage
                     src={leadArticle.coverImage}
+                    alt={leadArticle.coverAlt}
                   />
                 </div>
                 <div className="flex flex-col justify-end p-6 sm:p-8">
@@ -201,13 +198,9 @@ export default async function HomePage() {
                     key={article.slug}
                   >
                     <div className="relative h-24 w-28 shrink-0 overflow-hidden rounded-md bg-slate-100">
-                      <Image
-                        alt={article.coverAlt}
-                        className="object-cover transition duration-500 group-hover:scale-105"
-                        fill
-                        quality={56}
-                        sizes="112px"
+                      <HomeSideArticleImage
                         src={article.coverImage}
+                        alt={article.coverAlt}
                       />
                     </div>
                     <div>
