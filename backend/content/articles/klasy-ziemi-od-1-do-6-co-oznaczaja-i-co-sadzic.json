@@ -5,19 +5,19 @@
   "summary": "Klasa ziemi pomaga ocenić potencjał działki, ale nie mówi wszystkiego o warunkach uprawy. Wyjaśniamy, czym różnią się gleby klas I–VI, jakie drzewa, krzewy, warzywa i rośliny ozdobne można na nich sadzić oraz jak poprawić słabą, piaszczystą ziemię, aby ogród lepiej znosił suszę i upały.",
   "reading_minutes": 13,
   "cover_image": "/images/articles/klasy-ziemi-piasek-cover.webp",
-  "cover_alt": "Gleba piaszczysta ze słabą strukturą i widocznym wysuszeniem – charakterystyczna dla niższych klas ziemi",
+  "cover_alt": "Piaszczysta gleba klasy V–VI — jasna, sucha, z ubogą strukturą i śladami mrozu lub wysychania",
   "discover": {
     "enabled": true,
     "headline": "Klasy ziemi od I do VI: co oznaczają i jakie rośliny wybrać?",
     "description": "Ziemia klasy VI nie oznacza, że ogród jest skazany na niepowodzenie. Sprawdź, czym różnią się klasy gleby, co można na nich uprawiać i jak dobrać drzewa, krzewy oraz warzywa do warunków na działce.",
     "image": "/images/articles/klasy-ziemi-piasek-cover.webp",
-    "imageAlt": "Widok z góry na piaszczystą glebę ogrodową ze słabą strukturą",
+    "imageAlt": "Piaszczysta gleba klasy V–VI — jasna, sucha, z ubogą strukturą",
     "angle": "dobór roślin do rodzaju i klasy gleby",
     "freshness": "2026-07-15"
   },
   "inline_image": {
     "src": "/images/articles/klasy-ziemi-gleba-inline.webp",
-    "alt": "Zbliżenie na glebę z widoczną strukturą grudkową i śladami wilgoci – przykład lepszej klasy ziemi ogrodniczej"
+    "alt": "Gleba gliniasta klasy III–IV z charakterystyczną strukturą blokową i spękaniami — zwięzła, ciężka, trudna do uprawy bez wapnowania i napowietrzania"
   },
   "sections": [
     {
