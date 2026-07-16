@@ -9,9 +9,25 @@ import { PageShell, PageSection } from '@/components/page-shell';
 import { searchArticles, type ArticleHit } from '@/lib/search-api';
 import { getArticleCategorySlug } from '@/lib/site-config';
 
+const PLACEHOLDER = "/images/articles/ogrod-placeholder-cover.webp";
+
 function articleHref(hit: ArticleHit): string {
   const cat = getArticleCategorySlug(hit.topic);
   return cat ? `/porady/${cat}/${hit.slug}` : `/porady/${hit.slug}`;
+}
+
+function SearchResultImage({ src, alt }: { src: string; alt: string }) {
+  const [imgSrc, setImgSrc] = useState(src);
+  
+  return (
+    <img
+      src={imgSrc}
+      alt={alt}
+      className="h-full w-full object-cover transition duration-300 group-hover:scale-[1.03]"
+      loading="lazy"
+      onError={() => setImgSrc(PLACEHOLDER)}
+    />
+  );
 }
 
 export function AdviceSearchResults() {
@@ -92,11 +108,9 @@ export function AdviceSearchResults() {
                 >
                   {hit.cover_image && (
                     <div className="relative aspect-[16/9] overflow-hidden bg-slate-100">
-                      <img
+                      <SearchResultImage
                         src={hit.cover_image}
                         alt={hit.cover_alt ?? hit.title}
-                        className="h-full w-full object-cover transition duration-300 group-hover:scale-[1.03]"
-                        loading="lazy"
                       />
                       <span className="absolute left-3 top-3 rounded-full bg-white/95 px-2.5 py-1 text-xs font-bold text-teal-700 shadow-sm">
                         {hit.topic}

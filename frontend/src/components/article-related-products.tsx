@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import { useState } from "react";
 import { ShoppingBag } from "lucide-react";
 import { formatMoney, t } from "@/i18n";
 import type { Product } from "@/lib/shop-api";
@@ -9,6 +12,20 @@ type Props = {
   products: Product[];
   topic: string;
 };
+
+function ProductImage({ product }: { product: Product }) {
+  const [imgSrc, setImgSrc] = useState(productImage(product));
+  
+  return (
+    <img
+      alt=""
+      className="h-12 w-12 rounded-lg bg-white object-contain p-1"
+      loading="lazy"
+      src={imgSrc}
+      onError={() => setImgSrc("/images/articles/ogrod-placeholder-cover.webp")}
+    />
+  );
+}
 
 export function ArticleRelatedProducts({ products, topic }: Props) {
   return (
@@ -28,12 +45,7 @@ export function ArticleRelatedProducts({ products, topic }: Props) {
                 className="group grid grid-cols-[52px_1fr_auto] items-center gap-3 rounded-xl border border-white/10 bg-white/5 p-2 transition hover:border-emerald-300/40 hover:bg-white/10"
                 href={`${site.shopUrl}/produkt/${product.slug}`}
               >
-                <img
-                  alt=""
-                  className="h-12 w-12 rounded-lg bg-white object-contain p-1"
-                  loading="lazy"
-                  src={productImage(product)}
-                />
+                <ProductImage product={product} />
                 <span>
                   <span className="block text-sm font-bold leading-snug group-hover:text-emerald-100">{product.name}</span>
                   <span className="mt-0.5 block text-xs text-emerald-200/80">{product.categoryLabel}</span>
