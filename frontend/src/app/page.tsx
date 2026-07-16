@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 import {
   ArrowRight,
@@ -79,14 +78,11 @@ export default async function HomePage() {
       />
 
       <section className="relative min-h-[640px] overflow-hidden bg-slate-950 text-white">
-        <Image
+        <img
           alt={t("home.heroAlt")}
-          className="object-cover opacity-70"
+          className="absolute inset-0 h-full w-full object-cover opacity-70"
           fetchPriority="high"
-          fill
-          priority
-          quality={66}
-          sizes="100vw"
+          loading="eager"
           src="/images/articles/wiosenne-prace-ogrod.webp"
         />
         <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(2,6,23,.92),rgba(2,6,23,.62)_46%,rgba(2,6,23,.18))]" />

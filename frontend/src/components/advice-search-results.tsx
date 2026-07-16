@@ -1,6 +1,5 @@
 'use client';
 
-import Image from 'next/image';
 import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
 import { useEffect, useState } from 'react';
@@ -92,14 +91,12 @@ export function AdviceSearchResults() {
                   className="group flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition hover:-translate-y-0.5 hover:border-teal-200 hover:shadow-md"
                 >
                   {hit.cover_image && (
-                    <div className="relative aspect-[16/9] bg-slate-100">
-                      <Image
+                    <div className="relative aspect-[16/9] overflow-hidden bg-slate-100">
+                      <img
                         src={hit.cover_image}
                         alt={hit.cover_alt ?? hit.title}
-                        fill
-                        className="object-cover transition duration-300 group-hover:scale-[1.03]"
-                        sizes="(max-width: 640px) 100vw, (max-width: 1280px) 50vw, 33vw"
-                        quality={60}
+                        className="h-full w-full object-cover transition duration-300 group-hover:scale-[1.03]"
+                        loading="lazy"
                       />
                       <span className="absolute left-3 top-3 rounded-full bg-white/95 px-2.5 py-1 text-xs font-bold text-teal-700 shadow-sm">
                         {hit.topic}

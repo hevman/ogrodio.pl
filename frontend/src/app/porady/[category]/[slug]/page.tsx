@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 import { notFound, redirect } from "next/navigation";
 import { Camera, CheckCircle2, Clock3, ShieldCheck, UserRound } from "lucide-react";
@@ -18,7 +17,6 @@ import { getRelatedSectionTitle, resolveRelatedArticles } from "@/lib/article-li
 import { getAdviceRelatedProducts } from "@/lib/advice-shop";
 import { siteShell } from "@/lib/layout";
 import { site, articleCategories, getArticleCategorySlug } from "@/lib/site-config";
-import { IMAGE_QUALITY_ARTICLE_HERO, IMAGE_QUALITY_ARTICLE_INLINE } from "@/lib/image-quality";
 
 export const dynamic = "force-dynamic";
 
@@ -184,7 +182,6 @@ export default async function AdviceArticlePage({ params }: Props) {
         <ArticleHeroImage
           src={article.coverImage}
           alt={article.coverAlt}
-          quality={IMAGE_QUALITY_ARTICLE_HERO}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/60 to-slate-950/20" />
         <div className={`relative flex min-h-[18rem] flex-col justify-end pb-10 pt-28 lg:min-h-[22rem] lg:pb-12 ${siteShell}`}>
@@ -243,7 +240,6 @@ export default async function AdviceArticlePage({ params }: Props) {
                     <ArticleInlineImage
                       src={article.inlineImage.src}
                       alt={article.inlineImage.alt}
-                      quality={IMAGE_QUALITY_ARTICLE_INLINE}
                     />
                     <figcaption className="bg-slate-50 px-5 py-3 text-sm text-slate-500">
                       {article.inlineImage.alt}

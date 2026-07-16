@@ -1,32 +1,24 @@
-"use client";
-
-import Image from "next/image";
-import { useState } from "react";
-
-const PLACEHOLDER = "/images/articles/ogrod-placeholder-cover.webp";
+/**
+ * Komponenty obrazów dla artykułów.
+ * Używają natywnych <img> zamiast Next.js Image - obrazy są już zoptymalizowane na serwerze.
+ * To rozwiązuje problem z placeholderami w Google Search Console.
+ */
 
 export function ArticleHeroImage({
   src,
   alt,
-  quality,
 }: {
   src: string;
   alt: string;
-  quality: number;
+  quality?: number; // kept for API compatibility but unused
 }) {
-  const [imgSrc, setImgSrc] = useState(src || PLACEHOLDER);
-
   return (
-    <Image
+    <img
       alt={alt}
-      className="object-cover opacity-75"
+      className="absolute inset-0 h-full w-full object-cover opacity-75"
       fetchPriority="high"
-      fill
-      priority
-      quality={quality}
-      sizes="100vw"
-      src={imgSrc}
-      onError={() => setImgSrc(PLACEHOLDER)}
+      loading="eager"
+      src={src}
     />
   );
 }
@@ -34,24 +26,17 @@ export function ArticleHeroImage({
 export function ArticleInlineImage({
   src,
   alt,
-  quality,
 }: {
   src: string;
   alt: string;
-  quality: number;
+  quality?: number; // kept for API compatibility but unused
 }) {
-  const [imgSrc, setImgSrc] = useState(src || PLACEHOLDER);
-
   return (
-    <Image
+    <img
       alt={alt}
       className="w-full object-cover"
-      height={600}
-      quality={quality}
-      sizes="(max-width: 768px) 100vw, (max-width: 1280px) min(100vw - 3rem, 900px), min(100vw - 22rem, 1340px)"
-      src={imgSrc}
-      width={1000}
-      onError={() => setImgSrc(PLACEHOLDER)}
+      loading="lazy"
+      src={src}
     />
   );
 }

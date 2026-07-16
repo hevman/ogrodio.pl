@@ -1,14 +1,8 @@
-"use client";
-
-import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
 import { ArrowUpRight, Clock3 } from "lucide-react";
 import type { AdviceArticle } from "@/lib/advice-types";
 import { formatArticleDate } from "@/lib/format-date";
 import { getArticlePath } from "@/lib/site-config";
-
-const PLACEHOLDER = "/images/articles/ogrod-placeholder-cover.webp";
 
 export function AdviceCard({
   article,
@@ -23,23 +17,17 @@ export function AdviceCard({
     ? `/porady/${categorySlug}/${article.slug}`
     : getArticlePath(article);
 
-  const [imgSrc, setImgSrc] = useState(article.coverImage || PLACEHOLDER);
-
   return (
     <Link
       className="group flex h-full flex-col overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm transition hover:-translate-y-0.5 hover:border-teal-200 hover:shadow-lg"
       href={href}
     >
       <div className="relative aspect-[16/10] overflow-hidden bg-slate-100">
-        <Image
+        <img
           alt={article.coverAlt}
           className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
-          fill
-          priority={priority}
-          quality={60}
-          sizes="(max-width: 768px) 100vw, (max-width: 1280px) 46vw, 31vw"
-          src={imgSrc}
-          onError={() => setImgSrc(PLACEHOLDER)}
+          loading={priority ? "eager" : "lazy"}
+          src={article.coverImage}
         />
         <span className="absolute left-4 top-4 rounded-full bg-white/95 px-3 py-1 text-xs font-bold text-teal-800 shadow-sm">
           {article.topic}

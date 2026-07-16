@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import { ShoppingBag } from "lucide-react";
 import { formatMoney, t } from "@/i18n";
@@ -29,12 +28,11 @@ export function ArticleRelatedProducts({ products, topic }: Props) {
                 className="group grid grid-cols-[52px_1fr_auto] items-center gap-3 rounded-xl border border-white/10 bg-white/5 p-2 transition hover:border-emerald-300/40 hover:bg-white/10"
                 href={`${site.shopUrl}/produkt/${product.slug}`}
               >
-                <Image
+                <img
                   alt=""
                   className="h-12 w-12 rounded-lg bg-white object-contain p-1"
-                  height={48}
+                  loading="lazy"
                   src={productImage(product)}
-                  width={48}
                 />
                 <span>
                   <span className="block text-sm font-bold leading-snug group-hover:text-emerald-100">{product.name}</span>

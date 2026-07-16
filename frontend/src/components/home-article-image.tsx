@@ -1,9 +1,7 @@
-"use client";
-
-import Image from "next/image";
-import { useState } from "react";
-
-const PLACEHOLDER = "/images/articles/ogrod-placeholder-cover.webp";
+/**
+ * Komponenty obrazów dla strony głównej.
+ * Używają natywnych <img> - obrazy już zoptymalizowane na serwerze.
+ */
 
 export function HomeLeadArticleImage({
   src,
@@ -12,17 +10,12 @@ export function HomeLeadArticleImage({
   src: string;
   alt: string;
 }) {
-  const [imgSrc, setImgSrc] = useState(src || PLACEHOLDER);
-
   return (
-    <Image
+    <img
       alt={alt}
-      className="object-cover transition duration-500 group-hover:scale-105"
-      fill
-      quality={62}
-      sizes="(max-width: 1024px) 100vw, 44vw"
-      src={imgSrc}
-      onError={() => setImgSrc(PLACEHOLDER)}
+      className="absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-105"
+      loading="lazy"
+      src={src}
     />
   );
 }
@@ -34,17 +27,12 @@ export function HomeSideArticleImage({
   src: string;
   alt: string;
 }) {
-  const [imgSrc, setImgSrc] = useState(src || PLACEHOLDER);
-
   return (
-    <Image
+    <img
       alt={alt}
-      className="object-cover transition duration-500 group-hover:scale-105"
-      fill
-      quality={56}
-      sizes="112px"
-      src={imgSrc}
-      onError={() => setImgSrc(PLACEHOLDER)}
+      className="h-28 w-28 rounded-xl object-cover transition duration-500 group-hover:scale-105"
+      loading="lazy"
+      src={src}
     />
   );
 }
