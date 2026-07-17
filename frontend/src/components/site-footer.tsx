@@ -65,8 +65,9 @@ function ShopFooter() {
               +48 791 172 155
             </a>
           </p>
-          <div className="mt-5">
+          <div className="mt-5 flex gap-2">
             <FacebookLink tone="light" />
+            <YouTubeLink tone="light" />
           </div>
         </div>
 
@@ -164,8 +165,9 @@ export function SiteFooter({ variant = "site" }: { variant?: "site" | "shop" }) 
         <div>
           <p className="text-xl font-bold tracking-tight">{t("site.name")}</p>
           <p className="mt-3 max-w-md text-sm leading-6 text-slate-500">{site.description}</p>
-          <div className="mt-5">
+          <div className="mt-5 flex gap-2">
             <FacebookLink />
+            <YouTubeLink />
           </div>
           <p className="mt-4 text-sm text-slate-500">© {new Date().getFullYear()} {t("site.name")}</p>
         </div>
