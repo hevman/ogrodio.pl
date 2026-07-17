@@ -58,6 +58,7 @@ frontend/public/images/articles/*.mov
 data/*.mp4
 data/*.webm
 data/*.mov
+data/videos/
 
 # WebP trafia do repo, więc NIE ignorujemy:
 # frontend/public/images/articles/*.webp ← celowo zakomentowane

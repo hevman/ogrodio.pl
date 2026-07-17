@@ -266,8 +266,7 @@ export default async function AdviceArticlePage({ params }: Props) {
             {article.video ? (
               <figure className="overflow-hidden rounded-3xl border border-slate-200 shadow-sm">
                 <ArticleVideo
-                  src={article.video.src}
-                  poster={article.video.poster}
+                  youtubeId={article.video.youtubeId}
                   alt={article.video.alt}
                 />
                 <figcaption className="bg-slate-50 px-5 py-3 text-sm text-slate-500">

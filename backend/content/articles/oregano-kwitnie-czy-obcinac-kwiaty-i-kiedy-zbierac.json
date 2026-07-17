@@ -26,8 +26,7 @@
     }
   ],
   "video": {
-    "src": "/videos/oregano-owady-kwitnienie/playlist.m3u8",
-    "poster": "/images/articles/oregano-kwitnienie-cover.webp",
+    "youtubeId": "TrZlkvSWFNU",
     "alt": "Film: owady — pszczoły i motyle — latające na kwitnącym oregano w ogrodzie"
   },
   "sections": [

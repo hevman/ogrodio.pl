@@ -40,8 +40,7 @@ export type AdviceInlineImage = {
 };
 
 export type AdviceVideo = {
-  src: string;
-  poster?: string;
+  youtubeId: string;  // np. "TrZlkvSWFNU"
   alt: string;
 };
 
