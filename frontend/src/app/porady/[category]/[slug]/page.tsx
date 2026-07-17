@@ -4,6 +4,7 @@ import { notFound, redirect } from "next/navigation";
 import { Camera, CheckCircle2, Clock3, ShieldCheck, UserRound } from "lucide-react";
 import { ArticleGanttChart, ArticleVarietyTable } from "@/components/article-chart";
 import { ArticleHeroImage, ArticleInlineImage } from "@/components/article-image";
+import { ArticleVideo } from "@/components/article-video";
 import { ArticleParagraph } from "@/components/article-paragraph";
 import { formatArticleDateShort } from "@/lib/format-date";
 import { ArticleInternalLinks } from "@/components/article-internal-links";
@@ -264,15 +265,11 @@ export default async function AdviceArticlePage({ params }: Props) {
 
             {article.video ? (
               <figure className="overflow-hidden rounded-3xl border border-slate-200 shadow-sm">
-                <video
-                  className="w-full"
-                  controls
-                  playsInline
+                <ArticleVideo
+                  src={article.video.src}
                   poster={article.video.poster}
-                  preload="metadata"
-                >
-                  <source src={article.video.src} type="video/mp4" />
-                </video>
+                  alt={article.video.alt}
+                />
                 <figcaption className="bg-slate-50 px-5 py-3 text-sm text-slate-500">
                   {article.video.alt}
                 </figcaption>

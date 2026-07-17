@@ -51,6 +51,14 @@ frontend/public/images/articles/*.jpg
 frontend/public/images/articles/*.jpeg
 frontend/public/images/articles/*.png
 
+# Filmy — wysyłać tylko przez SCP/PowerShell, nigdy przez git
+frontend/public/images/articles/*.mp4
+frontend/public/images/articles/*.webm
+frontend/public/images/articles/*.mov
+data/*.mp4
+data/*.webm
+data/*.mov
+
 # WebP trafia do repo, więc NIE ignorujemy:
 # frontend/public/images/articles/*.webp ← celowo zakomentowane
 
