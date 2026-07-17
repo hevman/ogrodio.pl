@@ -249,6 +249,36 @@ export default async function AdviceArticlePage({ params }: Props) {
               </div>
             ))}
 
+            {article.extraImages && article.extraImages.length > 0 ? (
+              <div className="space-y-6">
+                {article.extraImages.map((img) => (
+                  <figure key={img.src} className="overflow-hidden rounded-3xl border border-slate-200 shadow-sm">
+                    <ArticleInlineImage src={img.src} alt={img.alt} />
+                    <figcaption className="bg-slate-50 px-5 py-3 text-sm text-slate-500">
+                      {img.alt}
+                    </figcaption>
+                  </figure>
+                ))}
+              </div>
+            ) : null}
+
+            {article.video ? (
+              <figure className="overflow-hidden rounded-3xl border border-slate-200 shadow-sm">
+                <video
+                  className="w-full"
+                  controls
+                  playsInline
+                  poster={article.video.poster}
+                  preload="metadata"
+                >
+                  <source src={article.video.src} type="video/mp4" />
+                </video>
+                <figcaption className="bg-slate-50 px-5 py-3 text-sm text-slate-500">
+                  {article.video.alt}
+                </figcaption>
+              </figure>
+            ) : null}
+
             {ganttRows.length > 0 ? (
               <ArticleGanttChart
                 rows={ganttRows}

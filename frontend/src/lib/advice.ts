@@ -42,6 +42,8 @@ function transformArticle(article: any): AdviceArticle {
       keywords: article.seo_keywords || [],
     },
     inlineImage: article.inlineImage ?? article.inline_image ?? undefined,
+    extraImages: article.extraImages ?? article.extra_images ?? undefined,
+    video: article.video ?? undefined,
     ganttChart: article.ganttChart ?? article.gantt_chart ?? undefined,
     varietyTable: article.varietyTable ?? article.variety_table ?? undefined,
   };

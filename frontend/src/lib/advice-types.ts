@@ -39,6 +39,12 @@ export type AdviceInlineImage = {
   alt: string;
 };
 
+export type AdviceVideo = {
+  src: string;
+  poster?: string;
+  alt: string;
+};
+
 export type GanttChartRow = {
   name: string;
   group: string;
@@ -81,6 +87,8 @@ export type AdviceArticle = {
   discover?: AdviceDiscover;
   faq?: AdviceFaq[];
   inlineImage?: AdviceInlineImage;
+  extraImages?: AdviceInlineImage[];
+  video?: AdviceVideo;
   ganttChart?: GanttChart;
   varietyTable?: VarietyTable;
   readingMinutes: number;
