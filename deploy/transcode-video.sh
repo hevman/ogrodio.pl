@@ -64,10 +64,10 @@ docker run --rm \
   -i "/input/${NAME}.mp4" \
   -filter_complex \
     "[0:v]split=4[v1][v2][v3][v4]; \
-     [v1]scale=w=854:h=480:force_original_aspect_ratio=decrease[v480]; \
-     [v2]scale=w=1280:h=720:force_original_aspect_ratio=decrease[v720]; \
-     [v3]scale=w=1920:h=1080:force_original_aspect_ratio=decrease[v1080]; \
-     [v4]scale=w=3840:h=2160:force_original_aspect_ratio=decrease[v2160]" \
+     [v1]scale=w=trunc(oh*a/2)*2:h=480[v480]; \
+     [v2]scale=w=trunc(oh*a/2)*2:h=720[v720]; \
+     [v3]scale=w=trunc(oh*a/2)*2:h=1080[v1080]; \
+     [v4]scale=w=trunc(oh*a/2)*2:h=2160[v2160]" \
   -map "[v480]"  -map 0:a? -c:v:0 libx264 -crf 23 -preset fast -c:a:0 aac -b:a:0 96k  \
     -hls_time 6 -hls_playlist_type vod -hls_segment_filename /output/480p_%04d.ts \
     /output/480p.m3u8 \
