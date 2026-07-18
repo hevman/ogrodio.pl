@@ -20,13 +20,13 @@ import { shopPath } from "@/lib/shop-url";
 export const revalidate = 300;
 
 export const metadata: Metadata = {
-  title: t("home.metaTitle"),
+  title: "Porady ogrodnicze, aplikacja i sklep | Ogrodio",
   description: t("home.metaDescription"),
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: t("home.metaTitle"),
+    title: "Porady ogrodnicze, aplikacja i sklep | Ogrodio",
     description: site.description,
     images: [
       {

@@ -33,7 +33,7 @@ export async function generateMetadata(): Promise<Metadata> {
 
   return {
     metadataBase: new URL(site.publicUrl),
-    title: `${site.name} — platforma ogrodnicza`,
+    title: `Porady ogrodnicze i aplikacja | ${site.name}`,
     description: site.description,
     applicationName: site.name,
     manifest: "/site.webmanifest",
