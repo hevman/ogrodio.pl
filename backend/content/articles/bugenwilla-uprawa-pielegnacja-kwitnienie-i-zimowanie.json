@@ -587,20 +587,33 @@
       "Bougainvillea glabra"
     ]
   },
-  "sources": [
-    {
-      "name": "Royal Horticultural Society — How to grow Bougainvillea",
-      "note": "Uprawa w pojemniku, wymagania świetlne i temperaturowe, podlewanie, nawożenie, cięcie, zimowanie oraz rozmnażanie."
-    },
-    {
-      "name": "North Carolina Extension — Bougainvillea glabra",
-      "note": "Charakterystyka gatunku, rola barwnych przykwiatków, wymagania glebowe, tolerancja suszy i problemy z chlorozą."
-    },
-    {
-      "name": "Missouri Botanical Garden — Bougainvillea",
-      "note": "Pokrój, zastosowanie jako pnącze i znaczenie chłodniejszego okresu spoczynku dla kwitnienia."
-    }
+  "related_services": [
+    "Projektowanie ogrodów balkonowych",
+    "Pielęgnacja roślin doniczkowych",
+    "Dobór roślin na balkony i tarasy",
+    "Konsultacje ogrodnicze"
   ],
+  "related_articles": [
+    "begonia-uprawa-pielegnacja-podlewanie-i-zimowanie",
+    "hortensja-uprawa-pielegnacja",
+    "jak-przygotowac-ogrod-na-wiosne"
+  ],
+  "seo": {
+    "title": "Bugenwilla — uprawa, pielęgnacja i zimowanie | Poradnik",
+    "description": "Jak uprawiać bugenwillę w donicy? Sprawdź jak podlewać, nawozić, przycinać i zimować bugenwillę oraz dlaczego nie kwitnie mimo dużej ilości liści.",
+    "keywords": [
+      "bugenwilla uprawa",
+      "bugenwilla pielęgnacja",
+      "bugenwilla w donicy",
+      "bugenwilla na balkonie",
+      "bugenwilla podlewanie",
+      "bugenwilla zimowanie",
+      "bugenwilla przycinanie",
+      "dlaczego bugenwilla nie kwitnie",
+      "bugenwilla kwitnienie",
+      "Bougainvillea glabra"
+    ]
+  },
   "status": "published",
   "published_at": "2026-07-18T00:00:00Z",
   "created_at": "2026-07-18T00:00:00Z",
