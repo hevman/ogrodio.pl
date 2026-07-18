@@ -13,7 +13,7 @@
     "image": "/images/articles/pajak-w-domu-cover.webp",
     "imageAlt": "Nuctenea umbratica — duży płaski ciemnobrązowy pająk na ścianie, gatunek żyjący pod korą i w szczelinach budynków",
     "angle": "przyroda w ogrodzie",
-    "freshness": "2026-07-04"
+    "freshness": "2026-07-18"
   },
   "inline_image": {
     "src": "/images/articles/pajak-w-domu-detail.webp",
@@ -124,5 +124,5 @@
   "status": "published",
   "published_at": "2026-07-08T00:00:00Z",
   "created_at": "2026-07-08T00:00:00Z",
-  "updated_at": "2026-07-08T00:00:00Z"
+  "updated_at": "2026-07-18T00:00:00Z"
 }
