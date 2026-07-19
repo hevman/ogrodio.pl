@@ -12,12 +12,10 @@ function articleSearchText(article: AdviceArticle) {
     article.slug,
     article.topic,
     article.summary,
+    article.coverAlt,
     article.seo.title,
     article.seo.description,
     ...(article.seo.keywords || []),
-    ...(article.tips || []),
-    ...(article.sections || []).flatMap((section) => [section.heading, ...(section.paragraphs || [])]),
-    ...(article.faq || []).flatMap((item) => [item.question, item.answer]),
   ].join(" ");
 }
 

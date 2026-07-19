@@ -61,7 +61,7 @@ export function PlantCatalogBrowser({
   );
 
   return (
-    <>
+    <div className="min-w-0">
       <div className="mb-6 rounded-2xl border border-slate-200 bg-white p-4 shadow-sm sm:p-5">
         <div className="relative">
           <Search className="pointer-events-none absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400" />
@@ -173,6 +173,6 @@ export function PlantCatalogBrowser({
           ))}
         </div>
       )}
-    </>
+    </div>
   );
 }
