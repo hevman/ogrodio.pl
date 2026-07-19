@@ -2,19 +2,50 @@ import type { AdviceArticle } from "@/lib/advice-types";
 import type { Product } from "@/lib/shop-api";
 import { searchProductsServer } from "@/lib/products-search";
 
-/** Mapowanie tematu poradnika → zapytanie i kategoria sklepu */
-const TOPIC_SHOP_HINTS: Record<string, { query: string; category?: string }> = {
-  Trawnik: { query: "nawóz trawnik", category: "ziemie-i-nawozy" },
-  Pielęgnacja: { query: "nawóz", category: "ziemie-i-nawozy" },
-  "Choroby i szkodniki": { query: "nawóz", category: "ziemie-i-nawozy" },
-  "Owoce w ogrodzie": { query: "borówka", category: "ziola" },
-  "Rośliny ozdobne": { query: "lawenda", category: "balkon-i-taras" },
-  "Rośliny domowe i balkonowe": { query: "pelargonia", category: "rosliny-domowe" },
-  Warzywnik: { query: "bazylia", category: "ziola" },
-  "Wysiew nasion i sadzenie": { query: "ziemia", category: "ziemie-i-nawozy" },
-  "Przyroda w ogrodzie": { query: "donica", category: "donice-i-oslonki" },
-  "Oczko wodne": { query: "nawadnianie", category: "nawadnianie" },
+const PRODUCT_TOPIC_TERMS: Record<string, string[]> = {
+  "borowki-bez-bledow-ebook": [
+    "borowka",
+    "borowki",
+    "borowek",
+    "blueberry",
+    "kwasna gleba",
+    "ph gleby",
+    "chloroza borowki",
+  ],
+  "pomidory-bez-bledow-ebook": [
+    "pomidor",
+    "pomidory",
+    "pomidorow",
+    "rozsada pomidora",
+    "zaraza ziemniaczana",
+    "tunel foliowy",
+    "wilki pomidora",
+  ],
 };
+
+function normalize(value: string) {
+  return value
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase();
+}
+
+function articleHaystack(article: AdviceArticle) {
+  return normalize(
+    [
+      article.title,
+      article.topic,
+      article.summary,
+      article.seo?.title,
+      article.seo?.description,
+      ...(article.seo?.keywords ?? []),
+      ...article.sections.flatMap((section) => [section.heading, ...section.paragraphs]),
+      ...(article.faq ?? []).flatMap((item) => [item.question, item.answer]),
+    ]
+      .filter(Boolean)
+      .join(" "),
+  );
+}
 
 function dedupeProducts(products: Product[]) {
   const seen = new Set<string>();
@@ -25,27 +56,35 @@ function dedupeProducts(products: Product[]) {
   });
 }
 
+function isExplicitProduct(product: Product, explicitIds: Set<string>) {
+  return [product.slug, product.variantId, product.id, product.sku]
+    .filter(Boolean)
+    .some((value) => explicitIds.has(String(value)));
+}
+
+function isRelevantProduct(product: Product, haystack: string) {
+  const terms = PRODUCT_TOPIC_TERMS[product.slug];
+  if (!terms?.length) return false;
+
+  return terms.some((term) => haystack.includes(normalize(term)));
+}
+
 export async function getAdviceRelatedProducts(article: AdviceArticle, limit = 3): Promise<Product[]> {
-  const hint = TOPIC_SHOP_HINTS[article.topic];
-  const keyword = article.seo.keywords?.[0] || "";
-  const query = hint?.query || keyword || article.topic.split(" ")[0] || "ogród";
-
-  const byTopic = await searchProductsServer({
-    q: query,
-    category: hint?.category || "all",
+  const products = await searchProductsServer({
     stock: "in-stock",
-    limit: 8,
+    limit: 100,
   });
 
-  if (byTopic.length >= limit) {
-    return dedupeProducts(byTopic).slice(0, limit);
-  }
+  if (!products.length) return [];
 
-  const fallback = await searchProductsServer({
-    q: query,
-    stock: "in-stock",
-    limit: 8,
+  const explicitIds = new Set((article.relatedProductIds ?? []).map((id) => String(id)));
+  const haystack = articleHaystack(article);
+
+  const explicitProducts = products.filter((product) => isExplicitProduct(product, explicitIds));
+  const automaticProducts = products.filter((product) => {
+    if (isExplicitProduct(product, explicitIds)) return false;
+    return isRelevantProduct(product, haystack);
   });
 
-  return dedupeProducts([...byTopic, ...fallback]).slice(0, limit);
+  return dedupeProducts([...explicitProducts, ...automaticProducts]).slice(0, limit);
 }

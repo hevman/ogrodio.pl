@@ -36,6 +36,7 @@ function transformArticle(article: any): AdviceArticle {
       ? article.tips.map((t: any) => (typeof t === "string" ? t : t?.tip ?? ""))
       : [],
     relatedArticles: article.relatedArticles ?? article.related_articles ?? [],
+    relatedProductIds: article.relatedProductIds ?? article.related_product_ids ?? [],
     seo: article.seo || {
       title: article.seo_title || "",
       description: article.seo_description || "",

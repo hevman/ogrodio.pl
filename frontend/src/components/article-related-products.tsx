@@ -28,6 +28,8 @@ function ProductImage({ product }: { product: Product }) {
 }
 
 export function ArticleRelatedProducts({ products, topic }: Props) {
+  if (!products.length) return null;
+
   return (
     <div className="rounded-3xl border border-emerald-200 bg-emerald-950 p-6 text-white">
       <p className="inline-flex items-center gap-2 text-sm font-semibold text-emerald-200">

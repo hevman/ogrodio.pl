@@ -92,6 +92,7 @@ export type AdviceArticle = {
   varietyTable?: VarietyTable;
   readingMinutes: number;
   relatedArticles?: string[];
+  relatedProductIds?: string[];
   sections: AdviceSection[];
   seo: AdviceSeo;
   slug: string;
