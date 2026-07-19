@@ -54,6 +54,7 @@ export type GardenTask = {
   status?: "suggested" | "open" | "done" | "skipped";
   dueDate?: string | null;
   repeatRule?: string;
+  articleHref?: string | null;
   source?: "seasonal" | "manual";
   templateId?: string;
   completedAt?: string | null;

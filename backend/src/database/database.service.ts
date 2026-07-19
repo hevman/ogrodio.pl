@@ -196,6 +196,7 @@ export class DatabaseService implements OnModuleInit, OnModuleDestroy {
         assigned_user_id INTEGER REFERENCES shop_users(id) ON DELETE SET NULL,
         title TEXT NOT NULL,
         description TEXT NOT NULL DEFAULT '',
+        article_href TEXT NOT NULL DEFAULT '',
         kind TEXT NOT NULL DEFAULT 'custom',
         priority TEXT NOT NULL DEFAULT 'medium',
         status TEXT NOT NULL DEFAULT 'open',
@@ -211,6 +212,9 @@ export class DatabaseService implements OnModuleInit, OnModuleDestroy {
         ON garden_tasks (organization_id, due_date, status);
       CREATE INDEX IF NOT EXISTS garden_tasks_plant_idx
         ON garden_tasks (plant_id, due_date);
+
+      ALTER TABLE garden_tasks
+        ADD COLUMN IF NOT EXISTS article_href TEXT NOT NULL DEFAULT '';
 
       CREATE TABLE IF NOT EXISTS garden_journal_entries (
         id SERIAL PRIMARY KEY,

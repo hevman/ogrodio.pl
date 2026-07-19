@@ -1,149 +1,144 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowUpRight, Bell, BookOpen, CalendarDays, Leaf, Smartphone } from "lucide-react";
+import { ArrowUpRight, Bell, BookOpen, CalendarDays, CheckCircle2, ClipboardList, Leaf, Smartphone } from "lucide-react";
 import { PageSection, PageShell } from "@/components/page-shell";
-import { getPlantCatalog } from "@/lib/plant-catalog";
+import { getPlantCatalog, getPlantIntelligence } from "@/lib/plant-catalog";
 import { site } from "@/lib/site-config";
 
 export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
-  title: "Plan opieki nad roślinami - Ogrodio",
+  title: "Plan opieki nad roślinami | Ogrodio",
   description:
-    "Ogrodio pokazuje, co zrobić przy konkretnej roślinie teraz, o czym pamiętać w kolejnych miesiącach i które poradniki warto przeczytać.",
+    "Sprawdź, co warto zrobić teraz przy swoich roślinach. Ogrodio łączy katalog, sezonowy plan prac, poradniki i kalendarz w aplikacji.",
   alternates: { canonical: "/ogrodio-plant-intelligence" },
   openGraph: {
-    title: "Plan opieki nad roślinami w Ogrodio",
-    description:
-      "Katalog roślin połączony z kalendarzem w aplikacji: prace sezonowe, typowe problemy i poradniki w jednym miejscu.",
+    title: "Plan opieki nad roślinami | Ogrodio",
+    description: "Katalog roślin, sezonowe prace, ryzyka i przypomnienia w jednym planie.",
     type: "website",
     url: "/ogrodio-plant-intelligence",
   },
 };
 
-const faqItems = [
+const steps = [
   {
-    question: "Po co jest plan opieki przy roślinie?",
-    answer:
-      "Żeby szybko zobaczyć, co przy danej roślinie warto zrobić teraz: siać, podlewać, ciąć, zebrać plon albo sprawdzić typowy problem.",
+    icon: Leaf,
+    title: "Wybierasz roślinę",
+    text: "Karta pokazuje wymagania, sezonowe ryzyka i sprawdzone poradniki, bez przepisywania całej encyklopedii.",
   },
   {
-    question: "Czy to działa też w aplikacji?",
-    answer:
-      "Tak. Po dodaniu rośliny do swojego ogrodu Ogrodio może pokazywać te same prace w kalendarzu i przypominać o nich wtedy, kiedy są potrzebne.",
+    icon: ClipboardList,
+    title: "Dodajesz ją do swojego ogrodu",
+    text: "W aplikacji zapisujesz odmianę, miejsce, datę posadzenia i kondycję konkretnego egzemplarza.",
   },
-  {
-    question: "Skąd biorą się poradniki przy roślinie?",
-    answer:
-      "Każda karta rośliny jest połączona z poradnikami Ogrodio. Jeśli problem albo praca wymaga szerszego wyjaśnienia, karta prowadzi do właściwego artykułu.",
-  },
-] as const;
-
-const benefits = [
   {
     icon: CalendarDays,
-    title: "Wiesz, co zrobić teraz",
-    text: "Na karcie rośliny od razu widać najbliższe prace, zamiast szukać ich w długim artykule.",
+    title: "Dostajesz plan prac",
+    text: "Kalendarz pokazuje zadania właściwe dla sezonu. Możesz je przyjąć, zaplanować na dzień i oznaczyć jako wykonane.",
   },
   {
     icon: Bell,
-    title: "Nie gubisz terminów",
-    text: "Po dodaniu rośliny do aplikacji te same prace mogą pojawić się w Twoim kalendarzu ogrodowym.",
-  },
-  {
-    icon: BookOpen,
-    title: "Masz przejście do poradników",
-    text: "Katalog prowadzi do konkretnych tekstów o uprawie, chorobach, błędach i zbiorach.",
-  },
-  {
-    icon: Smartphone,
-    title: "Katalog i aplikacja mówią jednym głosem",
-    text: "To, co czytasz publicznie, jest tym samym kierunkiem opieki, który dostajesz w aplikacji.",
+    title: "Zapisujesz obserwacje",
+    text: "Zdjęcia i notatki pozostają przy roślinie, więc kolejna decyzja ma historię, a nie tylko ogólną poradę z internetu.",
   },
 ] as const;
 
+function taskTypeLabel(type: string) {
+  if (type === "start") return "sadzenie i siew";
+  if (type === "harvest") return "zbiory";
+  return "pielęgnacja";
+}
+
 export default async function PlantIntelligencePage() {
   const plantCatalog = await getPlantCatalog();
+  const livePlans = plantCatalog
+    .map((plant) => ({ plant, intelligence: getPlantIntelligence(plant) }))
+    .filter(({ intelligence }) => intelligence.actionWindow.entries.length > 0)
+    .slice(0, 3);
   const pageUrl = `${site.publicUrl}/ogrodio-plant-intelligence`;
 
-  const jsonLd = [
-    {
-      "@context": "https://schema.org",
-      "@type": "WebPage",
-      name: "Plan opieki nad roślinami Ogrodio",
-      description: metadata.description,
-      url: pageUrl,
-      isPartOf: {
-        "@type": "WebSite",
-        name: site.name,
-        url: site.publicUrl,
-      },
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name: "Plan opieki nad roślinami Ogrodio",
+    description: metadata.description,
+    url: pageUrl,
+    isPartOf: {
+      "@type": "WebSite",
+      name: site.name,
+      url: site.publicUrl,
     },
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      mainEntity: faqItems.map((item) => ({
-        "@type": "Question",
-        name: item.question,
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: item.answer,
-        },
-      })),
-    },
-  ];
+  };
 
   return (
     <>
-      <script
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        type="application/ld+json"
-      />
-
+      <script dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} type="application/ld+json" />
       <PageShell
         breadcrumb={[
           { href: "/", label: "Start" },
           { href: "/katalog-roslin", label: "Katalog roślin" },
           { label: "Plan opieki" },
         ]}
-        description="Katalog roślin w Ogrodio nie ma być encyklopedią do czytania raz. Ma podpowiadać, co zrobić przy roślinie teraz, a po dodaniu jej do aplikacji pomagać pamiętać o pracach w sezonie."
-        eyebrow="Katalog i aplikacja"
-        title="Plan opieki nad rośliną w Ogrodio"
+        description="Nie kolejny opis rośliny. Jeden system, który zamienia dane z katalogu w konkretne decyzje, zadania i historię Twojego ogrodu."
+        eyebrow="Ogrodio Plant Intelligence"
+        title="Wiesz, co robić przy roślinie teraz"
       >
         <PageSection>
           <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_320px] lg:items-start">
-            <div className="space-y-8">
-              <section className="rounded-2xl border border-teal-100 bg-[#f2fbf8] p-6 sm:p-8">
+            <div className="space-y-10">
+              <section className="rounded-2xl border border-teal-200 bg-[#f2fbf8] p-6 sm:p-8">
                 <div className="flex items-start gap-4">
                   <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-white text-teal-700 shadow-sm">
-                    <Leaf className="h-6 w-6" />
+                    <CalendarDays className="h-6 w-6" />
                   </span>
                   <div>
-                    <h2 className="text-2xl font-bold text-slate-900">O co chodzi?</h2>
-                    <p className="mt-3 text-base leading-8 text-slate-700">
-                      Przy każdej roślinie zbieramy najważniejsze prace sezonowe, typowe problemy i poradniki. Dzięki temu karta
-                      nie kończy się na opisie „lubi słońce i żyzną ziemię”, tylko mówi prostym językiem: co zrobić teraz,
-                      czego pilnować i gdzie przeczytać więcej.
-                    </p>
-                    <p className="mt-3 text-base leading-8 text-slate-700">
-                      Ten sam plan może potem działać w aplikacji. Dodajesz roślinę do swojego ogrodu, a Ogrodio ma z czego
-                      zbudować przypomnienia w kalendarzu.
+                    <p className="text-sm font-bold uppercase tracking-wide text-teal-700">Plan na bieżący sezon</p>
+                    <h2 className="mt-1 text-2xl font-bold text-slate-900">Katalog, który prowadzi do działania</h2>
+                    <p className="mt-3 max-w-3xl text-base leading-8 text-slate-700">
+                      Każda karta rośliny zawiera ten sam zestaw danych: kalendarz prac, ryzyka sezonowe, objawy, odmiany i linki do poradników.
+                      Po dodaniu rośliny do aplikacji te dane stają się planem Twojego ogrodu.
                     </p>
                   </div>
                 </div>
               </section>
 
               <section>
-                <p className="text-sm font-bold uppercase tracking-wide text-teal-700">Korzyści</p>
-                <h2 className="mt-1 text-2xl font-bold text-slate-900">Co widzi użytkownik</h2>
-                <div className="mt-5 grid gap-4 md:grid-cols-2">
-                  {benefits.map((benefit) => {
-                    const Icon = benefit.icon;
+                <p className="text-sm font-bold uppercase tracking-wide text-teal-700">Teraz w katalogu</p>
+                <h2 className="mt-1 text-2xl font-bold text-slate-900">Przykładowe najbliższe prace</h2>
+                <p className="mt-2 text-sm leading-6 text-slate-600">To żywe dane z kart roślin, a nie przykładowy tekst marketingowy.</p>
+                <div className="mt-5 grid gap-4 md:grid-cols-3">
+                  {livePlans.map(({ plant, intelligence }) => {
+                    const task = intelligence.actionWindow.entries[0];
                     return (
-                      <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm" key={benefit.title}>
+                      <Link
+                        className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition hover:border-teal-300 hover:bg-teal-50/40"
+                        href={`/katalog-roslin/${plant.slug}`}
+                        key={plant.slug}
+                      >
+                        <p className="text-xs font-black uppercase tracking-wide text-teal-700">{intelligence.actionWindow.label}</p>
+                        <h3 className="mt-2 text-lg font-bold text-slate-900">{plant.name}</h3>
+                        <p className="mt-3 text-sm font-bold text-slate-700">{taskTypeLabel(task.type)}</p>
+                        <p className="mt-1 text-sm leading-6 text-slate-600">{task.task}</p>
+                        <span className="mt-4 inline-flex items-center gap-1 text-sm font-bold text-teal-700">
+                          Zobacz pełny plan <ArrowUpRight className="h-4 w-4" />
+                        </span>
+                      </Link>
+                    );
+                  })}
+                </div>
+              </section>
+
+              <section>
+                <p className="text-sm font-bold uppercase tracking-wide text-teal-700">Jeden obieg danych</p>
+                <h2 className="mt-1 text-2xl font-bold text-slate-900">Od wiedzy do własnego ogrodu</h2>
+                <div className="mt-5 grid gap-4 md:grid-cols-2">
+                  {steps.map((step) => {
+                    const Icon = step.icon;
+                    return (
+                      <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm" key={step.title}>
                         <Icon className="h-5 w-5 text-teal-700" />
-                        <h3 className="mt-3 text-lg font-bold text-slate-900">{benefit.title}</h3>
-                        <p className="mt-2 text-sm leading-6 text-slate-600">{benefit.text}</p>
+                        <h3 className="mt-3 text-lg font-bold text-slate-900">{step.title}</h3>
+                        <p className="mt-2 text-sm leading-6 text-slate-600">{step.text}</p>
                       </div>
                     );
                   })}
@@ -151,70 +146,41 @@ export default async function PlantIntelligencePage() {
               </section>
 
               <section className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
-                <h2 className="text-2xl font-bold text-slate-900">Jak to wygląda w praktyce</h2>
-                <div className="mt-5 grid gap-3 text-sm text-slate-700">
-                  {[
-                    "Na stronie sałaty widzisz, kiedy siać i kiedy zbierać liście.",
-                    "Przy borówce dostajesz przypomnienia o podlewaniu i kontroli pH.",
-                    "Przy roślinie z typowym problemem karta prowadzi do poradnika, a nie do ogólnej listy artykułów.",
-                    "W aplikacji ta sama roślina może zasilać kalendarz prac w Twoim ogrodzie.",
-                  ].map((item) => (
-                    <div className="flex gap-3 rounded-xl bg-slate-50 px-4 py-3" key={item}>
-                      <Leaf className="mt-0.5 h-4 w-4 shrink-0 text-teal-700" />
-                      {item}
-                    </div>
-                  ))}
-                </div>
-              </section>
-
-              <section>
-                <p className="text-sm font-bold uppercase tracking-wide text-teal-700">FAQ</p>
-                <h2 className="mt-1 text-2xl font-bold text-slate-900">Najczęstsze pytania</h2>
-                <div className="mt-5 grid gap-3">
-                  {faqItems.map((item) => (
-                    <details className="group rounded-2xl border border-slate-200 bg-white p-5 shadow-sm" key={item.question}>
-                      <summary className="cursor-pointer list-none font-bold text-slate-900 marker:content-none">
-                        {item.question}
-                      </summary>
-                      <p className="mt-3 text-sm leading-7 text-slate-600">{item.answer}</p>
-                    </details>
-                  ))}
+                <div className="flex items-start gap-4">
+                  <BookOpen className="mt-1 h-5 w-5 shrink-0 text-teal-700" />
+                  <div>
+                    <h2 className="text-2xl font-bold text-slate-900">Poradnik wtedy, gdy jest potrzebny</h2>
+                    <p className="mt-3 text-base leading-7 text-slate-700">
+                      Karta nie zastępuje poradnika. Ma rozpoznać moment: sadzenie, żółknące liście, suszę lub zbiór, a potem prowadzić do tekstu,
+                      który rozwija właśnie ten temat. Dzięki temu katalog jest narzędziem, a poradniki odpowiadają na konkretne pytania.
+                    </p>
+                  </div>
                 </div>
               </section>
             </div>
 
             <aside className="space-y-4 lg:sticky lg:top-24">
               <div className="rounded-2xl border border-teal-200 bg-[#f4f7f2] p-5">
-                <p className="text-sm font-bold uppercase tracking-wide text-teal-700">Zobacz na karcie</p>
+                <p className="text-sm font-bold uppercase tracking-wide text-teal-700">Zacznij od rośliny</p>
                 <p className="mt-3 text-sm leading-6 text-slate-700">
-                  Najlepiej widać to na konkretnej roślinie: plan opieki, problemy i poradniki są w jednym miejscu.
+                  W katalogu jest dziś {plantCatalog.length} roślin z danymi gotowymi do użycia w planie opieki.
                 </p>
-                <Link
-                  className="mt-4 inline-flex h-11 w-full items-center justify-center rounded-xl bg-teal-700 px-4 text-sm font-bold text-white transition hover:bg-teal-800"
-                  href="/katalog-roslin/salata-lisciowa"
-                >
-                  Przykład: sałata liściowa
-                </Link>
-                <Link
-                  className="mt-3 inline-flex h-11 w-full items-center justify-center gap-2 rounded-xl border border-slate-200 bg-white px-4 text-sm font-bold text-slate-700 transition hover:border-teal-200 hover:text-teal-700"
-                  href="/katalog-roslin"
-                >
-                  Cały katalog
-                  <ArrowUpRight className="h-4 w-4" />
+                <Link className="mt-4 inline-flex h-11 w-full items-center justify-center gap-2 rounded-xl bg-teal-700 px-4 text-sm font-bold text-white transition hover:bg-teal-800" href="/katalog-roslin">
+                  Otwórz katalog <ArrowUpRight className="h-4 w-4" />
                 </Link>
               </div>
-
               <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
-                <p className="text-sm font-bold text-slate-900">{plantCatalog.length} roślin w pierwszym katalogu</p>
-                <p className="mt-2 text-sm leading-6 text-slate-600">
-                  Wolimy mniej kart, ale takich, które można realnie połączyć z poradnikami i kalendarzem.
-                </p>
-                <a
-                  className="mt-4 inline-flex h-11 w-full items-center justify-center rounded-xl bg-slate-900 px-4 text-sm font-bold text-white transition hover:bg-slate-800"
-                  href={site.appUrl}
-                >
-                  Otwórz aplikację Ogrodio
+                <Smartphone className="h-5 w-5 text-teal-700" />
+                <h2 className="mt-3 text-lg font-bold text-slate-900">Masz już roślinę?</h2>
+                <p className="mt-2 text-sm leading-6 text-slate-600">Dodaj ją do aplikacji, aby przypisać plan do swojego miejsca, odmiany i historii uprawy.</p>
+                <a className="mt-4 inline-flex h-11 w-full items-center justify-center rounded-xl bg-slate-900 px-4 text-sm font-bold text-white transition hover:bg-slate-800" href={`${site.appUrl}/plants`}>
+                  Otwórz mój ogród
                 </a>
+              </div>
+              <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+                <CheckCircle2 className="h-5 w-5 text-emerald-700" />
+                <p className="mt-3 text-sm font-bold text-slate-900">Najpierw reguły i dane, potem automatyzacja.</p>
+                <p className="mt-2 text-sm leading-6 text-slate-600">Ogrodio nie zgaduje. Podpowiedź zawsze wynika z opisu konkretnej rośliny i sezonu.</p>
               </div>
             </aside>
           </div>

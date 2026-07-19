@@ -19,17 +19,24 @@ type PlantDefinition = {
 type TaskTemplate = {
   plantTypes: string[];
   months: number[];
+  week?: "1" | "2" | "3" | "4" | "1-2" | "3-4" | "cały" | null;
   title: string;
   description: string;
   priority: "low" | "medium" | "high";
   kind: "watering" | "fertilizing" | "cutting" | "inspection" | "protection" | "custom";
+  articleHref?: string | null;
 };
 
 type PlantTaskType = "start" | "care" | "harvest";
 
 type PlantCalendarMonthJson = {
   month: string;
-  tasks: { task: string; type: PlantTaskType }[];
+  tasks: {
+    task: string;
+    type: PlantTaskType;
+    week?: "1" | "2" | "3" | "4" | "1-2" | "3-4" | "cały" | null;
+    articleHref?: string | null;
+  }[];
 };
 
 type PlantCatalogJson = {
@@ -120,6 +127,20 @@ function taskPriority(kind: TaskTemplate["kind"], type: PlantTaskType): TaskTemp
   return "medium";
 }
 
+function suggestedTaskDate(year: number, month: number, week?: TaskTemplate["week"]) {
+  const dayByWeek: Record<NonNullable<TaskTemplate["week"]>, number> = {
+    "1": 4,
+    "2": 11,
+    "3": 18,
+    "4": 25,
+    "1-2": 7,
+    "3-4": 21,
+    "cały": 15,
+  };
+  const day = week ? dayByWeek[week] : 15;
+  return `${year}-${String(month).padStart(2, "0")}-${String(day).padStart(2, "0")}`;
+}
+
 function plantTypes(plant: PlantCatalogJson) {
   return [plant.slug, ...(plant.appAliases || [])];
 }
@@ -148,10 +169,12 @@ const TASKS: TaskTemplate[] = PLANT_CATALOG.flatMap((plant) =>
       return [{
         plantTypes: plantTypes(plant),
         months: [month],
+        week: task.week ?? null,
         title: task.task,
         description: `${plant.name}: ${task.task}. ${plant.summary}`,
         priority: taskPriority(kind, task.type),
         kind,
+        articleHref: task.articleHref ?? null,
       }];
     }),
   ),
@@ -917,7 +940,7 @@ export class GardenAssistantService {
               plant.plant_type AS "plantType", task.location_id AS "locationId",
               loc.name AS "locationName", task.assigned_user_id AS "assignedUserId",
               assigned.name AS "assignedUserName", assigned.email AS "assignedUserEmail",
-              task.title, task.description, task.priority,
+              task.title, task.description, task.article_href AS "articleHref", task.priority,
               task.kind, task.status, task.due_date AS "dueDate", task.repeat_rule AS "repeatRule",
               task.completed_at AS "completedAt", task.created_at AS "createdAt"
        FROM garden_tasks task
@@ -944,7 +967,8 @@ export class GardenAssistantService {
           priority: task.priority,
           kind: task.kind,
           status: "suggested",
-          dueDate: null,
+          dueDate: suggestedTaskDate(new Date().getFullYear(), month, task.week),
+          articleHref: task.articleHref ?? null,
           source: "seasonal",
         }));
     });
@@ -973,10 +997,10 @@ export class GardenAssistantService {
     if (!template) throw new NotFoundException("Nie znaleziono rekomendacji sezonowej");
 
     const year = new Date().getFullYear();
-    const dueDate = body?.dueDate || body?.due_date || `${year}-${String(month).padStart(2, "0")}-01`;
+    const dueDate = body?.dueDate || body?.due_date || suggestedTaskDate(year, month, template.week);
     const existing = await this.db.query(
       `SELECT id::TEXT, plant_id AS "plantId", location_id AS "locationId", assigned_user_id AS "assignedUserId",
-              title, description, kind, priority, status, due_date AS "dueDate", repeat_rule AS "repeatRule",
+              title, description, article_href AS "articleHref", kind, priority, status, due_date AS "dueDate", repeat_rule AS "repeatRule",
               created_at AS "createdAt"
        FROM garden_tasks
        WHERE organization_id = $1
@@ -992,10 +1016,10 @@ export class GardenAssistantService {
     }
 
     const result = await this.db.query(
-      `INSERT INTO garden_tasks (organization_id, plant_id, location_id, title, description, kind, priority, status, due_date, repeat_rule, created_by)
-       VALUES ($1, $2, $3, $4, $5, $6, $7, 'open', $8, 'seasonal', $9)
+      `INSERT INTO garden_tasks (organization_id, plant_id, location_id, title, description, article_href, kind, priority, status, due_date, repeat_rule, created_by)
+       VALUES ($1, $2, $3, $4, $5, $6, $7, $8, 'open', $9, 'seasonal', $10)
        RETURNING id::TEXT, plant_id AS "plantId", location_id AS "locationId", assigned_user_id AS "assignedUserId",
-                 title, description, kind, priority, status, due_date AS "dueDate", repeat_rule AS "repeatRule",
+                 title, description, article_href AS "articleHref", kind, priority, status, due_date AS "dueDate", repeat_rule AS "repeatRule",
                  created_at AS "createdAt"`,
       [
         organization.id,
@@ -1003,6 +1027,7 @@ export class GardenAssistantService {
         plant.locationId || null,
         template.title,
         template.description,
+        template.articleHref || "",
         template.kind,
         template.priority,
         dueDate,
@@ -1054,7 +1079,7 @@ export class GardenAssistantService {
               plant.plant_type AS "plantType", task.location_id AS "locationId",
               loc.name AS "locationName", task.assigned_user_id AS "assignedUserId",
               assigned.name AS "assignedUserName", assigned.email AS "assignedUserEmail",
-              task.title, task.description, task.priority,
+              task.title, task.description, task.article_href AS "articleHref", task.priority,
               task.kind, task.status, task.due_date AS "dueDate", task.repeat_rule AS "repeatRule",
               task.completed_at AS "completedAt", task.created_at AS "createdAt",
               creator.name AS "createdByName"

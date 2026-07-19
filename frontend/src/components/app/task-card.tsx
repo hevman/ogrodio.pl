@@ -1,11 +1,12 @@
 "use client";
 
-import { CheckCircle2, Plus } from "lucide-react";
+import { CheckCircle2, ExternalLink, Plus } from "lucide-react";
 import { t } from "@/i18n";
 import type { GardenTask } from "@/lib/garden-api";
 import { taskPriorityLabel } from "@/lib/garden-permissions";
 import type { Product } from "@/lib/shop-api";
 import { TaskProductLinks } from "@/components/app/task-product-links";
+import { site } from "@/lib/site-config";
 
 const priorityTone = {
   high: "bg-rose-50 text-rose-700 ring-rose-100",
@@ -60,6 +61,11 @@ export function TaskCard({
           </div>
           <h3 className={`font-black text-slate-950 ${compact ? "mt-2 text-sm" : "mt-3 text-base"}`}>{task.title}</h3>
           {!compact && task.description ? <p className="mt-1 text-sm leading-6 text-slate-600">{task.description}</p> : null}
+          {task.articleHref ? (
+            <a className="mt-2 inline-flex items-center gap-1 text-xs font-black text-emerald-700 hover:text-emerald-800" href={`${site.publicUrl}${task.articleHref}`}>
+              Zobacz poradnik <ExternalLink className="h-3.5 w-3.5" />
+            </a>
+          ) : null}
           {showAssignee && task.assignedUserName ? (
             <p className="mt-2 text-xs font-bold uppercase text-slate-500">{t("app.common.assignedTo", { name: task.assignedUserName })}</p>
           ) : null}

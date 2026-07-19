@@ -37,6 +37,10 @@ function PrivatePlantDetail({ plantId }: { plantId: string }) {
   const [displayName, setDisplayName] = useState("");
   const [location, setLocation] = useState("");
   const [notes, setNotes] = useState("");
+  const [variety, setVariety] = useState("");
+  const [plantedAt, setPlantedAt] = useState("");
+  const [quantity, setQuantity] = useState(1);
+  const [healthStatus, setHealthStatus] = useState("good");
   const [photoTitle, setPhotoTitle] = useState("");
   const [photoFile, setPhotoFile] = useState<File | null>(null);
   const [status, setStatus] = useState(t("app.loading.plant"));
@@ -80,6 +84,10 @@ function PrivatePlantDetail({ plantId }: { plantId: string }) {
     setDisplayName(plant.displayName);
     setLocation(plant.location || "");
     setNotes(plant.notes || "");
+    setVariety(plant.variety || "");
+    setPlantedAt(plant.plantedAt?.slice(0, 10) || "");
+    setQuantity(plant.quantity || 1);
+    setHealthStatus(plant.healthStatus || "good");
   }, [plant]);
 
   async function savePlant(event: FormEvent) {
@@ -87,7 +95,15 @@ function PrivatePlantDetail({ plantId }: { plantId: string }) {
     if (!plant) return;
     setSaving(true);
     try {
-      const saved = await updateGardenPlant(plant.id, { displayName, location, notes });
+      const saved = await updateGardenPlant(plant.id, {
+        displayName,
+        location,
+        notes,
+        variety,
+        plantedAt: plantedAt || null,
+        quantity,
+        healthStatus,
+      });
       setPlant(saved.plant);
       setStatus(t("app.status.plantSaved"));
     } finally {
@@ -181,6 +197,15 @@ function PrivatePlantDetail({ plantId }: { plantId: string }) {
         <>
           <form className="mt-5 rounded-2xl border border-emerald-200 bg-white p-5" onSubmit={addPhoto}>
             <p className="text-sm font-black uppercase text-emerald-700">{t("app.plants.addPhoto")}</p>
+            {catalogPlant?.appHints.journalPrompts.length ? (
+              <div className="mt-3 flex flex-wrap gap-2">
+                {catalogPlant.appHints.journalPrompts.map((prompt) => (
+                  <button className="rounded-full border border-emerald-200 bg-emerald-50 px-3 py-1.5 text-left text-xs font-bold text-emerald-900" key={prompt} onClick={() => setPhotoTitle(prompt)} type="button">
+                    {prompt}
+                  </button>
+                ))}
+              </div>
+            ) : null}
             <label className="mt-3 flex cursor-pointer flex-col items-center rounded-xl border-2 border-dashed border-emerald-200 bg-emerald-50/50 py-6">
               <Camera className="h-7 w-7 text-emerald-700" />
               <span className="mt-2 text-sm font-bold">{photoFile ? photoFile.name : t("app.journal.addPhoto")}</span>
@@ -195,6 +220,15 @@ function PrivatePlantDetail({ plantId }: { plantId: string }) {
             <div className="mt-3 grid gap-3">
               <input className="h-10 rounded-xl border border-slate-200 px-3 text-sm font-bold" onChange={(e) => setDisplayName(e.target.value)} value={displayName} />
               <input className="h-10 rounded-xl border border-slate-200 px-3 text-sm font-bold" onChange={(e) => setLocation(e.target.value)} placeholder={t("app.plants.locationPlaceholder")} value={location} />
+              <div className="grid gap-3 sm:grid-cols-2">
+                <input className="h-10 rounded-xl border border-slate-200 px-3 text-sm font-bold" onChange={(e) => setVariety(e.target.value)} placeholder="Odmiana, jeśli znasz" value={variety} />
+                <input className="h-10 rounded-xl border border-slate-200 px-3 text-sm font-bold" onChange={(e) => setPlantedAt(e.target.value)} title="Data posadzenia" type="date" value={plantedAt} />
+                <input className="h-10 rounded-xl border border-slate-200 px-3 text-sm font-bold" min="1" onChange={(e) => setQuantity(Math.max(1, Number(e.target.value) || 1))} title="Liczba roślin" type="number" value={quantity} />
+                <select className="h-10 rounded-xl border border-slate-200 px-3 text-sm font-bold" onChange={(e) => setHealthStatus(e.target.value)} value={healthStatus}>
+                  <option value="good">Dobra kondycja</option>
+                  <option value="issue">Wymaga uwagi</option>
+                </select>
+              </div>
               <textarea className="min-h-20 rounded-xl border border-slate-200 px-3 py-2 text-sm font-bold" onChange={(e) => setNotes(e.target.value)} placeholder={t("app.plants.notesPlaceholder")} value={notes} />
             </div>
             <button className="mt-3 h-10 w-full rounded-xl bg-emerald-700 text-sm font-black text-white disabled:opacity-50" disabled={saving} type="submit">{t("common.save")}</button>

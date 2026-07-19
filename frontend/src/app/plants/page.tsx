@@ -40,6 +40,10 @@ function PrivatePlantsView() {
   const [plantType, setPlantType] = useState("borowka");
   const [displayName, setDisplayName] = useState("");
   const [location, setLocation] = useState("");
+  const [variety, setVariety] = useState("");
+  const [plantedAt, setPlantedAt] = useState("");
+  const [quantity, setQuantity] = useState(1);
+  const [healthStatus, setHealthStatus] = useState("good");
   const [showForm, setShowForm] = useState(false);
   const [status, setStatus] = useState(t("app.loading.plants"));
   const [isSaving, setIsSaving] = useState(false);
@@ -74,9 +78,17 @@ function PrivatePlantsView() {
         plantType,
         displayName: displayName || selectedPlant?.defaultName || "",
         location,
+        variety,
+        plantedAt: plantedAt || undefined,
+        quantity,
+        healthStatus,
       });
       setDisplayName("");
       setLocation("");
+      setVariety("");
+      setPlantedAt("");
+      setQuantity(1);
+      setHealthStatus("good");
       setShowForm(false);
       await refresh();
       setStatus(t("app.status.plantAdded"));
@@ -117,6 +129,13 @@ function PrivatePlantsView() {
             </select>
             <input className="h-11 rounded-xl border border-slate-200 px-3 text-sm font-bold" onChange={(e) => setDisplayName(e.target.value)} placeholder={t("app.plants.nameDefaultPlaceholder", { name: selectedPlant?.defaultName || "" })} value={displayName} />
             <input className="h-11 rounded-xl border border-slate-200 px-3 text-sm font-bold sm:col-span-2" onChange={(e) => setLocation(e.target.value)} placeholder={t("app.plants.locationPlaceholder")} value={location} />
+            <input className="h-11 rounded-xl border border-slate-200 px-3 text-sm font-bold" onChange={(e) => setVariety(e.target.value)} placeholder="Odmiana, jeśli znasz" value={variety} />
+            <input className="h-11 rounded-xl border border-slate-200 px-3 text-sm font-bold" onChange={(e) => setPlantedAt(e.target.value)} title="Data posadzenia" type="date" value={plantedAt} />
+            <input className="h-11 rounded-xl border border-slate-200 px-3 text-sm font-bold" min="1" onChange={(e) => setQuantity(Math.max(1, Number(e.target.value) || 1))} title="Liczba roślin" type="number" value={quantity} />
+            <select className="h-11 rounded-xl border border-slate-200 px-3 text-sm font-bold" onChange={(e) => setHealthStatus(e.target.value)} value={healthStatus}>
+              <option value="good">Dobra kondycja</option>
+              <option value="issue">Wymaga uwagi</option>
+            </select>
           </div>
           <button className="mt-4 h-11 rounded-xl bg-emerald-700 px-5 text-sm font-black text-white disabled:opacity-50" disabled={isSaving} type="submit">
             {t("app.plants.addToRegistry")}
