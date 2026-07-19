@@ -1,25 +1,4 @@
 import { z } from "zod";
-import agrest from "@/content/plants/agrest.json";
-import borowkaAmerykanska from "@/content/plants/borowka-amerykanska.json";
-import cukinia from "@/content/plants/cukinia.json";
-import czarnaPorzeczka from "@/content/plants/czarna-porzeczka.json";
-import hortensja from "@/content/plants/hortensja.json";
-import jablon from "@/content/plants/jablon.json";
-import jagodaKamczacka from "@/content/plants/jagoda-kamczacka.json";
-import kaktusy from "@/content/plants/kaktusy.json";
-import lawenda from "@/content/plants/lawenda.json";
-import malina from "@/content/plants/malina.json";
-import oliwka from "@/content/plants/oliwka.json";
-import pietruszka from "@/content/plants/pietruszka.json";
-import pomidorKoktajlowy from "@/content/plants/pomidor-koktajlowy.json";
-import rozaPnaca from "@/content/plants/roza-pnaca.json";
-import salataLisciowa from "@/content/plants/salata-lisciowa.json";
-import sosnaGorskaMugo from "@/content/plants/sosna-gorska-mugo.json";
-import truskawka from "@/content/plants/truskawka.json";
-import tuja from "@/content/plants/tuja.json";
-import tulipanowiecAmerykanski from "@/content/plants/tulipanowiec-amerykanski.json";
-import tymianek from "@/content/plants/tymianek.json";
-import winorosl from "@/content/plants/winorosl.json";
 import {
   currentRomanMonth,
   getCatalogPlantByAppType,
@@ -29,50 +8,53 @@ import {
 } from "@/lib/plant-intelligence/engine";
 import { normalizePlantCatalogItem } from "@/lib/plant-intelligence/normalize";
 import { plantCatalogRawSchema, monthOrder, type PlantCatalogItem } from "@/lib/plant-intelligence/schema";
+import { site } from "@/lib/site-config";
 
 export type { PlantCatalogItem, PlantCalendarEntry, PlantRisk, PlantProblem, PlantVariety, RomanMonth } from "@/lib/plant-intelligence/schema";
 export type PlantCalendarType = PlantCatalogItem["calendar"][number]["type"];
 
-const rawPlantCatalog = [
-  truskawka,
-  borowkaAmerykanska,
-  pomidorKoktajlowy,
-  cukinia,
-  lawenda,
-  hortensja,
-  rozaPnaca,
-  tuja,
-  jablon,
-  malina,
-  agrest,
-  czarnaPorzeczka,
-  jagodaKamczacka,
-  winorosl,
-  oliwka,
-  tymianek,
-  salataLisciowa,
-  pietruszka,
-  kaktusy,
-  sosnaGorskaMugo,
-  tulipanowiecAmerykanski,
-] as unknown[];
-
-export const plantCatalog: PlantCatalogItem[] = z.array(plantCatalogRawSchema)
-  .parse(rawPlantCatalog)
-  .map(normalizePlantCatalogItem);
-
-export const plantGroups = Array.from(new Set(plantCatalog.map((plant) => plant.group)));
-
-export function getPlantBySlug(slug: string) {
-  return plantCatalog.find((plant) => plant.slug === slug);
+function backendUrl(): string {
+  if (typeof window === "undefined") {
+    return process.env.BACKEND_URL || site.publicUrl;
+  }
+  return "";
 }
 
-export function getPlantsByGroup(group: string) {
-  return plantCatalog.filter((plant) => plant.group === group);
+export function normalizePlantCatalog(raw: unknown): PlantCatalogItem[] {
+  return z.array(plantCatalogRawSchema)
+    .parse(Array.isArray(raw) ? raw : [])
+    .map(normalizePlantCatalogItem)
+    .sort((a, b) => a.name.localeCompare(b.name, "pl"));
 }
 
-export function getPlantByAppType(type: string) {
-  return getCatalogPlantByAppType(type, plantCatalog);
+export async function getPlantCatalog(): Promise<PlantCatalogItem[]> {
+  try {
+    const res = await fetch(`${backendUrl()}/api/plants`, { cache: "no-store" });
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    return normalizePlantCatalog(await res.json());
+  } catch (err) {
+    console.warn("Failed to load plant catalog:", err);
+    return [];
+  }
+}
+
+export function getPlantGroups(plants: PlantCatalogItem[]) {
+  return Array.from(new Set(plants.map((plant) => plant.group)));
+}
+
+export async function getPlantBySlug(slug: string) {
+  const plants = await getPlantCatalog();
+  return plants.find((plant) => plant.slug === slug);
+}
+
+export async function getPlantsByGroup(group: string) {
+  const plants = await getPlantCatalog();
+  return plants.filter((plant) => plant.group === group);
+}
+
+export async function getPlantByAppType(type: string) {
+  const plants = await getPlantCatalog();
+  return getCatalogPlantByAppType(type, plants);
 }
 
 export {

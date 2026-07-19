@@ -2,10 +2,10 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowUpRight, Bell, BookOpen, CalendarDays, Leaf, Smartphone } from "lucide-react";
 import { PageSection, PageShell } from "@/components/page-shell";
-import { plantCatalog } from "@/lib/plant-catalog";
+import { getPlantCatalog } from "@/lib/plant-catalog";
 import { site } from "@/lib/site-config";
 
-export const revalidate = 300;
+export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
   title: "Plan opieki nad roślinami - Ogrodio",
@@ -62,7 +62,8 @@ const benefits = [
   },
 ] as const;
 
-export default function PlantIntelligencePage() {
+export default async function PlantIntelligencePage() {
+  const plantCatalog = await getPlantCatalog();
   const pageUrl = `${site.publicUrl}/ogrodio-plant-intelligence`;
 
   const jsonLd = [

@@ -1,12 +1,12 @@
-import { Controller, Get, OnModuleInit, Logger, Query } from '@nestjs/common';
+import { Controller, Get, Logger, OnModuleInit, Query } from '@nestjs/common';
 import { existsSync, readdirSync, readFileSync } from 'fs';
 import { join } from 'path';
 import { MeilisearchService } from './meilisearch.service';
 
 /**
- * Publiczny kontroler roślin.
- * Dane ładowane z frontend/src/content/plants/*.json (te same pliki co Next.js).
- * Indeksowane w Meilisearch przy starcie.
+ * Publiczny kontroler katalogu roślin.
+ * Źródłem danych są pliki backend/content/plants/*.json, tak jak artykuły mają
+ * swoje pliki w backend/content/articles.
  */
 @Controller('api/plants')
 export class PlantsController implements OnModuleInit {
@@ -50,12 +50,12 @@ export class PlantsController implements OnModuleInit {
   }
 
   private loadPlants(): any[] {
-    // W kontenerze Docker: /app/content/plants (skopiowane przez Dockerfile)
-    // W dev lokalnie: ../frontend/src/content/plants
     const candidates = [
-      join(process.cwd(), 'content/plants'),
-      join(process.cwd(), '../frontend/src/content/plants'),
-    ];
+      process.env.PLANT_CATALOG_DIR,
+      join(process.cwd(), 'content', 'plants'),
+      join(process.cwd(), 'backend', 'content', 'plants'),
+      join(process.cwd(), '..', 'backend', 'content', 'plants'),
+    ].filter(Boolean) as string[];
 
     const dir = candidates.find(existsSync);
     if (!dir) {
@@ -64,12 +64,13 @@ export class PlantsController implements OnModuleInit {
     }
 
     return readdirSync(dir)
-      .filter(f => f.endsWith('.json'))
-      .map(f => {
+      .filter((file) => file.endsWith('.json'))
+      .sort()
+      .map((file) => {
         try {
-          return JSON.parse(readFileSync(join(dir, f), 'utf8'));
+          return JSON.parse(readFileSync(join(dir, file), 'utf8'));
         } catch {
-          this.logger.warn(`Failed to parse plant file: ${f}`);
+          this.logger.warn(`Failed to parse plant file: ${file}`);
           return null;
         }
       })

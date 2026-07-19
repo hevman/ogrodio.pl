@@ -3,10 +3,10 @@ import Link from "next/link";
 import { ArrowUpRight, CalendarDays } from "lucide-react";
 import { PlantCatalogBrowser } from "@/components/plant-catalog-browser";
 import { PageSection, PageShell } from "@/components/page-shell";
-import { plantCatalog, plantGroups } from "@/lib/plant-catalog";
+import { getPlantCatalog, getPlantGroups, type PlantCatalogItem } from "@/lib/plant-catalog";
 import { site } from "@/lib/site-config";
 
-export const revalidate = 300;
+export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
   title: "Katalog roślin - Ogrodio",
@@ -20,24 +20,29 @@ export const metadata: Metadata = {
   },
 };
 
-const itemListJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "ItemList",
-  name: "Katalog roślin Ogrodio",
-  numberOfItems: plantCatalog.length,
-  itemListElement: plantCatalog.map((plant, index) => ({
-    "@type": "ListItem",
-    position: index + 1,
-    name: plant.name,
-    url: `${site.publicUrl}/katalog-roslin/${plant.slug}`,
-  })),
-};
+function itemListJsonLd(plants: PlantCatalogItem[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "Katalog roślin Ogrodio",
+    numberOfItems: plants.length,
+    itemListElement: plants.map((plant, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: plant.name,
+      url: `${site.publicUrl}/katalog-roslin/${plant.slug}`,
+    })),
+  };
+}
 
-export default function PlantCatalogPage() {
+export default async function PlantCatalogPage() {
+  const plants = await getPlantCatalog();
+  const groups = getPlantGroups(plants);
+
   return (
     <>
       <script
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListJsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListJsonLd(plants)) }}
         type="application/ld+json"
       />
       <PageShell
@@ -48,7 +53,7 @@ export default function PlantCatalogPage() {
       >
         <PageSection>
           <div className="grid gap-4 lg:grid-cols-[minmax(0,1fr)_320px] lg:items-start">
-            <PlantCatalogBrowser groups={plantGroups} plants={plantCatalog} />
+            <PlantCatalogBrowser groups={groups} plants={plants} />
 
             <aside className="rounded-2xl border border-slate-200 bg-[#f4f7f2] p-5">
               <p className="text-sm font-bold uppercase tracking-wide text-teal-700">Plan opieki</p>

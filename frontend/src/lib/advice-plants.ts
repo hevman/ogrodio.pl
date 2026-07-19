@@ -1,5 +1,5 @@
 import type { AdviceArticle } from "@/lib/advice-types";
-import { plantCatalog, type PlantCatalogItem } from "@/lib/plant-catalog";
+import { getPlantCatalog, type PlantCatalogItem } from "@/lib/plant-catalog";
 
 function normalizeText(value: string) {
   return value
@@ -31,7 +31,8 @@ function plantTerms(plant: PlantCatalogItem) {
   return Array.from(terms).filter((term) => term.length >= 4);
 }
 
-export function resolveRelatedPlantsForArticle(article: AdviceArticle, limit = 2) {
+export async function resolveRelatedPlantsForArticle(article: AdviceArticle, limit = 2) {
+  const plantCatalog = await getPlantCatalog();
   const text = normalizeText([
     article.slug,
     article.title,

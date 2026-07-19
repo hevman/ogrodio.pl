@@ -2,7 +2,7 @@ import { readFileSync, readdirSync } from "fs";
 import { join } from "path";
 
 const MONTHS = ["I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X", "XI", "XII"];
-const plantsDir = join(process.cwd(), "src", "content", "plants");
+const plantsDir = join(process.cwd(), "..", "backend", "content", "plants");
 const files = readdirSync(plantsDir).filter((name) => name.endsWith(".json"));
 
 let failed = false;

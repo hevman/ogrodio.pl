@@ -24,12 +24,14 @@ import {
   type PlantDefinition,
 } from "@/lib/garden-api";
 import { canWriteGarden, plantHealthLabel, plantStatusLabel } from "@/lib/garden-permissions";
-import { getPlantByAppType } from "@/lib/plant-catalog";
+import { getCatalogPlantByAppType } from "@/lib/plant-intelligence/engine";
+import { normalizePlantCatalog, type PlantCatalogItem } from "@/lib/plant-catalog";
 
 function PrivatePlantDetail({ plantId }: { plantId: string }) {
   const { organization } = useAppContext();
   const [plant, setPlant] = useState<GardenPlant | null>(null);
   const [catalog, setCatalog] = useState<PlantDefinition[]>([]);
+  const [publicCatalog, setPublicCatalog] = useState<PlantCatalogItem[]>([]);
   const [tasks, setTasks] = useState<GardenTask[]>([]);
   const [entries, setEntries] = useState<GardenJournalEntry[]>([]);
   const [displayName, setDisplayName] = useState("");
@@ -42,20 +44,29 @@ function PrivatePlantDetail({ plantId }: { plantId: string }) {
   const canWrite = canWriteGarden(organization);
 
   const plantDef = useMemo(() => catalog.find((c) => c.type === plant?.plantType), [catalog, plant]);
-  const catalogPlant = useMemo(() => (plant ? getPlantByAppType(plant.plantType) : undefined), [plant]);
+  const catalogPlant = useMemo(
+    () => (plant ? getCatalogPlantByAppType(plant.plantType, publicCatalog) : undefined),
+    [plant, publicCatalog],
+  );
   const plantTasks = useMemo(() => tasks.filter((t) => String(t.plantId) === plantId && t.status !== "done"), [plantId, tasks]);
   const photos = useMemo(() => entries.filter((e) => e.imageUrl), [entries]);
 
   async function refresh() {
     const month = new Date().getMonth() + 1;
-    const [plantData, catalogData, tasksData, journalData] = await Promise.all([
+    const [plantData, catalogData, tasksData, journalData, publicCatalogData] = await Promise.all([
       fetchGardenPlant(plantId),
       fetchGardenCatalog(),
       fetchGardenTasks(month),
       fetchGardenJournal(),
+      fetch("/api/plants", { credentials: "include" }).then((res) => res.json()).catch(() => []),
     ]);
     setPlant(plantData.plant);
     setCatalog(catalogData.plants);
+    try {
+      setPublicCatalog(normalizePlantCatalog(publicCatalogData));
+    } catch {
+      setPublicCatalog([]);
+    }
     setTasks(tasksData.tasks);
     setEntries(journalData.entries.filter((e) => String(e.plantId) === plantId));
   }

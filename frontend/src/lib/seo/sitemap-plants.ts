@@ -1,9 +1,10 @@
 import type { MetadataRoute } from "next";
-import { plantCatalog } from "@/lib/plant-catalog";
+import { getPlantCatalog } from "@/lib/plant-catalog";
 import { site } from "@/lib/site-config";
 
-export function getPlantSitemapEntries(): MetadataRoute.Sitemap {
+export async function getPlantSitemapEntries(): Promise<MetadataRoute.Sitemap> {
   const base = site.publicUrl;
+  const plantCatalog = await getPlantCatalog();
 
   return plantCatalog.map((plant) => ({
     url: `${base}/katalog-roslin/${plant.slug}`,

@@ -98,7 +98,7 @@ export default async function AdviceArticlePage({ params }: Props) {
   const relatedSectionTitle = getRelatedSectionTitle(article);
   const readMoreArticles = internalLinks.slice(0, 2);
   const relatedProducts = await getAdviceRelatedProducts(article, 3);
-  const relatedPlants = resolveRelatedPlantsForArticle(article, 2);
+  const relatedPlants = await resolveRelatedPlantsForArticle(article, 2);
 
   const ganttRows = article.ganttChart?.rows ?? [];
   const tableRows = article.varietyTable?.rows ?? [];

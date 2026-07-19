@@ -72,8 +72,8 @@ function plantCatalogDir() {
   const candidates = [
     process.env.PLANT_CATALOG_DIR,
     join(process.cwd(), "content", "plants"),
-    resolve(process.cwd(), "..", "frontend", "src", "content", "plants"),
-    resolve(process.cwd(), "frontend", "src", "content", "plants"),
+    resolve(process.cwd(), "backend", "content", "plants"),
+    resolve(process.cwd(), "..", "backend", "content", "plants"),
   ].filter(Boolean) as string[];
   return candidates.find((candidate) => existsSync(candidate));
 }

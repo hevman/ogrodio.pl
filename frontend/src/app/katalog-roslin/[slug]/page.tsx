@@ -16,20 +16,21 @@ import { Breadcrumb } from "@/components/breadcrumb";
 import { PageSection } from "@/components/page-shell";
 import { PlantIntelligencePanel } from "@/components/plant-intelligence-panel";
 import { PlantVisualGuideLoader } from "@/components/plant-visual-guide-loader";
-import { getPlantBySlug, getPlantIntelligence, plantCatalog } from "@/lib/plant-catalog";
+import { getPlantBySlug, getPlantCatalog, getPlantIntelligence } from "@/lib/plant-catalog";
 import { site } from "@/lib/site-config";
 
 export const revalidate = 300;
 
 type Props = { params: Promise<{ slug: string }> };
 
-export function generateStaticParams() {
-  return plantCatalog.map((plant) => ({ slug: plant.slug }));
+export async function generateStaticParams() {
+  const plants = await getPlantCatalog();
+  return plants.map((plant) => ({ slug: plant.slug }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
-  const plant = getPlantBySlug(slug);
+  const plant = await getPlantBySlug(slug);
   if (!plant) return { title: "Roślina - Ogrodio" };
 
   return {
@@ -48,7 +49,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function PlantPage({ params }: Props) {
   const { slug } = await params;
-  const plant = getPlantBySlug(slug);
+  const plant = await getPlantBySlug(slug);
   if (!plant) notFound();
 
   const intelligence = getPlantIntelligence(plant);
