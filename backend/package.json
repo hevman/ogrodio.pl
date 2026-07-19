@@ -3,8 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "build": "npm run validate:plants && nest build",
-    "validate:plants": "node scripts/validate-plant-catalog.js",
+    "build": "nest build",
     "start": "node dist/main.js",
     "start:dev": "nest start --watch",
     "import-articles": "node src/scripts/import-articles-simple.js",

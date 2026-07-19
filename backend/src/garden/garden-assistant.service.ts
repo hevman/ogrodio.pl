@@ -1,9 +1,9 @@
 import { BadRequestException, Injectable, NotFoundException } from "@nestjs/common";
-import { existsSync, readdirSync, readFileSync } from "fs";
 import { mkdir } from "fs/promises";
-import { join, resolve } from "path";
+import { join } from "path";
 import { randomUUID } from "crypto";
 import { DatabaseService } from "../database/database.service";
+import { PlantContentService } from "../staff/plant-content.service";
 
 const sharp = require("sharp");
 
@@ -75,26 +75,6 @@ const monthNumbers: Record<string, number> = {
   XII: 12,
 };
 
-function plantCatalogDir() {
-  const candidates = [
-    process.env.PLANT_CATALOG_DIR,
-    join(process.cwd(), "content", "plants"),
-    resolve(process.cwd(), "backend", "content", "plants"),
-    resolve(process.cwd(), "..", "backend", "content", "plants"),
-  ].filter(Boolean) as string[];
-  return candidates.find((candidate) => existsSync(candidate));
-}
-
-function loadPlantCatalogJson() {
-  const dir = plantCatalogDir();
-  if (!dir) return [];
-  return readdirSync(dir)
-    .filter((file) => file.endsWith(".json"))
-    .sort()
-    .map((file) => JSON.parse(readFileSync(join(dir, file), "utf8")) as PlantCatalogJson)
-    .filter((plant) => plant.slug && plant.name);
-}
-
 function articleKeywords(plant: PlantCatalogJson) {
   const problemText = (plant.problems || []).flatMap((problem) =>
     typeof problem === "string" ? problem : [problem.symptom],
@@ -145,22 +125,23 @@ function plantTypes(plant: PlantCatalogJson) {
   return [plant.slug, ...(plant.appAliases || [])];
 }
 
-const PLANT_CATALOG = loadPlantCatalogJson();
-
-const PLANTS: PlantDefinition[] = PLANT_CATALOG.map((plant) => ({
-  type: plant.slug,
-  aliases: plant.appAliases || [],
-  label: plant.name,
-  category: plant.group,
-  defaultName: plant.name,
-  articleKeywords: articleKeywords(plant),
-}));
-
-function plantDefinitionForType(type: string) {
-  return PLANTS.find((plant) => plant.type === type || (plant.aliases || []).includes(type));
+function plantDefinitions(catalog: PlantCatalogJson[]): PlantDefinition[] {
+  return catalog.map((plant) => ({
+    type: plant.slug,
+    aliases: plant.appAliases || [],
+    label: plant.name,
+    category: plant.group,
+    defaultName: plant.name,
+    articleKeywords: articleKeywords(plant),
+  }));
 }
 
-const TASKS: TaskTemplate[] = PLANT_CATALOG.flatMap((plant) =>
+function plantDefinitionForType(type: string, catalog: PlantCatalogJson[]) {
+  return plantDefinitions(catalog).find((plant) => plant.type === type || (plant.aliases || []).includes(type));
+}
+
+function taskTemplates(catalog: PlantCatalogJson[]): TaskTemplate[] {
+  return catalog.flatMap((plant) =>
   (plant.calendar || []).flatMap((monthBlock) =>
     monthBlock.tasks.flatMap((task) => {
       const month = monthNumbers[monthBlock.month];
@@ -178,13 +159,21 @@ const TASKS: TaskTemplate[] = PLANT_CATALOG.flatMap((plant) =>
       }];
     }),
   ),
-);
+  );
+}
 @Injectable()
 export class GardenAssistantService {
-  constructor(private readonly db: DatabaseService) {}
+  constructor(
+    private readonly db: DatabaseService,
+    private readonly plantContent: PlantContentService,
+  ) {}
+
+  private plantCatalog() {
+    return this.plantContent.list() as PlantCatalogJson[];
+  }
 
   catalog() {
-    return { plants: PLANTS };
+    return { plants: plantDefinitions(this.plantCatalog()) };
   }
 
   async organization(userId: number) {
@@ -849,7 +838,7 @@ export class GardenAssistantService {
     const organization = await this.ensureDefaultOrganization(userId);
     this.assertCanWrite(organization);
     const plantType = String(body?.plantType || body?.plant_type || "").trim();
-    const definition = plantDefinitionForType(plantType);
+    const definition = plantDefinitionForType(plantType, this.plantCatalog());
     if (!definition) {
       throw new BadRequestException("Wybierz rosline z katalogu");
     }
@@ -952,8 +941,9 @@ export class GardenAssistantService {
        ORDER BY task.due_date NULLS LAST, task.created_at DESC`,
       [organization.id, month || null],
     );
+    const templates = taskTemplates(this.plantCatalog());
     const activeTasks = plants.flatMap((plant: any) => {
-      return TASKS
+      return templates
         .filter((task) => task.months.includes(month) && task.plantTypes.includes(plant.plantType))
         .map((task) => ({
           id: `${plant.id}-${task.kind}-${month}-${task.title.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`,
@@ -989,7 +979,7 @@ export class GardenAssistantService {
     if (!plantId || !id) throw new BadRequestException("Brak danych rekomendacji");
 
     const plant = await this.plant(userId, plantId);
-    const template = TASKS.find((task) =>
+    const template = taskTemplates(this.plantCatalog()).find((task) =>
       templateId(task) === id &&
       task.months.includes(month) &&
       task.plantTypes.includes(plant.plantType),
@@ -1258,7 +1248,8 @@ export class GardenAssistantService {
   async recommendations(userId: number) {
     const plants = await this.plants(userId);
     const plantTypes = Array.from(new Set(plants.map((plant: any) => plant.plantType)));
-    const keywords = plantTypes.flatMap((type) => plantDefinitionForType(type)?.articleKeywords || []);
+    const catalog = this.plantCatalog();
+    const keywords = plantTypes.flatMap((type) => plantDefinitionForType(type, catalog)?.articleKeywords || []);
 
     if (!keywords.length) {
       const fallback = await this.db.query(
