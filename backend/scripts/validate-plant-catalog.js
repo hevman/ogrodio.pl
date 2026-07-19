@@ -1,8 +1,8 @@
-import { readFileSync, readdirSync } from "fs";
-import { join } from "path";
+const { readFileSync, readdirSync } = require("fs");
+const { join } = require("path");
 
 const MONTHS = ["I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X", "XI", "XII"];
-const plantsDir = join(process.cwd(), "..", "backend", "content", "plants");
+const plantsDir = join(process.cwd(), "content", "plants");
 const files = readdirSync(plantsDir).filter((name) => name.endsWith(".json"));
 
 let failed = false;
@@ -11,8 +11,8 @@ for (const file of files) {
   const plant = JSON.parse(readFileSync(join(plantsDir, file), "utf8"));
   const calendar = plant.calendar || [];
 
-  if (!calendar.length) {
-    console.error(`${file}: missing calendar`);
+  if (!plant.slug || !plant.name || !calendar.length) {
+    console.error(`${file}: missing required plant data or calendar`);
     failed = true;
     continue;
   }
@@ -40,8 +40,5 @@ for (const file of files) {
   }
 }
 
-if (failed) {
-  process.exit(1);
-}
-
+if (failed) process.exit(1);
 console.log(`validated ${files.length} plant catalog files`);

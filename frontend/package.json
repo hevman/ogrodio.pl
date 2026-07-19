@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "node scripts/generate-brand-icons.mjs && node scripts/validate-plant-catalog.mjs && next build",
+    "build": "node scripts/generate-brand-icons.mjs && next build",
     "articles:images": "node scripts/prepare-article-images.mjs",
     "start": "next start",
     "lint": "next lint"
