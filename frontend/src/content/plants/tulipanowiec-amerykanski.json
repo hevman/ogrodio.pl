@@ -1,0 +1,252 @@
+{
+  "slug": "tulipanowiec-amerykanski",
+  "name": "Tulipanowiec amerykański",
+  "latinName": "Liriodendron tulipifera",
+  "group": "Rośliny ozdobne",
+  "image": "/images/articles/tulipanowiec-amerykanski-cover.webp",
+  "imageAlt": "Młody tulipanowiec amerykański z charakterystycznymi klapowanymi liśćmi",
+  "summary": "Szybko rosnące drzewo soliterowe o liściach przypominających zarys tulipana. Potrzebuje dużo miejsca, słońca i żyznej, umiarkowanie wilgotnej gleby.",
+  "difficulty": "średnia",
+  "sun": "Pełne słońce lub lekki półcień",
+  "soil": "Żyzna, głęboka, przepuszczalna, lekko kwaśna do obojętnej",
+  "water": "Regularnie po posadzeniu i podczas suszy",
+  "spacing": "8-12 m od budynków i dużych drzew",
+  "harvest": "Kwitnienie zwykle od maja do czerwca u starszych drzew",
+  "tags": [
+    "drzewo ozdobne",
+    "soliter",
+    "szybki wzrost"
+  ],
+  "calendar": [
+    {
+      "month": "I",
+      "tasks": []
+    },
+    {
+      "month": "II",
+      "tasks": []
+    },
+    {
+      "month": "III",
+      "tasks": [
+        {
+          "task": "Kontrola osłony pnia i uszkodzeń po zimie",
+          "type": "care"
+        }
+      ]
+    },
+    {
+      "month": "IV",
+      "tasks": [
+        {
+          "task": "Sadzenie młodych drzewek przed startem silnego wzrostu",
+          "type": "start"
+        }
+      ]
+    },
+    {
+      "month": "V",
+      "tasks": [
+        {
+          "task": "Podlewanie młodych drzew przy suchej wiośnie",
+          "type": "care"
+        }
+      ]
+    },
+    {
+      "month": "VI",
+      "tasks": [
+        {
+          "task": "Utrzymanie ściółki i wilgotności w czasie przyrostów",
+          "type": "care"
+        }
+      ]
+    },
+    {
+      "month": "VII",
+      "tasks": [
+        {
+          "task": "Głębokie podlewanie podczas dłuższej suszy",
+          "type": "care"
+        }
+      ]
+    },
+    {
+      "month": "VIII",
+      "tasks": [
+        {
+          "task": "Kontrola więdnięcia liści i podlewanie młodych egzemplarzy",
+          "type": "care"
+        }
+      ]
+    },
+    {
+      "month": "IX",
+      "tasks": [
+        {
+          "task": "Sadzenie jesienne tylko z dobrą bryłą korzeniową",
+          "type": "start"
+        }
+      ]
+    },
+    {
+      "month": "X",
+      "tasks": [
+        {
+          "task": "Ściółkowanie podstawy młodego drzewa przed zimą",
+          "type": "care"
+        }
+      ]
+    },
+    {
+      "month": "XI",
+      "tasks": [
+        {
+          "task": "Osłona pnia młodego drzewa przed mrozem i uszkodzeniami",
+          "type": "care"
+        }
+      ]
+    },
+    {
+      "month": "XII",
+      "tasks": []
+    }
+  ],
+  "problems": [
+    {
+      "symptom": "Więdnięcie liści w czasie suszy"
+    },
+    {
+      "symptom": "Przemarzanie młodych przyrostów"
+    },
+    {
+      "symptom": "Zbyt mało miejsca na docelową koronę"
+    }
+  ],
+  "relatedArticles": [],
+  "risks": [
+    {
+      "title": "Susza po posadzeniu",
+      "months": [
+        "V",
+        "VI",
+        "VII",
+        "VIII"
+      ],
+      "urgency": "wysokie",
+      "symptom": "Liście tracą jędrność, zwijają się albo zasychają na brzegach",
+      "action": "Podlewaj rzadziej, ale głęboko, i utrzymuj szeroką ściółkę bez dosypywania ziemi na pień.",
+      "articleHref": null
+    },
+    {
+      "title": "Uszkodzenia młodego drzewa zimą",
+      "months": [
+        "XI",
+        "XII",
+        "I",
+        "II",
+        "III"
+      ],
+      "urgency": "średnie",
+      "symptom": "Pęknięcia kory, przemarznięte końcówki pędów lub uszkodzenia pnia",
+      "action": "Osłoń pień młodego drzewa i nie nawoź azotem późnym latem.",
+      "articleHref": null
+    }
+  ],
+  "varieties": [],
+  "careProfile": {
+    "soilPh": "około 5,5-7,0",
+    "height": "20-30 m w sprzyjających warunkach, w ogrodach zwykle mniej",
+    "lifeCycle": "długowieczne drzewo liściaste",
+    "hardiness": "dobra u starszych drzew, młode egzemplarze warto chronić",
+    "container": "nie jest rośliną do stałej uprawy w donicy",
+    "goodFor": [
+      "duży ogród",
+      "drzewo soliterowe",
+      "cień w przyszłości",
+      "efektowne liście"
+    ],
+    "avoid": [
+      "mały ogródek",
+      "miejsce pod przewodami",
+      "sucha, płytka gleba",
+      "sadzenie blisko fundamentów"
+    ]
+  },
+  "careGuide": {
+    "sowingOrPlanting": "Sadź młode drzewko w dużej odległości od domu, ogrodzenia i instalacji. Po posadzeniu podlej obficie i zostaw misę do podlewania.",
+    "watering": "W pierwszych latach podlewaj podczas suszy głęboko, nie codziennie po trochu. Starsze drzewa radzą sobie lepiej, jeśli mają głęboką glebę.",
+    "feeding": "Wystarczy kompost lub ściółka organiczna. Unikaj mocnego nawożenia azotowego późnym latem.",
+    "pruning": "Cięcie ogranicz do usuwania pędów uszkodzonych, krzyżujących się i wyrastających zbyt nisko. Nie tnij mocno bez potrzeby.",
+    "wintering": "Młode drzewa ściółkuj i osłaniaj pień w chłodniejszych miejscach. Starsze egzemplarze zwykle zimują dobrze.",
+    "harvest": "To drzewo ozdobne. Kwiaty pojawiają się najczęściej dopiero u starszych egzemplarzy i bywają ukryte wysoko w koronie."
+  },
+  "signals": [
+    {
+      "title": "Jasne, żółtawe młode liście",
+      "means": "Młody przyrost tulipanowca może być naturalnie jaśniejszy, ale długotrwałe blednięcie może wskazywać na stres stanowiska.",
+      "action": "Sprawdź wilgotność gleby, ściółkę i czy drzewko nie stoi w zbitej, przesuszonej ziemi.",
+      "months": [
+        "V",
+        "VI",
+        "VII"
+      ],
+      "articleHref": null
+    },
+    {
+      "title": "Brązowe brzegi liści latem",
+      "means": "Najczęściej to reakcja na suszę, gorący wiatr albo uszkodzenie korzeni po posadzeniu.",
+      "action": "Podlej głęboko, powiększ misę wokół drzewa i ogranicz konkurencję trawnika przy pniu.",
+      "months": [
+        "VI",
+        "VII",
+        "VIII"
+      ],
+      "articleHref": null
+    },
+    {
+      "title": "Brak kwiatów przez wiele lat",
+      "means": "To normalne. Tulipanowiec zwykle zaczyna kwitnąć dopiero jako starsze drzewo.",
+      "action": "Nie nawoź na siłę. Zapewnij światło, miejsce i stabilne warunki wzrostu.",
+      "months": [
+        "V",
+        "VI"
+      ],
+      "articleHref": null
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Czy tulipanowiec nadaje się do małego ogrodu?",
+      "answer": "Zwykle nie. To docelowo duże drzewo, dlatego najlepiej sadzić je w większym ogrodzie jako soliter."
+    },
+    {
+      "question": "Kiedy kwitnie tulipanowiec amerykański?",
+      "answer": "Najczęściej w maju i czerwcu, ale kwiaty pojawiają się zwykle dopiero u starszych drzew."
+    },
+    {
+      "question": "Czy tulipanowiec szybko rośnie?",
+      "answer": "Tak, w dobrych warunkach rośnie dość szybko, szczególnie na żyznej i umiarkowanie wilgotnej glebie."
+    },
+    {
+      "question": "Co najczęściej szkodzi młodemu tulipanowcowi?",
+      "answer": "Susza po posadzeniu, zbyt płytka gleba, uszkodzenie pnia i źle dobrane miejsce bez przestrzeni na koronę."
+    }
+  ],
+  "appHints": {
+    "reminderLeadDays": 5,
+    "defaultPriority": "medium",
+    "journalPrompts": [
+      "Zapisz obserwację: Tulipanowiec amerykański.",
+      "Dodaj zdjęcie liści, jeśli pojawia się więdnięcie albo zasychanie brzegów.",
+      "Oznacz podlewanie po posadzeniu i ściółkowanie podstawy drzewa."
+    ]
+  },
+  "searchIntents": [
+    "Tulipanowiec amerykański uprawa",
+    "Tulipanowiec wymagania",
+    "Tulipanowiec kiedy kwitnie",
+    "Tulipanowiec liście",
+    "Liriodendron tulipifera pielęgnacja"
+  ]
+}

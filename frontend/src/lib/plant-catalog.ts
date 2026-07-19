@@ -17,6 +17,7 @@ import salataLisciowa from "@/content/plants/salata-lisciowa.json";
 import sosnaGorskaMugo from "@/content/plants/sosna-gorska-mugo.json";
 import truskawka from "@/content/plants/truskawka.json";
 import tuja from "@/content/plants/tuja.json";
+import tulipanowiecAmerykanski from "@/content/plants/tulipanowiec-amerykanski.json";
 import tymianek from "@/content/plants/tymianek.json";
 import winorosl from "@/content/plants/winorosl.json";
 import {
@@ -53,6 +54,7 @@ const rawPlantCatalog = [
   pietruszka,
   kaktusy,
   sosnaGorskaMugo,
+  tulipanowiecAmerykanski,
 ] as unknown[];
 
 export const plantCatalog: PlantCatalogItem[] = z.array(plantCatalogRawSchema)
