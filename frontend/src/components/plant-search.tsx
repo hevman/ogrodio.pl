@@ -13,6 +13,7 @@ export function PlantSearch() {
   const inputRef = useRef<HTMLInputElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const debounceRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const requestRef = useRef(0);
 
   // Zamknij po kliknięciu poza
   useEffect(() => {
@@ -36,8 +37,10 @@ export function PlantSearch() {
       return;
     }
     setLoading(true);
+    const requestId = ++requestRef.current;
     debounceRef.current = setTimeout(async () => {
       const results = await searchPlants(query);
+      if (requestId !== requestRef.current) return;
       setHits(results.slice(0, 8));
       setOpen(results.length > 0);
       setLoading(false);

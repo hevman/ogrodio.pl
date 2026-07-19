@@ -21,6 +21,7 @@ export function AdviceSearch({ initialQuery = '' }: { initialQuery?: string }) {
   const inputRef = useRef<HTMLInputElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const debounceRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const requestRef = useRef(0);
 
   // Zamknij dropdown po kliknięciu poza komponentem
   useEffect(() => {
@@ -44,8 +45,10 @@ export function AdviceSearch({ initialQuery = '' }: { initialQuery?: string }) {
       return;
     }
     setLoading(true);
+    const requestId = ++requestRef.current;
     debounceRef.current = setTimeout(async () => {
       const results = await searchArticles(query);
+      if (requestId !== requestRef.current) return;
       setHits(results.slice(0, 7));
       setOpen(results.length > 0);
       setLoading(false);

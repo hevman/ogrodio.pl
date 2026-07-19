@@ -36,10 +36,17 @@ export class PlantsController implements OnModuleInit {
     @Query('limit') limit?: string,
   ) {
     if (!q?.trim()) return { hits: [], total: 0 };
-    return this.meili.searchPlants(q, {
+    const max = limit ? Number(limit) : 20;
+    const result = await this.meili.searchPlants(q, {
       group,
-      limit: limit ? Number(limit) : 20,
+      limit: max,
     });
+
+    if (Array.isArray(result.hits) && result.hits.length > 0) {
+      return result;
+    }
+
+    return this.searchLocalPlants(q, group, max);
   }
 
   private loadPlants(): any[] {
@@ -67,5 +74,50 @@ export class PlantsController implements OnModuleInit {
         }
       })
       .filter(Boolean);
+  }
+
+  private searchLocalPlants(query: string, group?: string, limit = 20) {
+    const terms = this.normalize(query).split(/\s+/).filter(Boolean);
+    if (!terms.length) return { hits: [], total: 0 };
+
+    const matches = this.plants
+      .filter((plant) => !group || plant.group === group)
+      .map((plant) => ({ plant, score: this.scorePlant(plant, terms) }))
+      .filter(({ score }) => score > 0)
+      .sort((a, b) => b.score - a.score || String(a.plant.name).localeCompare(String(b.plant.name), 'pl'));
+
+    return {
+      hits: matches.slice(0, Math.min(Math.max(limit, 1), 50)).map(({ plant }) => plant),
+      total: matches.length,
+    };
+  }
+
+  private scorePlant(plant: any, terms: string[]) {
+    const name = this.normalize(String(plant.name || ''));
+    const text = this.normalize([
+      plant.name,
+      plant.latinName,
+      plant.slug,
+      plant.group,
+      plant.summary,
+      plant.difficulty,
+      plant.sun,
+      plant.soil,
+      plant.water,
+      plant.harvest,
+      ...(plant.tags || []),
+      ...(plant.searchIntents || []),
+      ...(plant.problems || []).map((problem: any) => problem.symptom),
+      ...(plant.signals || []).flatMap((signal: any) => [signal.title, signal.means, signal.action]),
+    ].filter(Boolean).join(' '));
+
+    return terms.reduce((score, term) => score + (name.includes(term) ? 5 : text.includes(term) ? 1 : 0), 0);
+  }
+
+  private normalize(value: string) {
+    return value
+      .toLocaleLowerCase('pl')
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '');
   }
 }

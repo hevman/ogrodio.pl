@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { ArrowUpRight, Clock3, Loader2, SearchX } from 'lucide-react';
 import { AdviceSearch } from '@/components/advice-search';
 import { PageShell, PageSection } from '@/components/page-shell';
@@ -36,6 +36,7 @@ export function AdviceSearchResults() {
   const [hits, setHits] = useState<ArticleHit[]>([]);
   const [loading, setLoading] = useState(false);
   const [searched, setSearched] = useState(false);
+  const requestRef = useRef(0);
 
   useEffect(() => {
     if (!q.trim()) {
@@ -45,7 +46,9 @@ export function AdviceSearchResults() {
     }
     setLoading(true);
     setSearched(false);
+    const requestId = ++requestRef.current;
     searchArticles(q).then(results => {
+      if (requestId !== requestRef.current) return;
       setHits(results);
       setSearched(true);
       setLoading(false);

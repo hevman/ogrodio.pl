@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound, redirect } from "next/navigation";
-import { Camera, CheckCircle2, Clock3, ShieldCheck, UserRound } from "lucide-react";
+import { ArrowUpRight, Camera, CheckCircle2, Clock3, Leaf, ShieldCheck, UserRound } from "lucide-react";
 import { ArticleGanttChart, ArticleVarietyTable } from "@/components/article-chart";
 import { ArticleHeroImage, ArticleInlineImage } from "@/components/article-image";
 import { ArticleVideo } from "@/components/article-video";
@@ -15,6 +15,7 @@ import { t } from "@/i18n";
 import { getAdviceArticle, getAdviceArticles, getAdviceDiscoverMeta } from "@/lib/advice";
 import { buildArticleBodyText } from "@/lib/article-content";
 import { getRelatedSectionTitle, resolveRelatedArticles } from "@/lib/article-links";
+import { resolveRelatedPlantsForArticle } from "@/lib/advice-plants";
 import { getAdviceRelatedProducts } from "@/lib/advice-shop";
 import { siteShell } from "@/lib/layout";
 import { site, articleCategories, getArticleCategorySlug } from "@/lib/site-config";
@@ -97,6 +98,7 @@ export default async function AdviceArticlePage({ params }: Props) {
   const relatedSectionTitle = getRelatedSectionTitle(article);
   const readMoreArticles = internalLinks.slice(0, 2);
   const relatedProducts = await getAdviceRelatedProducts(article, 3);
+  const relatedPlants = resolveRelatedPlantsForArticle(article, 2);
 
   const ganttRows = article.ganttChart?.rows ?? [];
   const tableRows = article.varietyTable?.rows ?? [];
@@ -364,6 +366,40 @@ export default async function AdviceArticlePage({ params }: Props) {
                 ))}
               </ul>
             </div>
+
+            {relatedPlants.length > 0 ? (
+              <div className="rounded-3xl border border-emerald-100 bg-emerald-50 p-6">
+                <p className="flex items-center gap-2 text-sm font-bold uppercase tracking-wide text-emerald-800">
+                  <Leaf className="h-4 w-4" />
+                  Powiązana roślina
+                </p>
+                <div className="mt-4 space-y-4">
+                  {relatedPlants.map((plant) => (
+                    <div className="rounded-2xl bg-white p-4 shadow-sm" key={plant.slug}>
+                      <p className="text-lg font-bold text-slate-950">{plant.name}</p>
+                      <p className="mt-1 text-sm italic text-slate-500">{plant.latinName}</p>
+                      <p className="mt-3 text-sm leading-6 text-slate-700">{plant.summary}</p>
+                      <div className="mt-4 grid gap-2">
+                        <Link
+                          className="inline-flex items-center justify-between gap-3 rounded-xl border border-emerald-200 px-3 py-2 text-sm font-bold text-emerald-800 transition hover:border-emerald-400 hover:bg-emerald-50"
+                          href={`/katalog-roslin/${plant.slug}`}
+                        >
+                          Karta rośliny i kalendarz prac
+                          <ArrowUpRight className="h-4 w-4" />
+                        </Link>
+                        <Link
+                          className="inline-flex items-center justify-between gap-3 rounded-xl bg-emerald-700 px-3 py-2 text-sm font-bold text-white transition hover:bg-emerald-800"
+                          href={`${site.appUrl}/plants?plantType=${encodeURIComponent(plant.slug)}`}
+                        >
+                          Dodaj do mojego ogrodu
+                          <ArrowUpRight className="h-4 w-4" />
+                        </Link>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ) : null}
 
             <ArticleRelatedProducts products={relatedProducts} topic={article.topic} />
           </aside>

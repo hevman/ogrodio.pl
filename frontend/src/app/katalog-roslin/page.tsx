@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
-import { Suspense } from "react";
-import { ArrowUpRight, CalendarDays, Droplets, SunMedium } from "lucide-react";
-import { PlantSearch } from "@/components/plant-search";
+import { ArrowUpRight, CalendarDays } from "lucide-react";
+import { PlantCatalogBrowser } from "@/components/plant-catalog-browser";
 import { PageSection, PageShell } from "@/components/page-shell";
 import { plantCatalog, plantGroups } from "@/lib/plant-catalog";
 import { site } from "@/lib/site-config";
@@ -35,12 +33,6 @@ const itemListJsonLd = {
   })),
 };
 
-function difficultyClass(difficulty: string) {
-  if (difficulty === "łatwa") return "bg-emerald-50 text-emerald-700";
-  if (difficulty === "średnia") return "bg-amber-50 text-amber-700";
-  return "bg-rose-50 text-rose-700";
-}
-
 export default function PlantCatalogPage() {
   return (
     <>
@@ -55,33 +47,8 @@ export default function PlantCatalogPage() {
         title="Rośliny opisane tak, żeby łatwiej o nie dbać"
       >
         <PageSection>
-          {/* Wyszukiwarka */}
-          <div className="mb-6">
-            <Suspense>
-              <PlantSearch />
-            </Suspense>
-          </div>
-
           <div className="grid gap-4 lg:grid-cols-[minmax(0,1fr)_320px] lg:items-start">
-            <div className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm sm:p-5">
-              <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-                <div>
-                  <p className="font-bold text-slate-900">{plantCatalog.length} roślin</p>
-                  <p className="text-sm text-slate-500">Owoce, warzywnik, zioła, iglaki i rośliny ozdobne.</p>
-                </div>
-                <div className="flex flex-wrap gap-2">
-                  {plantGroups.map((group) => (
-                    <a
-                      className="rounded-full border border-slate-200 px-3 py-1 text-xs font-bold text-slate-600 transition hover:border-teal-200 hover:text-teal-700"
-                      href={`#${group.toLowerCase().replaceAll(" ", "-")}`}
-                      key={group}
-                    >
-                      {group}
-                    </a>
-                  ))}
-                </div>
-              </div>
-            </div>
+            <PlantCatalogBrowser groups={plantGroups} plants={plantCatalog} />
 
             <aside className="rounded-2xl border border-slate-200 bg-[#f4f7f2] p-5">
               <p className="text-sm font-bold uppercase tracking-wide text-teal-700">Plan opieki</p>
@@ -96,71 +63,6 @@ export default function PlantCatalogPage() {
                 <ArrowUpRight className="h-4 w-4" />
               </Link>
             </aside>
-          </div>
-
-          <div className="mt-8 space-y-12">
-            {plantGroups.map((group) => {
-              const plants = plantCatalog.filter((plant) => plant.group === group);
-              return (
-                <section id={group.toLowerCase().replaceAll(" ", "-")} key={group}>
-                  <div className="flex items-end justify-between gap-4">
-                    <div>
-                      <p className="text-sm font-bold uppercase tracking-wide text-teal-700">{group}</p>
-                      <h2 className="mt-1 text-2xl font-bold text-slate-900">{plants.length} roślin</h2>
-                    </div>
-                  </div>
-                  <div className="mt-5 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
-                    {plants.map((plant, index) => (
-                      <Link
-                        className="group overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition hover:-translate-y-0.5 hover:border-teal-200 hover:shadow-md"
-                        href={`/katalog-roslin/${plant.slug}`}
-                        key={plant.slug}
-                      >
-                        <div className="relative aspect-[4/3] bg-slate-100">
-                          <Image
-                            alt={plant.imageAlt}
-                            className="object-cover transition duration-300 group-hover:scale-[1.03]"
-                            fill
-                            priority={index === 0 && group === plantGroups[0]}
-                            sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
-                            src={plant.image}
-                          />
-                        </div>
-                        <div className="p-5">
-                          <div className="flex items-start justify-between gap-3">
-                            <div>
-                              <p className="text-xs font-bold uppercase tracking-wide text-teal-700">{plant.group}</p>
-                              <h3 className="mt-1 text-xl font-bold text-slate-900">{plant.name}</h3>
-                              <p className="mt-0.5 text-sm italic text-slate-500">{plant.latinName}</p>
-                            </div>
-                            <ArrowUpRight className="mt-1 h-5 w-5 shrink-0 text-slate-400 transition group-hover:text-teal-700" />
-                          </div>
-                          <p className="mt-3 line-clamp-3 text-sm leading-6 text-slate-600">{plant.summary}</p>
-                          <div className="mt-4 grid gap-2 text-xs text-slate-600">
-                            <span className="flex items-center gap-2">
-                              <SunMedium className="h-4 w-4 text-amber-500" />
-                              {plant.sun}
-                            </span>
-                            <span className="flex items-center gap-2">
-                              <Droplets className="h-4 w-4 text-sky-500" />
-                              {plant.water}
-                            </span>
-                          </div>
-                          <div className="mt-4 flex flex-wrap gap-2">
-                            <span className={`rounded-full px-2.5 py-1 text-xs font-bold ${difficultyClass(plant.difficulty)}`}>
-                              {plant.difficulty}
-                            </span>
-                            <span className="rounded-full bg-slate-100 px-2.5 py-1 text-xs font-bold text-slate-600">
-                              {plant.harvest}
-                            </span>
-                          </div>
-                        </div>
-                      </Link>
-                    ))}
-                  </div>
-                </section>
-              );
-            })}
           </div>
 
           <div className="mt-12 grid gap-4 rounded-2xl border border-teal-100 bg-teal-50 p-5 sm:grid-cols-[auto,1fr] sm:items-center">

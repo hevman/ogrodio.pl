@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { AdviceGrid } from "@/components/advice-grid";
+import { AdviceFilterGrid } from "@/components/advice-filter-grid";
 import { ArticleParagraph } from "@/components/article-paragraph";
 import { Breadcrumb } from "@/components/breadcrumb";
 import { PageSection } from "@/components/page-shell";
@@ -146,7 +146,11 @@ export default async function CategoryPage({ params }: Props) {
       </section>
 
       <PageSection>
-        <AdviceGrid articles={sortedArticles} categorySlug={category} />
+        <AdviceFilterGrid
+          articles={sortedArticles}
+          categorySlug={category}
+          placeholder={`Filtruj poradniki z kategorii ${cat.label}: roślina, objaw, zabieg...`}
+        />
       </PageSection>
     </>
   );
