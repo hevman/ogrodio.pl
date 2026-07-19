@@ -40,10 +40,20 @@ function initials(name: string) {
     .join("") || "U";
 }
 
-export function SiteHeader({ initialIsShopHost = false }: { initialIsShopHost?: boolean }) {
+export function SiteHeader({
+  initialIsAppHost = false,
+  initialIsPanelHost = false,
+  initialIsShopHost = false,
+}: {
+  initialIsAppHost?: boolean;
+  initialIsPanelHost?: boolean;
+  initialIsShopHost?: boolean;
+}) {
   const pathname = usePathname();
   const router = useRouter();
   const [isShopHost, setIsShopHost] = useState(initialIsShopHost);
+  const [isAppHost, setIsAppHost] = useState(initialIsAppHost);
+  const [isPanelHost, setIsPanelHost] = useState(initialIsPanelHost);
   const [cartCount, setCartCount] = useState(0);
   const [cart, setCart] = useState<CartItem[]>([]);
   const [products, setProducts] = useState<Product[]>([]);
@@ -59,9 +69,10 @@ export function SiteHeader({ initialIsShopHost = false }: { initialIsShopHost?: 
   const [notifications, setNotifications] = useState<GardenNotification[]>([]);
   const [unreadCount, setUnreadCount] = useState(0);
   const [isNotificationsOpen, setIsNotificationsOpen] = useState(false);
-  const siteHomeHref = isShopHost ? site.siteUrl : "/";
-  const siteAdviceHref = isShopHost ? sitePath("/porady") : "/porady";
-  const sitePlantCatalogHref = isShopHost ? sitePath("/katalog-roslin") : "/katalog-roslin";
+  const isSubdomainHost = isShopHost || isAppHost || isPanelHost;
+  const siteHomeHref = isSubdomainHost ? sitePath("/") : "/";
+  const siteAdviceHref = isSubdomainHost ? sitePath("/porady") : "/porady";
+  const sitePlantCatalogHref = isSubdomainHost ? sitePath("/katalog-roslin") : "/katalog-roslin";
 
   useEffect(() => {
     const updateCartCount = () => {
@@ -78,6 +89,7 @@ export function SiteHeader({ initialIsShopHost = false }: { initialIsShopHost?: 
       }
     };
 
+    const hostname = window.location.hostname;
     setIsShopHost(
       window.location.hostname === "sklep.ogrodio.localhost" ||
         window.location.hostname === "sklep.ogrodio.pl" ||
@@ -88,6 +100,8 @@ export function SiteHeader({ initialIsShopHost = false }: { initialIsShopHost?: 
         pathname.startsWith("/dostawa") ||
         pathname.startsWith("/zwroty"),
     );
+    setIsAppHost(hostname === "app.ogrodio.localhost" || hostname === "app.ogrodio.pl");
+    setIsPanelHost(hostname === "panel.ogrodio.localhost" || hostname === "panel.ogrodio.pl");
     updateCartCount();
     window.addEventListener("storage", updateCartCount);
     window.addEventListener("garden-cart-updated", updateCartCount);

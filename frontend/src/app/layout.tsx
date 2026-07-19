@@ -111,7 +111,13 @@ export default async function RootLayout({
         ))}
       </head>
       <body className="flex min-h-full flex-col bg-[#eef1f6] text-slate-900">
-        {isPanelHost ? null : <SiteHeader initialIsShopHost={isShopHost} />}
+        {isPanelHost ? null : (
+          <SiteHeader
+            initialIsAppHost={isAppHost}
+            initialIsPanelHost={isPanelHost}
+            initialIsShopHost={isShopHost}
+          />
+        )}
         <main className="flex-1">{children}</main>
         {isAppHost || isPanelHost ? null : <SiteFooter variant={isShopHost ? "shop" : "site"} />}
       </body>
