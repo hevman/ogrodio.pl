@@ -1,0 +1,33 @@
+{
+  "slug": "maczniak-prawdziwy-dyniowatych-2026-06",
+  "title": "Mączniak prawdziwy dyniowatych: obserwuj ogórki, cukinie i dynie",
+  "threatType": "choroba",
+  "organism": "mączniak prawdziwy dyniowatych",
+  "status": "published",
+  "severity": "średnie",
+  "confidence": "średnia",
+  "plantSlugs": ["cukinia"],
+  "plantNames": ["ogórek", "cukinia", "dynia"],
+  "typicalMonths": ["VI", "VII", "VIII", "IX"],
+  "signals": [
+    {
+      "year": 2026,
+      "month": "VI",
+      "sourceDate": "2026-06-25",
+      "sourceTitle": "Mączniak prawdziwy dyniowatych - warzywa - choroby - komunikat nr 3",
+      "sourceUrl": "https://www.sygnalizacja.agrofagi.com.pl/komunikaty-artykul/760680_Maczniak-prawdziwy-dyniowatych-warzywa-choroby-komunikat-nr-3",
+      "region": "Skierniewice, woj. łódzkie",
+      "observedOn": "ogórek w tunelu foliowym",
+      "interpretation": "Sygnał dotyczy ogórka pod osłonami, ale warto obserwować także inne dyniowate w ogrodzie, zwłaszcza przy ciepłej pogodzie i słabszym przewiewie."
+    }
+  ],
+  "symptoms": [
+    "białe, mączyste plamki na górnej stronie liści",
+    "powiększające się jasne naloty na starszych liściach",
+    "żółknięcie i zasychanie mocno porażonych liści"
+  ],
+  "gardenAction": "Sprawdź starsze liście i zagęszczone miejsca roślin. Popraw przewiew, podlewaj przy ziemi i usuń pojedyncze silnie porażone liście, jeśli problem dopiero się zaczyna.",
+  "whatNotToDo": "Nie wykonuj oprysku w ciemno. Najpierw upewnij się, że objawy pasują do mączniaka, a przy środkach ochrony roślin zawsze sprawdź aktualną etykietę preparatu.",
+  "articleHref": null,
+  "updated_at": "2026-07-20T00:00:00Z"
+}

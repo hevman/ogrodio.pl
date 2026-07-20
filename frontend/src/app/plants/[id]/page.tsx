@@ -26,12 +26,14 @@ import {
 import { canWriteGarden, plantHealthLabel, plantStatusLabel } from "@/lib/garden-permissions";
 import { getCatalogPlantByAppType } from "@/lib/plant-intelligence/engine";
 import { normalizePlantCatalog, type PlantCatalogItem } from "@/lib/plant-catalog";
+import type { SeasonalAlert } from "@/lib/seasonal-alerts";
 
 function PrivatePlantDetail({ plantId }: { plantId: string }) {
   const { organization } = useAppContext();
   const [plant, setPlant] = useState<GardenPlant | null>(null);
   const [catalog, setCatalog] = useState<PlantDefinition[]>([]);
   const [publicCatalog, setPublicCatalog] = useState<PlantCatalogItem[]>([]);
+  const [seasonalAlerts, setSeasonalAlerts] = useState<SeasonalAlert[]>([]);
   const [tasks, setTasks] = useState<GardenTask[]>([]);
   const [entries, setEntries] = useState<GardenJournalEntry[]>([]);
   const [displayName, setDisplayName] = useState("");
@@ -78,6 +80,17 @@ function PrivatePlantDetail({ plantId }: { plantId: string }) {
   useEffect(() => {
     refresh().then(() => setStatus("")).catch((e) => setStatus(e.message));
   }, [plantId]);
+
+  useEffect(() => {
+    if (!catalogPlant?.slug) {
+      setSeasonalAlerts([]);
+      return;
+    }
+    fetch(`/api/alerts/plant/${encodeURIComponent(catalogPlant.slug)}`, { credentials: "include" })
+      .then((res) => res.ok ? res.json() : [])
+      .then((data) => setSeasonalAlerts(Array.isArray(data) ? data : []))
+      .catch(() => setSeasonalAlerts([]));
+  }, [catalogPlant?.slug]);
 
   useEffect(() => {
     if (!plant) return;
@@ -163,7 +176,7 @@ function PrivatePlantDetail({ plantId }: { plantId: string }) {
 
       {catalogPlant ? (
         <section className="mt-5">
-          <PlantIntelligencePanel plant={catalogPlant} variant="app" />
+          <PlantIntelligencePanel plant={catalogPlant} seasonalAlerts={seasonalAlerts} variant="app" />
         </section>
       ) : null}
 

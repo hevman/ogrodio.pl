@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { CookieSettingsButton } from "@/components/cookie-settings-button";
 import { siteContainer, siteGutter } from "@/lib/layout";
 import { navLinks, site } from "@/lib/site-config";
 import { appPath } from "@/lib/app-url";
@@ -150,6 +151,7 @@ function ShopFooter() {
           <Link className="transition hover:text-white" href="/polityka-prywatnosci">
             Polityka prywatności
           </Link>
+          <CookieSettingsButton className="text-left transition hover:text-white" />
         </div>
       </div>
     </footer>
@@ -232,6 +234,7 @@ export function SiteFooter({ variant = "site" }: { variant?: "site" | "shop" }) 
             <Link className="text-sm text-slate-500 transition hover:text-teal-700" href="/polityka-redakcyjna">
               {t("footer.site.editorialPolicy")}
             </Link>
+            <CookieSettingsButton className="text-left text-sm text-slate-500 transition hover:text-teal-700" />
             <a className="text-sm text-slate-500 transition hover:text-teal-700" href={`mailto:${site.email}`}>
               {site.email}
             </a>

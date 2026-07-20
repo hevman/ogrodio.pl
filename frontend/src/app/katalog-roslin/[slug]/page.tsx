@@ -17,6 +17,7 @@ import { PageSection } from "@/components/page-shell";
 import { PlantIntelligencePanel } from "@/components/plant-intelligence-panel";
 import { PlantVisualGuideLoader } from "@/components/plant-visual-guide-loader";
 import { getPlantBySlug, getPlantIntelligence } from "@/lib/plant-catalog";
+import { getSeasonalAlertsForPlant } from "@/lib/seasonal-alerts";
 import { site } from "@/lib/site-config";
 
 export const dynamic = "force-dynamic";
@@ -48,6 +49,7 @@ export default async function PlantPage({ params }: Props) {
   if (!plant) notFound();
 
   const intelligence = getPlantIntelligence(plant);
+  const seasonalAlerts = await getSeasonalAlertsForPlant(plant.slug);
   const appAddUrl = `${site.appUrl}/plants?plantType=${encodeURIComponent(intelligence.appPlantType)}`;
 
   const plantJsonLd = [
@@ -110,7 +112,7 @@ export default async function PlantPage({ params }: Props) {
       <PageSection>
         <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_340px] lg:items-start">
           <article className="space-y-8">
-            <PlantIntelligencePanel appAddUrl={appAddUrl} plant={plant} variant="catalog" />
+            <PlantIntelligencePanel appAddUrl={appAddUrl} plant={plant} seasonalAlerts={seasonalAlerts} variant="catalog" />
             <PlantVisualGuideLoader plant={plant} />
 
             <section className="grid gap-4 sm:grid-cols-2">

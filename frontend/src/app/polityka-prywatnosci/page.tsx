@@ -14,7 +14,7 @@ export default function PrivacyPolicyPage() {
       <article className="mx-auto max-w-4xl rounded-lg border border-emerald-900/10 bg-white p-6 shadow-sm md:p-10">
         <p className="text-sm font-black uppercase text-emerald-700">Ogrodio</p>
         <h1 className="mt-2 text-4xl font-black">Polityka prywatności</h1>
-        <p className="mt-3 text-sm text-slate-500">Wersja 1.1, obowiązuje od 13 lipca 2026 r.</p>
+        <p className="mt-3 text-sm text-slate-500">Wersja 1.2, obowiązuje od 20 lipca 2026 r.</p>
 
         <div className="mt-8 grid gap-8 text-sm leading-7 text-slate-700">
           <section>
@@ -140,6 +140,17 @@ export default function PrivacyPolicyPage() {
               Ogrodio używa niezbędnych plików cookie i pamięci przeglądarki do sesji, logowania, koszyka, ustawień i
               ochrony przed nadużyciami. Są one potrzebne do świadczenia usługi i nie służą do reklamy behawioralnej.
               Funkcje analityczne lub marketingowe wymagające zgody nie będą uruchamiane przed jej uzyskaniem.
+            </p>
+            <p className="mt-2">
+              Za zgodą użytkownika Ogrodio może używać Google Analytics 4 do pomiaru odwiedzin, popularności treści,
+              źródeł ruchu i podstawowych zdarzeń w serwisie. Google Analytics działa u nas z Google Consent Mode v2:
+              przed wyborem użytkownika zgody dla analityki, reklam, danych użytkownika i personalizacji reklam są
+              domyślnie ustawione jako odmówione. Skrypt analityczny jest ładowany dopiero po zgodzie na analitykę.
+            </p>
+            <p className="mt-2">
+              Dostawcą Google Analytics jest Google Ireland Limited. W związku z działaniem usług Google dane techniczne
+              mogą być przetwarzane także poza Europejskim Obszarem Gospodarczym na zasadach opisanych przez Google.
+              Zgodę można w każdej chwili zmienić lub wycofać przyciskiem „Ustawienia cookies” w stopce strony.
             </p>
             <p className="mt-2">
               Użytkownik może usunąć dane lokalne w ustawieniach przeglądarki, ale zablokowanie niezbędnych mechanizmów

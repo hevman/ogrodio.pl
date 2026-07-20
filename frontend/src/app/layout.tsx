@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { headers } from "next/headers";
+import { CookieConsentBanner } from "@/components/cookie-consent-banner";
+import { GoogleAnalytics } from "@/components/google-analytics";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { shopIndexingEnabled } from "@/lib/seo/shop-indexing";
@@ -99,6 +101,7 @@ export default async function RootLayout({
       lang="pl"
     >
       <head>
+        {isAppHost || isPanelHost ? null : <GoogleAnalytics />}
         <script
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
           type="application/ld+json"
@@ -120,6 +123,7 @@ export default async function RootLayout({
         )}
         <main className="flex-1">{children}</main>
         {isAppHost || isPanelHost ? null : <SiteFooter variant={isShopHost ? "shop" : "site"} />}
+        {isAppHost || isPanelHost ? null : <CookieConsentBanner />}
       </body>
     </html>
   );

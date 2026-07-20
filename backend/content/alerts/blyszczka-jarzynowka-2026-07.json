@@ -1,0 +1,33 @@
+{
+  "slug": "blyszczka-jarzynowka-2026-07",
+  "title": "Błyszczka jarzynówka: sprawdzaj liście i młode przyrosty",
+  "threatType": "szkodnik",
+  "organism": "błyszczka jarzynówka",
+  "status": "published",
+  "severity": "niskie",
+  "confidence": "średnia",
+  "plantSlugs": ["winorosl", "salata-lisciowa"],
+  "plantNames": ["warzywa liściowe", "winorośl", "rośliny kapustowate"],
+  "typicalMonths": ["VI", "VII", "VIII", "IX"],
+  "signals": [
+    {
+      "year": 2026,
+      "month": "VII",
+      "sourceDate": "2026-07-13",
+      "sourceTitle": "Błyszczka jarzynówka – letnie migracje lokalnym zagrożeniem upraw",
+      "sourceUrl": "https://www.sygnalizacja.agrofagi.com.pl/komunikaty-artykul/499999_Blyszczka-jarzynowka-letnie-migracje-lokalnym-zagrozeniem-upraw",
+      "region": "woj. wielkopolskie",
+      "observedOn": "motyle błyszczki jarzynówki i uprawy polowe",
+      "interpretation": "To szkodnik o szerokim zakresie roślin żywicielskich. W ogrodzie sygnał oznacza głównie potrzebę obserwacji liści i młodych przyrostów, a nie automatyczną interwencję."
+    }
+  ],
+  "symptoms": [
+    "nieregularne wygryzienia w liściach",
+    "obecność zielonych gąsienic na spodniej stronie liści",
+    "ciemne grudki odchodów przy miejscach żerowania"
+  ],
+  "gardenAction": "Przejrzyj dolne i spodnie strony liści. W małym ogrodzie pojedyncze gąsienice można usuwać ręcznie, a decyzję o dalszym działaniu podejmować dopiero przy narastających uszkodzeniach.",
+  "whatNotToDo": "Nie traktuj pojedynczego motyla jako powodu do oprysku. Liczą się uszkodzenia liści i obecność larw.",
+  "articleHref": null,
+  "updated_at": "2026-07-20T00:00:00Z"
+}

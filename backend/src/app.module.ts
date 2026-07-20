@@ -36,6 +36,8 @@ import { ArticleMediaService } from './staff/article-media.service';
 import { ArticleContentService } from './staff/article-content.service';
 import { PlantContentService } from './staff/plant-content.service';
 import { PlantsController } from './staff/plants.controller';
+import { AlertContentService } from './staff/alert-content.service';
+import { AlertsController } from './staff/alerts.controller';
 import { SyncAuthGuard } from './staff/sync-auth.guard';
 import { MeilisearchService } from './staff/meilisearch.service';
 
@@ -60,6 +62,7 @@ import { MeilisearchService } from './staff/meilisearch.service';
     ArticlesController,
     ArticlesPublicController,
     PlantsController,
+    AlertsController,
     AuditController,
   ],
   providers: [
@@ -82,6 +85,7 @@ import { MeilisearchService } from './staff/meilisearch.service';
     ArticleMediaService,
     ArticleContentService,
     PlantContentService,
+    AlertContentService,
     SyncAuthGuard,
     MeilisearchService,
   ],

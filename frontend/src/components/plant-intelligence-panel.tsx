@@ -1,11 +1,13 @@
 import Link from "next/link";
-import { AlertTriangle, ArrowUpRight, CalendarDays, ClipboardList, Leaf, MessageCircleQuestion, Sprout } from "lucide-react";
+import { AlertTriangle, ArrowUpRight, CalendarDays, ClipboardList, ExternalLink, Leaf, MessageCircleQuestion, Sprout } from "lucide-react";
 import type { PlantCatalogItem } from "@/lib/plant-intelligence/schema";
 import { getPlantIntelligence } from "@/lib/plant-intelligence/engine";
+import type { SeasonalAlert } from "@/lib/seasonal-alerts";
 
 type Props = {
   plant: PlantCatalogItem;
   appAddUrl?: string;
+  seasonalAlerts?: SeasonalAlert[];
   variant?: "catalog" | "app";
 };
 
@@ -27,6 +29,12 @@ function riskClass(level: string) {
   return "border-amber-200 bg-amber-50 text-amber-900";
 }
 
+function alertClass(level: string) {
+  if (level === "wysokie") return "border-rose-200 bg-rose-50 text-rose-950";
+  if (level === "niskie") return "border-slate-200 bg-slate-50 text-slate-800";
+  return "border-amber-200 bg-amber-50 text-amber-950";
+}
+
 function weekLabel(week: string | null | undefined) {
   if (!week || week === "cały") return null;
   if (week === "1-2") return "tydzień 1-2";
@@ -43,7 +51,7 @@ const careGuideLabels: Record<string, string> = {
   harvest: "Zbiory",
 };
 
-export function PlantIntelligencePanel({ plant, appAddUrl, variant = "catalog" }: Props) {
+export function PlantIntelligencePanel({ plant, appAddUrl, seasonalAlerts = [], variant = "catalog" }: Props) {
   const intelligence = getPlantIntelligence(plant);
   const accentText = variant === "catalog" ? "text-teal-700" : "text-emerald-700";
   const accentBg = variant === "catalog" ? "bg-teal-700 hover:bg-teal-800" : "bg-emerald-700 hover:bg-emerald-800";
@@ -147,6 +155,62 @@ export function PlantIntelligencePanel({ plant, appAddUrl, variant = "catalog" }
                 ) : null}
               </div>
             ))}
+          </div>
+        </section>
+      ) : null}
+
+      {seasonalAlerts.length > 0 ? (
+        <section className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-6">
+          <div className="flex items-center gap-3">
+            <AlertTriangle className="h-5 w-5 text-amber-600" />
+            <div>
+              <p className={`text-sm font-bold uppercase tracking-wide ${accentText}`}>Sygnały sezonowe</p>
+              <h2 className="text-2xl font-bold text-slate-900">Co warto obserwować w tym sezonie</h2>
+            </div>
+          </div>
+          <div className="mt-5 grid gap-3">
+            {seasonalAlerts.slice(0, 3).map((alert) => {
+              const signal = alert.signals[0];
+              return (
+                <div className={`rounded-xl border p-4 ${alertClass(alert.severity)}`} key={alert.slug}>
+                  <p className="text-xs font-black uppercase tracking-wide">
+                    {signal?.month} {signal?.year} / pewność: {alert.confidence}
+                  </p>
+                  <h3 className="mt-1 font-bold">{alert.title}</h3>
+                  {signal ? (
+                    <p className="mt-1 text-xs font-semibold uppercase tracking-wide opacity-80">
+                      Źródło: {signal.sourceDate}, {signal.region}
+                    </p>
+                  ) : null}
+                  <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-6">
+                    {alert.symptoms.slice(0, 3).map((symptom) => (
+                      <li key={symptom}>{symptom}</li>
+                    ))}
+                  </ul>
+                  <p className="mt-3 text-sm leading-6">{alert.gardenAction}</p>
+                  <p className="mt-2 text-xs font-semibold leading-5 opacity-80">{alert.whatNotToDo}</p>
+                  <div className="mt-3 flex flex-wrap gap-3">
+                    {alert.articleHref ? (
+                      <Link className="inline-flex items-center gap-1 text-xs font-bold underline" href={alert.articleHref}>
+                        Zobacz poradnik
+                        <ArrowUpRight className="h-3 w-3" />
+                      </Link>
+                    ) : null}
+                    {signal?.sourceUrl ? (
+                      <a
+                        className="inline-flex items-center gap-1 text-xs font-bold underline"
+                        href={signal.sourceUrl}
+                        rel="nofollow noopener noreferrer"
+                        target="_blank"
+                      >
+                        Źródło sygnału
+                        <ExternalLink className="h-3 w-3" />
+                      </a>
+                    ) : null}
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </section>
       ) : null}

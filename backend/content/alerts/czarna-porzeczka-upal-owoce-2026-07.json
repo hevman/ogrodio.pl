@@ -1,0 +1,33 @@
+{
+  "slug": "czarna-porzeczka-upal-owoce-2026-07",
+  "title": "Czarna porzeczka: upał może uszkadzać owoce",
+  "threatType": "stres pogodowy",
+  "organism": "stres termiczny i silne nasłonecznienie",
+  "status": "published",
+  "severity": "średnie",
+  "confidence": "wysoka",
+  "plantSlugs": ["czarna-porzeczka"],
+  "plantNames": ["czarna porzeczka"],
+  "typicalMonths": ["VI", "VII", "VIII"],
+  "signals": [
+    {
+      "year": 2026,
+      "month": "VII",
+      "sourceDate": "2026-07-14",
+      "sourceTitle": "Fala upałów – uszkodzenia owoców porzeczki czarnej i ryzyko rozwoju chorób",
+      "sourceUrl": "https://www.sygnalizacja.agrofagi.com.pl/komunikaty",
+      "region": "Polska",
+      "observedOn": "owoce porzeczki czarnej",
+      "interpretation": "W okresie upałów objawy na owocach mogą wynikać ze stresu pogodowego, a nie tylko z choroby. Warto ocenić podlewanie, ściółkę i ekspozycję krzewów."
+    }
+  ],
+  "symptoms": [
+    "zmatowienie i przebarwienia dojrzewających owoców",
+    "marszczenie lub zapadanie się skórki",
+    "zasychanie części owoców po okresie silnego słońca"
+  ],
+  "gardenAction": "Utrzymuj równą wilgotność gleby, szczególnie przy młodych krzewach i lekkim podłożu. Usuń mocno uszkodzone owoce, jeśli gniją lub przyciągają owady.",
+  "whatNotToDo": "Nie zakładaj od razu infekcji i nie stosuj środków ochrony roślin tylko dlatego, że część owoców zmatowiała po upałach.",
+  "articleHref": null,
+  "updated_at": "2026-07-20T00:00:00Z"
+}

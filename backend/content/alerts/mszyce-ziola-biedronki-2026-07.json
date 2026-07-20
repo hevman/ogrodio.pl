@@ -1,0 +1,33 @@
+{
+  "slug": "mszyce-ziola-biedronki-2026-07",
+  "title": "Liczne biedronki na ziołach mogą oznaczać aktywność mszyc",
+  "threatType": "szkodnik",
+  "organism": "mszyce",
+  "status": "published",
+  "severity": "niskie",
+  "confidence": "średnia",
+  "plantSlugs": ["tymianek", "lawenda"],
+  "plantNames": ["zioła", "rośliny zielarskie", "lawenda", "tymianek"],
+  "typicalMonths": ["V", "VI", "VII", "VIII"],
+  "signals": [
+    {
+      "year": 2026,
+      "month": "VII",
+      "sourceDate": "2026-07-15",
+      "sourceTitle": "Liczne biedronki na roślinach - sygnał aktywności mszyc",
+      "sourceUrl": "https://www.sygnalizacja.agrofagi.com.pl/komunikaty",
+      "region": "Polska",
+      "observedOn": "rośliny zielarskie",
+      "interpretation": "Biedronki są pożyteczne. Ich większa liczba może podpowiadać, że w pobliżu są mszyce, ale sama obecność biedronek nie jest problemem."
+    }
+  ],
+  "symptoms": [
+    "kolonie drobnych owadów na młodych pędach",
+    "lepka spadź na liściach",
+    "zwijanie i deformacja młodych przyrostów"
+  ],
+  "gardenAction": "Obejrzyj młode wierzchołki i spodnią stronę liści. Jeśli są biedronki i mało mszyc, daj naturalnym wrogom czas. Przy małej kolonii można spłukać mszyce wodą lub usunąć porażony wierzchołek.",
+  "whatNotToDo": "Nie zwalczaj biedronek. To sprzymierzeńcy ogrodu i często ograniczają mszyce skuteczniej niż pochopna interwencja.",
+  "articleHref": null,
+  "updated_at": "2026-07-20T00:00:00Z"
+}

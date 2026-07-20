@@ -1,0 +1,33 @@
+{
+  "slug": "wciornastek-tytoniowiec-cebula-por-2026-07",
+  "title": "Wciornastek tytoniowiec: srebrzyste smugi na liściach cebulowych",
+  "threatType": "szkodnik",
+  "organism": "wciornastek tytoniowiec",
+  "status": "published",
+  "severity": "średnie",
+  "confidence": "wysoka",
+  "plantSlugs": [],
+  "plantNames": ["cebula", "por", "szczypior"],
+  "typicalMonths": ["VI", "VII", "VIII"],
+  "signals": [
+    {
+      "year": 2026,
+      "month": "VII",
+      "sourceDate": "2026-07-10",
+      "sourceTitle": "Wciornastek tytoniowiec - komunikat nr 1",
+      "sourceUrl": "https://www.sygnalizacja.agrofagi.com.pl/komunikaty",
+      "region": "Karnków koło Łowicza oraz poletka doświadczalne pora w Skierniewicach",
+      "observedOn": "cebula i por",
+      "interpretation": "To sygnał dla upraw cebulowych. W małym ogrodzie najważniejsza jest regularna obserwacja liści, szczególnie w czasie suchej i ciepłej pogody."
+    }
+  ],
+  "symptoms": [
+    "srebrzyste lub jasne smugi na liściach",
+    "drobne ciemne punkty zabrudzeń na powierzchni liści",
+    "zasychanie końcówek przy silniejszym żerowaniu"
+  ],
+  "gardenAction": "Obejrzyj liście z bliska, szczególnie ich nasady i wnętrze kęp. Przy małej uprawie pomaga ograniczanie przesuszenia, usuwanie mocno uszkodzonych liści i obserwacja, czy objawy się nasilają.",
+  "whatNotToDo": "Nie zakładaj automatycznie choroby grzybowej, jeśli widzisz srebrzenie i drobne ślady żerowania. Najpierw rozpoznaj szkodnika.",
+  "articleHref": null,
+  "updated_at": "2026-07-20T00:00:00Z"
+}
