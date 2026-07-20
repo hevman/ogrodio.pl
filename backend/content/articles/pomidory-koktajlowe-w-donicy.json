@@ -118,7 +118,15 @@
   "varietyTable": {
     "caption": "Odmiany pomidorów koktajlowych i balkonowych do donicy",
     "tableIntro": "Najpopularniejsze odmiany do donicy to karłowe Bajaja i Maskotka (po dwie w doniczce, bez tyczki) oraz koktajlowe Sweet Million i Black Cherry (jedna roślina, tyczka 150 cm, bardzo obfite plony). Odmiany żółte są słodsze — Yellow Pear i Sungold to wybór dla tych co nie lubią kwaskowatości.",
-    "columns": ["Odmiana", "Typ", "Owocowanie", "Owoc", "Smak", "Plon", "Uwagi"],
+    "columns": [
+      "Odmiana",
+      "Typ",
+      "Owocowanie",
+      "Owoc",
+      "Smak",
+      "Plon",
+      "Uwagi"
+    ],
     "rows": [
       {
         "name": "Bajaja",
@@ -213,9 +221,7 @@
     ]
   },
   "related_articles": [
-    "salata-lisciowa-uprawa-zbiory",
-    "co-siejemy-w-marcu",
-    "co-siejemy-w-maju"
+    "salata-lisciowa-uprawa-zbiory"
   ],
   "related_services": [
     "Zakładanie warzywnika",
