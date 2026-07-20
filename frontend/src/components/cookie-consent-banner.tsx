@@ -160,8 +160,9 @@ export function CookieConsentBanner() {
         <div className="grid gap-5 px-5 py-5 lg:grid-cols-[1fr_360px]">
           <div>
             <p className="text-sm leading-6 text-slate-600">
-              Używamy niezbędnych mechanizmów do działania strony i sklepu. Google Analytics uruchamiamy dopiero po
-              zgodzie. Możesz zaakceptować analitykę, zostać przy niezbędnych albo samodzielnie ustawić kategorie.
+              Korzystamy z plików cookie i podobnych technologii, aby strona działała prawidłowo, a za Twoją zgodą
+              także do tworzenia anonimowych statystyk. Możesz zaakceptować wybrane kategorie, dostosować ustawienia
+              albo pozostać wyłącznie przy niezbędnych mechanizmach.
             </p>
 
             {showSettings ? (
