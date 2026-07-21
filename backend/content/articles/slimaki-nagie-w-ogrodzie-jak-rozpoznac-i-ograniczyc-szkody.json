@@ -16,13 +16,6 @@
     "angle": "rozpoznawanie ślimaków i proporcjonalne ograniczanie szkód",
     "freshness": "2026-07-21"
   },
-  "inline_images": [
-    {
-      "src": "/images/articles/slimak-nagi-arion-widok-z-gory.webp",
-      "alt": "Brązowy ślimak nagi z wyraźnie pomarszczonym grzbietem",
-      "caption": "Ubarwienie dużych śliników jest zmienne, dlatego sam brązowy kolor nie wystarcza do pewnego oznaczenia gatunku."
-    }
-  ],
   "sections": [
     {
       "heading": "Co to za ślimak?",
@@ -383,5 +376,10 @@
   "status": "published",
   "published_at": "2026-07-21T00:00:00Z",
   "created_at": "2026-07-21T00:00:00Z",
-  "updated_at": "2026-07-21T00:00:00Z"
+  "updated_at": "2026-07-21T00:00:00Z",
+  "inline_image": {
+    "src": "/images/articles/slimak-nagi-arion-widok-z-gory.webp",
+    "alt": "Brązowy ślimak nagi z wyraźnie pomarszczonym grzbietem",
+    "caption": "Ubarwienie dużych śliników jest zmienne, dlatego sam brązowy kolor nie wystarcza do pewnego oznaczenia gatunku."
+  }
 }

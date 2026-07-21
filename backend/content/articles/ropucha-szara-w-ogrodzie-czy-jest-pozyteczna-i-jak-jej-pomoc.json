@@ -16,13 +16,6 @@
     "angle": "rozpoznawanie ropuchy i ochrona pożytecznego płaza",
     "freshness": "2026-07-21"
   },
-  "inline_images": [
-    {
-      "src": "/images/articles/ropucha-szara-zblizenie-w-trawie.webp",
-      "alt": "Zbliżenie ropuchy szarej ukrytej w wysokiej trawie",
-      "caption": "Ropucha szara najczęściej pozostaje w ukryciu w ciągu dnia i wychodzi na żerowanie wieczorem, nocą lub po deszczu."
-    }
-  ],
   "sections": [
     {
       "heading": "Co znajduje się na zdjęciu?",
@@ -30,7 +23,7 @@
         "Na zdjęciu znajduje się jeden osobnik ropuchy szarej, Bufo bufo. Jest to największa z ropuch występujących w Polsce.",
         "Rozpoznanie wskazuje krępa sylwetka, stosunkowo krótkie kończyny, szeroka głowa oraz sucha, brodawkowata skóra w odcieniach brązu i szarości.",
         "Za oczami znajdują się wydłużone gruczoły przyuszne, nazywane parotydami. Wydzielają substancję obronną, która zniechęca część drapieżników.",
-        "Ubarwienie ropuchy szarej jest zmienne, dlatego pojedynczy osobnik może być jasnobrązowy, rdzawy, szarawy albo niemal oliwkowy. :contentReference[oaicite:1]{index=1}"
+        "Ubarwienie ropuchy szarej jest zmienne, dlatego pojedynczy osobnik może być jasnobrązowy, rdzawy, szarawy albo niemal oliwkowy."
       ]
     },
     {
@@ -48,7 +41,7 @@
         "Tak. Ropucha szara jest drapieżnikiem zjadającym liczne bezkręgowce występujące na powierzchni ziemi.",
         "Jej pokarmem mogą być owady, ich larwy, pająki, dżdżownice, stonogi oraz ślimaki. Dzięki temu uczestniczy w naturalnym ograniczaniu liczebności części organizmów uszkadzających rośliny.",
         "Nie oznacza to, że jedna ropucha usunie wszystkie ślimaki z działki. Jest jednak wartościowym elementem ogrodowego ekosystemu i może wspierać inne metody ochrony roślin.",
-        "Płazy jako drapieżniki pomagają kontrolować liczebność owadów i ślimaków, a ich obecność może również świadczyć o stosunkowo dobrych warunkach środowiskowych. :contentReference[oaicite:2]{index=2}"
+        "Płazy jako drapieżniki pomagają kontrolować liczebność owadów i ślimaków, a ich obecność może również świadczyć o stosunkowo dobrych warunkach środowiskowych."
       ]
     },
     {
@@ -75,7 +68,7 @@
         "W spokojnym i częściowo zacienionym miejscu można pozostawić niewielką stertę gałęzi, kawałki kory, kamienie albo fragment spróchniałego drewna.",
         "Dobrym schronieniem może być odwrócona gliniana doniczka z wyszczerbionym wejściem. Ustawia się ją bez dna w wodzie, w miejscu chłodnym i osłoniętym.",
         "Pod kryjówką warto pozostawić ziemię, ściółkę liściową lub niewielką ilość próchnicznego materiału, który nie wysycha natychmiast podczas upału.",
-        "Sterty drewna, wilgotne zakamarki i małe zbiorniki wodne pomagają tworzyć siedliska wykorzystywane przez ropuchy, żaby i traszki. :contentReference[oaicite:3]{index=3}"
+        "Sterty drewna, wilgotne zakamarki i małe zbiorniki wodne pomagają tworzyć siedliska wykorzystywane przez ropuchy, żaby i traszki."
       ]
     },
     {
@@ -85,7 +78,7 @@
         "Przynajmniej jeden brzeg powinien być łagodnie nachylony. W głębokim pojemniku można umieścić kamienie, gałąź albo specjalną rampę wystającą ponad powierzchnię.",
         "Do oczka nie należy wpuszczać ryb, jeżeli głównym celem jest stworzenie miejsca rozrodu płazów. Ryby mogą zjadać skrzek oraz kijanki.",
         "Nie trzeba przenosić do nowego oczka skrzeku ani dorosłych płazów. Jeżeli warunki będą odpowiednie, zwierzęta mogą pojawić się samodzielnie.",
-        "Małe zbiorniki z łagodnym wyjściem mogą być wykorzystywane przez ropuchy i inne płazy do rozmnażania. :contentReference[oaicite:4]{index=4}"
+        "Małe zbiorniki z łagodnym wyjściem mogą być wykorzystywane przez ropuchy i inne płazy do rozmnażania."
       ]
     },
     {
@@ -129,7 +122,7 @@
         "Wiosną ropuchy podejmują migracje do zbiorników rozrodczych i mogą masowo przekraczać drogi.",
         "Pomoc nie może narażać człowieka na potrącenie. Nie należy zatrzymywać samochodu w niebezpiecznym miejscu ani wchodzić nagle na jezdnię.",
         "Jeżeli warunki pozwalają na bezpieczną interwencję, płaza przenosi się na drugą stronę drogi zgodnie z kierunkiem jego wędrówki.",
-        "Stałe miejsca masowych migracji warto zgłaszać zarządcy drogi, gminie, lokalnemu parkowi lub organizacji prowadzącej akcje ochrony płazów. Wiosenne migracje przez jezdnie są jednym z ważnych źródeł ich śmiertelności. :contentReference[oaicite:5]{index=5}"
+        "Stałe miejsca masowych migracji warto zgłaszać zarządcy drogi, gminie, lokalnemu parkowi lub organizacji prowadzącej akcje ochrony płazów. Wiosenne migracje przez jezdnie są jednym z ważnych źródeł ich śmiertelności."
       ]
     },
     {
@@ -190,7 +183,7 @@
     {
       "heading": "Ropucha szara jest chroniona",
       "paragraphs": [
-        "Wszystkie gatunki płazów występujące w Polsce podlegają ochronie gatunkowej. Dotyczy to również ropuchy szarej. :contentReference[oaicite:6]{index=6}",
+        "Wszystkie gatunki płazów występujące w Polsce podlegają ochronie gatunkowej. Dotyczy to również ropuchy szarej.",
         "Nie należy jej celowo zabijać, okaleczać, chwytać dla zabawy ani przetrzymywać jako zwierzęcia domowego.",
         "Znalezienie ropuchy na działce nie daje podstaw do przewiezienia jej w inne miejsce tylko dlatego, że właściciel jej nie chce.",
         "Krótka pomoc zwierzęciu znajdującemu się w bezpośrednim zagrożeniu powinna ograniczać się do niezbędnego minimum."
@@ -369,5 +362,10 @@
   "status": "published",
   "published_at": "2026-07-21T00:00:00Z",
   "created_at": "2026-07-21T00:00:00Z",
-  "updated_at": "2026-07-21T00:00:00Z"
+  "updated_at": "2026-07-21T00:00:00Z",
+  "inline_image": {
+    "src": "/images/articles/ropucha-szara-zblizenie-w-trawie.webp",
+    "alt": "Zbliżenie ropuchy szarej ukrytej w wysokiej trawie",
+    "caption": "Ropucha szara najczęściej pozostaje w ukryciu w ciągu dnia i wychodzi na żerowanie wieczorem, nocą lub po deszczu."
+  }
 }
